@@ -41,3 +41,4 @@ if ($status) {
 } else {
     Write-Host "[i] 沒有變更需要同步。" -ForegroundColor Yellow
 }
+
