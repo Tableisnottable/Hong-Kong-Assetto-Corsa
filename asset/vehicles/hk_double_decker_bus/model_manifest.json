@@ -1,0 +1,21 @@
+{
+  "id": "hk_double_decker_bus",
+  "display_name": "Hong Kong double-decker bus type",
+  "format": "obj",
+  "units": "meters",
+  "prototype": true,
+  "dimensions": {
+    "length_m": 10.6,
+    "height_m": 5.2,
+    "width_m": 2.55
+  },
+  "source": "procedurally generated low-poly prototype",
+  "file": "hk_double_decker_bus.obj",
+  "materials": [
+    "bus_red",
+    "bus_window",
+    "bus_trim",
+    "bus_tire",
+    "bus_light"
+  ]
+}

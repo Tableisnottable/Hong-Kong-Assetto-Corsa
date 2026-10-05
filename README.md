@@ -1,4 +1,4 @@
-﻿# Hong Kong Assetto Corsa (香港 Assetto Corsa 模擬地圖與車輛專案)
+# Hong Kong Assetto Corsa (香港 Assetto Corsa 模擬地圖與車輛專案)
 
 ## 📌 專案簡介 / Project Overview
 本專案旨在結合香港地理資訊地圖 (CSDI) 空間數據與 Blender 3D 自動化流程，為 Assetto Corsa 構建 1:1 高精確度的香港道路網絡及考車車輛模型。
@@ -17,3 +17,12 @@ All automation build scripts, configuration templates, and web interfaces are lo
 * uto/v1/build_and_deploy.ps1: 一鍵以管理員權限構建並部署 .kn5 到 Assetto Corsa。
 * uto/v1/web/: 結合 CSDI 7 階段流程圖層的 Web Geoportal 界面與車輛規格頁面。
 
+## Bus assets and ACROSS fleet catalog
+
+The Hong Kong double-decker bus prototype is in `asset/vehicles/hk_double_decker_bus/`. The ACROSS catalog used for traffic planning is in `docs/across/`, including all listed model records and compact fleet/type code counts such as `E5T`, `E6X`, and `E6M`. Regenerate the catalog with:
+
+```powershell
+python .\tools\across_catalog.py --output .\build\across --cache .\build\across-cache
+```
+
+ACROSS counts may include historical, spare, training, or retired entries and are not claims about an operator's current active fleet.
