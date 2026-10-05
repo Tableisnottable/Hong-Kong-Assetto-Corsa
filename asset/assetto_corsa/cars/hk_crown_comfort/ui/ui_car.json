@@ -1,0 +1,14 @@
+{
+  "name": "Hong Kong Road Taxi",
+  "brand": "Hong Kong Road Cars",
+  "shortname": "HK Taxi",
+  "description": "Original right-hand-drive road sedan for the Kowloon map.",
+  "country": "Hong Kong",
+  "class": "Road",
+  "tags": [
+    "road",
+    "taxi",
+    "rwd",
+    "automatic"
+  ]
+}

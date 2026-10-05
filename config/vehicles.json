@@ -1,50 +1,824 @@
 {
   "project": "hk_kowloon",
+  "catalog_size": 100,
+  "traffic_mix": {
+    "private": 60,
+    "commercial": 25,
+    "public_special": 15,
+    "excluded": [
+      "bus",
+      "coach",
+      "double_decker_bus",
+      "single_decker_bus",
+      "minibus"
+    ]
+  },
   "policy": {
     "source_geometry_must_be_redistributable": true,
     "branding_is_replaceable": true,
-    "units": "meters"
+    "units": "meters",
+    "catalog_is_planning_only": true
   },
   "vehicles": [
     {
-      "id": "hk_taxi_crown_comfort",
-      "display_name": "Hong Kong taxi - Crown Comfort type",
-      "role": "hero",
+      "id": "private_toyota_corolla",
+      "display_name": "Toyota Corolla",
+      "category": "private",
+      "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required",
-      "target_lods": ["lod_a", "lod_b", "lod_c"],
-      "required_features": [
-        "right_hand_drive",
-        "automatic_transmission",
-        "working_headlights",
-        "working_brake_lights",
-        "taxi_livery_material",
-        "interior_camera"
-      ]
+      "source_status": "original_model_required"
     },
     {
-      "id": "hk_family_van",
-      "display_name": "Hong Kong family MPV",
+      "id": "private_toyota_camry",
+      "display_name": "Toyota Camry",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_prius",
+      "display_name": "Toyota Prius",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_yaris",
+      "display_name": "Toyota Yaris",
+      "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required",
-      "target_lods": ["lod_b", "lod_c"]
+      "source_status": "original_model_required"
     },
     {
-      "id": "hk_compact_sedan",
-      "display_name": "Hong Kong compact sedan",
+      "id": "private_toyota_vios",
+      "display_name": "Toyota Vios",
+      "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required",
-      "target_lods": ["lod_b", "lod_c"]
+      "source_status": "original_model_required"
     },
     {
-      "id": "hk_light_goods_vehicle",
-      "display_name": "Hong Kong light goods vehicle",
+      "id": "private_toyota_crown",
+      "display_name": "Toyota Crown",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_alphard",
+      "display_name": "Toyota Alphard",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_vellfire",
+      "display_name": "Toyota Vellfire",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_sienta",
+      "display_name": "Toyota Sienta",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_noah",
+      "display_name": "Toyota Noah",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_rav4",
+      "display_name": "Toyota RAV4",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_harrier",
+      "display_name": "Toyota Harrier",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_toyota_land_cruiser_prado",
+      "display_name": "Toyota Land Cruiser Prado",
+      "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required",
-      "target_lods": ["lod_b", "lod_c"]
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_civic",
+      "display_name": "Honda Civic",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_accord",
+      "display_name": "Honda Accord",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_fit",
+      "display_name": "Honda Fit / Jazz",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_freed",
+      "display_name": "Honda Freed",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_stepwgn",
+      "display_name": "Honda Stepwgn",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_crv",
+      "display_name": "Honda CR-V",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_honda_hrv",
+      "display_name": "Honda HR-V",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_nissan_note",
+      "display_name": "Nissan Note",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_nissan_serena",
+      "display_name": "Nissan Serena",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_nissan_xtrail",
+      "display_name": "Nissan X-Trail",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_nissan_qashqai",
+      "display_name": "Nissan Qashqai",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_nissan_kicks",
+      "display_name": "Nissan Kicks",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mazda2",
+      "display_name": "Mazda 2",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mazda3",
+      "display_name": "Mazda 3",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mazda6",
+      "display_name": "Mazda 6",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mazda_cx3",
+      "display_name": "Mazda CX-3",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mazda_cx5",
+      "display_name": "Mazda CX-5",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mitsubishi_lancer",
+      "display_name": "Mitsubishi Lancer",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mitsubishi_outlander",
+      "display_name": "Mitsubishi Outlander",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_suzuki_swift",
+      "display_name": "Suzuki Swift",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_suzuki_ignis",
+      "display_name": "Suzuki Ignis",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_subaru_impreza",
+      "display_name": "Subaru Impreza",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_subaru_forester",
+      "display_name": "Subaru Forester",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_volkswagen_golf",
+      "display_name": "Volkswagen Golf",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_volkswagen_passat",
+      "display_name": "Volkswagen Passat",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_volkswagen_tiguan",
+      "display_name": "Volkswagen Tiguan",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_skoda_octavia",
+      "display_name": "Skoda Octavia",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mercedes_c_class",
+      "display_name": "Mercedes-Benz C-Class",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mercedes_e_class",
+      "display_name": "Mercedes-Benz E-Class",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mercedes_glc",
+      "display_name": "Mercedes-Benz GLC",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_bmw_3_series",
+      "display_name": "BMW 3 Series",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_bmw_5_series",
+      "display_name": "BMW 5 Series",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_bmw_x3",
+      "display_name": "BMW X3",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_audi_a3",
+      "display_name": "Audi A3",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_audi_a4",
+      "display_name": "Audi A4",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_audi_q5",
+      "display_name": "Audi Q5",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_lexus_is",
+      "display_name": "Lexus IS",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_lexus_es",
+      "display_name": "Lexus ES",
+      "category": "private",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_lexus_rx",
+      "display_name": "Lexus RX",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_tesla_model3",
+      "display_name": "Tesla Model 3",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_tesla_modely",
+      "display_name": "Tesla Model Y",
+      "category": "private",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_hyundai_kona",
+      "display_name": "Hyundai Kona",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_kia_niro",
+      "display_name": "Kia Niro",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_kia_sportage",
+      "display_name": "Kia Sportage",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_mini_cooper",
+      "display_name": "Mini Cooper",
+      "category": "private",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_range_rover_evoque",
+      "display_name": "Range Rover Evoque",
+      "category": "private",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "private_volvo_xc40",
+      "display_name": "Volvo XC40",
+      "category": "private",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_crown_comfort_taxi",
+      "display_name": "Toyota Crown Comfort Hong Kong taxi",
+      "category": "commercial",
+      "role": "hero",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_comfort_taxi",
+      "display_name": "Toyota Comfort taxi",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_jpn_taxi",
+      "display_name": "Toyota JPN Taxi",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_nissan_cedric_taxi",
+      "display_name": "Nissan Cedric taxi",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_hiace",
+      "display_name": "Toyota HiAce",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_nissan_nv200",
+      "display_name": "Nissan NV200",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_ford_transit",
+      "display_name": "Ford Transit",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_mercedes_vito",
+      "display_name": "Mercedes-Benz Vito",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_volkswagen_transporter",
+      "display_name": "Volkswagen Transporter",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_proace",
+      "display_name": "Toyota ProAce",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_mitsubishi_canter",
+      "display_name": "Mitsubishi Canter",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_isuzu_elf",
+      "display_name": "Isuzu Elf",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 1,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_hino_dutro",
+      "display_name": "Hino Dutro",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_toyota_dyna",
+      "display_name": "Toyota Dyna",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_isuzu_forward",
+      "display_name": "Isuzu Forward",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_hino_300",
+      "display_name": "Hino 300",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_refrigerated_van",
+      "display_name": "Refrigerated delivery van",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_box_truck",
+      "display_name": "Medium box truck",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_lpg_delivery_truck",
+      "display_name": "LPG cylinder delivery truck",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_cement_mixer",
+      "display_name": "Concrete mixer truck",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_tow_truck",
+      "display_name": "Roadside recovery truck",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_courier_van",
+      "display_name": "Courier delivery van",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_food_delivery_van",
+      "display_name": "Food delivery van",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_construction_pickup",
+      "display_name": "Construction site pickup",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "commercial_waste_collection_truck",
+      "display_name": "Waste collection truck",
+      "category": "commercial",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_police_patrol_sedan",
+      "display_name": "Hong Kong police patrol sedan",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_police_patrol_suv",
+      "display_name": "Hong Kong police patrol SUV",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_ambulance_van",
+      "display_name": "Hong Kong ambulance van",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_fire_engine",
+      "display_name": "Hong Kong fire engine",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_fire_command_suv",
+      "display_name": "Hong Kong fire command SUV",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_government_utility_van",
+      "display_name": "Government utility van",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_road_maintenance_truck",
+      "display_name": "Highways road maintenance truck",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_traffic_enforcement_sedan",
+      "display_name": "Traffic enforcement sedan",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_driving_school_sedan",
+      "display_name": "Driving-school learner sedan",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 2,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_driving_school_hatchback",
+      "display_name": "Driving-school learner hatchback",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 3,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_security_patrol_van",
+      "display_name": "Security patrol van",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_prison_transport_van",
+      "display_name": "Prison transport van",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_customs_patrol_suv",
+      "display_name": "Customs patrol SUV",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_emergency_recovery_vehicle",
+      "display_name": "Emergency recovery vehicle",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
+    },
+    {
+      "id": "public_mobile_command_vehicle",
+      "display_name": "Mobile command vehicle",
+      "category": "public_special",
+      "role": "traffic",
+      "priority": 4,
+      "source_status": "original_model_required"
     },
     {
       "id": "hk_double_decker_bus",
@@ -52,7 +826,10 @@
       "role": "traffic",
       "priority": 3,
       "source_status": "prototype_asset_created",
-      "target_lods": ["lod_b", "lod_c"],
+      "target_lods": [
+        "lod_b",
+        "lod_c"
+      ],
       "asset_path": "asset/vehicles/hk_double_decker_bus",
       "prototype_dimensions": {
         "length_m": 10.6,
@@ -63,4 +840,3 @@
     }
   ]
 }
-
