@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Assetto Corsa - CSDI Map Portal</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        :root {
+            --step1-color: #3498DB;
+            --step2-color: #1ABC9C;
+            --step3-color: #9B59B6;
+            --step4-color: #F1C40F;
+            --step5-color: #E67E22;
+            --step6-color: #E74C3C;
+            --step7-color: #2ECC71;
+        }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #121212; color: #E0E0E0; }
+        header { height: 55px; background: #1F2421; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 2px solid #333; }
+        .logo { font-size: 18px; font-weight: bold; color: #2ECC71; }
+        nav a { color: #BBB; text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 500; }
+        nav a:hover, nav a.active { color: #FFF; border-bottom: 2px solid #2ECC71; padding-bottom: 4px; }
+        #container { display: flex; height: calc(100vh - 55px); }
+        #sidebar { width: 380px; background: #1E1E1E; padding: 20px; box-sizing: border-box; overflow-y: auto; border-right: 1px solid #333; }
+        #map { flex: 1; }
+        h3 { margin-top: 0; color: #FFF; font-size: 16px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        
+        .color-list { list-style: none; padding: 0; margin: 15px 0; }
+        .color-item { display: flex; align-items: center; padding: 10px 12px; margin-bottom: 8px; background: #2A2A2A; border-radius: 6px; border-left: 6px solid #888; }
+        .color-item input { margin-right: 10px; cursor: pointer; }
+        .color-item.s1 { border-left-color: var(--step1-color); }
+        .color-item.s2 { border-left-color: var(--step2-color); }
+        .color-item.s3 { border-left-color: var(--step3-color); }
+        .color-item.s4 { border-left-color: var(--step4-color); }
+        .color-item.s5 { border-left-color: var(--step5-color); }
+        .color-item.s6 { border-left-color: var(--step6-color); }
+        .color-item.s7 { border-left-color: var(--step7-color); }
+        .item-text { flex: 1; }
+        .item-title { font-size: 13px; font-weight: bold; color: #FFF; }
+        .item-sub { font-size: 11px; color: #AAA; }
+
+        .btn { width: 100%; padding: 12px; background: #27AE60; color: white; border: none; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 15px; }
+        .btn:hover { background: #219150; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hong Kong Assetto Corsa - CSDI Geoportal</div>
+        <nav>
+            <a href="index.html" class="active">Map Pipeline (地圖流程)</a>
+            <a href="cars.html">Vehicle Test List (考車與流程規格)</a>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="sidebar">
+            <h3>Pipeline Layers (7階段地圖構建圖層)</h3>
+            <p style="font-size: 12px; color: #888;">Select process layers to preview map pipeline stages:</p>
+            <ul class="color-list">
+                <li class="color-item s1"><input type="checkbox" checked><div class="item-text"><div class="item-title">1. Raw CSDI Data / 原始空間數據</div><div class="item-sub">CSDI 3D Road Mesh &amp; GeoJSON Fetch</div></div></li>
+                <li class="color-item s2"><input type="checkbox" checked><div class="item-text"><div class="item-title">2. Data Filtering / 數據清洗與提取</div><div class="item-sub">PowerShell Data Processing &amp; Splines</div></div></li>
+                <li class="color-item s3"><input type="checkbox" checked><div class="item-text"><div class="item-title">3. Headless Blender / 3D 模型生成</div><div class="item-sub">Blender CLI Road Mesh &amp; Terrain Build</div></div></li>
+                <li class="color-item s4"><input type="checkbox" checked><div class="item-text"><div class="item-title">4. AC Dummy Setup / 起跑點與命名</div><div class="item-sub">AC_START_0, ROAD_01 Material Assign</div></div></li>
+                <li class="color-item s5"><input type="checkbox" checked><div class="item-text"><div class="item-title">5. FBX Export / 變換歸零與匯出</div><div class="item-sub">Apply Transforms &amp; FBX Generation</div></div></li>
+                <li class="color-item s6"><input type="checkbox" checked><div class="item-text"><div class="item-title">6. KN5 Conversion / 模型轉換</div><div class="item-sub">kn5-conv.exe CLI Conversion</div></div></li>
+                <li class="color-item s7"><input type="checkbox" checked><div class="item-text"><div class="item-title">7. Auto Deployment / 自動複製與同步</div><div class="item-sub">Deploy to AC content/tracks Directory</div></div></li>
+            </ul>
+
+            <button class="btn" onclick="buildMap()">Execute One-Click Build (.kn5)</button>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([22.3193, 114.1694], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap / CSDI Data'
+        }).addTo(map);
+
+        function buildMap() {
+            alert('Executing build_and_deploy.ps1 in auto/v1 directory...');
+        }
+    </script>
+</body>
+</html>

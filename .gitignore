@@ -1,32 +1,13 @@
-# Assetto Corsa generated server data
-server/logs/
-server/results/
-server/uploads/
-
-# Local installations and unpacked build output
-acServer/
-content/
-build/
-dist/
-
-# Generated or downloaded map source files
-source/gis/raw/
-source/references/
-build/HP1C/source/roads.osm.json
-build/HP1C/source/roads.geojson
-build/HP1C/tin_kwong_road/*.fbx
-build/HP1C/tin_kwong_road/*.blend1
-
-# Python, editor, and OS files
-__pycache__/
-*.pyc
-.vscode/
-.idea/
-*.blend1
-*.bak
-*.kn5
-*.obj
-*.fbx
-*.7z
+﻿# 忽略全港 3D 大容量 Zip 及 FBX 模型檔
+all_3324_zips/
+raw_zips/
+extracted_fbx/
+downloaded_models/
 *.zip
-Thumbs.db
+*.fbx
+*.obj
+
+# 忽略 Blender 暫存檔
+*.blend1
+build_mesh.py
+api_downloader.py

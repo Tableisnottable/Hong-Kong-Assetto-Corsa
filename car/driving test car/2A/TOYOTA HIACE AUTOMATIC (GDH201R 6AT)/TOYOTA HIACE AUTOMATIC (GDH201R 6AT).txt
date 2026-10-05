@@ -1,0 +1,26 @@
+類別 2A：自動波輕型貨車 (CATEGORY 2A: LIGHT GOODS VEHICLE - AUTOMATIC)
+車款：TOYOTA HIACE AUTOMATIC (GDH201R 6AT)
+--------------------------------------------------------------------------------
+【1. 動力與 6速自動波箱 (POWERTRAIN & 6-SPEED AUTOMATIC)】
+• 車型代號 (Model Code): GDH201R-SSPEDY 6AT
+• 引擎動力 (Engine): 2.8L 1GD-FTV 柴油渦輪增壓 (2,755 cc)
+• 馬力與扭力 (Power & Torque): 177 hp @ 3,400 rpm | 450 Nm @ 1,600–2,400 rpm (扭力比棍波版更高)
+• 自動波箱型號 (Transmission Model): 豐田 AC60E 6速 Super ECT 自動變速箱
+• 換檔控制 (Shifting Control): 中控台 Sequential Shiftmatic 手自一體切換波棍
+• 波箱齒輪比 (Gear Ratios):
+  - 1檔 (1st Gear): 3.600:1
+  - 2檔 (2nd Gear): 2.090:1
+  - 3檔 (3rd Gear): 1.488:1
+  - 4檔 (4th Gear): 1.000:1
+  - 5檔 (5th Gear): 0.687:1
+  - 6檔 (6th Gear): 0.580:1
+  - 倒檔 (Reverse Gear): 3.732:1
+  - 尾牙齒輪比 (Final Drive Ratio): 3.909:1
+
+【2. 制動、安全與考車載重 (BRAKES, SAFETY & BALLAST LOAD)】
+• 主動安全系統 (Active Safety): ABS, EBD, VSC 車身穩定控制, TRC 循跡控制, 煞車輔助 (BA)
+• 懸掛與制動 (Suspension & Brakes): 前雙搖臂 / 後鋼板彈簧非獨立軸 | 前 285mm 通風碟 / 後 254mm 鼓煞
+• 運輸署考車負載規定 (Exam Ballast Requirement): 考試時必須預載達到最高載重量 2/3 的壓載重物 (~600–700 kg 沙包或鋼板)
+• 外形尺寸 (Dimensions): 全長 4,695 mm x 全闊 1,695 mm x 全高 1,980 mm | 軸距: 2,570 mm
+• 重量規格 (Weight Ratings): 整備質量 1,940 kg | 考試運行總重約 ~2,600 kg | 許可總重 (GVW) 3,000 kg
+• 液體容量 (Capacities): 柴油箱 70 公升 | AdBlue 尿素箱 11.4 公升

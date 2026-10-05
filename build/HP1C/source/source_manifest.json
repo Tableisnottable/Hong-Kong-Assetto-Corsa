@@ -5,7 +5,7 @@
   "sources": [
     {
       "name": "OpenStreetMap Overpass",
-      "url": "https://overpass-api.de/api/interpreter",
+      "url": "https://overpass.kumi.systems/api/interpreter",
       "purpose": "road centerline and road names",
       "license": "ODbL 1.0"
     },
@@ -27,5 +27,5 @@
     "retries": 3,
     "cache_enabled": true
   },
-  "downloaded_at_utc": "2026-09-12T20:54:06Z"
+  "downloaded_at_utc": "2026-09-28T14:10:39Z"
 }

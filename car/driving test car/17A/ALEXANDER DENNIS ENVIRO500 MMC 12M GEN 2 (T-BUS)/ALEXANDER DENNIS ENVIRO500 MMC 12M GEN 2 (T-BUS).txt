@@ -1,0 +1,38 @@
+類別 17A：自動波專營巴士 (CATEGORY 17A: FRANCHISED BUS - AUTOMATIC)
+車款：ALEXANDER DENNIS ENVIRO500 MMC 12M GEN 2 (T-BUS)
+--------------------------------------------------------------------------------
+【1. 巴士底盤與先進轉向軸 (BUS CHASSIS & ADVANCED STEERING AXLES)】
+• 底盤型號 (Chassis Model): ADL Enviro500 MMC (Major Model Change 二代)
+• 車身骨架 (Body & Frame): 不銹鋼底盤骨架配輕量化鋁合金車身外板
+• 車軸轉向佈局 (Axle Configuration): 6x2 配備第三軸反向輔助轉向 (Passive Steer Trailing Axle)
+• 外形尺寸 (Overall Dimensions): 全長 12,000 mm x 全闊 2,550 mm x 全高 4,347 mm
+• 軸距 (Wheelbase): 5,980 mm (第一軸至第二軸) + 1,600 mm (第二軸至第三軸)
+• 車懸尺寸 (Overhangs): 前懸 2,480 mm | 後懸 1,940 mm
+• 最小迴轉直徑 (Minimum Turning Diameter): 22.4 米 (22.4 meters)
+
+【2. Euro 6 重型柴油引擎 (EURO 6 HEAVY DIESEL ENGINE)】
+• 引擎型號 (Engine Model): 康明斯 Cummins ISL8.9E5320B (Euro 5) / Cummins L9E6D340B (Euro 6)
+• 汽缸容量 (Displacement): 8,900 cc (8.9 公升 / 8.9 Liters)
+• 供油系統 (Fuel System): Cummins XPI 超高壓共軌噴油系統
+• 增壓技術 (Turbocharger): Holset VGT 可變幾何渦輪增壓器
+• 最大馬力 (Max Power): 340 hp (250 kW) @ 2,100 rpm
+• 最大扭力 (Max Torque): 1,500 Nm (1,106 lb-ft) @ 1,200 rpm
+• 廢氣後處理 (Exhaust Aftertreatment): 康明斯緊湊型排放系統 (DOC + DPF + SCR 尿素還原)
+• 油箱與尿素箱 (Capacities): 柴油箱 300 公升 | AdBlue 尿素箱 35 公升
+
+【3. 自動波箱與手拉減速掣 (AUTOMATIC TRANSMISSION & RETARDER)】
+• 波箱型號 (Transmission Model): 採埃孚 ZF EcoLife 6AP1700B 6速自動波 / 福伊特 Voith DIWA.864.6 4速
+• 波檔控制台 (Gear Selector Console): 按鈕式波波盤 (Push-Button D - N - R)
+• ZF EcoLife 齒輪比 (Gear Ratios):
+  - 1檔: 3.36:1 | 2檔: 1.91:1 | 3檔: 1.42:1 | 4檔: 1.00:1 | 5檔: 0.72:1 | 6檔: 0.61:1
+• 減速掣系統 (Retarder System): 波箱集成式 ZF Intarder / Voith 液力減速器
+• 控制介面 (Retarder Controls): 方向盤轉向柱右側 5 段式手動控制拉桿 + 煞車腳踏板聯動 (Pedal Blending)
+• 最大減速扭力 (Max Retarder Torque): 最高可高達 2,000 Nm
+
+【4. 車軸組件、EBS 電子煞車與車重 (AXLES, EBS BRAKING & WEIGHT)】
+• 前軸 (Front Axle): ZF RL75EC 獨立懸掛前軸 (Independent Front Suspension)
+• 驅動軸 (Drive Axle): ZF AV132 門式驅動軸 (Portal Axle，實現低地台通道)
+• 尾軸 (Trailing Axle): ZF RL75E 輔助轉向尾軸 (Passive Steerable Axle)
+• 煞車系統 (Service Brakes): 克諾爾 Knorr-Bremse EBS 電子煞車系統，四輪通風碟煞配 ABS 及 ASR
+• 車軸負載額定值 (Axle Load Capacities): 前軸 7,500 kg | 驅動軸 11,500 kg | 尾軸 7,500 kg
+• 重量規格 (Weight Ratings): 空陸重量 ~15,100 kg | 許可總重 (GVW) 24,000 kg (24 公噸)
