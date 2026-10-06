@@ -1,0 +1,31 @@
+# Materials for the Hong Kong double-decker bus prototype
+newmtl bus_red
+Ka 0.15 0.03 0.03
+Kd 0.82 0.16 0.17
+Ks 0.15 0.15 0.15
+Ns 40.0
+
+newmtl bus_window
+Ka 0.05 0.08 0.10
+Kd 0.18 0.22 0.30
+Ks 0.25 0.25 0.25
+Ns 80.0
+d 0.85
+
+newmtl bus_trim
+Ka 0.05 0.05 0.05
+Kd 0.10 0.10 0.12
+Ks 0.20 0.20 0.20
+Ns 30.0
+
+newmtl bus_tire
+Ka 0.03 0.03 0.03
+Kd 0.05 0.05 0.05
+Ks 0.08 0.08 0.08
+Ns 8.0
+
+newmtl bus_light
+Ka 0.20 0.20 0.15
+Kd 0.95 0.95 0.80
+Ks 0.75 0.75 0.75
+Ns 120.0

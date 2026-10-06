@@ -1,0 +1,438 @@
+﻿operator_code,across_record_id,model_name,fleet_prefix,source_url
+Argos,215,Argos Bus Fleet (Miscellaneous),,https://1005.idv.hk/index.php?page=11&p=215
+Bigbus,293,Bigbus (HK) Dennis Dominator,,https://1005.idv.hk/index.php?page=11&p=293
+Bigbus,292,Bigbus (HK) Dennis Condor,,https://1005.idv.hk/index.php?page=11&p=292
+Bigbus,309,Bigbus Ankai HFF6110GS-2,,https://1005.idv.hk/index.php?page=11&p=309
+Citybus,58,Citybus AEC Routemaster,,https://1005.idv.hk/index.php?page=11&p=58
+Citybus,59,Citybus Leyland Olympian 12m Coach,,https://1005.idv.hk/index.php?page=11&p=59
+Citybus,80,Citybus Dennis Dart / Dart SLF (Plaxton Body) (14),,https://1005.idv.hk/index.php?page=11&p=80
+Citybus,84,Citybus Neoplan Norinco BN316 (18),,https://1005.idv.hk/index.php?page=11&p=84
+Citybus,62,Citybus Leyland Olympian 11m Coach (1),,https://1005.idv.hk/index.php?page=11&p=62
+Citybus,63,Citybus Leyland Olympian 10.4m (2),,https://1005.idv.hk/index.php?page=11&p=63
+Citybus,64,Citybus Volvo Olympian 10.4m (2),,https://1005.idv.hk/index.php?page=11&p=64
+Citybus,85,Citybus Volvo B12 (20),,https://1005.idv.hk/index.php?page=11&p=85
+Citybus,65,Citybus Leyland Olympian 12m Coach (2nd hand) (3),,https://1005.idv.hk/index.php?page=11&p=65
+Citybus,66,Citybus Volvo Olympian 12m Coach (2nd hand) (3),,https://1005.idv.hk/index.php?page=11&p=66
+Citybus,67,"Citybus Volvo Olympian 12m (3,4,5,6)",,https://1005.idv.hk/index.php?page=11&p=67
+Citybus,68,Citybus Leyland Olympian 12m Coach (3),,https://1005.idv.hk/index.php?page=11&p=68
+Citybus,69,Citybus Leyland Olympian 12m (3),,https://1005.idv.hk/index.php?page=11&p=69
+Citybus,72,Citybus Dennis Dragon 10.3m (7),,https://1005.idv.hk/index.php?page=11&p=72
+Citybus,73,Citybus Dennis Dragon 12m (8),,https://1005.idv.hk/index.php?page=11&p=73
+Citybus,75,Citybus Volvo Olympian 11m (9),,https://1005.idv.hk/index.php?page=11&p=75
+Citybus,77,Citybus Volvo B10M (12),,https://1005.idv.hk/index.php?page=11&p=77
+Citybus,78,Citybus Volvo B6R/B6LE (13),,https://1005.idv.hk/index.php?page=11&p=78
+Citybus,82,Citybus Dennis Dart (3rd hand) (14),,https://1005.idv.hk/index.php?page=11&p=82
+Citybus,83,Citybus MAN NL-262 (15),,https://1005.idv.hk/index.php?page=11&p=83
+Citybus,115,"Citybus Leyland Atlantean AN68 (6,A6)",A,https://1005.idv.hk/index.php?page=11&p=115
+Citybus,86,Citybus Dennis Trident 12m Coach (21),,https://1005.idv.hk/index.php?page=11&p=86
+Citybus,87,"Citybus Dennis Trident 12m (22,23)",,https://1005.idv.hk/index.php?page=11&p=87
+Citybus,88,Citybus MAN 24.350 (25),,https://1005.idv.hk/index.php?page=11&p=88
+Citybus,89,Citybus Dennis Trident 10.6m (27),,https://1005.idv.hk/index.php?page=11&p=89
+Citybus,90,Citybus Scania K94UB 6x2 (28),,https://1005.idv.hk/index.php?page=11&p=90
+Citybus,91,Citybus Training Fleet (T),T,https://1005.idv.hk/index.php?page=11&p=91
+Citybus,185,Citybus Dennis Dragon 12m (HACTL),,https://1005.idv.hk/index.php?page=11&p=185
+Citybus,186,Citybus Daimler Fleetline (D),D|L,https://1005.idv.hk/index.php?page=11&p=186
+Citybus,187,Citybus Daimler Fleetline,L|D,https://1005.idv.hk/index.php?page=11&p=187
+Citybus,188,Citybus Bristol Lodekka (B),B,https://1005.idv.hk/index.php?page=11&p=188
+Citybus,189,Citybus Daimler Fleetline,D,https://1005.idv.hk/index.php?page=11&p=189
+Citybus,190,Citybus Leyland Atlantean,L,https://1005.idv.hk/index.php?page=11&p=190
+Citybus,191,Citybus Dennis Dominator,,https://1005.idv.hk/index.php?page=11&p=191
+Citybus,192,Citybus Daimler Fleetline,L,https://1005.idv.hk/index.php?page=11&p=192
+Citybus,193,Citybus Dennis Dominator,,https://1005.idv.hk/index.php?page=11&p=193
+Citybus,194,Citybus Leyland Olympian,,https://1005.idv.hk/index.php?page=11&p=194
+Citybus,196,Citybus MCW Metrobus Mk I,,https://1005.idv.hk/index.php?page=11&p=196
+Citybus,197,Citybus MCW Metrobus Mk I,,https://1005.idv.hk/index.php?page=11&p=197
+Citybus,195,Citybus Leyland Olympian,,https://1005.idv.hk/index.php?page=11&p=195
+Citybus,211,Citybus Dennis Condor 11m Open-topped (3rd hand),,https://1005.idv.hk/index.php?page=11&p=211
+Citybus,216,Citybus Volvo Olympian (Temporary Bus Fleet) (VA),VA,https://1005.idv.hk/index.php?page=11&p=216
+Citybus,246,Citybus Leyland Victory,,https://1005.idv.hk/index.php?page=11&p=246
+Citybus,247,Citybus Nissan Minibus (2),,https://1005.idv.hk/index.php?page=11&p=247
+Citybus,248,Citybus Mercedes Benz OF1113 (12),,https://1005.idv.hk/index.php?page=11&p=248
+Citybus,249,Citybus Mitsubishi Mk117J (12),,https://1005.idv.hk/index.php?page=11&p=249
+Citybus,250,Citybus Scania K93 (12),,https://1005.idv.hk/index.php?page=11&p=250
+Citybus,251,Citybus Mitsubishi MK618N (12),,https://1005.idv.hk/index.php?page=11&p=251
+Citybus,252,Citybus Ailsa Volvo B55 (V),V,https://1005.idv.hk/index.php?page=11&p=252
+Citybus,253,Citybus Nissan R85H (2),,https://1005.idv.hk/index.php?page=11&p=253
+Citybus,254,Citybus Nissan BM115L (2),,https://1005.idv.hk/index.php?page=11&p=254
+Citybus,255,Citybus Isuzu ECM430 (2),,https://1005.idv.hk/index.php?page=11&p=255
+Citybus,256,Citybus Nissan U20N (2),,https://1005.idv.hk/index.php?page=11&p=256
+Citybus,257,Citybus Mitsubishi MP117K (2),,https://1005.idv.hk/index.php?page=11&p=257
+Citybus,258,Citybus Nissan 4R95 (2),,https://1005.idv.hk/index.php?page=11&p=258
+Citybus,277,"Citybus Alexander Dennis Enviro 500 12m (509,81,82,83)",,https://1005.idv.hk/index.php?page=11&p=277
+Citybus,306,"Citybus Enviro 400 (310,70)",,https://1005.idv.hk/index.php?page=11&p=306
+Citybus,312,"Citybus Volvo B9TL 10.4m (2-axle) (320,75)",,https://1005.idv.hk/index.php?page=11&p=312
+Citybus,318,Citybus Training Fleet,,https://1005.idv.hk/index.php?page=11&p=318
+Citybus,319,Citybus Scania K280UD (89),,https://1005.idv.hk/index.php?page=11&p=319
+Citybus,322,Citybus Youngman JNP6105GR (18),,https://1005.idv.hk/index.php?page=11&p=322
+Citybus,329,Citybus Alexander Dennis Enviro 500 MMC 12m(Cityflyer) (80),,https://1005.idv.hk/index.php?page=11&p=329
+Citybus,333,"Citybus Alexander Dennis Enviro 500 MMC 11.3m (409,91)",,https://1005.idv.hk/index.php?page=11&p=333
+Citybus,335,"Citybus Alexander Dennis Enviro 500 MMC 12m (2,599,83,84,85)",,https://1005.idv.hk/index.php?page=11&p=335
+Citybus,343,"Citybus Alexander Dennis Enviro 500 MMC 12.8m (63,64,65)",,https://1005.idv.hk/index.php?page=11&p=343
+Citybus,349,Citybus Alexander Dennis Enviro 500 Hybrid (84),,https://1005.idv.hk/index.php?page=11&p=349
+Citybus,352,Citybus Dennis Trident 10.3m (8),,https://1005.idv.hk/index.php?page=11&p=352
+Citybus,355,Citybus Volvo B9TL 12.8m (65),,https://1005.idv.hk/index.php?page=11&p=355
+Citybus,357,Citybus Youngman JNP6120GR (18),,https://1005.idv.hk/index.php?page=11&p=357
+Citybus,364,Citybus Volvo B9TL 11.3m (95),,https://1005.idv.hk/index.php?page=11&p=364
+Citybus,367,Citybus BYD K9R (15),,https://1005.idv.hk/index.php?page=11&p=367
+Citybus,378,Citybus Yixing Great Dragon SDL6120EVG (15),,https://1005.idv.hk/index.php?page=11&p=378
+CityBus,385,CityBus ADL Enviro 500MMC 12.8m Coach (68),,https://1005.idv.hk/index.php?page=11&p=385
+Citybus,408,"Citybus Volvo B8L (521,88)",,https://1005.idv.hk/index.php?page=11&p=408
+Weisheit,420,Weisheit WSD6121BR1EV,,https://1005.idv.hk/index.php?page=11&p=420
+Citybus,402,Citybus Volvo Super Olympian 12m (2),,https://1005.idv.hk/index.php?page=11&p=402
+Weisheit,429,Weisheit VV12HR,,https://1005.idv.hk/index.php?page=11&p=429
+DBTSL,201,DBTSL Dennis Dart SLF,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=201
+DBTSL,220,DBTSL MAN NL-212,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=220
+DBTSL,221,DBTSL Mercedes Benz O814,HKR,https://1005.idv.hk/index.php?page=11&p=221
+DBTSL,222,DBTSL Mercedes Benz O405,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=222
+DBTSL,223,DBTSL Nissan Diesel RB80,HKR,https://1005.idv.hk/index.php?page=11&p=223
+DBTSL,224,DBTSL Isuzu LT112L,HKR,https://1005.idv.hk/index.php?page=11&p=224
+DBTSL,225,DBTSL Mitsubishi Rosa,HKR,https://1005.idv.hk/index.php?page=11&p=225
+DBTSL,226,DBTSL MAN 13.220,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=226
+DBTSL,227,DBTSL MAN 14.220,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=227
+DBTSL,228,DBTSL MAN NL-263,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=228
+DBTSL,229,DBTSL MAN NL-262,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=229
+DBTSL,231,DBTSL Toyota Coaster,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=231
+DBTSL,241,DBTSL Mitsubishi Rosa,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=241
+DBTSL,230,DBTSL Dennis Dart (Carlyle Body),HKR,https://1005.idv.hk/index.php?page=11&p=230
+DBTSL,267,DBTSL MAN 18.310,HKR|DBAY,https://1005.idv.hk/index.php?page=11&p=267
+DBTSL,294,DBTSL MAN 12.240,DBAY,https://1005.idv.hk/index.php?page=11&p=294
+DBTSL,300,DBTSL MAN NL-273,DBAY,https://1005.idv.hk/index.php?page=11&p=300
+DBTSL,317,DBTSL MAN NL323,DBAY,https://1005.idv.hk/index.php?page=11&p=317
+DBTSL,320,DBTSL Volvo B7R,DBAY,https://1005.idv.hk/index.php?page=11&p=320
+DBTSL,340,DBTSL Enviro 200,DBAY,https://1005.idv.hk/index.php?page=11&p=340
+Shandong,347,Shandong Yixing Great Dragon SDL6120EVG,DBAY,https://1005.idv.hk/index.php?page=11&p=347
+DBTSL,354,DBTSL MAN A84,DBAY,https://1005.idv.hk/index.php?page=11&p=354
+DBTSL,360,DBTSL Volvo B9TL,DBAY,https://1005.idv.hk/index.php?page=11&p=360
+DBTSL,383,DBTSL Scania K280IB,DBAY,https://1005.idv.hk/index.php?page=11&p=383
+DBTSL,388,DBTSL Daewoo BH117L,DBAY,https://1005.idv.hk/index.php?page=11&p=388
+DBTSL,381,DBTSL Volvo Olympian 12m,DBAY,https://1005.idv.hk/index.php?page=11&p=381
+DBTSL,391,DBTSL MAN A95,DBAY,https://1005.idv.hk/index.php?page=11&p=391
+DBTSL,392,DBTSL MAN RR2,DBAY,https://1005.idv.hk/index.php?page=11&p=392
+DBTSL,395,DBTSL MAN A66,DBAY,https://1005.idv.hk/index.php?page=11&p=395
+DBTSL,419,DBTSL MAN NL323,DBAY,https://1005.idv.hk/index.php?page=11&p=419
+DBTSL,445,DBTSL Guangtong GTK6129BEVB,DBAY,https://1005.idv.hk/index.php?page=11&p=445
+DBTSL,448,DBTSL Guangtong GTK6125R6D,DBAY,https://1005.idv.hk/index.php?page=11&p=448
+DBTSL,450,DBTSL CRRC CSR6780KLEV1R,DBAY,https://1005.idv.hk/index.php?page=11&p=450
+NWS,314,NWS Training Fleet (T),T,https://1005.idv.hk/index.php?page=11&p=314
+Fung,94,Fung Choi Travel Leyland Olympian 12m Coach,,https://1005.idv.hk/index.php?page=11&p=94
+HZMBus,398,HZMBus MAN A95,,https://1005.idv.hk/index.php?page=11&p=398
+HZMBus,399,HZMBus Scania K250UB,,https://1005.idv.hk/index.php?page=11&p=399
+HZMBus,403,HZMBus Miscellaneous Fleet,,https://1005.idv.hk/index.php?page=11&p=403
+HZMBus,404,HZMBus Scania K410IB,,https://1005.idv.hk/index.php?page=11&p=404
+HZMBus,438,HZMBus Scania K410CB,,https://1005.idv.hk/index.php?page=11&p=438
+HZMBus,442,HZMBus Volvo B13R,,https://1005.idv.hk/index.php?page=11&p=442
+HZMBus,444,HZMBus MAN RR4,,https://1005.idv.hk/index.php?page=11&p=444
+HACTL,10,HACTL Dennis Dragon 12m,,https://1005.idv.hk/index.php?page=11&p=10
+HACTL,11,HACTL Volvo Olympian 12m,,https://1005.idv.hk/index.php?page=11&p=11
+CLP,92,CLP Leyland Olympian 12m Coach (3),,https://1005.idv.hk/index.php?page=11&p=92
+CLP,93,CLP Volvo Olympian 12m Coach (3),,https://1005.idv.hk/index.php?page=11&p=93
+CLP,297,CLP Alexander Dennis Enviro 500 (3),,https://1005.idv.hk/index.php?page=11&p=297
+CLP,374,CLP Alexander Dennis Enviro 500 MMC (3),,https://1005.idv.hk/index.php?page=11&p=374
+CLP,439,CLP ADL E500EV,,https://1005.idv.hk/index.php?page=11&p=439
+KMB,1,KMB TransBus Enviro 500 (ATE),ATE,https://1005.idv.hk/index.php?page=11&p=1
+KMB,2,KMB Volvo Super Olympian (Wright Explorer Body) (AVW),AVW,https://1005.idv.hk/index.php?page=11&p=2
+KMB,3,KMB Volvo Super Olympian 12m (Alexander Body/Volgren Body) (3ASV),3ASV,https://1005.idv.hk/index.php?page=11&p=3
+KMB,4,KMB MAN 24.310 (AMN),AMN,https://1005.idv.hk/index.php?page=11&p=4
+KMB,20,KMB Neoman A34 (APM),APM,https://1005.idv.hk/index.php?page=11&p=20
+KMB,23,KMB Dennis Dragon 12m (A/C) (3AD),3AD,https://1005.idv.hk/index.php?page=11&p=23
+KMB,27,KMB Scania N113 (AS),AS,https://1005.idv.hk/index.php?page=11&p=27
+KMB,29,KMB Dennis Dragon 9.9m (ADS),ADS,https://1005.idv.hk/index.php?page=11&p=29
+KMB,30,KMB Mitsubishi Mk117/217/218 (AM),AM,https://1005.idv.hk/index.php?page=11&p=30
+KMB,31,KMB Dennis Dart/ Dart SLF (AA),AA,https://1005.idv.hk/index.php?page=11&p=31
+KMB,32,"KMB Dennis Falcon (AF,FD)",FD|AF,https://1005.idv.hk/index.php?page=11&p=32
+KMB,33,KMB Training Fleet,AM|ATR|AA|3AV|AD|AL|AV|3N|S3BL|3M|BL|AVBWU|ATEU|ATEE|ASC|AVC,https://1005.idv.hk/index.php?page=11&p=33
+KMB,18,KMB Dennis Trident 10.6m (ATS),ATS,https://1005.idv.hk/index.php?page=11&p=18
+KMB,19,KMB Neoplan Centroliner N4026/N4426 (AP),AP,https://1005.idv.hk/index.php?page=11&p=19
+KMB,21,KMB Volvo Super Olympian 10.6m (ASV),ASV,https://1005.idv.hk/index.php?page=11&p=21
+KMB,22,KMB Dennis Trident 12m (ATR),ATR,https://1005.idv.hk/index.php?page=11&p=22
+KMB,24,KMB Volvo Olympian 12m (A/C) (3AV),3AV,https://1005.idv.hk/index.php?page=11&p=24
+KMB,25,KMB Dennis Dragon 11m (A/C) (AD),AD,https://1005.idv.hk/index.php?page=11&p=25
+KMB,34,KMB Hino RK176K (AH),AH,https://1005.idv.hk/index.php?page=11&p=34
+KMB,35,KMB Dennis Lance (AN),AN,https://1005.idv.hk/index.php?page=11&p=35
+KMB,36,KMB Toyota Coaster (AT),AT,https://1005.idv.hk/index.php?page=11&p=36
+KMB,37,KMB Mitsubishi MP618N (AP),AP,https://1005.idv.hk/index.php?page=11&p=37
+KMB,38,KMB Leyland Olympian 12m (3BL),3BL,https://1005.idv.hk/index.php?page=11&p=38
+KMB,40,KMB Leyland Olympian 11m (S3BL),S3BL,https://1005.idv.hk/index.php?page=11&p=40
+KMB,26,KMB Leyland Olympian 11m (A/C) (AL),AL,https://1005.idv.hk/index.php?page=11&p=26
+KMB,28,KMB Volvo Olympian 11m (A/C) (AV),AV,https://1005.idv.hk/index.php?page=11&p=28
+KMB,39,KMB Dennis Dragon 12m (3N),3N,https://1005.idv.hk/index.php?page=11&p=39
+KMB,41,KMB MCW Metrobus 11m (S3M),S3M,https://1005.idv.hk/index.php?page=11&p=41
+KMB,42,KMB Dennis Dragon 11m (S3N),S3N,https://1005.idv.hk/index.php?page=11&p=42
+KMB,43,KMB Volvo Olympian 11m (S3V),S3V,https://1005.idv.hk/index.php?page=11&p=43
+KMB,44,KMB MCW Metrobus 9.7m (M),M,https://1005.idv.hk/index.php?page=11&p=44
+KMB,45,KMB MCW Metrobus 12m (3M),3M,https://1005.idv.hk/index.php?page=11&p=45
+KMB,47,KMB Dennis Dominator (DM),DM,https://1005.idv.hk/index.php?page=11&p=47
+KMB,48,KMB Mercedes Benz O305 (ME),ME,https://1005.idv.hk/index.php?page=11&p=48
+KMB,46,KMB Leyland Olympian 9.7m/10.3m (BL),BL,https://1005.idv.hk/index.php?page=11&p=46
+KMB,125,KMB Albion Victor (L),L,https://1005.idv.hk/index.php?page=11&p=125
+KMB,126,KMB Seddon Pennine 4 (S),S,https://1005.idv.hk/index.php?page=11&p=126
+KMB,127,KMB Daimler CVG5 (Daimler A) (D),D,https://1005.idv.hk/index.php?page=11&p=127
+KMB,128,KMB Daimler CVG5DD (Daimler B) (D),D,https://1005.idv.hk/index.php?page=11&p=128
+KMB,129,KMB Daimler CVG6-30 (Daimler C) (D),D,https://1005.idv.hk/index.php?page=11&p=129
+KMB,130,KMB Daimler CVG6LX-34 (Daimler D) (D),D,https://1005.idv.hk/index.php?page=11&p=130
+KMB,131,KMB Daimler CVG6LX-34 (Daimler E) (D),D,https://1005.idv.hk/index.php?page=11&p=131
+KMB,132,KMB Daimler CVG6LX-30 (Daimler F) (D),D,https://1005.idv.hk/index.php?page=11&p=132
+KMB,133,KMB Daimler Fleetline (D),D,https://1005.idv.hk/index.php?page=11&p=133
+KMB,134,KMB AEC Regent Mk V (A),A,https://1005.idv.hk/index.php?page=11&p=134
+KMB,135,KMB Leyland Titan PD3/5 (2L),2L,https://1005.idv.hk/index.php?page=11&p=135
+KMB,136,KMB Leyland Atlantean PDR1/1 (2L),2L,https://1005.idv.hk/index.php?page=11&p=136
+KMB,137,KMB Daimler Fleetline (2D),2D,https://1005.idv.hk/index.php?page=11&p=137
+KMB,138,KMB Volvo B9TL(Volgren Demo) (AVD),AVD,https://1005.idv.hk/index.php?page=11&p=138
+KMB,182,KMB Guy Victory Mk J (G),G,https://1005.idv.hk/index.php?page=11&p=182
+KMB,183,KMB Leyland Victory Mk II (G),G,https://1005.idv.hk/index.php?page=11&p=183
+KMB,184,KMB Dennis Jubilant (N),N,https://1005.idv.hk/index.php?page=11&p=184
+KMB,210,KMB Volvo B10MD (VMD),VMD,https://1005.idv.hk/index.php?page=11&p=210
+KMB,236,KMB Albion Viking EVK55CL (CA),CA,https://1005.idv.hk/index.php?page=11&p=236
+KMB,237,KMB Bedford YRQ (CB),CB,https://1005.idv.hk/index.php?page=11&p=237
+KMB,238,KMB Albion Viking (L),L,https://1005.idv.hk/index.php?page=11&p=238
+KMB,239,KMB Albion Viking EVK41L (L),L,https://1005.idv.hk/index.php?page=11&p=239
+KMB,242,KMB Albion Chieftain (L),L,https://1005.idv.hk/index.php?page=11&p=242
+KMB,244,KMB Metrorider (AMR),AMR,https://1005.idv.hk/index.php?page=11&p=244
+KMB,245,KMB AEC Regent V (2A),2A,https://1005.idv.hk/index.php?page=11&p=245
+KMB,263,KMB Volvo B9TL(Wright Gemini Body) (AVBW),AVBW,https://1005.idv.hk/index.php?page=11&p=263
+KMB,264,KMB Volvo B9TL(Enviro 500 Body) (AVBE),AVBE,https://1005.idv.hk/index.php?page=11&p=264
+KMB,268,KMB Alexander Dennis Enviro 500 (Euro IV/ Euro V) (ATEU),ATEU,https://1005.idv.hk/index.php?page=11&p=268
+KMB,274,KMB Scania K310UD (ASU),ASU,https://1005.idv.hk/index.php?page=11&p=274
+KMB,295,KMB Alexander Dennis Enviro 500 (Euro V) (ATEE),ATEE,https://1005.idv.hk/index.php?page=11&p=295
+KMB,296,KMB Scania K230UB (10.6m) (ASB),ASB,https://1005.idv.hk/index.php?page=11&p=296
+KMB,298,KMB Scania K230UB 12m (ASC),ASC,https://1005.idv.hk/index.php?page=11&p=298
+KMB,304,KMB Scania K230UB 12m (Euro 5) (ASCU),ASCU,https://1005.idv.hk/index.php?page=11&p=304
+KMB,305,KMB Enviro 400 (ATSE),ATSE,https://1005.idv.hk/index.php?page=11&p=305
+KMB,307,KMB Volvo B9TL (Euro 5) Wright Body (AVBWU),AVBWU,https://1005.idv.hk/index.php?page=11&p=307
+KMB,308,KMB Volvo B7RLE (AVC),AVC,https://1005.idv.hk/index.php?page=11&p=308
+KMB,313,KMB Volvo B9TL 10.4m (2-axle) (AVBWS),AVBWS,https://1005.idv.hk/index.php?page=11&p=313
+KMB,316,"KMB Alexander Dennis Enviro 200 Dart (AAS,AAU)",AAU|AAS,https://1005.idv.hk/index.php?page=11&p=316
+KMB,328,"KMB BYD K9A/K9R (BDE,BE)",BE|BDE,https://1005.idv.hk/index.php?page=11&p=328
+KMB,331,"KMB Alexander Dennis Enviro 500 MMC 12m (ATENU,E5T)",E5T|ATENU,https://1005.idv.hk/index.php?page=11&p=331
+KMB,342,"KMB Alexander Dennis Enviro 500 MMC 12.8m (3ATENU,E5L)",3ATENU|3ATENUW|E5L,https://1005.idv.hk/index.php?page=11&p=342
+KMB,344,KMB Volvo B9TL 12.8m (3AVBWU),3AVBWU,https://1005.idv.hk/index.php?page=11&p=344
+KMB,345,KMB VDL DB300 (AMC),AMC,https://1005.idv.hk/index.php?page=11&p=345
+KMB,350,KMB Yutong ZK6128HG1 (AYT),AYT,https://1005.idv.hk/index.php?page=11&p=350
+KMB,346,KMB Alexander Dennis Enviro 500 Hybrid (ATH),ATH,https://1005.idv.hk/index.php?page=11&p=346
+KMB,353,KMB Scania K280UD (ASUD),ASUD,https://1005.idv.hk/index.php?page=11&p=353
+KMB,361,"KMB MAN A95 (AMNE,AMNF)",AMNE|AMNF,https://1005.idv.hk/index.php?page=11&p=361
+KMB,362,KMB Youngman JNP6122UC (AYM),AYM,https://1005.idv.hk/index.php?page=11&p=362
+KMB,366,"KMB Alexander Dennis Enviro 500 MMC 12m (New Facelift) (ATENU,TW)",ATENU|TW,https://1005.idv.hk/index.php?page=11&p=366
+KMB,406,KMB ADL Enviro 500 MMC 12.8m (Euro 6) (E6X),E6X,https://1005.idv.hk/index.php?page=11&p=406
+KMB,407,KMB Wrightbus StreetDeck (W6S),W6S,https://1005.idv.hk/index.php?page=11&p=407
+KMB,390,"KMB Volvo B8L 12m (Wright Body) (AVBWL,V6B,V6P)",V6P|AVBWL|V6B,https://1005.idv.hk/index.php?page=11&p=390
+KMB,396,KMB ADL Enviro 500 MMC 12m (Euro 6) (E6T),E6T,https://1005.idv.hk/index.php?page=11&p=396
+KMB,401,KMB Volvo B9TL (Gemilang Body) (AVG),AVG,https://1005.idv.hk/index.php?page=11&p=401
+KMB,413,KMB ADL Enviro 500 MMC 11.3m (E6M),E6M,https://1005.idv.hk/index.php?page=11&p=413
+KMB,414,"KMB Volvo B8L 12.8m (V6PX,V6X)",V6PX|V6X,https://1005.idv.hk/index.php?page=11&p=414
+KMB,421,KMB BYD B12A (BEB),BEB,https://1005.idv.hk/index.php?page=11&p=421
+KMB,405,"KMB Volvo B8L (MCV Body) (AVBML,V6B)",V6B|AVBML,https://1005.idv.hk/index.php?page=11&p=405
+KMB,423,"KMB MAN A95 12.8m (M6EX,M6FX)",M6EX|M6FX,https://1005.idv.hk/index.php?page=11&p=423
+KMB,427,KMB BYD B12D (BED),BED,https://1005.idv.hk/index.php?page=11&p=427
+KMB,432,KMB ADL E500EV (AED),AED,https://1005.idv.hk/index.php?page=11&p=432
+PITCL,440,PITCL Volvo B7RLE,,https://1005.idv.hk/index.php?page=11&p=440
+LWB,9,LWB Volvo Olympian 12m (LW),LW,https://1005.idv.hk/index.php?page=11&p=9
+LWB,76,LWB Volvo B9TL Coach (4),,https://1005.idv.hk/index.php?page=11&p=76
+LWB,81,LWB Volvo B9TL (7),AVBE,https://1005.idv.hk/index.php?page=11&p=81
+LWB,111,"LWB Dennis Trident 12m (ALX Body) (1,2)",,https://1005.idv.hk/index.php?page=11&p=111
+LWB,114,LWB Dennis Lance (9),,https://1005.idv.hk/index.php?page=11&p=114
+LWB,112,LWB Dennis Trident 12m (Duple Metsec Body) (3),ATR,https://1005.idv.hk/index.php?page=11&p=112
+LWB,113,LWB Dennis Trident 12m Coach (ALX Body) (5),,https://1005.idv.hk/index.php?page=11&p=113
+LWB,266,"LWB Alexander Dennis Enviro 500 (8,84)",ATEU,https://1005.idv.hk/index.php?page=11&p=266
+LWB,269,"LWB Alexander Dennis Enviro 500 (Coach Version) (6,64)",,https://1005.idv.hk/index.php?page=11&p=269
+LWB,336,LWB ADL Enviro 500 MMC (95),,https://1005.idv.hk/index.php?page=11&p=336
+LWB,356,"LWB ADL Enviro 500 MMC Coach Version (55,65)",,https://1005.idv.hk/index.php?page=11&p=356
+LWB,380,LWB Alexander Dennis Enviro 500 12.8m Coach (15),,https://1005.idv.hk/index.php?page=11&p=380
+LWB,389,LWB BYD K9R (SE),SE,https://1005.idv.hk/index.php?page=11&p=389
+LWB,393,LWB Alexander Dennis Enviro 500 12.8m (25),,https://1005.idv.hk/index.php?page=11&p=393
+LWB,416,LWB ADL Enviro 500 MMC 12.8m (Euro 6) (UE6X),UE6X,https://1005.idv.hk/index.php?page=11&p=416
+LWB,417,LWB Volvo B8L 12.8m (UV6X),UV6X,https://1005.idv.hk/index.php?page=11&p=417
+LWB,435,LWB Volvo B8L 12.8m Coach (AV6X),AV6X,https://1005.idv.hk/index.php?page=11&p=435
+LWB,437,LWB ADL Enviro 500 MMC Coach (Euro 6) (AE6X),AE6X,https://1005.idv.hk/index.php?page=11&p=437
+LWB,443,LWB Volvo B8L 12m Coach (AV6B),AV6B,https://1005.idv.hk/index.php?page=11&p=443
+CMB,7,CMB Training Fleet (T),T,https://1005.idv.hk/index.php?page=11&p=7
+CMB,8,CMB Guy Arab IV (MW),MW,https://1005.idv.hk/index.php?page=11&p=8
+CMB,139,CMB MCW Metrobus 11m (MB),MB,https://1005.idv.hk/index.php?page=11&p=139
+CMB,140,CMB MCW Metrobus 12m (ML),ML,https://1005.idv.hk/index.php?page=11&p=140
+CMB,141,CMB Dennis Condor 12m (DL),DL,https://1005.idv.hk/index.php?page=11&p=141
+CMB,142,CMB Dennis Jubilant (DS),DS,https://1005.idv.hk/index.php?page=11&p=142
+CMB,143,CMB Leyland Olympian 11m (LM),LM,https://1005.idv.hk/index.php?page=11&p=143
+CMB,144,CMB Daimler/ Leyland Fleetline (LF),LF,https://1005.idv.hk/index.php?page=11&p=144
+CMB,145,CMB Daimler/ Leyland Fleetline (SF),RLX|SF,https://1005.idv.hk/index.php?page=11&p=145
+CMB,146,CMB Leyland Victory Mk II (LV),LV,https://1005.idv.hk/index.php?page=11&p=146
+CMB,147,CMB Ailsa Volvo (AL),AL,https://1005.idv.hk/index.php?page=11&p=147
+CMB,148,CMB Leyland Olympian 9.5m/ 10.3m (BR),BR,https://1005.idv.hk/index.php?page=11&p=148
+CMB,149,CMB Titan B45 (TC),TC,https://1005.idv.hk/index.php?page=11&p=149
+CMB,150,CMB Dennis Dominator (SD),SD,https://1005.idv.hk/index.php?page=11&p=150
+CMB,151,CMB Dennis Dominator (DD),DD,https://1005.idv.hk/index.php?page=11&p=151
+CMB,152,CMB Daimler Fleetline (Park Royal Body) (XF),XF,https://1005.idv.hk/index.php?page=11&p=152
+CMB,153,CMB Daimler Fleetline (Park Royal Body) (FC),FC,https://1005.idv.hk/index.php?page=11&p=153
+CMB,154,CMB Leyland Atlantean (XA),XA,https://1005.idv.hk/index.php?page=11&p=154
+CMB,155,CMB Leyland Atlantean (LA),LA,https://1005.idv.hk/index.php?page=11&p=155
+CMB,156,CMB Leyland Atlantean (HA),HA,https://1005.idv.hk/index.php?page=11&p=156
+CMB,157,CMB Leyland Titan (PD),PD,https://1005.idv.hk/index.php?page=11&p=157
+CMB,158,CMB Leyland Titan (PD5),PD,https://1005.idv.hk/index.php?page=11&p=158
+CMB,159,CMB Leyland Titan (APD),APD,https://1005.idv.hk/index.php?page=11&p=159
+CMB,160,CMB MCW Metropolitan (MS),MS,https://1005.idv.hk/index.php?page=11&p=160
+CMB,161,CMB Ailsa Volvo B55 (AV),AV,https://1005.idv.hk/index.php?page=11&p=161
+CMB,162,CMB Guy Arab V (LX),LX,https://1005.idv.hk/index.php?page=11&p=162
+CMB,163,CMB Guy Arab V (M),M,https://1005.idv.hk/index.php?page=11&p=163
+CMB,164,CMB Guy Arab V (S),S,https://1005.idv.hk/index.php?page=11&p=164
+CMB,165,CMB Guy Arab V (LS),LS,https://1005.idv.hk/index.php?page=11&p=165
+CMB,166,CMB MCW Metrorider (CM),CM,https://1005.idv.hk/index.php?page=11&p=166
+CMB,167,CMB Albion Viking (AM),AM,https://1005.idv.hk/index.php?page=11&p=167
+CMB,168,CMB Seddon Minibus (SM),SM,https://1005.idv.hk/index.php?page=11&p=168
+CMB,169,CMB Guy Arab V (LW),LW,https://1005.idv.hk/index.php?page=11&p=169
+CMB,170,CMB Dennis Loline V (LW),LW,https://1005.idv.hk/index.php?page=11&p=170
+CMB,171,CMB Guy Arab UF (6),,https://1005.idv.hk/index.php?page=11&p=171
+CMB,172,CMB Guy Arab IV (LW),LW,https://1005.idv.hk/index.php?page=11&p=172
+CMB,173,CMB Guy Arab V (Short Wheelbase) (7),,https://1005.idv.hk/index.php?page=11&p=173
+CMB,174,CMB Volvo B6LE (VC),VC,https://1005.idv.hk/index.php?page=11&p=174
+CMB,175,CMB Dennis Dart (Marshall Body) (CX),CX,https://1005.idv.hk/index.php?page=11&p=175
+CMB,176,CMB Dennis Condor (Air-cond.) (DA),DA,https://1005.idv.hk/index.php?page=11&p=176
+CMB,177,CMB Leyland Olympian 11m (Air-cond.) (LA),LA,https://1005.idv.hk/index.php?page=11&p=177
+CMB,178,CMB Volvo Olympian 11m (Air-cond.) (VA),VA,https://1005.idv.hk/index.php?page=11&p=178
+CMB,179,CMB Dennis Dart (Carlyle Body) (DC),DC,https://1005.idv.hk/index.php?page=11&p=179
+CMB,180,CMB Dennis Condor 11m (DM),DM,https://1005.idv.hk/index.php?page=11&p=180
+CMB,181,CMB MCW Metrobus 9.7m (MC),MC,https://1005.idv.hk/index.php?page=11&p=181
+NWFB,5,NWFB Dennis Dart SLF 10.7m (20),,https://1005.idv.hk/index.php?page=11&p=5
+NWFB,6,NWFB Dennis Dart SLF 10.1m (20),,https://1005.idv.hk/index.php?page=11&p=6
+NWFB,12,NWFB Dennis Trident 12m (Euro III) (12),,https://1005.idv.hk/index.php?page=11&p=12
+NWFB,13,"NWFB Dennis Trident 12m (10,11)",,https://1005.idv.hk/index.php?page=11&p=13
+NWFB,14,NWFB Dennis Trident 11.3m (14),,https://1005.idv.hk/index.php?page=11&p=14
+NWFB,15,NWFB Dennis Trident 10.6m (16),,https://1005.idv.hk/index.php?page=11&p=15
+NWFB,16,NWFB Dennis Trident 10.6m (Duple Metsec Body) (36),,https://1005.idv.hk/index.php?page=11&p=16
+NWFB,17,NWFB Neoplan Centroliner (60),,https://1005.idv.hk/index.php?page=11&p=17
+NWFB,57,NWFB MCW Metrobus 9.7m (MC),MC,https://1005.idv.hk/index.php?page=11&p=57
+NWFB,49,NWFB Dennis Trident (Duple Metsec Body) (30),,https://1005.idv.hk/index.php?page=11&p=49
+NWFB,50,NWFB Dennis Trident 10.3m (33),,https://1005.idv.hk/index.php?page=11&p=50
+NWFB,51,NWFB Volvo Super Olympian 12m (50),,https://1005.idv.hk/index.php?page=11&p=51
+NWFB,52,NWFB Dennis Condor/ Dragon (DA),DA,https://1005.idv.hk/index.php?page=11&p=52
+NWFB,53,NWFB Leyland Olympian 11m (A/C) (LA),LA,https://1005.idv.hk/index.php?page=11&p=53
+NWFB,54,NWFB Volvo Olympian 11m / 12m (VA),VA,https://1005.idv.hk/index.php?page=11&p=54
+NWFB,55,NWFB Dennis Dart (DC),DC,https://1005.idv.hk/index.php?page=11&p=55
+NWFB,56,NWFB Dennis Condor 11m (DM),DM,https://1005.idv.hk/index.php?page=11&p=56
+NWFB,117,NWFB MCW Metrobus 11m (MB),MB,https://1005.idv.hk/index.php?page=11&p=117
+NWFB,118,NWFB MCW Metrobus 12m (ML),ML,https://1005.idv.hk/index.php?page=11&p=118
+NWFB,119,NWFB Dennis Condor 12m (DL),DL,https://1005.idv.hk/index.php?page=11&p=119
+NWFB,120,NWFB Dennis Jubilant (DS),DS,https://1005.idv.hk/index.php?page=11&p=120
+NWFB,121,NWFB Leyland Olympian 11m (LM),LM,https://1005.idv.hk/index.php?page=11&p=121
+NWFB,122,NWFB Daimler/ Leyland Fleetline (LF),LF,https://1005.idv.hk/index.php?page=11&p=122
+NWFB,123,NWFB Leyland Fleetline (SF),SF,https://1005.idv.hk/index.php?page=11&p=123
+NWFB,124,NWFB Leyland Victory II (LV),LV,https://1005.idv.hk/index.php?page=11&p=124
+NWFB,243,NWFB Training Fleet (T1),T,https://1005.idv.hk/index.php?page=11&p=243
+NWFB,287,"NWFB Alexander Dennis Enviro 500 12m (2,55,599)",,https://1005.idv.hk/index.php?page=11&p=287
+NWFB,299,NWFB Alexander Dennis Enviro 500 11.3m (40),,https://1005.idv.hk/index.php?page=11&p=299
+NWFB,337,"NWFB Alexander Dennis Enviro 500 MMC 11.3m (40,499,8)",,https://1005.idv.hk/index.php?page=11&p=337
+NWFB,348,NWFB Alexander Dennis Enviro 500 Hybrid (56),,https://1005.idv.hk/index.php?page=11&p=348
+NWFB,351,"NWFB Alexander Dennis Enviro 500 MMC 12m (55,56,57,58)",,https://1005.idv.hk/index.php?page=11&p=351
+NWFB,358,NWFB Volvo B9TL 11.3m (45),,https://1005.idv.hk/index.php?page=11&p=358
+NWFB,359,NWFB Youngman JNP6120 (26),,https://1005.idv.hk/index.php?page=11&p=359
+NWFB,371,NWFB BYD K9R (20),,https://1005.idv.hk/index.php?page=11&p=371
+NWFB,377,NWFB MAN A95 12.8m (60),,https://1005.idv.hk/index.php?page=11&p=377
+NWFB,379,NWFB Yixing Great Dragon SDL6120EVG (20),,https://1005.idv.hk/index.php?page=11&p=379
+NWFB,382,NWFB Volvo B9TL 12m (52),,https://1005.idv.hk/index.php?page=11&p=382
+NWFB,384,"NWFB ADL Enviro 500 MMC 12.8m (61,611,612,62)",,https://1005.idv.hk/index.php?page=11&p=384
+NWFB,386,"NWFB ADL Enviro 400 10.4m (315,38)",,https://1005.idv.hk/index.php?page=11&p=386
+NWFB,394,NWFB ADL Enviro 200 MMC (25),,https://1005.idv.hk/index.php?page=11&p=394
+NWFB,409,"NWFB Volvo B8L (52,521,88)",,https://1005.idv.hk/index.php?page=11&p=409
+PITCL,109,PITCL Dennis Dart SLF (1),,https://1005.idv.hk/index.php?page=11&p=109
+PITCL,110,PITCL Designline Olymbus,,https://1005.idv.hk/index.php?page=11&p=110
+PITCL,198,PITCL TransBus Super Pointer Dart (1),,https://1005.idv.hk/index.php?page=11&p=198
+PITCL,219,PITCL Toyota Coaster,,https://1005.idv.hk/index.php?page=11&p=219
+PITCL,275,PITCL Alexander Dennis Super Pointer Dart (Coach Version),,https://1005.idv.hk/index.php?page=11&p=275
+PITCL,301,PITCL Lion Bus LBC6101,,https://1005.idv.hk/index.php?page=11&p=301
+PITCL,302,PITCL Isuzu LT133L,,https://1005.idv.hk/index.php?page=11&p=302
+PITCL,311,PITCL YoungMan JNP6122GR2 (3),,https://1005.idv.hk/index.php?page=11&p=311
+PITCL,324,PITCL Yutong ZK6100H (9),,https://1005.idv.hk/index.php?page=11&p=324
+PITCL,325,PITCL Isuzu LT134P (9),,https://1005.idv.hk/index.php?page=11&p=325
+PITCL,326,PITCL Yutong ZK6119HC (9),,https://1005.idv.hk/index.php?page=11&p=326
+PITCL,327,PITCL Kinglong XMQ6127 (9),,https://1005.idv.hk/index.php?page=11&p=327
+PITCL,332,PITCL Man A51 (9),,https://1005.idv.hk/index.php?page=11&p=332
+PITCL,341,PITCL MAN NL323,,https://1005.idv.hk/index.php?page=11&p=341
+PITCL,368,PITCL Sunlong SLK6112,,https://1005.idv.hk/index.php?page=11&p=368
+PITCL,369,PITCL Scania K94IB 4x2,,https://1005.idv.hk/index.php?page=11&p=369
+PITCL,372,PITCL Sunlong SLK6102,,https://1005.idv.hk/index.php?page=11&p=372
+PITCL,376,PITCL ADL Enviro 200 Dart,,https://1005.idv.hk/index.php?page=11&p=376
+PITCL,412,PITCL Kinglong XMQ6803H,,https://1005.idv.hk/index.php?page=11&p=412
+PITCL,422,PITCL Higer KLQ6119,,https://1005.idv.hk/index.php?page=11&p=422
+PITCL,425,PITCL BYD CK6120LLEV,,https://1005.idv.hk/index.php?page=11&p=425
+PITCL,428,PITCL MAN RR8,,https://1005.idv.hk/index.php?page=11&p=428
+NLB,430,NLB MAN RR8 (MN),MN|MG,https://1005.idv.hk/index.php?page=11&p=430
+NLB,431,NLB MAN RR2 (MN),MN,https://1005.idv.hk/index.php?page=11&p=431
+PITCL,436,PITCL Sunlong SLK6102,,https://1005.idv.hk/index.php?page=11&p=436
+PITCL,441,PITCL CRRC TEG6125EUBEV01,,https://1005.idv.hk/index.php?page=11&p=441
+PITCL,446,PITCL Guangtong GTK6129BEVB,,https://1005.idv.hk/index.php?page=11&p=446
+PITCL,447,PITCL Alexander Dennis Enviro 500 (Euro V),,https://1005.idv.hk/index.php?page=11&p=447
+KCRC,99,KCRC Mitsubishi MP618N (3),,https://1005.idv.hk/index.php?page=11&p=99
+KCRC,100,KCRC Mitsubishi BM117L (3),,https://1005.idv.hk/index.php?page=11&p=100
+KCRC,102,KCRC Dennis Dart (5),,https://1005.idv.hk/index.php?page=11&p=102
+KCRC,95,KCRC MCW Metrobus 9.7m (1),,https://1005.idv.hk/index.php?page=11&p=95
+KCRC,96,KCRC Leyland Olympian 11m (2),,https://1005.idv.hk/index.php?page=11&p=96
+KCRC,97,KCRC Volvo Olympian 11m (2),,https://1005.idv.hk/index.php?page=11&p=97
+KCRC,98,KCRC Mitsubishi Mk218 (3),,https://1005.idv.hk/index.php?page=11&p=98
+KCRC,101,KCRC Volvo B10M (4),,https://1005.idv.hk/index.php?page=11&p=101
+KCRC,103,KCRC Dennis Trident 11.3m (6),,https://1005.idv.hk/index.php?page=11&p=103
+KCRC,104,KCRC Temporary Bus Fleet (K),K,https://1005.idv.hk/index.php?page=11&p=104
+KCRC,235,KCRC Dennis Trident 10.6m (7),,https://1005.idv.hk/index.php?page=11&p=235
+KCRC,259,KCRC Toyota Coaster (1),,https://1005.idv.hk/index.php?page=11&p=259
+KCRC,260,KCRC Mitsubishi Rosa (1),,https://1005.idv.hk/index.php?page=11&p=260
+Stagecoach,217,Stagecoach Volvo B10M,3L|4L|5L,https://1005.idv.hk/index.php?page=11&p=217
+Stagecoach,218,Stagecoach Volvo Olympian,,https://1005.idv.hk/index.php?page=11&p=218
+MTR,279,MTR Leyland Olympian 11m (2),,https://1005.idv.hk/index.php?page=11&p=279
+MTR,280,MTR Volvo Olympian 11m (2),,https://1005.idv.hk/index.php?page=11&p=280
+MTR,281,MTR Mitsubishi Mk218 (3),,https://1005.idv.hk/index.php?page=11&p=281
+MTR,282,MTR Dennis Dart (5),,https://1005.idv.hk/index.php?page=11&p=282
+MTR,285,MTR Volvo B10M (4),,https://1005.idv.hk/index.php?page=11&p=285
+MTR,278,MTR Alexander Dennis Enviro 500 12m (8),,https://1005.idv.hk/index.php?page=11&p=278
+MTR,283,MTR Dennis Trident 11.3m (6),,https://1005.idv.hk/index.php?page=11&p=283
+MTR,284,MTR Dennis Trident (2nd hand) (7),,https://1005.idv.hk/index.php?page=11&p=284
+MTR,291,MTR Alexander Dennis Enviro 200 Dart (9),,https://1005.idv.hk/index.php?page=11&p=291
+MTR,321,MTR Enviro 400 (1),,https://1005.idv.hk/index.php?page=11&p=321
+MTR,323,MTR Alexander Dennis Enviro 500 11.3m (8),,https://1005.idv.hk/index.php?page=11&p=323
+MTR,334,MTR Alexander Dennis Enviro 500 MMC 11.3m (5),,https://1005.idv.hk/index.php?page=11&p=334
+MTR,375,MTR Volvo B9TL (3),,https://1005.idv.hk/index.php?page=11&p=375
+MTR,418,MTR Alexander Dennis Enviro 500 MMC 12m,,https://1005.idv.hk/index.php?page=11&p=418
+MTR,434,MTR ADL E500EV (Z),Z,https://1005.idv.hk/index.php?page=11&p=434
+Sun,373,Sun Bus Dennis Trident 12m,,https://1005.idv.hk/index.php?page=11&p=373
+Sun,410,Sun Bus Neoplan Centroliner,,https://1005.idv.hk/index.php?page=11&p=410
+Sun,411,Sun Bus MAN NL323 (Borrow from NHKB),,https://1005.idv.hk/index.php?page=11&p=411
+Sun,415,Sun Bus Wright Streetdeck,,https://1005.idv.hk/index.php?page=11&p=415
+SunBus,433,SunBus Volvo B7RLE,,https://1005.idv.hk/index.php?page=11&p=433
+NLB,60,NLB Man A91 (MN),MN,https://1005.idv.hk/index.php?page=11&p=60
+NLB,70,NLB MAN 18.310 (MN),MN,https://1005.idv.hk/index.php?page=11&p=70
+NLB,202,NLB ISUZU JCR460 (ILS),ILS,https://1005.idv.hk/index.php?page=11&p=202
+NLB,203,NLB Benz Bus Fleet (BENZ),,https://1005.idv.hk/index.php?page=11&p=203
+NLB,204,NLB Dennis Dart SLF (DN),DN,https://1005.idv.hk/index.php?page=11&p=204
+NLB,205,NLB MAN NL-263 (MN),MN,https://1005.idv.hk/index.php?page=11&p=205
+NLB,206,NLB Mitsubishi Rosa BE439F (MS),MS,https://1005.idv.hk/index.php?page=11&p=206
+NLB,207,"NLB Toyota Coaster (TCM,TY)",TY|TCM,https://1005.idv.hk/index.php?page=11&p=207
+NLB,208,NLB Leyland Victory Mk II (LD),LD,https://1005.idv.hk/index.php?page=11&p=208
+NLB,232,NLB Dodge RGI5 (DLS),DLS,https://1005.idv.hk/index.php?page=11&p=232
+NLB,233,NLB Dodge KC40 (DSS),DSS,https://1005.idv.hk/index.php?page=11&p=233
+NLB,234,NLB Commer KCB3023,,https://1005.idv.hk/index.php?page=11&p=234
+NLB,261,NLB MAN 24.350,,https://1005.idv.hk/index.php?page=11&p=261
+NLB,262,NLB MAN NL-262 (MN),MN,https://1005.idv.hk/index.php?page=11&p=262
+NLB,270,"NLB ISUZU MT112K, MT112L (ILS)",ILS,https://1005.idv.hk/index.php?page=11&p=270
+NLB,271,NLB ISUZU LT132L (ILS),ILS,https://1005.idv.hk/index.php?page=11&p=271
+NLB,272,NLB ISUZU LT133L (ILS),ILS,https://1005.idv.hk/index.php?page=11&p=272
+NLB,273,NLB ISUZU LV423R (ILS),ILS,https://1005.idv.hk/index.php?page=11&p=273
+NLB,276,NLB Volvo B6LE (VL),VL,https://1005.idv.hk/index.php?page=11&p=276
+NLB,286,NLB MAN NL-273 (MN),MN,https://1005.idv.hk/index.php?page=11&p=286
+NLB,289,NLB Mitsubishi Rosa BE437F (MS),MS,https://1005.idv.hk/index.php?page=11&p=289
+NLB,290,NLB Mitsubishi Rosa BE649J (MS),MS,https://1005.idv.hk/index.php?page=11&p=290
+NLB,310,NLB YoungMan JNP6122GR1 (YM),YM,https://1005.idv.hk/index.php?page=11&p=310
+NLB,338,NLB Dennis Trident 12m (DN),DN,https://1005.idv.hk/index.php?page=11&p=338
+KCM,339,KCM Dennis Trident 12m,,https://1005.idv.hk/index.php?page=11&p=339
+KCM,363,KCM MAN A95,,https://1005.idv.hk/index.php?page=11&p=363
+NLB,365,NLB MAN LE 19.320 (MN),MN,https://1005.idv.hk/index.php?page=11&p=365
+NLB,370,"NLB MAN A95 (MD,MDR)",MD|MDR,https://1005.idv.hk/index.php?page=11&p=370
+NLB,387,NLB MAN R33 (MN),MN,https://1005.idv.hk/index.php?page=11&p=387
+NLB,397,NLB BYD K9,BE,https://1005.idv.hk/index.php?page=11&p=397
+NLB,400,NLB ADL Enviro 400 (AD),AD,https://1005.idv.hk/index.php?page=11&p=400
+NLB,426,NLB MAN A95 11.7m (MDRS),MDRS,https://1005.idv.hk/index.php?page=11&p=426
+NLB,449,NLB Volvo B8L 12m,,https://1005.idv.hk/index.php?page=11&p=449
+XXX,74,XXX,,https://1005.idv.hk/index.php?page=11&p=74
+Reserved,79,Reserved,,https://1005.idv.hk/index.php?page=11&p=79
+NHKB,105,NHKB MAN NL-263,,https://1005.idv.hk/index.php?page=11&p=105
+NHKB,106,NHKB Dennis Dart,,https://1005.idv.hk/index.php?page=11&p=106
+NHKB,107,NHKB Scania L94UB,,https://1005.idv.hk/index.php?page=11&p=107
+NHKB,108,NHKB Volvo B7RLE,,https://1005.idv.hk/index.php?page=11&p=108
+NHKB,265,NHKB Hino Coach,,https://1005.idv.hk/index.php?page=11&p=265
+NHKB,315,NHKB MAN 18.320,,https://1005.idv.hk/index.php?page=11&p=315
+NHKB,330,NHKB MAN NL323,,https://1005.idv.hk/index.php?page=11&p=330

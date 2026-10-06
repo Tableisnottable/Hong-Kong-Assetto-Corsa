@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "build" / "HP1C" / "source"
-OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+OVERPASS_URL = "https://overpass.kumi.systems/api/interpreter"
 MIN_REQUEST_INTERVAL_SECONDS = 15
 MAX_RETRIES = 3
 REQUEST_TIMEOUT_SECONDS = 90

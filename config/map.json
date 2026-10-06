@@ -1,0 +1,49 @@
+{
+  "id": "hk_kowloon",
+  "display_name": "Hong Kong - Kowloon",
+  "game": "assetto_corsa",
+  "scale": {
+    "units": "meters",
+    "blender_units_per_meter": 1.0,
+    "required_accuracy_percent": 1.0
+  },
+  "initial_area": {
+    "description": "Tsim Sha Tsui, Mong Kok, and Kowloon Bay road corridor",
+    "boundary": {
+      "south": 22.285,
+      "west": 114.155,
+      "north": 22.335,
+      "east": 114.225
+    },
+    "coordinate_reference_system": "WGS84",
+    "working_projection": "local_metric_projection_required"
+  },
+  "layers": [
+    "roads",
+    "junctions",
+    "curbs",
+    "terrain",
+    "buildings",
+    "traffic_signals",
+    "street_furniture",
+    "vegetation",
+    "collision"
+  ],
+  "source_policy": {
+    "preferred_source": "OpenStreetMap",
+    "require_attribution": true,
+    "retain_raw_extract": true,
+    "prohibited_sources": [
+      "Google Street View exports",
+      "commercial game rips",
+      "unlicensed manufacturer CAD"
+    ]
+  },
+  "export": {
+    "track_id": "hk_kowloon",
+    "output_root": "content/tracks/hk_kowloon",
+    "sector_size_meters": 250,
+    "use_kn5": true
+  }
+}
+

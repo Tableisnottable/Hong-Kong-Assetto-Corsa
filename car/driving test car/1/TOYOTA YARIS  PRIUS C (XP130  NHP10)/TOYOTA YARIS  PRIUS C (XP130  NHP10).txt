@@ -1,0 +1,49 @@
+類別 1：棍波私家車 (CATEGORY 1: PRIVATE CAR - MANUAL)
+車款：TOYOTA YARIS / PRIUS C (XP130 / NHP10)
+--------------------------------------------------------------------------------
+【1. 底盤與轉向工程 (CHASSIS & STEERING ENGINEERING)】
+• 車型代號 (Model Code): NHP10R-AHXNB / XP130 (豐田 B 平台 / Toyota B-Platform)
+• 轉向系統 (Steering System): 電動助力齒輪齒條 (EPS Electric Rack & Pinion) | 轉向比 (Steering Ratio): 14.8:1
+• 迴轉圈數 (Lock-to-Lock Turns): 3.0 圈 (3.0 turns)
+• 最小轉彎半徑 (Minimum Turning Radius): 4.8 米 (4.8 meters) | 牆對牆迴轉直徑 (Turning Circle): 10.2 米
+• 前後輪距 (Front / Rear Track): 前 1,485 mm / 後 1,470 mm
+• 離地距與氣動 (Ground Clearance & Aerodynamics): 離地距 140 mm | 接近角 14.5° | 離去角 21.0° | 風阻係數 (Cd): 0.29
+
+【2. 引擎與燃油系統 (ENGINE & FUEL SYSTEM)】
+• 引擎型號 (Engine Code): 1NZ-FE (或 Euro 6 2NR-FE)
+• 缸體佈局 (Layout): 橫置直列四缸，DOHC 16氣門 (Transverse Inline 4-Cylinder, DOHC 16-Valve)
+• 氣門正時 (Valve Train): VVT-i 智慧可變氣門正時 / Dual VVT-i
+• 汽缸容量 (Displacement): 1,497 cc (1.5 公升 / 1.5 Liters)
+• 缸徑 x 衝程 (Bore x Stroke): 75.0 mm x 84.7 mm | 壓縮比 (Compression Ratio): 10.5:1
+• 最大馬力 (Max Power): 107 hp (79 kW / 108 PS) @ 6,000 rpm
+• 最大扭力 (Max Torque): 140 Nm (103 lb-ft) @ 4,200 rpm
+• 紅線轉速與怠速 (Redline & Idle): 紅線 6,400 rpm | 溫車怠速 700 ± 50 rpm
+• 噴油系統 (Fuel Delivery): 電子連續多點噴油 (Sequential Multi-Port SEFI)
+• 油箱容量 (Fuel Tank Capacity): 42 公升 (42 Liters) 無鉛汽油 (95 RON)
+
+【3. 波箱與傳動細節 (TRANSMISSION & DRIVETRAIN)】
+• 波箱型號 (Transmission Model): 豐田 C50 5速手動波箱 (Toyota C50 5-Speed Manual)
+• 離合器規格 (Clutch Spec): 單片乾式膜片彈簧，液壓操縱 (Single Dry-Plate, Hydraulic Control)
+• 各檔齒輪比與速度範圍 (Gear Ratios & Speed Ranges):
+  - 1檔 (1st Gear): 3.545:1 (車速範圍: 0–35 km/h)
+  - 2檔 (2nd Gear): 1.904:1 (車速範圍: 15–60 km/h)
+  - 3檔 (3rd Gear): 1.310:1 (車速範圍: 30–90 km/h)
+  - 4檔 (4th Gear): 0.969:1 (車速範圍: 45–120 km/h)
+  - 5檔 (5th Gear): 0.815:1 (巡航檔 / Cruising Gear)
+  - 倒檔 (Reverse Gear): 3.250:1
+  - 尾牙齒輪比 (Final Drive Differential Ratio): 3.722:1
+• 驅動形式 (Drivetrain Layout): 前置引擎，前輪驅動 (Front-Engine, Front-Wheel Drive - FF)
+
+【4. 懸掛、煞車與輪胎 (SUSPENSION, BRAKES & WHEELS)】
+• 前懸掛 (Front Suspension): 獨立麥花臣支柱式配 L 型下控制臂、螺旋彈簧及防傾桿 (MacPherson Strut with Anti-Roll Bar)
+• 後懸掛 (Rear Suspension): 扭力梁非獨立軸配整合式防傾桿及螺旋彈簧 (Torsion Beam Axle)
+• 前煞車 (Front Brakes): 255 mm x 22 mm 通風碟配單活塞浮動卡鉗 (Ventilated Discs)
+• 後煞車 (Rear Brakes): 200 mm 鼓煞 (Leading-Trailing Drum Brakes)
+• 煞車液壓與電子系統 (Brake Hydraulics & Electronics): 雙迴路對角分開式，真空助力，四通道 ABS 連 EBD 電子制動力分配
+• 輪胎規格 (Wheels & Tires): 15 x 5.5J 鋼圈，175/65 R15 84H 輪胎 (胎壓: 前 2.3 bar / 後 2.2 bar)
+
+【5. 尺寸重量與考車改裝 (DIMENSIONS, WEIGHT & EXAM MODIFICATIONS)】
+• 全車尺寸 (Overall Dimensions): 全長 3,950 mm x 全闊 1,695 mm x 全高 1,510 mm | 軸距 (Wheelbase): 2,510 mm
+• 車重規格 (Weight Ratings): 整備質量 (Kerb Weight) 1,040 kg | 許可總重 (GVW) 1,480 kg
+• 重量分配 (Axle Weight Distribution): 前軸 62% / 後軸 38%
+• 駕校考車改裝 (Instructor Controls): 副駕腳下機械式輔助煞車掣腳踏 (Dual Aux Brake Pedal)、雙室內後視鏡、前翼子板盲點鏡

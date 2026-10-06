@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HK/1:1 — a 1:1 Hong Kong map for Assetto Corsa." />
+    <title>HK/1:1 — Map progress</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="HK slash 1:1 home"><span class="brand-mark">HK</span><span class="brand-label">/1:1</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#map">Map</a>
+        <a href="#process">Process</a>
+        <a href="#method">Method</a>
+        <a href="cars.html">Car mods</a>
+      </nav>
+      <span class="build-label"><span class="status-dot"></span> Public worklog</span>
+    </header>
+
+    <main>
+      <section class="intro section-wrap">
+        <p class="eyebrow"><span>Assetto Corsa</span><span>Hong Kong, 1:1 scale</span></p>
+        <div class="intro-heading">
+          <h1>The city is<br /><em>in progress.</em></h1>
+          <p>One map. One street at a time. Follow the real work behind a 1:1 Hong Kong driving map.</p>
+        </div>
+      </section>
+
+      <section class="map-section section-wrap" id="map">
+        <div class="section-kicker"><span>01 / MAP</span><span>LIVE OVERVIEW</span></div>
+        <div class="map-layout">
+          <div class="map-panel" role="img" aria-label="HP1C-style overview map with process status color overlays">
+            <div class="map-coordinates"><span>22° 19' N</span><span>114° 10' E</span></div>
+            <div class="map-grid"></div>
+            <div class="map-shape island"></div>
+            <div class="map-shape kowloon"></div>
+            <div class="map-shape south-island"></div>
+            <div class="process-overlay overlay-done" title="Done"></div>
+            <div class="process-overlay overlay-working" title="Working"></div>
+            <div class="process-overlay overlay-rescrashes" title="Rescrashes"></div>
+            <div class="process-overlay overlay-plan" title="Plan"></div>
+            <div class="process-overlay overlay-na" title="N/A"></div>
+            <div class="process-overlay overlay-updating" title="Updating"></div>
+            <div class="process-overlay overlay-will-update" title="Will update"></div>
+            <div class="route route-a"></div>
+            <div class="route route-b"></div>
+            <div class="route route-c"></div>
+            <span class="map-label central">CENTRAL</span>
+            <span class="map-label peak">THE PEAK</span>
+            <span class="map-label kowloon-label">KOWLOON</span>
+            <span class="map-scale">N ↑ &nbsp; 0 ───── 2 KM</span>
+            <div class="overlay-legend" aria-label="Map process color legend">
+              <span><i class="legend-done"></i>Done</span>
+              <span><i class="legend-working"></i>Working</span>
+              <span><i class="legend-rescrashes"></i>Rescrashes</span>
+              <span><i class="legend-plan"></i>Plan</span>
+              <span><i class="legend-na"></i>N/A</span>
+              <span><i class="legend-updating"></i>Updating</span>
+              <span><i class="legend-will-update"></i>Will update</span>
+            </div>
+          </div>
+          <aside class="map-notes">
+            <div class="map-note"><span class="note-number">01</span><div><strong>Hong Kong Island</strong><p>Road network and elevation base.</p></div></div>
+            <div class="map-note"><span class="note-number">02</span><div><strong>Harbour crossing</strong><p>Connecting the first playable areas.</p></div></div>
+            <div class="map-note"><span class="note-number">03</span><div><strong>Kowloon</strong><p>Street references queued for capture.</p></div></div>
+            <p class="map-footnote">The illustration is a project overview. The final map is built from real-world references and checked in-game.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="process section-wrap" id="process">
+        <div class="section-kicker"><span>02 / PROCESS</span><span>WORK STATUS</span></div>
+        <div class="process-heading"><h2>What is<br /><em>happening now?</em></h2><p>Tasks move through the board as the map gets measured, built, tested and rebuilt.</p></div>
+        <div class="process-list">
+          <article class="process-row done"><span class="process-number">01</span><div><h3>Done</h3><p>Completed work that is ready to build on.</p></div><span class="process-status">DONE</span></article>
+          <article class="process-row working"><span class="process-number">02</span><div><h3>Working</h3><p>Active modelling, road layout or Assetto Corsa implementation.</p></div><span class="process-status">WORKING</span></article>
+          <article class="process-row rescrashes"><span class="process-number">03</span><div><h3>Rescrashes</h3><p>Needs another pass after a test, crash or broken result.</p></div><span class="process-status">RESCRASHES</span></article>
+          <article class="process-row plan"><span class="process-number">04</span><div><h3>Plan</h3><p>Defined next work, waiting for its turn in the build.</p></div><span class="process-status">PLAN</span></article>
+          <article class="process-row na"><span class="process-number">05</span><div><h3>N/A</h3><p>Not applicable to the current map area or milestone.</p></div><span class="process-status">N/A</span></article>
+          <article class="process-row updating"><span class="process-number">06</span><div><h3>Updating</h3><p>Status or map information is being refreshed right now.</p></div><span class="process-status">UPDATING</span></article>
+          <article class="process-row will-update"><span class="process-number">07</span><div><h3>Will update</h3><p>Scheduled to receive new information or map work later.</p></div><span class="process-status">WILL UPDATE</span></article>
+        </div>
+      </section>
+
+      <section class="method section-wrap" id="method">
+        <div class="section-kicker"><span>03 / METHOD</span><span>HOW WE WORK</span></div>
+        <div class="method-heading"><h2>Measured<br /><em>then driven.</em></h2><p>The method keeps the map faithful to Hong Kong while making every change testable in Assetto Corsa.</p></div>
+        <div class="method-grid">
+          <article><span>01</span><h3>Reference</h3><p>Collect satellite, road, elevation and street-level references for the area.</p></article>
+          <article><span>02</span><h3>Build</h3><p>Translate the references into terrain, roads, junctions, buildings and materials.</p></article>
+          <article><span>03</span><h3>Test</h3><p>Load the area in-game, drive it, check scale and record anything that breaks.</p></article>
+          <article><span>04</span><h3>Improve</h3><p>Move the work to the right status, fix the rough edges and repeat the loop.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span class="brand"><span class="brand-mark">HK</span><span class="brand-label">/1:1</span></span><span>Hong Kong for Assetto Corsa</span><span>Updated as the work moves.</span></footer>
+  </body>
+</html>

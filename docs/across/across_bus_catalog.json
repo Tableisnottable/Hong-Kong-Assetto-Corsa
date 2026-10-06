@@ -1,0 +1,3066 @@
+{
+  "source": "https://1005.idv.hk/",
+  "database": "ACROSS 7.4 (2024)",
+  "record_count": 437,
+  "records": [
+    {
+      "operator_code": "Argos",
+      "across_record_id": "215",
+      "model_name": "Argos Bus Fleet (Miscellaneous)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=215"
+    },
+    {
+      "operator_code": "Bigbus",
+      "across_record_id": "293",
+      "model_name": "Bigbus (HK) Dennis Dominator",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=293"
+    },
+    {
+      "operator_code": "Bigbus",
+      "across_record_id": "292",
+      "model_name": "Bigbus (HK) Dennis Condor",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=292"
+    },
+    {
+      "operator_code": "Bigbus",
+      "across_record_id": "309",
+      "model_name": "Bigbus Ankai HFF6110GS-2",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=309"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "58",
+      "model_name": "Citybus AEC Routemaster",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=58"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "59",
+      "model_name": "Citybus Leyland Olympian 12m Coach",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=59"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "80",
+      "model_name": "Citybus Dennis Dart / Dart SLF (Plaxton Body) (14)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=80"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "84",
+      "model_name": "Citybus Neoplan Norinco BN316 (18)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=84"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "62",
+      "model_name": "Citybus Leyland Olympian 11m Coach (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=62"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "63",
+      "model_name": "Citybus Leyland Olympian 10.4m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=63"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "64",
+      "model_name": "Citybus Volvo Olympian 10.4m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=64"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "85",
+      "model_name": "Citybus Volvo B12 (20)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=85"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "65",
+      "model_name": "Citybus Leyland Olympian 12m Coach (2nd hand) (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=65"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "66",
+      "model_name": "Citybus Volvo Olympian 12m Coach (2nd hand) (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=66"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "67",
+      "model_name": "Citybus Volvo Olympian 12m (3,4,5,6)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=67"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "68",
+      "model_name": "Citybus Leyland Olympian 12m Coach (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=68"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "69",
+      "model_name": "Citybus Leyland Olympian 12m (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=69"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "72",
+      "model_name": "Citybus Dennis Dragon 10.3m (7)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=72"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "73",
+      "model_name": "Citybus Dennis Dragon 12m (8)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=73"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "75",
+      "model_name": "Citybus Volvo Olympian 11m (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=75"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "77",
+      "model_name": "Citybus Volvo B10M (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=77"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "78",
+      "model_name": "Citybus Volvo B6R/B6LE (13)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=78"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "82",
+      "model_name": "Citybus Dennis Dart (3rd hand) (14)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=82"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "83",
+      "model_name": "Citybus MAN NL-262 (15)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=83"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "115",
+      "model_name": "Citybus Leyland Atlantean AN68 (6,A6)",
+      "fleet_prefix": "A",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=115"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "86",
+      "model_name": "Citybus Dennis Trident 12m Coach (21)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=86"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "87",
+      "model_name": "Citybus Dennis Trident 12m (22,23)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=87"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "88",
+      "model_name": "Citybus MAN 24.350 (25)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=88"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "89",
+      "model_name": "Citybus Dennis Trident 10.6m (27)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=89"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "90",
+      "model_name": "Citybus Scania K94UB 6x2 (28)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=90"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "91",
+      "model_name": "Citybus Training Fleet (T)",
+      "fleet_prefix": "T",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=91"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "185",
+      "model_name": "Citybus Dennis Dragon 12m (HACTL)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=185"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "186",
+      "model_name": "Citybus Daimler Fleetline (D)",
+      "fleet_prefix": "D|L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=186"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "187",
+      "model_name": "Citybus Daimler Fleetline",
+      "fleet_prefix": "L|D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=187"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "188",
+      "model_name": "Citybus Bristol Lodekka (B)",
+      "fleet_prefix": "B",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=188"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "189",
+      "model_name": "Citybus Daimler Fleetline",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=189"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "190",
+      "model_name": "Citybus Leyland Atlantean",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=190"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "191",
+      "model_name": "Citybus Dennis Dominator",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=191"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "192",
+      "model_name": "Citybus Daimler Fleetline",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=192"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "193",
+      "model_name": "Citybus Dennis Dominator",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=193"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "194",
+      "model_name": "Citybus Leyland Olympian",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=194"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "196",
+      "model_name": "Citybus MCW Metrobus Mk I",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=196"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "197",
+      "model_name": "Citybus MCW Metrobus Mk I",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=197"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "195",
+      "model_name": "Citybus Leyland Olympian",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=195"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "211",
+      "model_name": "Citybus Dennis Condor 11m Open-topped (3rd hand)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=211"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "216",
+      "model_name": "Citybus Volvo Olympian (Temporary Bus Fleet) (VA)",
+      "fleet_prefix": "VA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=216"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "246",
+      "model_name": "Citybus Leyland Victory",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=246"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "247",
+      "model_name": "Citybus Nissan Minibus (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=247"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "248",
+      "model_name": "Citybus Mercedes Benz OF1113 (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=248"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "249",
+      "model_name": "Citybus Mitsubishi Mk117J (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=249"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "250",
+      "model_name": "Citybus Scania K93 (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=250"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "251",
+      "model_name": "Citybus Mitsubishi MK618N (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=251"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "252",
+      "model_name": "Citybus Ailsa Volvo B55 (V)",
+      "fleet_prefix": "V",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=252"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "253",
+      "model_name": "Citybus Nissan R85H (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=253"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "254",
+      "model_name": "Citybus Nissan BM115L (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=254"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "255",
+      "model_name": "Citybus Isuzu ECM430 (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=255"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "256",
+      "model_name": "Citybus Nissan U20N (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=256"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "257",
+      "model_name": "Citybus Mitsubishi MP117K (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=257"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "258",
+      "model_name": "Citybus Nissan 4R95 (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=258"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "277",
+      "model_name": "Citybus Alexander Dennis Enviro 500 12m (509,81,82,83)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=277"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "306",
+      "model_name": "Citybus Enviro 400 (310,70)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=306"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "312",
+      "model_name": "Citybus Volvo B9TL 10.4m (2-axle) (320,75)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=312"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "318",
+      "model_name": "Citybus Training Fleet",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=318"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "319",
+      "model_name": "Citybus Scania K280UD (89)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=319"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "322",
+      "model_name": "Citybus Youngman JNP6105GR (18)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=322"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "329",
+      "model_name": "Citybus Alexander Dennis Enviro 500 MMC 12m(Cityflyer) (80)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=329"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "333",
+      "model_name": "Citybus Alexander Dennis Enviro 500 MMC 11.3m (409,91)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=333"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "335",
+      "model_name": "Citybus Alexander Dennis Enviro 500 MMC 12m (2,599,83,84,85)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=335"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "343",
+      "model_name": "Citybus Alexander Dennis Enviro 500 MMC 12.8m (63,64,65)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=343"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "349",
+      "model_name": "Citybus Alexander Dennis Enviro 500 Hybrid (84)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=349"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "352",
+      "model_name": "Citybus Dennis Trident 10.3m (8)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=352"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "355",
+      "model_name": "Citybus Volvo B9TL 12.8m (65)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=355"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "357",
+      "model_name": "Citybus Youngman JNP6120GR (18)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=357"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "364",
+      "model_name": "Citybus Volvo B9TL 11.3m (95)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=364"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "367",
+      "model_name": "Citybus BYD K9R (15)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=367"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "378",
+      "model_name": "Citybus Yixing Great Dragon SDL6120EVG (15)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=378"
+    },
+    {
+      "operator_code": "CityBus",
+      "across_record_id": "385",
+      "model_name": "CityBus ADL Enviro 500MMC 12.8m Coach (68)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=385"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "408",
+      "model_name": "Citybus Volvo B8L (521,88)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=408"
+    },
+    {
+      "operator_code": "Weisheit",
+      "across_record_id": "420",
+      "model_name": "Weisheit WSD6121BR1EV",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=420"
+    },
+    {
+      "operator_code": "Citybus",
+      "across_record_id": "402",
+      "model_name": "Citybus Volvo Super Olympian 12m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=402"
+    },
+    {
+      "operator_code": "Weisheit",
+      "across_record_id": "429",
+      "model_name": "Weisheit VV12HR",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=429"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "201",
+      "model_name": "DBTSL Dennis Dart SLF",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=201"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "220",
+      "model_name": "DBTSL MAN NL-212",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=220"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "221",
+      "model_name": "DBTSL Mercedes Benz O814",
+      "fleet_prefix": "HKR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=221"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "222",
+      "model_name": "DBTSL Mercedes Benz O405",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=222"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "223",
+      "model_name": "DBTSL Nissan Diesel RB80",
+      "fleet_prefix": "HKR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=223"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "224",
+      "model_name": "DBTSL Isuzu LT112L",
+      "fleet_prefix": "HKR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=224"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "225",
+      "model_name": "DBTSL Mitsubishi Rosa",
+      "fleet_prefix": "HKR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=225"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "226",
+      "model_name": "DBTSL MAN 13.220",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=226"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "227",
+      "model_name": "DBTSL MAN 14.220",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=227"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "228",
+      "model_name": "DBTSL MAN NL-263",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=228"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "229",
+      "model_name": "DBTSL MAN NL-262",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=229"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "231",
+      "model_name": "DBTSL Toyota Coaster",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=231"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "241",
+      "model_name": "DBTSL Mitsubishi Rosa",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=241"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "230",
+      "model_name": "DBTSL Dennis Dart (Carlyle Body)",
+      "fleet_prefix": "HKR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=230"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "267",
+      "model_name": "DBTSL MAN 18.310",
+      "fleet_prefix": "HKR|DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=267"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "294",
+      "model_name": "DBTSL MAN 12.240",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=294"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "300",
+      "model_name": "DBTSL MAN NL-273",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=300"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "317",
+      "model_name": "DBTSL MAN NL323",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=317"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "320",
+      "model_name": "DBTSL Volvo B7R",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=320"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "340",
+      "model_name": "DBTSL Enviro 200",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=340"
+    },
+    {
+      "operator_code": "Shandong",
+      "across_record_id": "347",
+      "model_name": "Shandong Yixing Great Dragon SDL6120EVG",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=347"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "354",
+      "model_name": "DBTSL MAN A84",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=354"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "360",
+      "model_name": "DBTSL Volvo B9TL",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=360"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "383",
+      "model_name": "DBTSL Scania K280IB",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=383"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "388",
+      "model_name": "DBTSL Daewoo BH117L",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=388"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "381",
+      "model_name": "DBTSL Volvo Olympian 12m",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=381"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "391",
+      "model_name": "DBTSL MAN A95",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=391"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "392",
+      "model_name": "DBTSL MAN RR2",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=392"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "395",
+      "model_name": "DBTSL MAN A66",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=395"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "419",
+      "model_name": "DBTSL MAN NL323",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=419"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "445",
+      "model_name": "DBTSL Guangtong GTK6129BEVB",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=445"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "448",
+      "model_name": "DBTSL Guangtong GTK6125R6D",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=448"
+    },
+    {
+      "operator_code": "DBTSL",
+      "across_record_id": "450",
+      "model_name": "DBTSL CRRC CSR6780KLEV1R",
+      "fleet_prefix": "DBAY",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=450"
+    },
+    {
+      "operator_code": "NWS",
+      "across_record_id": "314",
+      "model_name": "NWS Training Fleet (T)",
+      "fleet_prefix": "T",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=314"
+    },
+    {
+      "operator_code": "Fung",
+      "across_record_id": "94",
+      "model_name": "Fung Choi Travel Leyland Olympian 12m Coach",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=94"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "398",
+      "model_name": "HZMBus MAN A95",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=398"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "399",
+      "model_name": "HZMBus Scania K250UB",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=399"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "403",
+      "model_name": "HZMBus Miscellaneous Fleet",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=403"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "404",
+      "model_name": "HZMBus Scania K410IB",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=404"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "438",
+      "model_name": "HZMBus Scania K410CB",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=438"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "442",
+      "model_name": "HZMBus Volvo B13R",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=442"
+    },
+    {
+      "operator_code": "HZMBus",
+      "across_record_id": "444",
+      "model_name": "HZMBus MAN RR4",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=444"
+    },
+    {
+      "operator_code": "HACTL",
+      "across_record_id": "10",
+      "model_name": "HACTL Dennis Dragon 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=10"
+    },
+    {
+      "operator_code": "HACTL",
+      "across_record_id": "11",
+      "model_name": "HACTL Volvo Olympian 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=11"
+    },
+    {
+      "operator_code": "CLP",
+      "across_record_id": "92",
+      "model_name": "CLP Leyland Olympian 12m Coach (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=92"
+    },
+    {
+      "operator_code": "CLP",
+      "across_record_id": "93",
+      "model_name": "CLP Volvo Olympian 12m Coach (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=93"
+    },
+    {
+      "operator_code": "CLP",
+      "across_record_id": "297",
+      "model_name": "CLP Alexander Dennis Enviro 500 (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=297"
+    },
+    {
+      "operator_code": "CLP",
+      "across_record_id": "374",
+      "model_name": "CLP Alexander Dennis Enviro 500 MMC (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=374"
+    },
+    {
+      "operator_code": "CLP",
+      "across_record_id": "439",
+      "model_name": "CLP ADL E500EV",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=439"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "1",
+      "model_name": "KMB TransBus Enviro 500 (ATE)",
+      "fleet_prefix": "ATE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=1"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "2",
+      "model_name": "KMB Volvo Super Olympian (Wright Explorer Body) (AVW)",
+      "fleet_prefix": "AVW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=2"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "3",
+      "model_name": "KMB Volvo Super Olympian 12m (Alexander Body/Volgren Body) (3ASV)",
+      "fleet_prefix": "3ASV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=3"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "4",
+      "model_name": "KMB MAN 24.310 (AMN)",
+      "fleet_prefix": "AMN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=4"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "20",
+      "model_name": "KMB Neoman A34 (APM)",
+      "fleet_prefix": "APM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=20"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "23",
+      "model_name": "KMB Dennis Dragon 12m (A/C) (3AD)",
+      "fleet_prefix": "3AD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=23"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "27",
+      "model_name": "KMB Scania N113 (AS)",
+      "fleet_prefix": "AS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=27"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "29",
+      "model_name": "KMB Dennis Dragon 9.9m (ADS)",
+      "fleet_prefix": "ADS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=29"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "30",
+      "model_name": "KMB Mitsubishi Mk117/217/218 (AM)",
+      "fleet_prefix": "AM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=30"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "31",
+      "model_name": "KMB Dennis Dart/ Dart SLF (AA)",
+      "fleet_prefix": "AA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=31"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "32",
+      "model_name": "KMB Dennis Falcon (AF,FD)",
+      "fleet_prefix": "FD|AF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=32"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "33",
+      "model_name": "KMB Training Fleet",
+      "fleet_prefix": "AM|ATR|AA|3AV|AD|AL|AV|3N|S3BL|3M|BL|AVBWU|ATEU|ATEE|ASC|AVC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=33"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "18",
+      "model_name": "KMB Dennis Trident 10.6m (ATS)",
+      "fleet_prefix": "ATS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=18"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "19",
+      "model_name": "KMB Neoplan Centroliner N4026/N4426 (AP)",
+      "fleet_prefix": "AP",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=19"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "21",
+      "model_name": "KMB Volvo Super Olympian 10.6m (ASV)",
+      "fleet_prefix": "ASV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=21"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "22",
+      "model_name": "KMB Dennis Trident 12m (ATR)",
+      "fleet_prefix": "ATR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=22"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "24",
+      "model_name": "KMB Volvo Olympian 12m (A/C) (3AV)",
+      "fleet_prefix": "3AV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=24"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "25",
+      "model_name": "KMB Dennis Dragon 11m (A/C) (AD)",
+      "fleet_prefix": "AD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=25"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "34",
+      "model_name": "KMB Hino RK176K (AH)",
+      "fleet_prefix": "AH",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=34"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "35",
+      "model_name": "KMB Dennis Lance (AN)",
+      "fleet_prefix": "AN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=35"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "36",
+      "model_name": "KMB Toyota Coaster (AT)",
+      "fleet_prefix": "AT",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=36"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "37",
+      "model_name": "KMB Mitsubishi MP618N (AP)",
+      "fleet_prefix": "AP",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=37"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "38",
+      "model_name": "KMB Leyland Olympian 12m (3BL)",
+      "fleet_prefix": "3BL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=38"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "40",
+      "model_name": "KMB Leyland Olympian 11m (S3BL)",
+      "fleet_prefix": "S3BL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=40"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "26",
+      "model_name": "KMB Leyland Olympian 11m (A/C) (AL)",
+      "fleet_prefix": "AL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=26"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "28",
+      "model_name": "KMB Volvo Olympian 11m (A/C) (AV)",
+      "fleet_prefix": "AV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=28"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "39",
+      "model_name": "KMB Dennis Dragon 12m (3N)",
+      "fleet_prefix": "3N",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=39"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "41",
+      "model_name": "KMB MCW Metrobus 11m (S3M)",
+      "fleet_prefix": "S3M",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=41"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "42",
+      "model_name": "KMB Dennis Dragon 11m (S3N)",
+      "fleet_prefix": "S3N",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=42"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "43",
+      "model_name": "KMB Volvo Olympian 11m (S3V)",
+      "fleet_prefix": "S3V",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=43"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "44",
+      "model_name": "KMB MCW Metrobus 9.7m (M)",
+      "fleet_prefix": "M",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=44"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "45",
+      "model_name": "KMB MCW Metrobus 12m (3M)",
+      "fleet_prefix": "3M",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=45"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "47",
+      "model_name": "KMB Dennis Dominator (DM)",
+      "fleet_prefix": "DM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=47"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "48",
+      "model_name": "KMB Mercedes Benz O305 (ME)",
+      "fleet_prefix": "ME",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=48"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "46",
+      "model_name": "KMB Leyland Olympian 9.7m/10.3m (BL)",
+      "fleet_prefix": "BL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=46"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "125",
+      "model_name": "KMB Albion Victor (L)",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=125"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "126",
+      "model_name": "KMB Seddon Pennine 4 (S)",
+      "fleet_prefix": "S",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=126"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "127",
+      "model_name": "KMB Daimler CVG5 (Daimler A) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=127"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "128",
+      "model_name": "KMB Daimler CVG5DD (Daimler B) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=128"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "129",
+      "model_name": "KMB Daimler CVG6-30 (Daimler C) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=129"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "130",
+      "model_name": "KMB Daimler CVG6LX-34 (Daimler D) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=130"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "131",
+      "model_name": "KMB Daimler CVG6LX-34 (Daimler E) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=131"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "132",
+      "model_name": "KMB Daimler CVG6LX-30 (Daimler F) (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=132"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "133",
+      "model_name": "KMB Daimler Fleetline (D)",
+      "fleet_prefix": "D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=133"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "134",
+      "model_name": "KMB AEC Regent Mk V (A)",
+      "fleet_prefix": "A",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=134"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "135",
+      "model_name": "KMB Leyland Titan PD3/5 (2L)",
+      "fleet_prefix": "2L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=135"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "136",
+      "model_name": "KMB Leyland Atlantean PDR1/1 (2L)",
+      "fleet_prefix": "2L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=136"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "137",
+      "model_name": "KMB Daimler Fleetline (2D)",
+      "fleet_prefix": "2D",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=137"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "138",
+      "model_name": "KMB Volvo B9TL(Volgren Demo) (AVD)",
+      "fleet_prefix": "AVD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=138"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "182",
+      "model_name": "KMB Guy Victory Mk J (G)",
+      "fleet_prefix": "G",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=182"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "183",
+      "model_name": "KMB Leyland Victory Mk II (G)",
+      "fleet_prefix": "G",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=183"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "184",
+      "model_name": "KMB Dennis Jubilant (N)",
+      "fleet_prefix": "N",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=184"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "210",
+      "model_name": "KMB Volvo B10MD (VMD)",
+      "fleet_prefix": "VMD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=210"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "236",
+      "model_name": "KMB Albion Viking EVK55CL (CA)",
+      "fleet_prefix": "CA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=236"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "237",
+      "model_name": "KMB Bedford YRQ (CB)",
+      "fleet_prefix": "CB",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=237"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "238",
+      "model_name": "KMB Albion Viking (L)",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=238"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "239",
+      "model_name": "KMB Albion Viking EVK41L (L)",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=239"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "242",
+      "model_name": "KMB Albion Chieftain (L)",
+      "fleet_prefix": "L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=242"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "244",
+      "model_name": "KMB Metrorider (AMR)",
+      "fleet_prefix": "AMR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=244"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "245",
+      "model_name": "KMB AEC Regent V (2A)",
+      "fleet_prefix": "2A",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=245"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "263",
+      "model_name": "KMB Volvo B9TL(Wright Gemini Body) (AVBW)",
+      "fleet_prefix": "AVBW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=263"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "264",
+      "model_name": "KMB Volvo B9TL(Enviro 500 Body) (AVBE)",
+      "fleet_prefix": "AVBE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=264"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "268",
+      "model_name": "KMB Alexander Dennis Enviro 500 (Euro IV/ Euro V) (ATEU)",
+      "fleet_prefix": "ATEU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=268"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "274",
+      "model_name": "KMB Scania K310UD (ASU)",
+      "fleet_prefix": "ASU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=274"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "295",
+      "model_name": "KMB Alexander Dennis Enviro 500 (Euro V) (ATEE)",
+      "fleet_prefix": "ATEE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=295"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "296",
+      "model_name": "KMB Scania K230UB (10.6m) (ASB)",
+      "fleet_prefix": "ASB",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=296"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "298",
+      "model_name": "KMB Scania K230UB 12m (ASC)",
+      "fleet_prefix": "ASC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=298"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "304",
+      "model_name": "KMB Scania K230UB 12m (Euro 5) (ASCU)",
+      "fleet_prefix": "ASCU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=304"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "305",
+      "model_name": "KMB Enviro 400 (ATSE)",
+      "fleet_prefix": "ATSE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=305"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "307",
+      "model_name": "KMB Volvo B9TL (Euro 5) Wright Body (AVBWU)",
+      "fleet_prefix": "AVBWU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=307"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "308",
+      "model_name": "KMB Volvo B7RLE (AVC)",
+      "fleet_prefix": "AVC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=308"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "313",
+      "model_name": "KMB Volvo B9TL 10.4m (2-axle) (AVBWS)",
+      "fleet_prefix": "AVBWS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=313"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "316",
+      "model_name": "KMB Alexander Dennis Enviro 200 Dart (AAS,AAU)",
+      "fleet_prefix": "AAU|AAS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=316"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "328",
+      "model_name": "KMB BYD K9A/K9R (BDE,BE)",
+      "fleet_prefix": "BE|BDE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=328"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "331",
+      "model_name": "KMB Alexander Dennis Enviro 500 MMC 12m (ATENU,E5T)",
+      "fleet_prefix": "E5T|ATENU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=331"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "342",
+      "model_name": "KMB Alexander Dennis Enviro 500 MMC 12.8m (3ATENU,E5L)",
+      "fleet_prefix": "3ATENU|3ATENUW|E5L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=342"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "344",
+      "model_name": "KMB Volvo B9TL 12.8m (3AVBWU)",
+      "fleet_prefix": "3AVBWU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=344"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "345",
+      "model_name": "KMB VDL DB300 (AMC)",
+      "fleet_prefix": "AMC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=345"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "350",
+      "model_name": "KMB Yutong ZK6128HG1 (AYT)",
+      "fleet_prefix": "AYT",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=350"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "346",
+      "model_name": "KMB Alexander Dennis Enviro 500 Hybrid (ATH)",
+      "fleet_prefix": "ATH",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=346"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "353",
+      "model_name": "KMB Scania K280UD (ASUD)",
+      "fleet_prefix": "ASUD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=353"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "361",
+      "model_name": "KMB MAN A95 (AMNE,AMNF)",
+      "fleet_prefix": "AMNE|AMNF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=361"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "362",
+      "model_name": "KMB Youngman JNP6122UC (AYM)",
+      "fleet_prefix": "AYM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=362"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "366",
+      "model_name": "KMB Alexander Dennis Enviro 500 MMC 12m (New Facelift) (ATENU,TW)",
+      "fleet_prefix": "ATENU|TW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=366"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "406",
+      "model_name": "KMB ADL Enviro 500 MMC 12.8m (Euro 6) (E6X)",
+      "fleet_prefix": "E6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=406"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "407",
+      "model_name": "KMB Wrightbus StreetDeck (W6S)",
+      "fleet_prefix": "W6S",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=407"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "390",
+      "model_name": "KMB Volvo B8L 12m (Wright Body) (AVBWL,V6B,V6P)",
+      "fleet_prefix": "V6P|AVBWL|V6B",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=390"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "396",
+      "model_name": "KMB ADL Enviro 500 MMC 12m (Euro 6) (E6T)",
+      "fleet_prefix": "E6T",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=396"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "401",
+      "model_name": "KMB Volvo B9TL (Gemilang Body) (AVG)",
+      "fleet_prefix": "AVG",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=401"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "413",
+      "model_name": "KMB ADL Enviro 500 MMC 11.3m (E6M)",
+      "fleet_prefix": "E6M",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=413"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "414",
+      "model_name": "KMB Volvo B8L 12.8m (V6PX,V6X)",
+      "fleet_prefix": "V6PX|V6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=414"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "421",
+      "model_name": "KMB BYD B12A (BEB)",
+      "fleet_prefix": "BEB",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=421"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "405",
+      "model_name": "KMB Volvo B8L (MCV Body) (AVBML,V6B)",
+      "fleet_prefix": "V6B|AVBML",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=405"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "423",
+      "model_name": "KMB MAN A95 12.8m (M6EX,M6FX)",
+      "fleet_prefix": "M6EX|M6FX",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=423"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "427",
+      "model_name": "KMB BYD B12D (BED)",
+      "fleet_prefix": "BED",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=427"
+    },
+    {
+      "operator_code": "KMB",
+      "across_record_id": "432",
+      "model_name": "KMB ADL E500EV (AED)",
+      "fleet_prefix": "AED",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=432"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "440",
+      "model_name": "PITCL Volvo B7RLE",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=440"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "9",
+      "model_name": "LWB Volvo Olympian 12m (LW)",
+      "fleet_prefix": "LW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=9"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "76",
+      "model_name": "LWB Volvo B9TL Coach (4)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=76"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "81",
+      "model_name": "LWB Volvo B9TL (7)",
+      "fleet_prefix": "AVBE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=81"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "111",
+      "model_name": "LWB Dennis Trident 12m (ALX Body) (1,2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=111"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "114",
+      "model_name": "LWB Dennis Lance (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=114"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "112",
+      "model_name": "LWB Dennis Trident 12m (Duple Metsec Body) (3)",
+      "fleet_prefix": "ATR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=112"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "113",
+      "model_name": "LWB Dennis Trident 12m Coach (ALX Body) (5)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=113"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "266",
+      "model_name": "LWB Alexander Dennis Enviro 500 (8,84)",
+      "fleet_prefix": "ATEU",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=266"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "269",
+      "model_name": "LWB Alexander Dennis Enviro 500 (Coach Version) (6,64)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=269"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "336",
+      "model_name": "LWB ADL Enviro 500 MMC (95)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=336"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "356",
+      "model_name": "LWB ADL Enviro 500 MMC Coach Version (55,65)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=356"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "380",
+      "model_name": "LWB Alexander Dennis Enviro 500 12.8m Coach (15)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=380"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "389",
+      "model_name": "LWB BYD K9R (SE)",
+      "fleet_prefix": "SE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=389"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "393",
+      "model_name": "LWB Alexander Dennis Enviro 500 12.8m (25)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=393"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "416",
+      "model_name": "LWB ADL Enviro 500 MMC 12.8m (Euro 6) (UE6X)",
+      "fleet_prefix": "UE6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=416"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "417",
+      "model_name": "LWB Volvo B8L 12.8m (UV6X)",
+      "fleet_prefix": "UV6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=417"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "435",
+      "model_name": "LWB Volvo B8L 12.8m Coach (AV6X)",
+      "fleet_prefix": "AV6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=435"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "437",
+      "model_name": "LWB ADL Enviro 500 MMC Coach (Euro 6) (AE6X)",
+      "fleet_prefix": "AE6X",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=437"
+    },
+    {
+      "operator_code": "LWB",
+      "across_record_id": "443",
+      "model_name": "LWB Volvo B8L 12m Coach (AV6B)",
+      "fleet_prefix": "AV6B",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=443"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "7",
+      "model_name": "CMB Training Fleet (T)",
+      "fleet_prefix": "T",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=7"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "8",
+      "model_name": "CMB Guy Arab IV (MW)",
+      "fleet_prefix": "MW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=8"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "139",
+      "model_name": "CMB MCW Metrobus 11m (MB)",
+      "fleet_prefix": "MB",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=139"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "140",
+      "model_name": "CMB MCW Metrobus 12m (ML)",
+      "fleet_prefix": "ML",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=140"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "141",
+      "model_name": "CMB Dennis Condor 12m (DL)",
+      "fleet_prefix": "DL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=141"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "142",
+      "model_name": "CMB Dennis Jubilant (DS)",
+      "fleet_prefix": "DS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=142"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "143",
+      "model_name": "CMB Leyland Olympian 11m (LM)",
+      "fleet_prefix": "LM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=143"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "144",
+      "model_name": "CMB Daimler/ Leyland Fleetline (LF)",
+      "fleet_prefix": "LF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=144"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "145",
+      "model_name": "CMB Daimler/ Leyland Fleetline (SF)",
+      "fleet_prefix": "RLX|SF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=145"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "146",
+      "model_name": "CMB Leyland Victory Mk II (LV)",
+      "fleet_prefix": "LV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=146"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "147",
+      "model_name": "CMB Ailsa Volvo (AL)",
+      "fleet_prefix": "AL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=147"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "148",
+      "model_name": "CMB Leyland Olympian 9.5m/ 10.3m (BR)",
+      "fleet_prefix": "BR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=148"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "149",
+      "model_name": "CMB Titan B45 (TC)",
+      "fleet_prefix": "TC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=149"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "150",
+      "model_name": "CMB Dennis Dominator (SD)",
+      "fleet_prefix": "SD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=150"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "151",
+      "model_name": "CMB Dennis Dominator (DD)",
+      "fleet_prefix": "DD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=151"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "152",
+      "model_name": "CMB Daimler Fleetline (Park Royal Body) (XF)",
+      "fleet_prefix": "XF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=152"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "153",
+      "model_name": "CMB Daimler Fleetline (Park Royal Body) (FC)",
+      "fleet_prefix": "FC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=153"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "154",
+      "model_name": "CMB Leyland Atlantean (XA)",
+      "fleet_prefix": "XA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=154"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "155",
+      "model_name": "CMB Leyland Atlantean (LA)",
+      "fleet_prefix": "LA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=155"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "156",
+      "model_name": "CMB Leyland Atlantean (HA)",
+      "fleet_prefix": "HA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=156"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "157",
+      "model_name": "CMB Leyland Titan (PD)",
+      "fleet_prefix": "PD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=157"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "158",
+      "model_name": "CMB Leyland Titan (PD5)",
+      "fleet_prefix": "PD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=158"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "159",
+      "model_name": "CMB Leyland Titan (APD)",
+      "fleet_prefix": "APD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=159"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "160",
+      "model_name": "CMB MCW Metropolitan (MS)",
+      "fleet_prefix": "MS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=160"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "161",
+      "model_name": "CMB Ailsa Volvo B55 (AV)",
+      "fleet_prefix": "AV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=161"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "162",
+      "model_name": "CMB Guy Arab V (LX)",
+      "fleet_prefix": "LX",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=162"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "163",
+      "model_name": "CMB Guy Arab V (M)",
+      "fleet_prefix": "M",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=163"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "164",
+      "model_name": "CMB Guy Arab V (S)",
+      "fleet_prefix": "S",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=164"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "165",
+      "model_name": "CMB Guy Arab V (LS)",
+      "fleet_prefix": "LS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=165"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "166",
+      "model_name": "CMB MCW Metrorider (CM)",
+      "fleet_prefix": "CM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=166"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "167",
+      "model_name": "CMB Albion Viking (AM)",
+      "fleet_prefix": "AM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=167"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "168",
+      "model_name": "CMB Seddon Minibus (SM)",
+      "fleet_prefix": "SM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=168"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "169",
+      "model_name": "CMB Guy Arab V (LW)",
+      "fleet_prefix": "LW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=169"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "170",
+      "model_name": "CMB Dennis Loline V (LW)",
+      "fleet_prefix": "LW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=170"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "171",
+      "model_name": "CMB Guy Arab UF (6)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=171"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "172",
+      "model_name": "CMB Guy Arab IV (LW)",
+      "fleet_prefix": "LW",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=172"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "173",
+      "model_name": "CMB Guy Arab V (Short Wheelbase) (7)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=173"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "174",
+      "model_name": "CMB Volvo B6LE (VC)",
+      "fleet_prefix": "VC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=174"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "175",
+      "model_name": "CMB Dennis Dart (Marshall Body) (CX)",
+      "fleet_prefix": "CX",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=175"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "176",
+      "model_name": "CMB Dennis Condor (Air-cond.) (DA)",
+      "fleet_prefix": "DA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=176"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "177",
+      "model_name": "CMB Leyland Olympian 11m (Air-cond.) (LA)",
+      "fleet_prefix": "LA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=177"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "178",
+      "model_name": "CMB Volvo Olympian 11m (Air-cond.) (VA)",
+      "fleet_prefix": "VA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=178"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "179",
+      "model_name": "CMB Dennis Dart (Carlyle Body) (DC)",
+      "fleet_prefix": "DC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=179"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "180",
+      "model_name": "CMB Dennis Condor 11m (DM)",
+      "fleet_prefix": "DM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=180"
+    },
+    {
+      "operator_code": "CMB",
+      "across_record_id": "181",
+      "model_name": "CMB MCW Metrobus 9.7m (MC)",
+      "fleet_prefix": "MC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=181"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "5",
+      "model_name": "NWFB Dennis Dart SLF 10.7m (20)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=5"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "6",
+      "model_name": "NWFB Dennis Dart SLF 10.1m (20)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=6"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "12",
+      "model_name": "NWFB Dennis Trident 12m (Euro III) (12)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=12"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "13",
+      "model_name": "NWFB Dennis Trident 12m (10,11)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=13"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "14",
+      "model_name": "NWFB Dennis Trident 11.3m (14)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=14"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "15",
+      "model_name": "NWFB Dennis Trident 10.6m (16)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=15"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "16",
+      "model_name": "NWFB Dennis Trident 10.6m (Duple Metsec Body) (36)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=16"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "17",
+      "model_name": "NWFB Neoplan Centroliner (60)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=17"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "57",
+      "model_name": "NWFB MCW Metrobus 9.7m (MC)",
+      "fleet_prefix": "MC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=57"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "49",
+      "model_name": "NWFB Dennis Trident (Duple Metsec Body) (30)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=49"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "50",
+      "model_name": "NWFB Dennis Trident 10.3m (33)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=50"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "51",
+      "model_name": "NWFB Volvo Super Olympian 12m (50)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=51"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "52",
+      "model_name": "NWFB Dennis Condor/ Dragon (DA)",
+      "fleet_prefix": "DA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=52"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "53",
+      "model_name": "NWFB Leyland Olympian 11m (A/C) (LA)",
+      "fleet_prefix": "LA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=53"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "54",
+      "model_name": "NWFB Volvo Olympian 11m / 12m (VA)",
+      "fleet_prefix": "VA",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=54"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "55",
+      "model_name": "NWFB Dennis Dart (DC)",
+      "fleet_prefix": "DC",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=55"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "56",
+      "model_name": "NWFB Dennis Condor 11m (DM)",
+      "fleet_prefix": "DM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=56"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "117",
+      "model_name": "NWFB MCW Metrobus 11m (MB)",
+      "fleet_prefix": "MB",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=117"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "118",
+      "model_name": "NWFB MCW Metrobus 12m (ML)",
+      "fleet_prefix": "ML",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=118"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "119",
+      "model_name": "NWFB Dennis Condor 12m (DL)",
+      "fleet_prefix": "DL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=119"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "120",
+      "model_name": "NWFB Dennis Jubilant (DS)",
+      "fleet_prefix": "DS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=120"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "121",
+      "model_name": "NWFB Leyland Olympian 11m (LM)",
+      "fleet_prefix": "LM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=121"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "122",
+      "model_name": "NWFB Daimler/ Leyland Fleetline (LF)",
+      "fleet_prefix": "LF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=122"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "123",
+      "model_name": "NWFB Leyland Fleetline (SF)",
+      "fleet_prefix": "SF",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=123"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "124",
+      "model_name": "NWFB Leyland Victory II (LV)",
+      "fleet_prefix": "LV",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=124"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "243",
+      "model_name": "NWFB Training Fleet (T1)",
+      "fleet_prefix": "T",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=243"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "287",
+      "model_name": "NWFB Alexander Dennis Enviro 500 12m (2,55,599)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=287"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "299",
+      "model_name": "NWFB Alexander Dennis Enviro 500 11.3m (40)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=299"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "337",
+      "model_name": "NWFB Alexander Dennis Enviro 500 MMC 11.3m (40,499,8)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=337"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "348",
+      "model_name": "NWFB Alexander Dennis Enviro 500 Hybrid (56)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=348"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "351",
+      "model_name": "NWFB Alexander Dennis Enviro 500 MMC 12m (55,56,57,58)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=351"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "358",
+      "model_name": "NWFB Volvo B9TL 11.3m (45)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=358"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "359",
+      "model_name": "NWFB Youngman JNP6120 (26)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=359"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "371",
+      "model_name": "NWFB BYD K9R (20)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=371"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "377",
+      "model_name": "NWFB MAN A95 12.8m (60)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=377"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "379",
+      "model_name": "NWFB Yixing Great Dragon SDL6120EVG (20)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=379"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "382",
+      "model_name": "NWFB Volvo B9TL 12m (52)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=382"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "384",
+      "model_name": "NWFB ADL Enviro 500 MMC 12.8m (61,611,612,62)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=384"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "386",
+      "model_name": "NWFB ADL Enviro 400 10.4m (315,38)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=386"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "394",
+      "model_name": "NWFB ADL Enviro 200 MMC (25)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=394"
+    },
+    {
+      "operator_code": "NWFB",
+      "across_record_id": "409",
+      "model_name": "NWFB Volvo B8L (52,521,88)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=409"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "109",
+      "model_name": "PITCL Dennis Dart SLF (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=109"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "110",
+      "model_name": "PITCL Designline Olymbus",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=110"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "198",
+      "model_name": "PITCL TransBus Super Pointer Dart (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=198"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "219",
+      "model_name": "PITCL Toyota Coaster",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=219"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "275",
+      "model_name": "PITCL Alexander Dennis Super Pointer Dart (Coach Version)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=275"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "301",
+      "model_name": "PITCL Lion Bus LBC6101",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=301"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "302",
+      "model_name": "PITCL Isuzu LT133L",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=302"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "311",
+      "model_name": "PITCL YoungMan JNP6122GR2 (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=311"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "324",
+      "model_name": "PITCL Yutong ZK6100H (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=324"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "325",
+      "model_name": "PITCL Isuzu LT134P (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=325"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "326",
+      "model_name": "PITCL Yutong ZK6119HC (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=326"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "327",
+      "model_name": "PITCL Kinglong XMQ6127 (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=327"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "332",
+      "model_name": "PITCL Man A51 (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=332"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "341",
+      "model_name": "PITCL MAN NL323",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=341"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "368",
+      "model_name": "PITCL Sunlong SLK6112",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=368"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "369",
+      "model_name": "PITCL Scania K94IB 4x2",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=369"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "372",
+      "model_name": "PITCL Sunlong SLK6102",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=372"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "376",
+      "model_name": "PITCL ADL Enviro 200 Dart",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=376"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "412",
+      "model_name": "PITCL Kinglong XMQ6803H",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=412"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "422",
+      "model_name": "PITCL Higer KLQ6119",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=422"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "425",
+      "model_name": "PITCL BYD CK6120LLEV",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=425"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "428",
+      "model_name": "PITCL MAN RR8",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=428"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "430",
+      "model_name": "NLB MAN RR8 (MN)",
+      "fleet_prefix": "MN|MG",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=430"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "431",
+      "model_name": "NLB MAN RR2 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=431"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "436",
+      "model_name": "PITCL Sunlong SLK6102",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=436"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "441",
+      "model_name": "PITCL CRRC TEG6125EUBEV01",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=441"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "446",
+      "model_name": "PITCL Guangtong GTK6129BEVB",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=446"
+    },
+    {
+      "operator_code": "PITCL",
+      "across_record_id": "447",
+      "model_name": "PITCL Alexander Dennis Enviro 500 (Euro V)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=447"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "99",
+      "model_name": "KCRC Mitsubishi MP618N (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=99"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "100",
+      "model_name": "KCRC Mitsubishi BM117L (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=100"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "102",
+      "model_name": "KCRC Dennis Dart (5)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=102"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "95",
+      "model_name": "KCRC MCW Metrobus 9.7m (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=95"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "96",
+      "model_name": "KCRC Leyland Olympian 11m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=96"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "97",
+      "model_name": "KCRC Volvo Olympian 11m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=97"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "98",
+      "model_name": "KCRC Mitsubishi Mk218 (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=98"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "101",
+      "model_name": "KCRC Volvo B10M (4)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=101"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "103",
+      "model_name": "KCRC Dennis Trident 11.3m (6)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=103"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "104",
+      "model_name": "KCRC Temporary Bus Fleet (K)",
+      "fleet_prefix": "K",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=104"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "235",
+      "model_name": "KCRC Dennis Trident 10.6m (7)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=235"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "259",
+      "model_name": "KCRC Toyota Coaster (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=259"
+    },
+    {
+      "operator_code": "KCRC",
+      "across_record_id": "260",
+      "model_name": "KCRC Mitsubishi Rosa (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=260"
+    },
+    {
+      "operator_code": "Stagecoach",
+      "across_record_id": "217",
+      "model_name": "Stagecoach Volvo B10M",
+      "fleet_prefix": "3L|4L|5L",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=217"
+    },
+    {
+      "operator_code": "Stagecoach",
+      "across_record_id": "218",
+      "model_name": "Stagecoach Volvo Olympian",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=218"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "279",
+      "model_name": "MTR Leyland Olympian 11m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=279"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "280",
+      "model_name": "MTR Volvo Olympian 11m (2)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=280"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "281",
+      "model_name": "MTR Mitsubishi Mk218 (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=281"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "282",
+      "model_name": "MTR Dennis Dart (5)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=282"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "285",
+      "model_name": "MTR Volvo B10M (4)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=285"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "278",
+      "model_name": "MTR Alexander Dennis Enviro 500 12m (8)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=278"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "283",
+      "model_name": "MTR Dennis Trident 11.3m (6)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=283"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "284",
+      "model_name": "MTR Dennis Trident (2nd hand) (7)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=284"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "291",
+      "model_name": "MTR Alexander Dennis Enviro 200 Dart (9)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=291"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "321",
+      "model_name": "MTR Enviro 400 (1)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=321"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "323",
+      "model_name": "MTR Alexander Dennis Enviro 500 11.3m (8)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=323"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "334",
+      "model_name": "MTR Alexander Dennis Enviro 500 MMC 11.3m (5)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=334"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "375",
+      "model_name": "MTR Volvo B9TL (3)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=375"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "418",
+      "model_name": "MTR Alexander Dennis Enviro 500 MMC 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=418"
+    },
+    {
+      "operator_code": "MTR",
+      "across_record_id": "434",
+      "model_name": "MTR ADL E500EV (Z)",
+      "fleet_prefix": "Z",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=434"
+    },
+    {
+      "operator_code": "Sun",
+      "across_record_id": "373",
+      "model_name": "Sun Bus Dennis Trident 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=373"
+    },
+    {
+      "operator_code": "Sun",
+      "across_record_id": "410",
+      "model_name": "Sun Bus Neoplan Centroliner",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=410"
+    },
+    {
+      "operator_code": "Sun",
+      "across_record_id": "411",
+      "model_name": "Sun Bus MAN NL323 (Borrow from NHKB)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=411"
+    },
+    {
+      "operator_code": "Sun",
+      "across_record_id": "415",
+      "model_name": "Sun Bus Wright Streetdeck",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=415"
+    },
+    {
+      "operator_code": "SunBus",
+      "across_record_id": "433",
+      "model_name": "SunBus Volvo B7RLE",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=433"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "60",
+      "model_name": "NLB Man A91 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=60"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "70",
+      "model_name": "NLB MAN 18.310 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=70"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "202",
+      "model_name": "NLB ISUZU JCR460 (ILS)",
+      "fleet_prefix": "ILS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=202"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "203",
+      "model_name": "NLB Benz Bus Fleet (BENZ)",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=203"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "204",
+      "model_name": "NLB Dennis Dart SLF (DN)",
+      "fleet_prefix": "DN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=204"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "205",
+      "model_name": "NLB MAN NL-263 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=205"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "206",
+      "model_name": "NLB Mitsubishi Rosa BE439F (MS)",
+      "fleet_prefix": "MS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=206"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "207",
+      "model_name": "NLB Toyota Coaster (TCM,TY)",
+      "fleet_prefix": "TY|TCM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=207"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "208",
+      "model_name": "NLB Leyland Victory Mk II (LD)",
+      "fleet_prefix": "LD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=208"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "232",
+      "model_name": "NLB Dodge RGI5 (DLS)",
+      "fleet_prefix": "DLS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=232"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "233",
+      "model_name": "NLB Dodge KC40 (DSS)",
+      "fleet_prefix": "DSS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=233"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "234",
+      "model_name": "NLB Commer KCB3023",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=234"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "261",
+      "model_name": "NLB MAN 24.350",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=261"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "262",
+      "model_name": "NLB MAN NL-262 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=262"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "270",
+      "model_name": "NLB ISUZU MT112K, MT112L (ILS)",
+      "fleet_prefix": "ILS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=270"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "271",
+      "model_name": "NLB ISUZU LT132L (ILS)",
+      "fleet_prefix": "ILS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=271"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "272",
+      "model_name": "NLB ISUZU LT133L (ILS)",
+      "fleet_prefix": "ILS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=272"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "273",
+      "model_name": "NLB ISUZU LV423R (ILS)",
+      "fleet_prefix": "ILS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=273"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "276",
+      "model_name": "NLB Volvo B6LE (VL)",
+      "fleet_prefix": "VL",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=276"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "286",
+      "model_name": "NLB MAN NL-273 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=286"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "289",
+      "model_name": "NLB Mitsubishi Rosa BE437F (MS)",
+      "fleet_prefix": "MS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=289"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "290",
+      "model_name": "NLB Mitsubishi Rosa BE649J (MS)",
+      "fleet_prefix": "MS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=290"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "310",
+      "model_name": "NLB YoungMan JNP6122GR1 (YM)",
+      "fleet_prefix": "YM",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=310"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "338",
+      "model_name": "NLB Dennis Trident 12m (DN)",
+      "fleet_prefix": "DN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=338"
+    },
+    {
+      "operator_code": "KCM",
+      "across_record_id": "339",
+      "model_name": "KCM Dennis Trident 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=339"
+    },
+    {
+      "operator_code": "KCM",
+      "across_record_id": "363",
+      "model_name": "KCM MAN A95",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=363"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "365",
+      "model_name": "NLB MAN LE 19.320 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=365"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "370",
+      "model_name": "NLB MAN A95 (MD,MDR)",
+      "fleet_prefix": "MD|MDR",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=370"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "387",
+      "model_name": "NLB MAN R33 (MN)",
+      "fleet_prefix": "MN",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=387"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "397",
+      "model_name": "NLB BYD K9",
+      "fleet_prefix": "BE",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=397"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "400",
+      "model_name": "NLB ADL Enviro 400 (AD)",
+      "fleet_prefix": "AD",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=400"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "426",
+      "model_name": "NLB MAN A95 11.7m (MDRS)",
+      "fleet_prefix": "MDRS",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=426"
+    },
+    {
+      "operator_code": "NLB",
+      "across_record_id": "449",
+      "model_name": "NLB Volvo B8L 12m",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=449"
+    },
+    {
+      "operator_code": "XXX",
+      "across_record_id": "74",
+      "model_name": "XXX",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=74"
+    },
+    {
+      "operator_code": "Reserved",
+      "across_record_id": "79",
+      "model_name": "Reserved",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=79"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "105",
+      "model_name": "NHKB MAN NL-263",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=105"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "106",
+      "model_name": "NHKB Dennis Dart",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=106"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "107",
+      "model_name": "NHKB Scania L94UB",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=107"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "108",
+      "model_name": "NHKB Volvo B7RLE",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=108"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "265",
+      "model_name": "NHKB Hino Coach",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=265"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "315",
+      "model_name": "NHKB MAN 18.320",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=315"
+    },
+    {
+      "operator_code": "NHKB",
+      "across_record_id": "330",
+      "model_name": "NHKB MAN NL323",
+      "fleet_prefix": "",
+      "source_url": "https://1005.idv.hk/index.php?page=11&p=330"
+    }
+  ]
+}

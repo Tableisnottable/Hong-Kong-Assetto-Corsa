@@ -1,0 +1,216 @@
+﻿operator_code,fleet_prefix,listed_bus_count,model_names,across_record_ids
+Argos,,197,Argos Bus Fleet (Miscellaneous),215
+Bigbus,,28,Bigbus (HK) Dennis Condor | Bigbus (HK) Dennis Dominator | Bigbus Ankai HFF6110GS-2,292|293|309
+CLP,,27,CLP ADL E500EV | CLP Alexander Dennis Enviro 500 (3) | CLP Alexander Dennis Enviro 500 MMC (3) | CLP Leyland Olympian 12m Coach (3) | CLP Volvo Olympian 12m Coach (3),439|297|374|92|93
+CMB,LX,309,CMB Guy Arab V (LX),162
+CMB,LF,308,CMB Daimler/ Leyland Fleetline (LF),144
+CMB,XF,206,CMB Daimler Fleetline (Park Royal Body) (XF),152
+CMB,LV,167,CMB Leyland Victory Mk II (LV),146
+CMB,LW,122,CMB Dennis Loline V (LW) | CMB Guy Arab IV (LW) | CMB Guy Arab V (LW),170|172|169
+CMB,PD,113,CMB Leyland Titan (PD) | CMB Leyland Titan (PD5),157|158
+CMB,DA,95,CMB Dennis Condor (Air-cond.) (DA),176
+CMB,ML,84,CMB MCW Metrobus 12m (ML),140
+CMB,VA,66,CMB Volvo Olympian 11m (Air-cond.) (VA),178
+CMB,LS,56,CMB Guy Arab V (LS),165
+CMB,,50,CMB Guy Arab UF (6) | CMB Guy Arab V (Short Wheelbase) (7),171|173
+CMB,XA,50,CMB Leyland Atlantean (XA),154
+CMB,S,49,CMB Guy Arab V (S),164
+CMB,DL,48,CMB Dennis Condor 12m (DL),141
+CMB,M,44,CMB Guy Arab V (M),163
+CMB,LA,43,CMB Leyland Atlantean (LA) | CMB Leyland Olympian 11m (Air-cond.) (LA),155|177
+CMB,MB,40,CMB MCW Metrobus 11m (MB),139
+CMB,RLX,32,CMB Daimler/ Leyland Fleetline (SF),145
+CMB,SF,32,CMB Daimler/ Leyland Fleetline (SF),145
+CMB,DS,30,CMB Dennis Jubilant (DS),142
+CMB,DM,28,CMB Dennis Condor 11m (DM),180
+CMB,T,21,CMB Training Fleet (T),7
+CMB,DC,20,CMB Dennis Dart (Carlyle Body) (DC),179
+CMB,MW,17,CMB Guy Arab IV (MW),8
+CMB,MC,12,CMB MCW Metrobus 9.7m (MC),181
+CMB,CX,11,CMB Dennis Dart (Marshall Body) (CX),175
+CMB,LM,10,CMB Leyland Olympian 11m (LM),143
+CMB,AV,8,CMB Ailsa Volvo B55 (AV),161
+CMB,SD,6,CMB Dennis Dominator (SD),150
+CMB,HA,3,CMB Leyland Atlantean (HA),156
+CMB,AL,2,CMB Ailsa Volvo (AL),147
+CMB,BR,2,CMB Leyland Olympian 9.5m/ 10.3m (BR),148
+CMB,CM,2,CMB MCW Metrorider (CM),166
+CMB,MS,2,CMB MCW Metropolitan (MS),160
+CMB,AM,1,CMB Albion Viking (AM),167
+CMB,APD,1,CMB Leyland Titan (APD),159
+CMB,DD,1,CMB Dennis Dominator (DD),151
+CMB,FC,1,CMB Daimler Fleetline (Park Royal Body) (FC),153
+CMB,SM,1,CMB Seddon Minibus (SM),168
+CMB,TC,1,CMB Titan B45 (TC),149
+CMB,VC,1,CMB Volvo B6LE (VC),174
+CityBus,,101,CityBus ADL Enviro 500MMC 12.8m Coach (68),385
+Citybus,,2716,"Citybus AEC Routemaster | Citybus Alexander Dennis Enviro 500 12m (509,81,82,83) | Citybus Alexander Dennis Enviro 500 Hybrid (84) | Citybus Alexander Dennis Enviro 500 MMC 11.3m (409,91) | Citybus Alexander Dennis Enviro 500 MMC 12.8m (63,64,65) | Citybus Alexander Dennis Enviro 500 MMC 12m (2,599,83,84,85) | Citybus Alexander Dennis Enviro 500 MMC 12m(Cityflyer) (80) | Citybus BYD K9R (15) | Citybus Dennis Condor 11m Open-topped (3rd hand) | Citybus Dennis Dart (3rd hand) (14) | Citybus Dennis Dart / Dart SLF (Plaxton Body) (14) | Citybus Dennis Dominator | Citybus Dennis Dragon 10.3m (7) | Citybus Dennis Dragon 12m (8) | Citybus Dennis Dragon 12m (HACTL) | Citybus Dennis Trident 10.3m (8) | Citybus Dennis Trident 10.6m (27) | Citybus Dennis Trident 12m (22,23) | Citybus Dennis Trident 12m Coach (21) | Citybus Enviro 400 (310,70) | Citybus Isuzu ECM430 (2) | Citybus Leyland Olympian | Citybus Leyland Olympian 10.4m (2) | Citybus Leyland Olympian 11m Coach (1) | Citybus Leyland Olympian 12m (3) | Citybus Leyland Olympian 12m Coach | Citybus Leyland Olympian 12m Coach (2nd hand) (3) | Citybus Leyland Olympian 12m Coach (3) | Citybus Leyland Victory | Citybus MAN 24.350 (25) | Citybus MAN NL-262 (15) | Citybus MCW Metrobus Mk I | Citybus Mercedes Benz OF1113 (12) | Citybus Mitsubishi MK618N (12) | Citybus Mitsubishi MP117K (2) | Citybus Mitsubishi Mk117J (12) | Citybus Neoplan Norinco BN316 (18) | Citybus Nissan 4R95 (2) | Citybus Nissan BM115L (2) | Citybus Nissan Minibus (2) | Citybus Nissan R85H (2) | Citybus Nissan U20N (2) | Citybus Scania K280UD (89) | Citybus Scania K93 (12) | Citybus Scania K94UB 6x2 (28) | Citybus Training Fleet | Citybus Volvo B10M (12) | Citybus Volvo B12 (20) | Citybus Volvo B6R/B6LE (13) | Citybus Volvo B8L (521,88) | Citybus Volvo B9TL 10.4m (2-axle) (320,75) | Citybus Volvo B9TL 11.3m (95) | Citybus Volvo B9TL 12.8m (65) | Citybus Volvo Olympian 10.4m (2) | Citybus Volvo Olympian 11m (9) | Citybus Volvo Olympian 12m (3,4,5,6) | Citybus Volvo Olympian 12m Coach (2nd hand) (3) | Citybus Volvo Super Olympian 12m (2) | Citybus Yixing Great Dragon SDL6120EVG (15) | Citybus Youngman JNP6105GR (18) | Citybus Youngman JNP6120GR (18)",58|277|349|333|343|335|329|367|211|82|80|191|193|72|73|185|352|89|87|86|306|255|194|195|63|62|69|59|65|68|246|88|83|196|197|248|251|257|249|84|258|254|247|253|256|319|250|90|318|77|85|78|408|312|364|355|64|75|67|66|402|378|322|357
+Citybus,A,101,"Citybus Leyland Atlantean AN68 (6,A6)",115
+Citybus,D,46,Citybus Daimler Fleetline | Citybus Daimler Fleetline (D),187|189|186
+Citybus,L,27,Citybus Daimler Fleetline | Citybus Daimler Fleetline (D) | Citybus Leyland Atlantean,187|192|186|190
+Citybus,T,12,Citybus Training Fleet (T),91
+Citybus,VA,5,Citybus Volvo Olympian (Temporary Bus Fleet) (VA),216
+Citybus,B,1,Citybus Bristol Lodekka (B),188
+Citybus,V,1,Citybus Ailsa Volvo B55 (V),252
+DBTSL,DBAY,175,DBTSL CRRC CSR6780KLEV1R | DBTSL Daewoo BH117L | DBTSL Dennis Dart SLF | DBTSL Enviro 200 | DBTSL Guangtong GTK6125R6D | DBTSL Guangtong GTK6129BEVB | DBTSL MAN 12.240 | DBTSL MAN 13.220 | DBTSL MAN 14.220 | DBTSL MAN 18.310 | DBTSL MAN A66 | DBTSL MAN A84 | DBTSL MAN A95 | DBTSL MAN NL-212 | DBTSL MAN NL-262 | DBTSL MAN NL-263 | DBTSL MAN NL-273 | DBTSL MAN NL323 | DBTSL MAN RR2 | DBTSL Mercedes Benz O405 | DBTSL Mitsubishi Rosa | DBTSL Scania K280IB | DBTSL Toyota Coaster | DBTSL Volvo B7R | DBTSL Volvo B9TL | DBTSL Volvo Olympian 12m,450|388|201|340|448|445|294|226|227|267|395|354|391|220|229|228|300|317|419|392|222|241|383|231|320|360|381
+DBTSL,HKR,127,DBTSL Dennis Dart (Carlyle Body) | DBTSL Dennis Dart SLF | DBTSL Isuzu LT112L | DBTSL MAN 13.220 | DBTSL MAN 14.220 | DBTSL MAN 18.310 | DBTSL MAN NL-212 | DBTSL MAN NL-262 | DBTSL MAN NL-263 | DBTSL Mercedes Benz O405 | DBTSL Mercedes Benz O814 | DBTSL Mitsubishi Rosa | DBTSL Nissan Diesel RB80 | DBTSL Toyota Coaster,230|201|224|226|227|267|220|229|228|222|221|225|241|223|231
+Fung,,1,Fung Choi Travel Leyland Olympian 12m Coach,94
+HACTL,,6,HACTL Dennis Dragon 12m | HACTL Volvo Olympian 12m,10|11
+HZMBus,,251,HZMBus MAN A95 | HZMBus MAN RR4 | HZMBus Miscellaneous Fleet | HZMBus Scania K250UB | HZMBus Scania K410CB | HZMBus Scania K410IB | HZMBus Volvo B13R,398|444|403|399|438|404|442
+KCM,,18,KCM Dennis Trident 12m | KCM MAN A95,339|363
+KCRC,,223,KCRC Dennis Dart (5) | KCRC Dennis Trident 10.6m (7) | KCRC Dennis Trident 11.3m (6) | KCRC Leyland Olympian 11m (2) | KCRC MCW Metrobus 9.7m (1) | KCRC Mitsubishi BM117L (3) | KCRC Mitsubishi MP618N (3) | KCRC Mitsubishi Mk218 (3) | KCRC Mitsubishi Rosa (1) | KCRC Toyota Coaster (1) | KCRC Volvo B10M (4) | KCRC Volvo Olympian 11m (2),102|235|103|96|95|100|99|98|260|259|101|97
+KCRC,K,43,KCRC Temporary Bus Fleet (K),104
+KMB,ATENU,1726,"KMB Alexander Dennis Enviro 500 MMC 12m (ATENU,E5T) | KMB Alexander Dennis Enviro 500 MMC 12m (New Facelift) (ATENU,TW)",331|366
+KMB,D,1115,KMB Daimler CVG5 (Daimler A) (D) | KMB Daimler CVG5DD (Daimler B) (D) | KMB Daimler CVG6-30 (Daimler C) (D) | KMB Daimler CVG6LX-30 (Daimler F) (D) | KMB Daimler CVG6LX-34 (Daimler D) (D) | KMB Daimler CVG6LX-34 (Daimler E) (D) | KMB Daimler Fleetline (D),127|128|129|132|130|131|133
+KMB,AVBWU,967,KMB Training Fleet | KMB Volvo B9TL (Euro 5) Wright Body (AVBWU),33|307
+KMB,E5T,876,"KMB Alexander Dennis Enviro 500 MMC 12m (ATENU,E5T)",331
+KMB,TW,850,"KMB Alexander Dennis Enviro 500 MMC 12m (New Facelift) (ATENU,TW)",366
+KMB,AV,701,KMB Training Fleet | KMB Volvo Olympian 11m (A/C) (AV),33|28
+KMB,ATR,666,KMB Dennis Trident 12m (ATR) | KMB Training Fleet,22|33
+KMB,S3BL,642,KMB Leyland Olympian 11m (S3BL) | KMB Training Fleet,40|33
+KMB,G,545,KMB Guy Victory Mk J (G) | KMB Leyland Victory Mk II (G),182|183
+KMB,AD,530,KMB Dennis Dragon 11m (A/C) (AD) | KMB Training Fleet,25|33
+KMB,3AV,518,KMB Training Fleet | KMB Volvo Olympian 12m (A/C) (3AV),33|24
+KMB,3ASV,493,KMB Volvo Super Olympian 12m (Alexander Body/Volgren Body) (3ASV),3
+KMB,S3N,372,KMB Dennis Dragon 11m (S3N),42
+KMB,N,364,KMB Dennis Jubilant (N),184
+KMB,3N,361,KMB Dennis Dragon 12m (3N) | KMB Training Fleet,39|33
+KMB,AM,354,KMB Mitsubishi Mk117/217/218 (AM) | KMB Training Fleet,30|33
+KMB,AL,320,KMB Leyland Olympian 11m (A/C) (AL) | KMB Training Fleet,26|33
+KMB,L,313,KMB Albion Chieftain (L) | KMB Albion Victor (L) | KMB Albion Viking (L) | KMB Albion Viking EVK41L (L),242|125|238|239
+KMB,E6X,311,KMB ADL Enviro 500 MMC 12.8m (Euro 6) (E6X),406
+KMB,BL,293,KMB Leyland Olympian 9.7m/10.3m (BL) | KMB Training Fleet,46|33
+KMB,ATE,272,KMB TransBus Enviro 500 (ATE),1
+KMB,S3M,255,KMB MCW Metrobus 11m (S3M),41
+KMB,V6B,243,"KMB Volvo B8L (MCV Body) (AVBML,V6B) | KMB Volvo B8L 12m (Wright Body) (AVBWL,V6B,V6P)",405|390
+KMB,AA,241,KMB Dennis Dart/ Dart SLF (AA) | KMB Training Fleet,31|33
+KMB,AVC,240,KMB Training Fleet | KMB Volvo B7RLE (AVC),33|308
+KMB,ADS,235,KMB Dennis Dragon 9.9m (ADS),29
+KMB,ATEU,233,KMB Alexander Dennis Enviro 500 (Euro IV/ Euro V) (ATEU) | KMB Training Fleet,268|33
+KMB,3ATENU,224,"KMB Alexander Dennis Enviro 500 MMC 12.8m (3ATENU,E5L)",342
+KMB,3ATENUW,224,"KMB Alexander Dennis Enviro 500 MMC 12.8m (3ATENU,E5L)",342
+KMB,E5L,224,"KMB Alexander Dennis Enviro 500 MMC 12.8m (3ATENU,E5L)",342
+KMB,AVBWL,212,"KMB Volvo B8L 12m (Wright Body) (AVBWL,V6B,V6P)",390
+KMB,V6P,212,"KMB Volvo B8L 12m (Wright Body) (AVBWL,V6B,V6P)",390
+KMB,ATEE,211,KMB Alexander Dennis Enviro 500 (Euro V) (ATEE) | KMB Training Fleet,295|33
+KMB,A,210,KMB AEC Regent Mk V (A),134
+KMB,ASC,199,KMB Scania K230UB 12m (ASC) | KMB Training Fleet,298|33
+KMB,V6PX,184,"KMB Volvo B8L 12.8m (V6PX,V6X)",414
+KMB,V6X,184,"KMB Volvo B8L 12.8m (V6PX,V6X)",414
+KMB,3M,173,KMB MCW Metrobus 12m (3M) | KMB Training Fleet,45|33
+KMB,3AD,170,KMB Dennis Dragon 12m (A/C) (3AD),23
+KMB,3BL,163,KMB Leyland Olympian 12m (3BL),38
+KMB,AP,163,KMB Mitsubishi MP618N (AP) | KMB Neoplan Centroliner N4026/N4426 (AP),37|19
+KMB,E6M,151,KMB ADL Enviro 500 MMC 11.3m (E6M),413
+KMB,ATS,150,KMB Dennis Trident 10.6m (ATS),18
+KMB,2D,107,KMB Daimler Fleetline (2D),137
+KMB,ASV,100,KMB Volvo Super Olympian 10.6m (ASV),21
+KMB,AVW,100,KMB Volvo Super Olympian (Wright Explorer Body) (AVW),2
+KMB,CA,100,KMB Albion Viking EVK55CL (CA),236
+KMB,AVBE,96,KMB Volvo B9TL(Enviro 500 Body) (AVBE),264
+KMB,S,93,KMB Seddon Pennine 4 (S),126
+KMB,AT,91,KMB Toyota Coaster (AT),36
+KMB,M,88,KMB MCW Metrobus 9.7m (M),44
+KMB,2L,74,KMB Leyland Atlantean PDR1/1 (2L) | KMB Leyland Titan PD3/5 (2L),136|135
+KMB,AVBW,64,KMB Volvo B9TL(Wright Gemini Body) (AVBW),263
+KMB,ATSE,51,KMB Enviro 400 (ATSE),305
+KMB,AMN,47,KMB MAN 24.310 (AMN),4
+KMB,BED,42,KMB BYD B12D (BED),427
+KMB,AAS,41,"KMB Alexander Dennis Enviro 200 Dart (AAS,AAU)",316
+KMB,AAU,41,"KMB Alexander Dennis Enviro 200 Dart (AAS,AAU)",316
+KMB,ME,41,KMB Mercedes Benz O305 (ME),48
+KMB,DM,40,KMB Dennis Dominator (DM),47
+KMB,AF,39,"KMB Dennis Falcon (AF,FD)",32
+KMB,FD,39,"KMB Dennis Falcon (AF,FD)",32
+KMB,AVBML,31,"KMB Volvo B8L (MCV Body) (AVBML,V6B)",405
+KMB,S3V,30,KMB Volvo Olympian 11m (S3V),43
+KMB,2A,28,KMB AEC Regent V (2A),245
+KMB,AH,25,KMB Hino RK176K (AH),34
+KMB,AN,24,KMB Dennis Lance (AN),35
+KMB,AMNE,22,"KMB MAN A95 (AMNE,AMNF)",361
+KMB,AMNF,22,"KMB MAN A95 (AMNE,AMNF)",361
+KMB,AS,22,KMB Scania N113 (AS),27
+KMB,ASU,22,KMB Scania K310UD (ASU),274
+KMB,ASB,20,KMB Scania K230UB (10.6m) (ASB),296
+KMB,BEB,16,KMB BYD B12A (BEB),421
+KMB,BDE,15,"KMB BYD K9A/K9R (BDE,BE)",328
+KMB,BE,15,"KMB BYD K9A/K9R (BDE,BE)",328
+KMB,AED,10,KMB ADL E500EV (AED),432
+KMB,AYM,8,KMB Youngman JNP6122UC (AYM),362
+KMB,M6EX,7,"KMB MAN A95 12.8m (M6EX,M6FX)",423
+KMB,M6FX,7,"KMB MAN A95 12.8m (M6EX,M6FX)",423
+KMB,ATH,3,KMB Alexander Dennis Enviro 500 Hybrid (ATH),346
+KMB,AVG,3,KMB Volvo B9TL (Gemilang Body) (AVG),401
+KMB,3AVBWU,2,KMB Volvo B9TL 12.8m (3AVBWU),344
+KMB,AMR,2,KMB Metrorider (AMR),244
+KMB,ASUD,2,KMB Scania K280UD (ASUD),353
+KMB,AVD,2,KMB Volvo B9TL(Volgren Demo) (AVD),138
+KMB,CB,2,KMB Bedford YRQ (CB),237
+KMB,E6T,2,KMB ADL Enviro 500 MMC 12m (Euro 6) (E6T),396
+KMB,AMC,1,KMB VDL DB300 (AMC),345
+KMB,APM,1,KMB Neoman A34 (APM),20
+KMB,ASCU,1,KMB Scania K230UB 12m (Euro 5) (ASCU),304
+KMB,AVBWS,1,KMB Volvo B9TL 10.4m (2-axle) (AVBWS),313
+KMB,AYT,1,KMB Yutong ZK6128HG1 (AYT),350
+KMB,VMD,1,KMB Volvo B10MD (VMD),210
+KMB,W6S,1,KMB Wrightbus StreetDeck (W6S),407
+LWB,,353,"LWB ADL Enviro 500 MMC (95) | LWB ADL Enviro 500 MMC Coach Version (55,65) | LWB Alexander Dennis Enviro 500 (Coach Version) (6,64) | LWB Alexander Dennis Enviro 500 12.8m (25) | LWB Alexander Dennis Enviro 500 12.8m Coach (15) | LWB Dennis Lance (9) | LWB Dennis Trident 12m (ALX Body) (1,2) | LWB Dennis Trident 12m Coach (ALX Body) (5) | LWB Volvo B9TL Coach (4)",336|356|269|393|380|114|111|113|76
+LWB,UE6X,90,LWB ADL Enviro 500 MMC 12.8m (Euro 6) (UE6X),416
+LWB,ATEU,78,"LWB Alexander Dennis Enviro 500 (8,84)",266
+LWB,UV6X,75,LWB Volvo B8L 12.8m (UV6X),417
+LWB,AE6X,20,LWB ADL Enviro 500 MMC Coach (Euro 6) (AE6X),437
+LWB,AVBE,18,LWB Volvo B9TL (7),81
+LWB,AV6B,10,LWB Volvo B8L 12m Coach (AV6B),443
+LWB,LW,10,LWB Volvo Olympian 12m (LW),9
+LWB,ATR,4,LWB Dennis Trident 12m (Duple Metsec Body) (3),112
+LWB,SE,4,LWB BYD K9R (SE),389
+LWB,AV6X,3,LWB Volvo B8L 12.8m Coach (AV6X),435
+MTR,,316,MTR Alexander Dennis Enviro 200 Dart (9) | MTR Alexander Dennis Enviro 500 11.3m (8) | MTR Alexander Dennis Enviro 500 12m (8) | MTR Alexander Dennis Enviro 500 MMC 11.3m (5) | MTR Alexander Dennis Enviro 500 MMC 12m | MTR Dennis Dart (5) | MTR Dennis Trident (2nd hand) (7) | MTR Dennis Trident 11.3m (6) | MTR Enviro 400 (1) | MTR Leyland Olympian 11m (2) | MTR Mitsubishi Mk218 (3) | MTR Volvo B10M (4) | MTR Volvo B9TL (3) | MTR Volvo Olympian 11m (2),291|323|278|334|418|282|284|283|321|279|281|285|375|280
+MTR,Z,34,MTR ADL E500EV (Z),434
+NHKB,,69,NHKB Dennis Dart | NHKB Hino Coach | NHKB MAN 18.320 | NHKB MAN NL-263 | NHKB MAN NL323 | NHKB Scania L94UB | NHKB Volvo B7RLE,106|265|315|105|330|107|108
+NLB,MN,141,NLB MAN 18.310 (MN) | NLB MAN LE 19.320 (MN) | NLB MAN NL-262 (MN) | NLB MAN NL-263 (MN) | NLB MAN NL-273 (MN) | NLB MAN R33 (MN) | NLB MAN RR2 (MN) | NLB MAN RR8 (MN) | NLB Man A91 (MN),70|365|262|205|286|387|431|430|60
+NLB,ILS,139,"NLB ISUZU JCR460 (ILS) | NLB ISUZU LT132L (ILS) | NLB ISUZU LT133L (ILS) | NLB ISUZU LV423R (ILS) | NLB ISUZU MT112K, MT112L (ILS)",202|271|272|273|270
+NLB,MD,44,"NLB MAN A95 (MD,MDR)",370
+NLB,MDR,44,"NLB MAN A95 (MD,MDR)",370
+NLB,YM,24,NLB YoungMan JNP6122GR1 (YM),310
+NLB,,23,NLB Benz Bus Fleet (BENZ) | NLB Commer KCB3023 | NLB MAN 24.350 | NLB Volvo B8L 12m,203|234|261|449
+NLB,MG,20,NLB MAN RR8 (MN),430
+NLB,MS,16,NLB Mitsubishi Rosa BE437F (MS) | NLB Mitsubishi Rosa BE439F (MS) | NLB Mitsubishi Rosa BE649J (MS),289|206|290
+NLB,LD,15,NLB Leyland Victory Mk II (LD),208
+NLB,AD,14,NLB ADL Enviro 400 (AD),400
+NLB,DLS,11,NLB Dodge RGI5 (DLS),232
+NLB,MDRS,11,NLB MAN A95 11.7m (MDRS),426
+NLB,TCM,6,"NLB Toyota Coaster (TCM,TY)",207
+NLB,TY,6,"NLB Toyota Coaster (TCM,TY)",207
+NLB,VL,6,NLB Volvo B6LE (VL),276
+NLB,BE,5,NLB BYD K9,397
+NLB,DN,5,NLB Dennis Dart SLF (DN) | NLB Dennis Trident 12m (DN),204|338
+NLB,DSS,3,NLB Dodge KC40 (DSS),233
+NWFB,,1943,"NWFB ADL Enviro 200 MMC (25) | NWFB ADL Enviro 400 10.4m (315,38) | NWFB ADL Enviro 500 MMC 12.8m (61,611,612,62) | NWFB Alexander Dennis Enviro 500 11.3m (40) | NWFB Alexander Dennis Enviro 500 12m (2,55,599) | NWFB Alexander Dennis Enviro 500 Hybrid (56) | NWFB Alexander Dennis Enviro 500 MMC 11.3m (40,499,8) | NWFB Alexander Dennis Enviro 500 MMC 12m (55,56,57,58) | NWFB BYD K9R (20) | NWFB Dennis Dart SLF 10.1m (20) | NWFB Dennis Dart SLF 10.7m (20) | NWFB Dennis Trident (Duple Metsec Body) (30) | NWFB Dennis Trident 10.3m (33) | NWFB Dennis Trident 10.6m (16) | NWFB Dennis Trident 10.6m (Duple Metsec Body) (36) | NWFB Dennis Trident 11.3m (14) | NWFB Dennis Trident 12m (10,11) | NWFB Dennis Trident 12m (Euro III) (12) | NWFB MAN A95 12.8m (60) | NWFB Neoplan Centroliner (60) | NWFB Volvo B8L (52,521,88) | NWFB Volvo B9TL 11.3m (45) | NWFB Volvo B9TL 12m (52) | NWFB Volvo Super Olympian 12m (50) | NWFB Yixing Great Dragon SDL6120EVG (20) | NWFB Youngman JNP6120 (26)",394|386|384|299|287|348|337|351|371|6|5|49|50|15|16|14|13|12|377|17|409|358|382|51|379|359
+NWFB,LV,164,NWFB Leyland Victory II (LV),124
+NWFB,DA,101,NWFB Dennis Condor/ Dragon (DA),52
+NWFB,ML,84,NWFB MCW Metrobus 12m (ML),118
+NWFB,VA,78,NWFB Volvo Olympian 11m / 12m (VA),54
+NWFB,LF,72,NWFB Daimler/ Leyland Fleetline (LF),122
+NWFB,DL,48,NWFB Dennis Condor 12m (DL),119
+NWFB,MB,40,NWFB MCW Metrobus 11m (MB),117
+NWFB,DM,29,NWFB Dennis Condor 11m (DM),56
+NWFB,DS,29,NWFB Dennis Jubilant (DS),120
+NWFB,SF,29,NWFB Leyland Fleetline (SF),123
+NWFB,LA,25,NWFB Leyland Olympian 11m (A/C) (LA),53
+NWFB,DC,22,NWFB Dennis Dart (DC),55
+NWFB,LM,10,NWFB Leyland Olympian 11m (LM),121
+NWFB,MC,10,NWFB MCW Metrobus 9.7m (MC),57
+NWFB,T,8,NWFB Training Fleet (T1),243
+NWS,T,41,NWS Training Fleet (T),314
+PITCL,,86,PITCL ADL Enviro 200 Dart | PITCL Alexander Dennis Enviro 500 (Euro V) | PITCL Alexander Dennis Super Pointer Dart (Coach Version) | PITCL BYD CK6120LLEV | PITCL CRRC TEG6125EUBEV01 | PITCL Dennis Dart SLF (1) | PITCL Designline Olymbus | PITCL Guangtong GTK6129BEVB | PITCL Higer KLQ6119 | PITCL Isuzu LT133L | PITCL Isuzu LT134P (9) | PITCL Kinglong XMQ6127 (9) | PITCL Kinglong XMQ6803H | PITCL Lion Bus LBC6101 | PITCL MAN NL323 | PITCL MAN RR8 | PITCL Man A51 (9) | PITCL Scania K94IB 4x2 | PITCL Sunlong SLK6102 | PITCL Sunlong SLK6112 | PITCL Toyota Coaster | PITCL TransBus Super Pointer Dart (1) | PITCL Volvo B7RLE | PITCL YoungMan JNP6122GR2 (3) | PITCL Yutong ZK6100H (9) | PITCL Yutong ZK6119HC (9),376|447|275|425|441|109|110|446|422|302|325|327|412|301|341|428|332|369|372|436|368|219|198|440|311|324|326
+Reserved,,0,Reserved,79
+Shandong,DBAY,2,Shandong Yixing Great Dragon SDL6120EVG,347
+Stagecoach,,6,Stagecoach Volvo Olympian,218
+Stagecoach,3L,5,Stagecoach Volvo B10M,217
+Stagecoach,4L,5,Stagecoach Volvo B10M,217
+Stagecoach,5L,5,Stagecoach Volvo B10M,217
+Sun,,19,Sun Bus Dennis Trident 12m | Sun Bus MAN NL323 (Borrow from NHKB) | Sun Bus Neoplan Centroliner | Sun Bus Wright Streetdeck,373|411|410|415
+SunBus,,6,SunBus Volvo B7RLE,433
+Weisheit,,5,Weisheit VV12HR | Weisheit WSD6121BR1EV,429|420
+XXX,,0,XXX,74

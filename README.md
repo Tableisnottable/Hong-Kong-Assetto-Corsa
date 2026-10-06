@@ -293,3 +293,30 @@ git diff --check
 ## 授權和免責
 
 本 repository 的腳本和設定是地圖製作工具，不代表第三方地圖資料、政府資料、OSM 資料或 Google Maps 資產已自動授權重新發布。發布 mod 前，請分別遵守每個資料來源的授權、署名、非商業和服務條款要求。
+
+## Repository 的其他內容
+
+`origin/main` 同時包含較廣泛的香港 Assetto Corsa 模擬專案內容，不限於天光道地圖：
+
+- `auto/v1/`：CSDI／Blender 自動化流程、車輛資料、模板和 web 介面。
+- `auto/v1/cars/`：香港駕駛考試類別車輛的聲音來源及相關說明。
+- `auto/v1/web/`：地圖與車輛資料展示頁面。
+- `asset/vehicles/hk_double_decker_bus/`：香港雙層巴士 OBJ、MTL 和模型 manifest。
+- `car/driving test car/`：駕駛考試車輛參考資料。
+- `config/vehicles.json`：車輛設定索引。
+- `docs/`：地圖製作、整體生產計劃及 ACROSS 車隊資料。
+- `tools/across_catalog.py`：重建 ACROSS 車隊 catalog 的工具。
+
+### ACROSS 車隊 catalog
+
+ACROSS catalog 位於 `docs/across/`，包括車型記錄、車隊摘要和代碼統計。重新生成：
+
+```powershell
+python .\tools\across_catalog.py --output .\build\across --cache .\build\across-cache
+```
+
+ACROSS 統計可能包含歷史車輛、後備車、訓練車或已退役車輛，不應直接解讀為營運商目前的活躍車隊數量。
+
+### CSDI／車輛自動化範圍
+
+`auto/v1/` 是主分支上的較廣泛自動化版本，涵蓋 CSDI 資料處理、Blender 匯出、Assetto Corsa 模板、車輛資料和 web 介面。本 README 前面的 HP1C／天光道流程，是目前這個工作分支新增的道路 blockout pipeline；兩者可以並存，但不應把目前的 OSM blockout 宣稱為已完成的 CSDI 1:1 KN5。

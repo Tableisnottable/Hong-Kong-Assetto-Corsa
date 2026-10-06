@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Driving Test Vehicles - Specifications</title>
+    <style>
+        :root {
+            --step1-color: #3498DB;
+            --step2-color: #1ABC9C;
+            --step3-color: #9B59B6;
+            --step4-color: #F1C40F;
+            --step5-color: #E67E22;
+            --step6-color: #E74C3C;
+            --step7-color: #2ECC71;
+        }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #121212; color: #E0E0E0; }
+        header { height: 55px; background: #1F2421; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 2px solid #333; }
+        .logo { font-size: 18px; font-weight: bold; color: #2ECC71; }
+        nav a { color: #BBB; text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 500; }
+        nav a:hover, nav a.active { color: #FFF; border-bottom: 2px solid #2ECC71; padding-bottom: 4px; }
+        .content { padding: 30px; max-width: 1200px; margin: 0 auto; }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        
+        .car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .car-card { background: #1E1E1E; border-radius: 8px; padding: 20px; border-left: 8px solid #888; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        
+        .car-card.s1 { border-left-color: var(--step1-color); }
+        .car-card.s2 { border-left-color: var(--step2-color); }
+        .car-card.s3 { border-left-color: var(--step3-color); }
+        .car-card.s4 { border-left-color: var(--step4-color); }
+        .car-card.s5 { border-left-color: var(--step5-color); }
+        .car-card.s6 { border-left-color: var(--step6-color); }
+        .car-card.s7 { border-left-color: var(--step7-color); }
+
+        .car-title { font-size: 16px; font-weight: bold; color: #FFF; margin-bottom: 5px; }
+        .car-sub { font-size: 12px; color: #AAA; margin-bottom: 15px; }
+        .spec-list { font-size: 13px; line-height: 1.6; color: #DDD; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hong Kong Assetto Corsa - Vehicles &amp; Test Pipeline</div>
+        <nav>
+            <a href="index.html">Map Pipeline (地圖流程)</a>
+            <a href="cars.html" class="active">Vehicle Test List (考車與流程規格)</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Hong Kong Driving Test Vehicles &amp; Testing Pipeline (7-Color Process List)</h2>
+        <div class="car-grid">
+            
+            <div class="car-card s1">
+                <div class="car-title">1. Toyota Yaris / Prius C (XP130 / NHP10)</div>
+                <div class="car-sub">Private Car - Manual (棍波私家車) [Pipeline Stage 1: Data Verification]</div>
+                <div class="spec-list">
+                    <b>Engine (引擎):</b> 1.5L 1NZ-FE Inline-4 (1,497 cc)<br>
+                    <b>Output (馬力扭力):</b> 107 hp @ 6,000 rpm | 140 Nm @ 4,200 rpm<br>
+                    <b>Transmission (波箱):</b> Toyota C50 5-Speed Manual (5速手動)<br>
+                    <b>Testing Route:</b> Local Driving Test Routes &amp; Manual Clutch Calibration
+                </div>
+            </div>
+
+            <div class="car-card s2">
+                <div class="car-title">1A. Toyota Prius (ZVW30 / ZVW50)</div>
+                <div class="car-sub">Private Car - Automatic (自動波私家車) [Pipeline Stage 2: Mesh Generation]</div>
+                <div class="spec-list">
+                    <b>Powertrain (動力):</b> 1.8L 2ZR-FXE Atkinson Cycle + MG2 Motor (1,798 cc)<br>
+                    <b>Output (綜合馬力):</b> 121 hp (90 kW) Net Combined Output<br>
+                    <b>Transmission (波箱):</b> e-CVT Power Split Planetary Gearset<br>
+                    <b>Testing Route:</b> Urban Automatic Driving Test Corridors
+                </div>
+            </div>
+
+            <div class="car-card s3">
+                <div class="car-title">2. Toyota HiAce Manual (GDH201 / KDH200)</div>
+                <div class="car-sub">Light Goods Vehicle - Manual (棍波輕型貨車) [Pipeline Stage 3: Physics Setup]</div>
+                <div class="spec-list">
+                    <b>Engine (引擎):</b> 2.8L 1GD-FTV Turbo Diesel (2,755 cc)<br>
+                    <b>Output (馬力扭力):</b> 177 hp @ 3,400 rpm | 420 Nm @ 1,400–2,600 rpm<br>
+                    <b>Transmission (波箱):</b> Toyota R151 5-Speed Heavy-Duty Manual<br>
+                    <b>Testing Route:</b> Narrow Street &amp; Reversing Maneuver Testing
+                </div>
+            </div>
+
+            <div class="car-card s4">
+                <div class="car-title">2A. Toyota HiAce Automatic (GDH201R 6AT)</div>
+                <div class="car-sub">Light Goods Vehicle - Automatic (自動波輕型貨車) [Pipeline Stage 4: Ballast Verification]</div>
+                <div class="spec-list">
+                    <b>Engine (引擎):</b> 2.8L 1GD-FTV Turbo Diesel (2,755 cc)<br>
+                    <b>Output (馬力扭力):</b> 177 hp @ 3,400 rpm | 450 Nm @ 1,600–2,400 rpm<br>
+                    <b>Ballast Rule (考車載重):</b> Loaded with 2/3 Payload Ballast (~600-700 kg)<br>
+                    <b>Testing Route:</b> Gradient Hill-Start &amp; Braking Tests
+                </div>
+            </div>
+
+            <div class="car-card s5">
+                <div class="car-title">17. Alexander Dennis Enviro500 12M Gen 1</div>
+                <div class="car-sub">Franchised Bus - Manual/Semi (棍波專營巴士) [Pipeline Stage 5: Heavy Vehicle Clearance]</div>
+                <div class="spec-list">
+                    <b>Engine (引擎):</b> 8.9L Cummins ISLe340 Euro 3/4 Inline-6 (8,900 cc)<br>
+                    <b>Output (馬力扭力):</b> 340 hp @ 2,100 rpm | 1,500 Nm @ 1,200–1,400 rpm<br>
+                    <b>Retarder (減速掣):</b> Integrated Hydrodynamic Retarder (1,800 Nm)<br>
+                    <b>Testing Route:</b> Tail-Swing &amp; Heavy Vehicle Clearance Testing
+                </div>
+            </div>
+
+            <div class="car-card s6">
+                <div class="car-title">17A. Alexander Dennis Enviro500 MMC 12M Gen 2</div>
+                <div class="car-sub">Franchised Bus - Automatic (自動波專營巴士) [Pipeline Stage 6: Steerable Axle Sync]</div>
+                <div class="spec-list">
+                    <b>Engine (引擎):</b> 8.9L Cummins ISL8.9 / L9E6 Euro 6 (8,900 cc)<br>
+                    <b>Transmission (波箱):</b> ZF EcoLife 6AP1700B 6-Speed Auto (Push Button D-N-R)<br>
+                    <b>Steering Axle (輔助轉向):</b> 6x2 with Passive Steer Trailing Axle (第3軸反向轉向)<br>
+                    <b>Testing Route:</b> Multi-Axle Turning Radius Verification
+                </div>
+            </div>
+
+            <div class="car-card s7">
+                <div class="car-title">7. CSDI Auto-Build Deployment Pipeline</div>
+                <div class="car-sub">Automated Integration (自動化系統整合) [Pipeline Stage 7: Deployment]</div>
+                <div class="spec-list">
+                    <b>Map Generation:</b> CSDI 3D Road Mesh -&gt; Blender Headless -&gt; kn5-conv.exe<br>
+                    <b>Car Deployment:</b> Physics, Sound &amp; Collision Sync<br>
+                    <b>Target Folder:</b> Steam Assetto Corsa tracks &amp; cars content directories<br>
+                    <b>Execution:</b> One-Click Admin PowerShell Script (uild_and_deploy.ps1)
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

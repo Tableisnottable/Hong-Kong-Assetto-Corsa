@@ -1,0 +1,39 @@
+類別 1A：自動波私家車 (CATEGORY 1A: PRIVATE CAR - AUTOMATIC)
+車款：TOYOTA PRIUS (ZVW30 / ZVW50 - HYBRID)
+--------------------------------------------------------------------------------
+【1. 底盤與氣動工程 (CHASSIS & AERODYNAMICS)】
+• 車型代號 (Model Code): ZVW30 (第 3 代) / ZVW50 (第 4 代 TNGA-K 平台 5門掀背)
+• 超低風阻 (Aerodynamics): 風阻係數 Cd 0.24 | 迎風面積 (Frontal Area): 2.23 m²
+• 轉向與軌跡 (Steering & Track): 最小轉彎半徑 5.1 米 | 轉向鎖到鎖 2.7 圈 | 前輪距 1,535 mm / 後輪距 1,540 mm | 離地距 135 mm
+
+【2. 混能動力與引擎系統 (HYBRID POWERTRAIN & ENGINE)】
+• 引擎型號 (Engine Code): 2ZR-FXE (阿特金森循環 Atkinson-Cycle)
+• 引擎規格 (Engine Specs): 直列四缸 DOHC 16氣門 VVT-i | 汽缸容量 1,798 cc (1.8 公升)
+• 缸徑 x 衝程 (Bore x Stroke): 80.5 mm x 88.3 mm | 壓縮比 (Compression Ratio): 13.0:1
+• 引擎輸出 (Engine Output): 馬力 98 hp (72 kW) @ 5,200 rpm | 扭力 142 Nm @ 3,600 rpm
+• 驅動馬達 MG2 (Electric Drive Motor): 永磁同步交流馬達 (53 kW / 71 hp, 163 Nm 扭力)
+• 發電機 MG1 (Electric Generator): 永磁同步發電機 (經逆變器升壓至 600V DC)
+• 混能系統綜合馬力 (Hybrid System Combined Power): 121 hp (90 kW)
+• 高壓混能電池組 (HV Battery Pack):
+  - ZVW30: 密封式鎳氫電池 (Ni-MH), 額定電壓 201.6V, 容量 6.5 Ah, 28 個模組 (168 個單體)
+  - ZVW50: 鋰離子電池 (Li-ion), 額定電壓 207.2V, 容量 3.6 Ah
+• 駕駛模式 (Drive Modes): EV 純電模式、Eco 節能模式、Power 動力模式
+
+【3. 變速波箱與動力分流 (TRANSMISSION & POWER SPLIT DEVICE)】
+• 波箱類型 (Transmission Type): 電子控制無級變速自動波箱 (e-CVT)
+• 分流機構 (Power Split Device): 星球齒輪組 (Planetary Gearset，整合引擎、MG1 與 MG2)
+• 波檔模式 (Transmission Modes): 前進檔 (D)、倒檔 (R)、空檔 (N)、引擎煞車檔 (B)
+• 控制介面 (Gear Selector): Shift-by-Wire 電子按鈕波棍，附獨立 P 檔波盤按鈕
+• 驅動形式 (Drivetrain Layout): 前置引擎，前輪驅動 (FF)
+
+【4. 懸掛、煞車與主動安全 (SUSPENSION, BRAKES & SAFETY)】
+• 前懸掛 (Front Suspension): 獨立麥花臣支柱式連防傾桿 (MacPherson Struts)
+• 後懸掛 (Rear Suspension): 獨立雙搖臂式連拖臂 (Double Wishbone - ZVW50) / 扭力梁 (ZVW30)
+• 煞車系統 (Braking System): 電子控制煞車系統 (ECB)，整合再生能量回收煞車
+• 煞車硬體 (Brake Hardware): 前 255 mm 通風碟 / 後 259 mm 實心碟
+• 主動安全套件 (Safety Suite): ABS, EBD, 煞車輔助 (BA), VSC 車身穩定控制, TRC 循跡控制
+• 輪胎規格 (Tires): 15吋鋁合金輪圈，195/65 R15 低滾阻輪胎
+
+【5. 車身尺寸與重量 (DIMENSIONS & WEIGHT RATINGS)】
+• 車身尺寸 (Dimensions): 全長 4,540 mm x 全闊 1,760 mm x 全高 1,470 mm | 軸距 (Wheelbase): 2,700 mm
+• 車重與油箱 (Weight & Tank): 整備質量 (Kerb Weight) 1,375 kg | 許可總重 (GVW) 1,780 kg | 油箱容量 43 公升

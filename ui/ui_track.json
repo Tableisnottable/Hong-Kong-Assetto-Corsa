@@ -1,0 +1,9 @@
+﻿{
+  "name": "Hong Kong 1:1 Open World",
+  "description": "1:1 Scale Hong Kong Map for Assetto Corsa",
+  "tags": ["Hong Kong", "Street", "Open World"],
+  "country": "Hong Kong",
+  "city": "Hong Kong", "length": "10000m",
+  "width": "12m",
+  "pitboxes": "30"
+}

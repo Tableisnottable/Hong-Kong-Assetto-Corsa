@@ -1,0 +1,34 @@
+類別 17：棍波/半自動專營巴士 (CATEGORY 17: FRANCHISED BUS - MANUAL / SEMI-AUTO)
+車款：ALEXANDER DENNIS ENVIRO500 12M GEN 1 (TRAINING BUS)
+--------------------------------------------------------------------------------
+【1. 巴士底盤與車身結構 (BUS CHASSIS & BODYWORK STRUCTURE)】
+• 底盤型號 (Chassis Model): 亞歷山大丹尼士 Trident 3 / Enviro500 Mk1 底盤
+• 車身工藝 (Bodywork System): Alusuisse 結構化鋁合金單體車身組裝 (Monocoque Structure)
+• 車軸佈局 (Axle Configuration): 6x2 (第一軸前轉向軸，第二軸驅動中軸，第三軸隨動尾軸)
+• 車身外形尺寸 (Overall Dimensions): 全長 12,000 mm x 全闊 2,550 mm x 全高 4,300 mm
+• 軸距 (Wheelbase): 5,950 mm (第一軸至第二軸) + 1,600 mm (第二軸至第三軸)
+• 前懸與後懸 (Overhangs): 前懸 2,460 mm | 後懸 1,990 mm (轉灣時產生顯著推尾效應 Tail-Swing)
+• 最小迴轉直徑 (Minimum Turning Circle): 22.0 米 (22.0 meters)
+
+【2. 重型商業柴油引擎 (HEAVY COMMERCIAL DIESEL ENGINE)】
+• 引擎型號 (Engine Model): 康明斯 Cummins ISLe340 / ISLe4 (Euro 3 / Euro 4 排放)
+• 引擎佈局 (Layout): 重型後置橫置/縱置直列六缸 (Rear-Mounted Inline 6-Cylinder)
+• 汽缸容量 (Displacement): 8,900 cc (8.9 公升 / 8.9 Liters)
+• 供油與進氣 (Injection & Induction): 高壓共軌直噴，渦輪增壓配中冷器 (Charge Air Cooled)
+• 最大馬力 (Max Power): 340 hp (254 kW) @ 2,100 rpm
+• 最大扭力 (Max Torque): 1,500 Nm (1,106 lb-ft) @ 1,200–1,400 rpm
+• 引擎重量與容量 (Weight & Fluid Capacities): 乾重 ~700 kg | 機油容量 28 公升 | 冷卻水容量 50 公升
+
+【3. 變速波箱與液力減速掣 (TRANSMISSION & HYDRAULIC RETARDER)】
+• 波箱型號 (Transmission Model): 福伊特 Voith D864.5 (4速) 或 採埃孚 ZF Ecomat 6HP602 (6速)
+• 訓練車改裝 (Training Modifications): 加裝手動預選閥切換 / 鎖檔控制開關 (Manual Hold-Gear Selectors)
+• 減速掣系統 (Retarder System): 波箱整合式液力減速器 (Integrated Hydrodynamic Retarder)
+• 減速扭力 (Retarder Braking Torque): 最高可提供 1,800 Nm 制動扭力
+
+【4. 氣壓懸掛、氣煞與軸重 (PNEUMATIC SUSPENSION, BRAKES & AXLES)】
+• 懸掛系統 (Suspension): ECAS 全電子控制空氣懸掛，具備側傾跪低功能 (70 mm 跪低深度 Kneeling)
+• 氣囊數量 (Air Springs): 前軸 2 個氣囊，驅動軸 4 個氣囊，尾軸 2 個氣囊
+• 服務煞車 (Service Brakes): 全車全氣壓雙迴路碟式煞車，配備 ABS (Full-Air Pneumatic Discs)
+• 氣壓系統工作壓力 (Air System Pressure): 8.5 bar 至 10.0 bar (儀表板設氣壓表監控)
+• 車軸負載額定值 (Axle Load Ratings): 前軸 7,500 kg | 驅動軸 11,500 kg | 尾軸 7,500 kg
+• 重量規格 (Weight Ratings): 空陸重量 ~14,200 kg | 許可總重 (GVW) 24,000 kg (24 公噸)
