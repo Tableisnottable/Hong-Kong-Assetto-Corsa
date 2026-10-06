@@ -320,3 +320,277 @@ ACROSS 統計可能包含歷史車輛、後備車、訓練車或已退役車輛�
 ### CSDI／車輛自動化範圍
 
 `auto/v1/` 是主分支上的較廣泛自動化版本，涵蓋 CSDI 資料處理、Blender 匯出、Assetto Corsa 模板、車輛資料和 web 介面。本 README 前面的 HP1C／天光道流程，是目前這個工作分支新增的道路 blockout pipeline；兩者可以並存，但不應把目前的 OSM blockout 宣稱為已完成的 CSDI 1:1 KN5。
+
+---
+
+# Hong Kong Tin Kwong Road Assetto Corsa Map Tools
+
+This repository is a starting project for building an Assetto Corsa map based on the Tin Kwong Road driving-test routes in Kowloon, Hong Kong. It currently provides:
+
+- Shared route data for the three Tin Kwong Road driving-test routes.
+- A Blender procedural road blockout generated from OpenStreetMap road data.
+- HP1C / 11-SW-9D survey-sheet identifiers and source manifests.
+- Assetto Corsa `models.ini`, `surfaces.ini`, and `ui_track.json` templates.
+- A cached, rate-limited data downloader.
+- Blender FBX export tooling.
+- A desktop helper for opening the official Assetto Corsa SDK ksEditor.
+
+> **Current status:** This is a reproducible road blockout and Assetto Corsa project skeleton, not a finished public-release KN5 track. A final map still requires original HP1C survey data, terrain, collision meshes, AI lines, traffic assets, and final ksEditor export.
+
+## Project scope
+
+The map focuses on the Kowloon Tin Kwong Road driving-test area. All three routes share one road world so overlapping roads are modeled only once:
+
+1. **Route 1:** Tin Kwong Road, Back Cheung Road, Lok Shan Road, Mei Shing Tong Street, Jiangsu Street, Sheung Hong Street, Sheung Shing Street, and the U-turn operation.
+2. **Route 2:** Tin Kwong Road, Sheung Shing Street, Sheung Hong Street, Ma Tau Wai Road, Farm Road, and the U-turn operation.
+3. **Route 3:** Tin Kwong Road, Argyle Street, Carlisle Road, Pui Ching Road, Shek Ku Street, Sheung Shing Street, Sheung Hong Street, and the U-turn operation.
+
+The complete Chinese turn-by-turn instructions are stored in `asset\routes\tin_kwong_road.json`. The Blender generator uses corresponding English road identifiers.
+
+## Names and geographic scope
+
+| Item | Value |
+| --- | --- |
+| Map purpose | Tin Kwong Road driving-test routes |
+| Survey group | HP1C |
+| Reference sheet | 11-SW-9D |
+| Assetto Corsa map ID | `tin_kwong_road` |
+| Road strategy | One shared road world for all three routes |
+| Sheet strategy | Export according to the original HP1C sheet boundary |
+| 2 GB strategy | Split only when one source-sheet model exceeds the limit |
+
+HP1C identifies the survey group and sheet. It does not mean that the complete source sheet is copied into the game. The build should extract only the road corridor required by the driving-test routes and exclude unrelated surrounding areas.
+
+## Repository structure
+
+```text
+.
+├── README.md
+├── .gitignore
+├── asset/
+│   ├── routes/tin_kwong_road.json
+│   └── assetto_corsa/tin_kwong_road/
+│       ├── models.ini
+│       ├── data/surfaces.ini
+│       ├── ui/ui_track.json
+│       └── README.md
+├── build/HP1C/
+│   ├── source/source_manifest.json
+│   └── tin_kwong_road/
+│       ├── routes.json
+│       ├── tile_manifest.json
+│       └── tin_kwong_road_blockout.blend
+└── tools/
+    ├── build_map.ps1
+    ├── desktop_export.ps1
+    ├── fetch_hk_data.py
+    └── blender/
+        ├── generate_tin_kwong.py
+        └── export_tin_kwong_fbx.py
+```
+
+The downloader-generated `roads.osm.json` and `roads.geojson` files are ignored by Git because they can be downloaded again. They remain locally under `build\HP1C\source\` as generator inputs.
+
+## One-command download and build
+
+Run this from the repository root in PowerShell:
+
+```powershell
+.\tools\build_map.ps1
+```
+
+The pipeline:
+
+1. Runs `tools\fetch_hk_data.py`.
+2. Downloads nearby OSM roads through the Overpass API and converts them to GeoJSON.
+3. Uses the local cache to avoid repeated requests.
+4. Runs `tools\blender\generate_tin_kwong.py` in Blender background mode.
+5. Generates or updates the Blender blockout, route data, and sheet manifest.
+6. Checks whether Blender and ksEditor are available and reports the next KN5 step.
+
+Known local installation paths:
+
+```text
+Blender:
+C:\Program Files\Blender Foundation\Blender 5.1\blender.exe
+
+Official Assetto Corsa SDK ksEditor:
+A:\SteamLibrary\steamapps\common\assettocorsa\sdk\editor\ksEditor.exe
+```
+
+`build_map.ps1` first searches `PATH`, then falls back to these paths. Update `$blenderPath` and `$ksEditorPath` if your installation differs.
+
+## Downloader request protection
+
+`tools\fetch_hk_data.py` is deliberately conservative:
+
+- At most one request at a time.
+- At least 15 seconds before a new request.
+- Local cache reuse when `roads.osm.json` is available.
+- At most three retries after failure.
+- Exponential backoff with a small random delay.
+- No parallel downloads.
+- No endpoint scanning.
+- No Google Maps tiles or Street View asset downloads.
+
+To force a fresh download, first confirm the service terms and limits, then remove the local cache:
+
+```powershell
+Remove-Item .\build\HP1C\source\roads.osm.json
+Remove-Item .\build\HP1C\source\roads.geojson
+python .\tools\fetch_hk_data.py
+```
+
+## Data sources and licensing
+
+| Source | Purpose | Project usage |
+| --- | --- | --- |
+| [TODS Kowloon driving routes](https://www.driving.com.hk/exam-routes-kowloon) | Route instructions and published coordinate anchors | Reference only; page data was last updated in 2021 |
+| [GeoInfo Map](https://www.map.gov.hk/gm/) | Official Hong Kong roads, buildings, terrain, and location reference | Manual and official-data reference |
+| [Lands Department eHongKongStreet](https://www.landsd.gov.hk/tc/resources/mapping-information/ehkg.html) | GeoPDF street maps and sheet calibration | Use original-size data for accurate calibration |
+| [OpenStreetMap Overpass](https://overpass-api.de/) | Road centerlines and road names | Automated download; comply with ODbL attribution |
+| Google Maps | Manual current-condition comparison | No scraping, tile downloading, or Street View asset extraction |
+
+Before publishing a mod, re-check the non-commercial terms for official data, OSM attribution requirements, and Google Maps terms. OSM data in the current generator is not a replacement for official HP1C survey geometry.
+
+## Blender generator
+
+Run directly:
+
+```powershell
+& "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" `
+  --background `
+  --python .\tools\blender\generate_tin_kwong.py
+```
+
+The generator:
+
+- Clears the default Blender scene.
+- Reads `build\HP1C\source\roads.geojson`.
+- Converts WGS84 coordinates into a local metre grid around the test centre.
+- Applies simple curve interpolation to road centerlines.
+- Creates road strips and basic road markings.
+- Places all roads in one shared road world.
+- Writes a Blender `.blend`.
+- Writes route centerline data and source-sheet metadata.
+
+If GeoJSON is missing, the generator uses a small built-in anchor fallback for pipeline testing only. That fallback is not a complete or accurate Hong Kong road dataset.
+
+Generated files:
+
+```text
+build\HP1C\tin_kwong_road\tin_kwong_road_blockout.blend
+build\HP1C\tin_kwong_road\routes.json
+build\HP1C\tin_kwong_road\tile_manifest.json
+```
+
+## FBX and KN5 export
+
+Blender can export the intermediate FBX with:
+
+```powershell
+.\tools\desktop_export.ps1
+```
+
+The helper:
+
+1. Checks the `.blend`, Blender, and the official SDK ksEditor.
+2. Requires the user to type `EXPORT`.
+3. Exports:
+
+   ```text
+   build\HP1C\tin_kwong_road\11-SW-9D.fbx
+   ```
+
+4. Opens ksEditor.
+5. Leaves the user to load the FBX, inspect materials and coordinates, and confirm the KN5 export.
+
+The helper does not use blind screen coordinates and does not overwrite existing output automatically. A reliable ksEditor command-line export interface has not been confirmed, so final KN5 export remains an explicit GUI step.
+
+## Assetto Corsa file skeleton
+
+The track skeleton is under:
+
+```text
+asset\assetto_corsa\tin_kwong_road\
+```
+
+`models.ini` loads `11-SW-9D.kn5` by default. If the source-sheet model exceeds 2 GB, replace it with ordered parts such as `11-SW-9D-1.kn5` and `11-SW-9D-2.kn5`. `data\surfaces.ini` contains initial `ROAD` and `GRASS` surfaces, while `ui\ui_track.json` contains menu metadata.
+
+## 2 GB sheet-splitting rule
+
+Treat 2 GB as the hard per-model limit and 1.5 GB as the safety target:
+
+- Under the limit: `11-SW-9D.kn5`
+- Over the limit: `11-SW-9D-1.kn5`, `11-SW-9D-2.kn5`
+- Additional parts: `11-SW-9D-3.kn5`, `11-SW-9D-4.kn5`
+
+Only oversized source sheets are split. Splits should follow actual road content within the same HP1C sheet, not an arbitrary fixed 100 x 100 metre grid. Keep `tile_manifest.json` and `models.ini` consistent.
+
+## Other repository projects
+
+The repository also contains broader Hong Kong Assetto Corsa work beyond the Tin Kwong Road map:
+
+- `auto/v1/`: CSDI/Blender automation, vehicle data, templates, and web pages.
+- `auto/v1/cars/`: sound-source documentation for Hong Kong driving-test vehicle categories.
+- `auto/v1/web/`: map and vehicle data pages.
+- `asset/vehicles/hk_double_decker_bus/`: Hong Kong double-decker bus OBJ, MTL, and manifest.
+- `car/driving test car/`: driving-test vehicle reference data.
+- `config/vehicles.json`: vehicle configuration index.
+- `docs/`: map-production plans and ACROSS fleet data.
+- `tools/across_catalog.py`: ACROSS fleet-catalog generator.
+
+Regenerate the ACROSS catalog with:
+
+```powershell
+python .\tools\across_catalog.py --output .\build\across --cache .\build\across-cache
+```
+
+ACROSS counts may include historical, spare, training, or retired vehicles and are not claims about an operator's current active fleet.
+
+## Validation
+
+Run:
+
+```powershell
+python -m py_compile `
+  .\tools\fetch_hk_data.py `
+  .\tools\blender\generate_tin_kwong.py `
+  .\tools\blender\export_tin_kwong_fbx.py
+
+python -c "import json; json.load(open('asset/routes/tin_kwong_road.json', encoding='utf-8')); json.load(open('asset/assetto_corsa/tin_kwong_road/ui/ui_track.json', encoding='utf-8')); print('JSON valid')"
+
+git diff --check
+```
+
+Validated parts include Python syntax, route and manifest JSON parsing, cached OSM downloads, Blender background generation, Blender FBX export, and ksEditor path detection.
+
+## Known limitations
+
+The following still require official survey data and final Assetto Corsa authoring:
+
+- HP1C 11-SW-9D original-size GeoPDF/GIS calibration.
+- Correct Hong Kong 1980 Grid or other survey-coordinate conversion.
+- Elevation, contours, and terrain meshes.
+- Accurate road width, lane markings, curbs, and junction geometry.
+- Traffic lights, signs, guardrails, bus stops, and roadside props.
+- Buildings and distant scenery.
+- Collision meshes.
+- Assetto Corsa AI lines, pits, spawns, and timing lines.
+- CSP/night lighting and reflection settings.
+- Final KN5, physics tuning, in-game testing, and performance testing.
+
+The current `.blend` is a development starting point and must not be described as a complete 1:1 Hong Kong driving-test map.
+
+## Contribution workflow
+
+1. Keep source URLs, download dates, and license notes when changing data sources or generators.
+2. Avoid parallel or repeated requests to public APIs.
+3. Model overlapping roads once and keep route differences in route data.
+4. Do not merge the full HP1C sheet or unrelated Hong Kong areas into one model.
+5. Check every KN5 output size and apply the sheet naming rule.
+6. Run Python, JSON, and `git diff --check` validation after changes.
+
+## License and disclaimer
+
+The scripts and configuration in this repository are map-production tools. They do not automatically grant redistribution rights for third-party map data, government data, OSM data, or Google Maps assets. Before publishing a mod, follow the separate license, attribution, non-commercial, and service-term requirements for every source.
