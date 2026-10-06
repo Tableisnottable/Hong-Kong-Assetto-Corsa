@@ -6,11 +6,11 @@
 
 ## Project scope / 專案範圍
 
-地圖以天光道考試路線為核心，三條 route 共用同一個 shared road world，overlapping roads 只建模一次：
+地圖以天光道考試路線為核心 / The map focuses on the Tin Kwong Road test routes；三條 route 共用同一個 shared road world，and overlapping roads are modeled only once：
 
-1. **Route 1 / 路線一:** 天光道、背窩道、落山道、美善同道、江蘇街、常康街、常盛街及掉頭操作。
-2. **Route 2 / 路線二:** 天光道、常盛街、常康街、馬頭圍道、農圃道及掉頭操作。
-3. **Route 3 / 路線三:** 天光道、亞皆老街、嘉齡道、巴富街、石鼓街、常盛街、常康街及掉頭操作。
+1. **Route 1 / 路線一:** 天光道、背窩道、落山道、美善同道、江蘇街、常康街、常盛街及掉頭操作 / Tin Kwong Road, Back Cheung Road, Lok Shan Road, Mei Shing Tong Street, Jiangsu Street, Sheung Hong Street, Sheung Shing Street and the U-turn operation.
+2. **Route 2 / 路線二:** 天光道、常盛街、常康街、馬頭圍道、農圃道及掉頭操作 / Tin Kwong Road, Sheung Shing Street, Sheung Hong Street, Ma Tau Wai Road, Farm Road and the U-turn operation.
+3. **Route 3 / 路線三:** 天光道、亞皆老街、嘉齡道、巴富街、石鼓街、常盛街、常康街及掉頭操作 / Tin Kwong Road, Argyle Street, Carlisle Road, Pui Ching Road, Shek Ku Street, Sheung Shing Street, Sheung Hong Street and the U-turn operation.
 
 完整中文 instructions 位於 `asset\routes\tin_kwong_road.json`，而 Blender generator 使用對應的 English road identifiers。
 
@@ -64,13 +64,13 @@ Downloader-generated `roads.osm.json` and `roads.geojson` are ignored by Git，�
 
 ## One-command build / 一鍵建圖
 
-在 repository root 開啟 PowerShell：
+在 repository root 開啟 PowerShell / Open PowerShell at the repository root：
 
 ```powershell
 .\tools\build_map.ps1
 ```
 
-The pipeline 會：
+The pipeline 會執行以下步驟 / performs the following steps：
 
 1. Run `tools\fetch_hk_data.py` and download nearby OSM roads through Overpass API。
 2. Convert the response to GeoJSON，並使用 local cache。
@@ -95,10 +95,10 @@ A:\SteamLibrary\steamapps\common\assettocorsa\sdk\editor\ksEditor.exe
 - Minimum 15-second interval / 新請求前至少等待 15 秒。
 - Reuse local cache / 有效 `roads.osm.json` 時不重新下載。
 - Maximum three retries with exponential backoff / 失敗時最多重試三次並逐步延遲。
-- No parallel downloads、endpoint scanning or repeated bulk requests。
-- 不會爬取 Google Maps tiles 或下載 Street View assets。
+- No parallel downloads、endpoint scanning or repeated bulk requests / 不使用並行下載、API 掃描或重複大量請求。
+- 不會爬取 Google Maps tiles 或下載 Street View assets / Google Maps tiles and Street View assets are never scraped or downloaded。
 
-如要強制重新下載，先確認 service terms and rate limits，再執行：
+如要強制重新下載，先確認 service terms and rate limits / confirm the service terms and rate limits first，再執行 / then run：
 
 ```powershell
 Remove-Item .\build\HP1C\source\roads.osm.json
@@ -120,7 +120,7 @@ Before publishing a mod，請重新確認 official-data non-commercial terms、O
 
 ## Blender generator / Blender 生成器
 
-可直接執行：
+可直接執行 / Run directly：
 
 ```powershell
 & "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" `
@@ -136,11 +136,11 @@ build\HP1C\tin_kwong_road\routes.json
 build\HP1C\tin_kwong_road\tile_manifest.json
 ```
 
-如果 GeoJSON 不存在，generator 使用少量 built-in anchors 作 pipeline fallback；this fallback is for testing only，不代表完整或精確道路資料。
+如果 GeoJSON 不存在，generator 使用少量 built-in anchors 作 pipeline fallback / uses a small built-in anchor fallback；this fallback is for testing only，不代表完整或精確道路資料 / it is not a complete or accurate road dataset。
 
 ## FBX and KN5 export / 匯出流程
 
-執行：
+執行 / Run：
 
 ```powershell
 .\tools\desktop_export.ps1
@@ -152,11 +152,11 @@ Helper 會檢查 `.blend`、Blender 和 official SDK ksEditor，要求使用者�
 build\HP1C\tin_kwong_road\11-SW-9D.fbx
 ```
 
-之後會開啟 ksEditor。User must load the FBX、檢查 materials/coordinates、再手動 export `11-SW-9D.kn5`。The helper does not use blind screen coordinates and will not overwrite existing output automatically。
+之後會開啟 ksEditor / ksEditor will then open。User must load the FBX、檢查 materials/coordinates、再手動 export `11-SW-9D.kn5` / manually export the KN5；the helper does not use blind screen coordinates and will not overwrite existing output automatically。
 
 ## Assetto Corsa skeleton / AC 檔案骨架
 
-Track skeleton 位於 `asset\assetto_corsa\tin_kwong_road\`：
+Track skeleton 位於 `asset\assetto_corsa\tin_kwong_road\` / The track skeleton is located there：
 
 - `models.ini` loads `11-SW-9D.kn5`。
 - `data\surfaces.ini` contains initial `ROAD` and `GRASS` surfaces。
@@ -177,14 +177,14 @@ Only oversized source sheets are split。分片應按同一 HP1C sheet 內的 ac
 
 Repository 亦包含 broader Hong Kong Assetto Corsa work：
 
-- `auto/v1/`: CSDI/Blender automation、vehicle data、templates and web pages。
-- `asset/vehicles/hk_double_decker_bus/`: Hong Kong double-decker bus OBJ、MTL and manifest。
-- `car/driving test car/`: driving-test vehicle reference data。
-- `config/vehicles.json`: vehicle configuration index。
-- `docs/`: map-production plans and ACROSS fleet data。
-- `tools/across_catalog.py`: ACROSS fleet-catalog generator。
+- `auto/v1/`: CSDI/Blender automation、vehicle data、templates and web pages / CSDI/Blender 自動化、車輛資料、模板和網頁。
+- `asset/vehicles/hk_double_decker_bus/`: Hong Kong double-decker bus OBJ、MTL and manifest / 香港雙層巴士模型和 manifest。
+- `car/driving test car/`: driving-test vehicle reference data / 駕駛考試車輛參考資料。
+- `config/vehicles.json`: vehicle configuration index / 車輛設定索引。
+- `docs/`: map-production plans and ACROSS fleet data / 地圖製作計劃和 ACROSS 車隊資料。
+- `tools/across_catalog.py`: ACROSS fleet-catalog generator / ACROSS 車隊 catalog 生成器。
 
-重新生成 ACROSS catalog：
+重新生成 ACROSS catalog / Regenerate the catalog：
 
 ```powershell
 python .\tools\across_catalog.py --output .\build\across --cache .\build\across-cache
@@ -205,11 +205,11 @@ python -c "import json; json.load(open('asset/routes/tin_kwong_road.json', encod
 git diff --check
 ```
 
-已驗證的項目包括 Python syntax、route/manifest JSON parsing、cached OSM download、Blender background generation、FBX export and ksEditor path detection。
+已驗證的項目包括 Python syntax、route/manifest JSON parsing、cached OSM download、Blender background generation、FBX export and ksEditor path detection / Validated items include all of these steps。
 
 ## Known limitations / 已知限制
 
-正式完成地圖仍需要：
+正式完成地圖仍需要 / A finished map still requires：
 
 - Original-size HP1C 11-SW-9D GeoPDF/GIS calibration。
 - Correct Hong Kong 1980 Grid or survey-coordinate conversion。
@@ -220,7 +220,7 @@ git diff --check
 - Assetto Corsa AI lines、pits、spawns and timing lines。
 - CSP/night lighting、reflection settings、final KN5 and in-game testing。
 
-Current `.blend` is a development starting point，not a complete 1:1 Hong Kong driving-test map。
+Current `.blend` is a development starting point，not a complete 1:1 Hong Kong driving-test map / 目前 `.blend` 只是開發起點，並非完整 1:1 香港考試地圖。
 
 ## Contribution workflow / 修改流程
 
