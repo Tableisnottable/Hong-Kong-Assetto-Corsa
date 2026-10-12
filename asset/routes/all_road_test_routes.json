@@ -1,113 +1,271 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "updated_at": "2026-10-13",
   "description": "香港駕駛考試路試路線全集 (All Hong Kong Driving Test Road Routes)",
-  "source_primary": "https://www.driving.com.hk/exam-routes-kowloon",
-  "source_primary_hk": "https://www.driving.com.hk/exam-routes-hongkong",
-  "note": "路線由考牌主任按實際交通情況可臨時更改，僅供參考。全程約30分鐘。試場內考試內容：視力測試、口試、泊左S位、三手軚掉頭。",
+  "sources": [
+    "https://www.driving.com.hk/exam-routes-kowloon (天光道路線)",
+    "https://www.driving.com.hk/exam-routes-hongkong (柴灣常安街路線)",
+    "https://apasshk.com/blog/test-route-analysis (全港考場路線分析)",
+    "YouTube 學車王/鏗鏘駕駛學校 路線教學影片"
+  ],
+  "important_notes": [
+    "路線由考牌主任按實際交通情況可臨時更改，僅供參考。",
+    "全程約30分鐘（街場）。試場內內容：視力測試、口試、泊S位/L位、三手軚掉頭。",
+    "報名時只能選擇「香港區」或「九龍及新界區」，考場由運輸署隨機分配，不可指定。",
+    "考前不會告知路線，需熟悉該考場所有路線。"
+  ],
   "test_centres": [
     {
-      "id": "tin_kwong_road",
-      "display_name": "天光道駕駛考試中心 (Tin Kwong Road)",
-      "area": "九龍 Kowloon",
-      "address": "九龍土瓜灣天光道",
-      "vehicle_classes": ["1", "1A", "2", "2A", "3", "3A", "4"],
-      "route_count": 3,
-      "known_route_ids": ["tin_kwong_1", "tin_kwong_2", "tin_kwong_3"]
+      "id": "happy_valley",
+      "display_name": "跑馬地駕駛考試中心 (Happy Valley)",
+      "area": "香港島 Hong Kong Island",
+      "address": "跑馬地荷塘道",
+      "vehicle_classes": ["1", "1A"],
+      "route_count": 2,
+      "difficulty": "中等偏低",
+      "notes": "港島區私家車唯一考場。經成和道、黃泥涌道住宅區，有電車路，成和道窄路，荷塘道斜路。港島排期較快 (6-8個月)。",
+      "known_route_ids": ["happy_valley_1", "happy_valley_2"]
+    },
+    {
+      "id": "so_kun_po",
+      "display_name": "掃桿埔駕駛考試中心 (So Kon Po)",
+      "area": "香港島 Hong Kong Island",
+      "address": "掃桿埔大球場徑",
+      "vehicle_classes": ["2", "2A"],
+      "route_count": 4,
+      "difficulty": "中等",
+      "notes": "港島區輕型貨車唯一考場。經加路連山道、禮頓道、銅鑼灣道，禮頓道黃格位多、黃色行人過路處密集。4條路線考官隨機抽，15-20分鐘完成。",
+      "known_route_ids": ["so_kun_po_1", "so_kun_po_2", "so_kun_po_3", "so_kun_po_4"]
     },
     {
       "id": "sheung_on_street",
       "display_name": "柴灣常安街駕駛考試中心 (Chai Wan Sheung On Street)",
       "area": "香港島 Hong Kong Island",
       "address": "柴灣常安街",
-      "vehicle_classes": ["1", "1A", "2", "2A", "17", "17A"],
+      "vehicle_classes": ["17", "17A", "9", "10"],
       "route_count": 1,
+      "difficulty": "中等",
+      "notes": "港島區巴士/小巴考場。柴灣道迴旋處、新廈街掉頭位、工業區死車多。",
       "known_route_ids": ["sheung_on_1"]
+    },
+    {
+      "id": "tin_kwong_road",
+      "display_name": "天光道駕駛考試中心 (Tin Kwong Road)",
+      "area": "九龍 Kowloon",
+      "address": "九龍土瓜灣天光道",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 3,
+      "difficulty": "高（全港最難街場之一）",
+      "notes": "斜路多、常盛街斜路開車、常康街三手軚掉頭、落山道斜路、靠背壟道窄路、路口視線差。",
+      "known_route_ids": ["tin_kwong_1", "tin_kwong_2", "tin_kwong_3"]
+    },
+    {
+      "id": "chung_ngai_street",
+      "display_name": "忠義街駕駛考試中心 (Chung Ngai Street)",
+      "area": "九龍 Kowloon",
+      "address": "九龍忠義街 (近何文田/紅磡)",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 2,
+      "difficulty": "高",
+      "notes": "鄰近貨櫃碼頭區，大型車輛頻繁、佛光街多向交匯、工業區路面油漬。與大型車輛保持 ≥2米安全距離。",
+      "known_route_ids": ["chung_ngai_1", "chung_ngai_2"]
+    },
+    {
+      "id": "pui_ching_road",
+      "display_name": "培正道駕駛考試中心 (Pui Ching Road)",
+      "area": "九龍 Kowloon",
+      "address": "九龍何文田培正道",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 4,
+      "difficulty": "高",
+      "notes": "經公主道快速路段（合流需快速匯入）、文福道斜路開車、窩打老道車流繁忙、路線較長。",
+      "known_route_ids": ["pui_ching_1", "pui_ching_2", "pui_ching_3", "pui_ching_4"]
+    },
+    {
+      "id": "wing_hau_street",
+      "display_name": "永孝街駕駛考試中心 (Wing Hau Street)",
+      "area": "九龍 Kowloon",
+      "address": "九龍土瓜灣永孝街",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 2,
+      "difficulty": "中等",
+      "notes": "土瓜灣住宅區，經馬頭圍道、漆咸道北，車流中等、街市行人密集、部分路段需切線。",
+      "known_route_ids": ["wing_hau_1", "wing_hau_2"]
+    },
+    {
+      "id": "yau_tong",
+      "display_name": "油塘駕駛考試中心 (Yau Tong)",
+      "area": "九龍 Kowloon",
+      "address": "油塘工業區",
+      "vehicle_classes": ["2", "2A"],
+      "route_count": 2,
+      "difficulty": "中等偏易",
+      "notes": "油塘工業區，車流中等、路面較寬、迴旋處需熟練讓右原則、路線較短 15-20分鐘。",
+      "known_route_ids": ["yau_tong_1", "yau_tong_2"]
+    },
+    {
+      "id": "shek_am",
+      "display_name": "石蔭駕駛考試中心 (Shek Yam)",
+      "area": "新界 New Territories",
+      "address": "葵涌石蔭邨",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 2,
+      "difficulty": "低",
+      "notes": "葵涌住宅區，只有2條路線、路面平坦、車流不多、路線較短。新界區排期最長 (10-12個月)。",
+      "known_route_ids": ["shek_am_1", "shek_am_2"]
     },
     {
       "id": "texaco_road",
       "display_name": "荃灣德士古道駕駛考試中心 (Tsuen Wan Texaco Road)",
       "area": "新界 New Territories",
-      "address": "荃灣德士古道",
-      "vehicle_classes": ["1", "1A", "2", "2A", "17", "17A"],
+      "address": "荃灣德士古道 (近馬頭壩道)",
+      "vehicle_classes": ["3", "3A", "4", "17", "17A", "18", "19"],
       "route_count": 3,
-      "known_route_ids": ["texaco_1", "texaco_2", "texaco_3"],
-      "notes": "公認最難試場之一：多迴旋處、車流繁忙、多重型車輛、斜路開車，轉彎需預留更多空間。"
+      "difficulty": "高（公認最難之一）",
+      "notes": "中型貨車/重型貨車/大巴考場。德士古道「地獄迴旋處」最為人討論，需正確選擇行車線、禮讓來車。經青山公路-荃灣段、工業區（永德街、龍德街）掉頭。",
+      "known_route_ids": ["texaco_1", "texaco_2", "texaco_3"]
     },
     {
-      "id": "pak_wo_road",
-      "display_name": "粉嶺百和路駕駛考試中心 (Fanling Pak Wo Road)",
-      "area": "新界 New Territories",
-      "address": "粉嶺百和路",
+      "id": "ap_lei_chau",
+      "display_name": "鴨脷洲安全駕駛中心 (Ap Lei Chau)",
+      "area": "駕校 Driving School",
+      "address": "南區鴨脷洲",
       "vehicle_classes": ["1", "1A", "2", "2A"],
-      "route_count": 3,
-      "known_route_ids": ["pak_wo_1", "pak_wo_2", "pak_wo_3"],
-      "notes": "新界區主要私家車/輕型貨車試場。"
+      "route_count": 2,
+      "difficulty": "低（全港最易之一）",
+      "notes": "場內（乙部）+ 場外（丙部）。場外經香港仔市區，車流比銅鑼灣少得多。合格率最高 (~65-70%)。",
+      "known_route_ids": ["ap_lei_chau_1", "ap_lei_chau_2"]
+    },
+    {
+      "id": "yuen_long",
+      "display_name": "元朗安全駕駛中心 (Yuen Long)",
+      "area": "駕校 Driving School",
+      "address": "元朗南生圍",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 2,
+      "difficulty": "低",
+      "notes": "場內 + 場外。場外經元朗鄉郊道路，路面寬闊、車速較快但車流少。留意迴旋處與單車。合格率 ~63-68%。",
+      "known_route_ids": ["yuen_long_1", "yuen_long_2"]
+    },
+    {
+      "id": "sha_tin",
+      "display_name": "沙田安全駕駛中心 (Sha Tin)",
+      "area": "駕校 Driving School",
+      "address": "沙田小瀝源",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 2,
+      "difficulty": "中等",
+      "notes": "場內 + 場外。場外經沙田市區、沙田圍路等繁忙路段。考官要求可能較嚴格。",
+      "known_route_ids": ["sha_tin_1", "sha_tin_2"]
     }
   ],
   "routes": {
-    "tin_kwong_1": {
-      "centre": "tin_kwong_road",
-      "display_name": "天光道路線一",
-      "source": "https://www.driving.com.hk/exam-routes-kowloon",
-      "status": "verified",
+    "happy_valley_1": {
+      "centre": "happy_valley",
+      "display_name": "跑馬地路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "左轉天光道",
-        "右轉靠背窩道",
-        "左轉落山道",
-        "右轉美善同道",
-        "右轉靠江蘇街",
-        "右轉靠背窩道",
-        "左轉天光道",
-        "右轉常康街",
-        "調頭操作",
-        "左轉常盛街",
-        "左轉天光道",
-        "右轉入試場"
+        "試場閘口駛出",
+        "右轉荷塘道",
+        "左轉成和道",
+        "左轉景光街",
+        "左轉山光道",
+        "左轉聚文街",
+        "右轉成和道",
+        "右轉冬青道",
+        "左轉荷塘道",
+        "返回試場"
       ],
-      "turns": ["L", "R", "L", "R", "R", "R", "L", "R", "UTURN", "L", "L", "R"]
+      "turns": ["R", "L", "L", "L", "L", "R", "R", "L", "FINISH"],
+      "notes": "電車路（成和道段）不可進入電車軌範圍；成和道窄路雙向行車；荷塘道斜路起步；學校區行人多。"
     },
-    "tin_kwong_2": {
-      "centre": "tin_kwong_road",
-      "display_name": "天光道路線二",
-      "source": "https://www.driving.com.hk/exam-routes-kowloon",
-      "status": "verified",
+    "happy_valley_2": {
+      "centre": "happy_valley",
+      "display_name": "跑馬地路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "左轉天光道",
-        "右轉常盛街",
-        "右轉常康街",
-        "調頭操作",
-        "左轉常盛街",
-        "右轉天光道",
-        "左轉馬頭圍道",
-        "左轉農圃道",
-        "右轉天光道",
-        "右轉入試場"
+        "試場閘口駛出",
+        "右轉荷塘道",
+        "右轉成和道",
+        "黃泥涌道方向",
+        "迴旋處",
+        "荷塘道",
+        "返回試場"
       ],
-      "turns": ["L", "R", "R", "UTURN", "L", "R", "L", "L", "R", "R"]
+      "turns": ["R", "R", "STRAIGHT", "ROUNDABOUT", "L", "FINISH"],
+      "notes": "路線二經黃泥涌道較易。"
     },
-    "tin_kwong_3": {
-      "centre": "tin_kwong_road",
-      "display_name": "天光道路線三",
-      "source": "https://www.driving.com.hk/exam-routes-kowloon",
-      "status": "verified",
+    "so_kun_po_1": {
+      "centre": "so_kun_po",
+      "display_name": "掃桿埔路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "右轉天光道",
-        "左轉亞皆老街",
-        "左轉嘉齡道",
-        "右轉巴富街",
-        "左轉石鼓街",
-        "左轉常盛街",
-        "右轉常康街",
-        "調頭操作",
-        "左轉常盛街",
-        "左轉天光道",
-        "右轉入試場"
+        "試場斜路開車",
+        "三手軚掉頭",
+        "倒後泊L位",
+        "沿大球場徑",
+        "左轉加路連山道",
+        "左轉禮頓道",
+        "左轉黃泥涌道",
+        "左轉樂活道",
+        "直去連道",
+        "返回試場"
       ],
-      "turns": ["R", "L", "L", "R", "L", "L", "R", "UTURN", "L", "L", "R"]
+      "turns": ["SLOPE_START", "UTURN", "REVERSE_L_PARK", "STRAIGHT", "L", "L", "L", "L", "STRAIGHT", "FINISH"],
+      "notes": "掃桿埔4條路線難度不一，路線二經樂活道最斜；禮頓道黃色行人過路處一定要讓行人先過。"
+    },
+    "so_kun_po_2": {
+      "centre": "so_kun_po",
+      "display_name": "掃桿埔路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場斜路開車",
+        "三手軚掉頭",
+        "倒後泊L位",
+        "沿大球場徑",
+        "樂活道方向",
+        "斜路上山",
+        "返回試場"
+      ],
+      "turns": ["SLOPE_START", "UTURN", "REVERSE_L_PARK", "STRAIGHT", "L", "SLOPE_UP", "FINISH"],
+      "notes": "路線二經樂活道最斜。"
+    },
+    "so_kun_po_3": {
+      "centre": "so_kun_po",
+      "display_name": "掃桿埔路線三",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場斜路開車",
+        "三手軚掉頭",
+        "倒後泊L位",
+        "經銅鑼灣道",
+        "禮頓道",
+        "返回試場"
+      ],
+      "turns": ["SLOPE_START", "UTURN", "REVERSE_L_PARK", "STRAIGHT", "L", "FINISH"],
+      "notes": "路線三經銅鑼灣車流量最大。"
+    },
+    "so_kun_po_4": {
+      "centre": "so_kun_po",
+      "display_name": "掃桿埔路線四",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場斜路開車",
+        "三手軚掉頭",
+        "倒後泊L位",
+        "加路連山道",
+        "禮頓道",
+        "黃泥涌道",
+        "返回試場"
+      ],
+      "turns": ["SLOPE_START", "UTURN", "REVERSE_L_PARK", "STRAIGHT", "L", "L", "FINISH"],
+      "notes": "路線一經黃泥涌道相對較易。"
     },
     "sheung_on_1": {
       "centre": "sheung_on_street",
@@ -133,95 +291,407 @@
         "駛回試場"
       ],
       "turns": ["R", "L", "R", "R", "L", "L", "UTURN", "R", "L", "R", "R", "R", "L", "L", "FINISH"],
-      "notes": "備註：(1)除指定掉頭位置外，亦會選用新廈街作為掉頭地點。(2)考牌主任可臨時更改考試路線。(3)全程約30分鐘。"
+      "notes": "備註：(1)除指定掉頭位置外，亦會選用新廈街作為掉頭地點。(2)考牌主任可臨時更改考試路線。(3)全程約30分鐘。試場內：視力測試、口試、泊左S位、三手軚掉頭。"
+    },
+    "tin_kwong_1": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線一",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "左轉天光道",
+        "右轉靠背窩道",
+        "左轉落山道",
+        "右轉美善同道",
+        "右轉靠江蘇街",
+        "右轉靠背窩道",
+        "左轉天光道",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "左轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["L", "R", "L", "R", "R", "R", "L", "R", "UTURN", "L", "L", "R"],
+      "notes": "天光道為全港最難街場之一：斜路多、常盛街斜路開車、常康街掉頭空間有限、落山道斜路控制車速、靠背壟道窄路。"
+    },
+    "tin_kwong_2": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線二",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "左轉天光道",
+        "右轉常盛街",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "右轉天光道",
+        "左轉馬頭圍道",
+        "左轉農圃道",
+        "右轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["L", "R", "R", "UTURN", "L", "R", "L", "L", "R", "R"],
+      "notes": "經馬頭圍道、農圃道。"
+    },
+    "tin_kwong_3": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線三",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "右轉天光道",
+        "左轉亞皆老街",
+        "左轉嘉齡道",
+        "右轉巴富街",
+        "左轉石鼓街",
+        "左轉常盛街",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "左轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["R", "L", "L", "R", "L", "L", "R", "UTURN", "L", "L", "R"],
+      "notes": "經亞皆老街、嘉齡道、巴富街、石鼓街。"
+    },
+    "chung_ngai_1": {
+      "centre": "chung_ngai_street",
+      "display_name": "忠義街路線一（私家車）",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場駛出",
+        "考泊位S位",
+        "沿忠義街",
+        "右轉孝民街",
+        "右轉忠孝街",
+        "右轉佛光街",
+        "右轉忠孝街",
+        "右轉孝民街",
+        "返回試場"
+      ],
+      "turns": ["S_PARK", "STRAIGHT", "R", "R", "R", "R", "R", "FINISH"],
+      "notes": "貨櫃車盲點、佛光街多向交匯需判斷讓路、工業區路面油漬。與大型車輛保持 ≥2米距離。"
+    },
+    "chung_ngai_2": {
+      "centre": "chung_ngai_street",
+      "display_name": "忠義街路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場駛出",
+        "考泊位S位",
+        "忠義街",
+        "佛光街方向",
+        "迴旋處",
+        "返回試場"
+      ],
+      "turns": ["S_PARK", "STRAIGHT", "L", "ROUNDABOUT", "FINISH"],
+      "notes": "重型車輛並排壓力大。"
+    },
+    "pui_ching_1": {
+      "centre": "pui_ching_road",
+      "display_name": "培正道路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場",
+        "左轉培正道",
+        "直上常興街",
+        "左轉常盛街",
+        "左轉石鼓街",
+        "左轉巴富街",
+        "右轉公主道",
+        "左轉亞皆老街",
+        "左轉窩打老道",
+        "左轉培正道",
+        "文福道斜路開車",
+        "右轉文運道",
+        "左轉培正道",
+        "返回試場"
+      ],
+      "turns": ["L", "STRAIGHT", "L", "L", "L", "R", "L", "L", "L", "SLOPE_START", "R", "L", "FINISH"],
+      "notes": "公主道合流需快速匯入車流；文福道斜路起步要純熟；窩打老道繁忙時段車多。"
+    },
+    "pui_ching_2": {
+      "centre": "pui_ching_road",
+      "display_name": "培正道路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場",
+        "培正道",
+        "公主道方向",
+        "合流",
+        "亞皆老街",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "MERGE", "L", "FINISH"],
+      "notes": "公主道合流是最大挑戰。"
+    },
+    "pui_ching_3": {
+      "centre": "pui_ching_road",
+      "display_name": "培正道路線三",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場",
+        "培正道",
+        "常興街",
+        "常盛街",
+        "常康街掉頭",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "L", "UTURN", "FINISH"],
+      "notes": "常康街掉頭空間有限。"
+    },
+    "pui_ching_4": {
+      "centre": "pui_ching_road",
+      "display_name": "培正道路線四",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場",
+        "培正道",
+        "文福道",
+        "窩打老道",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "L", "FINISH"],
+      "notes": "培正道4條路線都要熟悉。"
+    },
+    "wing_hau_1": {
+      "centre": "wing_hau_street",
+      "display_name": "永孝街路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "永孝街",
+        "馬頭圍道方向",
+        "漆咸道北",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "L", "FINISH"],
+      "notes": "土瓜灣舊區行人較多，街市附近行人密集；馬頭圍道繁忙時段可能塞車。"
+    },
+    "wing_hau_2": {
+      "centre": "wing_hau_street",
+      "display_name": "永孝街路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "永孝街",
+        "土瓜灣道方向",
+        "雙線切入",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "LANE_CHANGE", "FINISH"],
+      "notes": "部分路段需要切線。"
+    },
+    "yau_tong_1": {
+      "centre": "yau_tong",
+      "display_name": "油塘路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "油塘工業區",
+        "迴旋處",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "迴旋處要熟練「讓右原則」。"
+    },
+    "yau_tong_2": {
+      "centre": "yau_tong",
+      "display_name": "油塘路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "油塘工業區",
+        "上落斜",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "SLOPE", "FINISH"],
+      "notes": "有部分上落斜但唔算嚴重。"
+    },
+    "shek_am_1": {
+      "centre": "shek_am",
+      "display_name": "石蔭路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "石蔭住宅區",
+        "梨木道",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "L", "FINISH"],
+      "notes": "梨木道車流部分時段較繁忙；住宅區路口行人同小朋友。"
+    },
+    "shek_am_2": {
+      "centre": "shek_am",
+      "display_name": "石蔭路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "試場開出",
+        "石蔭住宅區",
+        "迴旋處",
+        "返回試場"
+      ],
+      "turns": ["STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "石蔭路線難度唔高，但新界區排期最長。"
     },
     "texaco_1": {
       "centre": "texaco_road",
       "display_name": "荃灣德士古道路線一",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+      "source": "YouTube 學車王/鏗鏘駕駛學校 + apasshk 分析",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "德士古道",
-        "迴旋處",
+        "德士古道駕駛考試中心出發",
+        "德士古道近馬頭壩道駛出",
+        "德士古道主幹道",
+        "進入德士古道迴旋處（地獄迴旋處）",
         "德士古道北",
-        "楊屋道",
-        "德士古道",
-        "迴旋處",
+        "青山公路-荃灣段",
+        "工業區（永德街、龍德街）",
+        "掉頭/右轉",
         "返回試場"
       ],
-      "notes": "路線詳情以考牌主任當日決定為準。荃灣德士古道試場以多迴旋處、繁忙車流、多重型車輛著稱。"
+      "turns": ["STRAIGHT", "ROUNDABOUT", "STRAIGHT", "L", "INDUSTRIAL", "UTURN", "FINISH"],
+      "notes": "德士古道迴旋處（地獄迴旋處）需正確選擇行車線、留意標誌、禮讓來車。考生需留意大型車盲點、斜路控制及轉線信號。"
     },
     "texaco_2": {
       "centre": "texaco_road",
       "display_name": "荃灣德士古道路線二",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+      "source": "YouTube 學車王/鏗鏘駕駛學校",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
+        "德士古道駕駛考試中心出發",
         "德士古道",
         "沙咀道方向",
-        "工業區街道",
-        "迴旋處掉頭",
+        "荃灣工業區",
+        "迴旋處",
         "返回試場"
       ],
-      "notes": "路線詳情以考牌主任當日決定為準。"
+      "turns": ["STRAIGHT", "L", "INDUSTRIAL", "ROUNDABOUT", "FINISH"],
+      "notes": "路線二經沙咀道、荃灣工業區。"
     },
     "texaco_3": {
       "centre": "texaco_road",
       "display_name": "荃灣德士古道路線三",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+      "source": "YouTube 學車王/鏗鏘駕駛學校",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
+        "德士古道駕駛考試中心出發",
         "德士古道",
-        "荃灣路方向",
+        "大窩口方向",
+        "荃灣路",
         "迴旋處",
         "返回試場"
       ],
-      "notes": "路線詳情以考牌主任當日決定為準。"
+      "turns": ["STRAIGHT", "L", "STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "路線三經大窩口、荃灣路。"
     },
-    "pak_wo_1": {
-      "centre": "pak_wo_road",
-      "display_name": "粉嶺百和路線一",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+    "ap_lei_chau_1": {
+      "centre": "ap_lei_chau",
+      "display_name": "鴨脷洲場外路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "百和路",
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "香港仔市區",
+        "隧道出入口",
+        "快速公路匯入",
+        "返回試場"
+      ],
+      "turns": ["IN_YARD", "STRAIGHT", "TUNNEL", "MERGE", "FINISH"],
+      "notes": "被公認為全港最容易考場之一。挑戰包括隧道出入口同快速公路匯入。"
+    },
+    "ap_lei_chau_2": {
+      "centre": "ap_lei_chau",
+      "display_name": "鴨脷洲場外路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "香港仔海旁",
         "迴旋處",
-        "百和路",
         "返回試場"
       ],
-      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+      "turns": ["IN_YARD", "STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "路線二經香港仔海旁。"
     },
-    "pak_wo_2": {
-      "centre": "pak_wo_road",
-      "display_name": "粉嶺百和路線二",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+    "yuen_long_1": {
+      "centre": "yuen_long",
+      "display_name": "元朗場外路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "百和路",
-        "一鳴路",
-        "百和路",
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "元朗鄉郊道路",
+        "迴旋處",
         "返回試場"
       ],
-      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+      "turns": ["IN_YARD", "STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "路面寬闊、車速較快但車流少；留意迴旋處同單車。"
     },
-    "pak_wo_3": {
-      "centre": "pak_wo_road",
-      "display_name": "粉嶺百和路線三",
-      "source": "field_knowledge",
-      "status": "reference_pending",
+    "yuen_long_2": {
+      "centre": "yuen_long",
+      "display_name": "元朗場外路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
       "instructions": [
-        "試埸開出",
-        "百和路",
-        "馬會道",
-        "百和路",
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "元朗鄉郊道路",
+        "快速路段",
         "返回試場"
       ],
-      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+      "turns": ["IN_YARD", "STRAIGHT", "STRAIGHT", "FINISH"],
+      "notes": "鄉郊路段行人較少，整體壓力較低。"
+    },
+    "sha_tin_1": {
+      "centre": "sha_tin",
+      "display_name": "沙田場外路線一",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "沙田市區",
+        "沙田圍路",
+        "返回試場"
+      ],
+      "turns": ["IN_YARD", "STRAIGHT", "L", "FINISH"],
+      "notes": "車流較元朗多，經沙田圍路等繁忙路段。"
+    },
+    "sha_tin_2": {
+      "centre": "sha_tin",
+      "display_name": "沙田場外路線二",
+      "source": "https://apasshk.com/blog/test-route-analysis",
+      "status": "reference",
+      "instructions": [
+        "場內乙部（泊位、掉頭）",
+        "場外開出",
+        "沙田市區",
+        "迴旋處",
+        "返回試場"
+      ],
+      "turns": ["IN_YARD", "STRAIGHT", "ROUNDABOUT", "FINISH"],
+      "notes": "封閉場地練習壓力較小，但考官要求可能較嚴格。"
     }
   }
 }
