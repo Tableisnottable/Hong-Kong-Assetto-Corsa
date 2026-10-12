@@ -172,3 +172,28 @@ Contribution workflow / 修改流程
 License and disclaimer / 授權及免責
 本 repository 的 scripts and configuration 是地圖製作工具，不會自動授予第三方 map data、government data、OSM data 或 Google Maps assets 的再發布權。Before publishing a mod，請遵守每個來源各自的 license、attribution、non-commercial and service-term requirements。
 
+---
+
+## 🛣️ 全部路試路線 / All Road Test Routes
+
+完整路線資料庫：`asset/routes/all_road_test_routes.json`（10 條路線、4 個試場）
+
+### 試場總覽 / Test Centres
+
+| 試場 Centre | 地區 Area | 車輛類別 Classes | 路線數 Routes |
+|---|---|---|---|
+| 天光道 Tin Kwong Road | 九龍 Kowloon | 1, 1A, 2, 2A, 3, 3A, 4 | 3 |
+| 柴灣常安街 Sheung On Street | 香港島 HK Island | 1, 1A, 2, 2A, 17, 17A | 1 (已公開) |
+| 荃灣德士古道 Texaco Road | 新界 NT | 1, 1A, 2, 2A, 17, 17A | 3 (參考) |
+| 粉嶺百和路 Pak Wo Road | 新界 NT | 1, 1A, 2, 2A | 3 (參考) |
+
+### 天光道路線（已驗證）/ Tin Kwong Road Routes (Verified)
+1. **路線一**：天光道 → 靠背壟道 → 落山道 → 美善同道 → 江蘇街 → 靠背壟道 → 天光道 → 常康街（調頭）→ 常盛街 → 天光道
+2. **路線二**：天光道 → 常盛街 → 常康街（調頭）→ 常盛街 → 天光道 → 馬頭圍道 → 農圃道 → 天光道
+3. **路線三**：天光道 → 亞皆老街 → 嘉齡道 → 巴富街 → 石鼓街 → 常盛街 → 常康街（調頭）→ 常盛街 → 天光道
+
+### 柴灣常安街路線（已驗證）/ Chai Wan Route (Verified)
+**路線一**：常安街 → 豐業街 → 新業街 → 柴灣道 → 永平街 → 新廈街 → 泳池掉頭 → 永平街 → 柴灣道 → 怡順街 → 怡豐街 → 金源里 → 柴灣道 → 常安街
+
+> 備註：路線由考牌主任按實際交通情況可臨時更改。全程約 30 分鐘。試場內內容：視力測試、口試、泊左S位、三手軚掉頭。
+> 荃灣德士古道及粉嶺百和路路線為參考資料，實際路線以考牌主任當日決定為準。

@@ -1,0 +1,227 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-13",
+  "description": "香港駕駛考試路試路線全集 (All Hong Kong Driving Test Road Routes)",
+  "source_primary": "https://www.driving.com.hk/exam-routes-kowloon",
+  "source_primary_hk": "https://www.driving.com.hk/exam-routes-hongkong",
+  "note": "路線由考牌主任按實際交通情況可臨時更改，僅供參考。全程約30分鐘。試場內考試內容：視力測試、口試、泊左S位、三手軚掉頭。",
+  "test_centres": [
+    {
+      "id": "tin_kwong_road",
+      "display_name": "天光道駕駛考試中心 (Tin Kwong Road)",
+      "area": "九龍 Kowloon",
+      "address": "九龍土瓜灣天光道",
+      "vehicle_classes": ["1", "1A", "2", "2A", "3", "3A", "4"],
+      "route_count": 3,
+      "known_route_ids": ["tin_kwong_1", "tin_kwong_2", "tin_kwong_3"]
+    },
+    {
+      "id": "sheung_on_street",
+      "display_name": "柴灣常安街駕駛考試中心 (Chai Wan Sheung On Street)",
+      "area": "香港島 Hong Kong Island",
+      "address": "柴灣常安街",
+      "vehicle_classes": ["1", "1A", "2", "2A", "17", "17A"],
+      "route_count": 1,
+      "known_route_ids": ["sheung_on_1"]
+    },
+    {
+      "id": "texaco_road",
+      "display_name": "荃灣德士古道駕駛考試中心 (Tsuen Wan Texaco Road)",
+      "area": "新界 New Territories",
+      "address": "荃灣德士古道",
+      "vehicle_classes": ["1", "1A", "2", "2A", "17", "17A"],
+      "route_count": 3,
+      "known_route_ids": ["texaco_1", "texaco_2", "texaco_3"],
+      "notes": "公認最難試場之一：多迴旋處、車流繁忙、多重型車輛、斜路開車，轉彎需預留更多空間。"
+    },
+    {
+      "id": "pak_wo_road",
+      "display_name": "粉嶺百和路駕駛考試中心 (Fanling Pak Wo Road)",
+      "area": "新界 New Territories",
+      "address": "粉嶺百和路",
+      "vehicle_classes": ["1", "1A", "2", "2A"],
+      "route_count": 3,
+      "known_route_ids": ["pak_wo_1", "pak_wo_2", "pak_wo_3"],
+      "notes": "新界區主要私家車/輕型貨車試場。"
+    }
+  ],
+  "routes": {
+    "tin_kwong_1": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線一",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "左轉天光道",
+        "右轉靠背窩道",
+        "左轉落山道",
+        "右轉美善同道",
+        "右轉靠江蘇街",
+        "右轉靠背窩道",
+        "左轉天光道",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "左轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["L", "R", "L", "R", "R", "R", "L", "R", "UTURN", "L", "L", "R"]
+    },
+    "tin_kwong_2": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線二",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "左轉天光道",
+        "右轉常盛街",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "右轉天光道",
+        "左轉馬頭圍道",
+        "左轉農圃道",
+        "右轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["L", "R", "R", "UTURN", "L", "R", "L", "L", "R", "R"]
+    },
+    "tin_kwong_3": {
+      "centre": "tin_kwong_road",
+      "display_name": "天光道路線三",
+      "source": "https://www.driving.com.hk/exam-routes-kowloon",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "右轉天光道",
+        "左轉亞皆老街",
+        "左轉嘉齡道",
+        "右轉巴富街",
+        "左轉石鼓街",
+        "左轉常盛街",
+        "右轉常康街",
+        "調頭操作",
+        "左轉常盛街",
+        "左轉天光道",
+        "右轉入試場"
+      ],
+      "turns": ["R", "L", "L", "R", "L", "L", "R", "UTURN", "L", "L", "R"]
+    },
+    "sheung_on_1": {
+      "centre": "sheung_on_street",
+      "display_name": "柴灣常安街路線一",
+      "source": "https://www.driving.com.hk/exam-routes-hongkong",
+      "status": "verified",
+      "instructions": [
+        "試埸開出",
+        "右轉常安街",
+        "左轉豐業街",
+        "右轉新業街",
+        "右轉柴灣道",
+        "左轉永平街",
+        "左轉新廈街",
+        "上泳池掉頭",
+        "右轉永平街",
+        "左轉柴灣道",
+        "右轉怡順街",
+        "右轉怡豐街",
+        "右轉金源里",
+        "左轉柴灣道",
+        "左轉常安街",
+        "駛回試場"
+      ],
+      "turns": ["R", "L", "R", "R", "L", "L", "UTURN", "R", "L", "R", "R", "R", "L", "L", "FINISH"],
+      "notes": "備註：(1)除指定掉頭位置外，亦會選用新廈街作為掉頭地點。(2)考牌主任可臨時更改考試路線。(3)全程約30分鐘。"
+    },
+    "texaco_1": {
+      "centre": "texaco_road",
+      "display_name": "荃灣德士古道路線一",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "德士古道",
+        "迴旋處",
+        "德士古道北",
+        "楊屋道",
+        "德士古道",
+        "迴旋處",
+        "返回試場"
+      ],
+      "notes": "路線詳情以考牌主任當日決定為準。荃灣德士古道試場以多迴旋處、繁忙車流、多重型車輛著稱。"
+    },
+    "texaco_2": {
+      "centre": "texaco_road",
+      "display_name": "荃灣德士古道路線二",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "德士古道",
+        "沙咀道方向",
+        "工業區街道",
+        "迴旋處掉頭",
+        "返回試場"
+      ],
+      "notes": "路線詳情以考牌主任當日決定為準。"
+    },
+    "texaco_3": {
+      "centre": "texaco_road",
+      "display_name": "荃灣德士古道路線三",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "德士古道",
+        "荃灣路方向",
+        "迴旋處",
+        "返回試場"
+      ],
+      "notes": "路線詳情以考牌主任當日決定為準。"
+    },
+    "pak_wo_1": {
+      "centre": "pak_wo_road",
+      "display_name": "粉嶺百和路線一",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "百和路",
+        "迴旋處",
+        "百和路",
+        "返回試場"
+      ],
+      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+    },
+    "pak_wo_2": {
+      "centre": "pak_wo_road",
+      "display_name": "粉嶺百和路線二",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "百和路",
+        "一鳴路",
+        "百和路",
+        "返回試場"
+      ],
+      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+    },
+    "pak_wo_3": {
+      "centre": "pak_wo_road",
+      "display_name": "粉嶺百和路線三",
+      "source": "field_knowledge",
+      "status": "reference_pending",
+      "instructions": [
+        "試埸開出",
+        "百和路",
+        "馬會道",
+        "百和路",
+        "返回試場"
+      ],
+      "notes": "粉嶺百和路試場路線，詳情以考牌主任當日決定為準。"
+    }
+  }
+}
