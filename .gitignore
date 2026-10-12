@@ -1,4 +1,4 @@
-﻿# 忽略全港 3D 大容量 Zip 及 FBX 模型檔
+# 忽略全港 3D 大容量 Zip 及 FBX 模型檔
 all_3324_zips/
 raw_zips/
 extracted_fbx/
@@ -11,3 +11,8 @@ downloaded_models/
 *.blend1
 build_mesh.py
 api_downloader.py
+
+# 忽略大容量 OSM 原始下載數據 (可重新下載再生)
+build/HP1C/source/roads.osm.json
+build/HP1C/source/roads.osm.json.gz
+build/**/*.osm.json

@@ -1,0 +1,2021 @@
+{
+  "road_count": 288,
+  "roads": [
+    {
+      "name": "13/31廣場 Plaza 13/31",
+      "name:zh": "13/31廣場",
+      "name:en": "Plaza 13/31",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "3C",
+      "name:zh": "3C",
+      "name:en": "3C",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "Back Drive",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "DBS Drive",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "Glory Avenue",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "Jungle Trail",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "KF68",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "上鄉道 Sheung Heung Road",
+      "name:zh": "上鄉道",
+      "name:en": "Sheung Heung Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "下鄉道 Ha Heung Road",
+      "name:zh": "下鄉道",
+      "name:en": "Ha Heung Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "世運道 Olympic Avenue",
+      "name:zh": "世運道",
+      "name:en": "Olympic Avenue",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "中九龍繞道 Central Kowloon Bypass",
+      "name:zh": "中九龍繞道",
+      "name:en": "Central Kowloon Bypass",
+      "highway": "trunk",
+      "maxspeed": "80"
+    },
+    {
+      "name": "丹桂路 Osmanthus Road",
+      "name:zh": "丹桂路",
+      "name:en": "Osmanthus Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "九龍城天橋 Kowloon City flyover",
+      "name:zh": "九龍城天橋",
+      "name:en": "Kowloon City flyover",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "九龍城迴旋處 Kowloon City Roundabout",
+      "name:zh": "九龍城迴旋處",
+      "name:en": "Kowloon City Roundabout",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "九龍城道 Kowloon City Road",
+      "name:zh": "九龍城道",
+      "name:en": "Kowloon City Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "亞皆老街 Argyle Street",
+      "name:zh": "亞皆老街",
+      "name:en": "Argyle Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "亞皆老街天橋 Argyle Street Flyover",
+      "name:zh": "亞皆老街天橋",
+      "name:en": "Argyle Street Flyover",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "伯爵街 Earl Street",
+      "name:zh": "伯爵街",
+      "name:en": "Earl Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "何文田山道 Ho Man Tin Hill Road",
+      "name:zh": "何文田山道",
+      "name:en": "Ho Man Tin Hill Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "何文田街 Ho Man Tin Street",
+      "name:zh": "何文田街",
+      "name:en": "Ho Man Tin Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "何東道 Ho Tung Road",
+      "name:zh": "何東道",
+      "name:en": "Ho Tung Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "佛光街 Fat Kwong Street",
+      "name:zh": "佛光街",
+      "name:en": "Fat Kwong Street",
+      "highway": "secondary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "侯王道 Hau Wong Road",
+      "name:zh": "侯王道",
+      "name:en": "Hau Wong Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "信用街 Shun Yung Street",
+      "name:zh": "信用街",
+      "name:en": "Shun Yung Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "偉景街 Wai King Street",
+      "name:zh": "偉景街",
+      "name:en": "Wai King Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "光明三巷 Kwong Ming Lane 3",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "光明二巷 Kwong Ming Lane 2",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "光明巷 Kwong Ming Lane",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "公主道 Princess Margaret Road",
+      "name:zh": "公主道",
+      "name:en": "Princess Margaret Road",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "公爵街 Duke Street",
+      "name:zh": "公爵街",
+      "name:en": "Duke Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "劍橋道 Cambridge Road",
+      "name:zh": "劍橋道",
+      "name:en": "Cambridge Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "勝利道 Victory Avenue",
+      "name:zh": "勝利道",
+      "name:en": "Victory Avenue",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "勵德街 Knight Street",
+      "name:zh": "勵德街",
+      "name:en": "Knight Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "北帝街 Pak Tai Street",
+      "name:zh": "北帝街",
+      "name:en": "Pak Tai Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "半山徑 Celestial Avenue",
+      "name:zh": "半山徑",
+      "name:en": "Celestial Avenue",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "協調道 Concorde Road",
+      "name:zh": "協調道",
+      "name:en": "Concorde Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "南山邨道 Nam Shan Chuen Road",
+      "name:zh": "南山邨道",
+      "name:en": "Nam Shan Chuen Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "南望長堤 South Bank",
+      "name:zh": "南望長堤",
+      "name:en": "South Bank",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "南角道 Nam Kok Road",
+      "name:zh": "南角道",
+      "name:en": "Nam Kok Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "又一居道 Parc Oasis Road",
+      "name:zh": "又一居道",
+      "name:en": "Parc Oasis Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "合一道 Hop Yat Road",
+      "name:zh": "合一道",
+      "name:en": "Hop Yat Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "咸美頓街 Hamilton Street",
+      "name:zh": "咸美頓街",
+      "name:en": "Hamilton Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "品蘭街 Pentland Street",
+      "name:zh": "品蘭街",
+      "name:en": "Pentland Street",
+      "highway": "primary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "啓德道 Kai Tak Road",
+      "name:zh": "啓德道",
+      "name:en": "Kai Tak Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "啓明街 Kai Ming Street",
+      "name:zh": "啓明街",
+      "name:en": "Kai Ming Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "啟德共融通道 Kai Tak GreenWay",
+      "name:zh": "啟德共融通道",
+      "name:en": "Kai Tak GreenWay",
+      "highway": "pedestrian",
+      "maxspeed": "15"
+    },
+    {
+      "name": "啟德地下購物街 Kai Tak Underground Shopping Street",
+      "name:zh": "啟德地下購物街",
+      "name:en": "Kai Tak Underground Shopping Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "啟德隧道 Kai Tak Tunnel",
+      "name:zh": "啟德隧道",
+      "name:en": "Kai Tak Tunnel",
+      "highway": "trunk",
+      "maxspeed": "70"
+    },
+    {
+      "name": "啟德體育大道 Kai Tak Sports Avenue",
+      "name:zh": "啟德體育大道",
+      "name:en": "Kai Tak Sports Avenue",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "啟融里 Kai Yung Lane",
+      "name:zh": "啟融里",
+      "name:en": "Kai Yung Lane",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "喇沙利道 La Salle Road",
+      "name:zh": "喇沙利道",
+      "name:en": "La Salle Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉林邊道 Grampian Road",
+      "name:zh": "嘉林邊道",
+      "name:en": "Grampian Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉道理道 Kadoorie Avenue",
+      "name:zh": "嘉道理道",
+      "name:en": "Kadoorie Avenue",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉齡道 Gullane Road",
+      "name:zh": "嘉齡道",
+      "name:en": "Gullane Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "四川街 Sze Chuen Street",
+      "name:zh": "四川街",
+      "name:en": "Sze Chuen Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "園圃街 Yuen Po Street",
+      "name:zh": "園圃街",
+      "name:en": "Yuen Po Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "園藝街 Yuen Ngai Street",
+      "name:zh": "園藝街",
+      "name:en": "Yuen Ngai Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "土瓜灣道 To Kwa Wan Road",
+      "name:zh": "土瓜灣道",
+      "name:en": "To Kwa Wan Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "地錦路 Verbena Road",
+      "name:zh": "地錦路",
+      "name:en": "Verbena Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "城南道 South Wall Road",
+      "name:zh": "城南道",
+      "name:en": "South Wall Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "培正道 Pui Ching Road",
+      "name:zh": "培正道",
+      "name:en": "Pui Ching Road",
+      "highway": "secondary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "培民街 Pui Man Street",
+      "name:zh": "培民街",
+      "name:en": "Pui Man Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "基堤道 Embankment Road",
+      "name:zh": "基堤道",
+      "name:en": "Embankment Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "士他令道 Stirling Road",
+      "name:zh": "士他令道",
+      "name:en": "Stirling Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "壽菊路 Marigold Road",
+      "name:zh": "壽菊路",
+      "name:en": "Marigold Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "大井街 Tai Cheng Street",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "大坑東道 Tai Hang Tung Road",
+      "name:zh": "大坑東道",
+      "name:en": "Tai Hang Tung Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "大坑西街 Tai Hang Sai Street",
+      "name:zh": "大坑西街",
+      "name:en": "Tai Hang Sai Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "天光道 Tin Kwong Road",
+      "name:zh": "天光道",
+      "name:en": "Tin Kwong Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "太子道東 Prince Edward Road East",
+      "name:zh": "太子道東",
+      "name:en": "Prince Edward Road East",
+      "highway": "primary",
+      "maxspeed": "70"
+    },
+    {
+      "name": "太子道西 Prince Edward Road West",
+      "name:zh": "太子道西",
+      "name:en": "Prince Edward Road West",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "太子道西天橋 Prince Edward Road West Flyover",
+      "name:zh": "太子道西天橋",
+      "name:en": "Prince Edward Road West Flyover",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "太平道 Peace Avenue",
+      "name:zh": "太平道",
+      "name:en": "Peace Avenue",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "奶路臣街 Nelson Street",
+      "name:zh": "奶路臣街",
+      "name:en": "Nelson Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "孝民街 Hau Man Street",
+      "name:zh": "孝民街",
+      "name:en": "Hau Man Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "學餘里 Hok Yu Lane",
+      "name:zh": "學餘里",
+      "name:en": "Hok Yu Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "安徽街 Anhui Street",
+      "name:zh": "安徽街",
+      "name:en": "Anhui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "宋皇臺道 Sung Wong Toi Road",
+      "name:zh": "宋皇臺道",
+      "name:en": "Sung Wong Toi Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "富寧街 Fu Ning Street",
+      "name:zh": "富寧街",
+      "name:en": "Fu Ning Street",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "寧遠街 Ning Yuen Street",
+      "name:zh": "寧遠街",
+      "name:en": "Ning Yuen Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "對衡道 Durham Road",
+      "name:zh": "對衡道",
+      "name:en": "Durham Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "山東街 Shantung Street",
+      "name:zh": "山東街",
+      "name:en": "Shantung Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "山西街 Shansi Street",
+      "name:zh": "山西街",
+      "name:en": "Shansi Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇安街 Sung On Street",
+      "name:zh": "崇安街",
+      "name:en": "Sung On Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇平街 Sung Ping Street",
+      "name:zh": "崇平街",
+      "name:en": "Sung Ping Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇志街 Sung Chi Street",
+      "name:zh": "崇志街",
+      "name:en": "Sung Chi Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇潔街 Sung Kit Street",
+      "name:zh": "崇潔街",
+      "name:en": "Sung Kit Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇齡街 Shung Ling Street",
+      "name:zh": "崇齡街",
+      "name:en": "Shung Ling Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "巴富街 Perth Street",
+      "name:zh": "巴富街",
+      "name:en": "Perth Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "巴芬道 Belfran Road",
+      "name:zh": "巴芬道",
+      "name:en": "Belfran Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "布力架街 Braga Circuit",
+      "name:zh": "布力架街",
+      "name:en": "Braga Circuit",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "常健街 Sheung Kin Street",
+      "name:zh": "常健街",
+      "name:en": "Sheung Kin Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "常和街 Sheung Wo Street",
+      "name:zh": "常和街",
+      "name:en": "Sheung Wo Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "常富街 Sheung Foo Street",
+      "name:zh": "常富街",
+      "name:en": "Sheung Foo Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "常康街 Sheung Hong Street",
+      "name:zh": "常康街",
+      "name:en": "Sheung Hong Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "常樂街 Sheung Lok Street",
+      "name:zh": "常樂街",
+      "name:en": "Sheung Lok Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "常盛街 Sheung Shing Street",
+      "name:zh": "常盛街",
+      "name:en": "Sheung Shing Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "常盛里 Sheung Shing Lane",
+      "name:zh": "常盛里",
+      "name:en": "Sheung Shing Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "常興街 Sheung Hing Street",
+      "name:zh": "常興街",
+      "name:en": "Sheung Hing Street",
+      "highway": "trunk_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "幸運道 Hang Wan Road",
+      "name:zh": "幸運道",
+      "name:en": "Hang Wan Road",
+      "highway": "secondary_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "庇利街 Bailey Street",
+      "name:zh": "庇利街",
+      "name:en": "Bailey Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "廣華街 Kwong Wa Street",
+      "name:zh": "廣華街",
+      "name:en": "Kwong Wa Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "延文禮士道 Inverness Road",
+      "name:zh": "延文禮士道",
+      "name:en": "Inverness Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "弼街 Bute Street",
+      "name:zh": "弼街",
+      "name:en": "Bute Street",
+      "highway": "tertiary",
+      "maxspeed": "30"
+    },
+    {
+      "name": "彌敦道 Nathan Road",
+      "name:zh": "彌敦道",
+      "name:en": "Nathan Road",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "彩虹道 Choi Hung Road",
+      "name:zh": "彩虹道",
+      "name:en": "Choi Hung Road",
+      "highway": "primary_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "律倫街 Rutland Quadrant",
+      "name:zh": "律倫街",
+      "name:en": "Rutland Quadrant",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "德高道 Dakota Drive",
+      "name:zh": "德高道",
+      "name:en": "Dakota Drive",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "志士達道 Chester Road",
+      "name:zh": "志士達道",
+      "name:en": "Chester Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "忠信街 Chung Sun Street",
+      "name:zh": "忠信街",
+      "name:en": "Chung Sun Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "忠孝街 Chung Hau Street",
+      "name:zh": "忠孝街",
+      "name:en": "Chung Hau Street",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "忠民街 Chung Man Street",
+      "name:zh": "忠民街",
+      "name:en": "Chung Man Street",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "快富街 Fife Street",
+      "name:zh": "快富街",
+      "name:en": "Fife Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "慕禮道 Moray Road",
+      "name:zh": "慕禮道",
+      "name:en": "Moray Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "打比道 Derby Road",
+      "name:zh": "打比道",
+      "name:en": "Derby Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "打鼓嶺道 Tak Ku Ling Road",
+      "name:zh": "打鼓嶺道",
+      "name:en": "Tak Ku Ling Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "承啟道 Shing Kai Road",
+      "name:zh": "承啟道",
+      "name:en": "Shing Kai Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "敬德街 King Tak Street",
+      "name:zh": "敬德街",
+      "name:en": "King Tak Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "文福道 Man Fuk Road",
+      "name:zh": "文福道",
+      "name:en": "Man Fuk Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "文運道 Man Wan Road",
+      "name:zh": "文運道",
+      "name:en": "Man Wan Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新圍街 San Wai Street",
+      "name:zh": "新圍街",
+      "name:en": "San Wai Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新山道 San Shan Road",
+      "name:zh": "新山道",
+      "name:en": "San Shan Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "新柳街 San Lau Street",
+      "name:zh": "新柳街",
+      "name:en": "San Lau Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "新碼頭街 San Ma Tau Street",
+      "name:zh": "新碼頭街",
+      "name:en": "San Ma Tau Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新蒲崗交匯處 San Po Kong Interchange",
+      "name:zh": "新蒲崗交匯處",
+      "name:en": "San Po Kong Interchange",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "施他佛道 Stafford Road",
+      "name:zh": "施他佛道",
+      "name:en": "Stafford Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "旭日街 Yuk Yat Street",
+      "name:zh": "旭日街",
+      "name:en": "Yuk Yat Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "旺角道 Mong Kok Road",
+      "name:zh": "旺角道",
+      "name:en": "Mong Kok Road",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "明倫街 Ming Lun Street",
+      "name:zh": "明倫街",
+      "name:en": "Ming Lun Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "景泰街 King Tai Street",
+      "name:zh": "景泰街",
+      "name:en": "King Tai Street",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "景福街 King Fuk Street",
+      "name:zh": "景福街",
+      "name:en": "King Fuk Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "景雲街 King Wan Street",
+      "name:zh": "景雲街",
+      "name:en": "King Wan Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "景雲街休閒小徑 King Wan Street Leisure Path",
+      "name:zh": "景雲街休閒小徑",
+      "name:en": "King Wan Street Leisure Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "景雲街休閒小徑（海傍） King Wan Street Leisure Path (Seafront)",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "智晴徑 Chi Track",
+      "name:zh": "智晴徑",
+      "name:en": "Chi Track",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "書院道 College Road",
+      "name:zh": "書院道",
+      "name:en": "College Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "朗月街 Long Yuet Street",
+      "name:zh": "朗月街",
+      "name:en": "Long Yuet Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "木廠街 Mok Cheong Street",
+      "name:zh": "木廠街",
+      "name:en": "Mok Cheong Street",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "東九龍走廊 East Kowloon Corridor",
+      "name:zh": "東九龍走廊",
+      "name:en": "East Kowloon Corridor",
+      "highway": "trunk",
+      "maxspeed": "70"
+    },
+    {
+      "name": "東光道 Tung Kwong Road",
+      "name:zh": "東光道",
+      "name:en": "Tung Kwong Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "東利道 Tung Lei Road",
+      "name:zh": "東利道",
+      "name:en": "Tung Lei Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "東寶庭道 Dumbarton Road",
+      "name:zh": "東寶庭道",
+      "name:en": "Dumbarton Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "東方街 Tung Fong Street",
+      "name:zh": "東方街",
+      "name:en": "Tung Fong Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "東正道 Tung Tsing Road",
+      "name:zh": "東正道",
+      "name:en": "Tung Tsing Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "東隆道 Tung Lung Road",
+      "name:zh": "東隆道",
+      "name:en": "Tung Lung Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "東頭村道 Tung Tau Tsuen Road",
+      "name:zh": "東頭村道",
+      "name:en": "Tung Tau Tsuen Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "林肯道 Lincoln Road",
+      "name:zh": "林肯道",
+      "name:en": "Lincoln Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "染布房街 Yim Po Fong Street",
+      "name:zh": "染布房街",
+      "name:en": "Yim Po Fong Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "梭椏道 Soares Avenue",
+      "name:zh": "梭椏道",
+      "name:en": "Soares Avenue",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "棗梨雅道 Julia Avenue",
+      "name:zh": "棗梨雅道",
+      "name:en": "Julia Avenue",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "棠蔭街 Tong Yam Street",
+      "name:zh": "棠蔭街",
+      "name:en": "Tong Yam Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "榮光街 Wing Kwong Street",
+      "name:zh": "榮光街",
+      "name:en": "Wing Kwong Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "樂善道 Lok Sin Road",
+      "name:zh": "樂善道",
+      "name:en": "Lok Sin Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "機利士北路 Gillies Avenue North",
+      "name:zh": "機利士北路",
+      "name:en": "Gillies Avenue North",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "民豐徑 Man Fung Path",
+      "name:zh": "民豐徑",
+      "name:en": "Man Fung Path",
+      "highway": "primary_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "水渠道 Nullah Road",
+      "name:zh": "水渠道",
+      "name:en": "Nullah Road",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "永耀街 Wing Yiu Street",
+      "name:zh": "永耀街",
+      "name:en": "Wing Yiu Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "江蘇街 Kiang Su Street",
+      "name:zh": "江蘇街",
+      "name:en": "Kiang Su Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "江西街 Kiang Hsi Street",
+      "name:zh": "江西街",
+      "name:en": "Kiang Hsi Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "沐和街 Muk Wo Street",
+      "name:zh": "沐和街",
+      "name:en": "Muk Wo Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "沐禮街 Muk Lai Street",
+      "name:zh": "沐禮街",
+      "name:en": "Muk Lai Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "沙浦道 Sa Po Road",
+      "name:zh": "沙浦道",
+      "name:en": "Sa Po Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "油旺里 Yau Mong Lane",
+      "name:zh": "油旺里",
+      "name:en": "Yau Mong Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "治民街 Chi Man Street",
+      "name:zh": "治民街",
+      "name:en": "Chi Man Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "洗衣街 Sai Yee Street",
+      "name:zh": "洗衣街",
+      "name:en": "Sai Yee Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "浙江街 Chi Kiang Street",
+      "name:zh": "浙江街",
+      "name:en": "Chi Kiang Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "海棠路 Begonia Road",
+      "name:zh": "海棠路",
+      "name:en": "Begonia Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "浸會大學道 Baptist University Road",
+      "name:zh": "浸會大學道",
+      "name:en": "Baptist University Road",
+      "highway": "unclassified",
+      "maxspeed": "50"
+    },
+    {
+      "name": "渡行徑 Pier Gallery",
+      "name:zh": "渡行徑",
+      "name:en": "Pier Gallery",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "渭州道 Wiltshire Road",
+      "name:zh": "渭州道",
+      "name:en": "Wiltshire Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "漆咸道北 Chatham Road North",
+      "name:zh": "漆咸道北",
+      "name:en": "Chatham Road North",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "火石道 Flint Road",
+      "name:zh": "火石道",
+      "name:en": "Flint Road",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "炮仗街 Pau Chung Street",
+      "name:zh": "炮仗街",
+      "name:en": "Pau Chung Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "煙廠街 Yin Chong Street",
+      "name:zh": "煙廠街",
+      "name:en": "Yin Chong Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "燕安街 Yin On Street",
+      "name:zh": "燕安街",
+      "name:en": "Yin On Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "牛津道 Oxford Road",
+      "name:zh": "牛津道",
+      "name:en": "Oxford Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "牡丹路 Peony Road",
+      "name:zh": "牡丹路",
+      "name:en": "Peony Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "牧愛街 Good Shepherd Street",
+      "name:zh": "牧愛街",
+      "name:en": "Good Shepherd Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "獅子石道 Lion Rock Road",
+      "name:zh": "獅子石道",
+      "name:en": "Lion Rock Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "玉成街 Yuk Shing Street",
+      "name:zh": "玉成街",
+      "name:en": "Yuk Shing Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "玉蘭路 Magnolia Road",
+      "name:zh": "玉蘭路",
+      "name:en": "Magnolia Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "玫瑰街 Rose Street",
+      "name:zh": "玫瑰街",
+      "name:en": "Rose Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "瑰麗路 Grandeur Road",
+      "name:zh": "瑰麗路",
+      "name:en": "Grandeur Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "環安街 Wan On Street",
+      "name:zh": "環安街",
+      "name:en": "Wan On Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "界限街 Boundary Street",
+      "name:zh": "界限街",
+      "name:en": "Boundary Street",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "界限街天橋 Boundary Street Flyover",
+      "name:zh": "界限街天橋",
+      "name:en": "Boundary Street Flyover",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "登巴道 Dunbar Road",
+      "name:zh": "登巴道",
+      "name:en": "Dunbar Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "登打士街 Dundas Street",
+      "name:zh": "登打士街",
+      "name:en": "Dundas Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "白布街 Pak Po Street",
+      "name:zh": "白布街",
+      "name:en": "Pak Po Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "盛德街 Shing Tak Street",
+      "name:zh": "盛德街",
+      "name:en": "Shing Tak Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "真義里 Chun Yi Lane",
+      "name:zh": "真義里",
+      "name:en": "Chun Yi Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石塘街 Shek Tong Street",
+      "name:zh": "石塘街",
+      "name:en": "Shek Tong Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石竹路 Dianthus Road",
+      "name:zh": "石竹路",
+      "name:en": "Dianthus Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石鼓壟道 Shek Ku Lung Road",
+      "name:zh": "石鼓壟道",
+      "name:en": "Shek Ku Lung Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石鼓街 Shek Ku Street",
+      "name:zh": "石鼓街",
+      "name:en": "Shek Ku Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "砵蘭街 Portland Street",
+      "name:zh": "砵蘭街",
+      "name:en": "Portland Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "碧街 Pitt Street",
+      "name:zh": "碧街",
+      "name:en": "Pitt Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "祐滿街 Yau Moon Street",
+      "name:zh": "祐滿街",
+      "name:en": "Yau Moon Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "福佬村道 Fuk Lo Tsun Road",
+      "name:zh": "福佬村道",
+      "name:en": "Fuk Lo Tsun Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "福祥街 Fuk Cheung Street",
+      "name:zh": "福祥街",
+      "name:en": "Fuk Cheung Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "禧福道 Hereford Road",
+      "name:zh": "禧福道",
+      "name:en": "Hereford Road",
+      "highway": "trunk_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "秀竹園道 Sau Chuk Yuen Road",
+      "name:zh": "秀竹園道",
+      "name:en": "Sau Chuk Yuen Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "科發道 Forfar Road",
+      "name:zh": "科發道",
+      "name:en": "Forfar Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "窩仔街 Woh Chai Street",
+      "name:zh": "窩仔街",
+      "name:en": "Woh Chai Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "窩打老道 Waterloo Road",
+      "name:zh": "窩打老道",
+      "name:en": "Waterloo Road",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "紅磡道 Hung Hom Road",
+      "name:zh": "紅磡道",
+      "name:en": "Hung Hom Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "紫藤路 Wistaria Road",
+      "name:zh": "紫藤路",
+      "name:en": "Wistaria Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "美光街 Mei Kwong Street",
+      "name:zh": "美光街",
+      "name:en": "Mei Kwong Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "美善同道 Maidstone Road",
+      "name:zh": "美善同道",
+      "name:en": "Maidstone Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "美善同里 Maidstone Lane",
+      "name:zh": "美善同里",
+      "name:en": "Maidstone Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "美景街 Mei King Street",
+      "name:zh": "美景街",
+      "name:en": "Mei King Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "聖約翰里 St. John's Lane",
+      "name:zh": "聖約翰里",
+      "name:en": "St. John's Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "聯合道 Junction Road",
+      "name:zh": "聯合道",
+      "name:en": "Junction Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "聯運街 Luen Wan Street",
+      "name:zh": "聯運街",
+      "name:en": "Luen Wan Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "育群街 Yuk Kwan Street",
+      "name:zh": "育群街",
+      "name:en": "Yuk Kwan Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "自由道 Liberty Avenue",
+      "name:zh": "自由道",
+      "name:en": "Liberty Avenue",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "興仁街 Hing Yan Street",
+      "name:zh": "興仁街",
+      "name:en": "Hing Yan Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "興賢街 Hing Yin Street",
+      "name:zh": "興賢街",
+      "name:en": "Hing Yin Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "舊金山徑 San Francisco Path",
+      "name:zh": "舊金山徑",
+      "name:en": "San Francisco Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "舒梨道 Surrey Lane",
+      "name:zh": "舒梨道",
+      "name:en": "Surrey Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "艷馬道 Emma Avenue",
+      "name:zh": "艷馬道",
+      "name:en": "Emma Avenue",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "花圃街 Fa Po Street",
+      "name:zh": "花圃街",
+      "name:en": "Fa Po Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "花園街 Fa Yuen Street",
+      "name:zh": "花園街",
+      "name:en": "Fa Yuen Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "花墟徑 Flower Market Path",
+      "name:zh": "花墟徑",
+      "name:en": "Flower Market Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "花墟道 Flower Market Road",
+      "name:zh": "花墟道",
+      "name:en": "Flower Market Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "英才徑 Ying Choi Path",
+      "name:zh": "英才徑",
+      "name:en": "Ying Choi Path",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "落山道 Lok Shan Road",
+      "name:zh": "落山道",
+      "name:en": "Lok Shan Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "薈然徑 Wai Yin Path",
+      "name:zh": "薈然徑",
+      "name:en": "Wai Yin Path",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "蘭開夏道 Lancashire Road",
+      "name:zh": "蘭開夏道",
+      "name:en": "Lancashire Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "蟬聯街 Shim Luen Street",
+      "name:zh": "蟬聯街",
+      "name:en": "Shim Luen Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "衙前圍道 Nga Tsin Wai Road",
+      "name:zh": "衙前圍道",
+      "name:en": "Nga Tsin Wai Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "衙前塱道 Nga Tsin Long Road",
+      "name:zh": "衙前塱道",
+      "name:en": "Nga Tsin Long Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "衛理道 Wylie Road",
+      "name:zh": "衛理道",
+      "name:en": "Wylie Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "衡州道 Hampshire Road",
+      "name:zh": "衡州道",
+      "name:en": "Hampshire Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "西城路 West City Road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "西橋",
+      "name:zh": "西橋",
+      "name:en": "West Bridge",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "西橋 West Bridge",
+      "name:zh": "西橋",
+      "name:en": "West Bridge",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "西洋菜南街 Sai Yeung Choi Street South",
+      "name:zh": "西洋菜南街",
+      "name:en": "Sai Yeung Choi Street South",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "西谷道 Selkirk Road",
+      "name:zh": "西谷道",
+      "name:en": "Selkirk Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "譚公道 Tam Kung Road",
+      "name:zh": "譚公道",
+      "name:en": "Tam Kung Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "豉油街 Soy Street",
+      "name:zh": "豉油街",
+      "name:en": "Soy Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "貴州街 Kwei Chow Street",
+      "name:zh": "貴州街",
+      "name:en": "Kwei Chow Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "賈炳達道 Carpenter Road",
+      "name:zh": "賈炳達道",
+      "name:en": "Carpenter Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "農圃道 Farm Road",
+      "name:zh": "農圃道",
+      "name:en": "Farm Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "迦密村街 Carmel Village Street",
+      "name:zh": "迦密村街",
+      "name:en": "Carmel Village Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "述德街 Short Street",
+      "name:zh": "述德街",
+      "name:en": "Short Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "通菜街 Tung Choi Street",
+      "name:zh": "通菜街",
+      "name:en": "Tung Choi Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "運動場道 Playing Field Road",
+      "name:zh": "運動場道",
+      "name:en": "Playing Field Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "達之路 Tat Chee Avenue",
+      "name:zh": "達之路",
+      "name:en": "Tat Chee Avenue",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "遠洋里北 Yuen Yeung Lane North",
+      "name:zh": "遠洋里北",
+      "name:en": "Yuen Yeung Lane North",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "金巴倫道 Cumberland Road",
+      "name:zh": "金巴倫道",
+      "name:en": "Cumberland Road",
+      "highway": "tertiary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "金巴倫道 Cumberland Road; 雅息士道 Essex Crescent",
+      "name:zh": "金巴倫道;雅息士道",
+      "name:en": "Cumberland Road; Essex Crescent",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "銀漢街 Ngan Hon Street",
+      "name:zh": "銀漢街",
+      "name:en": "Ngan Hon Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "長寧街 Cheung Ning Street",
+      "name:zh": "長寧街",
+      "name:en": "Cheung Ning Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "陶域道 Tweed Road",
+      "name:zh": "陶域道",
+      "name:en": "Tweed Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "雀橋街 Tseuk Kiu Street",
+      "name:zh": "雀橋街",
+      "name:en": "Tseuk Kiu Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "雅息士道 Essex Crescent",
+      "name:zh": "雅息士道",
+      "name:en": "Essex Crescent",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "露明道 Lomond Road",
+      "name:zh": "露明道",
+      "name:en": "Lomond Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "靠背壟道 Kau Pui Lung Road",
+      "name:zh": "靠背壟道",
+      "name:en": "Kau Pui Lung Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "順風街 Shun Fung Street",
+      "name:zh": "順風街",
+      "name:en": "Shun Fung Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "馬坑涌道 Ma Hang Chung Road",
+      "name:zh": "馬坑涌道",
+      "name:en": "Ma Hang Chung Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "馬頭圍道 Ma Tau Wai Road",
+      "name:zh": "馬頭圍道",
+      "name:en": "Ma Tau Wai Road",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "馬頭涌道 Ma Tau Chung Road",
+      "name:zh": "馬頭涌道",
+      "name:en": "Ma Tau Chung Road",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "馬頭角道 Ma Tau Kok Road",
+      "name:zh": "馬頭角道",
+      "name:en": "Ma Tau Kok Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "駿發街 Tsun Fat Street",
+      "name:zh": "駿發街",
+      "name:en": "Tsun Fat Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "高山道 Ko Shan Road",
+      "name:zh": "高山道",
+      "name:en": "Ko Shan Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "高槐路 Cassia Road",
+      "name:zh": "高槐路",
+      "name:en": "Cassia Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鳳儀街 Fung Yi Street",
+      "name:zh": "鳳儀街",
+      "name:en": "Fung Yi Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴻光街 Hung Kwong Street",
+      "name:zh": "鴻光街",
+      "name:en": "Hung Kwong Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴻福街 Hung Fook Street",
+      "name:zh": "鴻福街",
+      "name:en": "Hung Fook Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴻運街 Hung Wan Street",
+      "name:zh": "鴻運街",
+      "name:en": "Hung Wan Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鵬程街 Pang Ching Street",
+      "name:zh": "鵬程街",
+      "name:en": "Pang Ching Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鶴齡街 Hok Ling Street",
+      "name:zh": "鶴齡街",
+      "name:en": "Hok Ling Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鷹揚街 Ying Yeung Street",
+      "name:zh": "鷹揚街",
+      "name:en": "Ying Yeung Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鹿鳴街 Luk Ming Street",
+      "name:zh": "鹿鳴街",
+      "name:en": "Luk Ming Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "麟祥街 Lun Cheung Street",
+      "name:zh": "麟祥街",
+      "name:en": "Lun Cheung Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "黑布街 Hak Po Street",
+      "name:zh": "黑布街",
+      "name:en": "Hak Po Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍圖街 Lung To Street",
+      "name:zh": "龍圖街",
+      "name:en": "Lung To Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍城路 Lung Shing Road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍崗道 Lung Kong Road",
+      "name:zh": "龍崗道",
+      "name:en": "Lung Kong Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍德街 Lung Tak Street",
+      "name:zh": "龍德街",
+      "name:en": "Lung Tak Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津一巷 Lung Tsun Lane 1",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津二巷 Lung Tsun Lane 2",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津後街 Lung Tsun Back Street",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津橋 Lung Tsun Bridge",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津路 Lung Tsun Road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍津道 Lung Tsun Road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍珠街 Lung Chu Street",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "service",
+      "maxspeed": ""
+    }
+  ]
+}
