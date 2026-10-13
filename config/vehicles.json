@@ -1,6 +1,6 @@
 {
   "project": "hk_kowloon",
-  "catalog_size": 100,
+  "catalog_size": 101,
   "traffic_mix": {
     "private": 60,
     "commercial": 25,
@@ -26,7 +26,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.63,
+        "width": 1.78,
+        "height": 1.44
+      },
+      "engine": "1.8L 2ZR-FE I4",
+      "power_hp": 139,
+      "transmission": "CVT",
+      "notes": "香港最常見的士以外的私家車之一"
     },
     {
       "id": "private_toyota_camry",
@@ -34,7 +45,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.88,
+        "width": 1.84,
+        "height": 1.44
+      },
+      "engine": "2.5L A25A-FKS I4",
+      "power_hp": 203,
+      "transmission": "8AT",
+      "notes": "混能版 2.5L A25A-FXS 218hp"
     },
     {
       "id": "private_toyota_prius",
@@ -42,7 +64,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 4.57,
+        "width": 1.76,
+        "height": 1.47
+      },
+      "engine": "1.8L 2ZR-FXE + MG",
+      "power_hp": 121,
+      "transmission": "e-CVT",
+      "notes": "混能車，香港的士亦常用"
     },
     {
       "id": "private_toyota_yaris",
@@ -50,7 +83,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 3.94,
+        "width": 1.69,
+        "height": 1.51
+      },
+      "engine": "1.5L 1NZ-FE I4",
+      "power_hp": 107,
+      "transmission": "CVT/5MT",
+      "notes": "香港考車 (類別1) 常用車"
     },
     {
       "id": "private_toyota_vios",
@@ -58,7 +102,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.42,
+        "width": 1.7,
+        "height": 1.48
+      },
+      "engine": "1.5L 2NR-FE I4",
+      "power_hp": 107,
+      "transmission": "CVT",
+      "notes": "東南亞/中國版入門轎車"
     },
     {
       "id": "private_toyota_crown",
@@ -66,7 +121,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2018,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.91,
+        "width": 1.8,
+        "height": 1.46
+      },
+      "engine": "2.0L 8AR-FTS Turbo",
+      "power_hp": 245,
+      "transmission": "8AT",
+      "notes": "香港傳統豪華房車"
     },
     {
       "id": "private_toyota_alphard",
@@ -74,7 +140,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.95,
+        "width": 1.85,
+        "height": 1.9
+      },
+      "engine": "2.5L 2AR-FE + MG",
+      "power_hp": 117,
+      "transmission": "e-CVT",
+      "notes": "香港最受歡迎豪華 MPV，明星保母車"
     },
     {
       "id": "private_toyota_vellfire",
@@ -82,7 +159,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.95,
+        "width": 1.85,
+        "height": 1.9
+      },
+      "engine": "2.5L 2AR-FE + MG",
+      "power_hp": 117,
+      "transmission": "e-CVT",
+      "notes": "Alphard 姊妹車型"
     },
     {
       "id": "private_toyota_sienta",
@@ -90,7 +178,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.26,
+        "width": 1.7,
+        "height": 1.67
+      },
+      "engine": "1.5L 2NR-FKE I4",
+      "power_hp": 109,
+      "transmission": "CVT",
+      "notes": "香港家庭小型 MPV"
     },
     {
       "id": "private_toyota_noah",
@@ -98,7 +197,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.73,
+        "height": 1.85
+      },
+      "engine": "2.0L 3ZR-FAE I4",
+      "power_hp": 150,
+      "transmission": "CVT",
+      "notes": "8人座 MPV"
     },
     {
       "id": "private_toyota_rav4",
@@ -106,7 +216,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.6,
+        "width": 1.86,
+        "height": 1.69
+      },
+      "engine": "2.0L M20A-FKS I4",
+      "power_hp": 171,
+      "transmission": "CVT",
+      "notes": "香港暢銷 SUV"
     },
     {
       "id": "private_toyota_harrier",
@@ -114,7 +235,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.74,
+        "width": 1.86,
+        "height": 1.68
+      },
+      "engine": "2.0L M20A-FKS I4",
+      "power_hp": 171,
+      "transmission": "CVT",
+      "notes": "豪華中型 SUV"
     },
     {
       "id": "private_toyota_land_cruiser_prado",
@@ -122,7 +254,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.84,
+        "width": 1.89,
+        "height": 1.85
+      },
+      "engine": "2.8L 1GD-FTV Diesel",
+      "power_hp": 201,
+      "transmission": "6AT",
+      "notes": "大型越野 SUV"
     },
     {
       "id": "private_honda_civic",
@@ -130,7 +273,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "Sedan/Hatch",
+      "dimensions_m": {
+        "length": 4.68,
+        "width": 1.8,
+        "height": 1.41
+      },
+      "engine": "1.5L L15B7 Turbo",
+      "power_hp": 181,
+      "transmission": "CVT",
+      "notes": "香港熱門房車"
     },
     {
       "id": "private_honda_accord",
@@ -138,7 +292,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.9,
+        "width": 1.86,
+        "height": 1.45
+      },
+      "engine": "1.5L L15BN Turbo",
+      "power_hp": 192,
+      "transmission": "CVT"
     },
     {
       "id": "private_honda_fit",
@@ -146,7 +310,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 4.06,
+        "width": 1.69,
+        "height": 1.53
+      },
+      "engine": "1.5L L15B I4",
+      "power_hp": 131,
+      "transmission": "CVT",
+      "notes": "香港暢銷小車 (Jazz)"
     },
     {
       "id": "private_honda_freed",
@@ -154,7 +329,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.31,
+        "width": 1.7,
+        "height": 1.74
+      },
+      "engine": "1.5L L15B I4",
+      "power_hp": 131,
+      "transmission": "CVT",
+      "notes": "小型 7 人 MPV"
     },
     {
       "id": "private_honda_stepwgn",
@@ -162,7 +348,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.76,
+        "width": 1.7,
+        "height": 1.84
+      },
+      "engine": "1.5L L15B Turbo",
+      "power_hp": 148,
+      "transmission": "CVT",
+      "notes": "7人 MPV，Waku Waku 尾門"
     },
     {
       "id": "private_honda_crv",
@@ -170,7 +367,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.63,
+        "width": 1.86,
+        "height": 1.68
+      },
+      "engine": "1.5L L15BE Turbo",
+      "power_hp": 193,
+      "transmission": "CVT",
+      "notes": "香港暢銷 SUV"
     },
     {
       "id": "private_honda_hrv",
@@ -178,7 +386,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.34,
+        "width": 1.79,
+        "height": 1.59
+      },
+      "engine": "1.5L L15B I4",
+      "power_hp": 127,
+      "transmission": "CVT",
+      "notes": "小型 SUV (Vezel)"
     },
     {
       "id": "private_nissan_note",
@@ -186,7 +405,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 4.1,
+        "width": 1.7,
+        "height": 1.52
+      },
+      "engine": "1.2L HR12DE e-Power",
+      "power_hp": 109,
+      "transmission": "e-Power",
+      "notes": "e-Power 混能小車"
     },
     {
       "id": "private_nissan_serena",
@@ -194,7 +424,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "MPV",
+      "dimensions_m": {
+        "length": 4.77,
+        "width": 1.74,
+        "height": 1.87
+      },
+      "engine": "2.0L MR20DD + e-Power",
+      "power_hp": 150,
+      "transmission": "CVT",
+      "notes": "7/8人 MPV"
     },
     {
       "id": "private_nissan_xtrail",
@@ -202,7 +443,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.68,
+        "width": 1.84,
+        "height": 1.72
+      },
+      "engine": "2.0L MR20DD + e-Power",
+      "power_hp": 204,
+      "transmission": "e-Power",
+      "notes": "e-Power 混能 SUV"
     },
     {
       "id": "private_nissan_qashqai",
@@ -210,7 +462,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.43,
+        "width": 1.84,
+        "height": 1.62
+      },
+      "engine": "1.3L HR13DDT Turbo",
+      "power_hp": 156,
+      "transmission": "CVT",
+      "notes": "小型 SUV"
     },
     {
       "id": "private_nissan_kicks",
@@ -218,7 +481,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.3,
+        "width": 1.76,
+        "height": 1.59
+      },
+      "engine": "1.2L e-Power",
+      "power_hp": 127,
+      "transmission": "e-Power",
+      "notes": "e-Power 小型 SUV"
     },
     {
       "id": "private_mazda2",
@@ -226,7 +500,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 4.06,
+        "width": 1.69,
+        "height": 1.5
+      },
+      "engine": "1.5L Skyactiv-G I4",
+      "power_hp": 114,
+      "transmission": "6AT",
+      "notes": "香港小型車 (Demio)"
     },
     {
       "id": "private_mazda3",
@@ -234,7 +519,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan/Hatch",
+      "dimensions_m": {
+        "length": 4.46,
+        "width": 1.8,
+        "height": 1.44
+      },
+      "engine": "2.0L Skyactiv-G I4",
+      "power_hp": 153,
+      "transmission": "6AT"
     },
     {
       "id": "private_mazda6",
@@ -242,7 +537,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.87,
+        "width": 1.84,
+        "height": 1.45
+      },
+      "engine": "2.5L Skyactiv-G I4",
+      "power_hp": 192,
+      "transmission": "6AT"
     },
     {
       "id": "private_mazda_cx3",
@@ -250,7 +555,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.28,
+        "width": 1.77,
+        "height": 1.54
+      },
+      "engine": "2.0L Skyactiv-G I4",
+      "power_hp": 150,
+      "transmission": "6AT"
     },
     {
       "id": "private_mazda_cx5",
@@ -258,7 +573,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.58,
+        "width": 1.85,
+        "height": 1.68
+      },
+      "engine": "2.5L Skyactiv-G I4",
+      "power_hp": 194,
+      "transmission": "6AT"
     },
     {
       "id": "private_mitsubishi_lancer",
@@ -266,7 +591,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2016,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.57,
+        "width": 1.76,
+        "height": 1.49
+      },
+      "engine": "1.8L 4B10 I4",
+      "power_hp": 141,
+      "transmission": "CVT",
+      "notes": "香港的士曾用 Lancer 車型"
     },
     {
       "id": "private_mitsubishi_outlander",
@@ -274,7 +610,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.71,
+        "width": 1.81,
+        "height": 1.71
+      },
+      "engine": "2.4L 4J12 I4 + PHEV",
+      "power_hp": 135,
+      "transmission": "CVT",
+      "notes": "PHEV 版 94km 純電續航"
     },
     {
       "id": "private_suzuki_swift",
@@ -282,7 +629,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 3.85,
+        "width": 1.74,
+        "height": 1.5
+      },
+      "engine": "1.2L K12D I4",
+      "power_hp": 90,
+      "transmission": "CVT/5MT",
+      "notes": "輕巧小車"
     },
     {
       "id": "private_suzuki_ignis",
@@ -290,7 +648,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 3.7,
+        "width": 1.66,
+        "height": 1.6
+      },
+      "engine": "1.2L K12C I4",
+      "power_hp": 90,
+      "transmission": "CVT/5MT",
+      "notes": "迷你 SUV 風格"
     },
     {
       "id": "private_subaru_impreza",
@@ -298,7 +667,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan/Hatch",
+      "dimensions_m": {
+        "length": 4.46,
+        "width": 1.78,
+        "height": 1.5
+      },
+      "engine": "2.0L FB20 + e-Boxer",
+      "power_hp": 152,
+      "transmission": "CVT",
+      "notes": "水平對向引擎"
     },
     {
       "id": "private_subaru_forester",
@@ -306,7 +686,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.64,
+        "width": 1.81,
+        "height": 1.73
+      },
+      "engine": "2.0L FB20 + e-Boxer",
+      "power_hp": 152,
+      "transmission": "CVT",
+      "notes": "四驅 SUV"
     },
     {
       "id": "private_volkswagen_golf",
@@ -314,7 +705,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 4.28,
+        "width": 1.79,
+        "height": 1.48
+      },
+      "engine": "1.4L EA211 TSI Turbo",
+      "power_hp": 148,
+      "transmission": "7DSG"
     },
     {
       "id": "private_volkswagen_passat",
@@ -322,7 +723,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.93,
+        "width": 1.84,
+        "height": 1.47
+      },
+      "engine": "2.0L EA888 TSI",
+      "power_hp": 190,
+      "transmission": "7DSG"
     },
     {
       "id": "private_volkswagen_tiguan",
@@ -330,7 +741,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.51,
+        "width": 1.84,
+        "height": 1.66
+      },
+      "engine": "2.0L EA888 TSI",
+      "power_hp": 190,
+      "transmission": "7DSG"
     },
     {
       "id": "private_skoda_octavia",
@@ -338,7 +759,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan/Hatch",
+      "dimensions_m": {
+        "length": 4.69,
+        "width": 1.83,
+        "height": 1.47
+      },
+      "engine": "1.5L EA211 TSI",
+      "power_hp": 148,
+      "transmission": "7DSG"
     },
     {
       "id": "private_mercedes_c_class",
@@ -346,7 +777,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.75,
+        "width": 1.82,
+        "height": 1.44
+      },
+      "engine": "1.5L M264 + EQ Boost",
+      "power_hp": 184,
+      "transmission": "9AT"
     },
     {
       "id": "private_mercedes_e_class",
@@ -354,7 +795,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.94,
+        "width": 1.86,
+        "height": 1.47
+      },
+      "engine": "2.0L M264 Turbo",
+      "power_hp": 258,
+      "transmission": "9AT"
     },
     {
       "id": "private_mercedes_glc",
@@ -362,7 +813,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.66,
+        "width": 1.9,
+        "height": 1.64
+      },
+      "engine": "2.0L M264 Turbo",
+      "power_hp": 258,
+      "transmission": "9AT"
     },
     {
       "id": "private_bmw_3_series",
@@ -370,7 +831,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.71,
+        "width": 1.83,
+        "height": 1.44
+      },
+      "engine": "2.0L B48 Turbo",
+      "power_hp": 184,
+      "transmission": "8AT"
     },
     {
       "id": "private_bmw_5_series",
@@ -378,7 +849,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.96,
+        "width": 1.87,
+        "height": 1.48
+      },
+      "engine": "2.0L B48 Turbo",
+      "power_hp": 252,
+      "transmission": "8AT"
     },
     {
       "id": "private_bmw_x3",
@@ -386,7 +867,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.71,
+        "width": 1.89,
+        "height": 1.68
+      },
+      "engine": "2.0L B48 Turbo",
+      "power_hp": 184,
+      "transmission": "8AT"
     },
     {
       "id": "private_audi_a3",
@@ -394,7 +885,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan/Hatch",
+      "dimensions_m": {
+        "length": 4.34,
+        "width": 1.82,
+        "height": 1.43
+      },
+      "engine": "1.4L EA211 TFSI",
+      "power_hp": 148,
+      "transmission": "7DSG"
     },
     {
       "id": "private_audi_a4",
@@ -402,7 +903,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.76,
+        "width": 1.84,
+        "height": 1.43
+      },
+      "engine": "2.0L EA888 TFSI",
+      "power_hp": 190,
+      "transmission": "7DSG"
     },
     {
       "id": "private_audi_q5",
@@ -410,7 +921,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.68,
+        "width": 1.89,
+        "height": 1.66
+      },
+      "engine": "2.0L EA888 TFSI",
+      "power_hp": 252,
+      "transmission": "7DSG"
     },
     {
       "id": "private_lexus_is",
@@ -418,7 +939,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.71,
+        "width": 1.82,
+        "height": 1.44
+      },
+      "engine": "2.0L 8AR-FTS Turbo",
+      "power_hp": 245,
+      "transmission": "8AT",
+      "notes": "IS200t/IS300"
     },
     {
       "id": "private_lexus_es",
@@ -426,7 +958,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.98,
+        "width": 1.87,
+        "height": 1.45
+      },
+      "engine": "2.5L A25A-FXS + MG",
+      "power_hp": 218,
+      "transmission": "e-CVT",
+      "notes": "混能豪華房車"
     },
     {
       "id": "private_lexus_rx",
@@ -434,7 +977,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.89,
+        "width": 1.9,
+        "height": 1.71
+      },
+      "engine": "3.5L 2GR-FXS V6 + MG",
+      "power_hp": 313,
+      "transmission": "e-CVT",
+      "notes": "RX450h 混能"
     },
     {
       "id": "private_tesla_model3",
@@ -442,7 +996,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2023,
+      "body_type": "Sedan",
+      "dimensions_m": {
+        "length": 4.72,
+        "width": 1.85,
+        "height": 1.44
+      },
+      "engine": "EV 雙摩打",
+      "power_hp": 283,
+      "transmission": "1AT",
+      "notes": "香港暢銷電動車"
     },
     {
       "id": "private_tesla_modely",
@@ -450,7 +1015,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2023,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.75,
+        "width": 1.92,
+        "height": 1.62
+      },
+      "engine": "EV 雙摩打",
+      "power_hp": 378,
+      "transmission": "1AT"
     },
     {
       "id": "private_hyundai_kona",
@@ -458,7 +1033,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.21,
+        "width": 1.8,
+        "height": 1.57
+      },
+      "engine": "1.6L G4FJ Turbo / EV",
+      "power_hp": 195,
+      "transmission": "7DCT",
+      "notes": "Kona EV 64kWh"
     },
     {
       "id": "private_kia_niro",
@@ -466,7 +1052,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.42,
+        "width": 1.83,
+        "height": 1.55
+      },
+      "engine": "1.6L G4LE + MG",
+      "power_hp": 139,
+      "transmission": "6DCT",
+      "notes": "混能 SUV"
     },
     {
       "id": "private_kia_sportage",
@@ -474,7 +1071,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2022,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.66,
+        "width": 1.87,
+        "height": 1.64
+      },
+      "engine": "2.0L R Diesel / 1.6T",
+      "power_hp": 185,
+      "transmission": "8AT"
     },
     {
       "id": "private_mini_cooper",
@@ -482,7 +1089,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Hatchback",
+      "dimensions_m": {
+        "length": 3.86,
+        "width": 1.73,
+        "height": 1.42
+      },
+      "engine": "1.5L B38 Turbo",
+      "power_hp": 134,
+      "transmission": "7DCT"
     },
     {
       "id": "private_range_rover_evoque",
@@ -490,7 +1107,17 @@
       "category": "private",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.37,
+        "width": 1.9,
+        "height": 1.65
+      },
+      "engine": "2.0L AJ200 Turbo",
+      "power_hp": 249,
+      "transmission": "9AT"
     },
     {
       "id": "private_volvo_xc40",
@@ -498,7 +1125,18 @@
       "category": "private",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "SUV",
+      "dimensions_m": {
+        "length": 4.44,
+        "width": 1.87,
+        "height": 1.65
+      },
+      "engine": "2.0L B4 + MG / EV",
+      "power_hp": 197,
+      "transmission": "8AT",
+      "notes": "XC40 Recharge EV 402hp"
     },
     {
       "id": "commercial_toyota_crown_comfort_taxi",
@@ -506,7 +1144,18 @@
       "category": "commercial",
       "role": "hero",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2015,
+      "body_type": "Taxi Sedan",
+      "dimensions_m": {
+        "length": 4.6,
+        "width": 1.7,
+        "height": 1.52
+      },
+      "engine": "2.0L 1TR-FE LPG",
+      "power_hp": 114,
+      "transmission": "4AT",
+      "notes": "香港經典的士，LPG 石油氣引擎"
     },
     {
       "id": "commercial_toyota_comfort_taxi",
@@ -514,7 +1163,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2015,
+      "body_type": "Taxi Sedan",
+      "dimensions_m": {
+        "length": 4.6,
+        "width": 1.7,
+        "height": 1.52
+      },
+      "engine": "2.0L 1TR-FE LPG",
+      "power_hp": 114,
+      "transmission": "4AT",
+      "notes": "Comfort 的士，Crown Comfort 姊妹"
     },
     {
       "id": "commercial_toyota_jpn_taxi",
@@ -522,7 +1182,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Taxi MPV",
+      "dimensions_m": {
+        "length": 4.4,
+        "width": 1.7,
+        "height": 1.75
+      },
+      "engine": "1.5L 2NR-FKE Hybrid",
+      "power_hp": 101,
+      "transmission": "e-CVT",
+      "notes": "新一代混能的士，輪椅友善"
     },
     {
       "id": "commercial_nissan_cedric_taxi",
@@ -530,7 +1201,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2010,
+      "body_type": "Taxi Sedan",
+      "dimensions_m": {
+        "length": 4.59,
+        "width": 1.7,
+        "height": 1.44
+      },
+      "engine": "2.0L NA20P LPG",
+      "power_hp": 100,
+      "transmission": "4AT",
+      "notes": "舊款日產的士"
     },
     {
       "id": "commercial_toyota_hiace",
@@ -538,7 +1220,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.7,
+        "height": 1.98
+      },
+      "engine": "2.8L 1GD-FTV Diesel",
+      "power_hp": 177,
+      "transmission": "6AT",
+      "notes": "香港最常見客貨車"
     },
     {
       "id": "commercial_nissan_nv200",
@@ -546,7 +1239,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.4,
+        "width": 1.7,
+        "height": 1.86
+      },
+      "engine": "1.6L HR16DE I4",
+      "power_hp": 108,
+      "transmission": "CVT",
+      "notes": "小型客貨車"
     },
     {
       "id": "commercial_ford_transit",
@@ -554,7 +1258,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 5.53,
+        "width": 2.06,
+        "height": 2.41
+      },
+      "engine": "2.0L EcoBlue Diesel",
+      "power_hp": 168,
+      "transmission": "6MT/8AT"
     },
     {
       "id": "commercial_mercedes_vito",
@@ -562,7 +1276,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 5.14,
+        "width": 1.93,
+        "height": 1.9
+      },
+      "engine": "2.0L OM654 Diesel",
+      "power_hp": 161,
+      "transmission": "9AT"
     },
     {
       "id": "commercial_volkswagen_transporter",
@@ -570,7 +1294,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.9,
+        "width": 1.9,
+        "height": 1.99
+      },
+      "engine": "2.0L TDI Diesel",
+      "power_hp": 147,
+      "transmission": "7DSG"
     },
     {
       "id": "commercial_toyota_proace",
@@ -578,7 +1312,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.96,
+        "width": 1.92,
+        "height": 1.91
+      },
+      "engine": "2.0L Diesel",
+      "power_hp": 143,
+      "transmission": "8AT"
     },
     {
       "id": "commercial_mitsubishi_canter",
@@ -586,7 +1330,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Light Truck",
+      "dimensions_m": {
+        "length": 4.99,
+        "width": 1.7,
+        "height": 2.0
+      },
+      "engine": "3.0L 4P10 Diesel",
+      "power_hp": 150,
+      "transmission": "6MT/6AT",
+      "notes": "香港常見輕型貨車"
     },
     {
       "id": "commercial_isuzu_elf",
@@ -594,7 +1349,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 1,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Light Truck",
+      "dimensions_m": {
+        "length": 4.97,
+        "width": 1.7,
+        "height": 2.0
+      },
+      "engine": "3.0L 4JJ1 Diesel",
+      "power_hp": 150,
+      "transmission": "6MT/6AT",
+      "notes": "NPR 系列"
     },
     {
       "id": "commercial_hino_dutro",
@@ -602,7 +1368,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Light Truck",
+      "dimensions_m": {
+        "length": 4.99,
+        "width": 1.7,
+        "height": 2.01
+      },
+      "engine": "4.0L N04C Diesel",
+      "power_hp": 150,
+      "transmission": "6MT/6AT"
     },
     {
       "id": "commercial_toyota_dyna",
@@ -610,7 +1386,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Light Truck",
+      "dimensions_m": {
+        "length": 4.99,
+        "width": 1.7,
+        "height": 2.01
+      },
+      "engine": "4.0L N04C Diesel",
+      "power_hp": 150,
+      "transmission": "6MT"
     },
     {
       "id": "commercial_isuzu_forward",
@@ -618,7 +1404,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Medium Truck",
+      "dimensions_m": {
+        "length": 6.95,
+        "width": 2.3,
+        "height": 2.6
+      },
+      "engine": "6.0L 6HK1 Diesel",
+      "power_hp": 240,
+      "transmission": "6MT/6AT",
+      "notes": "中型貨車"
     },
     {
       "id": "commercial_hino_300",
@@ -626,7 +1423,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Medium Truck",
+      "dimensions_m": {
+        "length": 6.4,
+        "width": 2.2,
+        "height": 2.55
+      },
+      "engine": "5.1L N04C Diesel",
+      "power_hp": 180,
+      "transmission": "6MT"
     },
     {
       "id": "commercial_refrigerated_van",
@@ -634,7 +1441,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Refrigerated Van",
+      "dimensions_m": {
+        "length": 5.5,
+        "width": 2.0,
+        "height": 2.5
+      },
+      "engine": "Diesel 3.0L",
+      "power_hp": 150,
+      "transmission": "6MT",
+      "notes": "凍櫃車"
     },
     {
       "id": "commercial_box_truck",
@@ -642,7 +1460,17 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Box Truck",
+      "dimensions_m": {
+        "length": 7.0,
+        "width": 2.3,
+        "height": 2.8
+      },
+      "engine": "Diesel 5.0L",
+      "power_hp": 220,
+      "transmission": "6MT"
     },
     {
       "id": "commercial_lpg_delivery_truck",
@@ -650,7 +1478,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2018,
+      "body_type": "Box Truck",
+      "dimensions_m": {
+        "length": 6.5,
+        "width": 2.2,
+        "height": 2.7
+      },
+      "engine": "Diesel 4.0L",
+      "power_hp": 180,
+      "transmission": "6MT",
+      "notes": "石油氣運送車"
     },
     {
       "id": "commercial_cement_mixer",
@@ -658,7 +1497,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Mixer Truck",
+      "dimensions_m": {
+        "length": 8.2,
+        "width": 2.5,
+        "height": 3.5
+      },
+      "engine": "Diesel 12.0L",
+      "power_hp": 380,
+      "transmission": "9MT",
+      "notes": "混凝土攪拌車"
     },
     {
       "id": "commercial_tow_truck",
@@ -666,7 +1516,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Tow Truck",
+      "dimensions_m": {
+        "length": 5.8,
+        "width": 2.2,
+        "height": 2.5
+      },
+      "engine": "Diesel 5.0L",
+      "power_hp": 220,
+      "transmission": "6MT",
+      "notes": "拖車"
     },
     {
       "id": "commercial_courier_van",
@@ -674,7 +1535,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.4,
+        "width": 1.7,
+        "height": 1.9
+      },
+      "engine": "1.5L I4",
+      "power_hp": 108,
+      "transmission": "CVT",
+      "notes": "快遞貨 Van"
     },
     {
       "id": "commercial_food_delivery_van",
@@ -682,7 +1554,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Van",
+      "dimensions_m": {
+        "length": 4.4,
+        "width": 1.7,
+        "height": 1.9
+      },
+      "engine": "1.5L I4",
+      "power_hp": 108,
+      "transmission": "CVT",
+      "notes": "食物速遞車"
     },
     {
       "id": "commercial_construction_pickup",
@@ -690,7 +1573,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Pickup",
+      "dimensions_m": {
+        "length": 5.3,
+        "width": 1.85,
+        "height": 1.8
+      },
+      "engine": "Diesel 2.5L",
+      "power_hp": 160,
+      "transmission": "6MT",
+      "notes": "地盤工程車"
     },
     {
       "id": "commercial_waste_collection_truck",
@@ -698,7 +1592,18 @@
       "category": "commercial",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Waste Truck",
+      "dimensions_m": {
+        "length": 7.5,
+        "width": 2.5,
+        "height": 3.2
+      },
+      "engine": "Diesel 10.0L",
+      "power_hp": 340,
+      "transmission": "9MT",
+      "notes": "垃圾收集車"
     },
     {
       "id": "public_police_patrol_sedan",
@@ -706,7 +1611,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Patrol Sedan",
+      "dimensions_m": {
+        "length": 4.9,
+        "width": 1.85,
+        "height": 1.46
+      },
+      "engine": "2.0L Turbo I4",
+      "power_hp": 190,
+      "transmission": "8AT",
+      "notes": "香港警車 (BMW 5系/平治E系)"
     },
     {
       "id": "public_police_patrol_suv",
@@ -714,7 +1630,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Patrol SUV",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.9,
+        "height": 1.7
+      },
+      "engine": "2.0L Turbo I4",
+      "power_hp": 250,
+      "transmission": "8AT",
+      "notes": "警隊 SUV (寶馬 X5/平治 GLC)"
     },
     {
       "id": "public_ambulance_van",
@@ -722,7 +1649,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Ambulance",
+      "dimensions_m": {
+        "length": 5.6,
+        "width": 2.1,
+        "height": 2.6
+      },
+      "engine": "Diesel 3.0L",
+      "power_hp": 180,
+      "transmission": "6AT",
+      "notes": "消防處救護車 (平治 Sprinter)"
     },
     {
       "id": "public_fire_engine",
@@ -730,7 +1668,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Fire Engine",
+      "dimensions_m": {
+        "length": 9.5,
+        "width": 2.5,
+        "height": 3.3
+      },
+      "engine": "Diesel 12.0L",
+      "power_hp": 420,
+      "transmission": "9MT",
+      "notes": "消防車 (Scania/富豪)"
     },
     {
       "id": "public_fire_command_suv",
@@ -738,7 +1687,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Command SUV",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.9,
+        "height": 1.8
+      },
+      "engine": "Diesel 2.0L",
+      "power_hp": 200,
+      "transmission": "8AT",
+      "notes": "消防指揮車"
     },
     {
       "id": "public_government_utility_van",
@@ -746,7 +1706,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Utility Van",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.7,
+        "height": 1.98
+      },
+      "engine": "Diesel 2.8L",
+      "power_hp": 177,
+      "transmission": "6AT",
+      "notes": "政府部門客貨車"
     },
     {
       "id": "public_road_maintenance_truck",
@@ -754,7 +1725,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Maintenance Truck",
+      "dimensions_m": {
+        "length": 7.0,
+        "width": 2.3,
+        "height": 2.8
+      },
+      "engine": "Diesel 6.0L",
+      "power_hp": 250,
+      "transmission": "6MT",
+      "notes": "路政署維修車"
     },
     {
       "id": "public_traffic_enforcement_sedan",
@@ -762,7 +1744,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Patrol Sedan",
+      "dimensions_m": {
+        "length": 4.8,
+        "width": 1.85,
+        "height": 1.45
+      },
+      "engine": "2.0L I4",
+      "power_hp": 190,
+      "transmission": "8AT",
+      "notes": "交通執法車"
     },
     {
       "id": "public_driving_school_sedan",
@@ -770,7 +1763,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 2,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Learner Sedan",
+      "dimensions_m": {
+        "length": 4.4,
+        "width": 1.7,
+        "height": 1.45
+      },
+      "engine": "1.5L I4",
+      "power_hp": 107,
+      "transmission": "5MT",
+      "notes": "學車 (教車師傅車)"
     },
     {
       "id": "public_driving_school_hatchback",
@@ -778,7 +1782,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 3,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Learner Hatchback",
+      "dimensions_m": {
+        "length": 3.95,
+        "width": 1.69,
+        "height": 1.51
+      },
+      "engine": "1.5L I4",
+      "power_hp": 107,
+      "transmission": "5MT",
+      "notes": "學車 (Yaris/Fit)"
     },
     {
       "id": "public_security_patrol_van",
@@ -786,7 +1801,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Security Van",
+      "dimensions_m": {
+        "length": 4.7,
+        "width": 1.7,
+        "height": 1.98
+      },
+      "engine": "Diesel 2.8L",
+      "power_hp": 177,
+      "transmission": "6AT",
+      "notes": "保安巡邏車"
     },
     {
       "id": "public_prison_transport_van",
@@ -794,7 +1820,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2018,
+      "body_type": "Prison Van",
+      "dimensions_m": {
+        "length": 6.5,
+        "width": 2.2,
+        "height": 2.6
+      },
+      "engine": "Diesel 5.0L",
+      "power_hp": 220,
+      "transmission": "6MT",
+      "notes": "懲教署囚車"
     },
     {
       "id": "public_customs_patrol_suv",
@@ -802,7 +1839,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2021,
+      "body_type": "Patrol SUV",
+      "dimensions_m": {
+        "length": 4.8,
+        "width": 1.9,
+        "height": 1.75
+      },
+      "engine": "2.0L Turbo",
+      "power_hp": 250,
+      "transmission": "8AT",
+      "notes": "海關巡邏車"
     },
     {
       "id": "public_emergency_recovery_vehicle",
@@ -810,7 +1858,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2019,
+      "body_type": "Recovery Vehicle",
+      "dimensions_m": {
+        "length": 5.8,
+        "width": 2.2,
+        "height": 2.5
+      },
+      "engine": "Diesel 5.0L",
+      "power_hp": 220,
+      "transmission": "6MT",
+      "notes": "緊急救援拖車"
     },
     {
       "id": "public_mobile_command_vehicle",
@@ -818,7 +1877,18 @@
       "category": "public_special",
       "role": "traffic",
       "priority": 4,
-      "source_status": "original_model_required"
+      "source_status": "original_model_required",
+      "year": 2020,
+      "body_type": "Command Bus",
+      "dimensions_m": {
+        "length": 8.0,
+        "width": 2.4,
+        "height": 3.0
+      },
+      "engine": "Diesel 7.0L",
+      "power_hp": 300,
+      "transmission": "6MT",
+      "notes": "流動指揮車"
     },
     {
       "id": "hk_double_decker_bus",
@@ -838,5 +1908,7 @@
       },
       "notes": "Low-poly prototype based on a Hong Kong double-decker silhouette for iterative Assetto Corsa work."
     }
-  ]
+  ],
+  "enriched_at": "2026-10-13",
+  "enrichment_note": "Detailed specs (year, body, dimensions, engine, power) added for all vehicles."
 }
