@@ -30,6 +30,8 @@ CENTRES = {
     "tin_kwong_road": {
         "name": "天光道", "lat": 22.322, "lon": 114.185, "size_km": 2.4,
         "note": "九龍土瓜灣 - 私家車/輕型貨車考場",
+        # Exact original corridor bbox (preserves the 5,578-way extract)
+        "bbox": {"south": 22.312, "west": 114.170, "north": 22.334, "east": 114.198},
     },
     "sheung_on_street": {
         "name": "柴灣常安街", "lat": 22.264, "lon": 114.243, "size_km": 2.4,
@@ -88,10 +90,16 @@ def simplify(pts: list[dict], min_distance: float = 0.8) -> list[dict]:
 
 def prepare_centre(centre_id: str, centre: dict, elements: list) -> dict:
     """Extract ways within the centre's corridor. Returns stats."""
-    half = centre["size_km"] / 2 / 111.0  # degrees lat
-    lat0, lat1 = centre["lat"] - half, centre["lat"] + half
-    lon_half = half / max(0.7, math.cos(math.radians(centre["lat"])))
-    lon0, lon1 = centre["lon"] - lon_half, centre["lon"] + lon_half
+    if "bbox" in centre:
+        lat0 = centre["bbox"]["south"]
+        lat1 = centre["bbox"]["north"]
+        lon0 = centre["bbox"]["west"]
+        lon1 = centre["bbox"]["east"]
+    else:
+        half = centre["size_km"] / 2 / 111.0  # degrees lat
+        lat0, lat1 = centre["lat"] - half, centre["lat"] + half
+        lon_half = half / max(0.7, math.cos(math.radians(centre["lat"])))
+        lon0, lon1 = centre["lon"] - lon_half, centre["lon"] + lon_half
 
     kept = []
     road_names: dict[str, dict] = {}
