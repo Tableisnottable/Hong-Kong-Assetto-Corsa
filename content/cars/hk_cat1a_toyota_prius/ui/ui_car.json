@@ -1,7 +1,23 @@
 {
     "name": "Toyota Prius (Hybrid)",
-    "brand": "Hong Kong Exam Vehicle",
-    "description": "Category 1A driving test vehicle (Auto e-CVT) for HK Assetto Corsa track.",
-    "tags": ["hongkong", "exam", "cat1A"],
-    "class": "street"
+    "brand": "Toyota / HK Exam Vehicle",
+    "description": "Category 1A driving test vehicle - Toyota Prius (ZVW30/ZVW50), e-CVT hybrid, combined 121hp.",
+    "tags": [
+        "hongkong",
+        "exam",
+        "cat1A",
+        "toyota",
+        "prius",
+        "hybrid",
+        "automatic"
+    ],
+    "class": "street",
+    "specs": {
+        "engine": "2ZR-FXE 1.8L Atkinson + MG2",
+        "gearbox": "e-CVT",
+        "power": "121hp combined",
+        "torque": "163Nm (MG2)",
+        "dimensions": "4540x1760x1470mm",
+        "kerb_weight": "1375kg"
+    }
 }

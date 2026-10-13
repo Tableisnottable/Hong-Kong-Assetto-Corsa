@@ -1,7 +1,23 @@
 {
     "name": "ADL Enviro500 MMC Gen 2",
-    "brand": "Hong Kong Exam Vehicle",
-    "description": "Category 17A driving test vehicle (Auto 6AT Bus) for HK Assetto Corsa track.",
-    "tags": ["hongkong", "exam", "cat17A"],
-    "class": "street"
+    "brand": "Alexander Dennis / HK Exam Vehicle",
+    "description": "Category 17A driving test vehicle - ADL Enviro500 MMC 12M Gen 2 T-Bus, Cummins L9 8.9L 340hp, ZF EcoLife 6AT.",
+    "tags": [
+        "hongkong",
+        "exam",
+        "cat17A",
+        "bus",
+        "enviro500",
+        "automatic"
+    ],
+    "class": "street",
+    "specs": {
+        "engine": "Cummins ISL8.9/L9 8.9L I6 Euro 6",
+        "gearbox": "ZF EcoLife 6AP1700B",
+        "power": "340hp @ 2100rpm",
+        "torque": "1500Nm @ 1200rpm",
+        "dimensions": "12000x2550x4347mm",
+        "kerb_weight": "~15100kg",
+        "turning_circle": "22.4m"
+    }
 }

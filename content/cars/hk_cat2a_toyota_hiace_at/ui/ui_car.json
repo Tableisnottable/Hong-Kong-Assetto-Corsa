@@ -1,7 +1,23 @@
 {
     "name": "Toyota HiAce (Auto Ballast)",
-    "brand": "Hong Kong Exam Vehicle",
-    "description": "Category 2A driving test vehicle (Auto 6AT) for HK Assetto Corsa track.",
-    "tags": ["hongkong", "exam", "cat2A"],
-    "class": "street"
+    "brand": "Toyota / HK Exam Vehicle",
+    "description": "Category 2A driving test vehicle - Toyota HiAce (GDH201R), AC60E 6-speed auto, 2.8L diesel 177hp/450Nm. Exam ballast ~2600kg.",
+    "tags": [
+        "hongkong",
+        "exam",
+        "cat2A",
+        "toyota",
+        "hiace",
+        "automatic",
+        "diesel"
+    ],
+    "class": "street",
+    "specs": {
+        "engine": "1GD-FTV 2.8L diesel turbo",
+        "gearbox": "AC60E 6AT",
+        "power": "177hp @ 3400rpm",
+        "torque": "450Nm @ 1600-2400rpm",
+        "dimensions": "4695x1695x1980mm",
+        "exam_weight": "~2600kg with ballast"
+    }
 }

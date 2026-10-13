@@ -226,3 +226,59 @@ License and disclaimer / 授權及免責
 **柴灣常安街路線一**：試埸開出 → 右轉常安街 → 左轉豐業街 → 右轉新業街 → 右轉柴灣道 → 左轉永平街 → 左轉新廈街 → 泳池掉頭 → 右轉永平街 → 左轉柴灣道 → 右轉怡順街 → 右轉怡豐街 → 右轉金源里 → 左轉柴灣道 → 左轉常安街 → 駛回試場
 
 > 資料來源：driving.com.hk（天光道/柴灣，已驗證）、apasshk.com 全港考場路線分析、YouTube 學車王/鏗鏘駕駛學校（荃灣德士古道）。其餘路線為參考資料，實際以考牌主任當日決定為準。
+
+---
+
+## 🚙 考車 3D 模型 / Exam Vehicle 3D Models
+
+6 款考車的 1:1 程序化 3D 車身 + 完整物理數據，位於 `content/cars/`。
+1:1 procedural 3D bodies + full physics data for all 6 exam vehicles.
+
+### 車輛清單 / Vehicle List
+
+| 類別 Class | 車輛 Vehicle | 車身 Body | 引擎 Engine | 波箱 Gearbox | 馬力/扭力 | 車重 |
+|---|---|---|---|---|---|---|
+| **1** | Toyota Yaris (XP130) | hatchback | 1.5L 1NZ-FE | C50 5MT | 107hp / 140Nm | 1,100 kg |
+| **1A** | Toyota Prius (ZVW30/50) | hatchback | 1.8L 2ZR-FXE + MG2 | e-CVT | 121hp / 163Nm | 1,435 kg |
+| **2** | Toyota HiAce (GDH201) | van | 2.8L 1GD-FTV 柴油 | R151 5MT | 177hp / 420Nm | 2,600 kg* |
+| **2A** | Toyota HiAce (GDH201R) | van | 2.8L 1GD-FTV 柴油 | AC60E 6AT | 177hp / 450Nm | 2,600 kg* |
+| **17** | ADL Enviro500 Gen 1 | 雙層巴士 | Cummins ISLe340 8.9L | Voith/ZF 半自動 | 340hp / 1,500Nm | 14,200 kg |
+| **17A** | ADL Enviro500 MMC Gen 2 | 雙層巴士 | Cummins L9 8.9L Euro 6 | ZF EcoLife 6AT | 340hp / 1,500Nm | 15,100 kg |
+
+\* 2/2A 考試時須預載 ~600–700 kg 壓載重物（運輸署規定）。
+
+### 每車檔案結構 / Per-Car File Structure
+```text
+content/cars/<car_id>/
+├── data/                  # 物理數據 (由 generate_car_data.py 生成)
+│   ├── car.ini            # 車重、軸距、輪距、尺寸、轉向鎖
+│   ├── engine.ini         # 馬力/扭力 + power curve
+│   ├── drivetrain.ini     # 齒輪比、尾牙、自動/手動
+│   ├── suspension.ini     # 懸掛類型、彈簧率、避震
+│   ├── tyres.ini          # 輪胎尺寸、胎壓、抓地力
+│   └── brakes.ini         # 煞車碟尺寸、前後分配、ABS
+├── ui/ui_car.json         # 選車界面資料 + 規格
+├── skins/default/         # 車身塗裝 (body.dds, plate.dds)
+├── body.fbx               # 1:1 3D 車身 (gitignored, 可再生)
+└── preview.png            # 3D 預覽圖 (已提交)
+```
+
+### 生成流水線 / Generation Pipeline
+```text
+python tools/generate_car_data.py
+    → content/cars/<car_id>/data/*.ini + ui/ui_car.json
+
+blender --background --python tools/blender/generate_car_bodies.py
+    → content/cars/<car_id>/body.fbx + preview.png
+
+ksEditor: body.fbx → <car_id>.kn5
+    → content/cars/<car_id>/<car_id>.kn5
+```
+
+### 預覽 / Previews
+
+| 私家車 (1) | 輕型貨車 (2) | 雙層巴士 (17A) |
+|---|---|---|
+| ![Yaris](content/cars/hk_cat1_toyota_yaris/preview.png) | ![HiAce](content/cars/hk_cat2_toyota_hiace_mt/preview.png) | ![E500](content/cars/hk_cat17a_adl_e500_mmc/preview.png) |
+
+完整車輛清單與規格：`content/cars/cars_manifest.json`

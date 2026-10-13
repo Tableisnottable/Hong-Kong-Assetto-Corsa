@@ -1,0 +1,154 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-13",
+  "description": "Hong Kong driving test vehicle mod manifest for Assetto Corsa",
+  "generator": "tools/generate_car_data.py + tools/blender/generate_car_bodies.py",
+  "spec_source": "car/driving test car/ (per-class spec sheets)",
+  "units": "metric (kg, m, hp, Nm, rpm)",
+  "vehicles": [
+    {
+      "id": "hk_cat1_toyota_yaris",
+      "class": "1",
+      "class_name": "私家車 (棍波) / Private Car (Manual)",
+      "vehicle": "Toyota Yaris / Prius C (XP130 / NHP10)",
+      "body_style": "hatchback",
+      "engine": "1NZ-FE 1.5L I4 VVT-i",
+      "gearbox": "C50 5MT",
+      "power_hp": 107,
+      "torque_nm": 140,
+      "mass_kg": 1100,
+      "dimensions_m": [3.950, 1.695, 1.510],
+      "wheelbase_m": 2.510,
+      "drivetrain": "FWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    },
+    {
+      "id": "hk_cat1a_toyota_prius",
+      "class": "1A",
+      "class_name": "私家車 (自動波) / Private Car (Automatic)",
+      "vehicle": "Toyota Prius (ZVW30 / ZVW50 Hybrid)",
+      "body_style": "hatchback",
+      "engine": "2ZR-FXE 1.8L Atkinson + MG2",
+      "gearbox": "e-CVT",
+      "power_hp": 121,
+      "torque_nm": 163,
+      "mass_kg": 1435,
+      "dimensions_m": [4.540, 1.760, 1.470],
+      "wheelbase_m": 2.700,
+      "drivetrain": "FWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    },
+    {
+      "id": "hk_cat2_toyota_hiace_mt",
+      "class": "2",
+      "class_name": "輕型貨車 (棍波) / Light Goods Vehicle (Manual)",
+      "vehicle": "Toyota HiAce (GDH201 / KDH200)",
+      "body_style": "van",
+      "engine": "1GD-FTV 2.8L diesel turbo",
+      "gearbox": "R151 5MT",
+      "power_hp": 177,
+      "torque_nm": 420,
+      "mass_kg": 2600,
+      "mass_note": "includes ~600-700kg exam ballast (Transport Dept requirement)",
+      "dimensions_m": [4.695, 1.695, 1.980],
+      "wheelbase_m": 2.570,
+      "drivetrain": "RWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    },
+    {
+      "id": "hk_cat2a_toyota_hiace_at",
+      "class": "2A",
+      "class_name": "輕型貨車 (自動波) / Light Goods Vehicle (Automatic)",
+      "vehicle": "Toyota HiAce (GDH201R 6AT)",
+      "body_style": "van",
+      "engine": "1GD-FTV 2.8L diesel turbo",
+      "gearbox": "AC60E 6AT",
+      "power_hp": 177,
+      "torque_nm": 450,
+      "mass_kg": 2600,
+      "mass_note": "includes ~600-700kg exam ballast (Transport Dept requirement)",
+      "dimensions_m": [4.695, 1.695, 1.980],
+      "wheelbase_m": 2.570,
+      "drivetrain": "RWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    },
+    {
+      "id": "hk_cat17_adl_e500_gen1",
+      "class": "17",
+      "class_name": "私家巴士 (棍波/半自動) / Private Bus (Manual/Semi-Auto)",
+      "vehicle": "Alexander Dennis Enviro500 12M Gen 1 (Training Bus)",
+      "body_style": "double_decker_bus",
+      "engine": "Cummins ISLe340 8.9L I6",
+      "gearbox": "Voith D864.5 / ZF 6HP602",
+      "power_hp": 340,
+      "torque_nm": 1500,
+      "mass_kg": 14200,
+      "dimensions_m": [12.000, 2.550, 4.300],
+      "wheelbase_m": 5.950,
+      "axles": "6x2 (front steer, mid drive, rear tag)",
+      "turning_circle_m": 22.0,
+      "drivetrain": "RWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    },
+    {
+      "id": "hk_cat17a_adl_e500_mmc",
+      "class": "17A",
+      "class_name": "公共巴士 (自動波) / Public Bus (Automatic)",
+      "vehicle": "Alexander Dennis Enviro500 MMC 12M Gen 2 (T-Bus)",
+      "body_style": "double_decker_bus",
+      "engine": "Cummins ISL8.9 / L9 8.9L I6 Euro 6",
+      "gearbox": "ZF EcoLife 6AP1700B",
+      "power_hp": 340,
+      "torque_nm": 1500,
+      "mass_kg": 15100,
+      "dimensions_m": [12.000, 2.550, 4.347],
+      "wheelbase_m": 5.980,
+      "axles": "6x2 with passive steer trailing axle",
+      "turning_circle_m": 22.4,
+      "drivetrain": "RWD",
+      "files": {
+        "data": ["car.ini", "engine.ini", "drivetrain.ini", "suspension.ini", "tyres.ini", "brakes.ini"],
+        "ui": "ui_car.json",
+        "body_fbx": "body.fbx (gitignored, regenerable)",
+        "preview": "preview.png"
+      }
+    }
+  ],
+  "pipeline": {
+    "step_1": "python tools/generate_car_data.py  -> writes data/*.ini + ui/ui_car.json",
+    "step_2": "blender --background --python tools/blender/generate_car_bodies.py  -> writes body.fbx + preview.png",
+    "step_3": "ksEditor: open body.fbx -> export <car_id>.kn5 into content/cars/<car_id>/",
+    "step_4": "copy content/cars/<car_id>/ into Assetto Corsa content/cars/"
+  },
+  "notes": [
+    "body.fbx is gitignored (regenerable, large binary).",
+    "preview.png is committed for documentation.",
+    "Physics values derived from real spec sheets; tune in-game as needed.",
+    "Automatic-gearbox classes (1A/2A/17A) grant automatic-only licence in HK."
+  ]
+}

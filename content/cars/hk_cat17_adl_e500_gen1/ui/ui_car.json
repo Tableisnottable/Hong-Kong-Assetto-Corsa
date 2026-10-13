@@ -1,7 +1,22 @@
 {
     "name": "ADL Enviro500 Gen 1",
-    "brand": "Hong Kong Exam Vehicle",
-    "description": "Category 17 driving test vehicle (Auto 6AT Bus) for HK Assetto Corsa track.",
-    "tags": ["hongkong", "exam", "cat17"],
-    "class": "street"
+    "brand": "Alexander Dennis / HK Exam Vehicle",
+    "description": "Category 17 driving test vehicle - ADL Enviro500 12M Gen 1 training bus, Cummins ISLe340 8.9L 340hp, Voith/ZF semi-auto.",
+    "tags": [
+        "hongkong",
+        "exam",
+        "cat17",
+        "bus",
+        "enviro500"
+    ],
+    "class": "street",
+    "specs": {
+        "engine": "Cummins ISLe340 8.9L I6",
+        "gearbox": "Voith D864.5 / ZF 6HP602",
+        "power": "340hp @ 2100rpm",
+        "torque": "1500Nm @ 1200-1400rpm",
+        "dimensions": "12000x2550x4300mm",
+        "kerb_weight": "~14200kg",
+        "turning_circle": "22.0m"
+    }
 }

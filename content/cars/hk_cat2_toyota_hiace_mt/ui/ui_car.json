@@ -1,7 +1,23 @@
 {
     "name": "Toyota HiAce (Manual)",
-    "brand": "Hong Kong Exam Vehicle",
-    "description": "Category 2 driving test vehicle (Manual 5MT) for HK Assetto Corsa track.",
-    "tags": ["hongkong", "exam", "cat2"],
-    "class": "street"
+    "brand": "Toyota / HK Exam Vehicle",
+    "description": "Category 2 driving test vehicle - Toyota HiAce (GDH201), R151 5-speed manual, 2.8L 1GD-FTV diesel 177hp. Exam ballast ~2600kg.",
+    "tags": [
+        "hongkong",
+        "exam",
+        "cat2",
+        "toyota",
+        "hiace",
+        "manual",
+        "diesel"
+    ],
+    "class": "street",
+    "specs": {
+        "engine": "1GD-FTV 2.8L diesel turbo",
+        "gearbox": "R151 5MT",
+        "power": "177hp @ 3400rpm",
+        "torque": "420Nm @ 1400-2600rpm",
+        "dimensions": "4695x1695x1980mm",
+        "exam_weight": "~2600kg with ballast"
+    }
 }

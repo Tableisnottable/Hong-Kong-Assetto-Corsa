@@ -16,3 +16,7 @@ api_downloader.py
 build/HP1C/source/roads.osm.json
 build/HP1C/source/roads.osm.json.gz
 build/**/*.osm.json
+
+# Python cache
+__pycache__/
+*.pyc
