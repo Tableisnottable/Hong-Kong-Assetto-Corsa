@@ -30,7 +30,33 @@ All FBX files verified loadable in ksEditor for KN5 export.
 | 8 | E500 Gen1 (17) | `content/cars/hk_cat17_adl_e500_gen1/body.fbx` | `content/cars/hk_cat17_adl_e500_gen1/hk_cat17_adl_e500_gen1.kn5` | 25 KB |
 | 9 | E500 MMC (17A) | `content/cars/hk_cat17a_adl_e500_mmc/body.fbx` | `content/cars/hk_cat17a_adl_e500_mmc/hk_cat17a_adl_e500_mmc.kn5` | 25 KB |
 
-## 操作步驟 / Steps (每個檔案)
+## 自動化方案 / Automation (NEW - 2026-10-13)
+
+✅ **已證實可以自動化**！ksEditor 係 WinForms 應用程式，有 UIA 可存取嘅菜單：
+
+```powershell
+# 安裝 pywinauto（一次性）
+python -m pip install pywinauto
+
+# 列出轉換目標
+python tools\auto_kn5_convert.py --list
+
+# 轉換全部 9 個檔案（需互動桌面 session）
+python tools\auto_kn5_convert.py
+
+# 轉換單一檔案
+python tools\auto_kn5_convert.py yaris
+python tools\auto_kn5_convert.py texaco
+```
+
+**已驗證：**
+- File 菜單（UIA invoke）✅
+- Open FBX → 標準 Open 對話框（#32770）✅
+- Save KN5 → Track/Car 菜單 ✅
+
+**限制**：需要互動桌面 session（mouse/keyboard 存取）。Headless/遠端 session 冇 active desktop 時 mouse API 會失敗。
+
+## 人手轉換（備用）/ Manual Conversion (fallback)
 
 1. 開啟 ksEditor（從佢自己目錄啟動）：
    ```powershell
