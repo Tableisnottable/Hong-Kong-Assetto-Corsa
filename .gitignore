@@ -20,3 +20,6 @@ build/**/*.osm.json
 # Python cache
 __pycache__/
 *.pyc
+
+# 可再生成嘅 AI spline 中間產物 (content/tracks 先係發布版)
+build/HP1C/*/ai/

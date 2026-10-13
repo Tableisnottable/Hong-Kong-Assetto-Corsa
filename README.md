@@ -334,3 +334,32 @@ blender --background --python tools\blender\preview_hd_map.py -- texaco_road
 
 ### 其他可用試場 / Other Available Centres
 `happy_valley` (跑馬地)、`so_kun_po` (掃桿埔)、`shek_am` (石蔭)、`yau_tong` (油塘) — 座標已配置，隨時可生成。
+
+---
+
+## 🤖 AI 路線 / AI Splines
+
+3 個試場嘅 AI 路線已生成（V7 格式，`fast_lane.ai`）：
+
+| 試場 | 節點數 | 檔案大小 | 位置 |
+|---|---:|---:|---|
+| 天光道 | 61,540 | 5.5 MB | `content/tracks/hong_kong_1to1/ai/fast_lane.ai` |
+| 柴灣常安街 | 17,376 | 1.5 MB | `content/tracks/hong_kong_1to1_sheung_on/ai/fast_lane.ai` |
+| 荃灣德士古道 | 61,916 | 5.6 MB | `content/tracks/hong_kong_1to1_texaco/ai/fast_lane.ai` |
+
+### 生成方式 / Generation
+```powershell
+python tools\generate_ai_spline.py              # 全部
+python tools\generate_ai_spline.py texaco_road  # 指定試場
+```
+
+- 從 OSM 道路中心線取樣（每 2 米一點）
+- 貪婪最近鄰鏈接成單一閉合 spline
+- 優先主幹道/次要道路/住宅道路（跳過行人路）
+- 格式：AC V7（version=7, pos+length+id, 附加 speed/radius/normal/forward）
+- 格式已用 AssettoServer FastLaneParser 驗證
+
+### 備註 / Notes
+- AI 線係「全路網單一 spline」（覆蓋所有可駕駛道路）
+- 如需賽道式 AI（跟住賽道線），可後續加入 `ai_spline` 或 junction 系統
+- 速度預設 50 km/h 市區；可喺生成器改 `MAX_SPEED`
