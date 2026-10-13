@@ -1,29 +1,61 @@
-"""Prepare a high-detail 1:1 road extract for the Tin Kwong Road exam corridor.
+"""Prepare high-detail 1:1 road extracts for all HK driving-test centres.
 
 Reads the full-Hong-Kong OSM extract (build/HP1C/source/roads.osm.json) and
-writes a compact corridor extract that the Blender HD generator consumes:
+writes compact corridor extracts that the Blender HD generator consumes:
 
-    build/HP1C/source/tin_kwong_hd_roads.json   (filtered ways + tags)
-    build/HP1C/tin_kwong_road/roads_manifest.json (unique road names)
+    build/HP1C/source/<centre>_hd_roads.json        (filtered ways + tags)
+    build/HP1C/<centre>/roads_manifest.json         (unique road names)
 
 Usage:
-    python tools/prepare_hd_map.py
+    python tools/prepare_hd_map.py                    # all centres
+    python tools/prepare_hd_map.py tin_kwong_road     # one centre
+    python tools/prepare_hd_map.py --list             # list centres
 """
 
 from __future__ import annotations
 
+import argparse
 import json
+import math
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "build", "HP1C", "source", "roads.osm.json")
-OUT = os.path.join(ROOT, "build", "HP1C", "source", "tin_kwong_hd_roads.json")
-MANIFEST = os.path.join(ROOT, "build", "HP1C", "tin_kwong_road", "roads_manifest.json")
+OUT_DIR = os.path.join(ROOT, "build", "HP1C", "source")
+MANIFEST_DIR = os.path.join(ROOT, "build", "HP1C")
 
-# Exam corridor around the Tin Kwong Road driving-test centre (~2.4 km x 2.4 km).
-# Covers all three exam routes: Tin Kwong Road, Sheung Shing/Sheung Hong St,
-# Ma Tau Wai Road, Farm Road, Argyle Street, Carlisle Road, Back Cheung Road...
-BBOX = {"south": 22.312, "west": 114.170, "north": 22.334, "east": 114.198}
+# Test centres with approximate centre coordinates and corridor size.
+# (lat, lon) are WGS84; size_km is the corridor half-extent in km.
+CENTRES = {
+    "tin_kwong_road": {
+        "name": "天光道", "lat": 22.322, "lon": 114.185, "size_km": 2.4,
+        "note": "九龍土瓜灣 - 私家車/輕型貨車考場",
+    },
+    "sheung_on_street": {
+        "name": "柴灣常安街", "lat": 22.264, "lon": 114.243, "size_km": 2.4,
+        "note": "港島柴灣 - 巴士/小巴考場",
+    },
+    "texaco_road": {
+        "name": "荃灣德士古道", "lat": 22.365, "lon": 114.115, "size_km": 3.0,
+        "note": "新界荃灣 - 中型/重型貨車/巴士考場",
+    },
+    "happy_valley": {
+        "name": "跑馬地", "lat": 22.269, "lon": 114.186, "size_km": 2.0,
+        "note": "港島 - 私家車考場",
+    },
+    "so_kun_po": {
+        "name": "掃桿埔", "lat": 22.273, "lon": 114.192, "size_km": 2.0,
+        "note": "港島 - 輕型貨車考場",
+    },
+    "shek_am": {
+        "name": "石蔭", "lat": 22.369, "lon": 114.138, "size_km": 2.0,
+        "note": "新界葵涌 - 私家車/輕型貨車考場",
+    },
+    "yau_tong": {
+        "name": "油塘", "lat": 22.296, "lon": 114.235, "size_km": 2.0,
+        "note": "九龍油塘 - 輕型貨車考場",
+    },
+}
 
 # Non-drivable / non-buildable highway types to drop.
 EXCLUDED_HIGHWAYS = {
@@ -37,13 +69,6 @@ KEEP_TAGS = [
     "highway", "lanes", "oneway", "surface", "layer", "name", "name:zh",
     "name:en", "maxspeed", "crossing", "bridge", "junction",
 ]
-
-
-def inside_bbox(lat: float, lon: float) -> bool:
-    return (
-        BBOX["south"] <= lat <= BBOX["north"]
-        and BBOX["west"] <= lon <= BBOX["east"]
-    )
 
 
 def simplify(pts: list[dict], min_distance: float = 0.8) -> list[dict]:
@@ -61,17 +86,16 @@ def simplify(pts: list[dict], min_distance: float = 0.8) -> list[dict]:
     return out
 
 
-def main() -> None:
-    if not os.path.exists(SRC):
-        raise SystemExit(f"Source extract not found: {SRC}")
-
-    print(f"[1/3] Loading {SRC} ...")
-    with open(SRC, "r", encoding="utf-8") as f:
-        data = json.load(f)
+def prepare_centre(centre_id: str, centre: dict, elements: list) -> dict:
+    """Extract ways within the centre's corridor. Returns stats."""
+    half = centre["size_km"] / 2 / 111.0  # degrees lat
+    lat0, lat1 = centre["lat"] - half, centre["lat"] + half
+    lon_half = half / max(0.7, math.cos(math.radians(centre["lat"])))
+    lon0, lon1 = centre["lon"] - lon_half, centre["lon"] + lon_half
 
     kept = []
     road_names: dict[str, dict] = {}
-    for element in data.get("elements", []):
+    for element in elements:
         if element.get("type") != "way":
             continue
         tags = element.get("tags") or {}
@@ -79,7 +103,8 @@ def main() -> None:
         if highway in EXCLUDED_HIGHWAYS:
             continue
         geometry = element.get("geometry") or []
-        if not any(inside_bbox(p["lat"], p["lon"]) for p in geometry):
+        if not any(lat0 <= p["lat"] <= lat1 and lon0 <= p["lon"] <= lon1
+                   for p in geometry):
             continue
 
         clean = simplify(geometry)
@@ -94,8 +119,7 @@ def main() -> None:
 
         name = tags.get("name") or tags.get("name:zh") or tags.get("name:en")
         if name:
-            key = name
-            road_names.setdefault(key, {
+            road_names.setdefault(name, {
                 "name": name,
                 "name:zh": tags.get("name:zh", ""),
                 "name:en": tags.get("name:en", ""),
@@ -104,25 +128,65 @@ def main() -> None:
             })
 
     payload = {
-        "boundary": BBOX,
-        "reference": {"lat": 22.3219899, "lon": 114.1848273},
+        "centre": centre_id,
+        "centre_name": centre["name"],
+        "note": centre.get("note", ""),
+        "boundary": {"south": lat0, "west": lon0, "north": lat1, "east": lon1},
+        "reference": {"lat": centre["lat"], "lon": centre["lon"]},
         "way_count": len(kept),
         "elements": kept,
     }
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    with open(OUT, "w", encoding="utf-8") as f:
+
+    out = os.path.join(OUT_DIR, f"{centre_id}_hd_roads.json")
+    with open(out, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
 
-    os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
-    with open(MANIFEST, "w", encoding="utf-8") as f:
+    manifest_path = os.path.join(MANIFEST_DIR, centre_id, "roads_manifest.json")
+    os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(
-            {"road_count": len(road_names),
+            {"centre": centre_id, "road_count": len(road_names),
              "roads": sorted(road_names.values(), key=lambda r: r["name"])},
             f, ensure_ascii=False, indent=2,
         )
 
-    print(f"[2/3] Kept {len(kept)} drivable/buildable ways in the corridor.")
-    print(f"[3/3] Wrote {OUT} and {MANIFEST} ({len(road_names)} named roads).")
+    return {"centre": centre_id, "name": centre["name"],
+            "ways": len(kept), "roads": len(road_names), "file": out}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Prepare HD road extracts")
+    parser.add_argument("centres", nargs="*", help="centre ids (default: all)")
+    parser.add_argument("--list", action="store_true", help="list centres")
+    args = parser.parse_args()
+
+    if args.list:
+        for cid, c in CENTRES.items():
+            print(f"  {cid}: {c['name']} ({c['note']})")
+        return
+
+    if not os.path.exists(SRC):
+        raise SystemExit(f"Source extract not found: {SRC}")
+
+    targets = args.centres or list(CENTRES.keys())
+    print(f"[1/2] Loading {SRC} ...")
+    with open(SRC, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    elements = data.get("elements", [])
+    print(f"      {len(elements)} ways loaded")
+
+    print(f"[2/2] Preparing {len(targets)} centres ...")
+    results = []
+    for cid in targets:
+        if cid not in CENTRES:
+            print(f"  [!] Unknown centre: {cid} (use --list)")
+            continue
+        r = prepare_centre(cid, CENTRES[cid], elements)
+        results.append(r)
+        print(f"  [OK] {r['centre']} ({r['name']}): "
+              f"{r['ways']} ways, {r['roads']} named roads -> {r['file']}")
+
+    print(f"[DONE] Prepared {len(results)} centre extracts.")
 
 
 if __name__ == "__main__":

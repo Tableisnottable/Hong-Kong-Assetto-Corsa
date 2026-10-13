@@ -1,0 +1,475 @@
+{
+  "centre": "sheung_on_street",
+  "road_count": 67,
+  "roads": [
+    {
+      "name": "Yue Wan Footpath",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "冠業街 Kwun Yip Street",
+      "name:zh": "冠業街",
+      "name:en": "Kwun Yip Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "利眾街 Lee Chung Street",
+      "name:zh": "利眾街",
+      "name:en": "Lee Chung Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "創富道 Chong Fu Road",
+      "name:zh": "創富道",
+      "name:en": "Chong Fu Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "吉勝街 Kut Shing Street",
+      "name:zh": "吉勝街",
+      "name:en": "Kut Shing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉業街 Ka Yip Street",
+      "name:zh": "嘉業街",
+      "name:en": "Ka Yip Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "大潭道 Tai Tam Road",
+      "name:zh": "大潭道",
+      "name:en": "Tai Tam Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "安業街 On Yip Street",
+      "name:zh": "安業街",
+      "name:en": "On Yip Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "富康街 Fu Hong Street",
+      "name:zh": "富康街",
+      "name:en": "Fu Hong Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "富怡道 Fu Yee Road",
+      "name:zh": "富怡道",
+      "name:en": "Fu Yee Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "富欣道 Harmony Road",
+      "name:zh": "富欣道",
+      "name:en": "Harmony Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "富翠街 Fu Tsui Street",
+      "name:zh": "富翠街",
+      "name:en": "Fu Tsui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "寧富街 Ning Foo Street",
+      "name:zh": "寧富街",
+      "name:en": "Ning Foo Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "小西灣道 Siu Sai Wan Road",
+      "name:zh": "小西灣道",
+      "name:en": "Siu Sai Wan Road",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "峰霞道 Fung Ha Road",
+      "name:zh": "峰霞道",
+      "name:en": "Fung Ha Road",
+      "highway": "unclassified",
+      "maxspeed": "30"
+    },
+    {
+      "name": "常安街 Sheung On Street",
+      "name:zh": "常安街",
+      "name:en": "Sheung On Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "常平街 Sheung Ping Street",
+      "name:zh": "常平街",
+      "name:en": "Sheung Ping Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "常茂街 Sheung Mau Street",
+      "name:zh": "常茂街",
+      "name:en": "Sheung Mau Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "常達街 Sheung Tat Street",
+      "name:zh": "常達街",
+      "name:en": "Sheung Tat Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "康平街 Hong Ping Street",
+      "name:zh": "康平街",
+      "name:en": "Hong Ping Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "康民街 Hong Man Street",
+      "name:zh": "康民街",
+      "name:en": "Hong Man Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡泰街 Yee Tai Street",
+      "name:zh": "怡泰街",
+      "name:en": "Yee Tai Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡盛街 Yee Shing Street",
+      "name:zh": "怡盛街",
+      "name:en": "Yee Shing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡盛里 Yee Shing Lane",
+      "name:zh": "怡盛里",
+      "name:en": "Yee Shing Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡豐街 Yee Fung Street",
+      "name:zh": "怡豐街",
+      "name:en": "Yee Fung Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡順街 Yee Shun Street",
+      "name:zh": "怡順街",
+      "name:en": "Yee Shun Street",
+      "highway": "primary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "新安街 Sun On Street",
+      "name:zh": "新安街",
+      "name:en": "Sun On Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新廈街 San Ha Street",
+      "name:zh": "新廈街",
+      "name:en": "San Ha Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新業街 Sun Yip Street",
+      "name:zh": "新業街",
+      "name:en": "Sun Yip Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "明趣街 Ming Tsui Street",
+      "name:zh": "明趣街",
+      "name:en": "Ming Tsui Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "曉翠街 Hiu Tsui Street",
+      "name:zh": "曉翠街",
+      "name:en": "Hiu Tsui Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "東區走廊 Island Eastern Corridor",
+      "name:zh": "東區走廊",
+      "name:en": "Island Eastern Corridor",
+      "highway": "trunk",
+      "maxspeed": "50"
+    },
+    {
+      "name": "柏架山下引水道 Mount Parker Lower Catchwater",
+      "name:zh": "柏架山下引水道",
+      "name:en": "Mount Parker Lower Catchwater",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "柴灣道 Chai Wan Road",
+      "name:zh": "柴灣道",
+      "name:en": "Chai Wan Road",
+      "highway": "primary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "樂民道 Lok Man Road",
+      "name:zh": "樂民道",
+      "name:en": "Lok Man Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "歌連臣山引水道 Mount Collinson Catchwater",
+      "name:zh": "歌連臣山引水道",
+      "name:en": "Mount Collinson Catchwater",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "歌連臣角道 Cape Collinson Road",
+      "name:zh": "歌連臣角道",
+      "name:en": "Cape Collinson Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "永平街 Wing Ping Street",
+      "name:zh": "永平街",
+      "name:en": "Wing Ping Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "永泰道 Wing Tai Road",
+      "name:zh": "永泰道",
+      "name:en": "Wing Tai Road",
+      "highway": "motorway_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "泰民街 Tai Man Street",
+      "name:zh": "泰民街",
+      "name:en": "Tai Man Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "港島徑第8段 Hong Kong Trail Section 8",
+      "name:zh": "港島徑第8段",
+      "name:en": "Hong Kong Trail Section 8",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "港島林道－哥連臣山段 Hong Kong Forest Track",
+      "name:zh": "港島林道－哥連臣山段",
+      "name:en": "Hong Kong Forest Track – Mount Collinson Section",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "港島林道－哥連臣山段 Hong Kong Forest Track – Mount Collinson Section",
+      "name:zh": "港島林道－哥連臣山段",
+      "name:en": "Hong Kong Forest Track – Mount Collinson Section",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "環翠道 Wan Tsui Road",
+      "name:zh": "環翠道",
+      "name:en": "Wan Tsui Road",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "環翠里 Wan Tsui Lane",
+      "name:zh": "環翠里",
+      "name:en": "Wan Tsui Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "盛泰道 Shing Tai Road",
+      "name:zh": "盛泰道",
+      "name:en": "Shing Tai Road",
+      "highway": "motorway_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "砵甸乍山北引水道 Mount Pottinger North Catchwater",
+      "name:zh": "砵甸乍山北引水道",
+      "name:en": "Mount Pottinger North Catchwater",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "砵甸乍山南引水道 Mount Pottinger South Catchwater",
+      "name:zh": "砵甸乍山南引水道",
+      "name:en": "Mount Pottinger South Catchwater",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "砵甸乍山郊遊徑 Pottinger Peak Country Trail",
+      "name:zh": "砵甸乍山郊遊徑",
+      "name:en": "Pottinger Peak Country Trail",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "祥利街 Cheung Lee Street",
+      "name:zh": "祥利街",
+      "name:en": "Cheung Lee Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "祥民道 Cheung Man Road",
+      "name:zh": "祥民道",
+      "name:en": "Cheung Man Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "翠景街 Tsui King Street",
+      "name:zh": "翠景街",
+      "name:en": "Tsui King Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "翠杏街 Chui Hang Street",
+      "name:zh": "翠杏街",
+      "name:en": "Chui Hang Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "翠灣街 Tsui Wan Street",
+      "name:zh": "翠灣街",
+      "name:en": "Tsui Wan Street",
+      "highway": "primary_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "翡翠道 Fei Tsui Road",
+      "name:zh": "翡翠道",
+      "name:en": "Fei Tsui Road",
+      "highway": "unclassified",
+      "maxspeed": "50"
+    },
+    {
+      "name": "茵翠街 Yan Tsui Street",
+      "name:zh": "茵翠街",
+      "name:en": "Yan Tsui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "華廈街 Wah Ha Street",
+      "name:zh": "華廈街",
+      "name:en": "Wah Ha Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "萃文道 Sui Man Road",
+      "name:zh": "萃文道",
+      "name:en": "Sui Man Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "萃文里 Sui Man Lane",
+      "name:zh": "萃文里",
+      "name:en": "Sui Man Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "西灣炮台晨運徑 Sai Wan Fort Morning Trail",
+      "name:zh": "西灣炮台晨運徑",
+      "name:en": "Sai Wan Fort Morning Trail",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "豐業街 Fung Yip Street",
+      "name:zh": "豐業街",
+      "name:en": "Fung Yip Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "貴翠街 Kwai Tsui Street",
+      "name:zh": "貴翠街",
+      "name:en": "Kwai Tsui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "連城道 Lin Shing Road",
+      "name:zh": "連城道",
+      "name:en": "Lin Shing Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "金源里 Kam Yuen Lane",
+      "name:zh": "金源里",
+      "name:en": "Kam Yuen Lane",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "順泰道 Shun Tai Road",
+      "name:zh": "順泰道",
+      "name:en": "Shun Tai Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "黑角徑 Cape Collinson Path",
+      "name:zh": "黑角徑",
+      "name:en": "Cape Collinson Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "龍躍徑 Leaping Dragon Walk",
+      "name:zh": "龍躍徑",
+      "name:en": "Leaping Dragon Walk",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    }
+  ]
+}

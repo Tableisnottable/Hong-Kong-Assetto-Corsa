@@ -304,3 +304,33 @@ ksEditor: body.fbx → <car_id>.kn5
 - **已有原型**：`hk_double_decker_bus`（雙層巴士低多邊形原型，10.6m）
 
 > 資料來源：`config/vehicles.json`（規劃目錄）。巴士/客車/小巴明確排除於交通車流範圍。全部車輛（除雙層巴士原型外）仍需原創或可再發布授權的 3D 模型。
+
+---
+
+## 🗺️ 多試場地圖 / Multi-Centre Maps
+
+除天光道外，HD 地圖流水線現已支援所有主要試場。已預先生成：
+
+| 試場 Centre | 抽取道路 Ways | 斑馬線 | 地圖 FBX | 預覽 |
+|---|---:|---:|---:|---|
+| 天光道 Tin Kwong Road | 5,578 | 337 | 18.2 MB | ✓ |
+| 柴灣常安街 Sheung On Street | 1,669 | 87 | 7.1 MB | ✓ |
+| 荃灣德士古道 Texaco Road | 7,589 | 378 | 21.3 MB | ✓ |
+
+### 多試場指令 / Multi-Centre Commands
+```powershell
+# 列出所有試場
+python tools\prepare_hd_map.py --list
+
+# 抽取試場走廊數據 (可一次多個)
+python tools\prepare_hd_map.py sheung_on_street texaco_road
+
+# 生成 HD 地圖 (指定試場)
+blender --background --python tools\blender\generate_hd_map.py -- texaco_road
+
+# 渲染預覽
+blender --background --python tools\blender\preview_hd_map.py -- texaco_road
+```
+
+### 其他可用試場 / Other Available Centres
+`happy_valley` (跑馬地)、`so_kun_po` (掃桿埔)、`shek_am` (石蔭)、`yau_tong` (油塘) — 座標已配置，隨時可生成。

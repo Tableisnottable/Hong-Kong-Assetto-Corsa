@@ -2,9 +2,12 @@
 
 Run with Blender (background):
     blender --background --python tools/blender/generate_hd_map.py
+    blender --background --python tools/blender/generate_hd_map.py -- sheung_on_street
 
-Input : build/HP1C/source/tin_kwong_hd_roads.json  (prepared by tools/prepare_hd_map.py)
-Output: build/HP1C/tin_kwong_road/hd_map.fbx        (metric, 1 Blender unit = 1 m)
+Input : build/HP1C/source/<centre>_hd_roads.json  (prepared by tools/prepare_hd_map.py)
+Output: build/HP1C/<centre>/hd_map.fbx            (metric, 1 Blender unit = 1 m)
+
+Default centre: tin_kwong_road. Pass any centre id from prepare_hd_map.py.
 
 Performance: geometry is accumulated in plain Python lists and committed to
 meshes once per material layer (not per road), so the full corridor builds
@@ -23,14 +26,23 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
 
 import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "build" / "HP1C" / "source" / "tin_kwong_hd_roads.json"
-OUTPUT = ROOT / "build" / "HP1C" / "tin_kwong_road" / "hd_map.fbx"
+
+# Allow: blender --background --python script -- <centre_id>
+CENTRE = "tin_kwong_road"
+if "--" in sys.argv:
+    idx = sys.argv.index("--")
+    if len(sys.argv) > idx + 1:
+        CENTRE = sys.argv[idx + 1]
+
+SOURCE = ROOT / "build" / "HP1C" / "source" / f"{CENTRE}_hd_roads.json"
+OUTPUT = ROOT / "build" / "HP1C" / CENTRE / "hd_map.fbx"
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
 ROAD_Z = 0.08          # surface height above world origin (m)

@@ -1,22 +1,32 @@
-"""Render a top-down preview of the HD map FBX.
+"""Render a top-down preview of an HD map FBX.
 
 Run with Blender (background):
     blender --background --python tools/blender/preview_hd_map.py
+    blender --background --python tools/blender/preview_hd_map.py -- sheung_on_street
 
 Output:
-    build/HP1C/tin_kwong_road/hd_map_preview.png   (full overview)
-    build/HP1C/tin_kwong_road/hd_map_zoom.png      (test-centre close-up)
+    build/HP1C/<centre>/hd_map_preview.png   (full overview)
+    build/HP1C/<centre>/hd_map_zoom.png      (test-centre close-up)
 """
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_DIR = ROOT / "build" / "HP1C" / "tin_kwong_road"
+
+# Allow: blender --background --python script -- <centre_id>
+CENTRE = "tin_kwong_road"
+if "--" in sys.argv:
+    idx = sys.argv.index("--")
+    if len(sys.argv) > idx + 1:
+        CENTRE = sys.argv[idx + 1]
+
+OUT_DIR = ROOT / "build" / "HP1C" / CENTRE
 FBX = OUT_DIR / "hd_map.fbx"
 PREVIEW = OUT_DIR / "hd_map_preview.png"
 ZOOM = OUT_DIR / "hd_map_zoom.png"
@@ -56,7 +66,9 @@ def render(scene, filepath: str, res: int) -> None:
 
 def main() -> None:
     if not FBX.exists():
-        raise SystemExit(f"FBX not found: {FBX}")
+        raise SystemExit(f"FBX not found: {FBX}\n"
+                         f"Generate it first: blender --background --python "
+                         f"tools/blender/generate_hd_map.py -- {CENTRE}")
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.fbx(filepath=str(FBX))

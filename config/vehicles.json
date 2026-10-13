@@ -1906,7 +1906,17 @@
         "height_m": 5.2,
         "width_m": 2.55
       },
-      "notes": "Low-poly prototype based on a Hong Kong double-decker silhouette for iterative Assetto Corsa work."
+      "notes": "Low-poly prototype based on a Hong Kong double-decker silhouette. Approx. KMB/CTB city bus type.",
+      "year": 2010,
+      "body_type": "Double-decker Bus",
+      "dimensions_m": {
+        "length": 10.6,
+        "width": 2.55,
+        "height": 5.2
+      },
+      "engine": "Diesel I6 (typical HK bus)",
+      "power_hp": 300,
+      "transmission": "6AT"
     }
   ],
   "enriched_at": "2026-10-13",
