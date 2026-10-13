@@ -282,3 +282,25 @@ ksEditor: body.fbx → <car_id>.kn5
 | ![Yaris](content/cars/hk_cat1_toyota_yaris/preview.png) | ![HiAce](content/cars/hk_cat2_toyota_hiace_mt/preview.png) | ![E500](content/cars/hk_cat17a_adl_e500_mmc/preview.png) |
 
 完整車輛清單與規格：`content/cars/cars_manifest.json`
+
+---
+
+## 🚦 交通車輛清單 / Traffic Vehicle List
+
+完整的香港交通車輛規劃目錄（**101 台**）：[docs/traffic_vehicle_list.md](docs/traffic_vehicle_list.md)
+
+### 目標車流比例 / Target Traffic Mix
+
+| 類別 | 數量 | 佔比 |
+|---|---:|---:|
+| 🚗 私家車 Private | 60 | 60% |
+| 🚚 商用車 Commercial | 25 | 25% |
+| 🚨 公共/特殊 Public & Special | 15 | 15% |
+
+### 精選重點 / Highlights
+- **私家車**：Toyota Corolla/Camry/Prius/Alphard、Honda Civic/Accord/Fit、Nissan Note/Serena、Tesla Model 3/Y、BMW 3系、Mercedes C-Class 等 60 款
+- **商用車**：的士（Crown Comfort Taxi）、HiAce、NV200、Canter 貨車、Isuzu 輕型貨車、冷凍車、水泥車等 25 款
+- **公共/特殊**：警車、救護車、消防車、政府車、學車車、保安巡邏車等 15 款
+- **已有原型**：`hk_double_decker_bus`（雙層巴士低多邊形原型，10.6m）
+
+> 資料來源：`config/vehicles.json`（規劃目錄）。巴士/客車/小巴明確排除於交通車流範圍。全部車輛（除雙層巴士原型外）仍需原創或可再發布授權的 3D 模型。
