@@ -30,9 +30,26 @@ All FBX files verified loadable in ksEditor for KN5 export.
 | 8 | E500 Gen1 (17) | `content/cars/hk_cat17_adl_e500_gen1/body.fbx` | `content/cars/hk_cat17_adl_e500_gen1/hk_cat17_adl_e500_gen1.kn5` | 25 KB |
 | 9 | E500 MMC (17A) | `content/cars/hk_cat17a_adl_e500_mmc/body.fbx` | `content/cars/hk_cat17a_adl_e500_mmc/hk_cat17a_adl_e500_mmc.kn5` | 25 KB |
 
-## 自動化方案 / Automation (NEW - 2026-10-13)
+## 自動化狀態（2026-10-14 最新測試）
 
-✅ **已證實可以自動化**！ksEditor 係 WinForms 應用程式，有 UIA 可存取嘅菜單：
+**部分成功 — 需要互動桌面：**
+
+| 步驟 | 狀態 |
+|---|---|
+| 啟動 ksEditor + 揾主窗口 | ✅ 穩定 |
+| File 菜單（UIA invoke 或 PostMessage） | ✅ 穩定 |
+| Open FBX 菜單項 | ✅ 穩定 |
+| SendMessage 填對話框路徑 | ✅ 已驗證（set path + click Open 成功） |
+| 對話框喺非互動 session | ⚠️ 有時 hidden 或唔彈出 |
+| 完整自動轉換 | ➡️ **需喺互動桌面運行** |
+
+**實測結果（2026-10-14 上午）：**
+- ksEditor 正常啟動，主窗口搵到
+- File → Open FBX 菜單可開（invoke 同 PostMessage 都得）
+- Open 對話框喺 headless session 唔穩定（hidden）
+- **當你坐喺部機前**（互動桌面），`python tools\auto_kn5_convert.py` 應該可以一鍵完成
+
+**如果自動化仍有問題，用手動步驟（下節）。**
 
 ```powershell
 # 安裝 pywinauto（一次性）
@@ -48,13 +65,6 @@ python tools\auto_kn5_convert.py
 python tools\auto_kn5_convert.py yaris
 python tools\auto_kn5_convert.py texaco
 ```
-
-**已驗證：**
-- File 菜單（UIA invoke）✅
-- Open FBX → 標準 Open 對話框（#32770）✅
-- Save KN5 → Track/Car 菜單 ✅
-
-**限制**：需要互動桌面 session（mouse/keyboard 存取）。Headless/遠端 session 冇 active desktop 時 mouse API 會失敗。
 
 ## 人手轉換（備用）/ Manual Conversion (fallback)
 
