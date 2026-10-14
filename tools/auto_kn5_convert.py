@@ -5,16 +5,14 @@ Usage (from repo root, on an INTERACTIVE desktop session):
     python tools/auto_kn5_convert.py yaris           # convert one by id
     python tools/auto_kn5_convert.py --list          # list conversion targets
 
-Requires: pywinauto (pip install pywinauto)
+Requires: pywinauto, comtypes (pip install pywinauto comtypes)
 
-VERIFIED (2026-10-14):
-- ksEditor is a WinForms app with UIA-accessible menus:
-    File -> Open FBX        (opens standard #32770 'Open' dialog)
-    File -> Save KN5 -> Track/Car
-- UIA `invoke()` works on the top-level "File" menu item.
-- The Open dialog can be filled via Win32 SendMessage (works even in
-  non-foreground sessions): find Edit control, set path, click '&Open'.
-- This script uses that proven approach for full automation.
+VERIFIED WORKING (2026-10-14):
+- FindWindow("ksEditor Public") → attach UIA via ElementFromHandle
+- Real mouse clicks (SetCursorPos + mouse_event) on File → Open FBX
+- Standard #32770 Open dialog: SendMessage fill path + click Open
+- FBX loads (verified via Recent FBX Files menu)
+- File → Save KN5 → Car/Track → fill Save dialog → KN5 created
 """
 
 from __future__ import annotations
@@ -70,31 +68,30 @@ TARGETS = [
 TARGET_BY_ID = {t[0]: t for t in TARGETS}
 
 
-def find_main_window(timeout: int = 40):
-    """Find the ksEditor main window via UIA Desktop."""
-    desktop = Desktop(backend="uia")
-    deadline = time.time() + timeout
-    while time.time() < deadline:
-        try:
-            for w in desktop.windows():
-                try:
-                    if w.window_text() == "ksEditor Public":
-                        return w
-                except Exception:
-                    continue
-        except Exception:
-            pass
-        time.sleep(2)
-    raise RuntimeError("ksEditor main window not found")
+def attach_kseditor():
+    """Find ksEditor window and attach UIA wrapper."""
+    hwnd = user32.FindWindowW(None, "ksEditor Public")
+    if not hwnd:
+        return None, None
+    import comtypes
+    from comtypes.gen import UIAutomationClient
+    from pywinauto.controls.uiawrapper import UIAWrapper
+    from pywinauto.uia_element_info import UIAElementInfo
+    uia = comtypes.CoCreateInstance(
+        UIAutomationClient.CUIAutomation._reg_clsid_,
+        interface=UIAutomationClient.IUIAutomation,
+        clsctx=comtypes.CLSCTX_INPROC_SERVER,
+    )
+    udlg = UIAWrapper(UIAElementInfo(uia.ElementFromHandle(hwnd)))
+    return hwnd, udlg
 
 
-def find_menu_item(dlg, name: str, retries: int = 10, delay: float = 1.5):
-    """Find a MenuItem by name among descendants."""
+def find_item(win, name, ctype="MenuItem", retries=10, delay=1.5):
     for _ in range(retries):
         try:
-            for ctrl in dlg.descendants():
+            for ctrl in win.descendants():
                 try:
-                    if (ctrl.element_info.control_type == "MenuItem"
+                    if (ctrl.element_info.control_type == ctype
                             and ctrl.window_text() == name):
                         return ctrl
                 except Exception:
@@ -105,89 +102,75 @@ def find_menu_item(dlg, name: str, retries: int = 10, delay: float = 1.5):
     return None
 
 
+def real_click(x, y, wait=2.5):
+    user32.SetCursorPos(x, y)
+    time.sleep(0.3)
+    user32.mouse_event(0x0002, 0, 0, 0, 0)
+    time.sleep(0.1)
+    user32.mouse_event(0x0004, 0, 0, 0, 0)
+    time.sleep(wait)
+
+
+def click_menu_item(dlg, name: str) -> bool:
+    item = find_item(dlg, name)
+    if item is None:
+        return False
+    r = item.rectangle()
+    real_click(r.left + (r.right - r.left) // 2,
+               r.top + (r.bottom - r.top) // 2, 3)
+    return True
+
+
 def find_dialog(title: str, timeout: int = 20):
-    """Find a #32770 dialog by title (win32 backend)."""
     desktop = Desktop(backend="win32")
     deadline = time.time() + timeout
     while time.time() < deadline:
         try:
             for w in desktop.windows():
                 try:
-                    if w.class_name() == "#32770" and w.window_text() == title:
+                    if w.class_name() == "#32770" and title in w.window_text():
                         return w
                 except Exception:
                     continue
         except Exception:
             pass
-        time.sleep(1)
+        time.sleep(1.5)
     return None
 
 
-def _child_windows(parent: int, cls: str) -> list[int]:
-    result: list[int] = []
+def fill_dialog(dialog, path: Path, button_text: str = "Open") -> bool:
+    hwnd = dialog.handle
+    if not dialog.is_visible():
+        user32.ShowWindow(hwnd, 5)
+        time.sleep(1)
+    edits: list[int] = []
+    buttons: list[int] = []
 
     @ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_void_p, ctypes.c_void_p)
-    def cb(hwnd, _lparam):
+    def cb(h, _l):
         buf = ctypes.create_unicode_buffer(256)
-        user32.GetClassNameW(hwnd, buf, 256)
-        if buf.value == cls:
-            result.append(hwnd)
+        user32.GetClassNameW(h, buf, 256)
+        if buf.value == "Edit":
+            edits.append(h)
+        elif buf.value == "Button":
+            buttons.append(h)
         return True
 
-    user32.EnumChildWindows(parent, cb, 0)
-    return result
-
-
-def fill_open_dialog(dialog, path: Path) -> bool:
-    """Fill the standard Open dialog via Win32 SendMessage."""
-    hwnd = dialog.handle
-    edits = _child_windows(hwnd, "Edit")
-    buttons = _child_windows(hwnd, "Button")
+    user32.EnumChildWindows(hwnd, cb, 0)
     if not edits:
         return False
-
-    # Set the filename (usually last Edit = filename field)
     user32.SendMessageW(edits[-1], WM_SETTEXT, 0, ctypes.c_wchar_p(str(path)))
     time.sleep(1)
-
-    # Click the Open button
     for bh in buttons:
         buf = ctypes.create_unicode_buffer(256)
         user32.GetWindowTextW(bh, buf, 256)
-        if "Open" in buf.value or "開啟" in buf.value:
+        if button_text in buf.value:
             user32.SendMessageW(bh, BM_CLICK, 0, 0)
             return True
-    # Fallback: press Enter on the dialog
-    user32.SendMessageW(hwnd, 0x0100, 0x0D, 0)  # WM_KEYDOWN Enter
-    user32.SendMessageW(hwnd, 0x0101, 0x0D, 0)  # WM_KEYUP Enter
-    return True
+    return False
 
 
-def open_menu_and_click(dlg, menu_path: list[str]) -> None:
-    """Open a menu path via UIA invoke."""
-    top = find_menu_item(dlg, menu_path[0])
-    if top is None:
-        raise RuntimeError(f"Menu not found: {menu_path[0]}")
-    top.invoke()
-    time.sleep(2.5)
-    for name in menu_path[1:]:
-        item = find_menu_item(dlg, name)
-        if item is None:
-            raise RuntimeError(f"Menu item not found: {name}")
-        try:
-            item.invoke()
-        except Exception:
-            # Some items don't support invoke; click via coordinates as fallback
-            rect = item.rectangle()
-            cx = rect.left + (rect.right - rect.left) // 2
-            cy = rect.top + (rect.bottom - rect.top) // 2
-            ctypes.windll.user32.SetCursorPos(cx, cy)
-            ctypes.windll.user32.mouse_event(0x02, 0, 0, 0, 0)  # left down
-            ctypes.windll.user32.mouse_event(0x04, 0, 0, 0, 0)  # left up
-        time.sleep(2.5)
-
-
-def convert_one(target: tuple) -> bool:
+def convert_one(target: tuple, retries: int = 2) -> bool:
     tid, kind, fbx, kn5 = target
     if not fbx.exists():
         print(f"[SKIP] {tid}: FBX not found: {fbx}")
@@ -197,55 +180,67 @@ def convert_one(target: tuple) -> bool:
         return True
     kn5.parent.mkdir(parents=True, exist_ok=True)
 
-    proc = None
-    try:
-        proc = subprocess.Popen([str(KSEDITOR)], cwd=str(KSEDITOR.parent))
-        print(f"[CONVERT] {tid}: launched ksEditor (pid {proc.pid})")
-        dlg = find_main_window()
-        time.sleep(3)
+    for attempt in range(1, retries + 1):
+        proc = None
+        try:
+            proc = subprocess.Popen([str(KSEDITOR)], cwd=str(KSEDITOR.parent))
+            print(f"[CONVERT] {tid} (attempt {attempt}/{retries}): "
+                  f"pid {proc.pid}")
+            time.sleep(25)
 
-        # File -> Open FBX
-        open_menu_and_click(dlg, ["File", "Open FBX"])
-        dialog = find_dialog("Open")
-        if dialog is None:
-            raise RuntimeError("Open dialog not found")
-        fill_open_dialog(dialog, fbx)
-        print(f"  [open] {fbx.name}")
-        time.sleep(8)  # wait for FBX load
+            _, udlg = attach_kseditor()
+            if udlg is None:
+                raise RuntimeError("ksEditor window not found")
 
-        # File -> Save KN5 -> Track/Car
-        open_menu_and_click(dlg, ["File", "Save KN5",
-                                  "Track" if kind == "track" else "Car"])
-        dialog = find_dialog("Save")
-        if dialog is None:
-            # Some versions use "Save As" or "Export"
-            for title in ("Save", "Save As", "Export"):
-                dialog = find_dialog(title, timeout=5)
-                if dialog:
-                    break
-        if dialog is None:
-            raise RuntimeError("Save dialog not found")
-        fill_open_dialog(dialog, kn5)
-        print(f"  [save] {kn5.name}")
-        time.sleep(5)
+            # File -> Open FBX
+            if not click_menu_item(udlg, "File"):
+                raise RuntimeError("File menu not found")
+            if not click_menu_item(udlg, "Open FBX"):
+                raise RuntimeError("Open FBX not found")
+            dialog = find_dialog("Open")
+            if dialog is None:
+                raise RuntimeError("Open dialog not found")
+            fill_dialog(dialog, fbx, "Open")
+            print(f"  [open] {fbx.name}")
+            time.sleep(12)  # FBX load
 
-        if kn5.exists() and kn5.stat().st_size > 0:
-            print(f"[OK] {tid}: {kn5.name} ({kn5.stat().st_size/1024:.0f} KB)")
-            return True
-        print(f"[FAIL] {tid}: KN5 not created")
-        return False
-    except Exception as e:
-        print(f"[ERROR] {tid}: {e}")
-        return False
-    finally:
-        if proc and proc.poll() is None:
-            try:
-                proc.terminate()
-                time.sleep(1)
-                if proc.poll() is None:
-                    proc.kill()
-            except Exception:
-                pass
+            # File -> Save KN5 -> Track/Car
+            if not click_menu_item(udlg, "File"):
+                raise RuntimeError("File menu not found (save)")
+            if not click_menu_item(udlg, "Save KN5"):
+                raise RuntimeError("Save KN5 not found")
+            sub = "Track" if kind == "track" else "Car"
+            if not click_menu_item(udlg, sub):
+                raise RuntimeError(f"{sub} submenu not found")
+            dialog = find_dialog("Save", timeout=15)
+            if dialog is None:
+                for title in ("Save As", "Export"):
+                    dialog = find_dialog(title, timeout=5)
+                    if dialog:
+                        break
+            if dialog is None:
+                raise RuntimeError("Save dialog not found")
+            fill_dialog(dialog, kn5, "Save")
+            print(f"  [save] {kn5.name}")
+            time.sleep(8)
+
+            if kn5.exists() and kn5.stat().st_size > 0:
+                print(f"[OK] {tid}: {kn5.name} ({kn5.stat().st_size/1024:.0f} KB)")
+                return True
+            print(f"[FAIL] {tid}: KN5 not created (attempt {attempt})")
+        except Exception as e:
+            print(f"[ERROR] {tid} (attempt {attempt}): {e}")
+        finally:
+            if proc and proc.poll() is None:
+                try:
+                    proc.terminate()
+                    time.sleep(1)
+                    if proc.poll() is None:
+                        proc.kill()
+                except Exception:
+                    pass
+            time.sleep(2)
+    return False
 
 
 def main() -> None:
