@@ -7,30 +7,32 @@ Usage (from repo root, on an INTERACTIVE desktop session):
 
 Requires: pywinauto (pip install pywinauto)
 
-VERIFIED (2026-10-13):
+VERIFIED (2026-10-14):
 - ksEditor is a WinForms app with UIA-accessible menus:
-    File -> Open FBX        (opens standard #32770 file dialog)
+    File -> Open FBX        (opens standard #32770 'Open' dialog)
     File -> Save KN5 -> Track/Car
 - UIA `invoke()` works on the top-level "File" menu item.
-- Mouse click on "Open FBX" opens the standard Open dialog.
-- IMPORTANT: requires an interactive desktop (mouse/keyboard).
-  In a headless/remote session without active desktop, mouse APIs fail.
-
-This script uses mouse clicks (most reliable for ksEditor) and handles the
-standard file dialogs by typing the path and pressing Enter.
+- The Open dialog can be filled via Win32 SendMessage (works even in
+  non-foreground sessions): find Edit control, set path, click '&Open'.
+- This script uses that proven approach for full automation.
 """
 
 from __future__ import annotations
 
+import ctypes
 import subprocess
 import sys
 import time
 from pathlib import Path
 
-from pywinauto import Desktop, mouse
+from pywinauto import Desktop
 
 ROOT = Path(__file__).resolve().parents[1]
 KSEDITOR = Path(r"A:\SteamLibrary\steamapps\common\assettocorsa\sdk\editor\ksEditor.exe")
+
+WM_SETTEXT = 0x000C
+BM_CLICK = 0x00F5
+user32 = ctypes.windll.user32
 
 # (id, kind, fbx_source, kn5_target)
 TARGETS = [
@@ -68,7 +70,7 @@ TARGETS = [
 TARGET_BY_ID = {t[0]: t for t in TARGETS}
 
 
-def find_main_window(timeout: int = 30):
+def find_main_window(timeout: int = 40):
     """Find the ksEditor main window via UIA Desktop."""
     desktop = Desktop(backend="uia")
     deadline = time.time() + timeout
@@ -82,62 +84,107 @@ def find_main_window(timeout: int = 30):
                     continue
         except Exception:
             pass
-        time.sleep(1)
+        time.sleep(2)
     raise RuntimeError("ksEditor main window not found")
 
 
-def find_menu_item(dlg, name: str, retries: int = 8):
+def find_menu_item(dlg, name: str, retries: int = 10, delay: float = 1.5):
     """Find a MenuItem by name among descendants."""
     for _ in range(retries):
-        for ctrl in dlg.descendants():
-            try:
-                if (ctrl.element_info.control_type == "MenuItem"
-                        and ctrl.window_text() == name):
-                    return ctrl
-            except Exception:
-                continue
+        try:
+            for ctrl in dlg.descendants():
+                try:
+                    if (ctrl.element_info.control_type == "MenuItem"
+                            and ctrl.window_text() == name):
+                        return ctrl
+                except Exception:
+                    continue
+        except Exception:
+            pass
+        time.sleep(delay)
+    return None
+
+
+def find_dialog(title: str, timeout: int = 20):
+    """Find a #32770 dialog by title (win32 backend)."""
+    desktop = Desktop(backend="win32")
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        try:
+            for w in desktop.windows():
+                try:
+                    if w.class_name() == "#32770" and w.window_text() == title:
+                        return w
+                except Exception:
+                    continue
+        except Exception:
+            pass
         time.sleep(1)
     return None
 
 
-def click_at_center(item) -> None:
-    """Mouse-click at an item's screen center."""
-    rect = item.rectangle()
-    cx = rect.left + (rect.right - rect.left) // 2
-    cy = rect.top + (rect.bottom - rect.top) // 2
-    mouse.click(coords=(cx, cy))
-    time.sleep(2.5)
+def _child_windows(parent: int, cls: str) -> list[int]:
+    result: list[int] = []
+
+    @ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_void_p, ctypes.c_void_p)
+    def cb(hwnd, _lparam):
+        buf = ctypes.create_unicode_buffer(256)
+        user32.GetClassNameW(hwnd, buf, 256)
+        if buf.value == cls:
+            result.append(hwnd)
+        return True
+
+    user32.EnumChildWindows(parent, cb, 0)
+    return result
+
+
+def fill_open_dialog(dialog, path: Path) -> bool:
+    """Fill the standard Open dialog via Win32 SendMessage."""
+    hwnd = dialog.handle
+    edits = _child_windows(hwnd, "Edit")
+    buttons = _child_windows(hwnd, "Button")
+    if not edits:
+        return False
+
+    # Set the filename (usually last Edit = filename field)
+    user32.SendMessageW(edits[-1], WM_SETTEXT, 0, ctypes.c_wchar_p(str(path)))
+    time.sleep(1)
+
+    # Click the Open button
+    for bh in buttons:
+        buf = ctypes.create_unicode_buffer(256)
+        user32.GetWindowTextW(bh, buf, 256)
+        if "Open" in buf.value or "開啟" in buf.value:
+            user32.SendMessageW(bh, BM_CLICK, 0, 0)
+            return True
+    # Fallback: press Enter on the dialog
+    user32.SendMessageW(hwnd, 0x0100, 0x0D, 0)  # WM_KEYDOWN Enter
+    user32.SendMessageW(hwnd, 0x0101, 0x0D, 0)  # WM_KEYUP Enter
+    return True
 
 
 def open_menu_and_click(dlg, menu_path: list[str]) -> None:
-    """Click a menu path using UIA invoke for top menu + mouse for items."""
-    # top menu via invoke (works headless)
+    """Open a menu path via UIA invoke."""
     top = find_menu_item(dlg, menu_path[0])
     if top is None:
         raise RuntimeError(f"Menu not found: {menu_path[0]}")
     top.invoke()
-    time.sleep(2)
-
-    # sub items via mouse click (needs desktop)
+    time.sleep(2.5)
     for name in menu_path[1:]:
         item = find_menu_item(dlg, name)
         if item is None:
             raise RuntimeError(f"Menu item not found: {name}")
-        click_at_center(item)
-
-
-def fill_file_dialog(dlg, path: Path) -> None:
-    """Type a path into the standard file dialog and press Enter."""
-    time.sleep(1.5)
-    try:
-        dlg.type_keys("^a")
-        time.sleep(0.3)
-        dlg.type_keys(str(path), with_spaces=True)
-        time.sleep(0.3)
-        dlg.type_keys("{ENTER}")
-    except Exception as e:
-        raise RuntimeError(f"Could not fill dialog: {e}")
-    time.sleep(2)
+        try:
+            item.invoke()
+        except Exception:
+            # Some items don't support invoke; click via coordinates as fallback
+            rect = item.rectangle()
+            cx = rect.left + (rect.right - rect.left) // 2
+            cy = rect.top + (rect.bottom - rect.top) // 2
+            ctypes.windll.user32.SetCursorPos(cx, cy)
+            ctypes.windll.user32.mouse_event(0x02, 0, 0, 0, 0)  # left down
+            ctypes.windll.user32.mouse_event(0x04, 0, 0, 0, 0)  # left up
+        time.sleep(2.5)
 
 
 def convert_one(target: tuple) -> bool:
@@ -159,16 +206,28 @@ def convert_one(target: tuple) -> bool:
 
         # File -> Open FBX
         open_menu_and_click(dlg, ["File", "Open FBX"])
-        time.sleep(2)
-        fill_file_dialog(dlg, fbx)
-        time.sleep(5)  # wait for FBX load
+        dialog = find_dialog("Open")
+        if dialog is None:
+            raise RuntimeError("Open dialog not found")
+        fill_open_dialog(dialog, fbx)
+        print(f"  [open] {fbx.name}")
+        time.sleep(8)  # wait for FBX load
 
         # File -> Save KN5 -> Track/Car
         open_menu_and_click(dlg, ["File", "Save KN5",
                                   "Track" if kind == "track" else "Car"])
-        time.sleep(2)
-        fill_file_dialog(dlg, kn5)
-        time.sleep(3)
+        dialog = find_dialog("Save")
+        if dialog is None:
+            # Some versions use "Save As" or "Export"
+            for title in ("Save", "Save As", "Export"):
+                dialog = find_dialog(title, timeout=5)
+                if dialog:
+                    break
+        if dialog is None:
+            raise RuntimeError("Save dialog not found")
+        fill_open_dialog(dialog, kn5)
+        print(f"  [save] {kn5.name}")
+        time.sleep(5)
 
         if kn5.exists() and kn5.stat().st_size > 0:
             print(f"[OK] {tid}: {kn5.name} ({kn5.stat().st_size/1024:.0f} KB)")
@@ -201,7 +260,6 @@ def main() -> None:
     targets = [t for t in TARGETS if t[0] in wanted] if wanted else TARGETS
 
     print(f"Converting {len(targets)} file(s)...")
-    print("NOTE: requires an interactive desktop session (mouse access).\n")
     results = [(t[0], convert_one(t)) for t in targets]
     ok = sum(1 for _, r in results if r)
     print(f"\n[DONE] {ok}/{len(results)} converted successfully")

@@ -10,3 +10,28 @@
 .site-header nav .current{color:var(--orange)}
 .cars-intro{padding-bottom:85px}.garage{padding-top:0}.garage-grid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr);margin-top:48px}.car-card{background:#e8ebe2;padding:12px}.car-visual{height:270px;overflow:hidden;position:relative}.car-visual:before{border:2px solid rgba(244,245,238,.65);border-radius:48% 52% 40% 60%;content:"";height:82px;left:15%;position:absolute;top:37%;transform:skew(-22deg) rotate(-3deg);width:70%}.car-visual:after{border-bottom:2px solid rgba(244,245,238,.65);border-radius:50%;bottom:34%;content:"";height:20px;left:22%;position:absolute;width:58%}.car-visual span{color:rgba(255,255,255,.75);font:10px var(--mono);left:18px;letter-spacing:.1em;position:absolute;top:16px}.car-visual strong{bottom:8px;color:rgba(255,255,255,.15);font-size:150px;letter-spacing:-.12em;line-height:.7;position:absolute;right:10px}.car-sedan{background:linear-gradient(145deg,#5d7e7c,#b6a27f 48%,#243b42)}.car-taxi{background:linear-gradient(145deg,#d8bd4a,#ce754d 48%,#6d3b36)}.car-van{background:linear-gradient(145deg,#869caa,#7b7099 48%,#30374d)}.car-sport{background:linear-gradient(145deg,#d4674f,#9d3f40 48%,#29233c)}.car-card-body{align-items:flex-start;display:flex;justify-content:space-between;padding:22px 5px 12px}.car-card h2{font-size:22px;letter-spacing:-.05em}.car-card-body p{color:var(--muted);font:10px var(--mono);margin:8px 0 0}.car-state{font:10px var(--mono);letter-spacing:.08em;margin-top:5px;text-align:right}.working-state{color:var(--orange)}.plan-state{color:#657dba}.update-state{color:#705094}.done-state{color:#5d9d75}.car-note{border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6;margin:10px 5px 5px;padding-top:14px}.garage-method{background:var(--ink);color:var(--paper);max-width:none;padding-left:12vw;padding-right:12vw}.garage-method .section-kicker{border-color:rgba(244,245,238,.2);color:#a9b5ae}.garage-method .method-grid{margin-top:35px}.garage-method .method-grid article{border-color:rgba(244,245,238,.2)}.garage-method .method-grid p{color:#a9b5ae}.garage-method .method-grid span{color:var(--lime)}
 @media(max-width:800px){.garage-grid{grid-template-columns:1fr}.garage-method{padding-left:7vw;padding-right:7vw}.car-visual{height:230px}}
+
+/* ---- Bus catalog (buses.html) ---- */
+.bus-controls{align-items:center;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;margin-top:40px}
+.bus-filter{display:flex;flex-wrap:wrap;gap:8px}
+.bus-chip{background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--muted);cursor:pointer;font:500 10px var(--mono);letter-spacing:.06em;padding:7px 13px;text-transform:uppercase;transition:all .15s ease}
+.bus-chip:hover{border-color:var(--orange);color:var(--orange)}
+.bus-chip.active{background:var(--ink);border-color:var(--ink);color:var(--lime)}
+.bus-sort{align-items:center;display:flex;gap:10px}
+.bus-sort label{color:var(--muted);font:500 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.bus-sort select{background:var(--paper);border:1px solid var(--line);border-radius:8px;color:var(--ink);font:500 11px var(--mono);padding:7px 10px}
+.bus-list{margin-top:30px}
+.bus-operator{border-top:1px solid var(--line);margin-top:44px;padding-top:20px}
+.bus-operator-head{align-items:baseline;display:flex;gap:16px;justify-content:space-between;padding:8px 0 14px}
+.bus-operator-head h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.06em;line-height:1;margin:0}
+.bus-operator-head h2 em{color:var(--muted);font-family:var(--mono);font-size:13px;font-style:normal;letter-spacing:.08em}
+.bus-operator-total{color:var(--orange);font:500 12px var(--mono);letter-spacing:.06em;white-space:nowrap}
+.bus-table{border-top:1px solid var(--line)}
+.bus-row{align-items:center;border-bottom:1px solid var(--line);display:grid;gap:16px;grid-template-columns:130px 1fr 70px;padding:9px 4px}
+.bus-row:hover{background:rgba(22,33,29,.03)}
+.bus-row-head{border-bottom:1px solid var(--ink)}
+.bus-row-head span{color:var(--muted);font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.bus-prefix{color:var(--orange);font:500 12px var(--mono)}
+.bus-model{color:var(--ink);font-size:13px;line-height:1.5}
+.bus-count{color:var(--ink);font:500 13px var(--mono);text-align:right}
+@media(max-width:800px){.bus-row{grid-template-columns:90px 1fr 50px;gap:10px}.bus-model{font-size:12px}}
