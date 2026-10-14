@@ -69,9 +69,10 @@ blender --background --python tools/blender/generate_tin_kwong.py
 - Web pages in the repo root are a static "public worklog" (no framework, no build step). Keep them dependency-light.
 - Before changing any `*.ini` that the game/server reads (`data/surfaces.ini`, `models.ini`, `server_cfg.ini`, `ext_config.ini`), run the corresponding validator where one exists (`server\validate-config.ps1`) and keep AC ini section/key naming intact.
 
-## Task execution: small steps, commit and push
+## Task execution: small steps, auto commit and push
 
 - Break every request into small, independently committable steps (one logical change per step: e.g. one script, one config, one doc update). Finish and verify one step before starting the next.
-- Commit after each verified step using the repo's conventional prefixes (`feat:`, `fix:`, `docs:`, `refactor:`).
-- Push to the current working branch after committing so work is backed up in the repo. Do not push directly to `main` — use the session branch and open a pull request for review.
+- Automatically commit after each verified step using the repo's conventional prefixes (`feat:`, `fix:`, `docs:`, `refactor:`) — do not ask for confirmation first.
+- Automatically push to the current working branch after committing so work is backed up in the repo. Do not push directly to `main` — use the session branch and open a pull request for review.
 - Never combine unrelated changes in one commit, and never leave finished work uncommitted at the end of a session.
+- Exception — large files are never auto-committed: do not commit or push files larger than 10 MB or binary build artifacts (`.blend`, `.fbx`, `.kn5`, `.zip`, downloaded model dumps). Leave them uncommitted and tell the user, so they can decide. Small text, config, and code changes always go through the automatic path above.
