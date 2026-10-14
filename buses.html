@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="香港巴士車型目錄 — ACROSS 車隊資料，按營辦商分類。" />
+    <title>HK/1:1 — 巴士車型目錄</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="HK slash 1:1 home"><span class="brand-mark">HK</span><span class="brand-label">/1:1</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#map">Map</a>
+        <a href="index.html#process">Process</a>
+        <a href="cars.html">Car mods</a>
+        <a href="buses.html" class="current">Buses</a>
+      </nav>
+      <span class="build-label"><span class="status-dot"></span> Fleet worklog</span>
+    </header>
+
+    <main>
+      <section class="cars-intro section-wrap">
+        <p class="eyebrow"><span>Assetto Corsa fleet</span><span>HK/1:1 project</span></p>
+        <div class="intro-heading">
+          <h1>Buses for<br /><em>the city.</em></h1>
+          <p>香港巴士車型目錄 — 來自 ACROSS 7.4 的車隊資料，按營辦商分類，可依數量排序。</p>
+        </div>
+      </section>
+
+      <section class="garage section-wrap">
+        <div class="section-kicker"><span>01 / CATALOG</span><span id="catalog-count">LOADING…</span></div>
+
+        <div class="bus-controls">
+          <div class="bus-filter" id="operator-filter">
+            <button class="bus-chip active" data-op="ALL">全部</button>
+          </div>
+          <div class="bus-sort">
+            <label for="sort-select">排序</label>
+            <select id="sort-select">
+              <option value="count">數量（多→少）</option>
+              <option value="alpha">型號（A→Z）</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="bus-list" class="bus-list"></div>
+
+        <p class="map-footnote">
+          資料來源：<a href="https://1005.idv.hk/" target="_blank" rel="noreferrer">ACROSS 7.4 (2024)</a> ·
+          listed_bus_count 為該型號頁面所列車隊數目，或含歷史、後備、訓練或已退役紀錄。
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="index.html"><span class="brand-mark">HK</span><span class="brand-label">/1:1</span></a>
+      <span>Hong Kong for Assetto Corsa</span>
+      <span><a href="index.html">Back to map worklog ↗</a></span>
+    </footer>
+
+    <script src="data/buses.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
