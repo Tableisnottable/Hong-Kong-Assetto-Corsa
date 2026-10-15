@@ -23,3 +23,6 @@ __pycache__/
 
 # 可再生成嘅 AI spline 中間產物 (content/tracks 先係發布版)
 build/HP1C/*/ai/
+
+# 地圖 KN5 (可再生成, 太大唔上傳)
+content/tracks/*/hd_map.kn5
