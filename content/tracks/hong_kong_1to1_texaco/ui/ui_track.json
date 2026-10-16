@@ -1,0 +1,10 @@
+{
+  "name": "Hong Kong 1:1 - Tsuen Wan Texaco",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights.",
+  "tags": ["Hong Kong", "Driving Test", "Open World", "Street"],
+  "country": "Hong Kong",
+  "city": "Hong Kong",
+  "length": "5000m",
+  "width": "14m",
+  "pitboxes": "10"
+}
