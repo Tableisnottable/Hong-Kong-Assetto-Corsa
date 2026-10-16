@@ -26,3 +26,6 @@ build/HP1C/*/ai/
 
 # 地圖 KN5 (可再生成, 太大唔上傳)
 content/tracks/*/hd_map.kn5
+
+# 參考車 (本地參考用, 唔上傳)
+build/_ac_reference/
