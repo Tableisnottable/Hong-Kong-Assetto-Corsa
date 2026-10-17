@@ -29,3 +29,6 @@ content/tracks/*/hd_map.kn5
 
 # 參考車 (本地參考用, 唔上傳)
 build/_ac_reference/
+
+# Sound banks (too large for GitHub, copy from AC or regenerate)
+content/cars/*/sfx/*.bank
