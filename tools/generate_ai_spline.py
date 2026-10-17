@@ -38,6 +38,10 @@ CENTRES = {
     "tin_kwong_road": {"lat": 22.322, "lon": 114.185, "size_km": 2.4},
     "sheung_on_street": {"lat": 22.264, "lon": 114.243, "size_km": 2.4},
     "texaco_road": {"lat": 22.365, "lon": 114.115, "size_km": 3.0},
+    "happy_valley": {"lat": 22.269, "lon": 114.186, "size_km": 2.0},
+    "so_kun_po": {"lat": 22.273, "lon": 114.192, "size_km": 2.0},
+    "shek_am": {"lat": 22.369, "lon": 114.138, "size_km": 2.0},
+    "yau_tong": {"lat": 22.296, "lon": 114.235, "size_km": 2.0},
 }
 
 SAMPLE_DISTANCE = 2.0   # metres between AI points

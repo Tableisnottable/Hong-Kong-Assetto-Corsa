@@ -32,3 +32,6 @@ build/_ac_reference/
 
 # Sound banks (too large for GitHub, copy from AC or regenerate)
 content/cars/*/sfx/*.bank
+
+# Map KN5 build artifacts (regenerable, too large)
+build/HP1C/*/hd_map.kn5

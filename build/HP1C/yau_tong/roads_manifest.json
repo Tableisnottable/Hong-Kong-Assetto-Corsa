@@ -1,0 +1,328 @@
+{
+  "centre": "yau_tong",
+  "road_count": 46,
+  "roads": [
+    {
+      "name": "仁宇圍 Yan Yue Wai",
+      "name:zh": "仁宇圍",
+      "name:en": "Yan Yue Wai",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "偉業街 Wai Yip Street",
+      "name:zh": "偉業街",
+      "name:en": "Wai Yip Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "偉樂街 Wai Lok Street",
+      "name:zh": "偉樂街",
+      "name:en": "Wai Lok Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "啟田道 Kai Tin Road",
+      "name:zh": "啟田道",
+      "name:en": "Kai Tin Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉榮街 Ka Wing Street",
+      "name:zh": "嘉榮街",
+      "name:en": "Ka Wing Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "四山街 Sze Shan Street",
+      "name:zh": "四山街",
+      "name:en": "Sze Shan Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "將藍公路 Tseung Lam Highway",
+      "name:zh": "將藍公路",
+      "name:en": "Tseung Lam Highway",
+      "highway": "motorway_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "將軍澳華人永遠墳場通道 Junk Bay Chinese Permanent Cemetery access road",
+      "name:zh": "將軍澳華人永遠墳場通道",
+      "name:en": "Junk Bay Chinese Permanent Cemetery access road",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "將軍澳－藍田隧道 Tseung Kwan O-Lam Tin Tunnel",
+      "name:zh": "將軍澳－藍田隧道",
+      "name:en": "Tseung Kwan O-Lam Tin Tunnel",
+      "highway": "trunk",
+      "maxspeed": "80"
+    },
+    {
+      "name": "崇信街 Shung Shun Street",
+      "name:zh": "崇信街",
+      "name:en": "Shung Shun Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇和徑 Shung Wo Path",
+      "name:zh": "崇和徑",
+      "name:en": "Shung Wo Path",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇山街 Shung Shan Street",
+      "name:zh": "崇山街",
+      "name:en": "Shung Shan Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇德圍 Shung Tak Wai",
+      "name:zh": "崇德圍",
+      "name:en": "Shung Tak Wai",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "崇耀街 Shung Yiu Street",
+      "name:zh": "崇耀街",
+      "name:en": "Shung Yiu Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "平田徑 Ping Tin Trail",
+      "name:zh": "平田徑",
+      "name:en": "Ping Tin Trail",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "普照路 Po Chiu Road",
+      "name:zh": "普照路",
+      "name:en": "Po Chiu Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "東區海底隧道 Eastern Harbour Crossing",
+      "name:zh": "東區海底隧道",
+      "name:en": "Eastern Harbour Crossing",
+      "highway": "motorway",
+      "maxspeed": "70"
+    },
+    {
+      "name": "東源街 Tung Yuen Street",
+      "name:zh": "東源街",
+      "name:en": "Tung Yuen Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "欣榮街 Yan Wing Street",
+      "name:zh": "欣榮街",
+      "name:en": "Yan Wing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "永福街 Wing Fook Street",
+      "name:zh": "永福街",
+      "name:en": "Wing Fook Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "油塘道 Yau Tong Road",
+      "name:zh": "油塘道",
+      "name:en": "Yau Tong Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "油塘里 Yau Tong Lane",
+      "name:zh": "油塘里",
+      "name:en": "Yau Tong Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "洋紫荊徑 Bauhinia Trail",
+      "name:zh": "洋紫荊徑",
+      "name:en": "Bauhinia Trail",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "澳景路 O King Road",
+      "name:zh": "澳景路",
+      "name:en": "O King Road",
+      "highway": "service",
+      "maxspeed": "30"
+    },
+    {
+      "name": "碧雲道 Pik Wan Road",
+      "name:zh": "碧雲道",
+      "name:en": "Pik Wan Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "繁華街 Fan Wa Street",
+      "name:zh": "繁華街",
+      "name:en": "Fan Wa Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "茜發道 Sin Fat Road",
+      "name:zh": "茜發道",
+      "name:en": "Sin Fat Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "茶果嶺大街 Cha Kwo Ling Main Street",
+      "name:zh": "茶果嶺大街",
+      "name:en": "Cha Kwo Ling Main Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "茶果嶺道 Cha Kwo Ling Road",
+      "name:zh": "茶果嶺道",
+      "name:en": "Cha Kwo Ling Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "草園街 Cho Yuen Street",
+      "name:zh": "草園街",
+      "name:en": "Cho Yuen Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "藍田交匯處 Lam Tin Interchange",
+      "name:zh": "藍田交匯處",
+      "name:en": "Lam Tin Interchange",
+      "highway": "trunk",
+      "maxspeed": "50"
+    },
+    {
+      "name": "藍田晨運徑 Lam Tin Morning Walk Trail",
+      "name:zh": "藍田晨運徑",
+      "name:en": "Lam Tin Morning Walk Trail",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "衛奕信徑第3段 Wilson Trail Section 3",
+      "name:zh": "衛奕信徑第3段",
+      "name:en": "Wilson Trail Section 3",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "高安里 Ko On Lane",
+      "name:zh": "高安里",
+      "name:en": "Ko On Lane",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "高嶺道 Ko Ling Road",
+      "name:zh": "高嶺道",
+      "name:en": "Ko Ling Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "高超徑 Ko Chiu Path",
+      "name:zh": "高超徑",
+      "name:en": "Ko Chiu Path",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "高超道 Ko Chiu Road",
+      "name:zh": "高超道",
+      "name:en": "Ko Chiu Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "高輝道 Ko Fai Road",
+      "name:zh": "高輝道",
+      "name:en": "Ko Fai Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "高雅里 Ko Nga Lane",
+      "name:zh": "高雅里",
+      "name:en": "Ko Nga Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鯉魚門徑 Lei Yue Mun Path",
+      "name:zh": "鯉魚門徑",
+      "name:en": "Lei Yue Mun Path",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "鯉魚門海傍道 Lei Yue Mun Praya Road",
+      "name:zh": "鯉魚門海傍道",
+      "name:en": "Lei Yue Mun Praya Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鯉魚門海傍道中",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "鯉魚門道 Lei Yue Mun Road",
+      "name:zh": "鯉魚門道",
+      "name:en": "Lei Yue Mun Road",
+      "highway": "secondary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "麗港南街 South Laguna Street",
+      "name:zh": "麗港南街",
+      "name:en": "South Laguna Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "麗港街 Laguna Street",
+      "name:zh": "麗港街",
+      "name:en": "Laguna Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "麗翠徑 Lai Chui Path",
+      "name:zh": "麗翠徑",
+      "name:en": "Lai Chui Path",
+      "highway": "footway",
+      "maxspeed": ""
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "centre": "shek_am",
+  "road_count": 80,
+  "roads": [
+    {
+      "name": "上葵涌村路 Sheung Kwai Chung Tsuen Road",
+      "name:zh": "上葵涌村路",
+      "name:en": "Sheung Kwai Chung Tsuen Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "上角街 Sheung Kok Street",
+      "name:zh": "上角街",
+      "name:en": "Sheung Kok Street",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "健全街 Kin Chuen Street",
+      "name:zh": "健全街",
+      "name:en": "Kin Chuen Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "健康街 Kin Hong Street",
+      "name:zh": "健康街",
+      "name:en": "Kin Hong Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "傅屋路 Fu Uk Road",
+      "name:zh": "傅屋路",
+      "name:en": "Fu Uk Road",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "光輝圍 Kwong Fai Circuit",
+      "name:zh": "光輝圍",
+      "name:en": "Kwong Fai Circuit",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "光輝里 Kwong Fai Lane",
+      "name:zh": "光輝里",
+      "name:en": "Kwong Fai Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "和宜合道 Wo Yi Hop Road",
+      "name:zh": "和宜合道",
+      "name:en": "Wo Yi Hop Road",
+      "highway": "primary",
+      "maxspeed": ""
+    },
+    {
+      "name": "嘉健里 Ka Kin Lane",
+      "name:zh": "嘉健里",
+      "name:en": "Ka Kin Lane",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "國瑞路 Kwok Shui Road",
+      "name:zh": "國瑞路",
+      "name:en": "Kwok Shui Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "圍乪街 Wai Kek Street",
+      "name:zh": "圍乪街",
+      "name:en": "Wai Kek Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "圳邊街 Chun Pin Street",
+      "name:zh": "圳邊街",
+      "name:en": "Chun Pin Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "坑坪街 Hang Ping Street",
+      "name:zh": "坑坪街",
+      "name:en": "Hang Ping Street",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "城門道 Shing Mun Road",
+      "name:zh": "城門道",
+      "name:en": "Shing Mun Road",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "城門隧道 Shing Mun Tunnels",
+      "name:zh": "城門隧道",
+      "name:en": "Shing Mun Tunnels",
+      "highway": "trunk",
+      "maxspeed": "70"
+    },
+    {
+      "name": "大圓街 Tai Yuen Street",
+      "name:zh": "大圓街",
+      "name:en": "Tai Yuen Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "大白田徑 Tai Pak Tin Path",
+      "name:zh": "大白田徑",
+      "name:en": "Tai Pak Tin Path",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "大白田村路 Tai Pak Tin Tsuen Road",
+      "name:zh": "大白田村路",
+      "name:en": "Tai Pak Tin Tsuen Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "大白田街 Tai Pak Tin Street",
+      "name:zh": "大白田街",
+      "name:en": "Tai Pak Tin Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "大白田里 Tai Pak Tin Lane",
+      "name:zh": "大白田里",
+      "name:en": "Tai Pak Tin Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "大窩口道 Tai Wo Hau Road",
+      "name:zh": "大窩口道",
+      "name:en": "Tai Wo Hau Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "大連排道 Tai Lin Pai Road",
+      "name:zh": "大連排道",
+      "name:en": "Tai Lin Pai Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "大隴街 Tai Loong Street",
+      "name:zh": "大隴街",
+      "name:en": "Tai Loong Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "安捷街 On Chit Street",
+      "name:zh": "安捷街",
+      "name:en": "On Chit Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "安捷里 On Chit Lane",
+      "name:zh": "安捷里",
+      "name:en": "On Chit Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "安足街 On Chuk Street",
+      "name:zh": "安足街",
+      "name:en": "On Chuk Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "寶梨街 Po Lei Street",
+      "name:zh": "寶梨街",
+      "name:en": "Po Lei Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "屏富徑 Ping Fu Path",
+      "name:zh": "屏富徑",
+      "name:en": "Ping Fu Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "屏麗徑 Ping Lai Path",
+      "name:zh": "屏麗徑",
+      "name:en": "Ping Lai Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "工業街 Kung Yip Street",
+      "name:zh": "工業街",
+      "name:en": "Kung Yip Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "打磚坪街 Ta Chuen Ping Street",
+      "name:zh": "打磚坪街",
+      "name:en": "Ta Chuen Ping Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "昌榮路 Cheung Wing Road",
+      "name:zh": "昌榮路",
+      "name:en": "Cheung Wing Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "梨木道 Lei Muk Road",
+      "name:zh": "梨木道",
+      "name:en": "Lei Muk Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "梨樹路 Lei Shu Road",
+      "name:zh": "梨樹路",
+      "name:en": "Lei Shu Road",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "梨貝街 Lei Pui Street",
+      "name:zh": "梨貝街",
+      "name:en": "Lei Pui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "業成街 Yip Shing Street",
+      "name:zh": "業成街",
+      "name:en": "Yip Shing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "榮芳路 Wing Fong Road",
+      "name:zh": "榮芳路",
+      "name:en": "Wing Fong Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "永業街 Wing Yip Street",
+      "name:zh": "永業街",
+      "name:en": "Wing Yip Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "油麻磡路 Yau Ma Hom Road",
+      "name:zh": "油麻磡路",
+      "name:en": "Yau Ma Hom Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "盛芳街 Shing Fong Street",
+      "name:zh": "盛芳街",
+      "name:en": "Shing Fong Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "石宜路 Shek Yi Road",
+      "name:zh": "石宜路",
+      "name:en": "Shek Yi Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石建街 Shek Kin Street",
+      "name:zh": "石建街",
+      "name:en": "Shek Kin Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "石排街 Shek Pai Street",
+      "name:zh": "石排街",
+      "name:en": "Shek Pai Street",
+      "highway": "primary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "石文徑 Shek Man Path",
+      "name:zh": "石文徑",
+      "name:en": "Shek Man Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "石梨街 Shek Li Street",
+      "name:zh": "石梨街",
+      "name:en": "Shek Li Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石英徑 Shek Ying Path",
+      "name:zh": "石英徑",
+      "name:en": "Shek Ying Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "石蔭路 Shek Yam Road",
+      "name:zh": "石蔭路",
+      "name:en": "Shek Yam Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "石貝街 Shek Pui Street",
+      "name:zh": "石貝街",
+      "name:en": "Shek Pui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "禾塘咀街 Wo Tong Tsui Street",
+      "name:zh": "禾塘咀街",
+      "name:en": "Wo Tong Tsui Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "禾葵里 Wo Kwai Lane",
+      "name:zh": "禾葵里",
+      "name:en": "Wo Kwai Lane",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "童子街 Tung Chi Street",
+      "name:zh": "童子街",
+      "name:en": "Tung Chi Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "耀榮街 Yiu Wing Street",
+      "name:zh": "耀榮街",
+      "name:en": "Yiu Wing Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "耀榮里 Yiu Wing Lane",
+      "name:zh": "耀榮里",
+      "name:en": "Yiu Wing Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "興盛路 Hing Shing Road",
+      "name:zh": "興盛路",
+      "name:en": "Hing Shing Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "興芳路 Hing Fong Road",
+      "name:zh": "興芳路",
+      "name:en": "Hing Fong Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "華星街 Wah Sing Street",
+      "name:zh": "華星街",
+      "name:en": "Wah Sing Street",
+      "highway": "unclassified",
+      "maxspeed": "50"
+    },
+    {
+      "name": "華金徑",
+      "name:zh": "華金徑",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵合街 Kwai Hop Street",
+      "name:zh": "葵合街",
+      "name:en": "Kwai Hop Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵安道 Kwai On Road",
+      "name:zh": "葵安道",
+      "name:en": "Kwai On Road",
+      "highway": "secondary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵定路 Kwai Ting Road",
+      "name:zh": "葵定路",
+      "name:en": "Kwai Ting Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵昌路 Kwai Cheong Road",
+      "name:zh": "葵昌路",
+      "name:en": "Kwai Cheong Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵榮路 Kwai Wing Road",
+      "name:zh": "葵榮路",
+      "name:en": "Kwai Wing Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵涌道 Kwai Chung Road",
+      "name:zh": "葵涌道",
+      "name:en": "Kwai Chung Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵涌金山郊野徑",
+      "name:zh": "葵涌金山郊野徑",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵發路 Kwai Fat Road",
+      "name:zh": "葵發路",
+      "name:en": "Kwai Fat Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵益道 Kwai Yik Road",
+      "name:zh": "葵益道",
+      "name:en": "Kwai Yik Road",
+      "highway": "secondary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵盛圍 Kwai Shing Circuit",
+      "name:zh": "葵盛圍",
+      "name:en": "Kwai Shing Circuit",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵秀路 Kwai Sau Road",
+      "name:zh": "葵秀路",
+      "name:en": "Kwai Sau Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵興路 Kwai Hing Road",
+      "name:zh": "葵興路",
+      "name:en": "Kwai Hing Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "葵葉街 Kwai Yip Street",
+      "name:zh": "葵葉街",
+      "name:en": "Kwai Yip Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "藍田街 Lam Tin Street",
+      "name:zh": "藍田街",
+      "name:en": "Lam Tin Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "衛奕信徑第6段 Wilson Trail Section 6",
+      "name:zh": "衛奕信徑第6段",
+      "name:en": "Wilson Trail Section 6",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "象山邨東路 Cheung Shan Estate Road East",
+      "name:zh": "象山邨東路",
+      "name:en": "Cheung Shan Estate Road East",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "象山邨西路 Cheung Shan Estate Road West",
+      "name:zh": "象山邨西路",
+      "name:en": "Cheung Shan Estate Road West",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "金山引水道 Golden Hill Catchwater",
+      "name:zh": "金山引水道",
+      "name:en": "Golden Hill Catchwater",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "金山路 Golden Hill Road",
+      "name:zh": "金山路",
+      "name:en": "Golden Hill Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "金石徑",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "青山公路－葵涌段 Castle Peak Road – Kwai Chung",
+      "name:zh": "青山公路－葵涌段",
+      "name:en": "Castle Peak Road – Kwai Chung",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "麗梨花街 Lai Lei Fa Street",
+      "name:zh": "麗梨花街",
+      "name:en": "Lai Lei Fa Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "麥理浩徑第6段 MacLehose Trail Section 6",
+      "name:zh": "麥理浩徑第6段",
+      "name:en": "MacLehose Trail Section 6",
+      "highway": "footway",
+      "maxspeed": ""
+    }
+  ]
+}
