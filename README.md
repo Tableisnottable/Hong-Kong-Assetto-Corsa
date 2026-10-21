@@ -309,13 +309,23 @@ ksEditor: body.fbx → <car_id>.kn5
 
 ## 🗺️ 多試場地圖 / Multi-Centre Maps
 
-除天光道外，HD 地圖流水線現已支援所有主要試場。已預先生成：
+HD 地圖流水線現已支援全部 **13 個試場**，所有地圖已生成並安裝到 AC：
 
-| 試場 Centre | 抽取道路 Ways | 斑馬線 | 地圖 FBX | 預覽 |
-|---|---:|---:|---:|---|
-| 天光道 Tin Kwong Road | 5,578 | 337 | 18.2 MB | ✓ |
-| 柴灣常安街 Sheung On Street | 1,669 | 87 | 7.1 MB | ✓ |
-| 荃灣德士古道 Texaco Road | 7,589 | 378 | 21.3 MB | ✓ |
+| 試場 Centre | 區域 Area | 抽取道路 Ways | KN5 大小 | AI 節點 |
+|---|---|---:|---:|---:|
+| 天光道 Tin Kwong Road | 九龍土瓜灣 | 5,578 | 69.3 MB | 3,394 |
+| 柴灣常安街 Sheung On Street | 港島柴灣 | 1,669 | 26.5 MB | 2,775 |
+| 荃灣德士古道 Texaco Road | 新界荃灣 | 7,589 | 81.3 MB | 7,870 |
+| 跑馬地 Happy Valley | 港島 | 1,719 | 32.5 MB | 3,403 |
+| 掃桿埔 So Kun Po | 港島 | 1,807 | 29.9 MB | 1,543 |
+| 石蔭 Shek Am | 新界葵涌 | 2,074 | 30.4 MB | 551 |
+| 油塘 Yau Tong | 九龍 | 1,258 | 18.4 MB | 2,043 |
+| 忠義街 Chung Ngai Street | 九龍何文田 | 4,264 | 48.7 MB | 3,744 |
+| 培正道 Pui Ching Road | 九龍何文田 | 3,774 | 45.7 MB | 4,739 |
+| 永孝街 Wing Hau Street | 九龍土瓜灣 | 2,861 | 36.4 MB | 3,394 |
+| 鴨脷洲 Ap Lei Chau | 港島南區 | 1,104 | 14.1 MB | 2,159 |
+| 元朗南生圍 Yuen Long | 新界元朗 | 585 | 11.1 MB | 1,367 |
+| 沙田小瀝源 Sha Tin | 新界沙田 | 2,849 | 34.8 MB | 1,047 |
 
 ### 多試場指令 / Multi-Centre Commands
 ```powershell
@@ -328,38 +338,86 @@ python tools\prepare_hd_map.py sheung_on_street texaco_road
 # 生成 HD 地圖 (指定試場)
 blender --background --python tools\blender\generate_hd_map.py -- texaco_road
 
+# 轉換 KN5 (無需 ksEditor)
+blender --background --python tools\blender\export_kn5_direct.py -- build\HP1C\texaco_road\hd_map.fbx build\HP1C\texaco_road\hd_map.kn5
+
 # 渲染預覽
 blender --background --python tools\blender\preview_hd_map.py -- texaco_road
 ```
-
-### 其他可用試場 / Other Available Centres
-`happy_valley` (跑馬地)、`so_kun_po` (掃桿埔)、`shek_am` (石蔭)、`yau_tong` (油塘) — 座標已配置，隨時可生成。
 
 ---
 
 ## 🤖 AI 路線 / AI Splines
 
-3 個試場嘅 AI 路線已生成（V7 格式，`fast_lane.ai`）：
+全部 13 個試場嘅 AI 路線已生成（V7 格式，`fast_lane.ai`），採用**動態速度**：
 
-| 試場 | 節點數 | 檔案大小 | 位置 |
-|---|---:|---:|---|
-| 天光道 | 61,540 | 5.5 MB | `content/tracks/hong_kong_1to1/ai/fast_lane.ai` |
-| 柴灣常安街 | 17,376 | 1.5 MB | `content/tracks/hong_kong_1to1_sheung_on/ai/fast_lane.ai` |
-| 荃灣德士古道 | 61,916 | 5.6 MB | `content/tracks/hong_kong_1to1_texaco/ai/fast_lane.ai` |
+| 試場 | 節點數 | 速度範圍 | 檔案大小 |
+|---|---:|---|---:|
+| 天光道 | 3,394 | 32-50 km/h | 305 KB |
+| 柴灣常安街 | 2,775 | 18-50 km/h | 249 KB |
+| 荃灣德士古道 | 7,870 | 16-50 km/h | 707 KB |
+| 跑馬地 | 3,403 | 16-50 km/h | 306 KB |
+| 掃桿埔 | 1,543 | 18-50 km/h | 139 KB |
+| 石蔭 | 551 | 32-50 km/h | 50 KB |
+| 油塘 | 2,043 | 17-50 km/h | 184 KB |
+| 忠義街 | 3,744 | 17-50 km/h | 336 KB |
+| 培正道 | 4,739 | 17-50 km/h | 426 KB |
+| 永孝街 | 3,394 | 32-50 km/h | 305 KB |
+| 鴨脷洲 | 2,159 | 16-50 km/h | 194 KB |
+| 元朗 | 1,367 | 34-50 km/h | 123 KB |
+| 沙田 | 1,047 | 39-50 km/h | 94 KB |
 
 ### 生成方式 / Generation
 ```powershell
-python tools\generate_ai_spline.py              # 全部
+python tools\generate_ai_spline.py              # 全部 13 個
 python tools\generate_ai_spline.py texaco_road  # 指定試場
 ```
 
 - 從 OSM 道路中心線取樣（每 2 米一點）
-- 貪婪最近鄰鏈接成單一閉合 spline
-- 優先主幹道/次要道路/住宅道路（跳過行人路）
+- 貪婪最近鄰鏈接成單一閉合 spline（MAX_GAP=100m，支援反向端點）
+- **動態速度**：根據彎路半徑計算 `v = √(μ·g·r)`（μ=0.4 保守市區摩擦）
+- 速度平滑 + 加速限制（每點最多 ±5 km/h）
 - 格式：AC V7（version=7, pos+length+id, 附加 speed/radius/normal/forward）
 - 格式已用 AssettoServer FastLaneParser 驗證
 
 ### 備註 / Notes
 - AI 線係「全路網單一 spline」（覆蓋所有可駕駛道路）
+- 直路 50 km/h，急彎自動減速到 16-40 km/h
 - 如需賽道式 AI（跟住賽道線），可後續加入 `ai_spline` 或 junction 系統
-- 速度預設 50 km/h 市區；可喺生成器改 `MAX_SPEED`
+
+---
+
+## 📋 考試系統 / HK Exam System
+
+CSP Lua app，提供路試路線指引同評分（`apps/lua/hk_exam/`）：
+
+| 功能 | 說明 |
+|---|---|
+| 路線資料庫 | **31 條路線**，涵蓋全部 13 個試場 |
+| 評分系統 | 起始 100 分，70 分合格 |
+| 超速扣分 | -5 / -10 / -15 分（視乎超速程度） |
+| 碰撞扣分 | -15 分（速度突降偵測） |
+| 無故停車 | -5 分（停車超過 3 秒） |
+| 自動步進 | 按行駛距離自動推進步驟（可設定） |
+| 轉向指示 | 支援 16 種轉向類型（L/R/迴旋處/掉頭/斜路起步等） |
+| 成績總結 | 合格/不合格、時間、距離、扣分明細 |
+
+### 安裝 / Installation
+```powershell
+# 複製到 AC（已安裝）
+Copy-Item "apps\lua\hk_exam\*" "A:\SteamLibrary\steamapps\common\assettocorsa\apps\lua\hk_exam\" -Recurse -Force
+```
+
+### 使用 / Usage
+1. 開 AC → Drive → 揀 HK 試場
+2. App 側欄啟用 **HK Exam System**
+3. 揀路線 → 按「開始考試」
+4. 綁定快捷鍵（AC controls）：
+   - `APP_HK_EXAM_START` — 開始考試
+   - `APP_HK_EXAM_END` — 結束考試
+   - `APP_HK_EXAM_NEXT` — 下一步
+
+### 技術 / Technical
+- CSP 0.2.11 Lua app（`manifest.ini` + `script.windowMain/update`）
+- 全部 21 個 API 已對照 CSP SDK（`extension/internal/lua-sdk/ac_apps/lib.lua`）驗證
+- 路線由 `asset/routes/all_road_test_routes.json` 自動生成 `routes.lua`
