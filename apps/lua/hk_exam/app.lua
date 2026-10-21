@@ -315,14 +315,12 @@ local startButton = ac.ControlButton('__APP_HK_EXAM_START')
 local endButton = ac.ControlButton('__APP_HK_EXAM_END')
 local nextButton = ac.ControlButton('__APP_HK_EXAM_NEXT')
 
-function script.updateHotkeys()
-  if startButton:pressed() and not state.active then
-    startExam()
-  end
-  if endButton:pressed() and state.active then
-    finishExam()
-  end
-  if nextButton:pressed() and state.active then
-    advanceStep(true)
-  end
-end
+startButton:onPressed(function()
+  if not state.active then startExam() end
+end)
+endButton:onPressed(function()
+  if state.active then finishExam() end
+end)
+nextButton:onPressed(function()
+  if state.active then advanceStep(true) end
+end)
