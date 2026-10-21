@@ -1,0 +1,32 @@
+{
+  "pui_ching_road": {
+    "lat": 22.3179742,
+    "lon": 114.1773149,
+    "name": "培正道 Pui Ching Road, 何文田山 Ho Man Tin Hill, 何文田 Ho Man Tin, 九龍城區 Kowloon"
+  },
+  "wing_hau_street": {
+    "lat": 22.3155,
+    "lon": 114.1885,
+    "name": "Wing Hau Street, To Kwa Wan, Kowloon (estimated from district)"
+  },
+  "ap_lei_chau": {
+    "lat": 22.2399354,
+    "lon": 114.1545244,
+    "name": "鴨脷洲 Ap Lei Chau, 南區 Southern District, 香港島 Hong Kong Island, 香港 Hong K"
+  },
+  "yuen_long": {
+    "lat": 22.4623971,
+    "lon": 114.0379722,
+    "name": "南生圍 Nam Sang Wai, 元朗區 Yuen Long District, 新界 New Territories, 香港 Hong "
+  },
+  "sha_tin": {
+    "lat": 22.3887506,
+    "lon": 114.2033455,
+    "name": "小瀝源路 Siu Lek Yuen Road, 石門 Shek Mun, 沙田區 Sha Tin District, 新界 New Terr"
+  },
+  "chung_ngai_street": {
+    "lat": 22.3175,
+    "lon": 114.1745,
+    "name": "Chung Ngai Street, Ho Man Tin, Kowloon (estimated from district)"
+  }
+}

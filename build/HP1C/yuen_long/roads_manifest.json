@@ -1,0 +1,356 @@
+{
+  "centre": "yuen_long",
+  "road_count": 50,
+  "roads": [
+    {
+      "name": "B段第一街 Section B, 1st Street",
+      "name:zh": "B段第一街",
+      "name:en": "Section B, 1st Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "B段第三街 Section B, 3rd Street",
+      "name:zh": "B段第三街",
+      "name:en": "Section B, 3rd Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "B段第二街 Section B, 2nd Street",
+      "name:zh": "B段第二街",
+      "name:en": "Section B, 2nd Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "B段第五街 Section B, 5th Street",
+      "name:zh": "B段第五街",
+      "name:en": "Section B, 5th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "B段第四街 Section B, 4th Street",
+      "name:zh": "B段第四街",
+      "name:en": "Section B, 4th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第一街 Section C, 1st Street",
+      "name:zh": "C段第一街",
+      "name:en": "Section C, 1st Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第七街 Section C, 7th Street",
+      "name:zh": "C段第七街",
+      "name:en": "Section C, 7th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第三街 Section C, 3rd Street",
+      "name:zh": "C段第三街",
+      "name:en": "Section C, 3rd Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第九街 Secton C, 9th Street",
+      "name:zh": "C段第九街",
+      "name:en": "Secton C, 9th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第二街 Section C, 2nd Street",
+      "name:zh": "C段第二街",
+      "name:en": "Section C, 2nd Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第五街 Section C, 5th Street",
+      "name:zh": "C段第五街",
+      "name:en": "Section C, 5th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第八街 Section C, 8th Street",
+      "name:zh": "C段第八街",
+      "name:en": "Section C, 8th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第六街 Section C, 6th Street",
+      "name:zh": "C段第六街",
+      "name:en": "Section C, 6th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "C段第四街 Section C, 4th Street",
+      "name:zh": "C段第四街",
+      "name:en": "Section C, 4th Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "元朗公路 Yuen Long Highway",
+      "name:zh": "元朗公路",
+      "name:en": "Yuen Long Highway",
+      "highway": "motorway",
+      "maxspeed": "80"
+    },
+    {
+      "name": "元朗舊墟路 Yuen Long Kau Hui Road",
+      "name:zh": "元朗舊墟路",
+      "name:en": "Yuen Long Kau Hui Road",
+      "highway": "unclassified",
+      "maxspeed": "50"
+    },
+    {
+      "name": "南生圍路 Nam Sang Wai Road",
+      "name:zh": "南生圍路",
+      "name:en": "Nam Sang Wai Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "壆圍南路 Pok Wai South Road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "壆圍西路 Pok Wai West Road",
+      "name:zh": "壆圍西路",
+      "name:en": "Pok Wai West Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "宏利街 Wang Lee Street",
+      "name:zh": "宏利街",
+      "name:en": "Wang Lee Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "宏富街 Wang Fu Street",
+      "name:zh": "宏富街",
+      "name:en": "Wang Fu Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "宏業西街 Wang Yip Street West",
+      "name:zh": "宏業西街",
+      "name:en": "Wang Yip Street West",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "宏樂街 Wang Lok Street",
+      "name:zh": "宏樂街",
+      "name:en": "Wang Lok Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "富業街 Fu Yip Street",
+      "name:zh": "富業街",
+      "name:en": "Fu Yip Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "山貝河東路 San Pui Ho East Road",
+      "name:zh": "山貝河東路",
+      "name:en": "San Pui Ho East Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "山貝路 Shan Pui Road",
+      "name:zh": "山貝路",
+      "name:en": "Shan Pui Road",
+      "highway": "residential",
+      "maxspeed": "50"
+    },
+    {
+      "name": "康業街 Hong Yip Street",
+      "name:zh": "康業街",
+      "name:en": "Hong Yip Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "德業街 Tak Yip Street",
+      "name:zh": "德業街",
+      "name:en": "Tak Yip Street",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "攸壆路 Yau Pok Road",
+      "name:zh": "攸壆路",
+      "name:en": "Yau Pok Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "東頭圍新村一巷 Tung Tau Wai San Tsuen 1St Lane",
+      "name:zh": "東頭圍新村一巷",
+      "name:en": "Tung Tau Wai San Tsuen 1St Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "東頭圍新村三巷 Tung Tau Wai San Tsuen 3Rd Lane",
+      "name:zh": "東頭圍新村三巷",
+      "name:en": "Tung Tau Wai San Tsuen 3Rd Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "東頭圍新村二巷 Tung Tau Wai San Tsuen 2Nd Lane",
+      "name:zh": "東頭圍新村二巷",
+      "name:en": "Tung Tau Wai San Tsuen 2Nd Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "東頭圍新村四巷 Tung Tau Wai San Tsuen 4Th Lane",
+      "name:zh": "東頭圍新村四巷",
+      "name:en": "Tung Tau Wai San Tsuen 4Th Lane",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "松濤南路 Pinery Road South",
+      "name:zh": "松濤南路",
+      "name:en": "Pinery Road South",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "流業街 Lau Yip Street",
+      "name:zh": "流業街",
+      "name:en": "Lau Yip Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "涌業路 Chung Yip Road",
+      "name:zh": "涌業路",
+      "name:en": "Chung Yip Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "福喜街 Fuk Hi Street",
+      "name:zh": "福喜街",
+      "name:en": "Fuk Hi Street",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "福宏街 Fuk Wang Street",
+      "name:zh": "福宏街",
+      "name:en": "Fuk Wang Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "紫荊南路 Bauhinia Road South",
+      "name:zh": "紫荊南路",
+      "name:en": "Bauhinia Road South",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "紫荊東路 Bauhinia Road East",
+      "name:zh": "紫荊東路",
+      "name:en": "Bauhinia Road East",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "翠桐里 Chui Tung Lane",
+      "name:zh": "翠桐里",
+      "name:en": "Chui Tung Lane",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "蠔洲路 Ho Chau Road",
+      "name:zh": "蠔洲路",
+      "name:en": "Ho Chau Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "邊境路 Border Fence Road",
+      "name:zh": "邊境路",
+      "name:en": "Border Fence Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "錦壆路 Kam Pok Road",
+      "name:zh": "錦壆路",
+      "name:en": "Kam Pok Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "錦壆路東 Kam Pok Road East",
+      "name:zh": "錦壆路東",
+      "name:en": "Kam Pok Road East",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "錦壆路西 Kam Pok Road West",
+      "name:zh": "錦壆路西",
+      "name:en": "Kam Pok Road West",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "錦綉大道南 Fairview Park Road South",
+      "name:zh": "錦綉大道南",
+      "name:en": "Fairview Park Road South",
+      "highway": "unclassified",
+      "maxspeed": "30"
+    },
+    {
+      "name": "錦綉花園大道 Fairview Park Boulevard",
+      "name:zh": "錦綉花園大道",
+      "name:en": "Fairview Park Boulevard",
+      "highway": "unclassified",
+      "maxspeed": "30"
+    },
+    {
+      "name": "青山公路－潭尾段 Castle Peak Road – Tam Mi",
+      "name:zh": "青山公路－潭尾段",
+      "name:en": "Castle Peak Road – Tam Mi",
+      "highway": "secondary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "青朗公路 Tsing Long Highway",
+      "name:zh": "青朗公路",
+      "name:en": "Tsing Long Highway",
+      "highway": "motorway",
+      "maxspeed": "100"
+    }
+  ]
+}

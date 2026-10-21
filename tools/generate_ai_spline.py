@@ -42,6 +42,12 @@ CENTRES = {
     "so_kun_po": {"lat": 22.273, "lon": 114.192, "size_km": 2.0},
     "shek_am": {"lat": 22.369, "lon": 114.138, "size_km": 2.0},
     "yau_tong": {"lat": 22.296, "lon": 114.235, "size_km": 2.0},
+    "chung_ngai_street": {"lat": 22.3175, "lon": 114.1745, "size_km": 2.0},
+    "pui_ching_road": {"lat": 22.3179742, "lon": 114.1773149, "size_km": 2.0},
+    "wing_hau_street": {"lat": 22.3155, "lon": 114.1885, "size_km": 2.0},
+    "ap_lei_chau": {"lat": 22.2399354, "lon": 114.1545244, "size_km": 2.0},
+    "yuen_long": {"lat": 22.4623971, "lon": 114.0379722, "size_km": 2.5},
+    "sha_tin": {"lat": 22.3887506, "lon": 114.2033455, "size_km": 2.0},
 }
 
 SAMPLE_DISTANCE = 2.0   # metres between AI points

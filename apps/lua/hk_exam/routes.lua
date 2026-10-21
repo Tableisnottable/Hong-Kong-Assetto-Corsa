@@ -1,5 +1,5 @@
 -- HK Exam Routes (auto-generated from asset/routes/all_road_test_routes.json)
--- Only centres with generated maps are included.
+-- All 13 test centres with generated maps are included.
 
 return {
   ["happy_valley_1"] = {
@@ -165,6 +165,110 @@ return {
     },
   },
 
+  ["chung_ngai_1"] = {
+    centre = "chung_ngai_street",
+    name = "忠義街路線一（私家車）",
+    steps = {
+      { step = 1, instruction = "試場駛出", turn = "S_PARK" },
+      { step = 2, instruction = "考泊位S位", turn = "STRAIGHT" },
+      { step = 3, instruction = "沿忠義街", turn = "R" },
+      { step = 4, instruction = "右轉孝民街", turn = "R" },
+      { step = 5, instruction = "右轉忠孝街", turn = "R" },
+      { step = 6, instruction = "右轉佛光街", turn = "R" },
+      { step = 7, instruction = "右轉忠孝街", turn = "R" },
+      { step = 8, instruction = "右轉孝民街", turn = "FINISH" },
+    },
+  },
+
+  ["chung_ngai_2"] = {
+    centre = "chung_ngai_street",
+    name = "忠義街路線二",
+    steps = {
+      { step = 1, instruction = "試場駛出", turn = "S_PARK" },
+      { step = 2, instruction = "考泊位S位", turn = "STRAIGHT" },
+      { step = 3, instruction = "忠義街", turn = "L" },
+      { step = 4, instruction = "佛光街方向", turn = "ROUNDABOUT" },
+      { step = 5, instruction = "迴旋處", turn = "FINISH" },
+    },
+  },
+
+  ["pui_ching_1"] = {
+    centre = "pui_ching_road",
+    name = "培正道路線一",
+    steps = {
+      { step = 1, instruction = "試場", turn = "L" },
+      { step = 2, instruction = "左轉培正道", turn = "STRAIGHT" },
+      { step = 3, instruction = "直上常興街", turn = "L" },
+      { step = 4, instruction = "左轉常盛街", turn = "L" },
+      { step = 5, instruction = "左轉石鼓街", turn = "L" },
+      { step = 6, instruction = "左轉巴富街", turn = "R" },
+      { step = 7, instruction = "右轉公主道", turn = "L" },
+      { step = 8, instruction = "左轉亞皆老街", turn = "L" },
+      { step = 9, instruction = "左轉窩打老道", turn = "L" },
+      { step = 10, instruction = "左轉培正道", turn = "SLOPE_START" },
+      { step = 11, instruction = "文福道斜路開車", turn = "R" },
+      { step = 12, instruction = "右轉文運道", turn = "L" },
+      { step = 13, instruction = "左轉培正道", turn = "FINISH" },
+    },
+  },
+
+  ["pui_ching_2"] = {
+    centre = "pui_ching_road",
+    name = "培正道路線二",
+    steps = {
+      { step = 1, instruction = "試場", turn = "STRAIGHT" },
+      { step = 2, instruction = "培正道", turn = "L" },
+      { step = 3, instruction = "公主道方向", turn = "MERGE" },
+      { step = 4, instruction = "合流", turn = "L" },
+      { step = 5, instruction = "亞皆老街", turn = "FINISH" },
+    },
+  },
+
+  ["pui_ching_3"] = {
+    centre = "pui_ching_road",
+    name = "培正道路線三",
+    steps = {
+      { step = 1, instruction = "試場", turn = "STRAIGHT" },
+      { step = 2, instruction = "培正道", turn = "L" },
+      { step = 3, instruction = "常興街", turn = "L" },
+      { step = 4, instruction = "常盛街", turn = "UTURN" },
+      { step = 5, instruction = "常康街掉頭", turn = "FINISH" },
+    },
+  },
+
+  ["pui_ching_4"] = {
+    centre = "pui_ching_road",
+    name = "培正道路線四",
+    steps = {
+      { step = 1, instruction = "試場", turn = "STRAIGHT" },
+      { step = 2, instruction = "培正道", turn = "L" },
+      { step = 3, instruction = "文福道", turn = "L" },
+      { step = 4, instruction = "窩打老道", turn = "FINISH" },
+    },
+  },
+
+  ["wing_hau_1"] = {
+    centre = "wing_hau_street",
+    name = "永孝街路線一",
+    steps = {
+      { step = 1, instruction = "試場開出", turn = "STRAIGHT" },
+      { step = 2, instruction = "永孝街", turn = "L" },
+      { step = 3, instruction = "馬頭圍道方向", turn = "L" },
+      { step = 4, instruction = "漆咸道北", turn = "FINISH" },
+    },
+  },
+
+  ["wing_hau_2"] = {
+    centre = "wing_hau_street",
+    name = "永孝街路線二",
+    steps = {
+      { step = 1, instruction = "試場開出", turn = "STRAIGHT" },
+      { step = 2, instruction = "永孝街", turn = "L" },
+      { step = 3, instruction = "土瓜灣道方向", turn = "LANE_CHANGE" },
+      { step = 4, instruction = "雙線切入", turn = "FINISH" },
+    },
+  },
+
   ["yau_tong_1"] = {
     centre = "yau_tong",
     name = "油塘路線一",
@@ -240,6 +344,73 @@ return {
       { step = 3, instruction = "大窩口方向", turn = "STRAIGHT" },
       { step = 4, instruction = "荃灣路", turn = "ROUNDABOUT" },
       { step = 5, instruction = "迴旋處", turn = "FINISH" },
+    },
+  },
+
+  ["ap_lei_chau_1"] = {
+    centre = "ap_lei_chau",
+    name = "鴨脷洲場外路線一",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "香港仔市區", turn = "TUNNEL" },
+      { step = 4, instruction = "隧道出入口", turn = "MERGE" },
+      { step = 5, instruction = "快速公路匯入", turn = "FINISH" },
+    },
+  },
+
+  ["ap_lei_chau_2"] = {
+    centre = "ap_lei_chau",
+    name = "鴨脷洲場外路線二",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "香港仔海旁", turn = "ROUNDABOUT" },
+      { step = 4, instruction = "迴旋處", turn = "FINISH" },
+    },
+  },
+
+  ["yuen_long_1"] = {
+    centre = "yuen_long",
+    name = "元朗場外路線一",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "元朗鄉郊道路", turn = "ROUNDABOUT" },
+      { step = 4, instruction = "迴旋處", turn = "FINISH" },
+    },
+  },
+
+  ["yuen_long_2"] = {
+    centre = "yuen_long",
+    name = "元朗場外路線二",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "元朗鄉郊道路", turn = "STRAIGHT" },
+      { step = 4, instruction = "快速路段", turn = "FINISH" },
+    },
+  },
+
+  ["sha_tin_1"] = {
+    centre = "sha_tin",
+    name = "沙田場外路線一",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "沙田市區", turn = "L" },
+      { step = 4, instruction = "沙田圍路", turn = "FINISH" },
+    },
+  },
+
+  ["sha_tin_2"] = {
+    centre = "sha_tin",
+    name = "沙田場外路線二",
+    steps = {
+      { step = 1, instruction = "場內乙部（泊位、掉頭）", turn = "IN_YARD" },
+      { step = 2, instruction = "場外開出", turn = "STRAIGHT" },
+      { step = 3, instruction = "沙田市區", turn = "ROUNDABOUT" },
+      { step = 4, instruction = "迴旋處", turn = "FINISH" },
     },
   },
 

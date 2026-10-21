@@ -1,0 +1,384 @@
+{
+  "centre": "ap_lei_chau",
+  "road_count": 54,
+  "roads": [
+    {
+      "name": "Staunton Bridge",
+      "name:zh": "",
+      "name:en": "Staunton Bridge",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "car park road",
+      "name:zh": "",
+      "name:en": "",
+      "highway": "service",
+      "maxspeed": "15"
+    },
+    {
+      "name": "倫敦里 London Lane",
+      "name:zh": "倫敦里",
+      "name:en": "London Lane",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "利南道 Lee Nam Road",
+      "name:zh": "利南道",
+      "name:en": "Lee Nam Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "利景街 Lee King Street",
+      "name:zh": "利景街",
+      "name:en": "Lee King Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "利東邨道 Lei Tung Estate Road",
+      "name:zh": "利東邨道",
+      "name:en": "Lei Tung Estate Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "利枝道 Lee Chi Road",
+      "name:zh": "利枝道",
+      "name:en": "Lee Chi Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "利榮街 Lee Wing Street",
+      "name:zh": "利榮街",
+      "name:en": "Lee Wing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "利樂街 Lee Lok Street",
+      "name:zh": "利樂街",
+      "name:en": "Lee Lok Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "利民道 Lee Man Road",
+      "name:zh": "利民道",
+      "name:en": "Lee Man Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "利興街 Lee Hing Street",
+      "name:zh": "利興街",
+      "name:en": "Lee Hing Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "南寧街 Nam Ning Street",
+      "name:zh": "南寧街",
+      "name:en": "Nam Ning Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "奉天街 Fung Tin Street",
+      "name:zh": "奉天街",
+      "name:en": "Fung Tin Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "好景街 Ho King Street",
+      "name:zh": "好景街",
+      "name:en": "Ho King Street",
+      "highway": "pedestrian",
+      "maxspeed": ""
+    },
+    {
+      "name": "山明街 Shan Ming Street",
+      "name:zh": "山明街",
+      "name:en": "Shan Ming Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "平瀾街 Ping Lan Street",
+      "name:zh": "平瀾街",
+      "name:en": "Ping Lan Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "怡南路 Yi Nam Road",
+      "name:zh": "怡南路",
+      "name:en": "Yi Nam Road",
+      "highway": "tertiary_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "怡雅路 Yi Nga Drive",
+      "name:zh": "怡雅路",
+      "name:en": "Yi Nga Drive",
+      "highway": "service",
+      "maxspeed": ""
+    },
+    {
+      "name": "悅海街 Yuet Hoi Street",
+      "name:zh": "悅海街",
+      "name:en": "Yuet Hoi Street",
+      "highway": "unclassified",
+      "maxspeed": "30"
+    },
+    {
+      "name": "惠福道 Welfare Road",
+      "name:zh": "惠福道",
+      "name:en": "Welfare Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "惠風街 Wai Fung Street",
+      "name:zh": "惠風街",
+      "name:en": "Wai Fung Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "成都道 Chengtu Road",
+      "name:zh": "成都道",
+      "name:en": "Chengtu Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "新市街 San Shi Street",
+      "name:zh": "新市街",
+      "name:en": "San Shi Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "東勝道 Tung Sing Road",
+      "name:zh": "東勝道",
+      "name:en": "Tung Sing Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "業勤街 Yip Kan Street",
+      "name:zh": "業勤街",
+      "name:en": "Yip Kan Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "洪聖街 Hung Shing Street",
+      "name:zh": "洪聖街",
+      "name:en": "Hung Shing Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "海怡路 South Horizon Drive",
+      "name:zh": "海怡路",
+      "name:en": "South Horizon Drive",
+      "highway": "tertiary",
+      "maxspeed": "50"
+    },
+    {
+      "name": "深灣道 Shum Wan Road",
+      "name:zh": "深灣道",
+      "name:en": "Shum Wan Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "湖北街 Wu Pak Street",
+      "name:zh": "湖北街",
+      "name:en": "Wu Pak Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "湖南街 Wu Nam Street",
+      "name:zh": "湖南街",
+      "name:en": "Wu Nam Street",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "漁光道 Yue Kwong Road",
+      "name:zh": "漁光道",
+      "name:en": "Yue Kwong Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "漁利街 Yue Lei Street",
+      "name:zh": "漁利街",
+      "name:en": "Yue Lei Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "漁安苑道 Yue On Court Road",
+      "name:zh": "漁安苑道",
+      "name:en": "Yue On Court Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "漁暉道 Yue Fai Road",
+      "name:zh": "漁暉道",
+      "name:en": "Yue Fai Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "田灣山道 Tin Wan Hill Road",
+      "name:zh": "田灣山道",
+      "name:en": "Tin Wan Hill Road",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "田灣山道天橋 Tin Wan Hill Road flyover",
+      "name:zh": "田灣山道天橋",
+      "name:en": "Tin Wan Hill Road flyover",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "田灣海旁道 Tin Wan Praya Road",
+      "name:zh": "田灣海旁道",
+      "name:en": "Tin Wan Praya Road",
+      "highway": "unclassified",
+      "maxspeed": ""
+    },
+    {
+      "name": "田灣街 Tin Wan Street",
+      "name:zh": "田灣街",
+      "name:en": "Tin Wan Street",
+      "highway": "primary_link",
+      "maxspeed": "50"
+    },
+    {
+      "name": "石排灣道 Shek Pai Wan Road",
+      "name:zh": "石排灣道",
+      "name:en": "Shek Pai Wan Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "華庭街 Wah Ting Street",
+      "name:zh": "華庭街",
+      "name:en": "Wah Ting Street",
+      "highway": "residential",
+      "maxspeed": "30"
+    },
+    {
+      "name": "西安街 Sai On Street",
+      "name:zh": "西安街",
+      "name:en": "Sai On Street",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "觀海徑 Kwun Hoi Path",
+      "name:zh": "觀海徑",
+      "name:en": "Kwun Hoi Path",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "香港仔大道 Aberdeen Main Road",
+      "name:zh": "香港仔大道",
+      "name:en": "Aberdeen Main Road",
+      "highway": "secondary",
+      "maxspeed": ""
+    },
+    {
+      "name": "香港仔海傍道 Aberdeen Praya Road",
+      "name:zh": "香港仔海傍道",
+      "name:en": "Aberdeen Praya Road",
+      "highway": "primary",
+      "maxspeed": "70"
+    },
+    {
+      "name": "香港仔舊大街 Old Main Street Aberdeen",
+      "name:zh": "香港仔舊大街",
+      "name:en": "Old Main Street Aberdeen",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "香葉徑 Heung Yip Path",
+      "name:zh": "香葉徑",
+      "name:en": "Heung Yip Path",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "香葉道 Heung Yip Road",
+      "name:zh": "香葉道",
+      "name:en": "Heung Yip Road",
+      "highway": "footway",
+      "maxspeed": ""
+    },
+    {
+      "name": "魚市場道 Yue Shi Cheung Road",
+      "name:zh": "魚市場道",
+      "name:en": "Yue Shi Cheung Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴨脷洲大橋 Ap Lei Chau Bridge",
+      "name:zh": "鴨脷洲大橋",
+      "name:en": "Ap Lei Chau Bridge",
+      "highway": "trunk_link",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴨脷洲大街 Main Street, Ap Lei Chau",
+      "name:zh": "鴨脷洲大街",
+      "name:en": "Main Street, Ap Lei Chau",
+      "highway": "unclassified",
+      "maxspeed": "30"
+    },
+    {
+      "name": "鴨脷洲徑 Ap Lei Chau Drive",
+      "name:zh": "鴨脷洲徑",
+      "name:en": "Ap Lei Chau Drive",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴨脷洲橋道 Ap Lei Chau Bridge Road",
+      "name:zh": "鴨脷洲橋道",
+      "name:en": "Ap Lei Chau Bridge Road",
+      "highway": "tertiary",
+      "maxspeed": ""
+    },
+    {
+      "name": "鴨脷洲海旁道 Ap Lei Chau Praya Road",
+      "name:zh": "鴨脷洲海旁道",
+      "name:en": "Ap Lei Chau Praya Road",
+      "highway": "residential",
+      "maxspeed": ""
+    },
+    {
+      "name": "黃竹坑道 Wong Chuk Hang Road",
+      "name:zh": "黃竹坑道",
+      "name:en": "Wong Chuk Hang Road",
+      "highway": "trunk",
+      "maxspeed": "50"
+    }
+  ]
+}

@@ -57,6 +57,30 @@ CENTRES = {
         "name": "油塘", "lat": 22.296, "lon": 114.235, "size_km": 2.0,
         "note": "九龍油塘 - 輕型貨車考場",
     },
+    "chung_ngai_street": {
+        "name": "忠義街", "lat": 22.3175, "lon": 114.1745, "size_km": 2.0,
+        "note": "九龍何文田 - 私家車/輕型貨車考場",
+    },
+    "pui_ching_road": {
+        "name": "培正道", "lat": 22.3179742, "lon": 114.1773149, "size_km": 2.0,
+        "note": "九龍何文田 - 私家車/輕型貨車考場",
+    },
+    "wing_hau_street": {
+        "name": "永孝街", "lat": 22.3155, "lon": 114.1885, "size_km": 2.0,
+        "note": "九龍土瓜灣 - 私家車/輕型貨車考場",
+    },
+    "ap_lei_chau": {
+        "name": "鴨脷洲", "lat": 22.2399354, "lon": 114.1545244, "size_km": 2.0,
+        "note": "港島南區 - 安全駕駛中心",
+    },
+    "yuen_long": {
+        "name": "元朗南生圍", "lat": 22.4623971, "lon": 114.0379722, "size_km": 2.5,
+        "note": "新界元朗 - 安全駕駛中心",
+    },
+    "sha_tin": {
+        "name": "沙田小瀝源", "lat": 22.3887506, "lon": 114.2033455, "size_km": 2.0,
+        "note": "新界沙田 - 安全駕駛中心",
+    },
 }
 
 # Non-drivable / non-buildable highway types to drop.
