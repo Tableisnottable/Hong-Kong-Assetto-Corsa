@@ -51,6 +51,7 @@ CENTRES = {
 }
 
 SAMPLE_DISTANCE = 2.0   # metres between AI points
+ROAD_HEIGHT = 0.08      # AC Y height, matching generate_hd_map.py ROAD_Z
 MIN_ROAD_LEN = 30.0     # skip roads shorter than this
 MAX_SPEED = 50.0        # km/h default urban speed
 MIN_SPEED = 15.0        # km/h minimum speed for tight corners
@@ -84,7 +85,7 @@ def sample_centreline(pts: list[tuple[float, float, float]],
     while i < len(pts):
         a = result[-1]
         b = pts[i]
-        seg = math.dist(a[:2], b[:2])
+        seg = math.dist((a[0], a[2]), (b[0], b[2]))
         if seg < 1e-6:
             i += 1
             continue
@@ -136,7 +137,10 @@ def generate_for_centre(centre_id: str) -> Path:
         geom = el.get("geometry", [])
         if len(geom) < 2:
             continue
-        pts = [(*local_xy(p["lat"], p["lon"], ref), 0.0) for p in geom]
+        # Blender/KN5 converts WGS84 local coordinates (x, lat-offset)
+        # to AC axes as (x, height, -lat-offset).
+        pts = [(x, ROAD_HEIGHT, -z) for x, z in
+               (local_xy(p["lat"], p["lon"], ref) for p in geom)]
         sampled = sample_centreline(pts)
         if len(sampled) >= 2:
             roads.append({"id": el["id"], "hw": hw, "pts": sampled})
@@ -167,9 +171,8 @@ def generate_for_centre(centre_id: str) -> Path:
         for i, r in enumerate(roads):
             if used[i]:
                 continue
-            # Check both endpoints
-            head_d = math.dist(tail[:2], r["pts"][0][:2])
-            tail_d = math.dist(tail[:2], r["pts"][-1][:2])
+            head_d = math.dist((tail[0], tail[2]), (r["pts"][0][0], r["pts"][0][2]))
+            tail_d = math.dist((tail[0], tail[2]), (r["pts"][-1][0], r["pts"][-1][2]))
             d = min(head_d, tail_d)
             if d < best_d:
                 best_d = d
@@ -199,8 +202,8 @@ def generate_for_centre(centre_id: str) -> Path:
             for i, r in enumerate(roads):
                 if used[i]:
                     continue
-                head_d = math.dist(tail[:2], r["pts"][0][:2])
-                tail_d = math.dist(tail[:2], r["pts"][-1][:2])
+                head_d = math.dist((tail[0], tail[2]), (r["pts"][0][0], r["pts"][0][2]))
+                tail_d = math.dist((tail[0], tail[2]), (r["pts"][-1][0], r["pts"][-1][2]))
                 d = min(head_d, tail_d)
                 if d < best_d:
                     best_d = d
@@ -227,7 +230,7 @@ def generate_for_centre(centre_id: str) -> Path:
         if i == 0:
             final.append(p)
             continue
-        d = math.dist(final[-1][:2], p[:2])
+        d = math.dist((final[-1][0], final[-1][2]), (p[0], p[2]))
         if d >= SAMPLE_DISTANCE * 0.5:
             final.append(p)
     print(f"[{centre_id}] chained spline: {len(final)} points")
@@ -353,9 +356,9 @@ def calculate_dynamic_speeds(points: list[tuple[float, float, float]]) -> tuple[
 
 def circumradius(p0, p1, p2) -> float:
     """Calculate circumradius of triangle formed by 3 points."""
-    ax, ay = p0[0], p0[1]  # Use x,y (2D plane, z is height=0)
-    bx, by = p1[0], p1[1]
-    cx, cy = p2[0], p2[1]
+    ax, ay = p0[0], p0[2]  # Use x,z (AC horizontal plane; y is height)
+    bx, by = p1[0], p1[2]
+    cx, cy = p2[0], p2[2]
     
     d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
     if abs(d) < 1e-6:
