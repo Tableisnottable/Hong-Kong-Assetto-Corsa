@@ -39,24 +39,62 @@ def make_traffic(track_id: str, centre: str):
     if not ai_path.exists():
         raise FileNotFoundError(ai_path)
     points = read_ai(ai_path)
-    # Traffic Planner consumes editor-style lane data. Keep the loop in the
-    # same local AC coordinates as the KN5/AI spline, with conservative speed.
-    lane = {
-        'name': f'HK {centre} traffic loop',
-        'id': 1,
-        'loop': True,
-        'role': 3,
-        'priorityOffset': 0,
-        'points': points,
-        'params': {
-            'allowLaneChanges': False,
-            'allowUTurns': True,
+    # Traffic Planner consumes editor-style lane data. The AI spline is a
+    # best-effort chain and can contain jumps between unrelated OSM ways. Split
+    # those jumps into independent enter/exit lanes instead of asking Traffic
+    # Planner to drive across an artificial 50–100m segment.
+    max_segment_gap = 10.0
+    lanes_points = []
+    current = [points[0]] if points else []
+    for point in points[1:]:
+        previous = current[-1]
+        dx = point[0] - previous[0]
+        dz = point[2] - previous[2]
+        if (dx * dx + dz * dz) ** 0.5 > max_segment_gap:
+            if len(current) >= 3:
+                lanes_points.append(current)
+            current = [point]
+        else:
+            current.append(point)
+    if len(current) >= 3:
+        lanes_points.append(current)
+
+    lanes = []
+    total_points = 0
+    for lane_id, lane_points in enumerate(lanes_points, 1):
+        dx = lane_points[0][0] - lane_points[-1][0]
+        dz = lane_points[0][2] - lane_points[-1][2]
+        is_loop = (dx * dx + dz * dz) ** 0.5 <= 5.0
+        lanes.append({
+            'name': f'HK {centre} traffic lane {lane_id}',
+            'id': lane_id,
+            'loop': is_loop,
+            'role': 3,
+            'priorityOffset': 0,
+            'points': lane_points,
+            'params': {
+                'allowLaneChanges': False,
+                'allowUTurns': True,
+            },
+        })
+        total_points += len(lane_points)
+
+    data = {
+        'lanes': lanes,
+        'intersections': [],
+        'areas': [],
+        'rules': {
+            'laneRoles': [
+                {'name': 'Parking', 'priority': -8, 'speedLimit': 40},
+                {'name': 'Secondary', 'priority': -4, 'speedLimit': 50},
+                {'name': 'Main', 'priority': 0, 'speedLimit': 50},
+                {'name': 'Highway', 'priority': 4, 'speedLimit': 50},
+            ],
         },
     }
-    data = {'lanes': [lane], 'intersections': [], 'areas': []}
     out = ROOT / 'content' / 'tracks' / track_id / 'data' / 'traffic.json'
     out.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    return out, len(points)
+    return out, total_points, len(lanes)
 
 
 if __name__ == '__main__':
@@ -64,5 +102,5 @@ if __name__ == '__main__':
     for track_id in targets:
         if track_id not in TRACKS:
             raise SystemExit(f'Unknown track: {track_id}')
-        out, count = make_traffic(track_id, TRACKS[track_id])
-        print(f'[OK] {track_id}: {count} points -> {out}')
+        out, count, lanes = make_traffic(track_id, TRACKS[track_id])
+        print(f'[OK] {track_id}: {count} points in {lanes} lanes -> {out}')
