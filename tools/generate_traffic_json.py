@@ -2,6 +2,8 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+LANE_OFFSET_METERS = 1.75
+
 TRACKS = {
     "hong_kong_1to1": "tin_kwong_road",
     "hong_kong_1to1_sheung_on": "sheung_on_street",
@@ -43,7 +45,9 @@ def make_traffic(track_id: str, centre: str):
     # best-effort chain and can contain jumps between unrelated OSM ways. Split
     # those jumps into independent enter/exit lanes instead of asking Traffic
     # Planner to drive across an artificial 50–100m segment.
-    max_segment_gap = 10.0
+    # Offset lanes can add a small amount to a segment gap, so keep the
+    # centreline split threshold below the final 10m runtime safety limit.
+    max_segment_gap = 8.0
     lanes_points = []
     current = [points[0]] if points else []
     for point in points[1:]:
@@ -59,25 +63,53 @@ def make_traffic(track_id: str, centre: str):
     if len(current) >= 3:
         lanes_points.append(current)
 
+    def offset_polyline(points, offset):
+        """Offset a local AC x/z polyline while preserving its height."""
+        result = []
+        for i, point in enumerate(points):
+            previous = points[max(0, i - 1)]
+            following = points[min(len(points) - 1, i + 1)]
+            tangent_x = following[0] - previous[0]
+            tangent_z = following[2] - previous[2]
+            length = (tangent_x * tangent_x + tangent_z * tangent_z) ** 0.5
+            if length < 1e-6:
+                result.append(list(point))
+                continue
+            normal_x = -tangent_z / length
+            normal_z = tangent_x / length
+            result.append([
+                point[0] + normal_x * offset,
+                point[1],
+                point[2] + normal_z * offset,
+            ])
+        return result
+
     lanes = []
     total_points = 0
-    for lane_id, lane_points in enumerate(lanes_points, 1):
-        dx = lane_points[0][0] - lane_points[-1][0]
-        dz = lane_points[0][2] - lane_points[-1][2]
-        is_loop = (dx * dx + dz * dz) ** 0.5 <= 5.0
-        lanes.append({
-            'name': f'HK {centre} traffic lane {lane_id}',
-            'id': lane_id,
-            'loop': is_loop,
-            'role': 3,
-            'priorityOffset': 0,
-            'points': lane_points,
-            'params': {
-                'allowLaneChanges': False,
-                'allowUTurns': True,
-            },
-        })
-        total_points += len(lane_points)
+    lane_id = 1
+    for lane_points in lanes_points:
+        # Build two separated lanes. The second lane runs in the opposite
+        # direction, which prevents traffic cars from sharing one centreline.
+        left_points = offset_polyline(lane_points, LANE_OFFSET_METERS)
+        right_points = list(reversed(offset_polyline(lane_points, -LANE_OFFSET_METERS)))
+        for direction, directed_points in (("A", left_points), ("B", right_points)):
+            dx = directed_points[0][0] - directed_points[-1][0]
+            dz = directed_points[0][2] - directed_points[-1][2]
+            is_loop = (dx * dx + dz * dz) ** 0.5 <= 5.0
+            lanes.append({
+                'name': f'HK {centre} traffic lane {lane_id}{direction}',
+                'id': lane_id,
+                'loop': is_loop,
+                'role': 3,
+                'priorityOffset': 0,
+                'points': directed_points,
+                'params': {
+                    'allowLaneChanges': False,
+                    'allowUTurns': False,
+                },
+            })
+            total_points += len(directed_points)
+            lane_id += 1
 
     data = {
         'lanes': lanes,
