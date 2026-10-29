@@ -67,6 +67,32 @@ def load_osm_roads(centre: str):
     return roads
 
 
+def detect_signal_positions(centre):
+    """Return local AC coordinates of OSM traffic-signal road junctions."""
+    src = ROOT / 'build' / 'HP1C' / 'source' / f'{centre}_hd_roads.json'
+    if not src.exists():
+        return []
+    with open(src, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    ref = (float(data['reference']['lat']), float(data['reference']['lon']))
+    lat0, lon0 = ref
+    m_lat = 111320.0
+    m_lon = 111320.0 * math.cos(math.radians(lat0))
+    positions = []
+    for el in data.get('elements', []):
+        tags = el.get('tags', {})
+        if tags.get('junction') != 'traffic_signals':
+            continue
+        geom = el.get('geometry', [])
+        if not geom:
+            continue
+        # average the way's geometry as the signal location
+        xs = [(p['lon'] - lon0) * m_lon for p in geom]
+        zs = [-(p['lat'] - lat0) * m_lat for p in geom]
+        positions.append([sum(xs) / len(xs), 0.08, sum(zs) / len(zs)])
+    return positions
+
+
 def detect_junctions(roads, centre='', grid=0.5, min_roads=3, radius=8.0):
     """Find shared endpoints (junctions) and build square polygons for them."""
     # Round endpoints to a coarse grid so near-identical points merge.
@@ -188,10 +214,22 @@ def make_traffic(track_id: str, centre: str):
 
     lane_boxes = [lane_aabb(l['points']) for l in lanes]
     useful_intersections = []
+    signal_positions = detect_signal_positions(centre)
     for inter in detect_junctions(load_osm_roads(centre), centre):
         ib = inter_aabb(inter['points'])
         n = sum(1 for lb in lane_boxes if aabb_intersect(ib, lb))
         if n >= 2:
+            # Tag the junction with a basic traffic-light program if an OSM
+            # traffic-signal way is within the junction polygon.
+            cx = (inter['points'][0][0] + inter['points'][2][0]) / 2
+            cz = (inter['points'][0][2] + inter['points'][2][2]) / 2
+            half = (inter['points'][2][0] - inter['points'][0][0]) / 2
+            if any((cx - half <= sx <= cx + half and cz - half <= sz <= cz + half)
+                   for sx, sy, sz in signal_positions):
+                inter['trafficLight'] = {
+                    'program': 'Basic',
+                    'params': {'duration': 15},
+                }
             useful_intersections.append(inter)
 
     data = {

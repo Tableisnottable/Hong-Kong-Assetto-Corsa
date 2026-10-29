@@ -428,7 +428,7 @@ Copy-Item "apps\lua\hk_exam\*" "A:\SteamLibrary\steamapps\common\assettocorsa\ap
 
 全部 13 個試場已加入 CSP Traffic mode 所需配置：
 
-- `data/traffic.json`：由每個試場嘅 AI spline + OSM 道路數據自動生成分段、雙向 traffic lanes 同路口（junctions；長跳點自動切段，路口只保留同 ≥2 條車道相交者）
+- `data/traffic.json`：由每個試場嘅 AI spline + OSM 道路數據自動生成分段、雙向 traffic lanes 同路口（junctions；長跳點自動切段，路口只保留同 ≥2 條車道相交者；OSM junction=traffic_signals 路口套用 Basic 交通燈程序）
 - `#traffic-planner-ready`：UI layout tag，令 CSP Traffic mode 顯示該試場
 - `[_SCRIPTING_PHYSICS] ALLOW_NEW_MODE_SCRIPTS=1`：允許 Traffic mode 修改物理
 - Traffic car 模型由 CSP Traffic Tool 管理；首次使用可讓 CSP 自動下載官方 traffic data
