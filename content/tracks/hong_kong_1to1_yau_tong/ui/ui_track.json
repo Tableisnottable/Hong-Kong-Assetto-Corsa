@@ -1,6 +1,6 @@
 {
-  "name": "???????",
-  "description": "????????",
+  "name": "油塘駕駛考試中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (yau_tong)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -14,5 +14,5 @@
   "width": "14m",
   "pitboxes": "10",
   "name-en": "Yau Tong Test Centre",
-  "description-en": "????????"
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (yau_tong)"
 }

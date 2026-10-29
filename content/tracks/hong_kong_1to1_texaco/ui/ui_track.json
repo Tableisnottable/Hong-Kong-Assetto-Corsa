@@ -1,6 +1,6 @@
 {
-  "name": "Hong Kong 1:1 - Tsuen Wan Texaco",
-  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights.",
+  "name": "荃灣德士古道駕駛考試中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (texaco_road)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -12,5 +12,7 @@
   "city": "Hong Kong",
   "length": "5000m",
   "width": "14m",
-  "pitboxes": "10"
+  "pitboxes": "10",
+  "name-en": "Tsuen Wan Texaco Road Test Centre",
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (texaco_road)"
 }

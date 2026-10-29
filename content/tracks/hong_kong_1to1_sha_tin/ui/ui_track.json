@@ -1,6 +1,6 @@
 {
-  "name": "??????????",
-  "description": "??????????",
+  "name": "沙田安全駕駛中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (sha_tin)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -14,5 +14,5 @@
   "width": "14m",
   "pitboxes": "10",
   "name-en": "Sha Tin Test Centre",
-  "description-en": "??????????"
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (sha_tin)"
 }

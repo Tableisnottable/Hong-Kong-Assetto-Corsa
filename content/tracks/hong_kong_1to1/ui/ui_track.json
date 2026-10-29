@@ -1,6 +1,6 @@
 {
-  "name": "Hong Kong 1:1 - Tin Kwong Road",
-  "description": "1:1 Hong Kong driving-test map (天光道考試路線). HD road network with lane markings, zebra crossings and traffic lights.",
+  "name": "天光道駕駛考試中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (tin_kwong_road)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -12,5 +12,7 @@
   "city": "Kowloon",
   "length": "5000m",
   "width": "14m",
-  "pitboxes": "10"
+  "pitboxes": "10",
+  "name-en": "Tin Kwong Road Test Centre",
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (tin_kwong_road)"
 }

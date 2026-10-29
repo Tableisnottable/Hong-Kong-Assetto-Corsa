@@ -1,6 +1,6 @@
 {
-  "name": "???????",
-  "description": "?????/??????",
+  "name": "石蔭駕駛考試中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (shek_am)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -13,6 +13,6 @@
   "length": "5000m",
   "width": "14m",
   "pitboxes": "10",
-  "name-en": "Shek Am Test Centre",
-  "description-en": "?????/??????"
+  "name-en": "Shek Yam Test Centre",
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (shek_am)"
 }

@@ -1,6 +1,6 @@
 {
-  "name": "????????",
-  "description": "????????/??????",
+  "name": "忠義街駕駛考試中心",
+  "description": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (chung_ngai_street)",
   "tags": [
     "Hong Kong",
     "Driving Test",
@@ -14,5 +14,5 @@
   "width": "14m",
   "pitboxes": "10",
   "name-en": "Chung Ngai Street Test Centre",
-  "description-en": "????????/??????"
+  "description-en": "1:1 Hong Kong driving-test map. HD road network with lane markings, zebra crossings and traffic lights. (chung_ngai_street)"
 }
