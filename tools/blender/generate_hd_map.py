@@ -395,9 +395,67 @@ def build() -> None:
             empty.location = (x, y, 3.0)
             bpy.context.collection.objects.link(empty)
 
+    # --- buildings ----------------------------------------------------------
+    # Support both "<centre>_buildings.json" and legacy "tin_kwong_buildings.json"
+    buildings_src = ROOT / "build" / "HP1C" / "source" / f"{CENTRE}_buildings.json"
+    if not buildings_src.exists() and CENTRE == "tin_kwong_road":
+        legacy = ROOT / "build" / "HP1C" / "source" / "tin_kwong_buildings.json"
+        if legacy.exists():
+            buildings_src = legacy
+    bld_mat = mat("HK_building", (0.55, 0.52, 0.48, 1))
+    bld_mat_roof = mat("HK_building_roof", (0.42, 0.40, 0.38, 1))
+    building_count = 0
+    if buildings_src.exists():
+        with open(buildings_src, "r", encoding="utf-8") as f:
+            bdata = json.load(f)
+        for el in bdata.get("elements", []):
+            geom = el.get("geometry", [])
+            if len(geom) < 3:
+                continue
+            # Convert footprint polygon to local coordinates, then extrude.
+            pts2d = [local_xy(p["lat"], p["lon"], ref) for p in geom]
+            # Simplify: drop degenerate consecutive points.
+            clean = []
+            for x, y in pts2d:
+                if not clean or abs(clean[-1][0] - x) > 0.3 or abs(clean[-1][1] - y) > 0.3:
+                    clean.append((x, y))
+            if len(clean) < 3:
+                continue
+            # Building height: default 12m, use OSM height if available.
+            try:
+                height = float(el.get("tags", {}).get("height", "12").rstrip("m"))
+            except (TypeError, ValueError):
+                height = 12.0
+            height = max(3.0, min(height, 80.0))
+            z0 = ROAD_Z
+            z1 = z0 + height
+            # Ground footprint faces (triangulated polygon, fan from first vertex).
+            verts = []
+            faces = []
+            base = 0
+            for i, (x, y) in enumerate(clean):
+                verts.append((x, y, z0))
+                verts.append((x, y, z1))
+            for i in range(len(clean)):
+                nxt = (i + 1) % len(clean)
+                faces.append((base + i * 2, base + nxt * 2, base + nxt * 2 + 1, base + i * 2 + 1))
+            # fan triangulation for ground and roof
+            for i in range(1, len(clean) - 1):
+                faces.append((base, base + i * 2, base + (i + 1) * 2))
+                faces.append((base + 1, base + (i + 1) * 2 + 1, base + i * 2 + 1))
+            mb.layers["4BUILDINGS"] = mb.layers.get("4BUILDINGS",
+                {"verts": [], "faces": [], "mat": bld_mat})
+            layer = mb.layers["4BUILDINGS"]
+            off = len(layer["verts"])
+            layer["verts"].extend(verts)
+            layer["faces"].extend([tuple(off + i for i in f) for f in faces])
+            building_count += 1
+        print(f"[INFO] {building_count} buildings from {buildings_src.name}")
+
     layers = mb.commit()
     print(f"[INFO] {road_count} roads, {len(crossing_points)} crossings, "
-          f"{len(signal_junctions)} signal junctions, {layers} mesh layers")
+          f"{len(signal_junctions)} signal junctions, {building_count} buildings, "
+          f"{layers} mesh layers")
 
     bpy.ops.export_scene.fbx(filepath=str(OUTPUT), use_selection=False,
                              axis_forward="-Z", axis_up="Y")

@@ -35,3 +35,6 @@ content/cars/*/sfx/*.bank
 
 # Map KN5 build artifacts (regenerable, too large)
 build/HP1C/*/hd_map.kn5
+
+# OSM building extracts (regenerable via tools/fetch_buildings.py)
+build/HP1C/source/*_buildings.json

@@ -1,0 +1,313 @@
+{
+  "count": 25,
+  "cars": [
+    {
+      "id": "traffic_toyota_camry",
+      "ac_folder": "hk51_traffic_toyota_camry",
+      "category": "private",
+      "display_name": "Toyota Camry 2022",
+      "power_hp": 203,
+      "kn5": "hk51_traffic_toyota_camry.kn5",
+      "lods": [
+        "hk51_traffic_toyota_camry_lod_b.kn5",
+        "hk51_traffic_toyota_camry_lod_c.kn5",
+        "hk51_traffic_toyota_camry_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_toyota_alphard",
+      "ac_folder": "hk51_traffic_toyota_alphard",
+      "category": "private",
+      "display_name": "Toyota Alphard 2022",
+      "power_hp": 117,
+      "kn5": "hk51_traffic_toyota_alphard.kn5",
+      "lods": [
+        "hk51_traffic_toyota_alphard_lod_b.kn5",
+        "hk51_traffic_toyota_alphard_lod_c.kn5",
+        "hk51_traffic_toyota_alphard_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_toyota_crown_comfort",
+      "ac_folder": "HK852Traffic_toyota_crown_comfort",
+      "category": "public_special",
+      "display_name": "Toyota Crown Comfort Taxi",
+      "power_hp": 170,
+      "kn5": null,
+      "lods": [
+        "toyota_crown_comfort_lod_b.kn5",
+        "toyota_crown_comfort_lod_c.kn5",
+        "toyota_crown_comfort_lod_d.kn5",
+        "_lod_gen_3.kn5"
+      ]
+    },
+    {
+      "id": "traffic_toyota_prius_taxi",
+      "ac_folder": "hk51_traffic_toyota_prius_taxi",
+      "category": "public_special",
+      "display_name": "Toyota Prius Taxi",
+      "power_hp": 121,
+      "kn5": "hk51_traffic_toyota_prius_taxi.kn5",
+      "lods": [
+        "hk51_traffic_toyota_prius_taxi_lod_b.kn5",
+        "hk51_traffic_toyota_prius_taxi_lod_c.kn5",
+        "hk51_traffic_toyota_prius_taxi_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_toyota_hiace",
+      "ac_folder": "hk51_traffic_toyota_hiace",
+      "category": "commercial",
+      "display_name": "Toyota HiAce Van",
+      "power_hp": 136,
+      "kn5": "hk51_traffic_toyota_hiace.kn5",
+      "lods": [
+        "hk51_traffic_toyota_hiace_lod_b.kn5",
+        "hk51_traffic_toyota_hiace_lod_c.kn5",
+        "hk51_traffic_toyota_hiace_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_toyota_coaster",
+      "ac_folder": "hk51_traffic_toyota_coaster",
+      "category": "public_special",
+      "display_name": "Toyota Coaster Minibus",
+      "power_hp": 150,
+      "kn5": "hk51_traffic_toyota_coaster.kn5",
+      "lods": [
+        "hk51_traffic_toyota_coaster_lod_b.kn5",
+        "hk51_traffic_toyota_coaster_lod_c.kn5",
+        "hk51_traffic_toyota_coaster_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_honda_jazz",
+      "ac_folder": "hk51_traffic_honda_jazz",
+      "category": "private",
+      "display_name": "Honda Jazz",
+      "power_hp": 131,
+      "kn5": "hk51_traffic_honda_jazz.kn5",
+      "lods": [
+        "hk51_traffic_honda_jazz_lod_b.kn5",
+        "hk51_traffic_honda_jazz_lod_c.kn5",
+        "hk51_traffic_honda_jazz_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_bus_volvo_olympian",
+      "ac_folder": "hk51_traffic_bus_volvo_super_olympian",
+      "category": "public_special",
+      "display_name": "Volvo Super Olympian Bus",
+      "power_hp": 320,
+      "kn5": "hk51_traffic_bus_volvo_super_olympian.kn5",
+      "lods": [
+        "hk51_traffic_bus_volvo_super_olympian_lod_b.kn5",
+        "hk51_traffic_bus_volvo_super_olympian_lod_c.kn5",
+        "hk51_traffic_bus_volvo_super_olympian_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_isuzu_giga",
+      "ac_folder": "hk51_traffic_isuzu_giga_long",
+      "category": "commercial",
+      "display_name": "Isuzu Giga Truck",
+      "power_hp": 390,
+      "kn5": "hk51_traffic_isuzu_giga_long.kn5",
+      "lods": [
+        "hk51_traffic_isuzu_giga_long_lod_b.kn5",
+        "hk51_traffic_isuzu_giga_long_lod_c.kn5",
+        "hk51_traffic_isuzu_giga_long_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_isuzu_npr",
+      "ac_folder": "hk51_traffic_isuzu_npr_truck",
+      "category": "commercial",
+      "display_name": "Isuzu NPR Truck",
+      "power_hp": 190,
+      "kn5": "hk51_traffic_isuzu_npr_truck.kn5",
+      "lods": []
+    },
+    {
+      "id": "traffic_isuzu_npr_flatbed",
+      "ac_folder": "hk51_traffic_isuzu_npr_flatbed_tow",
+      "category": "commercial",
+      "display_name": "Isuzu NPR Flatbed",
+      "power_hp": 190,
+      "kn5": "hk51_traffic_isuzu_npr_flatbed_tow.kn5",
+      "lods": [
+        "hk51_traffic_isuzu_npr_flatbed_tow_lod_b.kn5",
+        "hk51_traffic_isuzu_npr_flatbed_tow_lod_c.kn5",
+        "hk51_traffic_isuzu_npr_flatbed_tow_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_isuzu_npr_tanker",
+      "ac_folder": "hk51_traffic_isuzu_npr_tanker",
+      "category": "commercial",
+      "display_name": "Isuzu NPR Tanker",
+      "power_hp": 190,
+      "kn5": "hk51_traffic_isuzu_npr_tanker.kn5",
+      "lods": []
+    },
+    {
+      "id": "traffic_mercedes_a45",
+      "ac_folder": "hk51_traffic_mercedes_a45_amg",
+      "category": "private",
+      "display_name": "Mercedes A45 AMG",
+      "power_hp": 381,
+      "kn5": "hk51_traffic_mercedes_a45_amg.kn5",
+      "lods": [
+        "hk51_traffic_mercedes_a45_amg_lod_b.kn5",
+        "hk51_traffic_mercedes_a45_amg_lod_c.kn5",
+        "hk51_traffic_mercedes_a45_amg_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_nissan_gtr",
+      "ac_folder": "hk51_traffic_nissan_gtr35",
+      "category": "private",
+      "display_name": "Nissan GT-R R35",
+      "power_hp": 565,
+      "kn5": "hk51_traffic_nissan_gtr35.kn5",
+      "lods": [
+        "hk51_traffic_nissan_gtr35_lod_b.kn5",
+        "hk51_traffic_nissan_gtr35_lod_c.kn5",
+        "hk51_traffic_nissan_gtr35_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_porsche_macan",
+      "ac_folder": "hk51_traffic_porsche_macan",
+      "category": "private",
+      "display_name": "Porsche Macan",
+      "power_hp": 252,
+      "kn5": "hk51_traffic_porsche_macan.kn5",
+      "lods": [
+        "hk51_traffic_porsche_macan_lod_b.kn5",
+        "hk51_traffic_porsche_macan_lod_c.kn5",
+        "hk51_traffic_porsche_macan_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_tesla_model3",
+      "ac_folder": "hk51_traffic_tesla_model3",
+      "category": "private",
+      "display_name": "Tesla Model 3",
+      "power_hp": 283,
+      "kn5": "hk51_traffic_tesla_model3.kn5",
+      "lods": [
+        "hk51_traffic_tesla_model3_lod_b.kn5",
+        "hk51_traffic_tesla_model3_lod_c.kn5",
+        "hk51_traffic_tesla_model3_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_vw_golf_r",
+      "ac_folder": "hk51_traffic_vw_golf_r",
+      "category": "private",
+      "display_name": "VW Golf R",
+      "power_hp": 300,
+      "kn5": "hk51_traffic_vw_golf_r.kn5",
+      "lods": [
+        "hk51_traffic_vw_golf_r_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_mitsubishi_colt",
+      "ac_folder": "hk51_traffic_mitsubishi_89colt",
+      "category": "private",
+      "display_name": "Mitsubishi Colt 1989",
+      "power_hp": 110,
+      "kn5": "hk51_traffic_mitsubishi_89colt.kn5",
+      "lods": [
+        "hk51_traffic_mitsubishi_89colt_lod_b.kn5",
+        "hk51_traffic_mitsubishi_89colt_lod_c.kn5",
+        "hk51_traffic_mitsubishi_89colt_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_mule_truck",
+      "ac_folder": "hk51_traffic_mule_short_truck",
+      "category": "commercial",
+      "display_name": "Mule Short Truck",
+      "power_hp": 120,
+      "kn5": "hk51_traffic_mule_short_truck.kn5",
+      "lods": [
+        "hk51_traffic_mule_short_truck_lod_b.kn5",
+        "hk51_traffic_mule_short_truck_lod_c.kn5",
+        "hk51_traffic_mule_short_truck_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_ff_truck",
+      "ac_folder": "hk51_traffic_f&f_truck",
+      "category": "commercial",
+      "display_name": "F&F Truck",
+      "power_hp": 200,
+      "kn5": "hk51_traffic_f&f_truck.kn5",
+      "lods": [
+        "hk51_traffic_f&f_truck_lod_b.kn5",
+        "hk51_traffic_f&f_truck_lod_c.kn5",
+        "hk51_traffic_f&f_truck_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_tourer_bike",
+      "ac_folder": "hk51_traffic_tourer_bike",
+      "category": "private",
+      "display_name": "Tourer Motorcycle",
+      "power_hp": 80,
+      "kn5": "hk51_traffic_tourer_bike.kn5",
+      "lods": []
+    },
+    {
+      "id": "traffic_suzuki_gsxr",
+      "ac_folder": "hk51_traffic_suzuki_gsxr_1000",
+      "category": "private",
+      "display_name": "Suzuki GSXR-1000",
+      "power_hp": 198,
+      "kn5": "hk51_traffic_suzuki_gsxr_1000.kn5",
+      "lods": [
+        "hk51_traffic_suzuki_gsxr_1000_lod_b.kn5"
+      ]
+    },
+    {
+      "id": "traffic_celica",
+      "ac_folder": "hk51_traffic_toyota_celica",
+      "category": "private",
+      "display_name": "Toyota Celica",
+      "power_hp": 140,
+      "kn5": "hk51_traffic_toyota_celica.kn5",
+      "lods": [
+        "hk51_traffic_toyota_celica_lod_b.kn5",
+        "hk51_traffic_toyota_celica_lod_c.kn5",
+        "hk51_traffic_toyota_celica_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_hiace_popo",
+      "ac_folder": "hk51_traffic_toyota_hiace_popo",
+      "category": "public_special",
+      "display_name": "Police HiAce",
+      "power_hp": 136,
+      "kn5": "hk51_traffic_toyota_hiace_popo.kn5",
+      "lods": [
+        "hk51_traffic_toyota_hiace_popo_lod_b.kn5",
+        "hk51_traffic_toyota_hiace_popo_lod_c.kn5",
+        "hk51_traffic_toyota_hiace_popo_lod_d.kn5"
+      ]
+    },
+    {
+      "id": "traffic_airport_bus",
+      "ac_folder": "traffic_aegis_airport_bus",
+      "category": "public_special",
+      "display_name": "Airport Bus",
+      "power_hp": 250,
+      "kn5": "traffic_aegis_airport_bus.kn5",
+      "lods": [
+        "traffic_aegis_airport_bus_lod_d.kn5"
+      ]
+    }
+  ]
+}
