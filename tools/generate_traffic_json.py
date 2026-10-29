@@ -1,4 +1,4 @@
-﻿import struct, json, os, sys
+﻿import struct, json, os, math, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +34,67 @@ def read_ai(path: Path):
         off += 20
         points.append([x, y, z])
     return points
+
+
+def load_osm_roads(centre: str):
+    """Load drivable road polylines in AC coordinates from the OSM extract."""
+    src = ROOT / 'build' / 'HP1C' / 'source' / f'{centre}_hd_roads.json'
+    if not src.exists():
+        return []
+    with open(src, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    ref = (float(data['reference']['lat']), float(data['reference']['lon']))
+    lat0, lon0 = ref
+    m_lat = 111320.0
+    m_lon = 111320.0 * math.cos(math.radians(lat0))
+
+    PREFERRED = {"motorway", "trunk", "primary", "secondary", "tertiary",
+                 "unclassified", "residential"}
+    roads = []
+    for el in data.get('elements', []):
+        tags = el.get('tags', {})
+        if tags.get('highway') not in PREFERRED:
+            continue
+        geom = el.get('geometry', [])
+        if len(geom) < 2:
+            continue
+        pts = []
+        for p in geom:
+            x = (p['lon'] - lon0) * m_lon
+            z = -(p['lat'] - lat0) * m_lat
+            pts.append([x, 0.08, z])
+        roads.append({'id': el['id'], 'pts': pts})
+    return roads
+
+
+def detect_junctions(roads, centre='', grid=0.5, min_roads=3, radius=8.0):
+    """Find shared endpoints (junctions) and build square polygons for them."""
+    # Round endpoints to a coarse grid so near-identical points merge.
+    from collections import defaultdict
+    counts = defaultdict(list)
+    for road in roads:
+        pts = road['pts']
+        for p in (pts[0], pts[-1]):
+            key = (round(p[0] / grid), round(p[2] / grid))
+            counts[key].append(p)
+    junctions = []
+    for key, pts in counts.items():
+        if len(pts) < min_roads:
+            continue
+        cx = sum(p[0] for p in pts) / len(pts)
+        cz = sum(p[2] for p in pts) / len(pts)
+        half = radius
+        junctions.append({
+            'name': f'HK {centre} junction {key[0]}_{key[1]}',
+            'id': len(junctions) + 1,
+            'points': [
+                [cx - half, 0.08, cz - half],
+                [cx + half, 0.08, cz - half],
+                [cx + half, 0.08, cz + half],
+                [cx - half, 0.08, cz + half],
+            ],
+        })
+    return junctions
 
 
 def make_traffic(track_id: str, centre: str):
@@ -111,9 +172,31 @@ def make_traffic(track_id: str, centre: str):
             total_points += len(directed_points)
             lane_id += 1
 
+    # Only keep junctions that actually intersect at least two lanes, so the
+    # traffic graph can route between lanes at those points.
+    def lane_aabb(points):
+        return (min(p[0] for p in points), min(p[2] for p in points),
+                max(p[0] for p in points), max(p[2] for p in points))
+
+    def inter_aabb(points):
+        xs = [p[0] for p in points]
+        zs = [p[2] for p in points]
+        return (min(xs), min(zs), max(xs), max(zs))
+
+    def aabb_intersect(a, b):
+        return not (a[2] < b[0] or b[2] < a[0] or a[3] < b[1] or b[3] < a[1])
+
+    lane_boxes = [lane_aabb(l['points']) for l in lanes]
+    useful_intersections = []
+    for inter in detect_junctions(load_osm_roads(centre), centre):
+        ib = inter_aabb(inter['points'])
+        n = sum(1 for lb in lane_boxes if aabb_intersect(ib, lb))
+        if n >= 2:
+            useful_intersections.append(inter)
+
     data = {
         'lanes': lanes,
-        'intersections': [],
+        'intersections': useful_intersections,
         'areas': [],
         'rules': {
             'laneRoles': [
@@ -135,4 +218,6 @@ if __name__ == '__main__':
         if track_id not in TRACKS:
             raise SystemExit(f'Unknown track: {track_id}')
         out, count, lanes = make_traffic(track_id, TRACKS[track_id])
-        print(f'[OK] {track_id}: {count} points in {lanes} lanes -> {out}')
+        with open(out, 'r', encoding='utf-8') as f:
+            n_inter = len(json.load(f)['intersections'])
+        print(f'[OK] {track_id}: {count} points in {lanes} lanes, {n_inter} junctions -> {out}')
