@@ -33,8 +33,35 @@ def guess_chance(category: str) -> float:
     }.get(category, 0.5)
 
 
+# Real-world dimensions per vehicle id (length, width, height, wheelbase, mass kg)
+SPECS = {
+    "traffic_toyota_camry": (4.88, 1.84, 1.44, 2.83, 1560),
+    "traffic_toyota_alphard": (4.95, 1.85, 1.95, 3.00, 2100),
+    "traffic_toyota_crown_comfort": (4.69, 1.70, 1.51, 2.79, 1420),
+    "traffic_toyota_prius_taxi": (4.58, 1.76, 1.49, 2.70, 1420),
+    "traffic_toyota_hiace": (4.84, 1.88, 1.98, 3.11, 1900),
+    "traffic_toyota_coaster": (6.99, 2.08, 2.75, 3.94, 4500),
+    "traffic_honda_jazz": (4.04, 1.70, 1.53, 2.53, 1120),
+    "traffic_bus_volvo_olympian": (11.90, 2.50, 4.40, 5.60, 16000),
+    "traffic_isuzu_giga": (11.20, 2.49, 3.30, 6.20, 12000),
+    "traffic_isuzu_npr_flatbed": (6.60, 2.06, 2.30, 3.36, 4200),
+    "traffic_mercedes_a45": (4.36, 1.78, 1.42, 2.70, 1480),
+    "traffic_nissan_gtr": (4.71, 1.89, 1.37, 2.78, 1750),
+    "traffic_porsche_macan": (4.70, 1.92, 1.62, 2.81, 1880),
+    "traffic_tesla_model3": (4.69, 1.85, 1.44, 2.88, 1700),
+    "traffic_vw_golf_r": (4.26, 1.79, 1.46, 2.63, 1470),
+    "traffic_mitsubishi_colt": (3.99, 1.63, 1.37, 2.46, 950),
+    "traffic_mule_truck": (4.80, 1.85, 2.20, 2.80, 2600),
+    "traffic_ff_truck": (7.20, 2.30, 3.10, 4.00, 6500),
+    "traffic_suzuki_gsxr": (2.05, 0.72, 1.13, 1.41, 200),
+    "traffic_celica": (4.35, 1.74, 1.31, 2.54, 1260),
+    "traffic_hiace_popo": (4.84, 1.88, 1.98, 3.11, 2000),
+    "traffic_airport_bus": (12.00, 2.55, 4.30, 5.80, 17000),
+}
+
+
 def guess_dimensions(category: str) -> dict:
-    """Approximate physical dimensions per vehicle class."""
+    """Fallback dimensions per class when no real spec is registered."""
     if category == "public_special":
         return {"width": 2.4, "fakeShadowZ": 3.6, "turningOffset": 3.4, "wheelRadius": 0.42, "front": 1.2, "rear": 6.0, "fakeShadowX": 1.6}
     if category == "commercial":
@@ -42,8 +69,39 @@ def guess_dimensions(category: str) -> dict:
     return {"width": 1.7, "fakeShadowZ": 2.6, "turningOffset": 2.3, "wheelRadius": 0.33, "front": 0.5, "rear": 4.0, "fakeShadowX": 1.15}
 
 
-def guess_mass(category: str) -> int:
+def dimensions_for(cid: str, category: str) -> dict:
+    """Build a CarDefinition dimensions block from real specs when known."""
+    spec = SPECS.get(cid)
+    if not spec:
+        return guess_dimensions(category)
+    length, width, height, wheelbase, _mass = spec
+    # CSP expects front/rear as distances from the axle midpoint to the bumpers.
+    overhang = max(0.4, (length - wheelbase) / 2)
+    return {
+        "width": round(width, 2),
+        "fakeShadowZ": round(length / 2 + 0.15, 2),
+        "turningOffset": round(wheelbase / 2, 2),
+        "wheelRadius": 0.42 if height > 2.0 else 0.33,
+        "front": round(overhang, 2),
+        "rear": round(length - overhang, 2),
+        "fakeShadowX": round(width / 2 + 0.3, 2),
+    }
+
+
+def mass_for(cid: str, category: str) -> int:
+    spec = SPECS.get(cid)
+    if spec:
+        return spec[4]
     return {"private": 1400, "commercial": 3500, "public_special": 9000}.get(category, 1800)
+
+
+def max_speed_for(cid: str, category: str) -> int:
+    """Realistic top speed in km/h for traffic behaviour."""
+    return {
+        "private": 140,
+        "commercial": 90,
+        "public_special": 85,
+    }.get(category, 110)
 
 
 def main() -> None:
@@ -89,24 +147,25 @@ def main() -> None:
         shutil.copy2(src_dir / lod, dest_lod)
         shutil.copy2(src_dir / collider, dest_collider)
 
-        # CarDefinition JSON
+        # CarDefinition JSON built from real specs where available.
+        dims = dimensions_for(cid, car.get("category"))
         definition = {
             "main": f"{prefix}.kn5",
             "lod": f"{prefix}_lod.kn5",
             "collider": f"{prefix}_collider.kn5",
             "color": "vintage" if car.get("year", 2015) < 2015 else "modern",
-            "maxSpeed": max(60, int(car.get("power_hp", 120) * 0.55)),
+            "maxSpeed": max_speed_for(cid, car.get("category")),
             "dynamic": 0.8 if car.get("category") == "private" else 0.5,
             "chance": guess_chance(car.get("category")),
-            "dimensions": guess_dimensions(car.get("category")),
+            "dimensions": dims,
             "physics": {
-                "width": guess_dimensions(car.get("category"))["width"] * 0.92,
-                "suspensionForce": 30,
-                "mass": guess_mass(car.get("category")),
-                "suspensionTravel": 0.08,
-                "wheelsGripForce": 8,
-                "suspensionDamping": 14,
-                "length": guess_dimensions(car.get("category"))["fakeShadowZ"],
+                "width": round(dims["width"] * 0.9, 2),
+                "suspensionForce": 30 if car.get("category") == "private" else 48,
+                "mass": mass_for(cid, car.get("category")),
+                "suspensionTravel": 0.08 if car.get("category") == "private" else 0.12,
+                "wheelsGripForce": 8 if car.get("category") == "private" else 12,
+                "suspensionDamping": 14 if car.get("category") == "private" else 20,
+                "length": round(dims["fakeShadowZ"] * 2 - 0.3, 2),
             },
         }
         dest_json = DATA_DIR / f"{prefix}.json"

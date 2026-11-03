@@ -402,8 +402,79 @@ def build() -> None:
         legacy = ROOT / "build" / "HP1C" / "source" / "tin_kwong_buildings.json"
         if legacy.exists():
             buildings_src = legacy
-    bld_mat = mat("HK_building", (0.55, 0.52, 0.48, 1))
-    bld_mat_roof = mat("HK_building_roof", (0.42, 0.40, 0.38, 1))
+    bld_mat = mat("HK_building_residential", (0.62, 0.60, 0.56, 1))
+    bld_mat_apt = mat("HK_building_apartments", (0.58, 0.58, 0.60, 1))
+    bld_mat_tower = mat("HK_building_tower", (0.50, 0.53, 0.57, 1))
+    bld_mat_comm = mat("HK_building_commercial", (0.44, 0.46, 0.50, 1))
+    bld_mat_ind = mat("HK_building_industrial", (0.48, 0.44, 0.40, 1))
+    bld_mat_inst = mat("HK_building_institutional", (0.66, 0.58, 0.52, 1))
+
+    # Fallback heights (metres) by OSM building type — Hong Kong is dense/high.
+    TYPE_HEIGHT = {
+        "apartments": 42.0,
+        "residential": 36.0,
+        "house": 9.0,
+        "detached": 9.0,
+        "terrace": 12.0,
+        "commercial": 45.0,
+        "retail": 18.0,
+        "office": 60.0,
+        "industrial": 16.0,
+        "warehouse": 14.0,
+        "school": 16.0,
+        "university": 24.0,
+        "hospital": 45.0,
+        "hotel": 55.0,
+        "kindergarten": 8.0,
+        "church": 14.0,
+        "temple": 10.0,
+        "garage": 4.0,
+        "garages": 4.0,
+        "shed": 4.0,
+        "roof": 3.5,
+        "carport": 3.0,
+        "construction": 18.0,
+        "yes": 24.0,
+    }
+    TYPE_MATERIAL = {
+        "apartments": bld_mat_apt,
+        "residential": bld_mat,
+        "house": bld_mat,
+        "detached": bld_mat,
+        "commercial": bld_mat_comm,
+        "retail": bld_mat_comm,
+        "office": bld_mat_tower,
+        "hotel": bld_mat_tower,
+        "industrial": bld_mat_ind,
+        "warehouse": bld_mat_ind,
+        "school": bld_mat_inst,
+        "university": bld_mat_inst,
+        "hospital": bld_mat_inst,
+        "kindergarten": bld_mat_inst,
+        "church": bld_mat_inst,
+        "temple": bld_mat_inst,
+    }
+
+    def building_height(tags: dict) -> float:
+        """Resolve height from explicit height, building:levels, or type default."""
+        raw = tags.get("height")
+        if raw:
+            try:
+                return float(str(raw).replace("m", "").strip())
+            except (TypeError, ValueError):
+                pass
+        levels = tags.get("building:levels")
+        if levels:
+            try:
+                # ~3.1m per storey plus a small roof allowance
+                return float(str(levels).split(";")[0]) * 3.1 + 1.0
+            except (TypeError, ValueError):
+                pass
+        btype = tags.get("building")
+        if btype and btype in TYPE_HEIGHT:
+            return TYPE_HEIGHT[btype]
+        return TYPE_HEIGHT["yes"]
+
     building_count = 0
     if buildings_src.exists():
         with open(buildings_src, "r", encoding="utf-8") as f:
@@ -420,22 +491,24 @@ def build() -> None:
                 if not clean or abs(clean[-1][0] - x) > 0.3 or abs(clean[-1][1] - y) > 0.3:
                     clean.append((x, y))
             if len(clean) < 3:
+                # A 2-point "building" is usually a barrier; skip.
                 continue
-            # Building height: default 12m, use OSM height if available.
-            try:
-                height = float(el.get("tags", {}).get("height", "12").rstrip("m"))
-            except (TypeError, ValueError):
-                height = 12.0
-            height = max(3.0, min(height, 80.0))
-            z0 = ROAD_Z
-            z1 = z0 + height
+            tags = el.get("tags", {})
+            # Skip building parts at ground level (roofs, canopies) that would
+            # otherwise produce thin slabs across the map.
+            btype = tags.get("building", "yes")
+            if tags.get("building:part") == "roof" or btype in {"roof", "carport"}:
+                continue
+            height = max(2.5, min(building_height(tags), 180.0))
+            bld_z0 = ROAD_Z
+            bld_z1 = bld_z0 + height
             # Ground footprint faces (triangulated polygon, fan from first vertex).
             verts = []
             faces = []
             base = 0
             for i, (x, y) in enumerate(clean):
-                verts.append((x, y, z0))
-                verts.append((x, y, z1))
+                verts.append((x, y, bld_z0))
+                verts.append((x, y, bld_z1))
             for i in range(len(clean)):
                 nxt = (i + 1) % len(clean)
                 faces.append((base + i * 2, base + nxt * 2, base + nxt * 2 + 1, base + i * 2 + 1))
@@ -443,20 +516,83 @@ def build() -> None:
             for i in range(1, len(clean) - 1):
                 faces.append((base, base + i * 2, base + (i + 1) * 2))
                 faces.append((base + 1, base + (i + 1) * 2 + 1, base + i * 2 + 1))
-            mb.layers["4BUILDINGS"] = mb.layers.get("4BUILDINGS",
-                {"verts": [], "faces": [], "mat": bld_mat})
-            layer = mb.layers["4BUILDINGS"]
+
+            layer_key = "4BUILDINGS"
+            mat_choice = TYPE_MATERIAL.get(btype, bld_mat)
+            if layer_key not in mb.layers:
+                mb.layers[layer_key] = {"verts": [], "faces": [], "mat": mat_choice}
+            layer = mb.layers[layer_key]
+            # A single Blender layer has one material; use material variants as
+            # separate layers so residential/commercial/industrial read apart.
+            variant_key = {
+                bld_mat_apt: "4BUILDINGS_APARTMENTS",
+                bld_mat_tower: "4BUILDINGS_TOWERS",
+                bld_mat_comm: "4BUILDINGS_COMMERCIAL",
+                bld_mat_ind: "4BUILDINGS_INDUSTRIAL",
+                bld_mat_inst: "4BUILDINGS_INSTITUTIONAL",
+            }.get(mat_choice, "4BUILDINGS")
+            if variant_key not in mb.layers:
+                mb.layers[variant_key] = {"verts": [], "faces": [], "mat": mat_choice}
+            layer = mb.layers[variant_key]
             off = len(layer["verts"])
             layer["verts"].extend(verts)
             layer["faces"].extend([tuple(off + i for i in f) for f in faces])
             building_count += 1
         print(f"[INFO] {building_count} buildings from {buildings_src.name}")
 
+        # --- greenery (trees, grass, parks) ---------------------------------
+        # Fetch results now include natural=tree nodes and landuse/leisure ways.
+        tree_mat = mat("HK_trees", (0.13, 0.30, 0.12, 1))
+        trunk_mat = mat("HK_tree_trunk", (0.24, 0.18, 0.12, 1))
+        grass_mat = mat("HK_grass", (0.18, 0.34, 0.16, 1))
+        tree_count = 0
+        grass_count = 0
+        GRASS_TAGS = {
+            "grass", "forest", "park", "recreation_ground", "village_green",
+            "meadow", "garden", "pitch", "playground", "golf_course",
+        }
+        for el in bdata.get("elements", []):
+            tags = el.get("tags", {})
+            if tags.get("natural") == "tree":
+                lat = el.get("lat")
+                lon = el.get("lon")
+                if lat is None or lon is None:
+                    geom = el.get("geometry") or []
+                    if not geom:
+                        continue
+                    lat, lon = geom[0]["lat"], geom[0]["lon"]
+                tx, tz = local_xy(lat, lon, ref)
+                # Simple 3-part tree: trunk + two stacked crowns.
+                mb.add_box("6TREES", trunk_mat, (tx, tz, ROAD_Z + 1.2), (0.4, 0.4, 2.4))
+                mb.add_box("6TREES", tree_mat, (tx, tz, ROAD_Z + 3.4), (3.2, 3.2, 3.0))
+                tree_count += 1
+                continue
+            landuse = tags.get("landuse") or ""
+            leisure = tags.get("leisure") or ""
+            if landuse not in GRASS_TAGS and leisure not in GRASS_TAGS:
+                continue
+            geom = el.get("geometry", [])
+            if len(geom) < 3:
+                continue
+            pts = [local_xy(p["lat"], p["lon"], ref) for p in geom]
+            clean = []
+            for x, z in pts:
+                if not clean or abs(clean[-1][0] - x) > 0.5 or abs(clean[-1][1] - z) > 0.5:
+                    clean.append((x, z))
+            if len(clean) < 3:
+                continue
+            layer = mb.layers.setdefault("5GREEN_AREAS", {"verts": [], "faces": [], "mat": grass_mat})
+            off = len(layer["verts"])
+            layer["verts"].extend((x, z, ROAD_Z - 0.02) for x, z in clean)
+            for i in range(1, len(clean) - 1):
+                layer["faces"].append((off, off + i, off + i + 1))
+            grass_count += 1
+        print(f"[INFO] {tree_count} trees, {grass_count} green areas")
+
     layers = mb.commit()
     print(f"[INFO] {road_count} roads, {len(crossing_points)} crossings, "
           f"{len(signal_junctions)} signal junctions, {building_count} buildings, "
           f"{layers} mesh layers")
-
     bpy.ops.export_scene.fbx(filepath=str(OUTPUT), use_selection=False,
                              axis_forward="-Z", axis_up="Y")
     print(f"[SUCCESS] Exported {OUTPUT}")

@@ -38,6 +38,34 @@ CENTRES = {
 }
 
 
+MIRRORS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+]
+
+
+def _query(query_text: str) -> dict:
+    """POST a query, rotating mirrors and retrying on transient failures."""
+    last_err = None
+    for attempt in range(6):
+        mirror = MIRRORS[attempt % len(MIRRORS)]
+        try:
+            req = urllib.request.Request(
+                mirror,
+                data=query_text.encode("utf-8"),
+                headers={"User-Agent": "HK-AC-Project/1.0"},
+            )
+            with urllib.request.urlopen(req, timeout=180) as r:
+                return json.loads(r.read())
+        except Exception as e:  # rate limits, 502/504, partial reads
+            last_err = e
+            wait = min(60, 8 * (attempt + 1))
+            print(f"    retry {attempt + 1}/6 in {wait}s ({type(e).__name__})")
+            time.sleep(wait)
+    raise RuntimeError(f"all mirrors failed: {last_err}")
+
+
 def fetch(centre: str) -> int:
     bbox = CENTRES[centre]
     bb = f"{bbox['south']},{bbox['west']},{bbox['north']},{bbox['east']}"
@@ -46,16 +74,13 @@ def fetch(centre: str) -> int:
 (
   way["building"]({bb});
   way["building:part"]({bb});
+  node["natural"="tree"]({bb});
+  way["landuse"~"^(grass|forest|park|recreation_ground|village_green|meadow)$"]({bb});
+  way["leisure"~"^(park|garden|pitch|playground|golf_course)$"]({bb});
 );
 out body geom;
 """
-    req = urllib.request.Request(
-        "https://overpass-api.de/api/interpreter",
-        data=query.encode("utf-8"),
-        headers={"User-Agent": "HK-AC-Project/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=120) as r:
-        resp = json.loads(r.read())
+    resp = _query(query)
     elements = resp.get("elements", [])
     out = OUT_DIR / f"{centre}_buildings.json"
     with open(out, "w", encoding="utf-8") as f:
@@ -75,7 +100,7 @@ def main() -> None:
             print(f"[OK] {centre}: {n} buildings -> build/HP1C/source/{centre}_buildings.json")
         except Exception as e:
             print(f"[ERR] {centre}: {type(e).__name__}: {e}")
-        time.sleep(3)  # respect Overpass rate limits
+        time.sleep(8)  # respect Overpass rate limits
 
 
 if __name__ == "__main__":
