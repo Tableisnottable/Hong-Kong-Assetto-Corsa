@@ -52,6 +52,49 @@ local CATEGORY_LABEL = {
 }
 
 local showNews = false
+local showBusRoutes = false
+
+-- Real bus routes serving each centre district (660 codes, 13 centres)
+local busRoutes = dofile('apps/lua/hk_exam/bus_routes.lua') or {}
+
+-- Map route id -> track id so the panel follows the selected route.
+local CENTRE_TO_TRACK = {
+  tin_kwong_1 = 'hong_kong_1to1',
+  tin_kwong_2 = 'hong_kong_1to1',
+  tin_kwong_3 = 'hong_kong_1to1',
+  sheung_on_1 = 'hong_kong_1to1_sheung_on',
+  texaco_1 = 'hong_kong_1to1_texaco',
+  texaco_2 = 'hong_kong_1to1_texaco',
+  texaco_3 = 'hong_kong_1to1_texaco',
+  happy_valley_1 = 'hong_kong_1to1_happy_valley',
+  happy_valley_2 = 'hong_kong_1to1_happy_valley',
+  so_kun_po_1 = 'hong_kong_1to1_so_kun_po',
+  so_kun_po_2 = 'hong_kong_1to1_so_kun_po',
+  so_kun_po_3 = 'hong_kong_1to1_so_kun_po',
+  so_kun_po_4 = 'hong_kong_1to1_so_kun_po',
+  shek_am_1 = 'hong_kong_1to1_shek_am',
+  shek_am_2 = 'hong_kong_1to1_shek_am',
+  yau_tong_1 = 'hong_kong_1to1_yau_tong',
+  yau_tong_2 = 'hong_kong_1to1_yau_tong',
+  chung_ngai_1 = 'hong_kong_1to1_chung_ngai',
+  chung_ngai_2 = 'hong_kong_1to1_chung_ngai',
+  pui_ching_1 = 'hong_kong_1to1_pui_ching',
+  pui_ching_2 = 'hong_kong_1to1_pui_ching',
+  pui_ching_3 = 'hong_kong_1to1_pui_ching',
+  pui_ching_4 = 'hong_kong_1to1_pui_ching',
+  wing_hau_1 = 'hong_kong_1to1_wing_hau',
+  wing_hau_2 = 'hong_kong_1to1_wing_hau',
+  ap_lei_chau_1 = 'hong_kong_1to1_ap_lei_chau',
+  ap_lei_chau_2 = 'hong_kong_1to1_ap_lei_chau',
+  yuen_long_1 = 'hong_kong_1to1_yuen_long',
+  yuen_long_2 = 'hong_kong_1to1_yuen_long',
+  sha_tin_1 = 'hong_kong_1to1_sha_tin',
+  sha_tin_2 = 'hong_kong_1to1_sha_tin',
+}
+
+local function currentTrackId()
+  return CENTRE_TO_TRACK[currentRouteId()] or 'hong_kong_1to1'
+end
 
 local routeIds = {}
 for id in pairs(routes) do routeIds[#routeIds + 1] = id end
@@ -214,8 +257,7 @@ local function drawIdle()
   ui.separator()
   if ui.button(('即時交通消息 (%d)'):format(#tdNews), vec2(-0.1, 0)) then
     showNews = not showNews
-  end
-  if showNews then
+  end  if showNews then
     if #tdNews == 0 then
       ui.textColored('暫無消息 (執行 tools/fetch_td_news.py 更新)', rgbm.colors.gray)
     else
@@ -228,6 +270,30 @@ local function drawIdle()
       if #tdNews > 8 then
         ui.textColored(('... 另有 %d 則'):format(#tdNews - 8), rgbm.colors.gray)
       end
+    end
+  end
+
+  local trackId = currentTrackId()
+  local routesHere = busRoutes[trackId] or {}
+  ui.separator()
+  if ui.button(('本區巴士路線 (%d)'):format(#routesHere), vec2(-0.1, 0)) then
+    showBusRoutes = not showBusRoutes
+  end
+  if showBusRoutes then
+    if #routesHere == 0 then
+      ui.textColored('暫無路線資料', rgbm.colors.gray)
+    else
+      local line = ''
+      for i, code in ipairs(routesHere) do
+        if i > 24 then
+          line = line .. ' ...'
+          break
+        end
+        line = (i == 1) and code or (line .. ', ' .. code)
+      end
+      ui.pushTextWrapPosition(320)
+      ui.textWrapped(line)
+      ui.popTextWrapPosition()
     end
   end
 end
