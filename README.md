@@ -439,6 +439,39 @@ Copy-Item "apps\lua\hk_exam\*" "A:\SteamLibrary\steamapps\common\assettocorsa\ap
 3. 設定交通密度（Traffic mode 預設最多 1,500 部）
 4. 開始後，車輛會沿試場 traffic lanes 行駛；已閉合路段會循環，開放路段會由 CSP graph 入口/出口管理
 
+### 交通車輛 / Traffic Cars
+
+CSP Traffic mode 而家可以用 22 款真實香港交通車（config/traffic_cars.json 登記）：
+
+- 私家車：Toyota Camry/Alphard/Celica、Honda Jazz、Mercedes A45、Nissan GT-R、Porsche Macan、Tesla Model 3、VW Golf R 等
+- 的士/小巴/巴士：Crown Comfort、Prius Taxi、Coaster、Volvo Olympian、機場巴士
+- 貨車：Isuzu Giga/NPR、Mule Truck、F&F Truck
+- 電單車：GSXR-1000
+
+執行 python tools/install_traffic_cars.py 將 LOD C 模型複製入 CSP Traffic Tool data/ 並生成 CarDefinition JSON。
+
+### 建築物 / Buildings
+
+各試場已加入 OSM 建築物立體模型（	ools/fetch_buildings.py 下載、generate_hd_map.py 擠出）：
+
+| 試場 | 建築物 |
+|---|---:|
+| 天光道 | 4,480 |
+| 忠義街 | 4,147 |
+| 培正道 | 3,871 |
+| 德士古道 | 3,706 |
+| 永孝街 | 1,954 |
+| 跑馬地 | 1,805 |
+| 掃桿埔 | 1,773 |
+| 石蔭 | 1,522 |
+| 沙田 | 1,047 |
+| 油塘 | 647 |
+| 鴨脷洲 | 611 |
+| 常安街 | 455 |
+| 元朗 | 256 |
+
+合共 **26,274** 個建築物。
+
 ### 重建交通配置 / Regenerate
 ```powershell
 python tools/generate_traffic_json.py

@@ -38,3 +38,7 @@ build/HP1C/*/hd_map.kn5
 
 # OSM building extracts (regenerable via tools/fetch_buildings.py)
 build/HP1C/source/*_buildings.json
+
+# Map preview renders (regenerable via tools/blender/preview_hd_map.py)
+build/HP1C/*/hd_map_preview.png
+build/HP1C/*/hd_map_zoom.png
