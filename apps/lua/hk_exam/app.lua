@@ -37,6 +37,22 @@ local settings = ac.storage({
 -- ---------------------------------------------------------------------------
 local routes = dofile('apps/lua/hk_exam/routes.lua') or {}
 
+-- TD special traffic news (refresh with tools/fetch_td_news.py)
+local tdNews = dofile('apps/lua/hk_exam/td_news.lua') or {}
+
+local CATEGORY_LABEL = {
+  accident = '交通意外',
+  roadworks = '道路工程',
+  congestion = '交通擠塞',
+  closure = '道路封閉',
+  reopened = '已解封',
+  weather = '天氣影響',
+  event = '特別活動',
+  other = '其他消息',
+}
+
+local showNews = false
+
 local routeIds = {}
 for id in pairs(routes) do routeIds[#routeIds + 1] = id end
 table.sort(routeIds)
@@ -195,6 +211,25 @@ local function drawIdle()
     startExam()
   end
   ui.textWrapped('規則: 起始100分, 70分合格。超速-5至-15, 碰撞-15, 無故停車-5。')
+  ui.separator()
+  if ui.button(('即時交通消息 (%d)'):format(#tdNews), vec2(-0.1, 0)) then
+    showNews = not showNews
+  end
+  if showNews then
+    if #tdNews == 0 then
+      ui.textColored('暫無消息 (執行 tools/fetch_td_news.py 更新)', rgbm.colors.gray)
+    else
+      for i, item in ipairs(tdNews) do
+        if i > 8 then break end
+        local label = CATEGORY_LABEL[item.category] or item.category
+        local color = item.reopened and rgbm.colors.gray or rgbm.colors.orange
+        ui.textColored(('[%s] %s'):format(label, item.title_zh), color)
+      end
+      if #tdNews > 8 then
+        ui.textColored(('... 另有 %d 則'):format(#tdNews - 8), rgbm.colors.gray)
+      end
+    end
+  end
 end
 
 local function drawSummary()
