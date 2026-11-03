@@ -417,6 +417,23 @@ Copy-Item "apps\lua\hk_exam\*" "A:\SteamLibrary\steamapps\common\assettocorsa\ap
    - `APP_HK_EXAM_END` — 結束考試
    - `APP_HK_EXAM_NEXT` — 下一步
 
+### 即時香港數據 / Live HK Open Data
+
+| 數據 | 來源 | 用途 |
+|---|---|---|
+| 特別交通消息 | 運輸署 
+esource.data.one.gov.hk/td/tc/specialtrafficnews.xml | App 內顯示即時意外/封路/工程（分類 + 顏色） |
+| 巴士路線（KMB 1,605 + CTB 410） | data.etabus.gov.hk、
+t.data.gov.hk | 每個試場對應 16-106 條真實路線；App 內顯示本區路線編號 |
+
+更新指令：
+
+`powershell
+python tools\fetch_td_news.py --lang tc     # 交通消息 -> config + td_news.lua
+python tools\build_bus_routes.py            # 路線目錄 -> config/bus_routes_hk.json
+python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
+`
+
 ### 技術 / Technical
 - CSP 0.2.11 Lua app（`manifest.ini` + `script.windowMain/update`）
 - 全部 21 個 API 已對照 CSP SDK（`extension/internal/lua-sdk/ac_apps/lib.lua`）驗證
