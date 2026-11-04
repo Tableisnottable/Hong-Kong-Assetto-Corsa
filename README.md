@@ -454,6 +454,26 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 - data/audio_sources.ini — 城市環境音
 - data/ai_hints.ini — AI 剎車提示（預留）
 
+### KN5 格式驗證 / KN5 Validation
+
+	ools/validate_kn5.py 係一個完整 KN5 v6 解析器，會逐個 byte 讀到檔案結尾，
+檢查 header / textures / materials / node tree / mesh：
+
+`powershell
+python tools\validate_kn5.py --tracks    # 13 個賽道（要求 AC_START/AC_PIT/AC_TIME）
+python tools\validate_kn5.py --cars      # 6 部車（車身 + collider）
+python tools\validate_kn5.py path\to\x.kn5
+`
+
+修正過嘅三個二進位格式錯誤（會令 AC 靜默丟棄 mesh）：
+
+1. Dummy node 多寫 1 byte flag（正確：	ype + name + children + matrix(64)）
+2. Mesh node 應為 3 個 flag byte（cast_shadows, is_visible, is_transparent）
+3. Mesh trailer 應為 32 bytes（1 int + 4 floats + 2 floats）
+
+現時 13/13 賽道（0.24M-2.03M 頂點、0.68M-5.29M 三角形）同 12/12 車輛模型
+全部通過完整解析。
+
 ### 技術 / Technical
 - CSP 0.2.11 Lua app（`manifest.ini` + `script.windowMain/update`）
 - 全部 21 個 API 已對照 CSP SDK（`extension/internal/lua-sdk/ac_apps/lib.lua`）驗證
