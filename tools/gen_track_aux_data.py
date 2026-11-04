@@ -23,9 +23,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TRACKS_DIR = ROOT / "content" / "tracks"
 
+CENTRE_BY_TRACK = {
+    "hong_kong_1to1": "tin_kwong_road",
+    "hong_kong_1to1_sheung_on": "sheung_on_street",
+    "hong_kong_1to1_texaco": "texaco_road",
+    "hong_kong_1to1_happy_valley": "happy_valley",
+    "hong_kong_1to1_so_kun_po": "so_kun_po",
+    "hong_kong_1to1_shek_am": "shek_am",
+    "hong_kong_1to1_yau_tong": "yau_tong",
+    "hong_kong_1to1_chung_ngai": "chung_ngai_street",
+    "hong_kong_1to1_pui_ching": "pui_ching_road",
+    "hong_kong_1to1_wing_hau": "wing_hau_street",
+    "hong_kong_1to1_ap_lei_chau": "ap_lei_chau",
+    "hong_kong_1to1_yuen_long": "yuen_long",
+    "hong_kong_1to1_sha_tin": "sha_tin",
+}
+
 MAP_INI = """[MAP]
 ; Values are in metres and match the KN5 coordinate space.
-; Generated from the AI spline bounding box.
+; Generated from the KN5 geometry bounding box.
 X0={x0}
 Z0={z0}
 X1={x1}
@@ -69,22 +85,128 @@ def read_ai_bounds(path: Path):
     return min(xs), min(zs), max(xs), max(zs)
 
 
+def read_kn5_bounds(path: Path):
+    """Full KN5 parse to get the true horizontal bounds of all mesh vertices."""
+    import struct
+
+    data = path.read_bytes()
+    off = [0]
+
+    def i32():
+        v = struct.unpack_from("<i", data, off[0])[0]
+        off[0] += 4
+        return v
+
+    def byt():
+        v = data[off[0]]
+        off[0] += 1
+        return v
+
+    def s():
+        n = i32()
+        v = data[off[0]:off[0] + n].decode("utf-8", "replace")
+        off[0] += n
+        return v
+
+    magic = data[0:6]
+    off[0] = 6
+    if magic != b"sc6969":
+        raise ValueError("not a KN5 file")
+
+    i32()  # version
+    i32()  # v6 extra
+    n_textures = i32()
+    for _ in range(n_textures):
+        if i32() == 0:
+            continue
+        s()
+        tex_size = i32()
+        off[0] += tex_size
+    n_materials = i32()
+    for _ in range(n_materials):
+        s(); s(); byt(); byt(); i32()
+        n_props = i32()
+        for _ in range(n_props):
+            s(); off[0] += 40
+        n_samplers = i32()
+        for _ in range(n_samplers):
+            s(); i32(); s()
+
+    mins = [1e9, 1e9, 1e9]
+    maxs = [-1e9, -1e9, -1e9]
+
+    def node(depth=0):
+        t = i32()
+        s()
+        if t == 1:
+            children = i32()
+            off[0] += 64
+            for _ in range(children):
+                node(depth + 1)
+        elif t == 2:
+            children = i32()
+            byt(); byt(); byt()
+            nv = i32()
+            base = off[0]
+            for i in range(nv):
+                x, y, z = struct.unpack_from("<3f", data, base + i * 44)
+                if x < mins[0]: mins[0] = x
+                if y < mins[1]: mins[1] = y
+                if z < mins[2]: mins[2] = z
+                if x > maxs[0]: maxs[0] = x
+                if y > maxs[1]: maxs[1] = y
+                if z > maxs[2]: maxs[2] = z
+            off[0] += nv * 44
+            ni = i32()
+            off[0] += ni * 2
+            i32(); i32()
+            off[0] += 24
+            for _ in range(children):
+                node(depth + 1)
+
+    node()
+    if mins[0] > maxs[0]:
+        raise ValueError("no mesh vertices found")
+    return mins[0], mins[2], maxs[0], maxs[2], maxs[1]
+
+
 def write_track(track: Path) -> str:
-    ai = track / "ai" / "fast_lane.ai"
     data = track / "data"
     data.mkdir(parents=True, exist_ok=True)
-    if not ai.exists():
-        return f"{track.name}: no ai/fast_lane.ai (skipped)"
 
-    x0, z0, x1, z1 = read_ai_bounds(ai)
+    # Prefer the freshly built KN5 (repo copies may be stale or absent).
+    candidates = []
+    centre = CENTRE_BY_TRACK.get(track.name)
+    if centre:
+        candidates.append(ROOT / "build" / "HP1C" / centre / "hd_map.kn5")
+    candidates.append(track / "hd_map.kn5")
+
+    x0 = z0 = x1 = z1 = None
+    top = 0.0
+    source = ""
+    for candidate in candidates:
+        if not candidate.exists():
+            continue
+        try:
+            x0, z0, x1, z1, top = read_kn5_bounds(candidate)
+            source = f"KN5 ({candidate.parent.name})"
+            break
+        except Exception:
+            continue
+
+    if x0 is None:
+        ai = track / "ai" / "fast_lane.ai"
+        if not ai.exists():
+            return f"{track.name}: no readable KN5 and no ai/fast_lane.ai (skipped)"
+        x0, z0, x1, z1 = read_ai_bounds(ai)
+        source = "AI spline"
+
     # 2 px per metre keeps the minimap crisp without huge textures.
     ppm = 2.0
     (data / "map.ini").write_text(
         MAP_INI.format(
-            x0=round(x0, 2),
-            z0=round(z0, 2),
-            x1=round(x1, 2),
-            z1=round(z1, 2),
+            x0=round(x0, 2), z0=round(z0, 2),
+            x1=round(x1, 2), z1=round(z1, 2),
             ppm=ppm,
         ),
         encoding="utf-8",
@@ -92,9 +214,8 @@ def write_track(track: Path) -> str:
     (data / "lighting.ini").write_text(LIGHTING_INI, encoding="utf-8")
     (data / "audio_sources.ini").write_text(AUDIO_SOURCES_INI, encoding="utf-8")
     (data / "ai_hints.ini").write_text(AI_HINTS_INI, encoding="utf-8")
-    span_x = x1 - x0
-    span_z = z1 - z0
-    return f"{track.name}: map.ini ({span_x:.0f} x {span_z:.0f} m)"
+    return (f"{track.name}: minimap {x1 - x0:.0f} x {z1 - z0:.0f} m "
+            f"(max height {top:.0f} m) from {source}")
 
 
 def main() -> None:
