@@ -434,6 +434,26 @@ python tools\build_bus_routes.py            # 路線目錄 -> config/bus_routes_
 python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 `
 
+### 賽道控制節點 / Track Control Nodes
+
+每個賽道 KN5 由 export_kn5_direct.py 自動生成 AC 必要節點（否則車無法起步、無圈速）：
+
+| 節點 | 作用 |
+|---|---|
+| AC_START_0 | 起步點（AI spline 起點，朝向沿線） |
+| AC_PIT_0..3 | 4 個維修站（起步點後方橫向偏移） |
+| AC_TIME_0_L/R | 起點計時閘 |
+| AC_TIME_1_L/R | 中途分段計時閘 |
+
+### 輔助賽道資料 / Aux Track Data
+
+	ools/gen_track_aux_data.py 由 ast_lane.ai 邊界框生成：
+
+- data/map.ini — 小地圖範圍（2 px/m）
+- data/lighting.ini — 日照角度 / 環境光
+- data/audio_sources.ini — 城市環境音
+- data/ai_hints.ini — AI 剎車提示（預留）
+
 ### 技術 / Technical
 - CSP 0.2.11 Lua app（`manifest.ini` + `script.windowMain/update`）
 - 全部 21 個 API 已對照 CSP SDK（`extension/internal/lua-sdk/ac_apps/lib.lua`）驗證
