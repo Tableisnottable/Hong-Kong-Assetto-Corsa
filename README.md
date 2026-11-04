@@ -454,6 +454,20 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 - data/audio_sources.ini — 城市環境音
 - data/ai_hints.ini — AI 剎車提示（預留）
 
+### 一鍵重建 / One-Command Rebuild
+
+	ools/build_tracks.py 串連整條流水線並在失敗時停低：
+
+`powershell
+python tools\build_tracks.py                  # 全部 13 個試場
+python tools\build_tracks.py sha_tin yau_tong # 指定試場
+python tools\build_tracks.py --skip-osm       # 重用現有 OSM 提取
+python tools\build_tracks.py --no-install     # 只建置，不安裝
+`
+
+步驟：OSM 提取 → Blender HD mesh → FBX→KN5（含控制節點）→ AI spline
+→ traffic.json → map/lighting/audio ini → KN5 驗證 → 安裝到 AC。
+
 ### KN5 格式驗證 / KN5 Validation
 
 	ools/validate_kn5.py 係一個完整 KN5 v6 解析器，會逐個 byte 讀到檔案結尾，
