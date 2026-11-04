@@ -70,12 +70,11 @@ def write_materials(f, materials, version=6):
 
 
 def write_dummy_node(f, name, matrix, children_count):
-    """Type 1 (Dummy) node header + 4x4 transform."""
+    """Type 1 (Dummy) node: type + name + children + 4x4 matrix (no flag byte)."""
     f.write(struct.pack("<i", 1))
     write_string(f, name)
     children_offset = f.tell()
     f.write(struct.pack("<i", children_count))
-    f.write(struct.pack("<B", 1))
     for row in range(4):
         for col in range(4):
             f.write(struct.pack("<f", matrix[row][col]))
@@ -111,7 +110,7 @@ def write_mesh_node(f, name, vertices, indices, material_id, *, visible=True):
     f.write(struct.pack("<i", 2))
     write_string(f, name)
     f.write(struct.pack("<i", 0))  # children count
-    f.write(struct.pack("<B", 1))
+    # 3 independent flags: cast_shadows, is_visible, is_transparent
     f.write(struct.pack("<3B", 1, int(visible), 0))
     f.write(struct.pack("<i", len(vertices)))
     for pos, normal, uv, tangent in vertices:
@@ -121,12 +120,12 @@ def write_mesh_node(f, name, vertices, indices, material_id, *, visible=True):
         f.write(struct.pack("<3H", indices[i], indices[i + 1], indices[i + 2]))
     f.write(struct.pack("<i", material_id))
     cx, cy, cz, radius = compute_bounding_sphere(vertices)
+    # Mesh trailer: 1 int + 5 floats + 1 float padding = 32 bytes
     f.write(struct.pack("<i", 0))
-    f.write(struct.pack("<f", 0.0))
     f.write(struct.pack("<f", 0.0))
     f.write(struct.pack("<3f", cx, cy, cz))
     f.write(struct.pack("<f", radius))
-    f.write(struct.pack("<B", 1))
+    f.write(struct.pack("<f", 0.0))
 
 
 def solid_png(red, green, blue, alpha=255):
