@@ -24,6 +24,10 @@ def write_string(f, s):
     f.write(data)
 
 
+# Set in main() so build_control_nodes() can locate the sibling ai/ folder.
+KN5_INPUT_HINT = ""
+
+
 def write_header(f, version=6):
     f.write(b"sc6969")
     f.write(struct.pack("<i", version))
@@ -142,6 +146,74 @@ def identity_matrix():
     return [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
 
 
+def translation_matrix(x: float, y: float, z: float, yaw_deg: float = 0.0):
+    """Column-major 4x4 transform with optional yaw around the Y axis."""
+    import math
+    a = math.radians(yaw_deg)
+    c, s = math.cos(a), math.sin(a)
+    return [
+        [c, 0.0, s, 0.0],
+        [0.0, 1.0, 0.0, 0.0],
+        [-s, 0.0, c, 0.0],
+        [x, y, z, 1.0],
+    ]
+
+
+def build_control_nodes():
+    """Spawn point, pit boxes and timing lines derived from the AI spline."""
+    nodes = []
+    ai_path = os.path.join(os.path.dirname(KN5_INPUT_HINT), "ai", "fast_lane.ai")
+    points = []
+    if os.path.exists(ai_path):
+        try:
+            with open(ai_path, "rb") as fh:
+                raw = fh.read()
+            version, count = struct.unpack_from("<2i", raw, 0)
+            if version == 7 and count > 4:
+                off = 16
+                for _ in range(count):
+                    x, y, z, _length, _ident = struct.unpack_from("<3ffi", raw, off)
+                    points.append((x, y, z))
+                    off += 20
+        except Exception as exc:  # noqa: BLE001
+            print(f"  [warn] AI spline unreadable: {exc}")
+
+    if len(points) < 4:
+        nodes.append(("AC_START_0", identity_matrix()))
+        nodes.append(("AC_PIT_0", translation_matrix(0.0, 0.0, 6.0)))
+        nodes.append(("AC_TIME_0_L", identity_matrix()))
+        nodes.append(("AC_TIME_0_R", translation_matrix(0.0, 0.0, 3.0)))
+        return nodes
+
+    import math
+
+    def heading(i):
+        a = points[i]
+        b = points[(i + 1) % len(points)]
+        return math.degrees(math.atan2(b[0] - a[0], b[2] - a[2]))
+
+    start = points[0]
+    nodes.append(("AC_START_0", translation_matrix(start[0], 0.0, start[2], heading(0))))
+
+    # Four pit boxes laid out behind the start point along the spline.
+    for slot in range(4):
+        idx = (-12 * (slot + 1)) % len(points)
+        p = points[idx]
+        lateral = 4.0 + slot * 3.2
+        nodes.append((
+            f"AC_PIT_{slot}",
+            translation_matrix(p[0] + lateral, 0.0, p[2], heading(idx)),
+        ))
+
+    # Timing lines: left/right gates at the start and a second split further on.
+    mid = points[len(points) // 2]
+    nodes.append(("AC_TIME_0_L", translation_matrix(start[0] - 6.0, 0.0, start[2], heading(0))))
+    nodes.append(("AC_TIME_0_R", translation_matrix(start[0] + 6.0, 0.0, start[2], heading(0))))
+    nodes.append(("AC_TIME_1_L", translation_matrix(mid[0] - 6.0, 0.0, mid[2], heading(len(points) // 2))))
+    nodes.append(("AC_TIME_1_R", translation_matrix(mid[0] + 6.0, 0.0, mid[2], heading(len(points) // 2))))
+    return nodes
+
+
 def obj_to_matrix(obj):
     """Blender world matrix -> KN5 row-major (Z-up to Y-up)."""
     m = obj.matrix_world
@@ -244,6 +316,9 @@ def main():
     fbx_path = os.path.abspath(remaining[0])
     kn5_path = os.path.abspath(remaining[1])
 
+    global KN5_INPUT_HINT
+    KN5_INPUT_HINT = fbx_path
+
     import bpy
 
     # Clear scene and import FBX
@@ -315,6 +390,15 @@ def main():
 
         root_children_offset = write_dummy_node(f, "HK_ROOT", identity_matrix(), 0)
         root_children = 0
+
+        # --- AC control nodes -------------------------------------------------
+        # AC needs AC_START_0 (spawn), AC_PIT_0..N (pit boxes) and
+        # AC_TIME_0_L/R (lap timing lines). Without them a car cannot spawn.
+        control_nodes = build_control_nodes()
+        root_children += len(control_nodes)
+        for node_name, matrix in control_nodes:
+            write_dummy_node(f, node_name, matrix, 0)
+            print(f"  Control node: {node_name}")
 
         for obj in mesh_objects:
             vertices, indices, mat_id = extract_mesh_data(obj, mat_name_to_id)
