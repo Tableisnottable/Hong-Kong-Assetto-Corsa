@@ -454,6 +454,20 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 - data/audio_sources.ini — 城市環境音
 - data/ai_hints.ini — AI 剎車提示（預留）
 
+### 車輛物理深度 / Car Physics Depth
+
+每部考車 37 個 data 檔案，對照真實 AC 車輛（47 檔）逐項補齊：
+
+| 檔案 | 內容 |
+|---|---|
+| 	yres.ini | AC v10 完整 Pacejka 輪胎模型：RADIUS/RIM_RADIUS/ANGULAR_INERTIA、DY0/DY1、DX0/DX1、WEAR_CURVE、RELAXATION_LENGTH、ROLLING_RESISTANCE_0/1/SLIP、FLEX、CAMBER_GAIN、DCAMBER_0/1、XMU、7 個 PRESSURE_* 、FZ0、LS_EXPY/EXPX、DX/DY_REF、FALLOFF_*、THERMAL[0..1] 熱學 |
+| engine.ini | POWER/COAST 曲線、INERTIA、LIMITER、[DAMAGE] 區段 |
+| drivetrain.ini | 傳動型式（Yaris/Prius FWD、HiAce/E500 RWD）、波箱換檔時間、[TRANSMISSION] 自動離合器、[CLUTCH] 扭力上限 |
+| suspensions.ini | [BASIC] 軸距/重心分佈、[ARB] 防傾桿、每軸 BASEY/ROD_LENGTH/HUB_MASS、漸進彈簧、緩衝塊行程、快慢阻尼 |
+
+重型車（>8000 N 輪胎負載）自動用更硬避震（damp 900、rate 620k、慣性 2.6）、
+62 psi 胎壓、3 倍滾動阻力。
+
 ### 一鍵重建 / One-Command Rebuild
 
 	ools/build_tracks.py 串連整條流水線並在失敗時停低：
