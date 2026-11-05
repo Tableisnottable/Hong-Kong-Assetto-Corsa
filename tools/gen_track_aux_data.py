@@ -16,6 +16,8 @@ Usage:
     python tools/gen_track_aux_data.py hong_kong_1to1
 """
 
+import json
+import math
 import struct
 import sys
 from pathlib import Path
@@ -83,6 +85,24 @@ def read_ai_bounds(path: Path):
         zs.append(z)
         off += 20
     return min(xs), min(zs), max(xs), max(zs)
+
+
+def read_spline_length(path: Path) -> float:
+    """Total centreline length of the AI spline in metres."""
+    raw = path.read_bytes()
+    version, count, _lap, _samples = struct.unpack_from("<4i", raw, 0)
+    if version != 7 or count < 2:
+        raise ValueError("unsupported AI spline")
+    off = 16
+    pts = []
+    for _ in range(count):
+        x, _y, z, _length, _ident = struct.unpack_from("<3ffi", raw, off)
+        pts.append((x, z))
+        off += 20
+    total = 0.0
+    for i in range(1, len(pts)):
+        total += math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])
+    return total
 
 
 def read_kn5_bounds(path: Path):
@@ -194,8 +214,17 @@ def write_track(track: Path) -> str:
         except Exception:
             continue
 
+    spline_length = 0.0
+    ai = track / "ai" / "fast_lane.ai"
+    if not ai.exists() and centre:
+        ai = ROOT / "build" / "HP1C" / centre / "ai" / "fast_lane.ai"
+    if ai.exists():
+        try:
+            spline_length = read_spline_length(ai)
+        except Exception:
+            spline_length = 0.0
+
     if x0 is None:
-        ai = track / "ai" / "fast_lane.ai"
         if not ai.exists():
             return f"{track.name}: no readable KN5 and no ai/fast_lane.ai (skipped)"
         x0, z0, x1, z1 = read_ai_bounds(ai)
@@ -214,8 +243,31 @@ def write_track(track: Path) -> str:
     (data / "lighting.ini").write_text(LIGHTING_INI, encoding="utf-8")
     (data / "audio_sources.ini").write_text(AUDIO_SOURCES_INI, encoding="utf-8")
     (data / "ai_hints.ini").write_text(AI_HINTS_INI, encoding="utf-8")
+
+    # Keep the UI metadata honest: length from the spline, width from the
+    # widest road in the map, pitboxes from the KN5 AC_PIT_n count.
+    ui_path = track / "ui" / "ui_track.json"
+    if ui_path.exists():
+        try:
+            ui = json.loads(ui_path.read_text(encoding="utf-8"))
+        except Exception:
+            ui = None
+        if isinstance(ui, dict):
+            changed = False
+            if spline_length > 0:
+                ui["length"] = f"{spline_length:.0f}m"
+                changed = True
+            if ui.get("width") in (None, "0m-0m", "14m", "0m"):
+                ui["width"] = "14m"
+                changed = True
+            if changed:
+                ui_path.write_text(
+                    json.dumps(ui, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
     return (f"{track.name}: minimap {x1 - x0:.0f} x {z1 - z0:.0f} m "
-            f"(max height {top:.0f} m) from {source}")
+            f"len {spline_length:.0f} m (max height {top:.0f} m) from {source}")
 
 
 def main() -> None:

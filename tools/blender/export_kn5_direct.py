@@ -194,14 +194,16 @@ def build_control_nodes():
     start = points[0]
     nodes.append(("AC_START_0", translation_matrix(start[0], 0.0, start[2], heading(0))))
 
-    # Four pit boxes laid out behind the start point along the spline.
-    for slot in range(4):
-        idx = (-12 * (slot + 1)) % len(points)
+    # Ten pit boxes laid out behind the start point along the spline.
+    # ui_track.json advertises 10, so the KN5 must provide 10 AC_PIT_n nodes.
+    for slot in range(10):
+        idx = (-10 * (slot + 1)) % len(points)
         p = points[idx]
-        lateral = 4.0 + slot * 3.2
+        lateral = 4.0 + (slot % 3) * 3.2
+        row = slot // 3
         nodes.append((
             f"AC_PIT_{slot}",
-            translation_matrix(p[0] + lateral, 0.0, p[2], heading(idx)),
+            translation_matrix(p[0] + lateral, 0.0, p[2] - row * 6.0, heading(idx)),
         ))
 
     # Timing lines: left/right gates at the start and a second split further on.
