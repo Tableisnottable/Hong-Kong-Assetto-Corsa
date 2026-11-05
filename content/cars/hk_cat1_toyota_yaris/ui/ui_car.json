@@ -1,22 +1,33 @@
 {
-    "name": "Toyota Yaris (Manual)",
-    "brand": "Toyota / HK Exam Vehicle",
-    "description": "Category 1 driving test vehicle - Toyota Yaris/Prius C (NHP10), C50 5-speed manual, 1.5L 1NZ-FE 107hp.",
-    "tags": [
-        "hongkong",
-        "exam",
-        "cat1",
-        "toyota",
-        "yaris",
-        "manual"
-    ],
-    "class": "street",
-    "specs": {
-        "engine": "1NZ-FE 1.5L I4 VVT-i",
-        "gearbox": "C50 5MT",
-        "power": "107hp @ 6000rpm",
-        "torque": "140Nm @ 4200rpm",
-        "dimensions": "3950x1695x1510mm",
-        "kerb_weight": "1040kg"
-    }
+  "name": "Toyota Yaris (Manual)",
+  "brand": "Toyota / HK Exam Vehicle",
+  "description": "Category 1 driving test vehicle - Toyota Yaris/Prius C (NHP10), C50 5-speed manual, 1.5L 1NZ-FE 107hp.",
+  "tags": [
+    "hongkong",
+    "exam",
+    "cat1",
+    "toyota",
+    "yaris",
+    "manual"
+  ],
+  "class": "street",
+  "specs": {
+    "engine": "1NZ-FE 1.5L I4 VVT-i",
+    "gearbox": "C50 5MT",
+    "power": "107hp @ 6000rpm",
+    "torque": "140Nm @ 4200rpm",
+    "dimensions": "3950x1695x1510mm",
+    "kerb_weight": "1040kg",
+    "bhp": 107,
+    "weight": "1040kg",
+    "topspeed": "n/a",
+    "acceleration": "n/a"
+  },
+  "author": "Hong Kong AC Project",
+  "version": "1.0",
+  "url": "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa",
+  "country": "Hong Kong",
+  "year": 2022,
+  "torqueCurve": "power.lut",
+  "powerCurve": "power.lut"
 }

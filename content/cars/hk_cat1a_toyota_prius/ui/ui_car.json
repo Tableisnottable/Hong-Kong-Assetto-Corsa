@@ -1,23 +1,34 @@
 {
-    "name": "Toyota Prius (Hybrid)",
-    "brand": "Toyota / HK Exam Vehicle",
-    "description": "Category 1A driving test vehicle - Toyota Prius (ZVW30/ZVW50), e-CVT hybrid, combined 121hp.",
-    "tags": [
-        "hongkong",
-        "exam",
-        "cat1A",
-        "toyota",
-        "prius",
-        "hybrid",
-        "automatic"
-    ],
-    "class": "street",
-    "specs": {
-        "engine": "2ZR-FXE 1.8L Atkinson + MG2",
-        "gearbox": "e-CVT",
-        "power": "121hp combined",
-        "torque": "163Nm (MG2)",
-        "dimensions": "4540x1760x1470mm",
-        "kerb_weight": "1375kg"
-    }
+  "name": "Toyota Prius (Hybrid)",
+  "brand": "Toyota / HK Exam Vehicle",
+  "description": "Category 1A driving test vehicle - Toyota Prius (ZVW30/ZVW50), e-CVT hybrid, combined 121hp.",
+  "tags": [
+    "hongkong",
+    "exam",
+    "cat1A",
+    "toyota",
+    "prius",
+    "hybrid",
+    "automatic"
+  ],
+  "class": "street",
+  "specs": {
+    "engine": "2ZR-FXE 1.8L Atkinson + MG2",
+    "gearbox": "e-CVT",
+    "power": "121hp combined",
+    "torque": "163Nm (MG2)",
+    "dimensions": "4540x1760x1470mm",
+    "kerb_weight": "1375kg",
+    "bhp": 121,
+    "weight": "1375kg",
+    "topspeed": "n/a",
+    "acceleration": "n/a"
+  },
+  "author": "Hong Kong AC Project",
+  "version": "1.0",
+  "url": "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa",
+  "country": "Hong Kong",
+  "year": 2022,
+  "torqueCurve": "power.lut",
+  "powerCurve": "power.lut"
 }

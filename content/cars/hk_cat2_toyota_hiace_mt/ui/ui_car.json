@@ -1,23 +1,34 @@
 {
-    "name": "Toyota HiAce (Manual)",
-    "brand": "Toyota / HK Exam Vehicle",
-    "description": "Category 2 driving test vehicle - Toyota HiAce (GDH201), R151 5-speed manual, 2.8L 1GD-FTV diesel 177hp. Exam ballast ~2600kg.",
-    "tags": [
-        "hongkong",
-        "exam",
-        "cat2",
-        "toyota",
-        "hiace",
-        "manual",
-        "diesel"
-    ],
-    "class": "street",
-    "specs": {
-        "engine": "1GD-FTV 2.8L diesel turbo",
-        "gearbox": "R151 5MT",
-        "power": "177hp @ 3400rpm",
-        "torque": "420Nm @ 1400-2600rpm",
-        "dimensions": "4695x1695x1980mm",
-        "exam_weight": "~2600kg with ballast"
-    }
+  "name": "Toyota HiAce (Manual)",
+  "brand": "Toyota / HK Exam Vehicle",
+  "description": "Category 2 driving test vehicle - Toyota HiAce (GDH201), R151 5-speed manual, 2.8L 1GD-FTV diesel 177hp. Exam ballast ~2600kg.",
+  "tags": [
+    "hongkong",
+    "exam",
+    "cat2",
+    "toyota",
+    "hiace",
+    "manual",
+    "diesel"
+  ],
+  "class": "street",
+  "specs": {
+    "engine": "1GD-FTV 2.8L diesel turbo",
+    "gearbox": "R151 5MT",
+    "power": "177hp @ 3400rpm",
+    "torque": "420Nm @ 1400-2600rpm",
+    "dimensions": "4695x1695x1980mm",
+    "exam_weight": "~2600kg with ballast",
+    "bhp": 177,
+    "weight": "n/a",
+    "topspeed": "n/a",
+    "acceleration": "n/a"
+  },
+  "author": "Hong Kong AC Project",
+  "version": "1.0",
+  "url": "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa",
+  "country": "Hong Kong",
+  "year": 2022,
+  "torqueCurve": "power.lut",
+  "powerCurve": "power.lut"
 }

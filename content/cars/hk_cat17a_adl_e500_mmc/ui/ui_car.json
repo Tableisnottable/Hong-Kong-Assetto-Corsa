@@ -1,23 +1,34 @@
 {
-    "name": "ADL Enviro500 MMC Gen 2",
-    "brand": "Alexander Dennis / HK Exam Vehicle",
-    "description": "Category 17A driving test vehicle - ADL Enviro500 MMC 12M Gen 2 T-Bus, Cummins L9 8.9L 340hp, ZF EcoLife 6AT.",
-    "tags": [
-        "hongkong",
-        "exam",
-        "cat17A",
-        "bus",
-        "enviro500",
-        "automatic"
-    ],
-    "class": "street",
-    "specs": {
-        "engine": "Cummins ISL8.9/L9 8.9L I6 Euro 6",
-        "gearbox": "ZF EcoLife 6AP1700B",
-        "power": "340hp @ 2100rpm",
-        "torque": "1500Nm @ 1200rpm",
-        "dimensions": "12000x2550x4347mm",
-        "kerb_weight": "~15100kg",
-        "turning_circle": "22.4m"
-    }
+  "name": "ADL Enviro500 MMC Gen 2",
+  "brand": "Alexander Dennis / HK Exam Vehicle",
+  "description": "Category 17A driving test vehicle - ADL Enviro500 MMC 12M Gen 2 T-Bus, Cummins L9 8.9L 340hp, ZF EcoLife 6AT.",
+  "tags": [
+    "hongkong",
+    "exam",
+    "cat17A",
+    "bus",
+    "enviro500",
+    "automatic"
+  ],
+  "class": "street",
+  "specs": {
+    "engine": "Cummins ISL8.9/L9 8.9L I6 Euro 6",
+    "gearbox": "ZF EcoLife 6AP1700B",
+    "power": "340hp @ 2100rpm",
+    "torque": "1500Nm @ 1200rpm",
+    "dimensions": "12000x2550x4347mm",
+    "kerb_weight": "~15100kg",
+    "turning_circle": "22.4m",
+    "bhp": 340,
+    "weight": "~15100kg",
+    "topspeed": "n/a",
+    "acceleration": "n/a"
+  },
+  "author": "Hong Kong AC Project",
+  "version": "1.0",
+  "url": "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa",
+  "country": "Hong Kong",
+  "year": 2022,
+  "torqueCurve": "power.lut",
+  "powerCurve": "power.lut"
 }

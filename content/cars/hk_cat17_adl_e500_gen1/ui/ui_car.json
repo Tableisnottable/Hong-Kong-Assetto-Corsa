@@ -1,22 +1,33 @@
 {
-    "name": "ADL Enviro500 Gen 1",
-    "brand": "Alexander Dennis / HK Exam Vehicle",
-    "description": "Category 17 driving test vehicle - ADL Enviro500 12M Gen 1 training bus, Cummins ISLe340 8.9L 340hp, Voith/ZF semi-auto.",
-    "tags": [
-        "hongkong",
-        "exam",
-        "cat17",
-        "bus",
-        "enviro500"
-    ],
-    "class": "street",
-    "specs": {
-        "engine": "Cummins ISLe340 8.9L I6",
-        "gearbox": "Voith D864.5 / ZF 6HP602",
-        "power": "340hp @ 2100rpm",
-        "torque": "1500Nm @ 1200-1400rpm",
-        "dimensions": "12000x2550x4300mm",
-        "kerb_weight": "~14200kg",
-        "turning_circle": "22.0m"
-    }
+  "name": "ADL Enviro500 Gen 1",
+  "brand": "Alexander Dennis / HK Exam Vehicle",
+  "description": "Category 17 driving test vehicle - ADL Enviro500 12M Gen 1 training bus, Cummins ISLe340 8.9L 340hp, Voith/ZF semi-auto.",
+  "tags": [
+    "hongkong",
+    "exam",
+    "cat17",
+    "bus",
+    "enviro500"
+  ],
+  "class": "street",
+  "specs": {
+    "engine": "Cummins ISLe340 8.9L I6",
+    "gearbox": "Voith D864.5 / ZF 6HP602",
+    "power": "340hp @ 2100rpm",
+    "torque": "1500Nm @ 1200-1400rpm",
+    "dimensions": "12000x2550x4300mm",
+    "kerb_weight": "~14200kg",
+    "turning_circle": "22.0m",
+    "bhp": 340,
+    "weight": "~14200kg",
+    "topspeed": "n/a",
+    "acceleration": "n/a"
+  },
+  "author": "Hong Kong AC Project",
+  "version": "1.0",
+  "url": "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa",
+  "country": "Hong Kong",
+  "year": 2022,
+  "torqueCurve": "power.lut",
+  "powerCurve": "power.lut"
 }
