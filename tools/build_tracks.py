@@ -92,6 +92,7 @@ def build_centre(centre: str, blender: Path, *, skip_osm: bool, install: bool) -
     run([sys.executable, "tools/generate_ai_spline.py", centre], f"{centre}: AI spline")
     run([sys.executable, "tools/generate_traffic_json.py", track_id], f"{centre}: traffic")
     run([sys.executable, "tools/gen_track_aux_data.py", track_id], f"{centre}: aux data")
+    run([sys.executable, "tools/gen_track_surfaces.py", track_id], f"{centre}: surfaces")
 
     print(f"\n=== {centre}: validate KN5 ===")
     if not kn5.exists():

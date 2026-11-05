@@ -468,6 +468,24 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 重型車（>8000 N 輪胎負載）自動用更硬避震（damp 900、rate 620k、慣性 2.6）、
 62 psi 胎壓、3 倍滾動阻力。
 
+### 表面物理 / Surface Physics
+
+	ools/gen_track_surfaces.py 直接讀取 KN5 材質表，為每個材質生成對應嘅
+surfaces.ini 區段（AC 靠 KEY 同 mesh 材質名配對）：
+
+| 材質 | 摩擦 | 有效賽道 | 揚塵 |
+|---|---:|---|---:|
+| HK_asphalt / _dark | 0.98 | 是 | 0 |
+| HK_line_white / _yellow / HK_zebra_white | 0.99 | 是 | 0 |
+| HK_kerb | 0.95（震動 0.1 / 0.2） | 否 | 0 |
+| HK_grass | 0.62 | 否 | 6 |
+| HK_tree_trunk | 0.45 | 否 | 8 |
+| HK_building_* | 0.40（阻尼 0.9） | 否 | 10 |
+
+之前只有單一 KEY=ROAD，完全對不上材質名，全張地圖都用預設表面
+（草地有路面抓地力、建築物可行車、路肩無震動）。現時 13 個賽道各有
+13 個正確表面。
+
 ### 一鍵重建 / One-Command Rebuild
 
 	ools/build_tracks.py 串連整條流水線並在失敗時停低：
