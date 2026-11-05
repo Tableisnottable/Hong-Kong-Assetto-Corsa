@@ -90,6 +90,13 @@ def build_centre(centre: str, blender: Path, *, skip_osm: bool, install: bool) -
          "--", str(fbx), str(kn5)], f"{centre}: FBX -> KN5")
 
     run([sys.executable, "tools/generate_ai_spline.py", centre], f"{centre}: AI spline")
+    # Copy the pit lane spline alongside fast_lane.ai
+    pit_src = ROOT / "build" / "HP1C" / centre / "ai" / "pit_lane.ai"
+    pit_dst = ROOT / "content" / "tracks" / track_id / "ai" / "pit_lane.ai"
+    if pit_src.exists():
+        pit_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(pit_src, pit_dst)
+
     run([sys.executable, "tools/generate_traffic_json.py", track_id], f"{centre}: traffic")
     run([sys.executable, "tools/gen_track_aux_data.py", track_id], f"{centre}: aux data")
     run([sys.executable, "tools/gen_track_surfaces.py", track_id], f"{centre}: surfaces")

@@ -235,13 +235,18 @@ def generate_for_centre(centre_id: str) -> Path:
             final.append(p)
     print(f"[{centre_id}] chained spline: {len(final)} points")
 
-    return write_v7(centre_id, final)
+    out = write_v7(centre_id, final)
+    pit = generate_pit_lane(centre_id, final)
+    if pit:
+        print(f"[{centre_id}] pit lane: {pit.name}")
+    return out
 
 
-def write_v7(centre_id: str, points: list[tuple[float, float, float]]) -> Path:
+def write_v7(centre_id: str, points: list[tuple[float, float, float]],
+             filename: str = "fast_lane.ai") -> Path:
     out_dir = ROOT / "build" / "HP1C" / centre_id / "ai"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out = out_dir / "fast_lane.ai"
+    out = out_dir / filename
 
     n = len(points)
     
@@ -369,8 +374,41 @@ def circumradius(p0, p1, p2) -> float:
     
     radius = math.sqrt((ax - ux)**2 + (ay - uy)**2)
     return min(radius, 1000.0)  # Cap at 1000m
-    print(f"[{centre_id}] WROTE {out} ({len(buf)} bytes, {n} points)")
-    return out
+
+
+def generate_pit_lane(centre_id: str,
+                      fast_points: list[tuple[float, float, float]]) -> Path | None:
+    """Generate a short pit lane spline beside the start of the main lane.
+
+    AC needs a separate pit_lane.ai when a track has pit boxes, otherwise AI
+    cars cannot drive out of the pits. The lane runs parallel to the first
+    stretch of the main spline, offset laterally, from the pit box row to a
+    merge point ~120 m down the track.
+    """
+    if len(fast_points) < 80:
+        return None
+
+    # Lateral direction at the start (left of travel).
+    p0, p1 = fast_points[0], fast_points[4]
+    dx, dz = p1[0] - p0[0], p1[2] - p0[2]
+    ln = math.hypot(dx, dz) or 1.0
+    nx, nz = -dz / ln, dx / ln
+
+    # Pit boxes sit at +4.0..+10.4 m; run the lane 8 m out and merge in.
+    OFFSET = 8.0
+    SEGMENT = 120  # main-lane points to travel before merging
+
+    pit_points = []
+    for i in range(0, SEGMENT):
+        p = fast_points[i]
+        # Taper the offset to zero over the last 25 m so it merges smoothly.
+        t = i / (SEGMENT - 1)
+        taper = max(0.0, min(1.0, (1.0 - t) / 0.20))
+        offset = OFFSET * taper
+        pit_points.append((p[0] + nx * offset, p[1], p[2] + nz * offset))
+
+    write_v7(centre_id, pit_points, "pit_lane.ai")
+    return ROOT / "build" / "HP1C" / centre_id / "ai" / "pit_lane.ai"
 
 
 def main() -> None:
