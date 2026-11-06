@@ -85,6 +85,56 @@ def car_kind(car_id: str, ui: dict) -> str:
     return "sedan"
 
 
+def _curve_pairs(car_dir: Path, target_points: int = 96) -> tuple[list, list]:
+    """Convert data/power.lut into AC's ui_car powerCurve/torqueCurve arrays.
+
+    AC expects a list of [rpm, value] pairs and draws a smooth line from them.
+    power.lut holds torque in Nm but only ~13 rows, so the points are
+    interpolated up to `target_points` for a smooth showroom graph.
+    powerCurve is derived as kW = Nm * rpm / 9549.
+    """
+    lut = car_dir / "data" / "power.lut"
+    if not lut.exists():
+        return [], []
+
+    samples: list[tuple[float, float]] = []
+    for line in lut.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith(";") or "|" not in line:
+            continue
+        rpm_s, nm_s = line.split("|", 1)
+        try:
+            samples.append((float(rpm_s), float(nm_s)))
+        except ValueError:
+            continue
+    if len(samples) < 2:
+        return [], []
+
+    def torque_at(rpm: float) -> float:
+        if rpm <= samples[0][0]:
+            return samples[0][1]
+        if rpm >= samples[-1][0]:
+            return samples[-1][1]
+        for i in range(1, len(samples)):
+            r0, t0 = samples[i - 1]
+            r1, t1 = samples[i]
+            if r0 <= rpm <= r1:
+                span = (r1 - r0) or 1.0
+                return t0 + (t1 - t0) * (rpm - r0) / span
+        return samples[-1][1]
+
+    rpm_min, rpm_max = samples[0][0], samples[-1][0]
+    step = (rpm_max - rpm_min) / (target_points - 1)
+    torque_curve: list = []
+    power_curve: list = []
+    for i in range(target_points):
+        rpm = rpm_min + step * i
+        nm = torque_at(rpm)
+        torque_curve.append([round(rpm, 1), round(nm, 3)])
+        power_curve.append([round(rpm, 1), round(nm * rpm / 9549.0, 3)])
+    return power_curve, torque_curve
+
+
 def ensure_ui(car_dir: Path) -> dict:
     ui_path = car_dir / "ui" / "ui_car.json"
     ui = json.loads(ui_path.read_text(encoding="utf-8")) if ui_path.exists() else {}
@@ -100,8 +150,15 @@ def ensure_ui(car_dir: Path) -> dict:
     ui.setdefault("url", "https://github.com/Tableisnottable/Hong-Kong-Assetto-Corsa")
     ui.setdefault("country", "Hong Kong")
     ui.setdefault("year", 2022)
-    ui.setdefault("torqueCurve", "power.lut")
-    ui.setdefault("powerCurve", "power.lut")
+
+    # AC draws the showroom graphs from these arrays, not from a filename.
+    power_curve, torque_curve = _curve_pairs(car_dir)
+    if power_curve:
+        ui["powerCurve"] = power_curve
+        ui["torqueCurve"] = torque_curve
+    else:
+        ui.setdefault("powerCurve", [])
+        ui.setdefault("torqueCurve", [])
 
     specs = ui["specs"]
     if "bhp" not in specs and "power" in specs:
@@ -111,8 +168,25 @@ def ensure_ui(car_dir: Path) -> dict:
             specs["bhp"] = int(digits)
     specs.setdefault("weight", specs.get("kerb_weight", "n/a"))
     specs.setdefault("torque", "n/a")
-    specs.setdefault("topspeed", "n/a")
-    specs.setdefault("acceleration", "n/a")
+    # AC renders top speed / acceleration only when these are null, not "n/a".
+    if specs.get("topspeed") in ("n/a", "", None):
+        specs["topspeed"] = None
+    if specs.get("acceleration") in ("n/a", "", None):
+        specs["acceleration"] = None
+
+    # AC's showroom prints these as strings like "107 bhp" / "1040 kg", and
+    # computes the power-to-weight ratio itself.
+    bhp = specs.get("bhp")
+    if isinstance(bhp, (int, float)):
+        specs["bhp"] = f"{int(bhp)} bhp"
+    weight_kg = None
+    raw_weight = str(specs.get("kerb_weight") or specs.get("weight") or "")
+    digits = "".join(ch for ch in raw_weight if ch.isdigit())
+    if digits:
+        weight_kg = int(digits)
+        specs["weight"] = f"{weight_kg} kg"
+    if isinstance(bhp, (int, float)) and weight_kg:
+        specs["pwratio"] = f"{weight_kg / bhp:.1f} kg/hp"
 
     ui_path.parent.mkdir(parents=True, exist_ok=True)
     ui_path.write_text(json.dumps(ui, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -150,6 +224,40 @@ def ensure_skins(car_dir: Path, ui: dict) -> int:
     return count
 
 
+def ensure_upgrade_icon(car_dir: Path) -> bool:
+    """AC shows ui/upgrade.png in the showroom; generate a simple one."""
+    target = car_dir / "ui" / "upgrade.png"
+    if target.exists():
+        return False
+    # 128x128 with a light "HK" plate so the showroom slot is not blank.
+    size = 128
+    rows = []
+    for y in range(size):
+        row = bytearray((0,))
+        for x in range(size):
+            inside = 24 <= x < size - 24 and 40 <= y < size - 40
+            if inside:
+                # Simple diagonal band pattern.
+                shade = 210 if ((x + y) // 16) % 2 == 0 else 170
+                row += bytes((30, 60, shade, 255))
+            else:
+                row += bytes((0, 0, 0, 0))
+        rows.append(bytes(row))
+    raw = b"".join(rows)
+
+    def chunk(kind: bytes, payload: bytes) -> bytes:
+        body = kind + payload
+        return struct.pack(">I", len(payload)) + body + struct.pack(">I", zlib.crc32(body))
+
+    data = b"\x89PNG\r\n\x1a\n"
+    data += chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 6, 0, 0, 0))
+    data += chunk(b"IDAT", zlib.compress(raw, 9))
+    data += chunk(b"IEND", b"")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
+    return True
+
+
 def main() -> None:
     total_cars = 0
     total_skins = 0
@@ -158,9 +266,12 @@ def main() -> None:
             continue
         ui = ensure_ui(car_dir)
         n = ensure_skins(car_dir, ui)
+        icon = ensure_upgrade_icon(car_dir)
         total_cars += 1
         total_skins += n
-        print(f"[OK] {car_dir.name}: ui_car completed, {n} skins")
+        curves = len(ui.get("powerCurve") or [])
+        print(f"[OK] {car_dir.name}: {n} skins, {curves}-point curves, "
+              f"upgrade.png {'new' if icon else 'existing'}")
     print(f"\n{total_cars} cars, {total_skins} skins total")
 
 
