@@ -124,41 +124,68 @@ def detect_junctions(roads, centre='', grid=0.5, min_roads=3, radius=8.0):
 
 
 def make_traffic(track_id: str, centre: str):
-    ai_path = ROOT / 'build' / 'HP1C' / centre / 'ai' / 'fast_lane.ai'
-    if not ai_path.exists():
-        raise FileNotFoundError(ai_path)
-    points = read_ai(ai_path)
-    # Traffic Planner consumes editor-style lane data. The AI spline is a
-    # best-effort chain and can contain jumps between unrelated OSM ways. Split
-    # those jumps into independent enter/exit lanes instead of asking Traffic
-    # Planner to drive across an artificial 50–100m segment.
-    # Offset lanes can add a small amount to a segment gap, so keep the
-    # centreline split threshold below the final 10m runtime safety limit.
+    """Build traffic lanes from the whole drivable OSM network.
+
+    Earlier versions chained the AI spline into one path, which covered only
+    a fraction of each map (tin_kwong had 1450 roads but 4 lanes). Now every
+    OSM way becomes its own pair of lanes, so traffic can use the full
+    network and junctions connect them.
+    """
+    roads = load_osm_roads(centre)
+    if not roads:
+        raise FileNotFoundError(f"no OSM extract for {centre}")
+
+    min_lane_length = 25.0
     max_segment_gap = 8.0
-    lanes_points = []
-    current = [points[0]] if points else []
-    for point in points[1:]:
-        previous = current[-1]
-        dx = point[0] - previous[0]
-        dz = point[2] - previous[2]
-        if (dx * dx + dz * dz) ** 0.5 > max_segment_gap:
-            if len(current) >= 3:
-                lanes_points.append(current)
-            current = [point]
-        else:
-            current.append(point)
-    if len(current) >= 3:
-        lanes_points.append(current)
+
+    def resample(pts, spacing=2.0):
+        """Sample a polyline at a fixed spacing."""
+        if len(pts) < 2:
+            return []
+        out = [list(pts[0])]
+        carried = 0.0
+        for i in range(1, len(pts)):
+            a, b = out[-1], pts[i]
+            seg = math.hypot(b[0] - a[0], b[2] - a[2])
+            if seg < 1e-6:
+                continue
+            while carried + seg >= spacing:
+                t = (spacing - carried) / seg
+                nx = a[0] + (b[0] - a[0]) * t
+                nz = a[2] + (b[2] - a[2]) * t
+                out.append([nx, a[1], nz])
+                a = out[-1]
+                seg = math.hypot(b[0] - a[0], b[2] - a[2])
+                carried = 0.0
+                if seg < 1e-6:
+                    break
+            else:
+                carried += seg
+        return out
+
+    def split_gaps(points):
+        """Split where consecutive samples jump far apart."""
+        chunks, current = [], [points[0]] if points else []
+        for point in points[1:]:
+            prev = current[-1]
+            if math.hypot(point[0] - prev[0], point[2] - prev[2]) > max_segment_gap:
+                if len(current) >= 3:
+                    chunks.append(current)
+                current = [point]
+            else:
+                current.append(point)
+        if len(current) >= 3:
+            chunks.append(current)
+        return chunks
 
     def offset_polyline(points, offset):
-        """Offset a local AC x/z polyline while preserving its height."""
         result = []
         for i, point in enumerate(points):
             previous = points[max(0, i - 1)]
             following = points[min(len(points) - 1, i + 1)]
             tangent_x = following[0] - previous[0]
             tangent_z = following[2] - previous[2]
-            length = (tangent_x * tangent_x + tangent_z * tangent_z) ** 0.5
+            length = math.hypot(tangent_x, tangent_z)
             if length < 1e-6:
                 result.append(list(point))
                 continue
@@ -171,32 +198,55 @@ def make_traffic(track_id: str, centre: str):
             ])
         return result
 
+    def polyline_length(points):
+        return sum(
+            math.hypot(points[i][0] - points[i - 1][0], points[i][2] - points[i - 1][2])
+            for i in range(1, len(points))
+        )
+
+    def decimate(points, keep=3):
+        """Keep every `keep`-th point plus the last one (curves stay sampled)."""
+        if len(points) <= 6 or keep <= 1:
+            return points
+        out = [points[i] for i in range(0, len(points), keep)]
+        if out[-1] is not points[-1]:
+            out.append(points[-1])
+        return out if len(out) >= 3 else points
+
     lanes = []
     total_points = 0
     lane_id = 1
-    for lane_points in lanes_points:
-        # Build two separated lanes. The second lane runs in the opposite
-        # direction, which prevents traffic cars from sharing one centreline.
-        left_points = offset_polyline(lane_points, LANE_OFFSET_METERS)
-        right_points = list(reversed(offset_polyline(lane_points, -LANE_OFFSET_METERS)))
-        for direction, directed_points in (("A", left_points), ("B", right_points)):
-            dx = directed_points[0][0] - directed_points[-1][0]
-            dz = directed_points[0][2] - directed_points[-1][2]
-            is_loop = (dx * dx + dz * dz) ** 0.5 <= 5.0
-            lanes.append({
-                'name': f'HK {centre} traffic lane {lane_id}{direction}',
-                'id': lane_id,
-                'loop': is_loop,
-                'role': 3,
-                'priorityOffset': 0,
-                'points': directed_points,
-                'params': {
-                    'allowLaneChanges': False,
-                    'allowUTurns': False,
-                },
-            })
-            total_points += len(directed_points)
-            lane_id += 1
+    skipped_short = 0
+    for road in roads:
+        for chunk in split_gaps(resample(road["pts"])):
+            if polyline_length(chunk) < min_lane_length:
+                skipped_short += 1
+                continue
+            # Two directions: left offset forward, right offset reversed.
+            for suffix, directed in (
+                ("A", offset_polyline(chunk, LANE_OFFSET_METERS)),
+                ("B", list(reversed(offset_polyline(chunk, -LANE_OFFSET_METERS)))),
+            ):
+                # Thin out long stretches: keep every 3rd point on straights so
+                # traffic.json stays a sane size while curves stay accurate.
+                directed = decimate(directed)
+                dx = directed[0][0] - directed[-1][0]
+                dz = directed[0][2] - directed[-1][2]
+                is_loop = math.hypot(dx, dz) <= 5.0
+                lanes.append({
+                    "name": f"HK {centre} lane {road['id']}{suffix}",
+                    "id": lane_id,
+                    "loop": is_loop,
+                    "role": 3,
+                    "priorityOffset": 0,
+                    "points": directed,
+                    "params": {
+                        "allowLaneChanges": False,
+                        "allowUTurns": False,
+                    },
+                })
+                total_points += len(directed)
+                lane_id += 1
 
     # Only keep junctions that actually intersect at least two lanes, so the
     # traffic graph can route between lanes at those points.
