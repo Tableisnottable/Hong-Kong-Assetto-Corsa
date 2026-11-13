@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "kn5": "local-generated/hk01_kam_tin_test.kn5",
+  "independent_parser": "Existing standalone local parser used read-only; not included",
+  "errors": [],
+  "warnings": [],
+  "scope": "Independent binary/data checks only; no engine driving, shader-render or FPS claim",
+  "version": 5,
+  "file_bytes": 46451582,
+  "parsed_bytes": 46451582,
+  "texture_count": 9,
+  "material_count": 9,
+  "node_count": 660,
+  "configured_surface_keys": [
+    "GRASS",
+    "PITLANE",
+    "ROAD",
+    "SHOULDER",
+    "WALL"
+  ],
+  "mesh_count": 649,
+  "vertices": 963330,
+  "triangles": 410421,
+  "degenerate_triangles": 0,
+  "geometry_bounds_ac_xyz_m": {
+    "min": [
+      -3000.0,
+      -7.0,
+      -3000.0
+    ],
+    "max": [
+      3000.0,
+      564.0,
+      3000.0
+    ],
+    "extent": [
+      6000.0,
+      571.0,
+      6000.0
+    ]
+  },
+  "required_nodes": {
+    "AC_PIT_0": {
+      "active": true,
+      "position_ac_xyz_m": [
+        -564.2368774414062,
+        11.056512832641602,
+        768.201416015625
+      ],
+      "world_matrix_column_major": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -564.2368774414062,
+        11.056512832641602,
+        768.201416015625,
+        1.0
+      ],
+      "positive_local_z_world": [
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234
+      ],
+      "required_support_surface": "PITLANE",
+      "road_support": {
+        "road_elevation_y_m": 11.026508619360436,
+        "spawn_clearance_m": 0.030004213281165093,
+        "candidate_elevations_y_m": [
+          11.02651
+        ]
+      }
+    },
+    "AC_START_0": {
+      "active": true,
+      "position_ac_xyz_m": [
+        -584.2896118164062,
+        10.450247764587402,
+        675.2377319335938
+      ],
+      "world_matrix_column_major": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -584.2896118164062,
+        10.450247764587402,
+        675.2377319335938,
+        1.0
+      ],
+      "positive_local_z_world": [
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234
+      ],
+      "required_support_surface": "ROAD",
+      "road_support": {
+        "road_elevation_y_m": 10.421101812134397,
+        "spawn_clearance_m": 0.02914595245300511,
+        "candidate_elevations_y_m": [
+          10.4211
+        ]
+      }
+    },
+    "AC_HOTLAP_START_0": {
+      "active": true,
+      "position_ac_xyz_m": [
+        -576.6139526367188,
+        10.480545997619629,
+        704.2391967773438
+      ],
+      "world_matrix_column_major": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -576.6139526367188,
+        10.480545997619629,
+        704.2391967773438,
+        1.0
+      ],
+      "positive_local_z_world": [
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234
+      ],
+      "required_support_surface": "ROAD",
+      "road_support": {
+        "road_elevation_y_m": 10.450595810818841,
+        "spawn_clearance_m": 0.029950186800787648,
+        "candidate_elevations_y_m": [
+          10.4506
+        ]
+      }
+    }
+  },
+  "kn5_sha256": "52e615cca58c3782def5b01fa29fe01aa8b97f450cc470899e159337495f7961"
+}

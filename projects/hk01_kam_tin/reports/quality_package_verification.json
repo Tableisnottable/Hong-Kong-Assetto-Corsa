@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "version": "0.4-quality-pass",
+  "track_id": "hk01_kam_tin_test",
+  "file_count": 31,
+  "model_files": 10,
+  "archive": "local-generated/HK_KamTin_Quality_Test_v0.4.zip",
+  "archive_bytes": 1440309787,
+  "archive_sha256": "196d9a5b6b117986faa036e81903bd288fd141a934fe54865d7434cddf107f8b",
+  "installed_to": "local Assetto Corsa installation/content/tracks/hk01_kam_tin_test",
+  "installed_file_hashes_verified": true,
+  "engine_test_v04": "pending user; no automatic game launch"
+}

@@ -1,42 +1,40 @@
-KAM TIN — FULL LOOP TEST 0.3
+KAM TIN — VISUAL REPAIR 0.4
 
-READY FOR YOUR OWN TEST
-Track: Hong Kong — Kam Tin Driving Test
-Mode: Practice. One player car, zero opponents. Clear daytime. Start from pits.
-Use a standard Kunos road car first. Leave your usual graphics settings intact;
-this build does not install CSP, weather mods, traffic or car dependencies.
+READY FOR YOUR OWN COMPARISON TEST
+Select Hong Kong — Kam Tin Driving Test (hk01_kam_tin_test).
+Use Practice, one car, no opponents, clear daytime, start from pits.
+Keep the same car, weather/time and graphics settings as your previous screenshot.
 
-1. Confirm the track loads, the car stands on pavement, and steering/throttle work.
-2. Drive forward out of the left-side pit apron and merge onto the paved loop.
-3. Complete a slow lap, keeping left and following the continuous road.
-4. Pass the blue synthetic TEST POINT markers 1 through 8, then return to 1.
-5. Check both lanes carefully for holes, bumps, invisible surfaces and barrier snags.
-6. Try Return to pits. Confirm the car respawns upright on the apron.
-7. Record FPS around the lap, especially dense scenery and corners. Report car,
-   resolution, graphics/CSP settings, minimum FPS and the nearest checkpoint.
+1. Leave the pit apron, keep left and drive the complete 3.445 km loop.
+2. Follow the blue TEST POINT markers 1–8 and return to point 1.
+3. Compare road/ground brightness and the new tree silhouettes at the same location.
+4. Check both lanes, barrier edges and Return to pits as before.
+5. Send a new screenshot and the nearest checkpoint if a surface is still white,
+   foliage looks wrong, scenery is missing or you encounter a driving defect.
+6. Record minimum FPS during a complete lap; one screenshot is not a benchmark.
 
-See TEST_ROUTE_GUIDE.png for checkpoint positions. If loading fails, send the
-error message and the newest Documents/Assetto Corsa/logs/log.txt (review personal
-paths before sharing). Nothing automatically uploads your logs.
-
-WHAT THIS BUILD INCLUDES
-The complete 3.445 km test loop, pit apron, start/timing nodes, road/shoulder/grass
-collision, safety barriers, route markings, eight test markers, native minimap,
-and adapted real Lands Department scenery from eight tiles covering the loop.
-All source imagery/models and generated game files are local, not on GitHub.
+WHAT CHANGED
+Removed source vegetation and raised GENERIC photomesh fragments. Projected the
+remaining GENERIC photo ground onto visual terrain to remove jagged stumps. Added authored
+3D trees at canopy locations inferred from source geometry/texture. Retained the
+individualised buildings, infrastructure and terrain. Added restrained asphalt,
+concrete, grass and paint textures. Lowered track-local material multipliers and
+explicitly set emissive to zero. Collision geometry and spawn/timing are unchanged.
 
 LIMITS
-This is the test loop, not all Hong Kong or every road in the 6 x 6 km blockout.
-Neighbouring roads are scenery. Width/profile and barriers remain temporary.
-Photogrammetry can look rough up close; some source textures need fallbacks.
-Visual source scenery has no vehicle collision; the original test road and
-barriers provide the driving collision. Night lighting, rain tuning, AI cars,
-traffic and online racing are outside this solo daytime test.
+This remains a provisional test route, not finished real-world quality or all
+Hong Kong. Tree species, exact positions and heights are not surveyed. Removing
+raised GENERIC data also removes some non-individualised structures. Residual
+ground photomesh, generic tree shapes, temporary road width/profile, junctions
+and safety barriers still need manual production work. Source scenery is visual
+only; the original road and barriers provide vehicle collision. Neighbouring
+roads are scenery. No AI traffic, rain/night tuning or multiplayer validation.
 
-The build passed static binary/image checks, lane-width surface ray tests,
-baseline physics/spawn comparisons, protected-corridor checks, archive CRC and
-installed-file hash checks. Actual engine loading, driving and FPS remain for
-your test. No automatic game launch or graphics-setting changes were made.
+The user confirmed loading/driving in v0.3 but rejected its appearance. Version
+0.4 passed the recorded binary, texture, corridor and baseline-physics checks.
+Blender renders check geometry only; they do not prove Assetto Corsa lighting.
+Version 0.4 engine appearance, driving and FPS await your comparison test.
+The game was not launched automatically. Global graphics/CSP settings are unchanged.
 
 Map from Lands Department. Source data © Government of the Hong Kong SAR.
 https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors.

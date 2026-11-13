@@ -1,0 +1,8 @@
+{
+  "tree_candidates": 2905,
+  "selected_tree_locations": 1200,
+  "source_location_method": "green elevated source triangles; 10 m cells; 8 m minimum spacing; individual building exclusion",
+  "trees_are_authored_replacements_not_surveyed_species": true,
+  "physical_meshes_to_change": 0,
+  "source_archives_to_change": 0
+}

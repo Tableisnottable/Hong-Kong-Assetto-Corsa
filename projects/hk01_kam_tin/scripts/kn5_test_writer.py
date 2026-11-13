@@ -9,8 +9,8 @@ def pack(fmt,*v):return struct.pack('<'+fmt,*v)
 def string(s):
     b=s.encode('utf-8');return pack('I',len(b))+b
 def dummy(name,children=0,matrix=IDENTITY):return pack('I',1)+string(name)+pack('IB16f',children,1,*matrix)
-def material(name,texture,ambient=.45,diffuse=.65,specular=.03):
-    props={'ksAmbient':ambient,'ksDiffuse':diffuse,'ksSpecular':specular,'ksSpecularEXP':15,'ksAlphaRef':.5}
+def material(name,texture,ambient=.45,diffuse=.65,specular=.03,emissive=0):
+    props={'ksAmbient':ambient,'ksDiffuse':diffuse,'ksSpecular':specular,'ksSpecularEXP':15,'ksAlphaRef':.5,'ksEmissive':emissive}
     b=string(name)+string('ksPerPixel')+pack('BBII',0,0,0,len(props))
     for k,v in props.items():b+=string(k)+pack('10f',v,*([0]*9))
     return b+pack('I',1)+string('txDiffuse')+pack('I',0)+string(texture)
@@ -35,7 +35,7 @@ def mesh_blob(name,attr,tris,material_id,cast_shadows=True,visible=True,lodout=8
     center=(vv[:,:3].min(axis=0)+vv[:,:3].max(axis=0))/2;radius=float(np.linalg.norm(vv[:,:3]-center,axis=1).max())
     return pack('I',2)+string(name)+pack('IB3BI',0,1,int(cast_shadows),int(visible),0,len(vv))+vv.tobytes()+pack('I',len(indices))+indices.astype('<u2').tobytes()+pack('II6fB',material_id,0,0,lodout,*center,radius,1)
 
-def export(path,objects,materials,textures,dummies):
+def export(path,objects,materials,textures,dummies,material_settings=None):
     mat_ids={name:i for i,(name,texture) in enumerate(materials)}
     blobs=[];report=[]
     for ob in objects:
@@ -60,7 +60,7 @@ def export(path,objects,materials,textures,dummies):
         for name,p in textures:
             b=p.read_bytes();f.write(pack('I',1)+string(name)+pack('I',len(b))+b)
         f.write(pack('I',len(materials)))
-        for name,texture in materials:f.write(material(name,texture))
+        for name,texture in materials:f.write(material(name,texture,**((material_settings or {}).get(name,{}))))
         f.write(dummy('HK01_KamTin_Test',len(blobs)+len(dummies)))
         for name,matrix in dummies:f.write(dummy(name,0,matrix))
         for blob in blobs:f.write(blob)

@@ -1,12 +1,12 @@
 # Hong Kong 1:1 — regional Assetto Corsa project
 
-**Current deliverable: version 0.3 complete Kam Tin driving-test loop, installed for your own test.** Select **Hong Kong — Kam Tin Driving Test** in **Practice, one car, clear daytime, start from pits**. The 3.445 km loop has real Lands Department scenery from eight source sheets, a pit apron, preserved road/barrier collision and eight blue test markers. Follow `TESTING.md` and local `TEST_ROUTE_GUIDE.png` inside the installed track.
+**Current deliverable: v0.4 visual repair of the 3.445 km Kam Tin test loop, installed for comparison.** Select **Hong Kong — Kam Tin Driving Test** in **Practice, one car, clear daytime, start from pits**. Keep the same car, time/weather and graphics as your previous test. Follow the eight blue markers and `TESTING.md`.
 
-The local package is `release_route_scenery/content/tracks/hk01_kam_tin_test`; editable scene: `blender/HK01_KamTin_FULL_LOOP_TEST.blend`. It contains 9 native KN5 models, 7,609,218 triangles, 4,454 mesh nodes and 1,246.3 MiB of embedded texture payload. Original source imagery is adapted to mipmapped BC1 DDS textures at up to 2048 pixels. Nearby scenery is cropped clear of the temporary road; distant context is simpler.
+The user loaded/drove v0.3 but rejected its angular photogrammetry vegetation and bright surfaces. Version 0.4 removes raised generic photo fragments/source vegetation, projects retained photo ground onto visual terrain, adds 1,153 authored trees at inferred source canopy locations, and adjusts track-local surface textures/materials with explicit zero emissive. Individualised CSDI buildings and infrastructure are retained. Some non-individualised structures are removed with GENERIC data. Original physical payloads and spawn/timing matrices are unchanged.
 
-Static binary/image checks, both-lane surface rays, baseline physics/spawn comparisons, ZIP CRC and installed hashes passed. **Actual game loading, driving and FPS await the user.** The source scenery is visual-only; road widths/profile and synthetic barriers remain temporary. Missing texture fallbacks and rough close-up photogrammetry remain. No AI, traffic, night/rain tuning or multiplayer validation is included. This is the selected test loop, not the entire 6 × 6 km region or all Hong Kong.
+**This is a provisional improvement, not finished real-world quality.** Blender geometry views, binary/image checks, protected road corridor, baseline physics/spawns, ZIP CRC and installed hashes passed. Version 0.4 Assetto Corsa appearance, driving and FPS still require the user's test. Remaining work includes accurate road/junction/kerb/barrier modelling, richer foliage, source-ground cleanup and lighting/performance validation. The 3.445 km loop is not all Hong Kong; no AI traffic, night/rain or multiplayer validation is included.
 
-The 1,795.7 MB KN5 models, 1,005.4 MB install ZIP, Blender scene, textures and source downloads stay local. GitHub contains only small scripts, documentation, configuration and validation summaries; a clone alone cannot load as a track. See `PUBLISHING.md`.
+Local stage: `release_quality_v04/content/tracks/hk01_kam_tin_test`. Editable scene: `blender/HK01_KamTin_QUALITY_v04.blend`. 10 KN5 models contain 12,614,555 triangles and 990.5 MiB of embedded texture payload. Models total 2,739.9 MB. Generated assets, downloaded source data and ZIPs stay local. GitHub contains small sources/configuration/docs/reports only; cloning it alone does not install the track. See `PUBLISHING.md` and `STATUS.md`.
 
 This project starts from new geographic source data. It does not reuse or modify the existing Route Twisk geometry.
 
@@ -27,7 +27,7 @@ The complete downloaded Hong Kong road inventory is retained in `gis/hk_roads.ge
 
 ## What does not exist yet
 
-For the full region there is no final road surface, stitched junction network, verified bridge/tunnel elevation, surveyed lane width, detailed building façade, finished roadside scenery, driving AI, or traffic system. The separately exported test loop has simplified drivable surfaces and spawn/pit nodes. No gameplay or frame-rate result is claimed.
+For the full region there is no final road surface, stitched junction network, verified bridge/tunnel elevation, surveyed lane width, detailed building façade, finished roadside scenery, driving AI, or traffic system. The separately exported test loop has simplified drivable surfaces and spawn/pit nodes. The user loaded/drove v0.3; no complete-lap benchmark or v0.4 engine result is claimed.
 
 Road reference strips overlap at junctions and are not collision geometry. Grade-separated roads are deliberately marked **violet** and draped on the terrain for identification; their current displayed height is not their real bridge/tunnel height. **Amber** marks roads requiring access or road-type review. Grey buildings are massing placeholders, generally with estimated heights. Complex building relations are deferred.
 
@@ -49,7 +49,7 @@ Start with HK01. Build and validate a short connected public-road loop first; th
 
 ## Hardware target
 
-Detected on November 13, 2026: RTX 4060 Laptop GPU, 8188 MiB VRAM, Core i7-13800H, about 63.6 GiB usable system RAM. Aim for high detail near the road, with simpler distant buildings and vegetation. **60 FPS is a provisional design target, not a measured result.** Resolution, CSP options, weather, traffic and car count remain to be selected/tested.
+Detected on November 13, 2026: RTX 4060 Laptop GPU, 8188 MiB VRAM, Core i7-13800H, about 63.6 GiB usable system RAM. Aim for high detail near the road, with simpler distant buildings and vegetation. **60 FPS is a provisional design target, not a measured result.** The user tested v0.3 at 2560 × 1440; a complete-lap benchmark and v0.4 test are still required.
 
 Benchmark the installed full-loop test and record resolution, car, graphics/CSP settings, frame times, VRAM, load time and physics behaviour. The file-based texture budget does not establish real game performance. Use the results before expanding the region.
 
@@ -116,3 +116,19 @@ python scripts/package_route_scenery.py
 ```
 
 The downloader selects only sheets intersecting the loop's 160 m buffer and records sanitized checksums. The preparation uses a 190 m detail radius, removes source geometry from an 11 m road corridor, and budgets texture memory before export. The packager requires passing reports tied to current KN5 hashes. Add `--install-root` with the Assetto Corsa installation folder only when intentionally installing this test track; modified installed files are preserved by a refusal to overwrite them.
+
+## Visual repair 0.4 rebuild
+
+Retain the completed v0.3 source scene and package as inputs. Do not run the older packager over a v0.4 installation. Then run:
+
+```powershell
+python scripts/prepare_quality_pass.py
+& 'C:\Program Files\Blender Foundation\Blender 5.1\blender.exe' --background --factory-startup --python scripts/build_quality_pass.py
+python scripts/verify_track.py release_quality_v04/content/tracks/hk01_kam_tin_test/hk01_kam_tin_test.kn5 --baseline release/content/tracks/hk01_kam_tin_test/hk01_kam_tin_test.kn5 --models-ini release_quality_v04/content/tracks/hk01_kam_tin_test/models.ini --report driving_test/quality_pass/reports/model_verification.json
+python scripts/review_quality_pass.py
+# Inspect all eight current renders. Only after inspection, record specific notes:
+python scripts/review_quality_pass.py --record-inspection --notes "Describe the observed geometry and remaining defects here."
+python scripts/package_quality_pass.py
+```
+
+`--record-inspection` records a deliberate reviewer action; it is not automatic visual approval. `package_quality_pass.py` requires passing hash-bound model checks, explicit zero-emissive materials, current render/review hashes, preserved physics/spawns and the unchanged owned v0.3 input package. With an intentionally supplied `--install-root`, it refuses to overwrite user additions or modified installed files. Global graphics/CSP settings are not changed. Version 0.3 remains a separate local rollback.

@@ -1,6 +1,6 @@
 {
-  "version": "0.3-full-loop",
-  "date": "2026-11-13",
+  "version": "0.4-quality-pass",
+  "date": "2026-11-14",
   "track_id": "hk01_kam_tin_test",
   "test_route_length_m": 3444.937762144697,
   "real_scenery_sheets": [
@@ -15,17 +15,17 @@
   ],
   "source_tile_count": 8,
   "route_coverage_percent": 100.0,
-  "model_files": 9,
-  "kn5_total_bytes": 1795660333,
-  "mesh_nodes": 4454,
-  "triangles": 7609218,
-  "texture_gpu_payload_bytes_with_mips": 1306887704,
+  "model_files": 10,
+  "kn5_total_bytes": 2739945944,
+  "mesh_nodes": 5096,
+  "triangles": 12614555,
+  "texture_gpu_payload_bytes_with_mips": 1038650000,
   "degenerate_triangles": 0,
   "binary_check_passed": true,
   "physical_meshes_compared": 272,
   "physical_meshes_unchanged": true,
   "spawn_timing_nodes_unchanged": true,
-  "source_scenery_triangles_checked": 7198797,
+  "source_scenery_triangles_checked": 12204134,
   "source_scenery_triangles_in_protected_corridor": 0,
   "surface_check": {
     "passed": true,
@@ -37,7 +37,8 @@
     "source_terrain_height_samples": 1723,
     "physics_meshes_unchanged": true,
     "spawn_matrices_unchanged": true,
-    "game_test": "pending user; no engine launch"
+    "game_test": "pending user; no engine launch",
+    "status": "Retained v0.3 ray-test evidence applies through exact serialized physical-payload equality; not rerun in game."
   },
   "texture_mip_check": {
     "passed": true,
@@ -69,34 +70,85 @@
   ],
   "package_check": {
     "passed": true,
+    "version": "0.4-quality-pass",
     "track_id": "hk01_kam_tin_test",
-    "version": "0.3-full-loop",
-    "model_files": 9,
-    "scenery_tiles": [
-      "6-NE-12D",
-      "6-NE-12B",
-      "6-NE-17B",
-      "6-NE-17D",
-      "6-NE-18A",
-      "6-NE-12C",
-      "6-NE-13C",
-      "6-NE-18C"
-    ],
-    "route_coverage_percent": 100.0,
-    "route_length_m": 3444.937762144697,
-    "file_count": 30,
-    "archive_bytes": 1005364259,
-    "archive_sha256": "127c43ee820a1092ecc21d89e3ad1310a057517554375c602cd5e95c8ce9cfc5",
-    "game_loading_driving_fps": "not performed; user will test",
-    "installed_file_hashes_verified": true
+    "file_count": 31,
+    "model_files": 10,
+    "archive_bytes": 1440309787,
+    "archive_sha256": "196d9a5b6b117986faa036e81903bd288fd141a934fe54865d7434cddf107f8b",
+    "installed_file_hashes_verified": true,
+    "engine_test_v04": "pending user; no automatic game launch"
   },
   "game_loading_driving_fps_tested": false,
   "sdk_graphics_check": "could not initialise during earlier milestone; no engine acceptance result",
   "limits": [
-    "Complete test loop, not the entire 6 x 6 km road network or all Hong Kong.",
-    "Temporary road width/profile and synthetic barriers.",
-    "Visual-only source scenery; original test road and barriers provide collision.",
-    "Rough close-up photogrammetry and missing source texture fallbacks.",
-    "Solo daytime Practice; no AI, traffic, rain/night tuning or multiplayer validation."
-  ]
+    "Generic authored foliage, not surveyed species.",
+    "Projected source ground retains photographic artifacts.",
+    "Temporary road width/profile, junctions and synthetic barriers.",
+    "Some unclassified raised structures removed with GENERIC data.",
+    "Game lighting and performance require a fresh user test.",
+    "Complete 3.445 km loop only; broader region and all Hong Kong unfinished.",
+    "Visual scenery has no vehicle collision.",
+    "Solo daytime Practice; no AI, traffic, rain/night or multiplayer validation."
+  ],
+  "authored_replacement_trees": 1153,
+  "visual_ground_vertices_projected": 13832753,
+  "material_count_checked": 1369,
+  "all_materials_explicitly_zero_emissive": true,
+  "geometry_review": {
+    "geometry_review_passed": true,
+    "quality_build_sha256": "96ad603076c2cc1d18a220e743c6afc741feceeb509227be4db0fc017cf9afb2",
+    "views": [
+      {
+        "file": "checkpoint_01.png",
+        "sha256": "0e6790b96734340fd24f988f3c6fedb4ca63c2c8a55831a53b68ac45a8df0863"
+      },
+      {
+        "file": "checkpoint_02.png",
+        "sha256": "3a7e7d0700d1a51b2b1e6e0c28866a7ecc24ed4368d170b7da263f2bd92fed8a"
+      },
+      {
+        "file": "checkpoint_03.png",
+        "sha256": "6c939daacad3dc7c4b8e37a0c3652181d1a13c2ab1628e786c7e6d1caf65d79c"
+      },
+      {
+        "file": "checkpoint_04.png",
+        "sha256": "03b13021a54470d2dddea59e2e3fe49a3cbd20cf4617dc58320a5ae65a252146"
+      },
+      {
+        "file": "checkpoint_05.png",
+        "sha256": "ef0246db688326fbaa8f23d82d2faa53744c5f210c08c983b85d74f1d58b3ec4"
+      },
+      {
+        "file": "checkpoint_06.png",
+        "sha256": "88796de7c3408cc271c3ac28cd7b219f8d98bd5f4eebbd63567d261ec2b9e514"
+      },
+      {
+        "file": "checkpoint_07.png",
+        "sha256": "d49a9d1116403e9ad86dffc39006ca1a0ec7deec0e41035441da46cdc5f791af"
+      },
+      {
+        "file": "checkpoint_08.png",
+        "sha256": "77ece84c80ba76da05c22f60fc85b71e85a1c75413e4b075d3f957e0ccf4a065"
+      }
+    ],
+    "inspection_notes": "Inspected all eight current route views and enlarged views at points 3 and 7. Raised canopy lumps and ground stumps are removed; road remains visible; replacement trees have recognizable crowns. Source-ground imagery remains flattened and patchy, distant terrain is simple, and roadside barriers/markings remain provisional. Suitable for a user comparison test only; engine brightness and FPS are unverified.",
+    "approval_scope": "Provisional visual repair for user comparison test; not production quality approval",
+    "assetto_corsa_appearance_fps_verified": false,
+    "limits": [
+      "Generic authored foliage, not surveyed species.",
+      "Projected source ground retains photographic artifacts.",
+      "Temporary road width/profile, junctions and synthetic barriers.",
+      "Some unclassified raised structures removed with GENERIC data.",
+      "Game lighting and performance require a fresh user test."
+    ]
+  },
+  "prior_v03_user_test": {
+    "loading_and_driving_observed": true,
+    "appearance_accepted": false,
+    "evidence": "User-provided in-game screenshot and complaint; no complete-lap performance benchmark."
+  },
+  "v04_game_test": "Pending user comparison; Blender inspection cannot validate engine lighting or FPS.",
+  "user_graphics_settings_changed": false,
+  "game_launched_by_agent": false
 }

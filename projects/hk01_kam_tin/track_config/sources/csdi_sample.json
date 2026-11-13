@@ -1,6 +1,6 @@
 {
   "dataset": "3D Visualisation Map (Individualised models)",
-  "version": "0.3-full-loop",
+  "version": "0.4-quality-pass",
   "sheets": [
     "6-NE-12D",
     "6-NE-12B",
@@ -143,7 +143,13 @@
     "route-corridor cropping",
     "spatial batching and distance-based detail reduction",
     "mipmapped DDS BC1 textures, maximum 2048 pixels",
-    "visual terrain blend; original driving collision retained"
+    "visual terrain blend; original driving collision retained",
+    "raised generic photomesh and source vegetation removed",
+    "retained GENERIC photo ground projected onto visual terrain to remove jagged stumps; its imagery is still source-derived",
+    "authored 3D trees at inferred source canopy positions; not surveyed species or individually measured trees",
+    "track-local matte surface textures and reduced lighting multipliers",
+    "all exported materials explicitly zero emissive",
+    "original physical geometry and spawn/timing matrices retained"
   ],
   "source_website": "https://3d.map.gov.hk/",
   "data_ownership": "Government of the Hong Kong Special Administrative Region"

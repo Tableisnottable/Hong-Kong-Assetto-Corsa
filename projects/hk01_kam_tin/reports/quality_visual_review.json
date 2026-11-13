@@ -1,0 +1,48 @@
+{
+  "geometry_review_passed": true,
+  "quality_build_sha256": "96ad603076c2cc1d18a220e743c6afc741feceeb509227be4db0fc017cf9afb2",
+  "views": [
+    {
+      "file": "checkpoint_01.png",
+      "sha256": "0e6790b96734340fd24f988f3c6fedb4ca63c2c8a55831a53b68ac45a8df0863"
+    },
+    {
+      "file": "checkpoint_02.png",
+      "sha256": "3a7e7d0700d1a51b2b1e6e0c28866a7ecc24ed4368d170b7da263f2bd92fed8a"
+    },
+    {
+      "file": "checkpoint_03.png",
+      "sha256": "6c939daacad3dc7c4b8e37a0c3652181d1a13c2ab1628e786c7e6d1caf65d79c"
+    },
+    {
+      "file": "checkpoint_04.png",
+      "sha256": "03b13021a54470d2dddea59e2e3fe49a3cbd20cf4617dc58320a5ae65a252146"
+    },
+    {
+      "file": "checkpoint_05.png",
+      "sha256": "ef0246db688326fbaa8f23d82d2faa53744c5f210c08c983b85d74f1d58b3ec4"
+    },
+    {
+      "file": "checkpoint_06.png",
+      "sha256": "88796de7c3408cc271c3ac28cd7b219f8d98bd5f4eebbd63567d261ec2b9e514"
+    },
+    {
+      "file": "checkpoint_07.png",
+      "sha256": "d49a9d1116403e9ad86dffc39006ca1a0ec7deec0e41035441da46cdc5f791af"
+    },
+    {
+      "file": "checkpoint_08.png",
+      "sha256": "77ece84c80ba76da05c22f60fc85b71e85a1c75413e4b075d3f957e0ccf4a065"
+    }
+  ],
+  "inspection_notes": "Inspected all eight current route views and enlarged views at points 3 and 7. Raised canopy lumps and ground stumps are removed; road remains visible; replacement trees have recognizable crowns. Source-ground imagery remains flattened and patchy, distant terrain is simple, and roadside barriers/markings remain provisional. Suitable for a user comparison test only; engine brightness and FPS are unverified.",
+  "approval_scope": "Provisional visual repair for user comparison test; not production quality approval",
+  "assetto_corsa_appearance_fps_verified": false,
+  "limits": [
+    "Generic authored foliage, not surveyed species.",
+    "Projected source ground retains photographic artifacts.",
+    "Temporary road width/profile, junctions and synthetic barriers.",
+    "Some unclassified raised structures removed with GENERIC data.",
+    "Game lighting and performance require a fresh user test."
+  ]
+}

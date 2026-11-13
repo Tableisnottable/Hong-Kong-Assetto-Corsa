@@ -42,7 +42,7 @@ def support(point,triangles):
     height=float(heights[np.argmin(abs(heights-xyz[1]))]);return {'surface_y_m':height,'clearance_m':float(xyz[1]-height)}
 
 def scan(path,full=True,road_corridor=None,require_spawns=True):
-    reader=Reader(path);errors=[];textures={};materials=[];physical={};logical={};meshes=[];roads=[];pits=[];degenerate=0;blocked=0;gpu_bytes=0;source_triangles=0;duplicate_names=set();names=set()
+    reader=Reader(path);errors=[];textures={};materials=[];physical={};logical={};meshes=[];roads=[];pits=[];degenerate=0;blocked=0;gpu_bytes=0;source_triangles=0;duplicate_names=set();names=set();missing_emissive=[];nonzero_emissive=[]
     try:
         if reader.read(6)!=b'sc6969':raise ValueError('Invalid KN5 signature')
         version=reader.u32()
@@ -69,10 +69,12 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
                 except Exception as e:errors.append('Invalid texture '+name+': '+str(e))
             textures[name]={'bytes':n,'active':active}
         for i in range(reader.u32()):
-            name=reader.string();shader=reader.string();reader.read(6)
+            name=reader.string();shader=reader.string();reader.read(6);properties={}
             for p in range(reader.u32()):
-                prop=reader.string();values=reader.unpack('10f')
+                prop=reader.string();values=reader.unpack('10f');properties[prop]=values
                 if not all(math.isfinite(x) for x in values):errors.append('Invalid material property '+name+'/'+prop)
+            if 'ksEmissive' not in properties:missing_emissive.append(name)
+            elif any(abs(v)>1e-8 for v in properties['ksEmissive']):nonzero_emissive.append(name)
             slots=[]
             for p in range(reader.u32()):
                 sampler=reader.string();slot=reader.u32();target=reader.string();slots.append((sampler,slot,target))
@@ -105,7 +107,7 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
                     physical[name]=hashlib.sha256(rawv+rawi).hexdigest()
                     if name.startswith('1ROAD') and active:roads.append(tri)
                     if name.startswith('1PITLANE') and active:pits.append(tri)
-                elif full and name.startswith('CSDI_') and not name.startswith('CSDI_TERRAIN') and road_corridor is not None:
+                elif full and name.startswith(('CSDI_','NATIVE_VEG_')) and not name.startswith('CSDI_TERRAIN') and road_corridor is not None:
                     xy=tri[:,:,[0,2]]*np.array([1,-1]);blocked+=int(shapely.intersects(road_corridor,shapely.polygons(xy)).sum());source_triangles+=len(tri)
                 meshes.append({'name':name,'vertices':vertices,'triangles':len(idx),'visible':bool(visible),'renderable':bool(render),'material':mat})
             else:raise ValueError('Unexpected node class '+str(kind))
@@ -121,7 +123,7 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
         transform=np.asarray(logical[name]['matrix']).reshape(4,4,order='F');triangles=pits if name.startswith('AC_PIT') else roads
         check=support(transform[:3,3],np.vstack(triangles) if triangles else np.empty((0,3,3)));required[name]={'matrix':logical[name]['matrix'],'surface_support':check}
         if check is None or not -.01<=check['clearance_m']<=.15:errors.append('Invalid spawn support '+name)
-    return {'passed':not errors,'errors':errors,'file_bytes':path.stat().st_size,'kn5_sha256':hashlib.file_digest(path.open('rb'),'sha256').hexdigest(),'version':version,'mesh_nodes':len(meshes),'triangles':sum(m['triangles'] for m in meshes),'degenerate_triangles':degenerate,'embedded_texture_count':len(textures),'material_count':len(materials),'texture_gpu_payload_bytes':gpu_bytes,'physical_mesh_hashes':physical,'logical_nodes':logical,'required_nodes':required,'scenery_triangles_checked':source_triangles,'scenery_triangles_in_protected_corridor':blocked,'scope':'Static binary, image and geometry checks; actual engine driving/FPS untested'}
+    return {'passed':not errors,'errors':errors,'file_bytes':path.stat().st_size,'kn5_sha256':hashlib.file_digest(path.open('rb'),'sha256').hexdigest(),'version':version,'mesh_nodes':len(meshes),'triangles':sum(m['triangles'] for m in meshes),'degenerate_triangles':degenerate,'embedded_texture_count':len(textures),'material_count':len(materials),'material_audit':{'missing_explicit_emissive':missing_emissive,'nonzero_emissive':nonzero_emissive},'texture_gpu_payload_bytes':gpu_bytes,'physical_mesh_hashes':physical,'logical_nodes':logical,'required_nodes':required,'scenery_triangles_checked':source_triangles,'scenery_triangles_in_protected_corridor':blocked,'scope':'Static binary, image and geometry checks; actual engine driving/FPS untested'}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('kn5',type=Path);p.add_argument('--baseline',type=Path);p.add_argument('--report',type=Path,required=True);p.add_argument('--models-ini',type=Path);a=p.parse_args()
