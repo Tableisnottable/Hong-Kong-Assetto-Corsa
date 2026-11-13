@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "errors": [],
+  "file_bytes": 50888671,
+  "kn5_sha256": "b685e074169b5d35aa60e5bd44bccc4abfbe668da11b1301078c5768538378a5",
+  "version": 5,
+  "mesh_nodes": 649,
+  "triangles": 410410,
+  "degenerate_triangles": 0,
+  "embedded_texture_count": 9,
+  "material_count": 9,
+  "shader_counts": {
+    "ksPerPixel": 8,
+    "ksPerPixelAT": 1
+  },
+  "material_audit": {
+    "missing_explicit_emissive": [],
+    "nonzero_emissive": [],
+    "alpha_test_materials_checked": 1
+  },
+  "texture_gpu_payload_bytes": 49299456,
+  "required_nodes": {
+    "AC_PIT_0": {
+      "matrix": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -564.2368774414062,
+        11.056512832641602,
+        768.201416015625,
+        1.0
+      ],
+      "surface_support": {
+        "surface_y_m": 11.026508619360436,
+        "clearance_m": 0.030004213281165093
+      }
+    },
+    "AC_START_0": {
+      "matrix": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -584.2896118164062,
+        10.450247764587402,
+        675.2377319335938,
+        1.0
+      ],
+      "surface_support": {
+        "surface_y_m": 10.421101812134397,
+        "clearance_m": 0.02914595245300511
+      }
+    },
+    "AC_HOTLAP_START_0": {
+      "matrix": [
+        -0.9667150378227234,
+        0.0,
+        0.25585541129112244,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.25585541129112244,
+        0.0,
+        -0.9667150378227234,
+        0.0,
+        -576.6139526367188,
+        10.480545997619629,
+        704.2391967773438,
+        1.0
+      ],
+      "surface_support": {
+        "surface_y_m": 10.450595810818841,
+        "clearance_m": 0.029950186800787648
+      }
+    }
+  },
+  "scenery_triangles_checked": 0,
+  "scenery_triangles_in_protected_corridor": 0,
+  "road_detail_triangles_checked": 0,
+  "road_detail_triangles_in_drivable_corridor": 0,
+  "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested",
+  "baseline_kn5_sha256": "9dccc7d7fd5a16fa1d6350dbd5098dcc6cbaecb1f4871164ac9bb214942ee248",
+  "physical_meshes_compared": 272,
+  "physical_meshes_unchanged": true,
+  "spawn_timing_nodes_unchanged": true,
+  "models": [
+    {
+      "filename": "hk01_kam_tin_test.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 50888671,
+      "kn5_sha256": "b685e074169b5d35aa60e5bd44bccc4abfbe668da11b1301078c5768538378a5",
+      "version": 5,
+      "mesh_nodes": 649,
+      "triangles": 410410,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 9,
+      "material_count": 9,
+      "shader_counts": {
+        "ksPerPixel": 8,
+        "ksPerPixelAT": 1
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 1
+      },
+      "texture_gpu_payload_bytes": 49299456,
+      "scenery_triangles_checked": 0,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested",
+      "baseline_kn5_sha256": "9dccc7d7fd5a16fa1d6350dbd5098dcc6cbaecb1f4871164ac9bb214942ee248",
+      "physical_meshes_compared": 272,
+      "physical_meshes_unchanged": true,
+      "spawn_timing_nodes_unchanged": true
+    },
+    {
+      "filename": "scenery_6-NE-12D.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 219526232,
+      "kn5_sha256": "3cb1b14c34a0a59be664d98c82c57f82454ca92551b1d06bbc67fcac305e503c",
+      "version": 5,
+      "mesh_nodes": 418,
+      "triangles": 434191,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 225,
+      "material_count": 225,
+      "shader_counts": {
+        "ksPerPixel": 225
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 159922696,
+      "scenery_triangles_checked": 434191,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-12B.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 141311518,
+      "kn5_sha256": "383c72d15c126526262b1f43da5e32e21b8c8630c69c4af22e0607785d4a4487",
+      "version": 5,
+      "mesh_nodes": 303,
+      "triangles": 459926,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 162,
+      "material_count": 162,
+      "shader_counts": {
+        "ksPerPixel": 162
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 79025696,
+      "scenery_triangles_checked": 459926,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-17B.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 500621254,
+      "kn5_sha256": "c12f94b411f7acd2130b52aa3c52d7256aec47325b2c297aa9cba11ceb4db4cd",
+      "version": 5,
+      "mesh_nodes": 958,
+      "triangles": 1979338,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 378,
+      "material_count": 378,
+      "shader_counts": {
+        "ksPerPixel": 378
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 228544912,
+      "scenery_triangles_checked": 1979338,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-17D.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 524534030,
+      "kn5_sha256": "25706ef8f480e8f1114d09f917f6c1837dfae3756c10ed6ca9deec7838adc7a5",
+      "version": 5,
+      "mesh_nodes": 671,
+      "triangles": 1341998,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 276,
+      "material_count": 276,
+      "shader_counts": {
+        "ksPerPixel": 276
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 340300288,
+      "scenery_triangles_checked": 1341998,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-18A.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 247474202,
+      "kn5_sha256": "e36cf812c3f5c1ab88e9b2027fd7cfff1c923db9fde133d2f9a7c1a20e738605",
+      "version": 5,
+      "mesh_nodes": 454,
+      "triangles": 771260,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 236,
+      "material_count": 236,
+      "shader_counts": {
+        "ksPerPixel": 236
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 141682368,
+      "scenery_triangles_checked": 771260,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-12C.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 14585493,
+      "kn5_sha256": "251674b5e201c1806ab46ce12838b71759cf5dd36f08d57976cfb0aa6f415491",
+      "version": 5,
+      "mesh_nodes": 37,
+      "triangles": 29097,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 8,
+      "material_count": 8,
+      "shader_counts": {
+        "ksPerPixel": 8
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 10606064,
+      "scenery_triangles_checked": 29097,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-13C.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 26568746,
+      "kn5_sha256": "60ce5c6b6b59b9cf62347dd2e667d8d637520d95f8698cb1d1c6264a55652d9b",
+      "version": 5,
+      "mesh_nodes": 56,
+      "triangles": 109145,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 13,
+      "material_count": 13,
+      "shader_counts": {
+        "ksPerPixel": 13
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 11905944,
+      "scenery_triangles_checked": 109145,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "scenery_6-NE-18C.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 52360787,
+      "kn5_sha256": "d59b07c8eec2de689640777d470076c77a094a2c1d1148b2c2d2dfb1128db67a",
+      "version": 5,
+      "mesh_nodes": 101,
+      "triangles": 78163,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 60,
+      "material_count": 60,
+      "shader_counts": {
+        "ksPerPixel": 60
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 41987728,
+      "scenery_triangles_checked": 78163,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "native_vegetation.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 269588862,
+      "kn5_sha256": "1efa69889b5cde09382a0fd27f3878c2b8ef91dc9eca1e110a7cc02a4816c47a",
+      "version": 5,
+      "mesh_nodes": 508,
+      "triangles": 2119214,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 2,
+      "material_count": 2,
+      "shader_counts": {
+        "ksPerPixel": 1,
+        "ksPerPixelAT": 1
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 1
+      },
+      "texture_gpu_payload_bytes": 8388608,
+      "scenery_triangles_checked": 2119214,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 0,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    },
+    {
+      "filename": "road_detail.kn5",
+      "passed": true,
+      "errors": [],
+      "file_bytes": 14375194,
+      "kn5_sha256": "22029ce82366a77a9de90b8de124c3020904b389a38623f7ebe93f6f24007e31",
+      "version": 5,
+      "mesh_nodes": 188,
+      "triangles": 104136,
+      "degenerate_triangles": 0,
+      "embedded_texture_count": 4,
+      "material_count": 4,
+      "shader_counts": {
+        "ksPerPixel": 4
+      },
+      "material_audit": {
+        "missing_explicit_emissive": [],
+        "nonzero_emissive": [],
+        "alpha_test_materials_checked": 0
+      },
+      "texture_gpu_payload_bytes": 1060864,
+      "scenery_triangles_checked": 0,
+      "scenery_triangles_in_protected_corridor": 0,
+      "road_detail_triangles_checked": 104136,
+      "road_detail_triangles_in_drivable_corridor": 0,
+      "scope": "Static binary, image and geometry checks; actual engine driving/FPS untested"
+    }
+  ],
+  "model_files": 11,
+  "total_model_bytes": 2061834989,
+  "total_triangles": 7836878,
+  "total_mesh_nodes": 4343,
+  "total_texture_gpu_payload_bytes": 1072724624,
+  "total_scenery_triangles_checked": 7322332
+}

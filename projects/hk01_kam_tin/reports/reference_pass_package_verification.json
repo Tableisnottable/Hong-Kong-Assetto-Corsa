@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "version": "0.5-reference-pass",
+  "track_id": "hk01_kam_tin_test",
+  "file_count": 33,
+  "model_files": 11,
+  "archive": "local-generated/HK_KamTin_Reference_Test_v0.5.zip",
+  "archive_bytes": 1050425822,
+  "archive_sha256": "e628ac92277173e80d60d26cdbfba5ca18a6b2d8c5570b7927a01eaa0b260190",
+  "installed_to": "local Assetto Corsa installation/content/tracks/hk01_kam_tin_test",
+  "installed_file_hashes_verified": true,
+  "engine_test_v05": "pending user; no automatic game launch"
+}

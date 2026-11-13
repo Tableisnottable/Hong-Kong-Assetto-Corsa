@@ -1,0 +1,159 @@
+{
+  "scope": "Read-only structural comparison; no reference assets imported or modified; no game launch",
+  "reference": "Route Twisk RWE / Repack Test",
+  "models": [
+    {
+      "track": "route_twisk_repack_test",
+      "file": "route_twisk_rwe_v7.kn5",
+      "bytes": 492431749,
+      "triangles": 938891,
+      "meshes": 873,
+      "material_count": 86,
+      "shaders": {
+        "ksPerPixel": 83,
+        "ksPerPixelAT": 3
+      },
+      "texture_slots": {
+        "txDiffuse": 86
+      },
+      "texture_count": 83
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_actualtree001.kn5",
+      "bytes": 58753732,
+      "triangles": 271305,
+      "meshes": 144,
+      "material_count": 17,
+      "shaders": {
+        "ksPerPixel": 13,
+        "ksPerPixelAT": 4
+      },
+      "texture_slots": {
+        "txDiffuse": 17
+      },
+      "texture_count": 17
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_billboardtree.kn5",
+      "bytes": 218656402,
+      "triangles": 2931152,
+      "meshes": 1147,
+      "material_count": 6,
+      "shaders": {
+        "ksPerPixelAT": 6
+      },
+      "texture_slots": {
+        "txDiffuse": 6
+      },
+      "texture_count": 6
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_terrain.kn5",
+      "bytes": 458125441,
+      "triangles": 1945033,
+      "meshes": 784,
+      "material_count": 65,
+      "shaders": {
+        "ksPerPixel": 65
+      },
+      "texture_slots": {
+        "txDiffuse": 65
+      },
+      "texture_count": 64
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_beambarrier.kn5",
+      "bytes": 68016793,
+      "triangles": 591782,
+      "meshes": 161,
+      "material_count": 8,
+      "shaders": {
+        "ksPerPixel": 8
+      },
+      "texture_slots": {
+        "txDiffuse": 8
+      },
+      "texture_count": 8
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_trafficdecal.kn5",
+      "bytes": 48796063,
+      "triangles": 299325,
+      "meshes": 260,
+      "material_count": 12,
+      "shaders": {
+        "ksPerPixelAT": 8,
+        "ksPerPixel": 4
+      },
+      "texture_slots": {
+        "txDiffuse": 12
+      },
+      "texture_count": 12
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_v7_roadside_surfaces.kn5",
+      "bytes": 608186163,
+      "triangles": 4572877,
+      "meshes": 1089,
+      "material_count": 1,
+      "shaders": {
+        "ksPerPixel": 1
+      },
+      "texture_slots": {
+        "txDiffuse": 1
+      },
+      "texture_count": 1
+    },
+    {
+      "track": "route_twisk_repack_test",
+      "file": "rwe_v7_single_edge_markings.kn5",
+      "bytes": 3354514,
+      "triangles": 90804,
+      "meshes": 77,
+      "material_count": 1,
+      "shaders": {
+        "ksPerPixelAT": 1
+      },
+      "texture_slots": {
+        "txDiffuse": 1
+      },
+      "texture_count": 1
+    },
+    {
+      "track": "hk01_kam_tin_test",
+      "file": "hk01_kam_tin_test.kn5",
+      "bytes": 46451582,
+      "triangles": 410421,
+      "meshes": 649,
+      "material_count": 9,
+      "shaders": {
+        "ksPerPixel": 9
+      },
+      "texture_slots": {
+        "txDiffuse": 9
+      },
+      "texture_count": 9
+    },
+    {
+      "track": "hk01_kam_tin_test",
+      "file": "native_vegetation.kn5",
+      "bytes": 966512100,
+      "triangles": 7001016,
+      "meshes": 1449,
+      "material_count": 2,
+      "shaders": {
+        "ksPerPixel": 2
+      },
+      "texture_slots": {
+        "txDiffuse": 2
+      },
+      "texture_count": 2
+    }
+  ]
+}

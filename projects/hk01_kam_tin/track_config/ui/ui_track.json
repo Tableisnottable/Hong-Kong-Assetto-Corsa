@@ -1,6 +1,6 @@
 {
   "name": "Hong Kong — Kam Tin Driving Test",
-  "description": "3.445 km Kam Tin solo driving test, v0.4 visual repair. Raised generic photomesh and source vegetation replaced by authored trees at inferred canopy locations. Retained individualised buildings and infrastructure. Matte road and track materials, explicit zero emissive. Temporary road/profile and barriers; eight blue test markers. Practice, one car, clear daytime. User confirmed v0.3 loading/driving; v0.4 appearance and FPS need a fresh user test. Map from Lands Department; source data © Government of the Hong Kong SAR, https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors.",
+  "description": "3.445 km Kam Tin solo test, v0.5 reference-informed visual pass. Route Twisk RWE/Repack is the quality target, not an achieved quality claim. New alpha-cut foliage, photographed asphalt/ground textures and authored W-beam safety rails/posts/reflectors. Reference assets were inspected read-only, not copied. Original driving/collision payloads and spawns retained; coarse test-wall collision remains behind visual rails. Road/junction widths, kerbs and roadside fidelity remain provisional. Daytime Practice, one car, no AI. Engine appearance/FPS await the user. Map from Lands Department; source data © Government of the Hong Kong SAR, https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors. Additional textures: Poly Haven CC0.",
   "tags": [
     "Hong Kong",
     "real location",
@@ -18,6 +18,6 @@
   "pitboxes": "1",
   "run": "counter-clockwise",
   "author": "HK 1:1 Project",
-  "version": "0.4-quality-pass",
+  "version": "0.5-reference-pass",
   "url": ""
 }

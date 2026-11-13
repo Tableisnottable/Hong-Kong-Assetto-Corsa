@@ -1,12 +1,14 @@
 # Hong Kong 1:1 — regional Assetto Corsa project
 
-**Current deliverable: v0.4 visual repair of the 3.445 km Kam Tin test loop, installed for comparison.** Select **Hong Kong — Kam Tin Driving Test** in **Practice, one car, clear daytime, start from pits**. Keep the same car, time/weather and graphics as your previous test. Follow the eight blue markers and `TESTING.md`.
+**Quality target: the user's installed Route Twisk RWE / Repack Test. Current v0.5 is a comparison build and has not reached that standard.** The target and outstanding production requirements are recorded in `REFERENCE_QUALITY.md`. Geographic scale and static export checks alone do not establish finished game quality.
 
-The user loaded/drove v0.3 but rejected its angular photogrammetry vegetation and bright surfaces. Version 0.4 removes raised generic photo fragments/source vegetation, projects retained photo ground onto visual terrain, adds 1,153 authored trees at inferred source canopy locations, and adjusts track-local surface textures/materials with explicit zero emissive. Individualised CSDI buildings and infrastructure are retained. Some non-individualised structures are removed with GENERIC data. Original physical payloads and spawn/timing matrices are unchanged.
+Version 0.5 is installed as **Hong Kong — Kam Tin Driving Test**, a provisional 3.445 km loop. Use **Practice, one car, clear daytime, start from pits**; restart the session, keep previous graphics/time/weather and follow the eight blue markers. See `TESTING.md` and `STATUS.md`.
 
-**This is a provisional improvement, not finished real-world quality.** Blender geometry views, binary/image checks, protected road corridor, baseline physics/spawns, ZIP CRC and installed hashes passed. Version 0.4 Assetto Corsa appearance, driving and FPS still require the user's test. Remaining work includes accurate road/junction/kerb/barrier modelling, richer foliage, source-ground cleanup and lighting/performance validation. The 3.445 km loop is not all Hong Kong; no AI traffic, night/rain or multiplayer validation is included.
+This pass adds photographed asphalt and generic fallback ground, worn alpha-cut paint, a new cutout foliage atlas with eight tree shapes, photographed bark, smoothed visual terrain and authored steel safety rails/posts/bolts/reflectors. It preserves original collision payloads and spawns. Rails follow test safety bounds; coarse wall collision remains behind them. Accurate road/junction/kerb/drainage/roadside production, varied local vegetation and source-ground/facade cleanup are unfinished. Reference map assets are not copied and the reference installation is unchanged.
 
-Local stage: `release_quality_v04/content/tracks/hk01_kam_tin_test`. Editable scene: `blender/HK01_KamTin_QUALITY_v04.blend`. 10 KN5 models contain 12,614,555 triangles and 990.5 MiB of embedded texture payload. Models total 2,739.9 MB. Generated assets, downloaded source data and ZIPs stay local. GitHub contains small sources/configuration/docs/reports only; cloning it alone does not install the track. See `PUBLISHING.md` and `STATUS.md`.
+Binary/images, alpha-cut materials, protected road/pit clearance, baseline payload/spawns, archive CRC and installed hashes passed. Blender views were inspected, but **v0.5 engine appearance, driving and FPS await the user**. It is not all Hong Kong, and no AI traffic, rain/night or multiplayer validation is included.
+
+Local stage: `release_finish_v05/content/tracks/hk01_kam_tin_test`. Editable scene: `blender/HK01_KamTin_FINISH_v05.blend`. 11 models contain 7,836,878 triangles (2,061.8 MB KN5; 1,023.0 MiB embedded texture payload). Large assets stay local; GitHub has small sources/configuration/docs/reports only. Cloning it alone does not install the track.
 
 This project starts from new geographic source data. It does not reuse or modify the existing Route Twisk geometry.
 
@@ -132,3 +134,20 @@ python scripts/package_quality_pass.py
 ```
 
 `--record-inspection` records a deliberate reviewer action; it is not automatic visual approval. `package_quality_pass.py` requires passing hash-bound model checks, explicit zero-emissive materials, current render/review hashes, preserved physics/spawns and the unchanged owned v0.3 input package. With an intentionally supplied `--install-root`, it refuses to overwrite user additions or modified installed files. Global graphics/CSP settings are not changed. Version 0.3 remains a separate local rollback.
+
+## Reference-informed 0.5 rebuild
+
+Keep the completed v0.4 Blender scene and owned package as separate inputs. Do not run an older packager over a newer installation.
+
+```powershell
+python scripts/fetch_finish_assets.py
+python scripts/prepare_finish_pass.py
+& 'C:\Program Files\Blender Foundation\Blender 5.1\blender.exe' --background --factory-startup --python scripts/build_finish_pass.py
+python scripts/verify_track.py release_finish_v05/content/tracks/hk01_kam_tin_test/hk01_kam_tin_test.kn5 --baseline release/content/tracks/hk01_kam_tin_test/hk01_kam_tin_test.kn5 --models-ini release_finish_v05/content/tracks/hk01_kam_tin_test/models.ini --report driving_test/finish_pass/reports/model_verification.json
+python scripts/review_quality_pass.py --pass-id finish_pass
+# Inspect all eight current images before deliberately recording observations:
+python scripts/review_quality_pass.py --pass-id finish_pass --record-inspection --notes "Record observed geometry defects and limitations here."
+python scripts/package_finish_pass.py
+```
+
+The packager additionally requires a current independent base-model report at `driving_test/finish_pass/reports/base_independent_verification.json`; the local read-only standalone parser check used here is identified in the retained summary and is not distributed. An intentionally supplied `--install-root` installs only an unchanged owned track and refuses user additions/modified files. The official external texture checksums are pinned in `sources/finish_assets.json`; the completed v0.4 source scene is also required. Old releases remain separate. This authoring pipeline does not automatically approve matching the quality reference.

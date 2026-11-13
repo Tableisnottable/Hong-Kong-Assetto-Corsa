@@ -1,41 +1,49 @@
-KAM TIN — VISUAL REPAIR 0.4
+KAM TIN — REFERENCE-INFORMED TEST 0.5
 
-READY FOR YOUR OWN COMPARISON TEST
+QUALITY TARGET: ROUTE TWISK RWE / REPACK TEST
+This is the next comparison build. It has NOT reached or been accepted at that
+quality standard. The installed reference tracks are unchanged; their assets
+are not copied into Kam Tin.
+
 Select Hong Kong — Kam Tin Driving Test (hk01_kam_tin_test).
 Use Practice, one car, no opponents, clear daytime, start from pits.
-Keep the same car, weather/time and graphics settings as your previous screenshot.
+Restart the session to reload changed KN5 models. Keep your previous car,
+time/weather and graphics settings for a fair brightness comparison.
 
-1. Leave the pit apron, keep left and drive the complete 3.445 km loop.
-2. Follow the blue TEST POINT markers 1–8 and return to point 1.
-3. Compare road/ground brightness and the new tree silhouettes at the same location.
-4. Check both lanes, barrier edges and Return to pits as before.
-5. Send a new screenshot and the nearest checkpoint if a surface is still white,
-   foliage looks wrong, scenery is missing or you encounter a driving defect.
-6. Record minimum FPS during a complete lap; one screenshot is not a benchmark.
+1. Drive the complete 3.445 km loop, keeping left, past blue test points 1–8.
+2. Inspect asphalt grain/cracks, paint edges and the new steel rail details.
+3. Check leaf cutouts up close, tree silhouettes and foliage performance.
+4. Check both lanes, the pit entry, safety barriers and Return to pits.
+5. Report a screenshot and nearest test point for missing textures, bright
+   surfaces, scenery holes or driving defects. Record minimum FPS over a lap.
 
-WHAT CHANGED
-Removed source vegetation and raised GENERIC photomesh fragments. Projected the
-remaining GENERIC photo ground onto visual terrain to remove jagged stumps. Added authored
-3D trees at canopy locations inferred from source geometry/texture. Retained the
-individualised buildings, infrastructure and terrain. Added restrained asphalt,
-concrete, grass and paint textures. Lowered track-local material multipliers and
-explicitly set emissive to zero. Collision geometry and spawn/timing are unchanged.
+CHANGES
+Photographed asphalt and ground textures; worn alpha-cut paint; new composed
+foliage-spray textures, eight tree-shape variants and bark texture; smoother
+visual terrain; folded W-beam visual safety rails, posts, bolts and reflectors.
+Original individualised CSDI buildings/infrastructure and full-loop layout remain.
 
-LIMITS
-This remains a provisional test route, not finished real-world quality or all
-Hong Kong. Tree species, exact positions and heights are not surveyed. Removing
-raised GENERIC data also removes some non-individualised structures. Residual
-ground photomesh, generic tree shapes, temporary road width/profile, junctions
-and safety barriers still need manual production work. Source scenery is visual
-only; the original road and barriers provide vehicle collision. Neighbouring
-roads are scenery. No AI traffic, rain/night tuning or multiplayer validation.
+UNFINISHED
+The road/profile/junctions are still provisional. Kerbs, drainage, proper local
+barrier/fence placement, varied region-appropriate vegetation, bespoke roadside
+assets, improved close-up building facades and scenery-ground seams still need
+production work. Some GENERIC source structures were removed in v0.4; source
+ground is flattened photo scenery. New foliage is generic, not surveyed species.
+The rail positions follow test safety bounds, not a real guardrail survey.
+Original coarse wall collision remains behind the new visual rails. It must be
+replaced together with proper roadside/collision modelling in a later pass.
+Neighbouring roads are scenery. This is not all Hong Kong or the full region.
+No AI traffic, rain/night tuning or multiplayer validation is included.
 
-The user confirmed loading/driving in v0.3 but rejected its appearance. Version
-0.4 passed the recorded binary, texture, corridor and baseline-physics checks.
-Blender renders check geometry only; they do not prove Assetto Corsa lighting.
-Version 0.4 engine appearance, driving and FPS await your comparison test.
-The game was not launched automatically. Global graphics/CSP settings are unchanged.
+CHECKS
+Binary/texture and alpha-cut material checks, baseline physics/spawn comparison,
+road/pit clearance checks, Blender geometry review, ZIP CRC and installed hashes
+are recorded. Retained road support is unchanged from the previous surface test.
+These checks do not prove engine lighting, driving behaviour or FPS. The user
+loaded/drove v0.3 but rejected its appearance; v0.5 needs a fresh comparison.
+No automatic game launch or global graphics/CSP change is performed.
 
 Map from Lands Department. Source data © Government of the Hong Kong SAR.
 https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors.
-See ATTRIBUTION.md and sources/LandsD_terms_snapshot.txt.
+Additional texture sources: Poly Haven, CC0. See ATTRIBUTION.md and the source
+checksum manifest. Original source data and generated large assets stay local.

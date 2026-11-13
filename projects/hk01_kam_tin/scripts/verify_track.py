@@ -5,7 +5,7 @@ physical meshes with a baseline, and checks the imported road-clear corridor.
 This is not an engine/shader/FPS test.
 """
 from pathlib import Path
-import sys,json,struct,hashlib,io,argparse,configparser,math
+import sys,json,struct,hashlib,io,argparse,configparser,math,collections
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT.parents[1]/'work/python_deps'))
 import numpy as np
@@ -41,8 +41,8 @@ def support(point,triangles):
     if not len(heights):return None
     height=float(heights[np.argmin(abs(heights-xyz[1]))]);return {'surface_y_m':height,'clearance_m':float(xyz[1]-height)}
 
-def scan(path,full=True,road_corridor=None,require_spawns=True):
-    reader=Reader(path);errors=[];textures={};materials=[];physical={};logical={};meshes=[];roads=[];pits=[];degenerate=0;blocked=0;gpu_bytes=0;source_triangles=0;duplicate_names=set();names=set();missing_emissive=[];nonzero_emissive=[]
+def scan(path,full=True,road_corridor=None,require_spawns=True,drive_corridor=None):
+    reader=Reader(path);errors=[];textures={};materials=[];physical={};logical={};meshes=[];roads=[];pits=[];degenerate=0;blocked=0;gpu_bytes=0;source_triangles=0;duplicate_names=set();names=set();missing_emissive=[];nonzero_emissive=[];alpha_textures={};detail_blocked=0;detail_triangles=0
     try:
         if reader.read(6)!=b'sc6969':raise ValueError('Invalid KN5 signature')
         version=reader.u32()
@@ -56,6 +56,7 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
                     with Image.open(io.BytesIO(payload)) as image:
                         dimensions=image.size;image.load()
                         if max(dimensions)>2048:errors.append('Texture exceeds 2048 pixel cap: '+name)
+                        if 'A' in image.getbands():alpha_textures[name]=image.getchannel('A').getextrema()
                     if payload.startswith(b'DDS '):
                         h,w=struct.unpack_from('<II',payload,12);count=struct.unpack_from('<I',payload,28)[0];fourcc=payload[84:88]
                         if fourcc!=b'DXT1':errors.append('Unexpected DDS format '+name)
@@ -79,9 +80,13 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
             for p in range(reader.u32()):
                 sampler=reader.string();slot=reader.u32();target=reader.string();slots.append((sampler,slot,target))
                 if target not in textures:errors.append('Missing material texture '+target)
+            if full and shader=='ksPerPixelAT':
+                diffuse=[t for sampler,slot,t in slots if sampler=='txDiffuse']
+                if len(diffuse)!=1 or diffuse[0] not in alpha_textures:errors.append('Alpha-test material lacks RGBA texture: '+name)
+                elif alpha_textures[diffuse[0]][0]>=alpha_textures[diffuse[0]][1]:errors.append('Alpha-test texture has no cutout variation: '+name)
             materials.append({'name':name,'shader':shader,'textures':slots})
         def node(parent,ancestor_active=True):
-            nonlocal degenerate,blocked,source_triangles
+            nonlocal degenerate,blocked,source_triangles,detail_blocked,detail_triangles
             kind=reader.u32();name=reader.string();children=reader.u32();active=bool(reader.unpack('B')[0]) and ancestor_active
             if name in names:duplicate_names.add(name)
             names.add(name)
@@ -109,6 +114,8 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
                     if name.startswith('1PITLANE') and active:pits.append(tri)
                 elif full and name.startswith(('CSDI_','NATIVE_VEG_')) and not name.startswith('CSDI_TERRAIN') and road_corridor is not None:
                     xy=tri[:,:,[0,2]]*np.array([1,-1]);blocked+=int(shapely.intersects(road_corridor,shapely.polygons(xy)).sum());source_triangles+=len(tri)
+                elif full and name.startswith('ROAD_DETAIL_') and drive_corridor is not None:
+                    xy=tri[:,:,[0,2]]*np.array([1,-1]);detail_blocked+=int(shapely.intersects(drive_corridor,shapely.polygons(xy)).sum());detail_triangles+=len(tri)
                 meshes.append({'name':name,'vertices':vertices,'triangles':len(idx),'visible':bool(visible),'renderable':bool(render),'material':mat})
             else:raise ValueError('Unexpected node class '+str(kind))
             for k in range(children):node(matrix,active)
@@ -117,18 +124,20 @@ def scan(path,full=True,road_corridor=None,require_spawns=True):
     finally:reader.file.close()
     if duplicate_names:errors.append('Duplicate node names: '+str(sorted(duplicate_names)[:5]))
     if blocked:errors.append(str(blocked)+' scenery triangles intersect protected road corridor')
+    if detail_blocked:errors.append(str(detail_blocked)+' road-detail triangles intersect the drivable road/pit corridor')
     required={}
     for name in (['AC_PIT_0','AC_START_0','AC_HOTLAP_START_0'] if require_spawns else []):
         if name not in logical:errors.append('Missing required node '+name);continue
         transform=np.asarray(logical[name]['matrix']).reshape(4,4,order='F');triangles=pits if name.startswith('AC_PIT') else roads
         check=support(transform[:3,3],np.vstack(triangles) if triangles else np.empty((0,3,3)));required[name]={'matrix':logical[name]['matrix'],'surface_support':check}
         if check is None or not -.01<=check['clearance_m']<=.15:errors.append('Invalid spawn support '+name)
-    return {'passed':not errors,'errors':errors,'file_bytes':path.stat().st_size,'kn5_sha256':hashlib.file_digest(path.open('rb'),'sha256').hexdigest(),'version':version,'mesh_nodes':len(meshes),'triangles':sum(m['triangles'] for m in meshes),'degenerate_triangles':degenerate,'embedded_texture_count':len(textures),'material_count':len(materials),'material_audit':{'missing_explicit_emissive':missing_emissive,'nonzero_emissive':nonzero_emissive},'texture_gpu_payload_bytes':gpu_bytes,'physical_mesh_hashes':physical,'logical_nodes':logical,'required_nodes':required,'scenery_triangles_checked':source_triangles,'scenery_triangles_in_protected_corridor':blocked,'scope':'Static binary, image and geometry checks; actual engine driving/FPS untested'}
+    return {'passed':not errors,'errors':errors,'file_bytes':path.stat().st_size,'kn5_sha256':hashlib.file_digest(path.open('rb'),'sha256').hexdigest(),'version':version,'mesh_nodes':len(meshes),'triangles':sum(m['triangles'] for m in meshes),'degenerate_triangles':degenerate,'embedded_texture_count':len(textures),'material_count':len(materials),'shader_counts':dict(collections.Counter(m['shader'] for m in materials)),'material_audit':{'missing_explicit_emissive':missing_emissive,'nonzero_emissive':nonzero_emissive,'alpha_test_materials_checked':sum(m['shader']=='ksPerPixelAT' for m in materials) if full else 0},'texture_gpu_payload_bytes':gpu_bytes,'physical_mesh_hashes':physical,'logical_nodes':logical,'required_nodes':required,'scenery_triangles_checked':source_triangles,'scenery_triangles_in_protected_corridor':blocked,'road_detail_triangles_checked':detail_triangles,'road_detail_triangles_in_drivable_corridor':detail_blocked,'scope':'Static binary, image and geometry checks; actual engine driving/FPS untested'}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('kn5',type=Path);p.add_argument('--baseline',type=Path);p.add_argument('--report',type=Path,required=True);p.add_argument('--models-ini',type=Path);a=p.parse_args()
     route=np.load(ROOT/'driving_test/route_geometry.npz')['center'];corridor=LineString(route[:,:2]).buffer(10.5,join_style=2);shapely.prepare(corridor)
-    result=scan(a.kn5,road_corridor=corridor)
+    surfaces=np.load(ROOT/'driving_test/surfaces.npz');pit=shapely.union_all(shapely.polygons(surfaces['pit_vertices'][surfaces['pit_faces']][:,:,:2])).buffer(.1);drive_corridor=shapely.union_all([LineString(route[:,:2]).buffer(3.65,join_style=2),pit]);shapely.prepare(drive_corridor)
+    result=scan(a.kn5,road_corridor=corridor,drive_corridor=drive_corridor)
     if a.baseline:
         baseline=scan(a.baseline,full=False);result['baseline_kn5_sha256']=baseline['kn5_sha256'];result['physical_meshes_compared']=len(baseline['physical_mesh_hashes']);result['physical_meshes_unchanged']=result['physical_mesh_hashes']==baseline['physical_mesh_hashes'];result['spawn_timing_nodes_unchanged']=result['logical_nodes']==baseline['logical_nodes']
         if not result['physical_meshes_unchanged'] or not result['spawn_timing_nodes_unchanged']:result['errors'].append('Baseline physics/spawn comparison failed')
@@ -137,7 +146,7 @@ def main():
         for section in ini.sections():
             file=a.models_ini.parent/ini.get(section,'FILE')
             if file.resolve()==a.kn5.resolve():part={**result,'errors':list(result['errors'])}
-            else:part=scan(file,road_corridor=corridor,require_spawns=False)
+            else:part=scan(file,road_corridor=corridor,require_spawns=False,drive_corridor=drive_corridor)
             models.append({'filename':file.name,**{k:v for k,v in part.items() if k not in ['physical_mesh_hashes','logical_nodes','required_nodes','models']}})
             if not part['passed']:result['errors'].extend([file.name+': '+e for e in part['errors']])
             if file.resolve()!=a.kn5.resolve() and part['physical_mesh_hashes']:result['errors'].append('Scenery file unexpectedly contains physical meshes: '+file.name)

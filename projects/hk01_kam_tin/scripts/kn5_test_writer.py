@@ -9,9 +9,10 @@ def pack(fmt,*v):return struct.pack('<'+fmt,*v)
 def string(s):
     b=s.encode('utf-8');return pack('I',len(b))+b
 def dummy(name,children=0,matrix=IDENTITY):return pack('I',1)+string(name)+pack('IB16f',children,1,*matrix)
-def material(name,texture,ambient=.45,diffuse=.65,specular=.03,emissive=0):
-    props={'ksAmbient':ambient,'ksDiffuse':diffuse,'ksSpecular':specular,'ksSpecularEXP':15,'ksAlphaRef':.5,'ksEmissive':emissive}
-    b=string(name)+string('ksPerPixel')+pack('BBII',0,0,0,len(props))
+def material(name,texture,ambient=.45,diffuse=.65,specular=.03,emissive=0,shader='ksPerPixel',alpha_ref=.5):
+    if shader not in ['ksPerPixel','ksPerPixelAT']:raise ValueError('Unvalidated static shader '+shader)
+    props={'ksAmbient':ambient,'ksDiffuse':diffuse,'ksSpecular':specular,'ksSpecularEXP':15,'ksAlphaRef':alpha_ref,'ksEmissive':emissive}
+    b=string(name)+string(shader)+pack('BBII',0,0,0,len(props))
     for k,v in props.items():b+=string(k)+pack('10f',v,*([0]*9))
     return b+pack('I',1)+string('txDiffuse')+pack('I',0)+string(texture)
 

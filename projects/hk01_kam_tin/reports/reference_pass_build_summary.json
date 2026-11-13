@@ -1,0 +1,118 @@
+{
+  "reference": "Route Twisk RWE / Repack Test, read-only",
+  "reference_assets_reused": false,
+  "authored_trees": 1153,
+  "tree_variants": 8,
+  "foliage_shader": "ksPerPixelAT",
+  "visual_guardrail_posts": 1814,
+  "visual_guardrail_length_m": 6889.655783212482,
+  "physical_meshes_unchanged": true,
+  "spawn_timing_nodes_unchanged": true,
+  "coarse_safety_wall_collision_retained_behind_visual_rails": true,
+  "surveyed_roadside_fidelity_claimed": false,
+  "user_graphics_settings_changed": false,
+  "models": [
+    {
+      "file": "local-generated/hk01_kam_tin_test.kn5",
+      "bytes": 50888671,
+      "mesh_nodes": 649,
+      "triangles": 410410,
+      "materials": 9,
+      "embedded_textures": 9,
+      "sha256": "b685e074169b5d35aa60e5bd44bccc4abfbe668da11b1301078c5768538378a5"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-12D.kn5",
+      "bytes": 219526232,
+      "mesh_nodes": 418,
+      "triangles": 434191,
+      "materials": 225,
+      "embedded_textures": 225,
+      "sha256": "3cb1b14c34a0a59be664d98c82c57f82454ca92551b1d06bbc67fcac305e503c"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-12B.kn5",
+      "bytes": 141311518,
+      "mesh_nodes": 303,
+      "triangles": 459926,
+      "materials": 162,
+      "embedded_textures": 162,
+      "sha256": "383c72d15c126526262b1f43da5e32e21b8c8630c69c4af22e0607785d4a4487"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-17B.kn5",
+      "bytes": 500621254,
+      "mesh_nodes": 958,
+      "triangles": 1979338,
+      "materials": 378,
+      "embedded_textures": 378,
+      "sha256": "c12f94b411f7acd2130b52aa3c52d7256aec47325b2c297aa9cba11ceb4db4cd"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-17D.kn5",
+      "bytes": 524534030,
+      "mesh_nodes": 671,
+      "triangles": 1341998,
+      "materials": 276,
+      "embedded_textures": 276,
+      "sha256": "25706ef8f480e8f1114d09f917f6c1837dfae3756c10ed6ca9deec7838adc7a5"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-18A.kn5",
+      "bytes": 247474202,
+      "mesh_nodes": 454,
+      "triangles": 771260,
+      "materials": 236,
+      "embedded_textures": 236,
+      "sha256": "e36cf812c3f5c1ab88e9b2027fd7cfff1c923db9fde133d2f9a7c1a20e738605"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-12C.kn5",
+      "bytes": 14585493,
+      "mesh_nodes": 37,
+      "triangles": 29097,
+      "materials": 8,
+      "embedded_textures": 8,
+      "sha256": "251674b5e201c1806ab46ce12838b71759cf5dd36f08d57976cfb0aa6f415491"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-13C.kn5",
+      "bytes": 26568746,
+      "mesh_nodes": 56,
+      "triangles": 109145,
+      "materials": 13,
+      "embedded_textures": 13,
+      "sha256": "60ce5c6b6b59b9cf62347dd2e667d8d637520d95f8698cb1d1c6264a55652d9b"
+    },
+    {
+      "file": "local-generated/scenery_6-NE-18C.kn5",
+      "bytes": 52360787,
+      "mesh_nodes": 101,
+      "triangles": 78163,
+      "materials": 60,
+      "embedded_textures": 60,
+      "sha256": "d59b07c8eec2de689640777d470076c77a094a2c1d1148b2c2d2dfb1128db67a"
+    },
+    {
+      "file": "local-generated/native_vegetation.kn5",
+      "bytes": 269588862,
+      "mesh_nodes": 508,
+      "triangles": 2119214,
+      "materials": 2,
+      "embedded_textures": 2,
+      "sha256": "1efa69889b5cde09382a0fd27f3878c2b8ef91dc9eca1e110a7cc02a4816c47a"
+    },
+    {
+      "file": "local-generated/road_detail.kn5",
+      "bytes": 14375194,
+      "mesh_nodes": 188,
+      "triangles": 104136,
+      "materials": 4,
+      "embedded_textures": 4,
+      "sha256": "22029ce82366a77a9de90b8de124c3020904b389a38623f7ebe93f6f24007e31"
+    }
+  ],
+  "material_settings_count": 1368,
+  "all_emissive_zero": true,
+  "full_local_build_report_sha256": "f0170b113caf828c919cb1f2977d684937b9c48f121def2944dca43b346acaac"
+}

@@ -1,0 +1,154 @@
+{
+  "source": "Poly Haven official API/download CDN",
+  "license": "CC0; official page retained for review",
+  "license_url": "https://polyhaven.com/license",
+  "retrieved_local_date": "2026-11-14",
+  "assets": [
+    {
+      "id": "tree_small_02",
+      "name": "Tree Small 02",
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "dimensions_mm": [
+        2921.434998512268,
+        4292.873501777649,
+        4649.933725595474
+      ],
+      "asset_page": "https://polyhaven.com/a/tree_small_02",
+      "files": [
+        {
+          "map": "leaves_diff",
+          "file": "tree_small_02/tree_small_02_leaves_diff_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_small_02/tree_small_02_leaves_diff_1k.png",
+          "bytes": 2338424,
+          "md5": "2c667193084725e8553062ddbdc73c7d",
+          "sha256": "d3fc48522c76aa1f91076c6b86f302669822ebe4e2acabd67d42c4d57eaa5ba0"
+        },
+        {
+          "map": "leaves_alpha",
+          "file": "tree_small_02/tree_small_02_leaves_alpha_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_small_02/tree_small_02_leaves_alpha_1k.png",
+          "bytes": 264711,
+          "md5": "63199ba87a9e8928424bd8c3b8017bd0",
+          "sha256": "4f143e2dda8a6a572f427ac378b92255d21761e4611de0d26e21816c01aa533b"
+        },
+        {
+          "map": "branch_diff",
+          "file": "tree_small_02/tree_small_02_branch_diff_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_small_02/tree_small_02_branch_diff_1k.png",
+          "bytes": 1277270,
+          "md5": "2da9ea379228636c4fda2fde9a11d760",
+          "sha256": "a93ce54213c4a98cd01cb5c5f7ab46b77defcd66e1dd082e6912f6e60632e630"
+        }
+      ]
+    },
+    {
+      "id": "island_tree_01",
+      "name": "Island Tree 01",
+      "authors": {
+        "Rob Tuytel": "scanning, processing",
+        "Rico Cilliers": "cleanup, processing"
+      },
+      "dimensions_mm": [
+        12464.419603347778,
+        4818.506717681885,
+        5027.44660153985
+      ],
+      "asset_page": "https://polyhaven.com/a/island_tree_01",
+      "files": [
+        {
+          "map": "leaves_diff",
+          "file": "island_tree_01/island_tree_01_leaves_diff_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_01/island_tree_01_leaves_diff_1k.png",
+          "bytes": 1638916,
+          "md5": "f5dcd85f170c154cba9cb8367af5dbdd",
+          "sha256": "63d3563a22a62151f338ceb4e992de7c31b62e8e3582e2762d5071f02d286349"
+        },
+        {
+          "map": "leaves_alpha",
+          "file": "island_tree_01/island_tree_01_leaves_alpha_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_01/island_tree_01_leaves_alpha_1k.png",
+          "bytes": 57438,
+          "md5": "5ad9fb9a06e70c069bd3d3ba23577375",
+          "sha256": "f4341f147988dbe6b58d9ca841a8f0e4bcff25bc40d05f9877da82006d489c39"
+        },
+        {
+          "map": "branches_diff",
+          "file": "island_tree_01/island_tree_01_branches_diff_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_01/island_tree_01_branches_diff_1k.png",
+          "bytes": 5300342,
+          "md5": "06881375b8ce350a45746e30b68a5d4c",
+          "sha256": "4485125d88b9dcce618220e8850f8b3ec586d9cdebe08e28aca777206eef56e2"
+        }
+      ]
+    },
+    {
+      "id": "asphalt_02",
+      "name": "Asphalt 02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "dimensions_mm": [
+        3000.000238418579,
+        3000
+      ],
+      "asset_page": "https://polyhaven.com/a/asphalt_02",
+      "files": [
+        {
+          "map": "Diffuse",
+          "file": "asphalt_02/asphalt_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+          "bytes": 3075676,
+          "md5": "336af399fd98a39ab986d8b3bf73b4ff",
+          "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+        }
+      ]
+    },
+    {
+      "id": "forest_ground_04",
+      "name": "Forest Ground 04",
+      "authors": {
+        "Rob Tuytel": "Photography, Processing",
+        "Rico Cilliers": "Minor adjustment"
+      },
+      "dimensions_mm": [
+        3150.0000953674316,
+        3150.0000953674316
+      ],
+      "asset_page": "https://polyhaven.com/a/forest_ground_04",
+      "files": [
+        {
+          "map": "Diffuse",
+          "file": "forest_ground_04/forest_ground_04_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_diff_2k.jpg",
+          "bytes": 4529321,
+          "md5": "f6ce9c8af4316c2627a4b3fbab8ad944",
+          "sha256": "24b8aaf4c8547305d80b0e029ec365219ab1b90748d4ca5651bdc9e75bfde5e6"
+        }
+      ]
+    },
+    {
+      "id": "aerial_grass_rock",
+      "name": "Aerial Grass Rock",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "dimensions_mm": [
+        15000,
+        15000
+      ],
+      "asset_page": "https://polyhaven.com/a/aerial_grass_rock",
+      "files": [
+        {
+          "map": "Diffuse",
+          "file": "aerial_grass_rock/aerial_grass_rock_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/aerial_grass_rock/aerial_grass_rock_diff_2k.jpg",
+          "bytes": 2624635,
+          "md5": "024018554c0002620127749d1f585f3d",
+          "sha256": "1a2ddfa4652adbe00447b940c40019d46f4b88245bc1b341cdf622c2110b7bc5"
+        }
+      ]
+    }
+  ]
+}

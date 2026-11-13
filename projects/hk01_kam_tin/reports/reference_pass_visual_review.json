@@ -1,0 +1,50 @@
+{
+  "geometry_review_passed": true,
+  "quality_build_sha256": "f0170b113caf828c919cb1f2977d684937b9c48f121def2944dca43b346acaac",
+  "views": [
+    {
+      "file": "checkpoint_01.png",
+      "sha256": "8b43f1ff306a8b503281756c8f204c4c237ac6fe40e6eab6bdb19e1648ad670a"
+    },
+    {
+      "file": "checkpoint_02.png",
+      "sha256": "2d8d65a46dcae3e249cc25245af261aae0d237600e0d6b6f24858f875383e065"
+    },
+    {
+      "file": "checkpoint_03.png",
+      "sha256": "6602ca5f845d215cefa07f85b99d4881c8eb3502fdf4b994258f2c5a9db4998a"
+    },
+    {
+      "file": "checkpoint_04.png",
+      "sha256": "7c36bd0161fcbf14a4ec400674db388d9fdc93c8b91c590e8777f41bd1d427e1"
+    },
+    {
+      "file": "checkpoint_05.png",
+      "sha256": "b271939698dc09b556c661af9041b2477b8298b513a4134fb2bf85000831e376"
+    },
+    {
+      "file": "checkpoint_06.png",
+      "sha256": "1241b30426974f455055a7bf4f3baaaaa4454a8d7de94f23a5aa7c47ce97c6e8"
+    },
+    {
+      "file": "checkpoint_07.png",
+      "sha256": "86949b6001a8f3eb732dec967043c1124d879d3020b9cda6507d4491a4665c43"
+    },
+    {
+      "file": "checkpoint_08.png",
+      "sha256": "29e4f29ec018ac2402a184e26a41c1915927f9fca50c7ce7b75cf28ae5372494"
+    }
+  ],
+  "inspection_notes": "Inspected all eight current route views and enlarged views at points 3 and 7. Asphalt/paint have photographic and worn detail; visual rails/posts/reflectors replace the rendered test walls; alpha foliage has fuller crowns after correcting orientation. No road/pit obstruction in the recorded static checks. Repeated canopy forms, flat source-ground imagery, sparse roadside dressing and provisional junctions remain. This is a user comparison build, not acceptance as matching Route Twisk RWE/Repack quality.",
+  "approval_scope": "Provisional visual repair for user comparison test; not production quality approval",
+  "assetto_corsa_appearance_fps_verified": false,
+  "limits": [
+    "Generic authored foliage, not surveyed species.",
+    "Projected source ground retains photographic artifacts.",
+    "Temporary road width/profile, junctions and synthetic barriers.",
+    "Some unclassified raised structures removed with GENERIC data.",
+    "Game lighting and performance require a fresh user test.",
+    "Visual steel rails follow provisional safety bounds; coarse original wall collision remains behind them.",
+    "Reference quality has not been matched or accepted; accurate kerbs, junctions and bespoke roadside production remain."
+  ]
+}

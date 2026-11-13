@@ -1,6 +1,6 @@
 {
   "dataset": "3D Visualisation Map (Individualised models)",
-  "version": "0.4-quality-pass",
+  "version": "0.5-reference-pass",
   "sheets": [
     "6-NE-12D",
     "6-NE-12B",
@@ -149,7 +149,13 @@
     "authored 3D trees at inferred source canopy positions; not surveyed species or individually measured trees",
     "track-local matte surface textures and reduced lighting multipliers",
     "all exported materials explicitly zero emissive",
-    "original physical geometry and spawn/timing matrices retained"
+    "original physical geometry and spawn/timing matrices retained",
+    "reference benchmark: installed Route Twisk RWE/Repack, read-only; no reference assets copied",
+    "Poly Haven CC0 texture adaptation with pinned checksum manifest",
+    "newly composed cutout foliage sprays and eight authored tree-shape variants",
+    "photographed asphalt and generic grass/rock fallback ground; not georeferenced Hong Kong imagery",
+    "authored folded steel safety rails, posts, bolts and reflectors following provisional test bounds",
+    "original physical mesh payloads and spawns retained; coarse wall collision remains behind visual rails"
   ],
   "source_website": "https://3d.map.gov.hk/",
   "data_ownership": "Government of the Hong Kong Special Administrative Region"

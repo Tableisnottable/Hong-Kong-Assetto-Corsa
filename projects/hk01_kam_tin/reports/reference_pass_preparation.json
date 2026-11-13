@@ -1,0 +1,19 @@
+{
+  "reference": "Installed Route Twisk RWE / Repack Test, read-only quality benchmark",
+  "reference_assets_reused": false,
+  "source_manifest": "source/finish_library/manifest.json",
+  "authored_foliage_spray_variants": 4,
+  "source_leaf_species_not_claimed_as_local_survey": true,
+  "leaf_alpha_16bit_to_8bit_conversion": true,
+  "textures": [
+    "hk_asphalt_photo.png",
+    "hk_bark_photo.png",
+    "hk_foliage_sprays.png",
+    "hk_galvanised_steel.png",
+    "hk_ground_photo.png",
+    "hk_post_dark.png",
+    "hk_reflector_red.png",
+    "hk_reflector_white.png",
+    "hk_worn_paint.png"
+  ]
+}
