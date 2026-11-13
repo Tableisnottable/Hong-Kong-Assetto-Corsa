@@ -11,3 +11,5 @@ For a matching local build, run `python work/validate_playable.py E200`, the sam
 The shared chase implementation goes in AC's `extension/lua/chaser-camera/kmb_bus_base/camera.lua`, with the user CSP `chaser_camera.ini` setting `[BASIC] IMPLEMENTATION=kmb_bus_base`. It preserves base behavior for other car IDs. Real mirrors require the user CSP `smart_mirror.ini` setting `[REAL_MIRRORS] ENABLED=1`; `ONLY_WITHOUT_VIRTUAL=0` keeps visible physical mirrors active alongside the virtual mirror. Back up shared settings before changing them.
 
 See TEST_DRIVE.md for installed behavior and remaining runtime checks. Large models, textures, sounds, binary animations, source archives, backups and render outputs are intentionally omitted.
+
+The missing-parts migration `repair_bus_missing_parts.py` restores the native HUB/WHEEL/SUSP hierarchy and E200 identity/glazing. `test_bus_wheel_hierarchy.py` confirms every mesh world position is preserved. The local user had disabled CSP Car Instruments; enable `[BASIC] ENABLED=1` in the user `cfg/extension/car_instruments.ini` (back it up first) or tag-wheel and cockpit Lua will never run. This is a shared CSP module setting.

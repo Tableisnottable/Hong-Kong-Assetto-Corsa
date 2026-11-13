@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT/'work'))
 from kn5_tools import Kn5
 CAR=ROOT/'outputs/E200_playable/content/cars/kmb_e200_drivable'
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/E200_playable/preview/KMB_E200_AAU_preview.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/E200_playable/preview/ac_views/KMB_E200_AAU_preview.blend'))
 scene=bpy.context.scene
 scene.render.threads_mode='FIXED';scene.render.threads=8
 scene.render.engine='BLENDER_EEVEE';scene.eevee.taa_render_samples=32
@@ -17,8 +17,6 @@ old=Kn5(ROOT/'outputs/E200_playable/backups/before_route_displays/kmb_e200_driva
 remove={n.name for _,n in old.root.walk() if n.kind==2 and ('SuperNewHanoverSystem_Head__' in n.name or ('SuperNewHanoverSystem_Side__' in n.name and n.material_id==19))}
 for obj in list(scene.objects):
  if obj.name in remove or obj.name.startswith('KMB_DESTINATION_'):bpy.data.objects.remove(obj,do_unlink=True)
-for obj in scene.objects:
- if 'dash_driverseat__' in obj.name:obj.location.y-=.30
 model=Kn5(CAR/'kmb_e200_drivable.kn5')
 panels={}
 for _,n in model.root.walk():

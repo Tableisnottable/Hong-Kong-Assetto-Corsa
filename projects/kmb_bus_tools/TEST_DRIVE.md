@@ -21,3 +21,9 @@ OMSI ticketing, passengers, doors, route-keypad operation and the full electrica
 Each bus package has `installation_report.json` with its installed file hashes and backup path. Shared settings backups are under `outputs/shared_settings_backups/`. The installed `kmb_bus_base` chase script changes distances only for these two bus IDs and retains CSP base behavior for other cars. Real Mirrors is a shared CSP setting. The look-back setting is `neck.ini`, `[LOOK] ORIGINAL_LOOK_BACK=1`.
 
 Each `preview/ac_views/` directory contains rendered views, a contact sheet and the camera report. A cockpit look-back render showing the seat is a geometry diagnostic: AC's normal look-back hides the car at runtime.
+
+## Missing-parts repair
+
+The E200's registration is PU 4458 / fleet AAU1, selected from the first entry of the source `REG_AAU.org`. The plate and fleet marking use the original OMSI font bitmap glyphs. The original window alpha replaces the overly transparent converted textures.
+
+Both models now use the working AC bus hierarchy `HUB > WHEEL + SUSP`; the repair preserves every existing mesh's world position. CSP's user `car_instruments.ini` had `[BASIC] ENABLED=0`, preventing cockpit scripts and E6M tag-wheel animation from running. The installation enables that module with a backup, preserving the other instrument preferences. Reload AC for it to take effect. Lua tests check both tag wheels forward, stopped, and reversed; an AC test is still required.

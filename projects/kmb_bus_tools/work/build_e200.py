@@ -187,7 +187,7 @@ for suffix,parts in wheel_parts.items():
     if not parts:raise ValueError('Missing wheel '+suffix)
     p=np.concatenate([n.vertices[:,:3] for n in parts]);center=(p.min(0)+p.max(0))/2
     for n in parts:n.vertices[:,:3]-=center;recalc_bound(n)
-    root.children.extend([Node.dummy('WHEEL_'+suffix,parts,center),Node.dummy('HUB_'+suffix,translation=center)])
+    root.children.append(Node.dummy('HUB_'+suffix,[Node.dummy('SUSP_'+suffix),Node.dummy('WHEEL_'+suffix,parts)],center))
     wheel_centers[suffix]=center.tolist()
 
 

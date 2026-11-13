@@ -95,9 +95,9 @@ for suffix,group,hub in wheel_defs:
     # Use the tyre group's measured center, before adding hub covers.
     center=(p.min(0)+p.max(0))/2
     for n in meshes:n.vertices[:,:3]-=center;bound(n)
-    wheel=Node.dummy('WHEEL_'+suffix,meshes,center)
-    # HUB is a non-spinning sibling, as in native Kunos cars.
-    newroot.children.extend([wheel,Node.dummy('HUB_'+suffix,translation=center)])
+    wheel=Node.dummy('WHEEL_'+suffix,meshes)
+    # AC expects HUB to carry the center, with WHEEL and SUSP underneath it.
+    newroot.children.append(Node.dummy('HUB_'+suffix,[Node.dummy('SUSP_'+suffix),wheel],center))
     wheel_report[suffix]=center.tolist()
 for suffix,group,hub in [('LR','whl3','whl3_hub1'),('RR','whl3r','whl3r_hub1')]:
     meshes=buckets.pop(group)+buckets.pop(hub,[])

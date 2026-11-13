@@ -68,7 +68,17 @@ for label in ['E200','E6M']:
  assert g.states[hb].ksEmissive.r==0
  assert '060' in list(g.drawn.values()) and 'D3' in list(g.drawn.values())
  if label=='E200':assert math.isclose(g.states.KMB_GAS_MOTION.rotation,math.radians(12.5),abs_tol=1e-7)
- if label=='E6M':assert g.states.E6M_TAG_LR.rotation>0
+ if label=='E6M':
+  assert g.states.E6M_TAG_LR.rotation>0
+  # Both last wheels advance by the measured radius, stop, and reverse.
+  start=g.states.E6M_TAG_LR.rotation;g.car.speedKmh=18;g.script.update(.1)
+  advanced=g.states.E6M_TAG_LR.rotation
+  assert math.isclose(advanced-start,18/3.6/.49925*.1,abs_tol=1e-6)
+  assert math.isclose(advanced,g.states.E6M_TAG_RR.rotation,abs_tol=1e-6)
+  g.car.speedKmh=0;g.script.update(.5)
+  assert g.states.E6M_TAG_LR.rotation==advanced
+  g.car.speedKmh=-18;g.script.update(.1)
+  assert math.isclose(g.states.E6M_TAG_LR.rotation,start,abs_tol=1e-6)
  # Telemetry may update in reverse, at the limiter, with lights and with hot coolant.
  g.car.gear=-1;g.car.speedKmh=-12;g.car.rpm=2500;g.car.waterTemperature=115
  g.script.update(.016)
@@ -87,6 +97,7 @@ for label in ['E200','E6M']:
  report={'status':'PASS','type':'Lua runtime with mocked CSP API; not an in-game test',
          'verified':['all bound nodes/meshes exist','0 and 60 km/h gauge positions','RPM and temperature movement',
                      'gear and speed display','warning lamp transitions','light/indicator button actions',
-                     'stationary neutral interlock','wiper motion','display page switching']}
+                     'stationary neutral interlock','wiper motion','display page switching']+
+                    (['both tag wheels rotate forward, stop, reverse at measured radius'] if label=='E6M' else [])}
  (package/'cockpit_runtime_validation.json').write_text(json.dumps(report,indent=2))
  print(label,'cockpit runtime PASS')

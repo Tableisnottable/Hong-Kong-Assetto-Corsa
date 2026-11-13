@@ -39,6 +39,10 @@ for parent,n in nodes:
     if len(indices) and indices.max()>=n.vertex_count:errors.append('invalid index: '+n.name)
 for name in ['WHEEL_LF','WHEEL_RF','WHEEL_LR','WHEEL_RR','STEER_HR','ARROW_SPEED','ARROW_RPM']:
     if sum(n.name==name for _,n in nodes)!=1:errors.append('missing/duplicate native node '+name)
+for suffix in ['LF','RF','LR','RR']:
+    hub=next((n for _,n in nodes if n.name=='HUB_'+suffix),None)
+    if hub is None or not {'WHEEL_'+suffix,'SUSP_'+suffix}.issubset({c.name for c in hub.children}):
+        errors.append('incomplete native HUB/WHEEL/SUSP hierarchy: '+suffix)
 texture_names={t['name'].lower() for t in model.textures}
 for m in model.materials:
     for tex in m['maps']:
