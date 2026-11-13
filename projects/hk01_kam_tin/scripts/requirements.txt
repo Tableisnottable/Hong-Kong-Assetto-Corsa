@@ -1,0 +1,5 @@
+osmium==4.3.2
+pyproj==3.8.0
+shapely==2.2.0
+numpy==2.5.4
+Pillow==13.0.0

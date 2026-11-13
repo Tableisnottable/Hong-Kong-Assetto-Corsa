@@ -1,0 +1,35 @@
+{
+  "track_id": "hk01_kam_tin_test",
+  "display_name": "Hong Kong \u2014 Kam Tin Driving Test",
+  "length_m": 3444.937762144697,
+  "sample_spacing_m": 1.9993834951507237,
+  "samples": 1723,
+  "source_length_m": 3467.6644196711572,
+  "road_width_m": 7,
+  "standardized_width_is_temporary": true,
+  "elevation_min_m": 8.178330098231639,
+  "elevation_max_m": 14.757378530271001,
+  "max_longitudinal_grade_percent": 3.1472268954914404,
+  "minimum_centerline_turn_radius_estimate_m": 9.796924421612543,
+  "road_footprint_valid": true,
+  "terrain_triangles": 184015,
+  "terrain_clipped_triangles": 663,
+  "pit_spawn_sample": 22,
+  "start_sample": 70,
+  "hotlap_sample": 55,
+  "timing_samples": [
+    75,
+    649,
+    1223
+  ],
+  "data_sources": [
+    "OpenStreetMap Geofabrik Hong Kong extract 2026-11-12T21:23:05Z",
+    "Lands Department 5m DTM, historical terrain data"
+  ],
+  "limitations": [
+    "Approximate greybox widths, smooth test profile and synthetic safety barriers; not finished real-world scenery.",
+    "Only selected loop is open for this test; other road references are excluded.",
+    "No driving AI or traffic; use solo Practice.",
+    "User will perform the actual game driving test."
+  ]
+}

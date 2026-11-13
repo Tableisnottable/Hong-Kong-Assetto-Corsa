@@ -1,0 +1,55 @@
+{
+  "version": "0.2-csdi-sample",
+  "date": "2026-11-13",
+  "track_id": "hk01_kam_tin_test",
+  "test_route_length_m": 3444.937762144697,
+  "real_scenery_tile": "6-NE-12D",
+  "real_scenery_extent_m": [
+    750,
+    600
+  ],
+  "kn5_sha256": "7e072775bf12f9744fcf157410e7c27be27fc79d8b83a99ed6b163a22e7eb121",
+  "kn5_bytes": 503959616,
+  "mesh_nodes": 1033,
+  "triangles": 1167858,
+  "degenerate_triangles": 0,
+  "binary_check_passed": true,
+  "scenery_check": {
+    "passed": true,
+    "errors": [],
+    "scope": "Independent exported-binary comparison; no game launch",
+    "old_kn5_sha256": "9dccc7d7fd5a16fa1d6350dbd5098dcc6cbaecb1f4871164ac9bb214942ee248",
+    "new_kn5_sha256": "7e072775bf12f9744fcf157410e7c27be27fc79d8b83a99ed6b163a22e7eb121",
+    "physical_meshes_compared": 272,
+    "physical_mesh_vertex_and_index_bytes_unchanged": true,
+    "spawn_and_timing_matrices_unchanged": true,
+    "scenery_nodes": 384,
+    "scenery_triangles_checked_against_corridor": 710401,
+    "protected_corridor_half_width_m": 10.5,
+    "scenery_triangles_in_protected_corridor": 0,
+    "embedded_textures_decoded": 270,
+    "invalid_textures": [],
+    "maximum_texture_dimension": 2048,
+    "estimated_RGBA8_texture_bytes_without_mips": 1480712448,
+    "estimated_RGBA8_texture_bytes_with_full_mips": 1974283264
+  },
+  "package_check": {
+    "passed": true,
+    "version": "0.2-csdi-sample",
+    "track_id": "hk01_kam_tin_test",
+    "kn5_sha256": "7e072775bf12f9744fcf157410e7c27be27fc79d8b83a99ed6b163a22e7eb121",
+    "archive_bytes": 450209027,
+    "archive_sha256": "fd15de1a86aaa18c3d22bc117eda10dd569977150b1695983a4cfcd76e733d4f",
+    "package_files": 18,
+    "game_loading_driving_fps": "not tested; user will test",
+    "installed_file_hashes_verified": true
+  },
+  "game_loading_driving_fps_tested": false,
+  "sdk_graphics_check": "could not initialise; no engine acceptance result",
+  "limits": [
+    "One real-scenery tile, not whole loop or whole Hong Kong.",
+    "Road width/profile and safety barriers are temporary.",
+    "Scenery is visual-only; no scenery collision.",
+    "Rough photogrammetry and one source texture fallback remain."
+  ]
+}

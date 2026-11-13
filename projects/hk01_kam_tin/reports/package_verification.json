@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "version": "0.2-csdi-sample",
+  "track_id": "hk01_kam_tin_test",
+  "kn5_sha256": "7e072775bf12f9744fcf157410e7c27be27fc79d8b83a99ed6b163a22e7eb121",
+  "archive": "local-generated/HK_KamTin_Driving_Test_v0.2_CSDI.zip",
+  "archive_bytes": 450209027,
+  "archive_sha256": "fd15de1a86aaa18c3d22bc117eda10dd569977150b1695983a4cfcd76e733d4f",
+  "package_files": 18,
+  "game_loading_driving_fps": "not tested; user will test",
+  "installed_to": "local Assetto Corsa installation/content/tracks/hk01_kam_tin_test",
+  "installed_file_hashes_verified": true
+}

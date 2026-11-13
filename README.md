@@ -1,5 +1,7 @@
 # 香港全境 1:1 真實道路 Assetto Corsa Map Tools
 
+> **New regional driving test — November 13, 2026:** [Kam Tin 1:1 project](projects/hk01_kam_tin/README.md) now has a locally installed 3.445 km solo test loop and a real Lands Department scenery sample on one 750 × 600 m tile. [Checks and limits](projects/hk01_kam_tin/validation_summary.json). Game loading, driving and FPS await the user. GitHub contains small source/configuration files only; KN5, Blender scenes, textures, source downloads and release ZIPs remain local. The earlier project material below is retained as historical development context.
+
 這個 repository 是一個用來製作 1:1 香港全境真實道路與真實駕駛環境的 Assetto Corsa project。The project currently provides reproducible 1:1 real road data、route data、Blender generation scripts、FBX export helper，以及 Assetto Corsa track skeleton。
 
 > **Current status / 目前狀態:** 目前輸出是可重建的 1:1 全境真實道路 blockout and project skeleton，不是完成品或可直接發布的 final KN5 track。A finished 1:1 real-world map still requires survey data、terrain、collision、AI lines、traffic assets and final ksEditor authoring。

@@ -1,0 +1,55 @@
+{
+  "created_local_date": "2026-11-13",
+  "sources": [
+    {
+      "id": "osm",
+      "url": "https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf",
+      "attribution": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "license_url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "dtm",
+      "url": "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip",
+      "attribution": "Lands Department, HKSAR Government",
+      "metadata_url": "https://www.landsd.gov.hk/en/spatial-data/open-data/kf_dtm.html",
+      "terms_url": "https://data.gov.hk/en/terms-and-conditions",
+      "notes": "5 m grid, stated accuracy ±5 m at 90% confidence. Source photographs 2014–2015; metadata revised March 2019. Not road-surface survey data."
+    },
+    {
+      "id": "osm_boundary",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/913110/full",
+      "attribution": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "retrieved_local_date": "2026-11-13",
+      "notes": "Separately fetched complete administrative boundary; snapshot may be newer than the regional extract."
+    }
+  ],
+  "files": [
+    {
+      "name": "geofabrik-hk.html",
+      "bytes": 16893,
+      "sha256": "04c596b1b18fcf5c4a66d409e107811cba7a0625de2e08126e71fff85b7df329"
+    },
+    {
+      "name": "hong-kong-boundary-913110.osm",
+      "bytes": 441699,
+      "sha256": "ccbc4e67344ebfb68591dcf238073f375b6a6f6d093519a1c61658b948da9f65"
+    },
+    {
+      "name": "hong-kong-latest.osm.pbf",
+      "bytes": 37890313,
+      "sha256": "cf9e5f3d29f97e897d5609d604eb23402bf56f632eb3e7aad884ec534a8319b3"
+    },
+    {
+      "name": "lands-dtm.html",
+      "bytes": 42800,
+      "sha256": "b42abb8f842e77a8ad91f49bb31669663540d726fc1e97e591d4e2433d78998f"
+    },
+    {
+      "name": "Whole_HK_DTM_5m.zip",
+      "bytes": 28706079,
+      "sha256": "785718f462ae6de3c9e1fed2bf9fe5affe1c1d739c0a969fd62cf3680b4b33ab"
+    }
+  ]
+}

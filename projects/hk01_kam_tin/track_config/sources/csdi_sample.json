@@ -1,0 +1,30 @@
+{
+  "dataset": "3D Visualisation Map (Individualised models)",
+  "sheet": "6-NE-12D",
+  "coverage_epsg2326": [
+    824750,
+    832400,
+    825500,
+    833000
+  ],
+  "source_archive_bytes": 312592735,
+  "source_archive_sha256": "c31199b9482748a4dda11698bd636bf201318e87e9c301abb4360911749d3c5b",
+  "sheet_revision": "2026-07-17 (index metadata; not a survey-date assertion)",
+  "origin_epsg2326": [
+    826000.0,
+    833000.0
+  ],
+  "metres_per_unit": 1,
+  "removed_triangles": {
+    "degenerate": 106,
+    "road_corridor": 182681
+  },
+  "missing_source_textures": [
+    "source\\csdi_individualised\\6-NE-12D\\BUILDING\\B253723276401063A0\\B253723276401063A0_001.jpg"
+  ],
+  "scenery_role": "visual only; all objects use non-physical names; test route collision is separate",
+  "road_exclusion_buffer_m": 11,
+  "website": "https://3d.map.gov.hk/",
+  "dataset_id": "landsd_rcd_1671676915450_88604",
+  "retrieved": "2026-11-13"
+}
