@@ -40,6 +40,7 @@ def export(path,objects,materials,textures,dummies):
     blobs=[];report=[]
     for ob in objects:
         attr,tris=mesh_arrays(ob)
+        if not np.isfinite(attr).all():raise ValueError('Nonfinite mesh attributes: '+ob.name)
         if not len(tris):continue
         # Visual GIS cuts and decimation can collapse tiny fragments at float32
         # precision. Keep physical meshes byte-for-byte unchanged.

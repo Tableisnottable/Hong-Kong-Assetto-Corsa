@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "errors": [],
+  "texture_files": 1464,
+  "mip_levels_decoded": 16254,
+  "unique_texture_gpu_payload_bytes": 1296087824,
+  "prepared_manifest_sha256": "d876a0390eac1c8f4193f349442a19b749ac8b5829aa62284920520ebebde4e2",
+  "ordered_texture_name_and_sha256_digest": "582f6f1f833e50893feda89bec87af5ccef4c5f89261092f17f64fc71e666ca1",
+  "scope": "Prepared source texture data only; in-game appearance and VRAM untested"
+}

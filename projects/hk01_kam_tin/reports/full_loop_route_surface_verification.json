@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "errors": [],
+  "route_samples": 1723,
+  "lateral_surface_ray_checks": 12061,
+  "maximum_road_profile_error_m": 0.04234376018785646,
+  "source_terrain_height_hits": 1723,
+  "source_terrain_height_samples": 1723,
+  "physics_meshes_unchanged": true,
+  "spawn_matrices_unchanged": true,
+  "game_test": "pending user; no engine launch"
+}

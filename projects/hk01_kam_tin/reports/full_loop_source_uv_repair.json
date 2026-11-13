@@ -1,0 +1,22 @@
+{
+  "repaired_batches": [
+    {
+      "name": "6-NE-12B_INFRASTRUCTURE_TB_I247503300001062A0_00_-6_0",
+      "vertices": 28,
+      "method": "nearest valid source UV in spatial batch; centre fallback only if none valid"
+    },
+    {
+      "name": "6-NE-12B_INFRASTRUCTURE_TB_I247503300001062A0_00_-7_0",
+      "vertices": 29,
+      "method": "nearest valid source UV in spatial batch; centre fallback only if none valid"
+    },
+    {
+      "name": "6-NE-12B_INFRASTRUCTURE_TB_I247503300001062A0_01_-7_0",
+      "vertices": 6,
+      "method": "nearest valid source UV in spatial batch; centre fallback only if none valid"
+    }
+  ],
+  "total_vertices": 63,
+  "source_archives_changed": false,
+  "physical_meshes_changed": false
+}

@@ -1,0 +1,150 @@
+{
+  "dataset": "3D Visualisation Map (Individualised models)",
+  "version": "0.3-full-loop",
+  "sheets": [
+    "6-NE-12D",
+    "6-NE-12B",
+    "6-NE-17B",
+    "6-NE-17D",
+    "6-NE-18A",
+    "6-NE-12C",
+    "6-NE-13C",
+    "6-NE-18C"
+  ],
+  "origin_epsg2326": [
+    826000.0,
+    833000.0
+  ],
+  "metres_per_unit": 1,
+  "detail_radius_m": 190,
+  "source_manifest": {
+    "route_length_m": 3442.7291147628043,
+    "scenery_buffer_m": 160,
+    "sheets": [
+      {
+        "sheet": "6-NE-12B",
+        "bounds_epsg2326": [
+          824750,
+          833000,
+          825500,
+          833600
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 152.80387471543918,
+        "archive_bytes": 525084618,
+        "archive_sha256": "9df7cb64db6051461db39d97b7809642e17badfc0b2cdc22ff2c486282d1c3b5",
+        "source_glTF_files": 998
+      },
+      {
+        "sheet": "6-NE-12D",
+        "bounds_epsg2326": [
+          824750,
+          832400,
+          825500,
+          833000
+        ],
+        "revision_epoch_ms": 1784217600000,
+        "route_length_within_sheet_m": 1380.619754138858,
+        "archive_bytes": 312592735,
+        "archive_sha256": "c31199b9482748a4dda11698bd636bf201318e87e9c301abb4360911749d3c5b",
+        "source_glTF_files": 208
+      },
+      {
+        "sheet": "6-NE-17B",
+        "bounds_epsg2326": [
+          824750,
+          831800,
+          825500,
+          832400
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 1091.5313300093464,
+        "archive_bytes": 634187170,
+        "archive_sha256": "8b57b7d1d3764a372e7b48835a184c7bd6c4b1b45bf22bc0bb16234ae6ab1956",
+        "source_glTF_files": 372
+      },
+      {
+        "sheet": "6-NE-17D",
+        "bounds_epsg2326": [
+          824750,
+          831200,
+          825500,
+          831800
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 587.0799546584946,
+        "archive_bytes": 791656109,
+        "archive_sha256": "1475d820bdfbf51af6b0bf1f12f8b579a1259c5b7f41b1a9f180d2fb7bbf607a",
+        "source_glTF_files": 266
+      },
+      {
+        "sheet": "6-NE-18A",
+        "bounds_epsg2326": [
+          825500,
+          831800,
+          826250,
+          832400
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 230.69420124065653,
+        "archive_bytes": 577894775,
+        "archive_sha256": "b8fd75d94eab0acbe54c59dd14c57df2002767d335e84f4a42275dffff4e8642",
+        "source_glTF_files": 666
+      },
+      {
+        "sheet": "6-NE-12C",
+        "bounds_epsg2326": [
+          824000,
+          832400,
+          824750,
+          833000
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 0.0,
+        "archive_bytes": 412692936,
+        "archive_sha256": "063016143ebb57c37303ef58e978dcd05b9a776eb5af72e71600a7a4757135cd",
+        "source_glTF_files": 53
+      },
+      {
+        "sheet": "6-NE-13C",
+        "bounds_epsg2326": [
+          825500,
+          832400,
+          826250,
+          833000
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 0.0,
+        "archive_bytes": 374912440,
+        "archive_sha256": "cd8ab9fe2695c2f75b2a79821db0a5278cba81ceb1b553baf779d667ca05131c",
+        "source_glTF_files": 225
+      },
+      {
+        "sheet": "6-NE-18C",
+        "bounds_epsg2326": [
+          825500,
+          831200,
+          826250,
+          831800
+        ],
+        "revision_epoch_ms": 1728921600000,
+        "route_length_within_sheet_m": 0.0,
+        "archive_bytes": 581538062,
+        "archive_sha256": "cafb16abf3f99d10684e05d474b1d0bf199f2a2d07bc1aef9abd67755e277d85",
+        "source_glTF_files": 706
+      }
+    ]
+  },
+  "missing_source_textures": [
+    "source/csdi_individualised/6-NE-12D/BUILDING/B253723276401063A0/B253723276401063A0_001.jpg"
+  ],
+  "adaptations": [
+    "local metre coordinates",
+    "route-corridor cropping",
+    "spatial batching and distance-based detail reduction",
+    "mipmapped DDS BC1 textures, maximum 2048 pixels",
+    "visual terrain blend; original driving collision retained"
+  ],
+  "source_website": "https://3d.map.gov.hk/",
+  "data_ownership": "Government of the Hong Kong Special Administrative Region"
+}

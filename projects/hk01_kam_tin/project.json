@@ -1,17 +1,30 @@
 {
   "name": "Hong Kong 1:1 — Regional Assetto Corsa Project",
-  "stage": "Version 0.2 solo driving-test loop with one real CSDI scenery tile; user game test pending",
+  "stage": "Version 0.3 complete solo test loop with eight real CSDI scenery tiles installed; user game test pending",
   "created_local_date": "2026-11-13",
   "horizontal_crs": "EPSG:2326",
   "vertical_reference": "Hong Kong Principal Datum (DTM); not surveyed road-deck heights",
-  "blender_axes": {"x": "east", "y": "north", "z": "up", "metres_per_unit": 1},
+  "blender_axes": {
+    "x": "east",
+    "y": "north",
+    "z": "up",
+    "metres_per_unit": 1
+  },
   "first_region": {
     "id": "HK01_KamTin_ShekKong",
     "name": "Kam Tin / Shek Kong",
     "origin_easting_m": 826000,
     "origin_northing_m": 833000,
-    "bounds_epsg2326": [823000, 830000, 829000, 836000],
-    "size_km": [6, 6],
+    "bounds_epsg2326": [
+      823000,
+      830000,
+      829000,
+      836000
+    ],
+    "size_km": [
+      6,
+      6
+    ],
     "authoring_tile_m": 1000,
     "terrain_mesh_spacing_m": 20,
     "road_preview_sample_spacing_m": 5
@@ -28,11 +41,70 @@
   "road_scope": "Roads plausibly usable by motor vehicles. Public candidates and restricted/review roads are kept separate; source completeness and access require review.",
   "release_model": "Separate selectable regional tracks. No seamless transitions or whole-Hong-Kong streaming assumed.",
   "safety": "User requested the driving-test route and will perform the game test. Install only this new test-track ID after package checks. Do not launch Assetto Corsa or alter the previous Route Twisk project.",
-  "driving_test": {"track_id":"hk01_kam_tin_test", "display_name":"Hong Kong — Kam Tin Driving Test", "version":"0.2-csdi-sample", "length_m":3444.937762144697, "mode":"Solo Practice, one car, daytime", "actual_game_driving_test":"Pending user test", "scope":"Real scenery on one 750 x 600 m tile, 6-NE-12D; temporary road widths/profile; no AI"},
+  "driving_test": {
+    "track_id": "hk01_kam_tin_test",
+    "display_name": "Hong Kong — Kam Tin Driving Test",
+    "version": "0.3-full-loop",
+    "length_m": 3444.937762144697,
+    "mode": "Solo Practice, one car, daytime",
+    "actual_game_driving_test": "Pending user test",
+    "scope": "Complete 3.445 km loop covered by eight real scenery sheets; temporary road width/profile; no AI",
+    "real_scenery_sheets": [
+      "6-NE-12D",
+      "6-NE-12B",
+      "6-NE-17B",
+      "6-NE-17D",
+      "6-NE-18A",
+      "6-NE-12C",
+      "6-NE-13C",
+      "6-NE-18C"
+    ],
+    "test_checkpoints": 8,
+    "installed_file_hashes_verified": true
+  },
   "sources": [
-    {"id":"osm", "url":"https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf", "attribution":"© OpenStreetMap contributors", "license":"ODbL 1.0", "license_url":"https://www.openstreetmap.org/copyright"},
-    {"id":"dtm", "url":"https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip", "attribution":"Lands Department, HKSAR Government", "metadata_url":"https://www.landsd.gov.hk/en/spatial-data/open-data/kf_dtm.html", "terms_url":"https://data.gov.hk/en/terms-and-conditions", "notes":"5 m grid, stated accuracy ±5 m at 90% confidence. Source photographs 2014–2015; metadata revised March 2019. Not road-surface survey data."},
-    {"id":"osm_boundary", "url":"https://api.openstreetmap.org/api/0.6/relation/913110/full", "attribution":"© OpenStreetMap contributors", "license":"ODbL 1.0", "retrieved_local_date":"2026-11-13", "notes":"Separately fetched complete administrative boundary; snapshot may be newer than the regional extract."},
-    {"id":"csdi_individualised", "dataset_id":"landsd_rcd_1671676915450_88604", "url":"https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1671676915450_88604", "website":"https://3d.map.gov.hk/", "sheet":"6-NE-12D", "format":"glTF", "attribution":"Map from Lands Department; source data © Government of the Hong Kong SAR", "retrieved_local_date":"2026-11-13", "notes":"Original retained locally; adapted visual scenery only; texture cap 2048; one missing source texture uses fallback."}
+    {
+      "id": "osm",
+      "url": "https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf",
+      "attribution": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "license_url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "dtm",
+      "url": "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip",
+      "attribution": "Lands Department, HKSAR Government",
+      "metadata_url": "https://www.landsd.gov.hk/en/spatial-data/open-data/kf_dtm.html",
+      "terms_url": "https://data.gov.hk/en/terms-and-conditions",
+      "notes": "5 m grid, stated accuracy ±5 m at 90% confidence. Source photographs 2014–2015; metadata revised March 2019. Not road-surface survey data."
+    },
+    {
+      "id": "osm_boundary",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/913110/full",
+      "attribution": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "retrieved_local_date": "2026-11-13",
+      "notes": "Separately fetched complete administrative boundary; snapshot may be newer than the regional extract."
+    },
+    {
+      "id": "csdi_individualised",
+      "dataset_id": "landsd_rcd_1671676915450_88604",
+      "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1671676915450_88604",
+      "website": "https://3d.map.gov.hk/",
+      "format": "glTF",
+      "attribution": "Map from Lands Department; source data © Government of the Hong Kong SAR",
+      "retrieved_local_date": "2026-11-13",
+      "notes": "Original archives retained locally; visual-only route scenery; complete mipmapped DDS BC1 textures up to 2048 pixels; missing source textures recorded with neutral fallbacks.",
+      "sheets": [
+        "6-NE-12D",
+        "6-NE-12B",
+        "6-NE-17B",
+        "6-NE-17D",
+        "6-NE-18A",
+        "6-NE-12C",
+        "6-NE-13C",
+        "6-NE-18C"
+      ]
+    }
   ]
 }

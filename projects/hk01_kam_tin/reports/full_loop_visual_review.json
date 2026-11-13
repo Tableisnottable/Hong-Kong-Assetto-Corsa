@@ -1,0 +1,48 @@
+{
+  "ready_for_user_test": true,
+  "production_visual_quality": false,
+  "reviewed_images": [
+    "csdi_sample_overview.png",
+    "csdi_sample_road.png",
+    "checkpoint_01.png",
+    "checkpoint_02.png",
+    "checkpoint_03.png",
+    "checkpoint_04.png",
+    "checkpoint_05.png",
+    "checkpoint_06.png",
+    "checkpoint_07.png",
+    "checkpoint_08.png",
+    "all_checkpoints_contact_sheet.jpg"
+  ],
+  "image_sha256": {
+    "csdi_sample_overview.png": "941cd483650117a48b2e473c3a93ce0c21fdb22be825e4e9de2dc5b1217dd066",
+    "csdi_sample_road.png": "bacb992708557b28f67100883c35387a128584b31a46627028c8909ff92fac35",
+    "checkpoint_01.png": "8c9efe3e38b5ddce5214da4aba170b2ebd35f610cf999f58c13d9f2052379f44",
+    "checkpoint_02.png": "e79b08eaf094334ac820356347f31041f9b239bd3d1e0476d4963bff851ce6be",
+    "checkpoint_03.png": "752ee9748ade2a7e6af2bd3b04204b44fe0a00b9863d6fdf98ede06f7f933fc1",
+    "checkpoint_04.png": "4a9e0bf78409fce64f4eadb4bd766246be4a1637a74a75586565cc8049fa7860",
+    "checkpoint_05.png": "b4d391d2f5154925fa69a5752d16e0db06fc254f0bafb204d9ba06bd943e751a",
+    "checkpoint_06.png": "fa351eeceaa73eb60eb8b83c32910dd2e172608470d1f76500f082900d703abf",
+    "checkpoint_07.png": "798cf51a45c234b103e90b41bf4c179e41ecf3a609bc9274d44f294fd94380ce",
+    "checkpoint_08.png": "23d112ae241d273dcacc69e7d8104124a272b88d3d99944a2c7fcb48509cb573",
+    "all_checkpoints_contact_sheet.jpg": "376bd3663d8e03266684a7316d7bae1c16c78050e7b0f2aca99c09d961095918"
+  },
+  "model_sha256": {
+    "hk01_kam_tin_test.kn5": "3f372c4b43b1e7ffb645700b2336319923bf40abf73768721fa804adc58884b4",
+    "scenery_6-NE-12D.kn5": "1bdf451a830d4f42db3d6f9a7d453d81778dc01755ded821db3cf7999149ba64",
+    "scenery_6-NE-12B.kn5": "ff5f457b9d09ba45d39cafcc8d7f3f4814b814ba3cc3d8297eb03326b9841da0",
+    "scenery_6-NE-17B.kn5": "3823ffd55145bd1dc6a8db1828f8db984ba88ddc627752a52b8a8df252e72b08",
+    "scenery_6-NE-17D.kn5": "1569cff70c7c795d157e8c542c7dcc4551e4235099e48abde1491863cc871905",
+    "scenery_6-NE-18A.kn5": "eb8c74c640f4595e8ebac18a093fed424497e68b33ac3226825b0f9defce5dad",
+    "scenery_6-NE-12C.kn5": "5fbadfc79072b52674e955e97fa6679675a4b9871d9cb9f0ffb46176f1072cce",
+    "scenery_6-NE-13C.kn5": "5f809ee76c46807492becef0971c7fb0eb7c5a2c1f129922b160cb25450f8068",
+    "scenery_6-NE-18C.kn5": "65c06eb20166bbe3877648a0a7bd2aaedd951602ceed2accf556ec70a094fe41"
+  },
+  "road_visible_and_unobstructed_in_reviewed_views": true,
+  "notes": [
+    "Eight rendered road views and the route guide inspected; not an in-game test.",
+    "Temporary road width/profile, concrete barriers and ground blending remain.",
+    "Close-up source vegetation/photogrammetry is jagged; some off-road fragments and distant blockout context remain.",
+    "No production-quality scenery or FPS claim."
+  ]
+}

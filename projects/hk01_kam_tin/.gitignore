@@ -30,3 +30,7 @@ __pycache__/
 driving_test/csdi_sample/
 driving_test/textures/
 driving_test/reports/
+
+/release_route_scenery/
+
+/driving_test/route_scenery/

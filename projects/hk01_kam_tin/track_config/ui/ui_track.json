@@ -1,6 +1,6 @@
 {
   "name": "Hong Kong — Kam Tin Driving Test",
-  "description": "3.445 km solo test loop. Version 0.2 adds adapted real Lands Department scenery on one 750 x 600 m tile (6-NE-12D). Other areas remain blockout. Temporary 7 m road and original collision/spawns retained. No AI. Game loading and FPS await user test. Map from Lands Department; source data © Government of the Hong Kong SAR, https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors.",
+  "description": "3.445 km Kam Tin solo driving test. Eight real Lands Department scenery tiles cover the full loop; the wider Hong Kong map remains unfinished. Temporary 7 m road, original collision/pit/spawns and eight numbered test markers. Practice, one car, clear daytime. No AI. Actual game loading and FPS await user test. Map from Lands Department; source data © Government of the Hong Kong SAR, https://3d.map.gov.hk/ . Roads © OpenStreetMap contributors.",
   "tags": [
     "Hong Kong",
     "real location",
@@ -18,6 +18,6 @@
   "pitboxes": "1",
   "run": "counter-clockwise",
   "author": "HK 1:1 Project",
-  "version": "0.2-csdi-sample",
+  "version": "0.3-full-loop",
   "url": ""
 }

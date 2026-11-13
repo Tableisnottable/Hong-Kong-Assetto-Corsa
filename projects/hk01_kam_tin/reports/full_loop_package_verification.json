@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "track_id": "hk01_kam_tin_test",
+  "version": "0.3-full-loop",
+  "model_files": 9,
+  "scenery_tiles": [
+    "6-NE-12D",
+    "6-NE-12B",
+    "6-NE-17B",
+    "6-NE-17D",
+    "6-NE-18A",
+    "6-NE-12C",
+    "6-NE-13C",
+    "6-NE-18C"
+  ],
+  "route_coverage_percent": 100.0,
+  "route_length_m": 3444.937762144697,
+  "file_count": 30,
+  "archive": "local-generated/HK_KamTin_Full_Loop_Test_v0.3.zip",
+  "archive_bytes": 1005364259,
+  "archive_sha256": "127c43ee820a1092ecc21d89e3ad1310a057517554375c602cd5e95c8ce9cfc5",
+  "game_loading_driving_fps": "not performed; user will test",
+  "installed_to": "local Assetto Corsa installation/content/tracks/hk01_kam_tin_test",
+  "installed_file_hashes_verified": true
+}
