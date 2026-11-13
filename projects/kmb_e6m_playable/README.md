@@ -1,18 +1,11 @@
-# KMB E6M Assetto Corsa Configuration Prototype
+# KMB E6M Assetto Corsa local prototype configurations
 
-This folder contains the small text configuration changes for the local KMB E6M Assetto Corsa prototype. It is not a complete car download.
+Small configuration companion for the locally converted `kmb_e6m_drivable` bus. This is not a complete car download. Merge `content/` with the matching updated local build after backing it up. The cockpit configuration requires the newly patched KN5 with the KMB motion/LCD nodes; an older model alone will not provide them.
 
-## Install
+The model, textures, destination bitmaps, animations and sound bank remain local. The route skins reference existing local OMSI-derived artwork. Do not expect these text files to create a car or signs by themselves.
 
-Copy the `content/cars/kmb_e6m_drivable` folder into your Assetto Corsa `content/cars` directory, merging it with a separately obtained copy of the bus. Back up the existing car folder first.
+The update adds three mirror glass bindings, cockpit telemetry and supported clickable controls, source-derived gauge curves, and six F6 camera views. The third axle has CSP visual wheel rotation; AC physics still models two axles. Destination selection remains by skin, including Not in Service and three Route 51 destinations. Tai Mo Shan uses the original mountain-icon 大帽山 / 巔峰之旅 artwork.
 
-The large model, textures, and sound bank are not included. The original OMSI bus files and display artwork are also not included. This config patch will not create a drivable car by itself.
+See `../kmb_bus_tools/TEST_DRIVE.md` for testing and limits, and the tools project for model-patching helpers. The local build passed structural checks, offline Blender view review, and Lua tests using mocked CSP APIs. Live AC mirrors, instruments, controls and handling remain for user testing.
 
-## Scope and limits
-
-- The mass, wheel diameter, and engine curve were based on values read from the user's local OMSI E6M installation. Assetto Corsa handling remains an approximation and still needs an in-game test.
-- Route 51 destinations are supplied as skin configuration. This does not convert OMSI's keypad, scripts, or dynamic destination display system.
-- The fourth axle's in-game wheel animation has not been verified.
-- No permission to redistribute the original bus model, artwork, sounds, or OMSI files is implied by this configuration-only folder.
-
-The route skins reference the matching display textures in the separately installed local car. Since those textures are intentionally omitted here, the route signs will only appear when the required textures are already present locally.
+OMSI passengers, doors, ticketing, keypad, full electrical/air and exterior lighting systems are not ported. No original OMSI assets are included here.

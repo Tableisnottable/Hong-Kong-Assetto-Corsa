@@ -1,0 +1,90 @@
+{
+  "name": "KMB E6M Playable Prototype",
+  "brand": "Alexander Dennis",
+  "country": "United Kingdom",
+  "description": "Assetto Corsa conversion using the supplied OMSI E6M engine, axle and gearbox data. Physics are adapted to AC; the OMSI 69-71 km/h governor is omitted. The third axle is visual, and OMSI controls, ticketing and passengers are not converted.",
+  "tags": [
+    "bus",
+    "KMB",
+    "Hong Kong",
+    "E6M",
+    "prototype"
+  ],
+  "class": "street",
+  "specs": {
+    "bhp": "335 bhp",
+    "torque": "1500 Nm",
+    "weight": "14800 kg",
+    "topspeed": "~110 km/h (gearing; governor omitted)",
+    "acceleration": "Prototype",
+    "pwratio": "44 kg/hp"
+  },
+  "torqueCurve": [
+    [
+      700,
+      900
+    ],
+    [
+      1200,
+      1500
+    ],
+    [
+      1400,
+      1500
+    ],
+    [
+      1600,
+      1430
+    ],
+    [
+      1700,
+      1300
+    ],
+    [
+      1800,
+      1230
+    ],
+    [
+      2100,
+      1136
+    ],
+    [
+      2350,
+      0
+    ]
+  ],
+  "powerCurve": [
+    [
+      700,
+      88.4
+    ],
+    [
+      1200,
+      252.6
+    ],
+    [
+      1400,
+      294.7
+    ],
+    [
+      1600,
+      321.0
+    ],
+    [
+      1700,
+      310.1
+    ],
+    [
+      1800,
+      310.6
+    ],
+    [
+      2100,
+      334.7
+    ],
+    [
+      2350,
+      0
+    ]
+  ]
+}

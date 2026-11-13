@@ -1,0 +1,23 @@
+{
+  "name": "KMB E200 AAU Playable Prototype",
+  "brand": "Alexander Dennis",
+  "country": "United Kingdom",
+  "class": "street",
+  "description": "Local playable prototype converted from the installed KMB E200 AAU OMSI model. Native steering, brakes, four forward gears and autoclutch. Approximate physics and first gear; existing bus audio. OMSI passengers, ticketing, clickable controls and scripted systems are not converted.",
+  "tags": [
+    "bus",
+    "KMB",
+    "Hong Kong",
+    "E200",
+    "AAU",
+    "prototype"
+  ],
+  "specs": {
+    "bhp": "225 bhp (source curve)",
+    "torque": "850 Nm",
+    "weight": "10800 kg",
+    "topspeed": "90 km/h (gearing)",
+    "acceleration": "Prototype",
+    "pwratio": "48 kg/hp"
+  }
+}

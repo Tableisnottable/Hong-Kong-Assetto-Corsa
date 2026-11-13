@@ -1,0 +1,22 @@
+# Keep vehicle and OMSI assets out of this source-only project.
+*.kn5
+*.knh
+*.dds
+*.tga
+*.bmp
+*.png
+*.jpg
+*.jpeg
+*.wav
+*.ogg
+*.bank
+*.blend
+*.blend1
+*.fbx
+*.o3d
+*.zip
+*.7z
+*.rar
+backups/
+source/
+previews/
