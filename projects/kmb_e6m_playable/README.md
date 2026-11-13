@@ -4,7 +4,7 @@ Small configuration companion for the locally converted `kmb_e6m_drivable` bus. 
 
 The model, textures, destination bitmaps, animations and sound bank remain local. The route skins reference existing local OMSI-derived artwork. Do not expect these text files to create a car or signs by themselves.
 
-The update adds three mirror glass bindings, cockpit telemetry and supported clickable controls, source-derived gauge curves, and six F6 camera views. The third axle has CSP visual wheel rotation; AC physics still models two axles. Destination selection remains by skin, including Not in Service and three Route 51 destinations. Tai Mo Shan uses the original mountain-icon 大帽山 / 巔峰之旅 artwork.
+The update adds three mirror glass bindings, cockpit telemetry and supported clickable controls, source-derived gauge curves, and six F6 camera views. The third axle has CSP visual wheel rotation; AC physics still models two axles. To set a route from the local OMSI HOF and bitmap files, use `tools/set_kmb_bus_display.py e6m`; see `../kmb_bus_tools/README.md` for the steps. The original four bundled skins remain available as defaults/examples.
 
 See `../kmb_bus_tools/TEST_DRIVE.md` for testing and limits, and the tools project for model-patching helpers. The local build passed structural checks, offline Blender view review, and Lua tests using mocked CSP APIs. Live AC mirrors, instruments, controls and handling remain for user testing.
 
