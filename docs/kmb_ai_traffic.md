@@ -5,6 +5,8 @@ Large vehicle models, textures and sound banks remain local.
 
 ## Content Manager opponents
 
+For a short test with bus-sized spawn spacing, see [the bus test guide](kmb_bus_test.md). Standard car pit bays can overlap these bus collision bodies, even when the engine and gearbox are working.
+
 Run after installing the converted cars:
 
 ```powershell

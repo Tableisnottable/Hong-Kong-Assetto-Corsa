@@ -11,14 +11,16 @@ The shared chase implementation goes in AC's `extension/lua/chaser-camera/kmb_bu
 The buses use the original OMSI `KMB_AllRoutes_Full.hof` destination names and Hanover bitmap artwork. A small updater keeps one reusable `KMB CUSTOM` skin per bus, so the many routes do not become thousands of Content Manager skins.
 
 1. Close Assetto Corsa.
-2. Make sure Python 3 and Pillow are available (`python -m pip install Pillow` if needed).
-3. From this repository, run `python tools/set_kmb_bus_display.py e200` or `python tools/set_kmb_bus_display.py e6m`.
+2. Make sure Python 3, NumPy and Pillow are available (`python -m pip install numpy Pillow` if needed).
+3. Double-click `tools/set_kmb_bus_display.cmd`, then choose one bus or **all**. Alternatively run `python tools/set_kmb_bus_display.py all`.
 4. Enter a route number or destination search text. If the route has several termini, select the matching destination from the numbered results.
 5. Open Content Manager, refresh the selected car's skins, and choose `KMB CUSTOM | route | destination` before starting a session.
 
-Use `--list` after the bus name to list all entries without changing the AC install. Use `--hof PATH` to select another OMSI HOF file. The utility reads files from the default OMSI and AC paths on drive A; edit the constants at the top of the script if those folders are elsewhere.
+Supported bus names are `e200`, `e6m`, `atenu`, `atee`, `scania`, and `dragon`. Use `--list` after the bus name to list all entries without changing the AC install. Use `--hof PATH` to select another OMSI HOF file. The utility reads files from the default OMSI and AC paths on drive A; edit the constants at the top of the script if those folders are elsewhere.
 
-The updater uses the original display bitmap and writes three DDS files into that car's `skins/kmb_custom_route` folder. Route text and destination names come from HOF data, so route availability depends on the selected HOF file. Some entries use non-Hanover or script-generated displays and may not have a standalone bitmap in the KMBVC folder.
+The updater uses each family's artwork and actual panel proportions: E200/ATENU amber, E6M white, ATEE/Scania green, Dragon printed rollblinds. E6M NIS also uses the white OMSI atlas. It writes front/side/rear textures into `skins/kmb_custom_route` (Dragon has separate number boards). Route text and destination names come from HOF data, so availability depends on that file. Missing matching artwork uses a documented shared OMSI bitmap or rendered HOF text; Scania's absent Gorba library and unsupported Dragon destinations remain adaptations. Generated files, backups and source records go under the user's `Documents/Assetto Corsa/kmb_tools/displays` folder by default.
+
+Native AC opponents select the route skin like the player. Traffic Planner embeds its textures in separate models: after selecting a custom route, close AC and run `python tools/build_kmb_planner_traffic.py --skin kmb_custom_route --output <local-output-folder> --install`. Apply the custom route to **all** buses first. This remains pre-session skin selection; the OMSI destination keypad is not ported.
 
 ## Bus coverage
 

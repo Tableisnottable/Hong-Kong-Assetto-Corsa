@@ -17,6 +17,7 @@ def main():
     parser.add_argument("car", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("skins", nargs="+")
+    parser.add_argument("--inspect-panels", action="store_true", help="Also render close views of each destination panel")
     args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
     car, out = args.car.resolve(), args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -69,6 +70,7 @@ def main():
         return np.asarray(vertices)[:, [0, 2, 1]] * np.array([-1., 1., 1.])
 
     samples = []
+    sign_points = {}
 
     def visit(node, parent=np.eye(4), active=True):
         active = active and node.active
@@ -77,6 +79,8 @@ def main():
             v = node.vertices
             points = to_blender(v[:, :3] @ world[:3, :3] + world[3, :3])
             samples.append(points)
+            if node.name.startswith("KMB_DESTINATION_"):
+                sign_points[node.name] = points
             indices = np.frombuffer(node.payload, dtype="<u2", count=node.index_count,
                 offset=node.vertex_offset + node.vertex_count * node.vertex_stride + 4).reshape(-1, 3)
             mesh = bpy.data.meshes.new(node.name)
@@ -137,8 +141,22 @@ def main():
         skin_out = out / skin
         skin_out.mkdir(exist_ok=True)
         scene.render.filepath = str(skin_out / "preview.png")
+        camera_data.ortho_scale = float(max(high - low)) * 1.20
+        camera.location = center + Vector((12, 16, 7))
+        camera.rotation_euler = (center - camera.location).to_track_quat("-Z", "Y").to_euler()
         bpy.ops.render.render(write_still=True)
         print("BUS_PREVIEW_SAVED " + scene.render.filepath, flush=True)
+        if args.inspect_panels:
+            for name, points in sign_points.items():
+                lo, hi = points.min(0), points.max(0)
+                target = Vector(((lo + hi) / 2).tolist())
+                direction = Vector((0, 4, 0)) if "FRONT" in name else Vector((0, -4, 0)) if "REAR" in name else Vector((-4, 0, 0))
+                camera.location = target + direction
+                camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
+                camera_data.ortho_scale = max(float(max(hi - lo)) * 1.2, .65)
+                scene.render.filepath = str(skin_out / (name.lower() + ".png"))
+                bpy.ops.render.render(write_still=True)
+                print("BUS_SIGN_SAVED " + scene.render.filepath, flush=True)
 
 
 if __name__ == "__main__":

@@ -1,14 +1,12 @@
-"""Set the E200/E6M AC destination boards from local OMSI HOF and bitmap data."""
+"""Choose a destination for any of the six KMB buses from installed OMSI data."""
 from __future__ import annotations
 
 import argparse
-import json
+import datetime
 import re
-import shutil
+import subprocess
 import sys
 from pathlib import Path
-
-from PIL import Image, ImageOps
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -16,15 +14,6 @@ if hasattr(sys.stdout, "reconfigure"):
 OMSI = Path(r"A:\SteamLibrary\steamapps\common\OMSI 2")
 AC_CARS = Path(r"A:\SteamLibrary\steamapps\common\assettocorsa\content\cars")
 VEHICLES = OMSI / "Vehicles"
-FAMILY = {
-    "e200": "kmb_e200_drivable",
-    "e6m": "kmb_e6m_drivable",
-}
-FACES = {
-    "front": (0, 0, 416, 128),
-    "side": (0, 144, 512, 240),
-    "rear": (64, 256, 208, 416),
-}
 
 
 def decode_hof(path: Path) -> str:
@@ -62,21 +51,6 @@ def read_hof(path: Path) -> list[dict[str, str]]:
     return entries
 
 
-def find_assets(vehicle_root: Path, bitmap_names: list[str]) -> Path | None:
-    search_roots = [
-        OMSI / "Vehicles" / "Anzeigen" / "HANOVER_ORANGE_FULL" / "KMBVC",
-        OMSI / "Vehicles" / "Anzeigen" / "HANOVER_WHITE_FULL" / "KMBVC",
-        vehicle_root / "Texture",
-        vehicle_root / "texture",
-    ]
-    for name in bitmap_names:
-        for root in search_roots:
-            candidate = root / name
-            if candidate.is_file():
-                return candidate
-    return None
-
-
 def choose(items: list[dict[str, str]], title: str) -> dict[str, str]:
     for n, item in enumerate(items, 1):
         print(f"{n:>3}. {item['route']:<8} {item['destination']}")
@@ -96,24 +70,30 @@ def choose(items: list[dict[str, str]], title: str) -> dict[str, str]:
             print("No matching route or destination. Enter a displayed number or search text.")
 
 
-def display_route(destination: str, fallback: str) -> tuple[str, str]:
-    match = re.match(r"^([A-Za-z0-9]+)\s+(.+)$", destination.strip())
-    return (match.group(1), match.group(2)) if match else (fallback, destination)
-
-
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("bus", choices=FAMILY, help="bus to update")
-    parser.add_argument("--hof", type=Path, help="HOF file; defaults to this bus family's full KMB route list")
-    parser.add_argument("--list", action="store_true", help="print available route destinations without changing files")
-    args = parser.parse_args()
+    # Import here: prepare_kmb_displays shares the HOF reader in this module.
+    from prepare_kmb_displays import PROFILES, prepare, route_label
 
-    vehicle_root = VEHICLES / {
-        "e200": "ADL_E200_KMB_AAU_with_OrangePai",
-        "e6m": "ADL_E500MMC_KMB_E6M",
-    }[args.bus]
-    hof = args.hof or (vehicle_root / "KMB_AllRoutes_Full.hof" if args.bus == "e200"
-                       else vehicle_root / "model" / "KMB_AllRoutes_Full.hof")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("bus", nargs="?", choices=["all", *PROFILES])
+    parser.add_argument("--hof", type=Path, help="OMSI destination file")
+    parser.add_argument("--list", action="store_true", help="list HOF destinations without installation")
+    parser.add_argument("--output", type=Path, help="local generated files and backups")
+    args = parser.parse_args()
+    if args.bus is None:
+        choices = ["all", *PROFILES]
+        for i, family in enumerate(choices, 1):
+            print(f"{i}. {family}")
+        while True:
+            value = input("Choose bus (number or name): ").strip().lower()
+            if value.isdigit() and 1 <= int(value) <= len(choices):
+                args.bus = choices[int(value) - 1]
+                break
+            if value in choices:
+                args.bus = value
+                break
+    # One shared full KMB HOF; each family still selects its own display artwork.
+    hof = args.hof or VEHICLES / "ADL_E200_KMB_AAU_with_OrangePai/KMB_AllRoutes_Full.hof"
     if not hof.is_file():
         print(f"HOF file not found: {hof}", file=sys.stderr)
         return 2
@@ -123,51 +103,43 @@ def main() -> int:
         return 2
     if args.list:
         for item in entries:
-            print(f"{item['route']}\t{item['destination']}\t{';'.join(item['bitmaps'])}")
+            route, destination = route_label(item["destination"], item["route"])
+            print(f"{route}\t{destination}\t{';'.join(item['bitmaps'])}")
         return 0
-
+    running = subprocess.run(["tasklist", "/FI", "IMAGENAME eq acs.exe", "/FO", "CSV", "/NH"],
+                             capture_output=True, text=True, check=True)
+    if '"acs.exe"' in running.stdout.lower():
+        print("Close Assetto Corsa before changing destination skins.", file=sys.stderr)
+        return 2
     query = input("Route number (or part of a destination): ").strip()
-    matches = [x for x in entries if query.casefold() in (x["route"] + " " + x["destination"]).casefold()]
-    if not matches:
+    matches = [x for x in entries if query.casefold() in
+               (" ".join(route_label(x["destination"], x["route"]))).casefold()]
+    if not query or not matches:
         print("No matching route found.", file=sys.stderr)
         return 2
     selected = choose(matches, "Choose destination number: ") if len(matches) > 1 else matches[0]
-    source = find_assets(vehicle_root, selected["bitmaps"])
-    if source is None:
-        print("No matching original OMSI bitmap was found for this destination.", file=sys.stderr)
-        print("This HOF entry may use script-generated or non-Hanover artwork.", file=sys.stderr)
-        return 3
-
-    car = AC_CARS / FAMILY[args.bus]
-    if not (car / (FAMILY[args.bus] + ".kn5")).is_file():
-        print(f"Converted bus is not installed: {car}", file=sys.stderr)
-        return 4
-    skin = car / "skins" / "kmb_custom_route"
-    skin.mkdir(parents=True, exist_ok=True)
-    seed = car / "skins" / "0_kmb"
-    for name in ("skin.ini", "livery.png"):
-        if (seed / name).is_file():
-            shutil.copy2(seed / name, skin / name)
-
-    source_image = Image.open(source).convert("RGB")
-    for face, crop in FACES.items():
-        panel = source_image.crop(crop)
-        if panel.width == 0 or panel.height == 0:
-            raise ValueError(f"Invalid {face} board crop in {source}")
-        # Match the sign panels already installed in the E200 and E6M KN5s.
-        size = {"front": (1024, 196), "side": (1024, 544), "rear": (1024, 612)}[face]
-        fitted = ImageOps.contain(panel, size, Image.Resampling.NEAREST)
-        canvas = Image.new("RGB", size, "black")
-        canvas.paste(fitted, ((size[0] - fitted.width) // 2, (size[1] - fitted.height) // 2))
-        canvas.save(skin / f"kmb_destination_{face}.dds", format="DDS", pixel_format="DXT5")
-
-    shown_route, shown_destination = display_route(selected["destination"], selected["route"])
-    metadata = {"skinname": f"KMB CUSTOM | {shown_route} | {shown_destination}",
-                "drivername": "", "country": "Hong Kong", "number": shown_route}
-    (skin / "ui_skin.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Updated {car.name} display: {shown_route} | {shown_destination}")
-    print(f"Source: {source}")
-    print("In Content Manager, refresh the car skins and select the KMB CUSTOM skin before driving.")
+    route, destination = route_label(selected["destination"], selected["route"])
+    filename = selected["bitmaps"][0] if selected["bitmaps"] else "__render_from_hof__.bmp"
+    routes = [("kmb_custom_route", route, destination, filename)]
+    families = list(PROFILES) if args.bus == "all" else [args.bus]
+    for family in families:
+        car = AC_CARS / PROFILES[family]["id"]
+        if not (car / (car.name + ".kn5")).is_file():
+            print(f"Converted bus is not installed: {car}", file=sys.stderr)
+            return 4
+    output = args.output or (Path.home() / "Documents/Assetto Corsa/kmb_tools/displays" /
+                            datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
+    output.mkdir(parents=True, exist_ok=True)
+    for family in families:
+        car = AC_CARS / PROFILES[family]["id"]
+        report = prepare(car, family, routes, output, True)
+        warnings = sorted({x["warning"] for x in report["entries"] if x.get("warning")})
+        print(f"Updated {car.name}: {route} | {destination} ({report['colour']})")
+        for warning in warnings:
+            print("  " + warning)
+    print("In Content Manager, refresh skins and choose KMB CUSTOM before driving.")
+    print("Traffic Planner: rebuild with --skin kmb_custom_route to bake this destination.")
+    print(f"Backups and source records: {output}")
     return 0
 
 

@@ -86,6 +86,8 @@ def move(node, offset):
 
 def build(ac, bus, out):
     car = ac / "content/cars" / bus["id"]
+    if Path(bus["skin"]).name != bus["skin"] or not (car / "skins" / bus["skin"]).is_dir():
+        raise ValueError(f"Missing or invalid destination skin for {car.name}: {bus['skin']}")
     check = audit_bus(ac, bus)
     if check["errors"]:
         raise ValueError(check)
@@ -172,7 +174,7 @@ def build(ac, bus, out):
         raise ValueError("LOD reduction failed")
     json_path = out / (prefix + ".json")
     json_path.write_text(json.dumps(definition, indent=2), encoding="utf-8")
-    return {"car": car.name, "main_triangles": main_triangles, "lod_triangles": lod_triangles,
+    return {"car": car.name, "destination_skin": bus["skin"], "main_triangles": main_triangles, "lod_triangles": lod_triangles,
             "extra_axle_nodes": extra, "translation_from_ac": offset.tolist(),
             "main_mb": round(main_path.stat().st_size / 1e6, 2), "lod_mb": round(lod_path.stat().st_size / 1e6, 2),
             "files": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in
@@ -210,6 +212,7 @@ def main():
     parser.add_argument("--ac", type=Path, default=AC)
     parser.add_argument("--output", type=Path, default=ROOT / "outputs/KMB_AI")
     parser.add_argument("--install", action="store_true")
+    parser.add_argument("--skin", help="Bake this installed destination skin for all six traffic buses")
     args = parser.parse_args()
     if args.install:
         procs = subprocess.run(["tasklist", "/FI", "IMAGENAME eq acs.exe", "/FO", "CSV"], capture_output=True, text=True, check=True)
@@ -218,6 +221,8 @@ def main():
     out = args.output / "planner_data"
     results = []
     for bus in buses():
+        if args.skin:
+            bus = {**bus, "skin": args.skin}
         result = build(args.ac, bus, out)
         results.append(result)
         print(json.dumps({k: result[k] for k in ("car", "status", "main_triangles", "lod_triangles", "main_mb", "lod_mb")}), flush=True)
