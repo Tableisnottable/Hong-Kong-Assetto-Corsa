@@ -59,3 +59,34 @@ six-bus opponent grid to test one of each together.
 
 The repack test track is not modified: its road geometry does not align with
 the original AI loop. It needs its own recorded traffic lanes.
+
+## CSP Traffic Planner vehicles
+
+```powershell
+python -m pip install numpy scipy Pillow fast-simplification luaparser
+python tools/build_kmb_planner_traffic.py --install
+python tools/validate_kmb_planner_traffic.py
+```
+
+The builder reads all six installed cars and their default KMB skins, creates
+separate ground-centered traffic models, and installs them in
+`extension/lua/tools/csp-traffic-tool/data`. It keeps the original drivable
+models intact. Vehicle length, bumper spacing and turning offset come from
+the actual geometry. It bakes the default skin textures into the models,
+reduces distant geometry by approximately 80–86%, and resizes traffic textures.
+The six installed distant models have approximately 21,000–61,000 triangles
+each; begin with 12 vehicles before increasing density.
+
+A small backed-up patch to the planner's `TrafficCarFullLOD.lua` rotates the
+additional axle nodes on E6M, ATENU, ATEE and Dragon. Four standard wheel nodes
+remain available to the stock traffic renderer. Other cars get no additional
+wheel bindings. CSP updates can replace this patch; rerun the installer after
+checking compatibility. New planner instances load the new vehicle pool.
+
+Installed hashes, embedded textures, body/wheel hierarchy, collision clearance,
+spacing, LOD silhouette bounds and Lua syntax pass the offline validator. Live
+appearance, spawning, handling and FPS require the user's test. This registers
+vehicles for **Traffic Planner**; other CSP/server traffic systems have their
+own vehicle registries. Planner vehicles do not run the original car cockpit
+scripts, sound banks or OMSI passenger systems. Source head/brake lamp meshes
+are not yet bound to planner light controls.
