@@ -35,3 +35,27 @@ skins and destination artwork. It does not simulate OMSI passenger service.
 
 Preset schema reference:
 [AcTools RaceGridViewModel](https://github.com/gro-ove/actools/blob/master/AcManager.Controls/ViewModels/RaceGridViewModel.cs).
+
+## CSP Traffic Planner routes
+
+```powershell
+python tools/prepare_twisk_planner_route.py --install
+```
+
+With AC closed, this adds a Traffic Planner loop to the original HK51 and
+uphill/downhill traffic layouts, using their existing 3,333-point AI route.
+It enables scripting physics in those layouts' `surfaces.ini` and backs up
+each previous file locally. It leaves the original AI splines intact. The
+planner snaps the imported lane onto the road when it loads; live behavior
+has not been tested. These modified layouts require CSP and their changed
+physics files can affect online server integrity checks.
+
+Start a **Practice** session on the original HK51 layout, open **Objects
+Inspector > Tools > Traffic Planner**, open its **Traffic** tab, and start
+with **12 cars**. Vehicle definitions must be installed separately. The
+planner samples the installed vehicle pool, so six types are eligible but a
+small random sample might not contain every type at once. Use the native
+six-bus opponent grid to test one of each together.
+
+The repack test track is not modified: its road geometry does not align with
+the original AI loop. It needs its own recorded traffic lanes.
