@@ -15,6 +15,26 @@ Packages are written to `outputs/<FAMILY>_playable/`. The script does not instal
 
 ## Installed KMB cars
 
+### Missing Content Manager pictures
+
+Each skin needs `skins/<skin>/preview.jpg` (or `preview.png`) for its car-list
+thumbnail and `livery.png` for its livery icon. The four family conversions
+initially had neither; four E6M destination skins also lacked preview pictures.
+Generate and install missing pictures from the actual installed models/skins:
+
+```powershell
+python tools/generate_bus_previews.py --install
+```
+
+This uses Blender 5.1 in the background, with two render jobs at most. It
+preserves existing readable pictures and leaves the models and physics alone.
+Use `--blender` to select another Blender 5.x executable and `--output` for the
+local render directory. If JPEG installation was interrupted after rendering,
+`--reuse-renders` reuses that directory's PNGs; only do this while the source
+model and skins are unchanged. Restart Content Manager or refresh its car list
+to reload cached thumbnails. Orange car warning triangles are independent of
+thumbnail pictures. Render outputs remain local and are not committed.
+
 The current local Assetto Corsa installation has these six selectable cars:
 
 | OMSI bus | Assetto Corsa car ID |
