@@ -408,6 +408,10 @@ def main():
     if specdata["third_axle"]:
         from install_kmb_axle_animation import configure_car
         configure_car(car, package / "backups/before_axle_animation")
+    reference_driver = AC / "content/cars/kmb_e6m_drivable"
+    if (reference_driver / "driver_base_pos.knh").is_file():
+        from repair_kmb_driver_positions import configure_driver
+        configure_driver(car, reference_driver, package / "backups/before_driver_placement")
     print(json.dumps({k: report[k] for k in ("family", "mesh_instances", "mesh_nodes", "triangles", "textures", "wheel_centers", "missing_textures")}, indent=2))
 
 

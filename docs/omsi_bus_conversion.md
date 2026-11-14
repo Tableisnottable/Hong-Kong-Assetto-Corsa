@@ -52,6 +52,14 @@ E6M, ATENU and ATEE use the middle driven axle for native AC physics; their fina
 
 ## E500 and Scania height and movement repair
 
+The ATENU/ATEE, Dragon and Scania conversions also need their native driver pose
+translated into the converted cab's coordinate frame. A donor placement file can
+leave the avatar at the centre of the vehicle even when the driving camera is
+correct. `tools/repair_kmb_driver_positions.py --output <local-report-directory>`
+installs a full seated E6M skeleton and translates both the base pose and root
+animation tracks to each cab's driver eye position. It backs up replaced files.
+Hand alignment retains the adapted E6M pose and needs a visual check in AC.
+
 ATENU, ATEE, Dragon and Scania builds now run `repair_omsi_bus_physics.py` after conversion. It places the converted model origin at the source `.bus` center-of-gravity height (`schwerpunkt`, 1.2 m for these sources) and midway between the two AC axles. It sets the suspension wheel origins and individual front/rear track widths to match, removes the inherited donor graphics offset, measures tire radii from the wheel meshes, and creates a convex collision hull with 0.30 m nominal ground clearance. This keeps the body, visual wheels and physics in one coordinate frame.
 
 The Dragon repair also corrects the wheel hierarchy: OMSI `wh2/3` are intermediate single wheels, while `wh4/5` are the driven rear duals. It uses the selected M250E20 engine curve, three forward gears and source final drive. DIWA's hydraulic first and reverse cannot be expressed as fixed AC ratios; the existing adapted first/reverse ratios remain, with source locked second/third ratios. Its nominal tire contact is within 3 mm of the source ground plane. Live driving remains unverified.
