@@ -33,7 +33,7 @@ spec.loader.exec_module(reader)
 FAMILIES = {
     "atenu": {
         "source": "ADL_E500MMC_KMB_ATENU", "cfg": "Model/model_ATENU.cfg",
-        "bus": "ATENU.bus", "engine_const": "Script/engine_constfile.txt",
+        "bus": "ATENU.bus", "engine_const": "Script/engine_constfile_D92_ZF_D28_turbo.txt",
         "id": "kmb_atenu_drivable", "name": "KMB ADL E500MMC ATENU",
         "donor": "bk_bus_neoplan_cent",
         "wheel_pattern": re.compile(r"(?:^|[\\/])whl([0-5])(?:_o)?\.o3d$", re.I),
@@ -411,6 +411,9 @@ def main():
     }
     package.mkdir(parents=True, exist_ok=True)
     (package / "build_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    if args.family in ("atenu", "atee", "scania"):
+        from repair_omsi_bus_physics import repair
+        repair(package)
     print(json.dumps({k: report[k] for k in ("family", "mesh_instances", "mesh_nodes", "triangles", "textures", "wheel_centers", "missing_textures")}, indent=2))
 
 
