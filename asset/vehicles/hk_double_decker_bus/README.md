@@ -1,6 +1,6 @@
 # Hong Kong double-decker bus prototype
 
-This folder contains a prototype low-poly Hong Kong-style double-decker bus designed as a lightweight Assetto Corsa modelling base.
+This folder documents a prototype low-poly Hong Kong-style double-decker bus designed as a lightweight Assetto Corsa modelling base. Generate the mesh locally with the command below; OBJ outputs are ignored by Git, so a fresh clone does not include the editable mesh.
 
 ## Files
 

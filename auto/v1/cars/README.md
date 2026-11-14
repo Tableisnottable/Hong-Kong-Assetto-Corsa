@@ -1,6 +1,6 @@
 ﻿# Hong Kong Assetto Corsa - Vehicle Mod Requirements (車輛 Mod 架構指南)
 
-本目錄包含香港駕駛考試 6 款類別車輛 (1, 1A, 2, 2A, 17, 17A) 在 Assetto Corsa 中運行所需的完整目錄架構。
+本目錄記錄香港駕駛考試 6 款類別車輛 (1, 1A, 2, 2A, 17, 17A) 的目標目錄架構。這是檔案需求參考，不代表所列模型、貼圖、聲音已全部隨 Git 提供；current local KMB conversions are documented in [the conversion guide](../../../docs/omsi_bus_conversion.md).
 
 ---
 
@@ -16,7 +16,7 @@ auto/v1/cars/hk_cat1_yaris_manual/
 │   ├── car.ini                # 車重、軸距、轉向鎖定
 │   ├── engine.ini             # 引擎馬力/扭力曲線
 │   ├── drivetrain.ini         # 波箱齒比、傳動
-│   ├── suspension.ini         # 懸掛幾何與避震
+│   ├── suspensions.ini         # 懸掛幾何與避震
 │   ├── tyres.ini              # 輪胎抓地力與尺寸
 │   ├── brakes.ini             # 煞車力道與前後分配
 │   ├── lights.ini             # 頭尾燈/方向燈光束與位置
@@ -32,8 +32,4 @@ auto/v1/cars/hk_cat1_yaris_manual/
     ├── ui_car.json            # 車輛規格描述 (馬力、年代、國家)
     ├── badge.png              # 品牌 Logo (如 Toyota / ADL)
     └── preview.png            # 選車畫面預覽圖 (1024x576)
-
-
-
-
-
+```

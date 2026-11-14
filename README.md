@@ -1,180 +1,96 @@
-# 香港全境 1:1 真實道路 Assetto Corsa Map Tools
+# 香港 1:1 Assetto Corsa 地圖與 KMB 巴士工具
 
-> **Kam Tin quality target — November 14, 2026:** The user selected the installed Route Twisk RWE/Repack map as the required benchmark. [Kam Tin v0.5](projects/hk01_kam_tin/README.md) is installed locally as a comparison build with photographed asphalt/ground, cutout foliage and authored visual safety rails. It has **not** reached or been accepted at the reference quality. [Required quality and remaining work](projects/hk01_kam_tin/REFERENCE_QUALITY.md) · [Test instructions](projects/hk01_kam_tin/TESTING.md). Original collision payloads/spawns are retained; accurate roadside/junction modelling remains unfinished. Reference maps are unchanged. GitHub contains small sources/configuration/docs only; generated assets stay local. Earlier material below is historical development context.
+Hong Kong road-map authoring, regional track experiments and local OMSI-to-Assetto-Corsa bus conversion tools.
 
-這個 repository 是一個用來製作 1:1 香港全境真實道路與真實駕駛環境的 Assetto Corsa project。The project currently provides reproducible 1:1 real road data、route data、Blender generation scripts、FBX export helper，以及 Assetto Corsa track skeleton。
+**Current status — November 14, 2026:** the active regional map is **Kam Tin v0.5**, a provisional 3.445 km comparison loop. It has not reached the required Route Twisk RWE / Repack Test quality. The repository also contains configuration and conversion tools for six local KMB bus prototypes. A clone is a source checkout; it does not supply a complete Hong Kong track or the converted buses' large assets.
 
-> **Current status / 目前狀態:** 目前輸出是可重建的 1:1 全境真實道路 blockout and project skeleton，不是完成品或可直接發布的 final KN5 track。A finished 1:1 real-world map still requires survey data、terrain、collision、AI lines、traffic assets and final ksEditor authoring。
+## Start here / 從這裏開始
 
-## Project scope / 專案範圍
+| Workstream / 工作 | Current scope / 目前範圍 | Guide / 文件 |
+| --- | --- | --- |
+| Kam Tin / 錦田 | Regional foundation and v0.5 test loop; engine appearance, driving and FPS still need a fresh test | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
+| Required map quality / 地圖品質目標 | Route Twisk reference standard and outstanding road, junction and scenery work | [Quality requirements](projects/hk01_kam_tin/REFERENCE_QUALITY.md) |
+| Local KMB buses / 本機九巴 | E200, E6M, ATENU, ATEE, Dennis Dragon 9.9M and Scania K230UB | [Conversion and installed lineup](docs/omsi_bus_conversion.md) |
+| E200 / E6M cockpit and signs | Model-stage-specific patches, cameras, instruments and destination artwork | [Bus helpers](projects/kmb_bus_tools/README.md) · [Runtime test guide](projects/kmb_bus_tools/TEST_DRIVE.md) |
+| Earlier road-test tools / 早期考場工具 | Tin Kwong Road blockout and multi-centre experiments | Historical development notes below; [production plan](docs/map-production-plan.md) |
 
-地圖涵蓋 1:1 香港全境真實道路 / The map focuses on full Hong Kong real-world roads；各區共用同一個 shared road world，完全依據現實地理數據建置：
+## Kam Tin regional map / 錦田區域地圖
 
-1. **Hong Kong Island / 香港島:** 港島核心區、主要幹道及山頂真實道路。
-2. **Kowloon / 九龍:** 九龍各主要幹道、考試路線及市區真實街道網。
-3. **New Territories / 新界:** 新界公路、鄉郊快道及真實山區公路。
+The long-term goal is real-scale Hong Kong driving, delivered as separate regional tracks using shared geographic data. Whole-territory road references are not a finished, seamless game world.
 
-完整中文 instructions 位於 `asset\routes\full_hk.json`，而 Blender generator 使用對應的 English road identifiers。
+- Regional authoring uses Hong Kong 1980 Grid coordinates (EPSG:2326), with one Blender unit per metre.
+- The v0.5 local test build adds photographed asphalt/ground, worn paint, cutout foliage and authored visual safety rails while retaining the baseline collision and spawns.
+- Road profiles, junctions, kerbs, drainage, accurate roadside placement, local vegetation and building/ground seams remain unfinished. Coarse collision remains behind the visual rails.
+- File, geometry, texture and installed-hash checks are recorded in the project reports. They do not establish live handling, engine lighting or FPS. AI traffic, night/rain tuning and multiplayer remain unverified for this loop.
 
-| Item / 項目 | Value / 值 |
+For the existing local build, select **Hong Kong — Kam Tin Driving Test** (`hk01_kam_tin_test`) in **Practice**, with one car, clear daytime and a pit start. Restart the session after replacing models; follow the eight blue test markers and record defects and FPS using the [testing guide](projects/hk01_kam_tin/TESTING.md).
+
+For authoring, use Blender 5.1 or later and the Python dependencies in [scripts/requirements.txt](projects/hk01_kam_tin/scripts/requirements.txt), installed in a virtual environment. Run the project's commands from `projects/hk01_kam_tin/`, following its [rebuild prerequisites](projects/hk01_kam_tin/README.md#rebuild). Later build stages require retained source snapshots and earlier local scenes; a fresh clone alone is insufficient. Review [PUBLISHING.md](projects/hk01_kam_tin/PUBLISHING.md) before packaging or installation.
+
+## Local KMB bus prototypes / 本機九巴原型
+
+The documented local installation contains:
+
+| Bus / 巴士 | Assetto Corsa car ID |
 | --- | --- |
-| Map purpose / 用途 | 1:1 香港全境真實道路駕駛與模擬 / 1:1 Full Hong Kong real-world driving routes |
-| Survey group / 資料圖組 | 全香港真實測量數據 / Full Hong Kong real survey data |
-| Reference sheet / 參考圖幅 | `HK-FULL` |
-| Assetto Corsa map ID | `full_hk` |
-| Road strategy / 道路策略 | One shared road world based strictly on real-world GIS and OSM data |
-| Sheet strategy / 圖幅策略 | Follow full Hong Kong boundaries |
+| ADL E200 | `kmb_e200_drivable` |
+| ADL E6M | `kmb_e6m_drivable` |
+| ADL E500MMC ATENU | `kmb_atenu_drivable` |
+| ADL Enviro500 ATEE | `kmb_atee_drivable` |
+| Dennis Dragon 9.9M | `kmb_dennis_dragon_9m_drivable` |
+| Scania K230UB | `kmb_scania_k230ub_drivable` |
 
-全香港真實測量數據配合 1:1 高精度縮放，提供真實沉浸式模擬體驗。
+These are local conversion prototypes. The four newer families use adapted AC donor physics/sound; OMSI scripts are not executed in AC. Three-axle buses still use two physical AC axles, with the extra axle represented visually. Offline alignment, gearing and wheel-contact checks do not prove live driving behavior.
 
-## Repository structure / 目錄結構
+From the repository root, with Python, NumPy, Pillow, the required installed OMSI source files and matching AC donor assets available, build one family at a time:
+
+```powershell
+python tools/build_omsi_families.py atenu
+# Other supported family names: atee, dragon, scania
+```
+
+The converter writes a local `outputs/<FAMILY>_playable/` package and does not install it. Follow [the conversion guide](docs/omsi_bus_conversion.md) for prerequisites, repair/validation commands and installation. Close AC and back up the matching car before applying an update. Do not run a patch intended for a different build stage.
+
+E200 and E6M can select a destination from the locally installed OMSI HOF and bitmap files:
+
+```powershell
+python tools/set_kmb_bus_display.py e200
+python tools/set_kmb_bus_display.py e6m
+```
+
+The script expects local game paths configured in its source. It creates or updates the `KMB CUSTOM` skin; it does not port the OMSI route keypad. See the [destination-display instructions](projects/kmb_bus_tools/README.md#set-a-route-display) and [bus runtime checks](projects/kmb_bus_tools/TEST_DRIVE.md).
+
+## Repository layout / 目錄結構
 
 ```text
-.
-├── README.md
-├── .gitignore
-├── asset/
-│   ├── routes/full_hk.json
-│   ├── assetto_corsa/full_hk/
-│   │   ├── models.ini
-│   │   ├── data/surfaces.ini
-│   │   ├── ui/ui_track.json
-│   │   └── README.md
-│   └── vehicles/hk_double_decker_bus/
-├── auto/v1/                  # CSDI/Blender automation and web tools
-├── build/HK_FULL/
-│   ├── source/source_manifest.json
-│   └── full_hk/
-│       ├── routes.json
-│       ├── tile_manifest.json
-│       └── full_hk_blockout.blend
-├── car/driving test car/     # Driving-test vehicle references
-├── config/                   # Vehicle and map configuration
-├── content/cars/             # Assetto Corsa car content
-├── docs/                     # Production plans and ACROSS catalog
-└── tools/
-    ├── build_map.ps1
-    ├── desktop_export.ps1
-    ├── fetch_hk_data.py
-    ├── across_catalog.py
-    └── blender/
-        ├── generate_full_hk.py
-        └── export_full_hk_fbx.py
+projects/hk01_kam_tin/          Regional map source, configuration and reports
+projects/kmb_bus_tools/         E200/E6M build-stage helpers and tests
+projects/kmb_e200_playable/     E200 configuration companion
+projects/kmb_e6m_playable/      E6M configuration companion
+docs/omsi_bus_conversion.md    Newer bus-family conversion and repair guide
+asset/                        Earlier map/car templates and route references
+content/                      Earlier track/car configurations and previews
+apps/lua/hk_exam/              Experimental road-test guidance app
+config/                       Vehicle, route and traffic configuration
+tools/                        Map, bus, data-import and validation tools
+auto/v1/                      Earlier CSDI/Blender and vehicle experiments
+```
 
-Downloader-generated roads.osm.json and roads.geojson are ignored by Git，因為它們可以重新下載；they remain locally under build\HK_FULL\source\ as generator inputs。
-One-command build / 一鍵建圖
-在 repository root 開啟 PowerShell / Open PowerShell at the repository root：
-.\tools\build_map.ps1
+The current Kam Tin publishing workflow keeps downloaded geographic inputs, generated Blender scenes, models, textures, archives and backups local. Bus source models, converted KN5s, original artwork and sound banks also remain local. Existing tracked reference/configuration files are retained; their presence does not make a complete installable mod.
 
-The pipeline 會執行以下步驟 / performs the following steps：
- * Run tools\fetch_hk_data.py and download nearby OSM roads through Overpass API。
- * Convert the response to GeoJSON，並使用 local cache。
- * Run tools\blender\generate_full_hk.py in Blender background mode。
- * Generate/update the .blend blockout、routes.json and tile_manifest.json。
- * Check Blender and ksEditor availability，並顯示 KN5 export 的下一步。
-Known local installations / 已知本機安裝位置：
-C:\Program Files\Blender Foundation\Blender 5.1\blender.exe
-A:\SteamLibrary\steamapps\common\assettocorsa\sdk\editor\ksEditor.exe
+## Earlier map tools / 早期地圖工具
 
-build_map.ps1 會先 search PATH，找不到才使用 fallback paths；if your installation differs，請修改 $blenderPath and $ksEditorPath。
-Downloader safety / 下載器保護
-tools\fetch_hk_data.py 對公開 API 採取 conservative request policy：
- * At most one request at a time / 同一時間最多一個請求。
- * Minimum 15-second interval / 新請求前至少等待 15 秒。
- * Reuse local cache / 有效 roads.osm.json 時不重新下載。
- * Maximum three retries with exponential backoff / 失敗時最多重試三次並逐步延遲。
- * No parallel downloads、endpoint scanning or repeated bulk requests / 不使用並行下載、API 掃描或重複大量請求。
- * 不會爬取 Google Maps tiles 或下載 Street View assets / Google Maps tiles and Street View assets are never scraped or downloaded。
-如要強制重新下載，先確認 service terms and rate limits / confirm the service terms and rate limits first，再執行 / then run：
-Remove-Item .\build\HK_FULL\source\roads.osm.json
-Remove-Item .\build\HK_FULL\source\roads.geojson
-python .\tools\fetch_hk_data.py
+`tools/build_map.ps1` builds the **Tin Kwong Road** blockout through `tools/blender/generate_tin_kwong.py`. `tools/desktop_export.ps1` exports its local scene through `tools/blender/export_tin_kwong_fbx.py` and opens ksEditor for manual KN5 authoring. These are not a `full_hk` generator or the Kam Tin v0.5 pipeline. Inspect the configured Blender/game paths before using them.
 
-Data sources / 資料來源
-| Source / 來源 | Purpose / 用途 | Usage / 使用方式 |
-|---|---|---|
-| GeoInfo Map | Official Hong Kong map、roads、buildings and terrain reference | Official/manual reference |
-| eHongKongStreet | GeoPDF street maps and sheet calibration | Use original-size data for accurate calibration |
-| OpenStreetMap Overpass | Real road centerlines and road names | Automated download；遵守 ODbL attribution |
-| Google Maps | Current-condition comparison | Manual reference only；no scraping or asset extraction |
-Before publishing a mod，請重新確認 official-data non-commercial terms、OSM attribution requirements and Google Maps terms。OSM blockout data is not a substitute for official survey geometry。
-Blender generator / Blender 生成器
-可直接執行 / Run directly：
-& "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" `
-  --background `
-  --python .\tools\blender\generate_full_hk.py
+The separate multi-centre pipeline is `tools/prepare_hd_map.py` → `tools/blender/generate_hd_map.py` → `tools/build_tracks.py`. The last script normally installs into existing configured AC track folders; use `--no-install` for a build-only run. These earlier procedural outputs do not meet the current regional quality target.
 
-The generator 會清理 scene、讀取 build\HK_FULL\source\roads.geojson、將 WGS84 coordinates 轉成 local metre grid、建立真實 1:1 road strips and basic markings，然後輸出：
-build\HK_FULL\full_hk\full_hk_blockout.blend
-build\HK_FULL\full_hk\routes.json
-build\HK_FULL\full_hk\tile_manifest.json
+## Sources and distribution / 資料及發布
 
-如果 GeoJSON 不存在，generator 使用少量 built-in anchors 作 pipeline fallback / uses a small built-in anchor fallback；this fallback is for testing only，不代表完整或精確道路資料 / it is not a complete or accurate road dataset。
-FBX and KN5 export / 匯出流程
-執行 / Run：
-.\tools\desktop_export.ps1
+Follow the [Kam Tin attribution](projects/hk01_kam_tin/ATTRIBUTION.md), its retained source manifests and the [publishing guide](projects/hk01_kam_tin/PUBLISHING.md). Keep source URLs, timestamps and checksums with derived data. Scripts and configuration do not grant redistribution rights to third-party map data, bus models, artwork or sounds. The installed Route Twisk reference assets are not copied into Kam Tin.
 
-Helper 會檢查 .blend、Blender 和 official SDK ksEditor，要求使用者輸入 EXPORT，再輸出：
-build\HK_FULL\full_hk\full_hk.fbx
+## Historical development notes / 歷史開發紀錄
 
-之後會開啟 ksEditor / ksEditor will then open。User must load the FBX、檢查 materials/coordinates、再手動 export full_hk.kn5 / manually export the KN5；the helper does not use blind screen coordinates and will not overwrite existing output automatically。
-Assetto Corsa skeleton / AC 檔案骨架
-Track skeleton 位於 asset\assetto_corsa\full_hk\ / The track skeleton is located there：
- * models.ini loads full_hk.kn5。
- * data\surfaces.ini contains initial ROAD and GRASS surfaces。
- * ui\ui_track.json contains menu metadata。
- * README.md explains installation and export notes。
-2 GB sheet-splitting rule / 2 GB 分片規則
-Treat 2 GB as the hard per-model limit，and 1.5 GB as the safety target：
- * Under limit / 未超過：full_hk.kn5
- * Over limit / 超過：full_hk-1.kn5、full_hk-2.kn5
- * More parts / 更多分片：full_hk-3.kn5、full_hk-4.kn5
-Only oversized source sheets are split。分片應按同一 region 內的 actual real road content 建立，不使用任意固定 100 x 100 metre grid，並保持 tile_manifest.json and models.ini 一致。
-Other repository projects / 其他專案內容
-Repository 亦包含 broader Hong Kong Assetto Corsa work：
- * auto/v1/: CSDI/Blender automation、vehicle data、templates and web pages / CSDI/Blender 自動化、車輛資料、模板和網頁。
- * asset/vehicles/hk_double_decker_bus/: Hong Kong double-decker bus OBJ、MTL and manifest / 香港雙層巴士模型和 manifest。
- * car/driving test car/: driving-test vehicle reference data / 駕駛考試車輛參考資料。
- * config/vehicles.json: vehicle configuration index / 車輛設定索引。
- * docs/: map-production plans and ACROSS fleet data / 地圖製作計劃和 ACROSS 車隊資料。
- * tools/across_catalog.py: ACROSS fleet-catalog generator / ACROSS 車隊 catalog 生成器。
-重新生成 ACROSS catalog / Regenerate the catalog：
-python .\tools\across_catalog.py --output .\build\across --cache .\build\across-cache
-
-ACROSS counts may include historical、spare、training or retired vehicles，不能直接視為 operator current active fleet。
-Validation / 驗證
-python -m py_compile `
-  .\tools\fetch_hk_data.py `
-  .\tools\blender\generate_full_hk.py `
-  .\tools\blender\export_full_hk_fbx.py
-
-python -c "import json; json.load(open('asset/routes/full_hk.json', encoding='utf-8')); json.load(open('asset/assetto_corsa/full_hk/ui/ui_track.json', encoding='utf-8')); print('JSON valid')"
-
-git diff --check
-
-已驗證的項目包括 Python syntax、route/manifest JSON parsing、cached OSM download、Blender background generation、FBX export and ksEditor path detection / Validated items include all of these steps。
-Known limitations / 已知限制
-正式完成 1:1 全境真實地圖仍需要 / A finished real-world map still requires：
- * Full-size Hong Kong GIS calibration。
- * Correct Hong Kong 1980 Grid or survey-coordinate conversion。
- * Elevation、contours and terrain meshes。
- * Accurate road width、lane markings、curbs and junction geometry。
- * Traffic lights、signs、guardrails、bus stops and roadside props。
- * Buildings、distant scenery and collision meshes。
- * Assetto Corsa AI lines、pits、spawns and timing lines。
- * CSP/night lighting、reflection settings、final KN5 and in-game testing。
-Current .blend is a development starting point for a 1:1 full Hong Kong real-world simulation，not a complete map / 目前 .blend 只是 1:1 全境真實模擬的開發起點，並非完整地圖。
-Contribution workflow / 修改流程
- * Keep source URLs、download dates and license notes when changing data sources。
- * Avoid parallel or repeated requests to public APIs。
- * Model overlapping real roads once。
- * Do not merge unrelated Hong Kong areas into one oversized model without splitting。
- * Check every KN5 file size and apply the sheet naming rule。
- * Run Python、JSON and git diff --check validation after changes。
-License and disclaimer / 授權及免責
-本 repository 的 scripts and configuration 是地圖製作工具，不會自動授予第三方 map data、government data、OSM data 或 Google Maps assets 的再發布權。Before publishing a mod，請遵守每個來源各自的 license、attribution、non-commercial and service-term requirements。
-
----
+The sections below retain the earlier road-test, vehicle and traffic experiments. Counts, installed-output statements and static validation results describe those development stages; they are not current download guarantees or proof of in-game quality. The Kam Tin status and bus guides above describe the current workstreams.
 
 ---
 
@@ -256,7 +172,7 @@ content/cars/<car_id>/
 │   ├── car.ini            # 車重、軸距、輪距、尺寸、轉向鎖
 │   ├── engine.ini         # 馬力/扭力 + power curve
 │   ├── drivetrain.ini     # 齒輪比、尾牙、自動/手動
-│   ├── suspension.ini     # 懸掛類型、彈簧率、避震
+│   ├── suspensions.ini     # 懸掛類型、彈簧率、避震
 │   ├── tyres.ini          # 輪胎尺寸、胎壓、抓地力
 │   └── brakes.ini         # 煞車碟尺寸、前後分配、ABS
 ├── ui/ui_car.json         # 選車界面資料 + 規格
@@ -423,18 +339,16 @@ Copy-Item "apps\lua\hk_exam\*" "A:\SteamLibrary\steamapps\common\assettocorsa\ap
 
 | 數據 | 來源 | 用途 |
 |---|---|---|
-| 特別交通消息 | 運輸署 
-esource.data.one.gov.hk/td/tc/specialtrafficnews.xml | App 內顯示即時意外/封路/工程（分類 + 顏色） |
-| 巴士路線（KMB 1,605 + CTB 410） | data.etabus.gov.hk、
-t.data.gov.hk | 每個試場對應 16-106 條真實路線；App 內顯示本區路線編號 |
+| 特別交通消息 | 運輸署 `resource.data.one.gov.hk/td/tc/specialtrafficnews.xml` | App 內顯示即時意外/封路/工程（分類 + 顏色） |
+| 巴士路線（歷史 snapshot：KMB 1,605 + CTB 410） | `data.etabus.gov.hk`、`rt.data.gov.hk` | 當時每個試場對應 16–106 條路線；需重新整理資料 |
 
 更新指令：
 
-`powershell
+```powershell
 python tools\fetch_td_news.py --lang tc     # 交通消息 -> config + td_news.lua
 python tools\build_bus_routes.py            # 路線目錄 -> config/bus_routes_hk.json
 python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
-`
+```
 
 ### 賽道控制節點 / Track Control Nodes
 
@@ -449,7 +363,7 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 
 ### 輔助賽道資料 / Aux Track Data
 
-	ools/gen_track_aux_data.py 由 ast_lane.ai 邊界框生成：
+`tools/gen_track_aux_data.py` 由 `fast_lane.ai` 邊界框生成：
 
 - data/map.ini — 小地圖範圍（2 px/m）
 - data/lighting.ini — 日照角度 / 環境光
@@ -462,7 +376,7 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 
 | 檔案 | 內容 |
 |---|---|
-| 	yres.ini | AC v10 完整 Pacejka 輪胎模型：RADIUS/RIM_RADIUS/ANGULAR_INERTIA、DY0/DY1、DX0/DX1、WEAR_CURVE、RELAXATION_LENGTH、ROLLING_RESISTANCE_0/1/SLIP、FLEX、CAMBER_GAIN、DCAMBER_0/1、XMU、7 個 PRESSURE_* 、FZ0、LS_EXPY/EXPX、DX/DY_REF、FALLOFF_*、THERMAL[0..1] 熱學 |
+| `tyres.ini` | AC v10 完整 Pacejka 輪胎模型：RADIUS/RIM_RADIUS/ANGULAR_INERTIA、DY0/DY1、DX0/DX1、WEAR_CURVE、RELAXATION_LENGTH、ROLLING_RESISTANCE_0/1/SLIP、FLEX、CAMBER_GAIN、DCAMBER_0/1、XMU、7 個 PRESSURE_* 、FZ0、LS_EXPY/EXPX、DX/DY_REF、FALLOFF_*、THERMAL[0..1] 熱學 |
 | engine.ini | POWER/COAST 曲線、INERTIA、LIMITER、[DAMAGE] 區段 |
 | drivetrain.ini | 傳動型式（Yaris/Prius FWD、HiAce/E500 RWD）、波箱換檔時間、[TRANSMISSION] 自動離合器、[CLUTCH] 扭力上限 |
 | suspensions.ini | [BASIC] 軸距/重心分佈、[ARB] 防傾桿、每軸 BASEY/ROD_LENGTH/HUB_MASS、漸進彈簧、緩衝塊行程、快慢阻尼 |
@@ -472,7 +386,7 @@ python tools\gen_bus_routes_lua.py          # -> apps/lua/hk_exam/bus_routes.lua
 
 ### 表面物理 / Surface Physics
 
-	ools/gen_track_surfaces.py 直接讀取 KN5 材質表，為每個材質生成對應嘅
+`tools/gen_track_surfaces.py` 直接讀取 KN5 材質表，為每個材質生成對應嘅
 surfaces.ini 區段（AC 靠 KEY 同 mesh 材質名配對）：
 
 | 材質 | 摩擦 | 有效賽道 | 揚塵 |
@@ -490,32 +404,32 @@ surfaces.ini 區段（AC 靠 KEY 同 mesh 材質名配對）：
 
 ### 一鍵重建 / One-Command Rebuild
 
-	ools/build_tracks.py 串連整條流水線並在失敗時停低：
+`tools/build_tracks.py` 串連整條流水線並在失敗時停低：
 
-`powershell
+```powershell
 python tools\build_tracks.py                  # 全部 13 個試場
 python tools\build_tracks.py sha_tin yau_tong # 指定試場
 python tools\build_tracks.py --skip-osm       # 重用現有 OSM 提取
 python tools\build_tracks.py --no-install     # 只建置，不安裝
-`
+```
 
 步驟：OSM 提取 → Blender HD mesh → FBX→KN5（含控制節點）→ AI spline
 → traffic.json → map/lighting/audio ini → KN5 驗證 → 安裝到 AC。
 
 ### KN5 格式驗證 / KN5 Validation
 
-	ools/validate_kn5.py 係一個完整 KN5 v6 解析器，會逐個 byte 讀到檔案結尾，
+`tools/validate_kn5.py` 係一個完整 KN5 v6 解析器，會逐個 byte 讀到檔案結尾，
 檢查 header / textures / materials / node tree / mesh：
 
-`powershell
+```powershell
 python tools\validate_kn5.py --tracks    # 13 個賽道（要求 AC_START/AC_PIT/AC_TIME）
 python tools\validate_kn5.py --cars      # 6 部車（車身 + collider）
 python tools\validate_kn5.py path\to\x.kn5
-`
+```
 
 修正過嘅三個二進位格式錯誤（會令 AC 靜默丟棄 mesh）：
 
-1. Dummy node 多寫 1 byte flag（正確：	ype + name + children + matrix(64)）
+1. Dummy node 多寫 1 byte flag（正確：`type + name + children + matrix(64)`）
 2. Mesh node 應為 3 個 flag byte（cast_shadows, is_visible, is_transparent）
 3. Mesh trailer 應為 32 bytes（1 int + 4 floats + 2 floats）
 
@@ -557,7 +471,7 @@ CSP Traffic mode 而家可以用 22 款真實香港交通車（config/traffic_ca
 
 ### 建築物 / Buildings
 
-各試場已加入 OSM 建築物立體模型（	ools/fetch_buildings.py 下載、generate_hd_map.py 擠出）：
+各試場已加入 OSM 建築物立體模型（`tools/fetch_buildings.py` 下載、generate_hd_map.py 擠出）：
 
 | 試場 | 建築物 |
 |---|---:|
@@ -579,7 +493,7 @@ CSP Traffic mode 而家可以用 22 款真實香港交通車（config/traffic_ca
 
 建築物按 OSM 類型自動分材質與高度：
 
-- 高度優先序：height tag -> uilding:levels x 3.1m -> 類型預設（住宅 36m / 公寓 42m / 商業 45m / 辦公 60m / 工業 16m / 學校 16m / 屋 9m）
+- 高度優先序：height tag -> `building:levels x 3.1 m` -> 類型預設（住宅 36m / 公寓 42m / 商業 45m / 辦公 60m / 工業 16m / 學校 16m / 屋 9m）
 - 6 種材質：住宅、公寓、高塔、商業、工業、公共機構
 - 另加 **樹木**（trunk + 雙層樹冠）同 **綠化區**（草地/公園/球場/花園）
 
