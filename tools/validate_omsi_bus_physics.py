@@ -65,8 +65,9 @@ def audit(package):
     torque_at_shift = float(np.interp(up, curve[:, 0], curve[:, 1]))
     if not (1000 < up < limit and torque_at_shift > 0):
         errors.append("Automatic upshift occurs outside usable engine torque")
-    if int(drive["GEARS"]["COUNT"]) != 6 or float(drive["GEARS"]["GEAR_6"]) <= 0:
-        errors.append("Six-speed gearbox is incomplete")
+    count = report.get("gear_count", 6)
+    if int(drive["GEARS"]["COUNT"]) != count or any(float(drive["GEARS"].get(f"GEAR_{i}", "0")) <= 0 for i in range(1, count + 1)):
+        errors.append("Gearbox is incomplete")
     for rel, digest in report.get("installed_sha256", {}).items():
         dest = Path(report["installed"]) / rel
         if not dest.is_file() or hashlib.sha256(dest.read_bytes()).hexdigest() != digest:

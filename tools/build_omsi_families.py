@@ -296,6 +296,10 @@ def main():
         raise RuntimeError(f"Missing one or more physical wheel meshes: {[i for i in range(4) if not wheel_meshes[i]]}")
     shift_z = 0.0
     wheel_centers = {}
+    if args.family == "dragon":
+        # wh2/3 are the intermediate single wheels; wh4/5 are driven rear duals.
+        wheel_meshes[2], wheel_meshes[4] = wheel_meshes[4], wheel_meshes[2]
+        wheel_meshes[3], wheel_meshes[5] = wheel_meshes[5], wheel_meshes[3]
     for index, pieces in wheel_meshes.items():
         if not pieces:
             continue
@@ -411,7 +415,10 @@ def main():
     }
     package.mkdir(parents=True, exist_ok=True)
     (package / "build_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
-    if args.family in ("atenu", "atee", "scania"):
+    if args.family == "dragon":
+        report.update(axle_mapping="rear driven; intermediate visual", wheel_layout="three-axle; intermediate axle visual")
+        (package / "build_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    if args.family in ("atenu", "atee", "scania", "dragon"):
         from repair_omsi_bus_physics import repair
         repair(package)
     print(json.dumps({k: report[k] for k in ("family", "mesh_instances", "mesh_nodes", "triangles", "textures", "wheel_centers", "missing_textures")}, indent=2))

@@ -17,7 +17,7 @@ import struct
 import subprocess
 
 import numpy as np
-from kn5_tools import Kn5
+from kn5_tools import Kn5, Node
 
 AC = Path(r"A:/SteamLibrary/steamapps/common/assettocorsa")
 
@@ -109,9 +109,10 @@ def repair(package, ac=AC, install=False):
     package = Path(package).resolve()
     report = json.loads((package / "build_report.json").read_text(encoding="utf-8"))
     family = report["family"]
-    if family not in ("atenu", "atee", "scania"):
-        raise ValueError("This repair targets ATENU, ATEE and Scania")
-    bus_names = {"atenu": "ATENU.bus", "atee": "ATEE_Ex_LWB.bus", "scania": "ASB_Gorba.bus"}
+    bus_names = {"atenu": "ATENU.bus", "atee": "ATEE_Ex_LWB.bus", "scania": "ASB_Gorba.bus",
+                 "dragon": "Dennis_Dragon_ADS186-235_NPHxMB.bus"}
+    if family not in bus_names:
+        raise ValueError("Unsupported OMSI family")
     spec = source_spec(Path(report["source"]), bus_names[family])
     car = package / "content/cars" / report["car_id"]
     data = car / "data"
@@ -119,6 +120,18 @@ def repair(package, ac=AC, install=False):
     model = Kn5(model_path)
     nodes = {node.name: node for _, node in model.root.walk()}
     centers = {k: np.array(v, dtype=float) for k, v in report["wheel_centers"].items()}
+    # Earlier builds mistook the Dragon's intermediate axle for its driven axle.
+    # Swap the hierarchy without moving any mesh in the source coordinate frame.
+    remapped = family == "dragon" and report.get("axle_mapping") != "rear driven; intermediate visual"
+    if remapped:
+        for suffix, tag in (("LR", "TAG_L"), ("RR", "TAG_R")):
+            native, visual = nodes["HUB_" + suffix], nodes["OMSI_TAG_" + tag]
+            native.name = "OMSI_TAG_" + tag
+            native.children = nodes["WHEEL_" + suffix].children
+            visual.name = "HUB_" + suffix
+            visual.children = [Node.dummy("SUSP_" + suffix), Node.dummy("WHEEL_" + suffix, visual.children)]
+            centers[suffix], centers[tag] = centers[tag], centers[suffix]
+        nodes = {node.name: node for _, node in model.root.walk()}
     shift = np.array([(centers["LF"][0] + centers["RF"][0]) / 2, spec["cg_height"],
                       (centers["LF"][2] + centers["LR"][2]) / 2])
     delta = nodes["HUB_LF"].matrix[3, :3] - (centers["LF"] - shift)
@@ -208,9 +221,17 @@ def repair(package, ac=AC, install=False):
         coast_path.write_text(f"0|0\n{engine['COAST_REF']['RPM']}|-{engine['COAST_REF']['TORQUE']}\n", encoding="utf-8")
     (data / "power.lut").write_text("".join(f"{rpm:g}|{torque:g}\n" for rpm, torque in curve), encoding="utf-8")
     gears = spec["gear_constants"]
-    ratios = [gears[f"antrieb_getr_ratio{i}"] for i in range(1, 7)]
     drive = ini(data / "drivetrain.ini")
-    set_values(drive, "GEARS", {"COUNT": 6, "GEAR_R": -abs(gears["antrieb_getr_ratioR"]),
+    if family == "dragon":
+        # DIWA first gear is hydraulic, not a fixed 1.36 reduction. AC has no
+        # equivalent converter: retain the adapted mechanical first/reverse,
+        # but use the two locked source ratios and source final drive.
+        ratios = [float(drive["GEARS"]["GEAR_1"]), gears["antrieb_getr_ratio2"], gears["antrieb_getr_ratio3"]]
+        reverse = float(drive["GEARS"]["GEAR_R"])
+    else:
+        ratios = [gears[f"antrieb_getr_ratio{i}"] for i in range(1, 7)]
+        reverse = -abs(gears["antrieb_getr_ratioR"])
+    set_values(drive, "GEARS", {"COUNT": len(ratios), "GEAR_R": reverse,
                                "FINAL": gears["antrieb_i_achse"],
                                **{f"GEAR_{i}": v for i, v in enumerate(ratios, 1)}})
     set_values(drive, "GEARBOX", {"SUPPORTS_SHIFTER": 0})
@@ -261,7 +282,10 @@ def repair(package, ac=AC, install=False):
               "origin_shift_from_omsi": shift.tolist(), "radii": radii,
               "engine_file": spec["engine_file"], "gearbox_file": spec["gearbox_file"],
               "shift_up_rpm": up, "limiter_rpm": limiter, "runtime_test": "pending user retest",
+              "gear_count": len(ratios),
               "warnings": ["AC has two physical axles; third axle remains visual", "50/50 AC axle weight split is an adaptation"]}
+    if family == "dragon":
+        result["warnings"].append("DIWA hydraulic first/reverse approximated by existing AC mechanical ratios")
     for suffix in ("LF", "RF", "LR", "RR"):
         actual = nodes["HUB_" + suffix].matrix[3, :3]
         expected = centers[suffix] - shift
@@ -273,7 +297,10 @@ def repair(package, ac=AC, install=False):
             raise RuntimeError("Close Assetto Corsa before installation")
         target = ac / "content/cars" / car.name
         installed_backup = backup / "installed"
-        candidates = [model_path, car / "collider.kn5", *data.glob("*")]
+        candidates = [p for p in [model_path, car / "collider.kn5", *data.glob("*")]
+                      if p.is_file() and (not (target / p.relative_to(car)).exists()
+                      or not (backup / p.relative_to(car)).exists()
+                      or p.read_bytes() != (backup / p.relative_to(car)).read_bytes())]
         changed = [p for p in candidates if p.is_file() and (
             not (target / p.relative_to(car)).exists() or
             p.read_bytes() != (target / p.relative_to(car)).read_bytes())]
@@ -284,7 +311,7 @@ def repair(package, ac=AC, install=False):
             baselines = [old / rel for old in (backup, original_backup)]
             if dest.exists() and not any(old.exists() and dest.read_bytes() == old.read_bytes() for old in baselines):
                 raise ValueError(f"Installed file has independent changes: {dest}")
-        hashes = {}
+        hashes = dict(previous_report.get("installed_sha256", {})) if previous_report else {}
         for path in changed:
             if not path.is_file():
                 continue
@@ -303,6 +330,9 @@ def repair(package, ac=AC, install=False):
         result.update(installed=str(target), installed_sha256=hashes)
     report.update(omsi_engine_curve_used=curve, wheel_centers_frame="OMSI source",
                   ac_origin_shift=shift.tolist(), road_contact_report="road_contact_repair.json")
+    if family == "dragon":
+        report.update(wheel_centers={k: v.tolist() for k, v in centers.items()},
+                      axle_mapping="rear driven; intermediate visual", wheel_layout="three-axle; intermediate axle visual")
     (package / "build_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     (package / "road_contact_repair.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     return result
