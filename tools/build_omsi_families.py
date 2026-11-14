@@ -379,22 +379,6 @@ def main():
     skin = {"skinname": f"KMB {args.family.upper()} OMSI source", "drivername": "", "country": "Hong Kong", "number": ""}
     (skin_dir / "ui_skin.json").write_text(json.dumps(skin, indent=2), encoding="utf-8")
     (skin_dir / "skin.ini").write_text("[driver]\nSUIT=black\nGLOVES=black\nHELMET=black\n", encoding="utf-8")
-    if specdata["third_axle"]:
-        ext_dir = car / "extension"
-        ext_dir.mkdir(exist_ok=True)
-        left, right = "OMSI_TAG_TAG_L", "OMSI_TAG_TAG_R"
-        (ext_dir / "ext_config.ini").write_text(
-            "[SCRIPT_...]\nSCRIPT=\"\nlocal car = ac.getCar()\n"
-            "local root = car and ac.findNodes('carRoot:' .. car.index)\n"
-            f"local left = root and root:findNodes('{left}')\n"
-            f"local right = root and root:findNodes('{right}')\n"
-            "local angle = 0\nfunction update(dt)\n"
-            "  if not car then return end\n"
-            "  angle = (angle + car.speedKmh / 3.6 / 0.5 * dt) % (2 * math.pi)\n"
-            "  if left then left:setRotation(vec3(1, 0, 0), angle) end\n"
-            "  if right then right:setRotation(vec3(1, 0, 0), angle) end\n"
-            "end\n\"\n", encoding="utf-8"
-        )
     ui_dir = car / "ui"
     ui_dir.mkdir(exist_ok=True)
     (ui_dir / "ui_car.json").write_text(json.dumps({
@@ -421,6 +405,9 @@ def main():
     if args.family in ("atenu", "atee", "scania", "dragon"):
         from repair_omsi_bus_physics import repair
         repair(package)
+    if specdata["third_axle"]:
+        from install_kmb_axle_animation import configure_car
+        configure_car(car, package / "backups/before_axle_animation")
     print(json.dumps({k: report[k] for k in ("family", "mesh_instances", "mesh_nodes", "triangles", "textures", "wheel_centers", "missing_textures")}, indent=2))
 
 

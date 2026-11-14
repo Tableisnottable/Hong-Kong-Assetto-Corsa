@@ -57,6 +57,21 @@ planner samples the installed vehicle pool, so six types are eligible but a
 small random sample might not contain every type at once. Use the native
 six-bus opponent grid to test one of each together.
 
+For native AI wheel animations, with AC closed run:
+
+```powershell
+python tools/install_kmb_axle_animation.py
+```
+
+This gives E6M, ATENU, ATEE and Dragon a separate CSP axle script with
+`ACTIVE_FOR_UNFOCUSED=1`, the owning car's state, and measured wheel radii.
+It removes the older generated inline callback and moves E6M's axle update
+out of its cockpit display. This allows the script to update on native AI
+cars outside the cockpit; the original setup depended on cockpit updates
+or used the player state. Reverse uses signed local velocity. Configuration
+and cockpit files are backed up locally. Lua syntax passes; animation still
+requires an in-game test. Future family builds include this configuration.
+
 The repack test track is not modified: its road geometry does not align with
 the original AI loop. It needs its own recorded traffic lanes.
 
