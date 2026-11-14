@@ -1,5 +1,30 @@
 # Test the six installed KMB buses
 
+The handling pass now uses each OMSI bus's `inv_min_turnradius` and installed AC
+wheelbase/steering ratio to set steering lock. Automatic shift timing is based
+on each OMSI gearbox's gear-selection time. Current settings are:
+
+| Bus | Steering lock | Shift up/down |
+| --- | ---: | ---: |
+| E200 | 1010 deg | 500/600 ms |
+| E6M | 888 deg | 500/600 ms |
+| ATENU | 561 deg | 500/600 ms |
+| ATEE | 768 deg | 500/600 ms |
+| Scania K230UB | 749 deg | 500/600 ms |
+| Dennis Dragon | 590 deg | 500/600 ms |
+
+These settings improve steering range and make automatic shifts less abrupt;
+they are still an adaptation to AC physics. In Practice, test a full-lock
+low-speed turn, gentle launch, full-throttle acceleration, up/down shifts,
+straight-line braking and a stop on a slight incline. Check that the bus does
+not creep, lock its wheels, or get stuck in neutral. Report the bus and the
+specific behavior that still feels wrong so its engine, gearing, brakes or
+suspension can be tuned from observed driving rather than guessed values.
+
+Mirror node names for all six installed cars now resolve against their KN5
+models. Check each mirror in game with scenery behind the bus; the static check
+cannot verify CSP reflection rendering or mirror direction.
+
 In Content Manager select **Highlands Short (KMB bus spacing)**, then choose
 E200, E6M, E500MMC ATENU, Enviro500 ATEE, Scania K230UB or Dennis Dragon.
 Start with **Practice, no opponents** to test forward, reverse, braking and
