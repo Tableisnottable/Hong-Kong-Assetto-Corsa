@@ -1,0 +1,645 @@
+{
+  "checked_local_date": "2026-11-14",
+  "scope": "Research only; no game installation or quality approval",
+  "bounds_epsg2326": [
+    825184,
+    832215,
+    825535,
+    832871
+  ],
+  "selection": "Envelope around test checkpoints 1-2; final corridor selection pending",
+  "datasets": {
+    "buildings": {
+      "dataset_id": "landsd_rcd_1637211194312_35158",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637211194312_35158",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1637211194312_35158",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637211194312_35158/FeatureServer/0",
+      "layer_name": "Building",
+      "count_in_pilot_envelope": 418,
+      "fields": [
+        "OBJECTID",
+        "Shape__Length",
+        "Shape__Area",
+        "GeoRefNo",
+        "DateCreate",
+        "BuildingBlockType",
+        "BuildingCSUID",
+        "BuildingID",
+        "Status",
+        "BuildingNameEN",
+        "BuildingNameTC",
+        "BaseHeight",
+        "TopHeight",
+        "Storeys",
+        "StoreysInBasement",
+        "DateStamp"
+      ],
+      "abstract": [
+        "A polygon showing the permanent buildings or structures, including the building footprint. Attributes include the building types, building names, building height etc."
+      ],
+      "lineage": [
+        "The building footprint is normally mapped using field survey, digitization from old survey sheets, conversion from building plans and/or photogrammetric techniques, delineating the ground-level outline of structures that are visible above-ground.\n\nAll entities within the Building Footprint sub theme are based on DAM Building CSU. The existing data exchange process of the DAM Building CSU will be kept, and the data conversion process was conducted to convert Building Data from DAM into the schema of the Building Footprint sub theme. A single unified building structure layer is formed by combining all spatial entities in Building CSU which are based on 1:1000 digital map data from LandsD. Textual building geographical and structural information provided by data owners of Building CSU (i.e. ArchSD, BD, LandsD, PlanD, RVD and HD) are also adopted."
+      ],
+      "use_limitations": [
+        "Please note that the position accuracy of data varies from about 0.015m in the best to 1.500m to the worst."
+      ],
+      "height_coverage": {
+        "base_and_top_positive_difference": 127,
+        "missing_or_invalid_base_top": 291,
+        "note": "Top/Base are datum heights; use TopHeight-BaseHeight, not TopHeight as extrusion."
+      }
+    },
+    "lidar_dtm_2020": {
+      "dataset_id": "cedd_rcd_1629267205233_87895",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/cedd_rcd_1629267205233_87895",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=cedd_rcd_1629267205233_87895",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/cedd_rcd_1629267205233_87895/FeatureServer/0",
+      "layer_name": "DTM_2020",
+      "count_in_pilot_envelope": 4,
+      "fields": [
+        "OBJECTID_1",
+        "TILE_NAME",
+        "Filename",
+        "URL",
+        "Shape__Length",
+        "Shape__Area"
+      ],
+      "abstract": [
+        "Acquisition of LiDAR data was commissioned by the Geotechnical Engineering Office of the CEDD covering all territories of Hong Kong including Hong Kong Island, the Kowloon Peninsula, the New Territories and Lantau Island. To this end, two sets of LiDAR data for the area were acquired from a fixed wing aircraft between 1st December 2010 and 8th January 2011 and a Helicopter between 20th December 2019 and 2nd February 2020 respectively."
+      ],
+      "lineage": [],
+      "use_limitations": [
+        "The definition of the ground under trees may be less accurate."
+      ],
+      "tiles": [
+        {
+          "OBJECTID_1": 2487,
+          "TILE_NAME": "6NE12D",
+          "Filename": "6NE12D(e824n832,e825n833).zip",
+          "URL": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE12D(e824n832,e825n833).zip",
+          "Shape__Length": 2700.0000000018626,
+          "Shape__Area": 450000.0000005588
+        },
+        {
+          "OBJECTID_1": 2488,
+          "TILE_NAME": "6NE13C",
+          "Filename": "6NE13C(e825n832,e826n833).zip",
+          "URL": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE13C(e825n832,e826n833).zip",
+          "Shape__Length": 2700,
+          "Shape__Area": 450000
+        },
+        {
+          "OBJECTID_1": 3133,
+          "TILE_NAME": "6NE17B",
+          "Filename": "6NE17B(e824n831,e825n832).zip",
+          "URL": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE17B(e824n831,e825n832).zip",
+          "Shape__Length": 2699.9999999981374,
+          "Shape__Area": 449999.9999991618
+        },
+        {
+          "OBJECTID_1": 3134,
+          "TILE_NAME": "6NE18A",
+          "Filename": "6NE18A(e825n831,e826n832).zip",
+          "URL": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE18A(e825n831,e826n832).zip",
+          "Shape__Length": 2699.9999999962747,
+          "Shape__Area": 449999.999998603
+        }
+      ]
+    },
+    "ib1000": {
+      "dataset_id": "landsd_rcd_1637223748322_25497",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637223748322_25497",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1637223748322_25497",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637223748322_25497/FeatureServer/0",
+      "layer_name": "TileIndex",
+      "count_in_pilot_envelope": 4,
+      "fields": [
+        "OBJECTID",
+        "SHEETNO",
+        "Shape__Length",
+        "Shape__Area",
+        "REVISIONDATE",
+        "FGDB",
+        "GML",
+        "DGN",
+        "DWG",
+        "TIFF"
+      ],
+      "abstract": [
+        "The i-Series Digital Maps, including iB1000, iB5000, iB10000 and iB20000 Digital Topographic Map, iC1000 Digital Land Boundary Map and iG1000 Geo-reference Database, provide more comprehensive datasets in new data formats and enable users to select the seamless version covering users’ defined area-of-interest so that they do not need to combine discrete tiles of digital maps into one single file for their work. The Digital map detail is represented as single coordinated points, or lines of multiple coordinated points. Coordinates of the Digital Map are in Hong Kong 1980 Grid, and heights are in metres above the Hong Kong Principal Datum."
+      ],
+      "lineage": [],
+      "use_limitations": [],
+      "tiles": [
+        {
+          "OBJECTID": 5950,
+          "SHEETNO": "6-NE-17B",
+          "Shape__Length": 2700,
+          "Shape__Area": 450000,
+          "REVISIONDATE": 1791648000000,
+          "FGDB": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=FGDB",
+          "GML": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=GML",
+          "DGN": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=DGN",
+          "DWG": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=DWG",
+          "TIFF": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=TIFF"
+        },
+        {
+          "OBJECTID": 5951,
+          "SHEETNO": "6-NE-18A",
+          "Shape__Length": 2700,
+          "Shape__Area": 450000,
+          "REVISIONDATE": 1790438400000,
+          "FGDB": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=FGDB",
+          "GML": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=GML",
+          "DGN": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=DGN",
+          "DWG": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=DWG",
+          "TIFF": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=TIFF"
+        },
+        {
+          "OBJECTID": 7397,
+          "SHEETNO": "6-NE-12D",
+          "Shape__Length": 2700,
+          "Shape__Area": 450000,
+          "REVISIONDATE": 1790438400000,
+          "FGDB": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=FGDB",
+          "GML": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=GML",
+          "DGN": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=DGN",
+          "DWG": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=DWG",
+          "TIFF": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=TIFF"
+        },
+        {
+          "OBJECTID": 7398,
+          "SHEETNO": "6-NE-13C",
+          "Shape__Length": 2700,
+          "Shape__Area": 450000,
+          "REVISIONDATE": 1785340800000,
+          "FGDB": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=FGDB",
+          "GML": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=GML",
+          "DGN": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=DGN",
+          "DWG": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=DWG",
+          "TIFF": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=TIFF"
+        }
+      ]
+    },
+    "nontextured_models": {
+      "dataset_id": "landsd_rcd_1742809441342_98380",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1742809441342_98380",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1742809441342_98380",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1742809441342_98380/FeatureServer/0",
+      "layer_name": "Nontextured_models",
+      "count_in_pilot_envelope": 4,
+      "fields": [
+        "OBJECTID",
+        "SHEETNO",
+        "URL_3D_Visualisation_Map",
+        "Download_API",
+        "REVISIONDATE",
+        "Format_FBX",
+        "Format_glTF",
+        "Format_MAX",
+        "Shape__Length",
+        "Shape__Area"
+      ],
+      "abstract": [
+        "The 3D Visualisation Map (Non-textured models) is a set of digital data of 3D models featuring geometry models to represent the geometrical shape and position of different types of ground objects, including building, infrastructure and terrain. The dataset covers the whole territory of Hong Kong. You can click the link below to access the 3D Visualisation Map (https://3d.map.gov.hk)."
+      ],
+      "lineage": [
+        "NIL"
+      ],
+      "use_limitations": [
+        "Please refer to the Terms of Use and Disclaimer of the platform"
+      ],
+      "tiles": [
+        {
+          "OBJECTID": 865,
+          "SHEETNO": "6-NE-12D",
+          "URL_3D_Visualisation_Map": "https://3d.map.gov.hk/",
+          "Download_API": "https://3d.map.gov.hk/download-api",
+          "REVISIONDATE": 1784217600000,
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX0/6-NE-12D.zip",
+          "Format_glTF": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-12D.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX0/6-NE-12D.zip",
+          "Shape__Length": 0.025407364530849737,
+          "Shape__Area": 3.947433446057641e-05
+        },
+        {
+          "OBJECTID": 868,
+          "SHEETNO": "6-NE-13C",
+          "URL_3D_Visualisation_Map": "https://3d.map.gov.hk/",
+          "Download_API": "https://3d.map.gov.hk/download-api",
+          "REVISIONDATE": 1759075200000,
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX0/6-NE-13C.zip",
+          "Format_glTF": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-13C.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX0/6-NE-13C.zip",
+          "Shape__Length": 0.02540736768088395,
+          "Shape__Area": 3.9474344494108026e-05
+        },
+        {
+          "OBJECTID": 883,
+          "SHEETNO": "6-NE-17B",
+          "URL_3D_Visualisation_Map": "https://3d.map.gov.hk/",
+          "Download_API": "https://3d.map.gov.hk/download-api",
+          "REVISIONDATE": 1759075200000,
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX0/6-NE-17B.zip",
+          "Format_glTF": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-17B.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX0/6-NE-17B.zip",
+          "Shape__Length": 0.02540680552752826,
+          "Shape__Area": 3.947282657712836e-05
+        },
+        {
+          "OBJECTID": 886,
+          "SHEETNO": "6-NE-18A",
+          "URL_3D_Visualisation_Map": "https://3d.map.gov.hk/",
+          "Download_API": "https://3d.map.gov.hk/download-api",
+          "REVISIONDATE": 1759075200000,
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX0/6-NE-18A.zip",
+          "Format_glTF": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-18A.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX0/6-NE-18A.zip",
+          "Shape__Length": 0.02540681067897235,
+          "Shape__Area": 3.947284296669402e-05
+        }
+      ]
+    },
+    "tdop": {
+      "dataset_id": "landsd_rcd_1701762716904_4826",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1701762716904_4826",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1701762716904_4826",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1701762716904_4826/FeatureServer/0",
+      "layer_name": "TDOP2025_GRID_INDEX",
+      "count_in_pilot_envelope": 1,
+      "fields": [
+        "OBJECTID",
+        "SHEETNO",
+        "YEAR_OF_RELEASE",
+        "DATE_OF_PHOTOGRAPH",
+        "DOWNLOAD_LINK",
+        "Shape__Length",
+        "Shape__Area"
+      ],
+      "abstract": [
+        "True Digital Orthophoto (TDOP) Series is produced from Digital Aerial Photos (UE Version) which are taken at flying height of about 13,000 feet, and processed using Digital Surface Model. The TDOP has an image resolution of 0.25m in terms of ground sample distance per pixel covering the whole territory of Hong Kong Special Administrative Region.The TDOP Series is supplied on tile basis and each tile is equivalent to the coverage of the corresponding 1:5000 topographic map tile. It consists of 192 tiles provided in GeoTIFF format including a World file with geo-referencing data in Hong Kong 1980 Grid."
+      ],
+      "lineage": [
+        "True Digital Orthophoto (TDOP) Series is produced from Digital Aerial Photos (UE Version) which are taken at flying height of about 13,000 feet.TDOP rectifies all physical features, including buildings, through the utilization of the true orthophoto processing method.The production of TDOP is highly automatic, image distortions might appear at some areas of the True Digital Orthophoto such as area around tall structures, shadows, narrow gaps, features mixed with vegetation and water bodies."
+      ],
+      "use_limitations": [
+        "-",
+        "Please refer to the Terms of Use and Disclaimer of the platform"
+      ],
+      "tiles": [
+        {
+          "OBJECTID": 184,
+          "SHEETNO": "T6-NE-C",
+          "YEAR_OF_RELEASE": 2025,
+          "DATE_OF_PHOTOGRAPH": "3 Jan 2025",
+          "DOWNLOAD_LINK": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=TDOP&sheetName=T6-NE-C&productFormat=TIFF",
+          "Shape__Length": 13500,
+          "Shape__Area": 11250000
+        }
+      ]
+    },
+    "bit00": {
+      "dataset_id": "landsd_rcd_1637306559892_42396",
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637306559892_42396",
+      "portal_url": "https://portal.csdi.gov.hk/geoportal/?datasetId=landsd_rcd_1637306559892_42396",
+      "service": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637306559892_42396/FeatureServer/0",
+      "layer_name": "b1000_Tile",
+      "count_in_pilot_envelope": 4,
+      "fields": [
+        "OBJECTID",
+        "SHEETNO",
+        "Min_x",
+        "Min_y",
+        "Max_x",
+        "Max_y",
+        "Format_3DS",
+        "Format_FBX",
+        "Format_MAX",
+        "Format_VRML",
+        "REVISIONDATE",
+        "REMARKS",
+        "Shape__Length",
+        "Shape__Area"
+      ],
+      "abstract": [
+        "The 3D Spatial Dataset consists of three major types of ground objects i.e. Building, Infrastructure, and Terrain. The building models are classified into Level 1, 2 and 3 to represent different level of details to the physical building. All buildings and/or podium with footprint area greater than 4 sq. meters in B1000 digital topographic map are constructed to 3D building model and classified as Level 1 building model which mean that are extruded from the footprint of a building tower and/or podium with the relevant building base and top level but do not apply photorealistic texture. Those prominent buildings with land mark importance are constructed to Level 2 and Level 3 building models with photorealistic texture applied to surface of model. The difference of Level 3 from Level 2 is the model with reference to the architecture drawings from other departments. The infrastructure model includes major roads and bridges that are 3 dimensional representation of road on 3D surfaces and bridge in wireframe model including surfaces, parapets, girders, supporting columns and towers respectively. Terrain model is represented by Triangular Network Model (TIN) derived from available breaklines and height points from various sources with attachment of an orthophoto images. The Terrain model is a Digital Elevation Model (DEM) to represent the elevation of bare ground."
+      ],
+      "lineage": [
+        "NIL"
+      ],
+      "use_limitations": [],
+      "tiles": [
+        {
+          "OBJECTID": 2388,
+          "SHEETNO": "6-NE-17B",
+          "Min_x": 824750,
+          "Min_y": 831800,
+          "Max_x": 825500,
+          "Max_y": 832400,
+          "Format_3DS": "https://download.map.gov.hk/api/3d-zip/3DS3DBIT00/3D-BIT00_6NE17B_3DS.zip",
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE17B_FBX.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX3DBIT00/3D-BIT00_6NE17B_MAX.zip",
+          "Format_VRML": "https://download.map.gov.hk/api/3d-zip/VRML3DBIT00/3D-BIT00_6NE17B_VRML.zip",
+          "REVISIONDATE": 1785513600000,
+          "REMARKS": null,
+          "Shape__Length": 2700,
+          "Shape__Area": 450000
+        },
+        {
+          "OBJECTID": 2389,
+          "SHEETNO": "6-NE-18A",
+          "Min_x": 825500,
+          "Min_y": 831800,
+          "Max_x": 826250,
+          "Max_y": 832400,
+          "Format_3DS": "https://download.map.gov.hk/api/3d-zip/3DS3DBIT00/3D-BIT00_6NE18A_3DS.zip",
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE18A_FBX.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX3DBIT00/3D-BIT00_6NE18A_MAX.zip",
+          "Format_VRML": "https://download.map.gov.hk/api/3d-zip/VRML3DBIT00/3D-BIT00_6NE18A_VRML.zip",
+          "REVISIONDATE": 1785513600000,
+          "REMARKS": null,
+          "Shape__Length": 2700,
+          "Shape__Area": 450000
+        },
+        {
+          "OBJECTID": 3151,
+          "SHEETNO": "6-NE-12D",
+          "Min_x": 824750,
+          "Min_y": 832400,
+          "Max_x": 825500,
+          "Max_y": 833000,
+          "Format_3DS": "https://download.map.gov.hk/api/3d-zip/3DS3DBIT00/3D-BIT00_6NE12D_3DS.zip",
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE12D_FBX.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX3DBIT00/3D-BIT00_6NE12D_MAX.zip",
+          "Format_VRML": "https://download.map.gov.hk/api/3d-zip/VRML3DBIT00/3D-BIT00_6NE12D_VRML.zip",
+          "REVISIONDATE": 1785513600000,
+          "REMARKS": null,
+          "Shape__Length": 2700,
+          "Shape__Area": 450000
+        },
+        {
+          "OBJECTID": 3152,
+          "SHEETNO": "6-NE-13C",
+          "Min_x": 825500,
+          "Min_y": 832400,
+          "Max_x": 826250,
+          "Max_y": 833000,
+          "Format_3DS": "https://download.map.gov.hk/api/3d-zip/3DS3DBIT00/3D-BIT00_6NE13C_3DS.zip",
+          "Format_FBX": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE13C_FBX.zip",
+          "Format_MAX": "https://download.map.gov.hk/api/3d-zip/MAX3DBIT00/3D-BIT00_6NE13C_MAX.zip",
+          "Format_VRML": "https://download.map.gov.hk/api/3d-zip/VRML3DBIT00/3D-BIT00_6NE13C_VRML.zip",
+          "REVISIONDATE": 1785513600000,
+          "REMARKS": null,
+          "Shape__Length": 2700,
+          "Shape__Area": 450000
+        }
+      ]
+    }
+  },
+  "sample_archives": [
+    {
+      "source_url": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE12D(e824n832,e825n833).zip",
+      "local_file": "lidar_dtm_2020_6-NE-12D.zip",
+      "bytes": 5823527,
+      "sha256": "ef022ce8b9472cc69c62f17cd1db839f63df2adbb8ae217c701e3b74214b1010",
+      "zip_crc_passed": true,
+      "members": [
+        "6NE12D(e824n832,e825n833).tif"
+      ],
+      "geotiff_grids": {
+        "6NE12D(e824n832,e825n833).tif": {
+          "width_pixels": 1500,
+          "height_pixels": 1200,
+          "model_pixel_scale": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "model_tiepoints": [
+            0.0,
+            0.0,
+            0.0,
+            824750.0,
+            833000.0,
+            0.0
+          ],
+          "note": "Pixel spacing is not a vertical-accuracy claim; datum/CRS require source metadata."
+        }
+      },
+      "ascii_headers": {},
+      "gml_feature_types": {}
+    },
+    {
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=GML",
+      "local_file": "ib1000_6-NE-12D.zip",
+      "bytes": 4846385,
+      "sha256": "6cc79b8199b08418b1af9bedbc0c725fa1e5e133686ee9368a0510e36c9820f6",
+      "zip_crc_passed": true,
+      "members": [
+        "6-NE-12D/Layers/",
+        "6-NE-12D/Layers/Buildings/",
+        "6-NE-12D/Layers/Buildings/BSPolygonAnno.gml",
+        "6-NE-12D/Layers/Buildings/BSPolygonAnno.xsd",
+        "6-NE-12D/Layers/Buildings/Building.gml",
+        "6-NE-12D/Layers/Buildings/Building.xsd",
+        "6-NE-12D/Layers/Buildings/BuildingAnno.gml",
+        "6-NE-12D/Layers/Buildings/BuildingAnno.xsd",
+        "6-NE-12D/Layers/Buildings/BuildingAnnoHouseNo.gml",
+        "6-NE-12D/Layers/Buildings/BuildingAnnoHouseNo.xsd",
+        "6-NE-12D/Layers/Buildings/BuiltStructurePoint.gml",
+        "6-NE-12D/Layers/Buildings/BuiltStructurePoint.xsd",
+        "6-NE-12D/Layers/Buildings/BuiltStructurePolygon.gml",
+        "6-NE-12D/Layers/Buildings/BuiltStructurePolygon.xsd",
+        "6-NE-12D/Layers/Buildings/CartoBuildingLine.gml",
+        "6-NE-12D/Layers/Buildings/CartoBuildingLine.xsd",
+        "6-NE-12D/Layers/Buildings/Site.gml",
+        "6-NE-12D/Layers/Buildings/Site.xsd",
+        "6-NE-12D/Layers/Buildings/SiteAnno.gml",
+        "6-NE-12D/Layers/Buildings/SiteAnno.xsd",
+        "6-NE-12D/Layers/Hydrography/",
+        "6-NE-12D/Layers/Hydrography/CartoHydroLine.gml",
+        "6-NE-12D/Layers/Hydrography/CartoHydroLine.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroLine.gml",
+        "6-NE-12D/Layers/Hydrography/HydroLine.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroLineAnno.gml",
+        "6-NE-12D/Layers/Hydrography/HydroLineAnno.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroPoint.gml",
+        "6-NE-12D/Layers/Hydrography/HydroPoint.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroPointAnno.gml",
+        "6-NE-12D/Layers/Hydrography/HydroPointAnno.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroPolygon.gml",
+        "6-NE-12D/Layers/Hydrography/HydroPolygon.xsd",
+        "6-NE-12D/Layers/Hydrography/HydroPolygonAnno.gml",
+        "6-NE-12D/Layers/Hydrography/HydroPolygonAnno.xsd",
+        "6-NE-12D/Layers/LandCover/",
+        "6-NE-12D/Layers/LandCover/CartoLandCoverLine.gml",
+        "6-NE-12D/Layers/LandCover/CartoLandCoverLine.xsd",
+        "6-NE-12D/Layers/LandCover/LandCoverVector2.gml",
+        "6-NE-12D/Layers/LandCover/LandCoverVector2.xsd",
+        "6-NE-12D/Layers/Relief/",
+        "6-NE-12D/Layers/Relief/Berm.gml",
+        "6-NE-12D/Layers/Relief/Berm.xsd",
+        "6-NE-12D/Layers/Relief/BMSslope.gml",
+        "6-NE-12D/Layers/Relief/BMSslope.xsd",
+        "6-NE-12D/Layers/Relief/BMSslopeSymbol.gml",
+        "6-NE-12D/Layers/Relief/BMSslopeSymbol.xsd",
+        "6-NE-12D/Layers/Relief/CartoReliefLine.gml",
+        "6-NE-12D/Layers/Relief/CartoReliefLine.xsd",
+        "6-NE-12D/Layers/Relief/Contour.gml",
+        "6-NE-12D/Layers/Relief/Contour.xsd",
+        "6-NE-12D/Layers/Relief/SpotHeight.gml",
+        "6-NE-12D/Layers/Relief/SpotHeight.xsd",
+        "6-NE-12D/Layers/Relief/VerticalCutPolygon.gml",
+        "6-NE-12D/Layers/Relief/VerticalCutPolygon.xsd",
+        "6-NE-12D/Layers/Transportation/",
+        "6-NE-12D/Layers/Transportation/CartoPedLine.gml",
+        "6-NE-12D/Layers/Transportation/CartoPedLine.xsd",
+        "6-NE-12D/Layers/Transportation/CartoTransLine.gml",
+        "6-NE-12D/Layers/Transportation/CartoTransLine.xsd",
+        "6-NE-12D/Layers/Transportation/PedestrianAnno.gml",
+        "6-NE-12D/Layers/Transportation/PedestrianAnno.xsd",
+        "6-NE-12D/Layers/Transportation/RailwayPolygon.gml",
+        "6-NE-12D/Layers/Transportation/RailwayPolygon.xsd",
+        "6-NE-12D/Layers/Transportation/RoadAnno.gml",
+        "6-NE-12D/Layers/Transportation/RoadAnno.xsd",
+        "6-NE-12D/Layers/Transportation/StreetCentreLines.gml",
+        "6-NE-12D/Layers/Transportation/StreetCentreLines.xsd",
+        "6-NE-12D/Layers/Utilities/",
+        "6-NE-12D/Layers/Utilities/CartoUtilityLine.gml",
+        "6-NE-12D/Layers/Utilities/CartoUtilityLine.xsd",
+        "6-NE-12D/Layers/Utilities/UtilityLine.gml",
+        "6-NE-12D/Layers/Utilities/UtilityLine.xsd",
+        "6-NE-12D/Layers/Utilities/UtilityPoint.gml",
+        "6-NE-12D/Layers/Utilities/UtilityPoint.xsd",
+        "6-NE-12D/Layers/Utilities/UtilityPointAnno.gml",
+        "6-NE-12D/Layers/Utilities/UtilityPointAnno.xsd",
+        "6-NE-12D/Tables/",
+        "6-NE-12D/Tables/ADDRESS.xml",
+        "6-NE-12D/Tables/ADDRESS.xsd",
+        "6-NE-12D/Tables/ADDRESSRELATEBUILDINGSITE.xml",
+        "6-NE-12D/Tables/ADDRESSRELATEBUILDINGSITE.xsd",
+        "6-NE-12D/Tables/BUILDINGNAME.xml",
+        "6-NE-12D/Tables/BUILDINGNAME.xsd",
+        "6-NE-12D/Tables/BUILDINGRELATEBUILDINGNAME.xml",
+        "6-NE-12D/Tables/BUILDINGRELATEBUILDINGNAME.xsd",
+        "6-NE-12D/Tables/SITENAME.xml",
+        "6-NE-12D/Tables/SITENAME.xsd",
+        "6-NE-12D/Tables/SITERELATESITENAME.xml",
+        "6-NE-12D/Tables/SITERELATESITENAME.xsd",
+        "6-NE-12D/Tables/Street_Code.xml",
+        "6-NE-12D/Tables/Street_Code.xsd",
+        "6-NE-12D/Tables/UtilityNumber.xml",
+        "6-NE-12D/Tables/UtilityNumber.xsd"
+      ],
+      "geotiff_grids": {},
+      "ascii_headers": {},
+      "gml_feature_types": {
+        "6-NE-12D/Layers/Buildings/BSPolygonAnno.gml": {
+          "BSPolygonAnno": 17
+        },
+        "6-NE-12D/Layers/Buildings/Building.gml": {
+          "Building": 558
+        },
+        "6-NE-12D/Layers/Buildings/BuildingAnno.gml": {
+          "BuildingAnno": 239
+        },
+        "6-NE-12D/Layers/Buildings/BuildingAnnoHouseNo.gml": {
+          "BuildingAnnoHouseNo": 58
+        },
+        "6-NE-12D/Layers/Buildings/BuiltStructurePoint.gml": {
+          "BuiltStructurePoint": 1
+        },
+        "6-NE-12D/Layers/Buildings/BuiltStructurePolygon.gml": {
+          "BuiltStructurePolygon": 26
+        },
+        "6-NE-12D/Layers/Buildings/CartoBuildingLine.gml": {
+          "CartoBuildingLine": 2072
+        },
+        "6-NE-12D/Layers/Buildings/Site.gml": {
+          "Site": 16
+        },
+        "6-NE-12D/Layers/Buildings/SiteAnno.gml": {
+          "SiteAnno": 25
+        },
+        "6-NE-12D/Layers/Hydrography/CartoHydroLine.gml": {
+          "CartoHydroLine": 140
+        },
+        "6-NE-12D/Layers/Hydrography/HydroLine.gml": {
+          "HydroLine": 54
+        },
+        "6-NE-12D/Layers/Hydrography/HydroLineAnno.gml": {
+          "HydroLineAnno": 25
+        },
+        "6-NE-12D/Layers/Hydrography/HydroPoint.gml": {
+          "HydroPoint": 3
+        },
+        "6-NE-12D/Layers/Hydrography/HydroPointAnno.gml": {
+          "HydroPointAnno": 3
+        },
+        "6-NE-12D/Layers/Hydrography/HydroPolygon.gml": {
+          "HydroPolygon": 46
+        },
+        "6-NE-12D/Layers/Hydrography/HydroPolygonAnno.gml": {
+          "HydroPolygonAnno": 43
+        },
+        "6-NE-12D/Layers/LandCover/CartoLandCoverLine.gml": {
+          "CartoLandCoverLine": 55
+        },
+        "6-NE-12D/Layers/LandCover/LandCoverVector2.gml": {
+          "LandCoverVector2": 32
+        },
+        "6-NE-12D/Layers/Relief/Berm.gml": {
+          "Berm": 1
+        },
+        "6-NE-12D/Layers/Relief/BMSslope.gml": {
+          "BMSslope": 37
+        },
+        "6-NE-12D/Layers/Relief/BMSslopeSymbol.gml": {
+          "BMSslopeSymbol": 592
+        },
+        "6-NE-12D/Layers/Relief/CartoReliefLine.gml": {
+          "CartoReliefLine": 61
+        },
+        "6-NE-12D/Layers/Relief/Contour.gml": {
+          "Contour": 9
+        },
+        "6-NE-12D/Layers/Relief/SpotHeight.gml": {
+          "SpotHeight": 163
+        },
+        "6-NE-12D/Layers/Relief/VerticalCutPolygon.gml": {
+          "VerticalCutPolygon": 24
+        },
+        "6-NE-12D/Layers/Transportation/CartoPedLine.gml": {
+          "CartoPedLine": 306
+        },
+        "6-NE-12D/Layers/Transportation/CartoTransLine.gml": {
+          "CartoTransLine": 219
+        },
+        "6-NE-12D/Layers/Transportation/PedestrianAnno.gml": {
+          "PedestrianAnno": 30
+        },
+        "6-NE-12D/Layers/Transportation/RailwayPolygon.gml": {
+          "RailwayPolygon": 12
+        },
+        "6-NE-12D/Layers/Transportation/RoadAnno.gml": {
+          "RoadAnno": 39
+        },
+        "6-NE-12D/Layers/Transportation/StreetCentreLines.gml": {
+          "StreetCentreLines": 68
+        },
+        "6-NE-12D/Layers/Utilities/CartoUtilityLine.gml": {
+          "CartoUtilityLine": 6
+        },
+        "6-NE-12D/Layers/Utilities/UtilityLine.gml": {
+          "UtilityLine": 7
+        },
+        "6-NE-12D/Layers/Utilities/UtilityPoint.gml": {
+          "UtilityPoint": 252
+        },
+        "6-NE-12D/Layers/Utilities/UtilityPointAnno.gml": {
+          "UtilityPointAnno": 265
+        }
+      }
+    }
+  ]
+}

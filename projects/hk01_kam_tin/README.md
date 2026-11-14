@@ -2,6 +2,8 @@
 
 **Quality target: the user's installed Route Twisk RWE / Repack Test. Current v0.5 is a comparison build and has not reached that standard.** The target and outstanding production requirements are recorded in `REFERENCE_QUALITY.md`. Geographic scale and static export checks alone do not establish finished game quality.
 
+The [high-quality build plan](HIGH_QUALITY_BUILD_PLAN.md) records the November 14 source research: a verified 0.5 m CEDD LiDAR sample, detailed iB1000 GML, official building footprints/heights, and a 431 m pilot using authored roads and nearby buildings. Its evidence and reusable collector are in `reports/high_quality_source_research.json` and `scripts/research_quality_sources.py`. This research does not change or approve the installed track.
+
 Version 0.5 is installed as **Hong Kong — Kam Tin Driving Test**, a provisional 3.445 km loop. Use **Practice, one car, clear daytime, start from pits**; restart the session, keep previous graphics/time/weather and follow the eight blue markers. See `TESTING.md` and `STATUS.md`.
 
 This pass adds photographed asphalt and generic fallback ground, worn alpha-cut paint, a new cutout foliage atlas with eight tree shapes, photographed bark, smoothed visual terrain and authored steel safety rails/posts/bolts/reflectors. It preserves original collision payloads and spawns. Rails follow test safety bounds; coarse wall collision remains behind them. Accurate road/junction/kerb/drainage/roadside production, varied local vegetation and source-ground/facade cleanup are unfinished. Reference map assets are not copied and the reference installation is unchanged.
