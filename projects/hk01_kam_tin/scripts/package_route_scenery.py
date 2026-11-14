@@ -1,6 +1,6 @@
 """Package the complete test loop after hash-bound model and surface checks."""
 from pathlib import Path
-import sys,json,argparse,hashlib,shutil,zipfile,configparser
+import sys,json,argparse,hashlib,shutil,zipfile,configparser,time
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT.parents[1]/'work/python_deps'))
 from PIL import Image,ImageDraw,ImageFont
@@ -91,7 +91,7 @@ See ATTRIBUTION.md and sources/LandsD_terms_snapshot.txt.
         z.write(PACKAGE/'manifest.json','content/tracks/'+TRACK+'/manifest.json')
     with zipfile.ZipFile(archive) as z:
         if bad:=z.testzip():raise RuntimeError('ZIP CRC check failed: '+bad)
-    report={'passed':True,'track_id':TRACK,'version':'0.3-full-loop','model_files':len(referenced),'scenery_tiles':prepared['sheets'],'route_coverage_percent':coverage['route_coverage_percent'],'route_length_m':3444.937762144697,'file_count':len(manifest)+1,'archive':str(archive),'archive_bytes':archive.stat().st_size,'archive_sha256':digest(archive),'game_loading_driving_fps':'not performed; user will test','installed_to':None,'installed_file_hashes_verified':False}
+    report={'passed':True,'track_id':TRACK,'version':'0.3-full-loop','model_files':len(referenced),'scenery_tiles':prepared['sheets'],'route_coverage_percent':coverage['route_coverage_percent'],'route_length_m':3444.937762144697,'file_count':len(manifest)+1,'archive':str(archive),'archive_bytes':archive.stat().st_size,'archive_sha256':digest(archive),'game_loading_driving_fps':'not performed; user will test','installed_to':None,'installed_file_hashes_verified':False,'obsolete_files_backed_up':[]}
     if a.install_root:
         ac=a.install_root.resolve();dest=ac/'content/tracks'/TRACK
         if not (ac/'acs.exe').is_file():raise RuntimeError('Not the verified Assetto Corsa installation')
@@ -99,9 +99,16 @@ See ATTRIBUTION.md and sources/LandsD_terms_snapshot.txt.
             if not (dest/'manifest.json').is_file():raise RuntimeError('Existing track is not owned by this package')
             old=json.loads((dest/'manifest.json').read_text());actual={str(p.relative_to(dest)).replace('\\','/') for p in dest.rglob('*') if p.is_file()}
             if actual!=set(old)|{'manifest.json'}:raise RuntimeError('Installed folder has changed; preserve user additions')
-            if set(old)-set(manifest):raise RuntimeError('Update would leave obsolete files')
             for rel,info in old.items():
                 if digest(dest/rel)!=info['sha256']:raise RuntimeError('Installed file edited; preserve user work: '+rel)
+            obsolete=sorted(set(old)-set(manifest))
+            if obsolete:
+                backup=FULL/'install_backups'/time.strftime('%Y%m%d_%H%M%S')
+                for rel in obsolete:
+                    saved=backup/rel;saved.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(dest/rel,saved)
+                    if digest(saved)!=old[rel]['sha256']:raise RuntimeError('Obsolete-file backup verification failed: '+rel)
+                for rel in obsolete:(dest/rel).unlink()
+                report['obsolete_files_backed_up']=[str(backup/rel) for rel in obsolete]
         shutil.copytree(PACKAGE,dest,dirs_exist_ok=True)
         for rel,info in manifest.items():
             if digest(dest/rel)!=info['sha256']:raise RuntimeError('Installed read-back failed: '+rel)
