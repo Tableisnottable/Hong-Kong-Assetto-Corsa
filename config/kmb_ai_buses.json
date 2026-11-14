@@ -1,0 +1,10 @@
+{
+  "buses": [
+    {"id": "kmb_e200_drivable", "name": "KMB E200", "skin": "0_kmb", "cg_height": 1.2},
+    {"id": "kmb_e6m_drivable", "name": "KMB E6M", "skin": "0_kmb", "cg_height": 1.2},
+    {"id": "kmb_atenu_drivable", "name": "KMB E500MMC ATENU", "skin": "0_kmb", "cg_height": 1.2},
+    {"id": "kmb_atee_drivable", "name": "KMB Enviro500 ATEE", "skin": "0_kmb", "cg_height": 1.2},
+    {"id": "kmb_dennis_dragon_9m_drivable", "name": "KMB Dennis Dragon 9.9M", "skin": "0_kmb", "cg_height": 1.2},
+    {"id": "kmb_scania_k230ub_drivable", "name": "KMB Scania K230UB", "skin": "0_kmb", "cg_height": 1.2}
+  ]
+}
