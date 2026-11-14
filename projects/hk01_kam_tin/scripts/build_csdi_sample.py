@@ -68,6 +68,8 @@ spawns_before={o.name:list(o.get('ac_matrix',[])) for o in scene.objects if o.ty
 
 # Remove whole connected placeholder buildings whose centres are in this tile.
 # Connected components prevent chopping a mass in half at the tile boundary.
+source_building_bounds=[(np.asarray(item['bounds_local'][0]),np.asarray(item['bounds_local'][1]))
+                        for item in prepared['meshes'] if item['category']=='BUILDING']
 removed_buildings=0
 for ob in list(scene.objects):
     if not ob.name.startswith('BUILDING_MASS_'):continue
@@ -84,6 +86,17 @@ for ob in list(scene.objects):
     for ids in groups.values():
         coords=np.array([data.vertices[i].co[:] for i in ids]);mid=(coords.min(axis=0)+coords.max(axis=0))/2
         replace=inside_sources(mid[0],mid[1])
+        if replace:
+            fallback_min=coords.min(axis=0);fallback_max=coords.max(axis=0)
+            fallback_area=max(0.,fallback_max[0]-fallback_min[0])*max(0.,fallback_max[1]-fallback_min[1])
+            replace=False
+            if fallback_area>1.:
+                for source_min,source_max in source_building_bounds:
+                    overlap_x=max(0.,min(fallback_max[0],source_max[0])-max(fallback_min[0],source_min[0]))
+                    overlap_y=max(0.,min(fallback_max[1],source_max[1])-max(fallback_min[1],source_min[1]))
+                    source_area=max(0.,source_max[0]-source_min[0])*max(0.,source_max[1]-source_min[1])
+                    if overlap_x*overlap_y/max(1.,min(fallback_area,source_area))>=.35:
+                        replace=True;break
         if FULL_ROUTE:replace=replace and float(np.linalg.norm(route_points[:,:2]-mid[:2],axis=1).min())<200
         if replace:remove.update(ids);removed_buildings+=1
     if not remove:continue
