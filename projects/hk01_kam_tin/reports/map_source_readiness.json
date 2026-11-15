@@ -1,0 +1,407 @@
+{
+  "acquisition_status": "PASS",
+  "prepared_archives": [
+    {
+      "role": "bit00",
+      "folder": "source/map_build_20261115/extracted/bit00_6-NE-12D"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_20261115/extracted/bit00_6-NE-13C"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_20261115/extracted/bit00_6-NE-17B"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_20261115/extracted/bit00_6-NE-18A"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_20261115/extracted/ib1000_GML_resources"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_20261115/extracted/td_road_network_spec"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_20261115/extracted/td_road_network_v2.gdb"
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_20261115/extracted/ib1000_6-NE-12D",
+      "feature_counts": {
+        "BSPolygonAnno": 17,
+        "Building": 558,
+        "BuildingAnno": 239,
+        "BuildingAnnoHouseNo": 58,
+        "BuiltStructurePoint": 1,
+        "BuiltStructurePolygon": 26,
+        "CartoBuildingLine": 2072,
+        "Site": 16,
+        "SiteAnno": 25,
+        "CartoHydroLine": 140,
+        "HydroLine": 54,
+        "HydroLineAnno": 25,
+        "HydroPoint": 3,
+        "HydroPointAnno": 3,
+        "HydroPolygon": 46,
+        "HydroPolygonAnno": 43,
+        "CartoLandCoverLine": 55,
+        "LandCoverVector2": 32,
+        "Berm": 1,
+        "BMSslope": 37,
+        "BMSslopeSymbol": 592,
+        "CartoReliefLine": 61,
+        "Contour": 9,
+        "SpotHeight": 163,
+        "VerticalCutPolygon": 24,
+        "CartoPedLine": 306,
+        "CartoTransLine": 219,
+        "PedestrianAnno": 30,
+        "RailwayPolygon": 12,
+        "RoadAnno": 39,
+        "StreetCentreLines": 68,
+        "CartoUtilityLine": 6,
+        "UtilityLine": 7,
+        "UtilityPoint": 252,
+        "UtilityPointAnno": 265
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_20261115/extracted/ib1000_6-NE-13C",
+      "feature_counts": {
+        "BSPolygonAnno": 36,
+        "Building": 587,
+        "BuildingAccessoryLine": 195,
+        "BuildingAnno": 202,
+        "BuildingAnnoHouseNo": 132,
+        "BuiltStructurePoint": 35,
+        "BuiltStructurePolygon": 29,
+        "CartoBuildingLine": 1726,
+        "Site": 14,
+        "SiteAnno": 16,
+        "CartoHydroLine": 132,
+        "HydroLine": 53,
+        "HydroLineAnno": 4,
+        "HydroPoint": 4,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 18,
+        "HydroPolygonAnno": 15,
+        "CartoLandCoverLine": 183,
+        "LandCoverVector2": 109,
+        "BMSslope": 19,
+        "BMSslopeSymbol": 542,
+        "CartoReliefLine": 42,
+        "SpotHeight": 178,
+        "VerticalCutPolygon": 16,
+        "CartoPedLine": 194,
+        "CartoTransLine": 133,
+        "PedestrianAnno": 21,
+        "RoadAnno": 43,
+        "StreetCentreLines": 56,
+        "CartoUtilityLine": 10,
+        "UtilityLine": 10,
+        "UtilityPoint": 256,
+        "UtilityPointAnno": 254,
+        "UtilityPolygon": 1,
+        "UtilityPolygonAnno": 3
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_20261115/extracted/ib1000_6-NE-17B",
+      "feature_counts": {
+        "BSPointAnno": 2,
+        "BSPolygonAnno": 87,
+        "Building": 635,
+        "BuildingAccessoryLine": 2,
+        "BuildingAnno": 146,
+        "BuildingAnnoHouseNo": 220,
+        "BuiltStructurePoint": 97,
+        "BuiltStructurePolygon": 56,
+        "CartoBuildingLine": 2488,
+        "Site": 20,
+        "SiteAnno": 35,
+        "CartoHydroLine": 136,
+        "HydroLine": 62,
+        "HydroLineAnno": 14,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 40,
+        "HydroPolygonAnno": 30,
+        "CartoLandCoverLine": 66,
+        "LandCoverVector2": 49,
+        "Tree": 1,
+        "PlaceNameAnno": 3,
+        "BMSslope": 39,
+        "BMSslopeSymbol": 599,
+        "CartoReliefLine": 56,
+        "Contour": 144,
+        "ContourAnno": 11,
+        "SpotHeight": 241,
+        "VerticalCutPolygon": 15,
+        "CartoPedLine": 221,
+        "CartoTransLine": 284,
+        "PedestrianAnno": 30,
+        "RailwayPolygon": 52,
+        "RoadAnno": 44,
+        "StreetCentreLines": 30,
+        "CartoUtilityLine": 4,
+        "UtilityLine": 4,
+        "UtilityPoint": 267,
+        "UtilityPointAnno": 262
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_20261115/extracted/ib1000_6-NE-18A",
+      "feature_counts": {
+        "BSPolygonAnno": 29,
+        "Building": 1175,
+        "BuildingAnno": 306,
+        "BuildingAnnoHouseNo": 421,
+        "BuiltStructurePoint": 1,
+        "BuiltStructurePolygon": 31,
+        "CartoBuildingLine": 4108,
+        "Site": 27,
+        "SiteAnno": 20,
+        "CartoHydroLine": 93,
+        "HydroLine": 40,
+        "HydroLineAnno": 10,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 33,
+        "HydroPolygonAnno": 21,
+        "CartoLandCoverLine": 543,
+        "LandCoverVector2": 269,
+        "Tree": 1,
+        "PlaceNameAnno": 6,
+        "BMSslope": 18,
+        "BMSslopeSymbol": 288,
+        "CartoReliefLine": 12,
+        "SpotHeight": 190,
+        "VerticalCutPolygon": 6,
+        "CartoPedLine": 208,
+        "CartoTransLine": 123,
+        "PedestrianAnno": 28,
+        "RoadAnno": 34,
+        "StreetCentreLines": 35,
+        "CartoUtilityLine": 9,
+        "UtilityLine": 9,
+        "UtilityPoint": 328,
+        "UtilityPointAnno": 320
+      }
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_20261115/extracted/lidar_dtm_2020_6NE12D"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_20261115/extracted/lidar_dtm_2020_6NE13C"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_20261115/extracted/lidar_dtm_2020_6NE17B"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_20261115/extracted/lidar_dtm_2020_6NE18A"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_20261115/extracted/nontextured_models_6-NE-12D"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_20261115/extracted/nontextured_models_6-NE-13C"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_20261115/extracted/nontextured_models_6-NE-17B"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_20261115/extracted/nontextured_models_6-NE-18A"
+    },
+    {
+      "role": "tdop",
+      "folder": "source/map_build_20261115/extracted/tdop_T6-NE-C"
+    }
+  ],
+  "terrain": {
+    "file": "gis/high_quality_pilot/pilot_dtm_05m.npz",
+    "shape": [
+      1312,
+      702
+    ],
+    "pixel_size_m": 0.5,
+    "nodata_pixels": 0,
+    "min_native_height_m": 4.448269844055176,
+    "max_native_height_m": 12.426785469055176,
+    "grids": [
+      {
+        "file": "6NE12D(e824n832,e825n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          833000.0
+        ]
+      },
+      {
+        "file": "6NE13C(e825n832,e826n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          833000.0
+        ]
+      },
+      {
+        "file": "6NE17B(e824n831,e825n832).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          832400.0
+        ]
+      },
+      {
+        "file": "6NE18A(e825n831,e826n832).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          832400.0
+        ]
+      }
+    ],
+    "processing": "Pixel-aligned crop and mosaic; no smoothing or vertical offset",
+    "vertical_reference": "Native LiDAR heights; confirm datum in source documentation before road profile authoring"
+  },
+  "orthophoto": {
+    "dataset_id": "landsd_rcd_1701762716904_4826",
+    "sheet": "T6-NE-C",
+    "photograph_date": "3 Jan 2025",
+    "source_image": "source/map_build_20261115/extracted/tdop_T6-NE-C/TDOP_TIFF_6NEC/tdop6nec20250009.tif",
+    "source_dimensions_pixels": [
+      15000,
+      12000
+    ],
+    "source_mode": "RGB",
+    "ground_sample_distance_m": 0.25,
+    "source_pixel_centres_epsg2326_first": [
+      822500.125,
+      832999.875
+    ],
+    "source_extent_edges_epsg2326": [
+      822500.0,
+      830000.0,
+      826250.0,
+      833000.0
+    ],
+    "pilot_fully_covered": true,
+    "georeferencing": "Companion TIFF world file; horizontal CRS from LandsD TDOP metadata",
+    "source_ground_sample_distance_m": 0.25,
+    "crop_file": "gis/high_quality_pilot/pilot_orthophoto.jpg",
+    "world_file": "gis/high_quality_pilot/pilot_orthophoto.jgw",
+    "crs_file": "gis/high_quality_pilot/pilot_orthophoto.crs.txt",
+    "dimensions_pixels": [
+      1404,
+      2624
+    ],
+    "bounds_epsg2326": [
+      825184,
+      832215,
+      825535,
+      832871
+    ],
+    "pixel_centres_epsg2326_first": [
+      825184.125,
+      832870.875
+    ],
+    "resampling": "None; lossless pixel-window crop then JPEG quality 95 for practical viewing",
+    "alignment": "PASS"
+  },
+  "iB1000_axis_order_check": {
+    "source_axis_order": "northing,easting,height",
+    "output_axis_order": "easting,northing",
+    "tile_boundary_samples": {
+      "northing_easting_matches": 189,
+      "easting_northing_matches": 0
+    },
+    "check": "PASS: GML positions cross-checked against official EPSG:2326 tile extents"
+  },
+  "iB1000_pilot_layers": {
+    "StreetCentreLines": {
+      "file": "gis/high_quality_pilot/iB1000_StreetCentreLines_pilot_grid.json",
+      "pilot_features": 34,
+      "clipped_counts_by_code": {
+        "SER": 34
+      },
+      "records_with_other_display_status": 0
+    },
+    "CartoTransLine": {
+      "file": "gis/high_quality_pilot/iB1000_CartoTransLine_pilot_grid.json",
+      "pilot_features": 74,
+      "clipped_counts_by_code": {
+        "RM": 69,
+        "TC": 5
+      },
+      "records_with_other_display_status": 0
+    },
+    "SpotHeight": {
+      "file": "gis/high_quality_pilot/iB1000_SpotHeight_pilot_grid.json",
+      "pilot_features": 106,
+      "clipped_counts_by_code": {
+        "SHG": 106
+      },
+      "records_with_other_display_status": 1
+    }
+  },
+  "building_footprints": {
+    "file": "gis/high_quality_pilot/LandsD_building_footprints_pilot_grid.json",
+    "clipped_footprints": 418,
+    "known_base_top_heights": 127,
+    "height_review_required": 291
+  },
+  "buildings": {
+    "records": 418,
+    "valid_base_top_pairs": 127,
+    "height_review_required": 291
+  },
+  "ib1000_dictionary_interpretation": {
+    "street_types": {
+      "HIG": "Highway",
+      "MAR": "Main Road",
+      "RER": "Restricted Road",
+      "ROB": "Road Bridge",
+      "SER": "Secondary Road",
+      "SLR": "Slip Road",
+      "TRA": "Track",
+      "TUN": "Tunnel"
+    },
+    "spot_heights": {
+      "SHG": "Ground-level spot height",
+      "SHE": "Top level of elevated structure"
+    },
+    "transport_line_types": {
+      "FY": "Flyover/elevated road/bridge",
+      "FYU": "Flyover beneath another elevated structure",
+      "TUR": "Vehicle or railway tunnel",
+      "RM": "Road margin",
+      "RMU": "Road margin below elevated structures"
+    },
+    "use_note": "Use code and display-status fields. Cartographic transport lines are not road-centreline or drivable-surface geometry."
+  },
+  "scope": "Source readiness only. Classification, elevations, road and facade authoring remain to be reviewed."
+}

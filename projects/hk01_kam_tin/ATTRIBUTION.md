@@ -1,5 +1,23 @@
 # Sources and attribution
 
+## Pilot source acquisition — November 15, 2026
+
+The checkpoint 1–2 source set adds CEDD LiDAR DTM, LandsD iB1000 GML and its
+resource dictionary/licence, LandsD building footprints and height attributes,
+LandsD True Digital Orthophoto, LandsD non-textured and 3D-BIT00 model tiles,
+and the Transport Department road-network v2 file geodatabase and specifications.
+Four matching Individualised scenery archives and the earlier foundation
+snapshots are reused locally. Downloading or extracting an input does not mean
+it is embedded in the installed track.
+
+Per-file publisher URLs, hashes and archive checks are recorded in
+`reports/map_data_acquisition.json`; metadata, native files and source terms
+remain in ignored `source/map_build_20261115/`. Preserve the iB1000 bundle's
+`LICENSE.txt`, the retained DATA.GOV.HK terms, source-specific conditions, and
+the Government ownership/source notices with applicable derived work.
+OSM inputs retain **© OpenStreetMap contributors** and their ODbL attribution.
+See `MAP_DATA.md` for the source roles, coverage and remaining review work.
+
 ## OpenStreetMap
 
 **© OpenStreetMap contributors.** Road geometry, names, tags, building footprints and boundary geometry originate from OpenStreetMap.

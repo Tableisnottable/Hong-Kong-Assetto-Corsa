@@ -1,0 +1,651 @@
+{
+  "collected_hong_kong_date": "2026-11-15",
+  "scope": "README checkpoint 1-2 pilot data, plus retained Hong Kong-wide foundation and road network",
+  "bounds_epsg2326": [
+    825184,
+    832215,
+    825535,
+    832871
+  ],
+  "origin_epsg2326": [
+    826000,
+    833000
+  ],
+  "download_budget_mib": 3072,
+  "network_bytes_this_run": 0,
+  "original_acquisition": {
+    "file_actions": {
+      "downloaded": 21,
+      "copied_existing_source": 5,
+      "reused_in_place": 4
+    },
+    "downloaded_source_bytes": 651612483,
+    "downloaded_source_mib": 621.43
+  },
+  "datasets": {
+    "buildings": {
+      "dataset_id": "landsd_rcd_1637211194312_35158",
+      "records_intersecting_pilot": 418,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637211194312_35158"
+    },
+    "lidar_dtm_2020": {
+      "dataset_id": "cedd_rcd_1629267205233_87895",
+      "records_intersecting_pilot": 4,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/cedd_rcd_1629267205233_87895"
+    },
+    "ib1000": {
+      "dataset_id": "landsd_rcd_1637223748322_25497",
+      "records_intersecting_pilot": 4,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637223748322_25497"
+    },
+    "nontextured_models": {
+      "dataset_id": "landsd_rcd_1742809441342_98380",
+      "records_intersecting_pilot": 4,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1742809441342_98380"
+    },
+    "tdop": {
+      "dataset_id": "landsd_rcd_1701762716904_4826",
+      "records_intersecting_pilot": 1,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1701762716904_4826"
+    },
+    "bit00": {
+      "dataset_id": "landsd_rcd_1637306559892_42396",
+      "records_intersecting_pilot": 4,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1637306559892_42396"
+    },
+    "individualised_models": {
+      "dataset_id": "landsd_rcd_1671676915450_88604",
+      "records_intersecting_pilot": 4,
+      "metadata_url": "https://portal.csdi.gov.hk/geoportal/rest/metadata/item/landsd_rcd_1671676915450_88604"
+    }
+  },
+  "files": [
+    {
+      "name": "bit00_6-NE-12D.zip",
+      "role": "bit00",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE12D_FBX.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 2146408,
+      "sha256": "40ad35e68dd7afdf9fda5c81bff27b85b353b4365befcfa5998ee376ba12440d",
+      "archive": {
+        "crc": "PASS",
+        "entries": 375,
+        "uncompressed_bytes": 4172308,
+        "extensions": [
+          ".att",
+          ".fbx",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/bit00_6-NE-12D.zip"
+    },
+    {
+      "name": "bit00_6-NE-13C.zip",
+      "role": "bit00",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE13C_FBX.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 2155772,
+      "sha256": "200c4eecd3468d4afd33336bc35d7dd45d34a493eddd2507aca0e655def9e99f",
+      "archive": {
+        "crc": "PASS",
+        "entries": 409,
+        "uncompressed_bytes": 4315024,
+        "extensions": [
+          ".att",
+          ".fbx",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/bit00_6-NE-13C.zip"
+    },
+    {
+      "name": "bit00_6-NE-17B.zip",
+      "role": "bit00",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE17B_FBX.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 2889920,
+      "sha256": "4e62216f5ce9500938f0a9527aabb1b4712e85988fda6cdf2e99868aa997a351",
+      "archive": {
+        "crc": "PASS",
+        "entries": 701,
+        "uncompressed_bytes": 6687776,
+        "extensions": [
+          ".att",
+          ".fbx",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/bit00_6-NE-17B.zip"
+    },
+    {
+      "name": "bit00_6-NE-18A.zip",
+      "role": "bit00",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/FBX3DBIT00/3D-BIT00_6NE18A_FBX.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 4538535,
+      "sha256": "7ac37e484a2cd96060cfbeaaf2b9fbb70be0215203ef7d486ea5c0a041d65f4d",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1309,
+        "uncompressed_bytes": 11627022,
+        "extensions": [
+          ".att",
+          ".fbx",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/bit00_6-NE-18A.zip"
+    },
+    {
+      "name": "data_gov_hk_terms.html",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://data.gov.hk/en/terms-and-conditions",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 39948,
+      "sha256": "c901a8f56c42a4cbcb2502c10d3623309529500e38f5d6c247aab68c6149dde0",
+      "file": "source/map_build_20261115/references/data_gov_hk_terms.html"
+    },
+    {
+      "name": "ib1000_GML_resources.zip",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/opendata_static/resources/resources_iB1000_GML.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 19857832,
+      "sha256": "546322e146bcbf24fc6fe849f82a4275fea954beb87eb1a2938bddbddfa82658",
+      "archive": {
+        "crc": "PASS",
+        "entries": 9,
+        "uncompressed_bytes": 38911771,
+        "extensions": [
+          ".db",
+          ".html",
+          ".pdf",
+          ".ttf",
+          ".txt",
+          ".xml"
+        ]
+      },
+      "file": "source/map_build_20261115/references/ib1000_GML_resources.zip"
+    },
+    {
+      "name": "osm_copyright.html",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 21314,
+      "sha256": "34ada4600ded8a7842c5e16ea266f220d9512fb11d18fd4f4daa477725a9a68c",
+      "file": "source/map_build_20261115/references/osm_copyright.html"
+    },
+    {
+      "name": "td_road_network_files.csv",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://static.data.gov.hk/td/road-network-v2/dataspec/file_list.csv",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 7046,
+      "sha256": "fa396b2f9a08a7838e728c3398ff86b6afdfcf23436a408480235d04dbd3d66b",
+      "file": "source/map_build_20261115/references/td_road_network_files.csv"
+    },
+    {
+      "name": "td_road_network_spec.zip",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://static.data.gov.hk/td/road-network-v2/dataspec/rdnet_dataspec.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 1278089,
+      "sha256": "17e91e8e13d41b5d1e6c210fdde485e7deadfa62a08523f831ffda181ca39a44",
+      "archive": {
+        "crc": "PASS",
+        "entries": 4,
+        "uncompressed_bytes": 1348424,
+        "extensions": [
+          ".pdf"
+        ]
+      },
+      "file": "source/map_build_20261115/references/td_road_network_spec.zip"
+    },
+    {
+      "name": "td_road_network_v2.gdb.zip",
+      "role": "dictionary_terms_or_network",
+      "source_url": "https://static.data.gov.hk/td/road-network-v2/RdNet_IRNP.gdb.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 17264321,
+      "sha256": "162f9717b9c7d90d9fd5a53d8174a93a6d84170626fc56692d658186ed4a61b2",
+      "archive": {
+        "crc": "PASS",
+        "entries": 109,
+        "uncompressed_bytes": 57991351,
+        "extensions": [
+          "",
+          ".atx",
+          ".freelist",
+          ".gdbindexes",
+          ".gdbtable",
+          ".gdbtablx",
+          ".horizon",
+          ".spx"
+        ]
+      },
+      "file": "source/map_build_20261115/references/td_road_network_v2.gdb.zip"
+    },
+    {
+      "name": "Whole_HK_DTM_5m.zip",
+      "role": "hk_foundation",
+      "source_url": "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "copied_existing_source",
+      "bytes": 28706079,
+      "sha256": "785718f462ae6de3c9e1fed2bf9fe5affe1c1d739c0a969fd62cf3680b4b33ab",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1,
+        "uncompressed_bytes": 302024812,
+        "extensions": [
+          ".asc"
+        ]
+      },
+      "file": "source/Whole_HK_DTM_5m.zip"
+    },
+    {
+      "name": "hong-kong-boundary-913110.osm",
+      "role": "hk_foundation",
+      "source_url": "https://api.openstreetmap.org/api/0.6/relation/913110/full",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "copied_existing_source",
+      "bytes": 441699,
+      "sha256": "ccbc4e67344ebfb68591dcf238073f375b6a6f6d093519a1c61658b948da9f65",
+      "file": "source/hong-kong-boundary-913110.osm"
+    },
+    {
+      "name": "hong-kong-latest.osm.pbf",
+      "role": "hk_foundation",
+      "source_url": "https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "copied_existing_source",
+      "bytes": 37890313,
+      "sha256": "cf9e5f3d29f97e897d5609d604eb23402bf56f632eb3e7aad884ec534a8319b3",
+      "file": "source/hong-kong-latest.osm.pbf"
+    },
+    {
+      "name": "ib1000_6-NE-12D.zip",
+      "role": "ib1000",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-12D&productFormat=GML",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "copied_existing_source",
+      "bytes": 4846385,
+      "sha256": "6cc79b8199b08418b1af9bedbc0c725fa1e5e133686ee9368a0510e36c9820f6",
+      "archive": {
+        "crc": "PASS",
+        "entries": 94,
+        "uncompressed_bytes": 4829087,
+        "extensions": [
+          ".gml",
+          ".xml",
+          ".xsd"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/ib1000_6-NE-12D.zip"
+    },
+    {
+      "name": "ib1000_6-NE-13C.zip",
+      "role": "ib1000",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-13C&productFormat=GML",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 4810501,
+      "sha256": "ef35632ed3d3e110b309f64795c670246734297617287e1c0f4c91f31203a9a7",
+      "archive": {
+        "crc": "PASS",
+        "entries": 94,
+        "uncompressed_bytes": 4793087,
+        "extensions": [
+          ".gml",
+          ".xml",
+          ".xsd"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/ib1000_6-NE-13C.zip"
+    },
+    {
+      "name": "ib1000_6-NE-17B.zip",
+      "role": "ib1000",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-17B&productFormat=GML",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 6082698,
+      "sha256": "2eb1b4a176efc20c7effc901c33037b3271b770ba2aab4f64d13a86c23a845ce",
+      "archive": {
+        "crc": "PASS",
+        "entries": 103,
+        "uncompressed_bytes": 6063579,
+        "extensions": [
+          ".gml",
+          ".xml",
+          ".xsd"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/ib1000_6-NE-17B.zip"
+    },
+    {
+      "name": "ib1000_6-NE-18A.zip",
+      "role": "ib1000",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=iB1000&sheetName=T6-NE-18A&productFormat=GML",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 7935146,
+      "sha256": "840712d3a40c0b1e1335a1aea0ca7b111f5b0d7487f7ed03afbb63a327b0f7dd",
+      "archive": {
+        "crc": "PASS",
+        "entries": 93,
+        "uncompressed_bytes": 7917609,
+        "extensions": [
+          ".gml",
+          ".xml",
+          ".xsd"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/ib1000_6-NE-18A.zip"
+    },
+    {
+      "name": "individualised_models_6-NE-12D.zip",
+      "role": "individualised_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF/6-NE-12D.zip",
+      "status": "PASS",
+      "action": "reused_in_place",
+      "first_action": "reused_in_place",
+      "bytes": 312592735,
+      "sha256": "c31199b9482748a4dda11698bd636bf201318e87e9c301abb4360911749d3c5b",
+      "archive": {
+        "crc": "PASS",
+        "entries": 906,
+        "uncompressed_bytes": 396138658,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg",
+          ".png"
+        ]
+      },
+      "file": "external_source/6-NE-12D_GLTF.zip"
+    },
+    {
+      "name": "individualised_models_6-NE-13C.zip",
+      "role": "individualised_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF/6-NE-13C.zip",
+      "status": "PASS",
+      "action": "reused_in_place",
+      "first_action": "reused_in_place",
+      "bytes": 374912440,
+      "sha256": "cd8ab9fe2695c2f75b2a79821db0a5278cba81ceb1b553baf779d667ca05131c",
+      "archive": {
+        "crc": "PASS",
+        "entries": 967,
+        "uncompressed_bytes": 701230429,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg",
+          ".png"
+        ]
+      },
+      "file": "external_source/6-NE-13C_GLTF.zip"
+    },
+    {
+      "name": "individualised_models_6-NE-17B.zip",
+      "role": "individualised_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF/6-NE-17B.zip",
+      "status": "PASS",
+      "action": "reused_in_place",
+      "first_action": "reused_in_place",
+      "bytes": 634187170,
+      "sha256": "8b57b7d1d3764a372e7b48835a184c7bd6c4b1b45bf22bc0bb16234ae6ab1956",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1556,
+        "uncompressed_bytes": 1279736142,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg",
+          ".png"
+        ]
+      },
+      "file": "external_source/6-NE-17B_GLTF.zip"
+    },
+    {
+      "name": "individualised_models_6-NE-18A.zip",
+      "role": "individualised_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF/6-NE-18A.zip",
+      "status": "PASS",
+      "action": "reused_in_place",
+      "first_action": "reused_in_place",
+      "bytes": 577894775,
+      "sha256": "b8fd75d94eab0acbe54c59dd14c57df2002767d335e84f4a42275dffff4e8642",
+      "archive": {
+        "crc": "PASS",
+        "entries": 2705,
+        "uncompressed_bytes": 1169552505,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg",
+          ".png"
+        ]
+      },
+      "file": "external_source/6-NE-18A_GLTF.zip"
+    },
+    {
+      "name": "lidar_dtm_2020_6NE12D.zip",
+      "role": "lidar_dtm_2020",
+      "source_url": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE12D(e824n832,e825n833).zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "copied_existing_source",
+      "bytes": 5823527,
+      "sha256": "ef022ce8b9472cc69c62f17cd1db839f63df2adbb8ae217c701e3b74214b1010",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1,
+        "uncompressed_bytes": 7868582,
+        "extensions": [
+          ".tif"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/lidar_dtm_2020_6NE12D.zip"
+    },
+    {
+      "name": "lidar_dtm_2020_6NE13C.zip",
+      "role": "lidar_dtm_2020",
+      "source_url": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE13C(e825n832,e826n833).zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 5702728,
+      "sha256": "8e453617736da6c9f66543314b7f72b896d4fa3a000b3e8f81a6445b48d6665f",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1,
+        "uncompressed_bytes": 7868582,
+        "extensions": [
+          ".tif"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/lidar_dtm_2020_6NE13C.zip"
+    },
+    {
+      "name": "lidar_dtm_2020_6NE17B.zip",
+      "role": "lidar_dtm_2020",
+      "source_url": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE17B(e824n831,e825n832).zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 5871926,
+      "sha256": "0623360fe72720eea5a791960211cf07d2ff98b02107a8138ae26636b51e1e3f",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1,
+        "uncompressed_bytes": 7868582,
+        "extensions": [
+          ".tif"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/lidar_dtm_2020_6NE17B.zip"
+    },
+    {
+      "name": "lidar_dtm_2020_6NE18A.zip",
+      "role": "lidar_dtm_2020",
+      "source_url": "https://bulkdata.csdi.gov.hk/cedd/lidar/2020dtm/6NE18A(e825n831,e826n832).zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 5649686,
+      "sha256": "2f8a00b12028a1b48dc9672ecfad73b756c1a433cdf92474d5eb4cfceac0a575",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1,
+        "uncompressed_bytes": 7868582,
+        "extensions": [
+          ".tif"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/lidar_dtm_2020_6NE18A.zip"
+    },
+    {
+      "name": "nontextured_models_6-NE-12D.zip",
+      "role": "nontextured_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-12D.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 53173934,
+      "sha256": "7f6e88526f376b3b123a0c03d5b7615821a9a63c05172f7adb2bd00d2a664f7f",
+      "archive": {
+        "crc": "PASS",
+        "entries": 574,
+        "uncompressed_bytes": 56505523,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/nontextured_models_6-NE-12D.zip"
+    },
+    {
+      "name": "nontextured_models_6-NE-13C.zip",
+      "role": "nontextured_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-13C.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 55370225,
+      "sha256": "510b8373bd14043aa4974ee4f3708d0aa22d9c84e544135c7488d57c7dd269ab",
+      "archive": {
+        "crc": "PASS",
+        "entries": 646,
+        "uncompressed_bytes": 62085294,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/nontextured_models_6-NE-13C.zip"
+    },
+    {
+      "name": "nontextured_models_6-NE-17B.zip",
+      "role": "nontextured_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-17B.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 30802493,
+      "sha256": "6b77d4cb4b4225c539056cca8dc2cf5691251fe8f8379238d8144e51d8e47680",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1006,
+        "uncompressed_bytes": 39127136,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/nontextured_models_6-NE-17B.zip"
+    },
+    {
+      "name": "nontextured_models_6-NE-18A.zip",
+      "role": "nontextured_models",
+      "source_url": "https://download.map.gov.hk/api/3d-zip/GLTF0/6-NE-18A.zip",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 29498701,
+      "sha256": "105496018d6af6e5152aac569ce8db04629f1b75be611252d0e7b97accc70c70",
+      "archive": {
+        "crc": "PASS",
+        "entries": 1930,
+        "uncompressed_bytes": 46044979,
+        "extensions": [
+          ".bin",
+          ".gltf",
+          ".jpg"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/nontextured_models_6-NE-18A.zip"
+    },
+    {
+      "name": "tdop_T6-NE-C.zip",
+      "role": "tdop",
+      "source_url": "https://open.hkmapservice.gov.hk/OpenData/directDownload?productName=TDOP&sheetName=T6-NE-C&productFormat=TIFF",
+      "status": "PASS",
+      "action": "retained",
+      "first_action": "downloaded",
+      "bytes": 396515260,
+      "sha256": "3825ad22ac175bf9637f9b9147ee0656de0f8b7482ea5c39288382a51441330b",
+      "archive": {
+        "crc": "PASS",
+        "entries": 3,
+        "uncompressed_bytes": 545216823,
+        "extensions": [
+          ".tfw",
+          ".tif"
+        ]
+      },
+      "file": "source/map_build_20261115/archives/tdop_T6-NE-C.zip"
+    }
+  ],
+  "status": "PASS",
+  "limits": [
+    "Acquisition and archive integrity only; no map build or game installation.",
+    "Tile outlines intersect the pilot envelope, not all of the 6x6 km region or Hong Kong.",
+    "Capture dates, coordinate datums and attribute code meanings require source-specific review.",
+    "Road edges, deck levels, facades, collision and car-height review still need authoring.",
+    "Retained foundation snapshots are reused unchanged, not presented as newly surveyed data."
+  ]
+}
