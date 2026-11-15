@@ -42,11 +42,10 @@ def configure_car(car, backup):
     text = re.sub(r'(?ms)^\[SCRIPT_\.\.\.\]\s*\nSCRIPT="\s*\nlocal car = ac\.getCar\(\).*?OMSI_TAG_TAG_L.*?^"\s*\n?', '', text)
     text = re.sub(r'(?ms)^\[SCRIPT_KMB_AI_AXLES\]\s*\n.*?(?=^\[|\Z)', '', text)
     text = re.sub(r'(?ms)^\[SCRIPT_KMB_PLAYER_AXLES\]\s*\n.*?(?=^\[|\Z)', '', text)
+    text = re.sub(r'(?ms)^; KMB_EXTRA_AXLE_SCRIPT\s*\n\[SCRIPT_\.\.\.\]\s*\n.*?(?=^\[|\Z)', '', text)
     text = text.rstrip() + (
-        "\n\n[SCRIPT_KMB_AI_AXLES]\nSCRIPT=kmb_ai_axles.lua\n"
-        "ACTIVE_FOR_UNFOCUSED=1\nACTIVE_FOR_NEAREST=64\n"
-        "\n[SCRIPT_KMB_PLAYER_AXLES]\nSCRIPT=kmb_ai_axles.lua\n"
-        "ACTIVE_FOR_UNFOCUSED=0\n")
+        "\n\n; KMB_EXTRA_AXLE_SCRIPT\n[SCRIPT_...]\nSCRIPT=kmb_ai_axles.lua\n"
+        "ACTIVE_FOR_UNFOCUSED=1\nACTIVE_FOR_NEAREST=64\n")
     write_backed_up(config, text.encode("utf-8"), backup)
     write_backed_up(ext / "kmb_ai_axles.lua", lua.encode("utf-8"), backup)
     cockpit = ext / "cockpit.lua"
@@ -71,6 +70,7 @@ def main():
         raise RuntimeError("Close AC before installing native wheel scripts")
     backup = args.output / "backups" / datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     checks = []
+    fleet = []
     from luaparser import ast
     for bus in buses():
         car = args.ac / "content/cars" / bus["id"]
@@ -82,9 +82,14 @@ def main():
                 for package_car in args.packages.glob("*/content/cars/" + bus["id"]):
                     configure_car(package_car, backup / (bus["id"] + "_package"))
             checks.append(result)
+            fleet.append({"car": bus["id"], "visual_axles": result["wheels"], "status": "ANIMATED"})
+        else:
+            fleet.append({"car": bus["id"], "visual_axles": [],
+                          "status": "TWO_AXLE_MODEL_NO_EXTRA_AXLE_NODES"})
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / "native_axle_animation.json").write_text(json.dumps(
-        {"status": "PASS", "cars": checks, "lua_syntax": "PASS", "runtime": "pending user AI wheel test"}, indent=2), encoding="utf-8")
+        {"status": "PASS", "fleet": fleet, "cars": checks, "lua_syntax": "PASS",
+         "runtime": "pending user AI wheel test"}, indent=2), encoding="utf-8")
     print(json.dumps(checks, indent=2))
 
 

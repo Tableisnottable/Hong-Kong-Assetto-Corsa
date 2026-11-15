@@ -65,14 +65,13 @@ For native AI wheel animations, with AC closed run:
 python tools/install_kmb_axle_animation.py
 ```
 
-This gives E6M, ATENU, ATEE and Dragon a separate CSP axle script with
+This gives E6M, ATENU, ATEE and Dragon a CSP `[SCRIPT_...]` axle script with
 `ACTIVE_FOR_UNFOCUSED=1`, the owning car's state, and measured wheel radii.
-It removes the older generated inline callback and moves E6M's axle update
-out of its cockpit display. This allows the script to update on native AI
-cars outside the cockpit; the original setup depended on cockpit updates
-or used the player state. Reverse uses signed local velocity. Configuration
-and cockpit files are backed up locally. Lua syntax passes; animation still
-requires an in-game test. Future family builds include this configuration.
+The literal CSP section convention is required for the script to load. It
+removes the older generated inline callback and moves E6M's axle update out of
+its cockpit display. E200 and Scania have two-axle models and are audited but
+do not get invented tag axles. Configuration and cockpit files are backed up
+locally. Lua syntax passes; animation still requires an in-game test.
 
 The repack test track is not modified: its road geometry does not align with
 the original AI loop. It needs its own recorded traffic lanes.
@@ -94,11 +93,13 @@ reduces distant geometry by approximately 80–86%, and resizes traffic textures
 The six installed distant models have approximately 21,000–61,000 triangles
 each; begin with 12 vehicles before increasing density.
 
-A small backed-up patch to the planner's `TrafficCarFullLOD.lua` rotates the
-additional axle nodes on E6M, ATENU, ATEE and Dragon. Four standard wheel nodes
-remain available to the stock traffic renderer. Other cars get no additional
-wheel bindings. CSP updates can replace this patch; rerun the installer after
-checking compatibility. New planner instances load the new vehicle pool.
+A backed-up patch to the planner's `TrafficCarFullLOD.lua` rotates the
+additional axle nodes on E6M, ATENU, ATEE and Dragon. A second patch uses each
+bus's measured four suspension contact positions; CSP's default symmetric
+wheelbase points do not line up with these models' axle pivots. Four standard
+wheel nodes remain available to the stock traffic renderer. CSP updates can
+replace these patches; rerun the installer after checking compatibility. New
+planner instances load the new vehicle pool.
 
 Installed hashes, embedded textures, body/wheel hierarchy, collision clearance,
 spacing, LOD silhouette bounds and Lua syntax pass the offline validator. Live

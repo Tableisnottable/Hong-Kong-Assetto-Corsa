@@ -157,16 +157,21 @@ def build(ac, bus, out):
     }
     # Validate saved geometry and dimensions, not just the in-memory editor.
     saved = Kn5(main_path)
+    saved_nodes = {n.name: n for n in saved.root.children}
     if sum(n.name == "BODY" for _, n in saved.root.walk()) != 1:
         raise ValueError("Traffic model must have exactly one body motion node")
     all_points = np.concatenate(list(world_vertices(saved.root)))
     if abs(all_points[:, 2].min() + all_points[:, 2].max()) > .001:
         raise ValueError("Traffic model is not centered between bumpers")
     for suffix in ("LF", "RF", "LR", "RR"):
-        wheel = next(n for n in saved.root.children if n.name == "WHEEL_" + suffix)
+        wheel = saved_nodes["WHEEL_" + suffix]
         relative = np.concatenate(list(world_vertices(wheel)))[:, 1].min()
         if abs(relative) > .04:
             raise ValueError(f"Traffic wheel ground mismatch: {car.name}/{suffix}: {relative}")
+    definition["physics"]["wheelBasePoints"] = [
+        [float(saved_nodes["WHEEL_" + suffix].matrix[3, 0]), 1.0,
+         float(saved_nodes["WHEEL_" + suffix].matrix[3, 2])]
+        for suffix in ("LF", "RF", "LR", "RR")]
     hull = np.concatenate(list(world_vertices(Kn5(collider_path).root)))
     if hull[:, 1].min() < .1:
         raise ValueError("Traffic collider below intended ground clearance")
@@ -185,25 +190,50 @@ def patch_extra_axles(tool, backup):
     path = tool / "src/simulation/TrafficCarFullLOD.lua"
     source = path.read_text(encoding="utf-8")
     marker = "-- KMB_EXTRA_AXLES_V1"
-    if marker in source:
-        return
-    anchor = "  self._wheels = wheels"
-    if source.count(anchor) != 1:
-        raise ValueError("Unknown TrafficCarFullLOD version; no Lua changes installed")
-    source = source.replace(anchor, anchor + "\n" + marker + "\n" +
-        "  self._kmbExtraWheels = {}\n"
-        "  for _, item in ipairs(car.definition.kmbExtraWheels or {}) do\n"
-        "    self._kmbExtraWheels[#self._kmbExtraWheels + 1] = {\n"
-        "      node = modelMain:findNodes(item.node), radius = item.radius\n"
-        "    }\n  end")
-    anchor = "  -- ac.perfFrameBegin(1093)"
-    if source.count(anchor) != 1:
-        raise ValueError("Unknown traffic update method")
-    source = source.replace(anchor,
-        "  if not car:crashed() then\n"
-        "    for _, item in ipairs(self._kmbExtraWheels or {}) do\n"
-        "      item.node:setRotation(_dirSide, self._drivenDistance / item.radius)\n"
-        "    end\n  end\n\n" + anchor)
+    if marker not in source:
+        anchor = "  self._wheels = wheels"
+        if source.count(anchor) != 1:
+            raise ValueError("Unknown TrafficCarFullLOD version; no Lua changes installed")
+        source = source.replace(anchor, anchor + "\n" + marker + "\n" +
+            "  self._kmbExtraWheels = {}\n"
+            "  for _, item in ipairs(car.definition.kmbExtraWheels or {}) do\n"
+            "    self._kmbExtraWheels[#self._kmbExtraWheels + 1] = {\n"
+            "      node = modelMain:findNodes(item.node), radius = item.radius\n"
+            "    }\n  end")
+        anchor = "  -- ac.perfFrameBegin(1093)"
+        if source.count(anchor) != 1:
+            raise ValueError("Unknown traffic update method")
+        source = source.replace(anchor,
+            "  if not car:crashed() then\n"
+            "    for _, item in ipairs(self._kmbExtraWheels or {}) do\n"
+            "      item.node:rotate(_dirSide, dlen / item.radius)\n"
+            "    end\n  end\n\n" + anchor)
+    else:
+        old = "item.node:setRotation(_dirSide, self._drivenDistance / item.radius)"
+        new = "item.node:rotate(_dirSide, dlen / item.radius)"
+        source = source.replace(old, new)
+    write_backed_up(path, source.encode("utf-8"), backup)
+
+
+def patch_wheel_base_points(tool, backup):
+    path = tool / "src/simulation/TrafficCarPhysics.lua"
+    source = path.read_text(encoding="utf-8")
+    marker = "-- KMB_WHEEL_BASE_POINTS_V1"
+    if marker not in source:
+        anchor = "    cache.wheelBasePoints = { vec3(w, 1, l), vec3(-w, 1, l), vec3(w, 1, -l), vec3(-w, 1, -l) }"
+        if source.count(anchor) != 1:
+            raise ValueError("Unknown TrafficCarPhysics version; wheel-point patch not installed")
+        replacement = (
+            "    " + marker + "\n"
+            "    if definition.physics.wheelBasePoints then\n"
+            "      cache.wheelBasePoints = {}\n"
+            "      for i, p in ipairs(definition.physics.wheelBasePoints) do\n"
+            "        cache.wheelBasePoints[i] = vec3(p[1], p[2], p[3])\n"
+            "      end\n"
+            "    else\n"
+            + anchor + "\n"
+            "    end")
+        source = source.replace(anchor, replacement)
     write_backed_up(path, source.encode("utf-8"), backup)
 
 
@@ -230,6 +260,7 @@ def main():
         tool = args.ac / "extension/lua/tools/csp-traffic-tool"
         backup = args.output / "backups" / datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         patch_extra_axles(tool, backup)
+        patch_wheel_base_points(tool, backup)
         for result in results:
             for name, digest in result["files"].items():
                 dest = tool / "data" / name

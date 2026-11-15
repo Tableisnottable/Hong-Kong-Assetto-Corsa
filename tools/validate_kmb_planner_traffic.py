@@ -41,6 +41,15 @@ def audit(ac, output):
                         if tex["texture"] not in textures:
                             errors.append(key + " missing embedded texture " + tex["texture"])
                 lod_tris.append(sum(n.index_count // 3 for _, n in model.root.walk() if n.kind == 2))
+                if key == "main":
+                    points = definition["physics"].get("wheelBasePoints", [])
+                    if len(points) != 4:
+                        errors.append("Missing four measured traffic suspension points")
+                    else:
+                        for suffix, point in zip(("LF", "RF", "LR", "RR"), points, strict=True):
+                            pivot = next(n for n in model.root.children if n.name == "WHEEL_" + suffix).matrix[3, :3]
+                            if max(abs(float(pivot[0]) - point[0]), abs(float(pivot[2]) - point[2])) > .002 or abs(point[1] - 1) > .001:
+                                errors.append(key + " suspension point misses rendered axle " + suffix)
         low, high = vertices[0].min(0), vertices[0].max(0)
         dims = definition["dimensions"]
         if abs(dims["front"] + dims["rear"] - (high[2] - low[2])) > .002:
@@ -60,6 +69,10 @@ def audit(ac, output):
     ast.parse(source)
     if "-- KMB_EXTRA_AXLES_V1" not in source:
         raise ValueError("Extra-axle support is not installed")
+    physics_source = (installed / "src/simulation/TrafficCarPhysics.lua").read_text(encoding="utf-8")
+    ast.parse(physics_source)
+    if "-- KMB_WHEEL_BASE_POINTS_V1" not in physics_source:
+        raise ValueError("Measured wheel-contact support is not installed")
     result = {"status": "PASS" if all(not c["errors"] for c in checks) else "FAIL", "buses": checks,
               "lua_syntax": "PASS", "runtime": "pending user Traffic Planner test"}
     (output / "planner_installed_validation.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
