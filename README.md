@@ -1,8 +1,8 @@
-# 香港 1:1 Assetto Corsa 地圖與 KMB 巴士工具
+# 香港 1:1 Assetto Corsa 地圖
 
-Hong Kong road-map authoring, regional track experiments and local OMSI-to-Assetto-Corsa bus conversion tools.
+Hong Kong road-map authoring and regional track experiments.
 
-**Current status — November 14, 2026:** the active regional map is **Kam Tin v0.5**, a provisional 3.445 km comparison loop. It has not reached the required Route Twisk RWE / Repack Test quality. The repository also contains configuration and conversion tools for six local KMB bus prototypes. A clone is a source checkout; it does not supply a complete Hong Kong track or the converted buses' large assets.
+**Current status — November 14, 2026:** the active regional map is **Kam Tin v0.5**, a provisional 3.445 km comparison loop. It has not reached the required Route Twisk RWE / Repack Test quality. A clone is a source checkout; it does not supply a complete Hong Kong track.
 
 ## Start here / 從這裏開始
 
@@ -10,8 +10,6 @@ Hong Kong road-map authoring, regional track experiments and local OMSI-to-Asset
 | --- | --- | --- |
 | Kam Tin / 錦田 | Regional foundation and v0.5 test loop; engine appearance, driving and FPS still need a fresh test | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
 | Required map quality / 地圖品質目標 | Route Twisk reference standard and outstanding road, junction and scenery work | [Quality requirements](projects/hk01_kam_tin/REFERENCE_QUALITY.md) |
-| Local KMB buses / 本機九巴 | E200, E6M, ATENU, ATEE, Dennis Dragon 9.9M and Scania K230UB | [Conversion and installed lineup](docs/omsi_bus_conversion.md) |
-| E200 / E6M cockpit and signs | Model-stage-specific patches, cameras, instruments and destination artwork | [Bus helpers](projects/kmb_bus_tools/README.md) · [Runtime test guide](projects/kmb_bus_tools/TEST_DRIVE.md) |
 | Earlier road-test tools / 早期考場工具 | Tin Kwong Road blockout and multi-centre experiments | Historical development notes below; [production plan](docs/map-production-plan.md) |
 
 ## Kam Tin regional map / 錦田區域地圖
@@ -27,56 +25,19 @@ For the existing local build, select **Hong Kong — Kam Tin Driving Test** (`hk
 
 For authoring, use Blender 5.1 or later and the Python dependencies in [scripts/requirements.txt](projects/hk01_kam_tin/scripts/requirements.txt), installed in a virtual environment. Run the project's commands from `projects/hk01_kam_tin/`, following its [rebuild prerequisites](projects/hk01_kam_tin/README.md#rebuild). Later build stages require retained source snapshots and earlier local scenes; a fresh clone alone is insufficient. Review [PUBLISHING.md](projects/hk01_kam_tin/PUBLISHING.md) before packaging or installation.
 
-## Local KMB bus prototypes / 本機九巴原型
-
-The documented local installation contains:
-
-| Bus / 巴士 | Assetto Corsa car ID |
-| --- | --- |
-| ADL E200 | `kmb_e200_drivable` |
-| ADL E6M | `kmb_e6m_drivable` |
-| ADL E500MMC ATENU | `kmb_atenu_drivable` |
-| ADL Enviro500 ATEE | `kmb_atee_drivable` |
-| Dennis Dragon 9.9M | `kmb_dennis_dragon_9m_drivable` |
-| Scania K230UB | `kmb_scania_k230ub_drivable` |
-
-These are local conversion prototypes. The four newer families use adapted AC donor physics/sound; OMSI scripts are not executed in AC. Three-axle buses still use two physical AC axles, with the extra axle represented visually. Offline alignment, gearing and wheel-contact checks do not prove live driving behavior.
-
-From the repository root, with Python, NumPy, Pillow, the required installed OMSI source files and matching AC donor assets available, build one family at a time:
-
-```powershell
-python tools/build_omsi_families.py atenu
-# Other supported family names: atee, dragon, scania
-```
-
-The converter writes a local `outputs/<FAMILY>_playable/` package and does not install it. Follow [the conversion guide](docs/omsi_bus_conversion.md) for prerequisites, repair/validation commands and installation. Close AC and back up the matching car before applying an update. Do not run a patch intended for a different build stage.
-
-E200 and E6M can select a destination from the locally installed OMSI HOF and bitmap files:
-
-```powershell
-python tools/set_kmb_bus_display.py e200
-python tools/set_kmb_bus_display.py e6m
-```
-
-The script expects local game paths configured in its source. It creates or updates the `KMB CUSTOM` skin; it does not port the OMSI route keypad. See the [destination-display instructions](projects/kmb_bus_tools/README.md#set-a-route-display) and [bus runtime checks](projects/kmb_bus_tools/TEST_DRIVE.md).
-
 ## Repository layout / 目錄結構
 
 ```text
 projects/hk01_kam_tin/          Regional map source, configuration and reports
-projects/kmb_bus_tools/         E200/E6M build-stage helpers and tests
-projects/kmb_e200_playable/     E200 configuration companion
-projects/kmb_e6m_playable/      E6M configuration companion
-docs/omsi_bus_conversion.md    Newer bus-family conversion and repair guide
 asset/                        Earlier map/car templates and route references
 content/                      Earlier track/car configurations and previews
 apps/lua/hk_exam/              Experimental road-test guidance app
 config/                       Vehicle, route and traffic configuration
-tools/                        Map, bus, data-import and validation tools
+tools/                        Map, data-import and validation tools
 auto/v1/                      Earlier CSDI/Blender and vehicle experiments
 ```
 
-The current Kam Tin publishing workflow keeps downloaded geographic inputs, generated Blender scenes, models, textures, archives and backups local. Bus source models, converted KN5s, original artwork and sound banks also remain local. Existing tracked reference/configuration files are retained; their presence does not make a complete installable mod.
+The current Kam Tin publishing workflow keeps downloaded geographic inputs, generated Blender scenes, models, textures, archives and backups local. Existing tracked reference/configuration files are retained; their presence does not make a complete installable mod.
 
 ## Earlier map tools / 早期地圖工具
 
@@ -90,7 +51,7 @@ Follow the [Kam Tin attribution](projects/hk01_kam_tin/ATTRIBUTION.md), its reta
 
 ## Historical development notes / 歷史開發紀錄
 
-The sections below retain the earlier road-test, vehicle and traffic experiments. Counts, installed-output statements and static validation results describe those development stages; they are not current download guarantees or proof of in-game quality. The Kam Tin status and bus guides above describe the current workstreams.
+The sections below retain the earlier road-test, vehicle and traffic experiments. Counts, installed-output statements and static validation results describe those development stages; they are not current download guarantees or proof of in-game quality. The Kam Tin status above describes the current map work.
 
 ---
 
