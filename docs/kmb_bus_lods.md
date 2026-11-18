@@ -79,3 +79,37 @@ Large KN5 files, render images and backups remain local under `outputs/`.
 Only source and documentation belong in Git. Adding LODs reduces distant
 rendering cost; the original main models and audio still prevent these
 installed bus folders from meeting the earlier 20 MB total-size target.
+
+## OMSI-derived real-life settings
+
+Stage the driving settings from the installed OMSI source buses with:
+
+```powershell
+python tools/stage_kmb_realism.py
+```
+
+The staged run records the source hashes and writes only the five small
+configuration files for each of the six buses under `outputs/KMB_REALISM/`.
+It maps the OMSI mass, torque curve, engine inertia, RPM limit, forward gear
+ratios, final drive, axle spring and damper rates, and source steering radius
+into the AC bus configuration. The torque curve is checked against the local
+AC `power.lut` before the stage passes. Tire reference loads and suspension
+ride height use an axle-load estimate proportional to the OMSI axle spring
+rates, so a tri-axle bus does not put its full weight on the front contact
+points. The OMSI bus files do not give measured static axle loads; this remains
+an approximation that needs a driving test.
+
+After AC is closed, install the exact staged run with:
+
+```powershell
+python tools/stage_kmb_realism.py --resume outputs/KMB_REALISM/RUN_DIRECTORY --install
+```
+
+The installer checks that both the staged files and the installed originals
+still match the recorded hashes, makes a backup inside that run directory,
+then copies the settings and verifies the installed hashes. AC has four
+physical tire contact points, so the third axle on the E6M, ATEE, Scania and
+Dragon remains a visual/CSP animation approximation; the source axle rates
+are still used for the physical front and rear groups. Live acceleration,
+shifting, suspension movement and steering still require the user's test in
+Assetto Corsa.

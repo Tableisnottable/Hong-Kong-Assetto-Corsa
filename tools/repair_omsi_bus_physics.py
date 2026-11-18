@@ -90,6 +90,104 @@ def set_values(cp, section, values):
         cp[section][key] = str(value)
 
 
+def source_limiter(spec):
+    """Choose the source hard RPM limit, bounded by the published torque curve."""
+    engine, gearbox, curve = spec["engine_constants"], spec["gear_constants"], spec["curve"]
+    hard_limit = engine.get("engine_maxrpm")
+    if hard_limit is None:
+        hard_limit = gearbox.get("antrieb_overrev_protection_rpm")
+    if hard_limit is None:
+        hard_limit = engine.get("rpmgov")
+    if hard_limit is None:
+        hard_limit = curve[-1][0]
+    return min(float(hard_limit), float(curve[-1][0]))
+
+
+def source_forward_ratios(spec, family, current_first=None):
+    """Read source ratios; retain the Dragon's AC torque-converter approximation."""
+    constants = spec["gear_constants"]
+    ratios = sorted(((int(match.group(1)), value) for name, value in constants.items()
+                     if (match := re.fullmatch(r"antrieb_getr_ratio(\d+)", name))), key=lambda row: row[0])
+    if not ratios or [index for index, _ in ratios] != list(range(1, len(ratios) + 1)):
+        raise ValueError("OMSI forward gear ratios are missing or nonconsecutive")
+    result = [float(value) for _, value in ratios]
+    if family == "dragon":
+        if current_first is None or len(result) < 3:
+            raise ValueError("Dragon's converter-based first gear needs the existing AC ratio")
+        result[0] = float(current_first)
+    return result
+
+
+def apply_source_powertrain(engine, drive, spec, family):
+    """Map OMSI engine and gearbox data into the staged AC configuration."""
+    constants, gearbox = spec["engine_constants"], spec["gear_constants"]
+    limiter = source_limiter(spec)
+    inertia = constants.get("engine_J")
+    if inertia is None:
+        raise ValueError("OMSI source is missing engine_J")
+    idle = constants.get("engine_governed_idle_RPM", 700)
+    shift_seconds = float(gearbox.get("antrieb_gangwahlzeit", .5))
+    shift_ms = round(shift_seconds * 1000)
+    if not 250 <= shift_ms <= 1500:
+        raise ValueError("Unexpected OMSI gear selection time")
+    gears = drive["GEARS"]
+    ratios = source_forward_ratios(spec, family, gears.get("GEAR_1"))
+    gear_values = {"COUNT": len(ratios), **{f"GEAR_{index}": value for index, value in enumerate(ratios, 1)}}
+    if "antrieb_i_achse" in gearbox:
+        gear_values["FINAL"] = gearbox["antrieb_i_achse"]
+    reverse = gearbox.get("antrieb_getr_ratioR")
+    if reverse is not None:
+        gear_values["GEAR_R"] = -abs(float(reverse))
+    set_values(engine, "ENGINE_DATA", {"INERTIA": inertia, "LIMITER": limiter, "MINIMUM": idle})
+    set_values(drive, "GEARS", gear_values)
+    set_values(drive, "GEARBOX", {"CHANGE_UP_TIME": shift_ms, "CHANGE_DN_TIME": shift_ms,
+                                  "AUTO_CUTOFF_TIME": shift_ms, "SUPPORTS_SHIFTER": 0})
+    set_values(drive, "AUTO_SHIFTER", {"GAS_CUTOFF_TIME": f"{shift_seconds:.2f}"})
+    return {"limiter_rpm": limiter, "engine_inertia": float(inertia), "idle_rpm": float(idle),
+            "shift_seconds": shift_seconds, "forward_ratios": ratios,
+            "final_drive": float(gear_values.get("FINAL", drive["GEARS"].get("FINAL", 0)))}
+
+
+def apply_source_suspension(susp, tyres, spec, family, mass, front_radius, rear_radius):
+    """Map source axle rates and static axle loads to AC's four tire contacts."""
+    axles = spec["axles"]
+    if len(axles) < 2:
+        raise ValueError("OMSI source needs at least two axles")
+    front_axles = axles[:1]
+    rear_axles = axles[1:2] if family == "scania" else axles[1:]
+    # OMSI provides per-axle spring rates but these bus files do not provide
+    # static axle weights. At equal static ride deflection, springs carry load
+    # in proportion to their combined rates; use this as the source-backed load
+    # split instead of incorrectly assigning one quarter of total mass to every
+    # AC contact point. The original axle loads remain an approximation.
+    front_rate = sum(float(axle["achse_feder"]) for axle in front_axles)
+    rear_rate = sum(float(axle["achse_feder"]) for axle in rear_axles)
+    total_rate = front_rate + rear_rate
+    if front_rate <= 0 or rear_rate <= 0 or total_rate <= 0:
+        raise ValueError("OMSI axle spring rates cannot define static contact loads")
+    axle_load_kg = {"FRONT": float(mass) * front_rate / total_rate,
+                    "REAR": float(mass) * rear_rate / total_rate}
+    for section, axle_set in (("FRONT", front_axles), ("REAR", rear_axles)):
+        rate = sum(axle["achse_feder"] for axle in axle_set) * 1000
+        damper = sum(axle.get("achse_daempfer", 18) for axle in axle_set) * 1000
+        hub_mass = float(susp[section].get("HUB_MASS", 0))
+        sprung_load = max(0, axle_load_kg[section] * .5 - hub_mass) * 9.81
+        set_values(susp, section, {"ROD_LENGTH": round(sprung_load / rate, 6),
+                                  "SPRING_RATE": rate, "DAMP_BUMP": damper,
+                                  "DAMP_REBOUND": damper * 1.35,
+                                  "DAMP_FAST_BUMP": damper * .7,
+                                  "DAMP_FAST_REBOUND": damper})
+    for section, radius in (("FRONT", front_radius), ("REAR", rear_radius)):
+        per_wheel_load_n = axle_load_kg[section] * 9.81 / 2
+        set_values(tyres, section, {"RADIUS": radius, "FZ0": round(per_wheel_load_n),
+                                   "RADIUS_ANGULAR_K": .001})
+    return {"axle_load_kg": {key: round(value, 2) for key, value in axle_load_kg.items()},
+            "per_wheel_load_n": {key: round(value * 9.81 / 2, 2)
+                                 for key, value in axle_load_kg.items()},
+            "source_spring_rate_split": {"FRONT": round(front_rate / total_rate, 6),
+                                         "REAR": round(rear_rate / total_rate, 6)}}
+
+
 def bounds(node):
     vertices = node.vertices[:, :3]
     center = (vertices.min(0) + vertices.max(0)) / 2
@@ -181,29 +279,19 @@ def repair(package, ac=AC, install=False):
     susp = ini(data / "suspensions.ini")
     wheelbase = centers["LF"][2] - centers["LR"][2]
     set_values(susp, "BASIC", {"WHEELBASE": wheelbase, "CG_LOCATION": 0.5})
-    axles = spec["axles"]
-    for section, suffix, axle_set, hubmass in (
-            ("FRONT", "LF", axles[:1], 170 if family != "scania" else 120),
-            ("REAR", "LR", axles[1:2] if family == "scania" else axles[1:],
-             300 if family != "scania" else 220)):
-        rate = sum(v["achse_feder"] for v in axle_set) * 1000
-        damper = sum(v.get("achse_daempfer", 18) for v in axle_set) * 1000
-        sprung_load = max(0, spec["mass"] * .25 - hubmass) * 9.81
+    for section, suffix in (("FRONT", "LF"), ("REAR", "LR")):
         set_values(susp, section, {"BASEY": centers[suffix][1] - shift[1],
                    "TRACK": centers[suffix][0] - centers["RF" if suffix == "LF" else "RR"][0],
-                   "ROD_LENGTH": round(sprung_load / rate, 6), "HUB_MASS": hubmass,
-                   "SPRING_RATE": rate, "BUMP_STOP_RATE": 1000000,
-                   "BUMPSTOP_UP": .18, "BUMPSTOP_DN": .16, "PACKER_RANGE": .25,
-                   "DAMP_BUMP": damper, "DAMP_REBOUND": damper * 1.35,
-                   "DAMP_FAST_BUMP": damper * .7, "DAMP_FAST_REBOUND": damper})
+                   "HUB_MASS": (120 if family == "scania" else 170) if section == "FRONT"
+                   else (220 if family == "scania" else 300),
+                   "BUMP_STOP_RATE": 1000000, "BUMPSTOP_UP": .18,
+                   "BUMPSTOP_DN": .16, "PACKER_RANGE": .25})
+    tyres = ini(data / "tyres.ini")
+    apply_source_suspension(susp, tyres, spec, family,
+                            spec["mass"], front_radius, rear_radius)
     for section in ("HEAVE_FRONT", "HEAVE_REAR"):
         susp.remove_section(section)
     save(susp, data / "suspensions.ini")
-    tyres = ini(data / "tyres.ini")
-    for section, radius in (("FRONT", front_radius), ("REAR", rear_radius)):
-        set_values(tyres, section, {"RADIUS": radius, "FZ0": round(spec["mass"] * 9.81 / 4),
-                                   "RADIUS_ANGULAR_K": .001})
-    save(tyres, data / "tyres.ini")
     # The source torque curve already describes engine torque; avoid donor turbo multiplication.
     engine = ini(data / "engine.ini")
     for section in list(engine.sections()):
@@ -211,34 +299,26 @@ def repair(package, ac=AC, install=False):
             engine.remove_section(section)
     curve = spec["curve"]
     idle = spec["engine_constants"].get("engine_governed_idle_RPM", 650 if family == "atenu" else 700)
-    limiter = min(spec["engine_constants"].get("engine_maxrpm", curve[-1][0]), curve[-1][0])
+    limiter = source_limiter(spec)
     up = min(limiter - 150, max(rpm for rpm, torque in curve if torque > 0) - 100)
-    set_values(engine, "ENGINE_DATA", {"LIMITER": limiter, "MINIMUM": idle})
+    set_values(engine, "ENGINE_DATA", {"INERTIA": spec["engine_constants"].get("engine_J", 2.5),
+                                        "LIMITER": limiter, "MINIMUM": idle})
     save(engine, data / "engine.ini")
     # Some donor schemas retain this unused filename even with FROM_COAST_REF.
     coast_path = data / engine["COAST_CURVE"]["FILENAME"]
     if not coast_path.exists():
         coast_path.write_text(f"0|0\n{engine['COAST_REF']['RPM']}|-{engine['COAST_REF']['TORQUE']}\n", encoding="utf-8")
     (data / "power.lut").write_text("".join(f"{rpm:g}|{torque:g}\n" for rpm, torque in curve), encoding="utf-8")
-    gears = spec["gear_constants"]
     drive = ini(data / "drivetrain.ini")
-    if family == "dragon":
-        # DIWA first gear is hydraulic, not a fixed 1.36 reduction. AC has no
-        # equivalent converter: retain the adapted mechanical first/reverse,
-        # but use the two locked source ratios and source final drive.
-        ratios = [float(drive["GEARS"]["GEAR_1"]), gears["antrieb_getr_ratio2"], gears["antrieb_getr_ratio3"]]
-        reverse = float(drive["GEARS"]["GEAR_R"])
-    else:
-        ratios = [gears[f"antrieb_getr_ratio{i}"] for i in range(1, 7)]
-        reverse = -abs(gears["antrieb_getr_ratioR"])
-    set_values(drive, "GEARS", {"COUNT": len(ratios), "GEAR_R": reverse,
-                               "FINAL": gears["antrieb_i_achse"],
-                               **{f"GEAR_{i}": v for i, v in enumerate(ratios, 1)}})
+    apply_source_powertrain(engine, drive, spec, family)
+    # Keep the source torque-derived shift threshold used by this converter.
+    set_values(drive, "AUTO_SHIFTER", {"UP": up, "DOWN": 1000})
     set_values(drive, "GEARBOX", {"SUPPORTS_SHIFTER": 0})
     set_values(drive, "CLUTCH", {"MAX_TORQUE": round(max(t for _, t in curve) * 1.5)})
     set_values(drive, "AUTOCLUTCH", {"FORCED_ON": 1, "MIN_RPM": idle + 100, "MAX_RPM": idle + 500})
-    set_values(drive, "AUTO_SHIFTER", {"UP": up, "DOWN": 1000})
     save(drive, data / "drivetrain.ini")
+    save(engine, data / "engine.ini")
+    save(tyres, data / "tyres.ini")
     ai = ini(data / "ai.ini")
     set_values(ai, "GEARS", {"UP": up, "DOWN": 1000})
     save(ai, data / "ai.ini")

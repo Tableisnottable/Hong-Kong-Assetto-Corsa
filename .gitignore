@@ -41,4 +41,7 @@ build/HP1C/source/*_buildings.json
 
 # Map preview renders (regenerable via tools/blender/preview_hd_map.py)
 build/HP1C/*/hd_map_preview.png
+
+# Generated bus builds, validation reports, staged KN5s and backups (local only)
+outputs/
 build/HP1C/*/hd_map_zoom.png
