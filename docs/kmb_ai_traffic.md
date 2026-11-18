@@ -88,10 +88,11 @@ The builder reads all six installed cars and their default KMB skins, creates
 separate ground-centered traffic models, and installs them in
 `extension/lua/tools/csp-traffic-tool/data`. It keeps the original drivable
 models intact. Vehicle length, bumper spacing and turning offset come from
-the actual geometry. It bakes the default skin textures into the models,
-reduces distant geometry by approximately 80–86%, and resizes traffic textures.
-The six installed distant models have approximately 21,000–61,000 triangles
-each; begin with 12 vehicles before increasing density.
+the actual geometry. It bakes the default skin textures into the models and
+builds four progressively reduced distance levels. Native AC
+cars and Traffic Planner use separate model coordinates and distance bands;
+see [KMB bus LODs](kmb_bus_lods.md) for generation, installation and validation.
+Begin with 12 traffic vehicles before increasing density.
 
 A backed-up patch to the planner's `TrafficCarFullLOD.lua` rotates the
 additional axle nodes on E6M, ATENU, ATEE and Dragon. A second patch uses each

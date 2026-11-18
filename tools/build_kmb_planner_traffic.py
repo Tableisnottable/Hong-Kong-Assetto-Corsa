@@ -21,6 +21,7 @@ from scipy.spatial import cKDTree
 from kn5_tools import Kn5, Node, read_u32, read_string
 from prepare_kmb_ai_grid import ROOT, buses, audit_bus, write_backed_up
 from repair_omsi_bus_physics import AC, bounds, ini, world_vertices
+from build_kmb_bus_lods import create_chain, install_planner_switching, ensure_closed, TRAFFIC_BANDS, MODULE
 
 
 def textures(model, skin, size):
@@ -84,7 +85,7 @@ def move(node, offset):
         bounds(node)
 
 
-def build(ac, bus, out):
+def build(ac, bus, out, meshoptimizer=MODULE, reuse_lods=False):
     car = ac / "content/cars" / bus["id"]
     if Path(bus["skin"]).name != bus["skin"] or not (car / "skins" / bus["skin"]).is_dir():
         raise ValueError(f"Missing or invalid destination skin for {car.name}: {bus['skin']}")
@@ -128,12 +129,9 @@ def build(ac, bus, out):
     main_path = out / (prefix + ".kn5")
     model.write(main_path)
     main_triangles = sum(n.index_count // 3 for _, n in model.root.walk() if n.kind == 2)
-    lod = copy.deepcopy(model)
-    simplify(lod)
-    textures(lod, Path("__no_skin_overrides__"), 256)
-    lod_path = out / (prefix + "_lod.kn5")
-    lod.write(lod_path)
-    lod_triangles = sum(n.index_count // 3 for _, n in lod.root.walk() if n.kind == 2)
+    levels = create_chain(model, out, prefix, meshoptimizer, reuse=reuse_lods)
+    lod_path = out / levels[0]['file']
+    lod_triangles = levels[0]['triangles']
     collider = Kn5(car / "collider.kn5")
     for child in collider.root.children:
         move(child, offset)
@@ -154,6 +152,8 @@ def build(ac, bus, out):
                     "suspensionTravel": .12, "suspensionForce": 48, "suspensionDamping": 20,
                     "cog": [0, bus["cg_height"], float(-center_z)]},
         "kmbExtraWheels": extra,
+        "kmbLods": [{"file": level['file'], "distance": distance}
+                    for level, distance in zip(levels, TRAFFIC_BANDS, strict=True)],
     }
     # Validate saved geometry and dimensions, not just the in-memory editor.
     saved = Kn5(main_path)
@@ -180,10 +180,11 @@ def build(ac, bus, out):
     json_path = out / (prefix + ".json")
     json_path.write_text(json.dumps(definition, indent=2), encoding="utf-8")
     return {"car": car.name, "destination_skin": bus["skin"], "main_triangles": main_triangles, "lod_triangles": lod_triangles,
+            "lod_levels": levels,
             "extra_axle_nodes": extra, "translation_from_ac": offset.tolist(),
             "main_mb": round(main_path.stat().st_size / 1e6, 2), "lod_mb": round(lod_path.stat().st_size / 1e6, 2),
             "files": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in
-                      (main_path, lod_path, collider_path, json_path)}, "status": "PASS"}
+                      (main_path, *(out / level['file'] for level in levels), collider_path, json_path)}, "status": "PASS"}
 
 
 def patch_extra_axles(tool, backup):
@@ -242,6 +243,8 @@ def main():
     parser.add_argument("--ac", type=Path, default=AC)
     parser.add_argument("--output", type=Path, default=ROOT / "outputs/KMB_AI")
     parser.add_argument("--install", action="store_true")
+    parser.add_argument("--meshoptimizer", type=Path, default=MODULE)
+    parser.add_argument("--reuse-lods", action="store_true", help="Revalidate and reuse this traffic build's staged LOD models")
     parser.add_argument("--skin", help="Bake this installed destination skin for all six traffic buses")
     args = parser.parse_args()
     if args.install:
@@ -253,14 +256,16 @@ def main():
     for bus in buses():
         if args.skin:
             bus = {**bus, "skin": args.skin}
-        result = build(args.ac, bus, out)
+        result = build(args.ac, bus, out, args.meshoptimizer, args.reuse_lods)
         results.append(result)
         print(json.dumps({k: result[k] for k in ("car", "status", "main_triangles", "lod_triangles", "main_mb", "lod_mb")}), flush=True)
     if args.install:
+        ensure_closed()
         tool = args.ac / "extension/lua/tools/csp-traffic-tool"
         backup = args.output / "backups" / datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         patch_extra_axles(tool, backup)
         patch_wheel_base_points(tool, backup)
+        install_planner_switching(tool, backup)
         for result in results:
             for name, digest in result["files"].items():
                 dest = tool / "data" / name

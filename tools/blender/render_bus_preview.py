@@ -17,11 +17,12 @@ def main():
     parser.add_argument("car", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("skins", nargs="+")
+    parser.add_argument("--model", type=Path, help="Render an alternate KN5, for example a generated LOD")
     parser.add_argument("--inspect-panels", action="store_true", help="Also render close views of each destination panel")
     args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
     car, out = args.car.resolve(), args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
-    model = Kn5(car / (car.name + ".kn5"))
+    model = Kn5(args.model if args.model else car / (car.name + ".kn5"))
     texdir = out / "textures"
     texdir.mkdir(exist_ok=True)
     embedded = io.BytesIO(model.prefix)
