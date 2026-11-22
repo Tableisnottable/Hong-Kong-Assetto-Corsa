@@ -13,10 +13,10 @@ The buses use the original OMSI `KMB_AllRoutes_Full.hof` destination names and H
 1. Close Assetto Corsa.
 2. Make sure Python 3, NumPy and Pillow are available (`python -m pip install numpy Pillow` if needed).
 3. Double-click `tools/set_kmb_bus_display.cmd`, then choose one bus or **all**. Alternatively run `python tools/set_kmb_bus_display.py all`.
-4. Enter a route number or destination search text. If the route has several termini, select the matching destination from the numbered results.
+4. Enter a route number or destination search text. If the route has several termini, select the matching destination from the numbered results. The installed full HOF currently contains 1,674 route/terminus entries.
 5. Open Content Manager, refresh the selected car's skins, and choose `KMB CUSTOM | route | destination` before starting a session.
 
-Supported bus names are `e200`, `e6m`, `atenu`, `atee`, `scania`, and `dragon`. Use `--list` after the bus name to list all entries without changing the AC install. Use `--hof PATH` to select another OMSI HOF file. The utility reads files from the default OMSI and AC paths on drive A; edit the constants at the top of the script if those folders are elsewhere.
+Supported bus names are `e200`, `e6m`, `atenu`, `atee`, `scania`, and `dragon`. Use `--list` after the bus name to list all entries with a stable one-based index without changing the AC install. Then apply any entry to all six buses with `python tools/set_kmb_bus_display.py all --entry NUMBER`, or search with `python tools/set_kmb_bus_display.py all --query "route or destination"`. Each run updates the reusable `KMB CUSTOM` skin on every bus with the selected terminus. Use `--hof PATH` to select another OMSI HOF file. The utility reads files from the default OMSI and AC paths on drive A; edit the constants at the top of the script if those folders are elsewhere.
 
 The updater uses each family's artwork and actual panel proportions: E200/ATENU amber, E6M white, ATEE/Scania green, Dragon printed rollblinds. E6M NIS also uses the white OMSI atlas. It writes front/side/rear textures into `skins/kmb_custom_route` (Dragon has separate number boards). Route text and destination names come from HOF data, so availability depends on that file. Missing matching artwork uses a documented shared OMSI bitmap or rendered HOF text; Scania's absent Gorba library and unsupported Dragon destinations remain adaptations. Generated files, backups and source records go under the user's `Documents/Assetto Corsa/kmb_tools/displays` folder by default.
 

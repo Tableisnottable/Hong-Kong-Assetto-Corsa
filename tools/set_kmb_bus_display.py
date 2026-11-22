@@ -46,6 +46,8 @@ def read_hof(path: Path) -> list[dict[str, str]]:
         route, destination = fields[:2]
         bitmaps = [Path(x.replace("\\", "/")).name for x in fields[2:]
                    if x.lower().endswith(".bmp") and ".." not in Path(x).parts]
+        if (destination.casefold().startswith("vers date ") or route.upper() == "VERS"):
+            continue
         if route.isdigit() or re.fullmatch(r"[A-Za-z0-9-]{1,8}", route):
             entries.append({"route": route, "destination": destination, "bitmaps": bitmaps})
     return entries
@@ -78,6 +80,11 @@ def main() -> int:
     parser.add_argument("bus", nargs="?", choices=["all", *PROFILES])
     parser.add_argument("--hof", type=Path, help="OMSI destination file")
     parser.add_argument("--list", action="store_true", help="list HOF destinations without installation")
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--query", "--route", dest="query",
+                           help="select one route or destination without an interactive prompt")
+    selection.add_argument("--entry", type=int,
+                           help="select the exact one-based entry shown by --list")
     parser.add_argument("--output", type=Path, help="local generated files and backups")
     args = parser.parse_args()
     if args.bus is None:
@@ -102,22 +109,29 @@ def main() -> int:
         print(f"No destination entries found in {hof}", file=sys.stderr)
         return 2
     if args.list:
-        for item in entries:
+        for index, item in enumerate(entries, 1):
             route, destination = route_label(item["destination"], item["route"])
-            print(f"{route}\t{destination}\t{';'.join(item['bitmaps'])}")
+            print(f"{index}\t{route}\t{destination}\t{';'.join(item['bitmaps'])}")
         return 0
     running = subprocess.run(["tasklist", "/FI", "IMAGENAME eq acs.exe", "/FO", "CSV", "/NH"],
                              capture_output=True, text=True, check=True)
     if '"acs.exe"' in running.stdout.lower():
         print("Close Assetto Corsa before changing destination skins.", file=sys.stderr)
         return 2
-    query = input("Route number (or part of a destination): ").strip()
-    matches = [x for x in entries if query.casefold() in
-               (" ".join(route_label(x["destination"], x["route"]))).casefold()]
-    if not query or not matches:
-        print("No matching route found.", file=sys.stderr)
-        return 2
-    selected = choose(matches, "Choose destination number: ") if len(matches) > 1 else matches[0]
+    if args.entry is not None:
+        if not 1 <= args.entry <= len(entries):
+            print(f"HOF entry must be between 1 and {len(entries)}.", file=sys.stderr)
+            return 2
+        selected = entries[args.entry - 1]
+    else:
+        query = (args.query if args.query is not None else
+                 input("Route number (or part of a destination): ").strip()).strip()
+        matches = [x for x in entries if query.casefold() in
+                   (" ".join(route_label(x["destination"], x["route"]))).casefold()]
+        if not query or not matches:
+            print("No matching route found.", file=sys.stderr)
+            return 2
+        selected = choose(matches, "Choose destination number: ") if len(matches) > 1 else matches[0]
     route, destination = route_label(selected["destination"], selected["route"])
     filename = selected["bitmaps"][0] if selected["bitmaps"] else "__render_from_hof__.bmp"
     routes = [("kmb_custom_route", route, destination, filename)]
