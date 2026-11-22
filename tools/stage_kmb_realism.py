@@ -19,7 +19,7 @@ import numpy as np
 from prepare_kmb_ai_grid import ROOT
 from repair_omsi_bus_physics import (
     AC, apply_source_powertrain, apply_source_suspension,
-    ini, numbers, save, set_values, source_spec,
+    ini, numbers, save, set_values, source_ai_upshift, source_spec,
 )
 from tune_kmb_bus_handling import FLEET
 
@@ -49,7 +49,7 @@ def prepare_car(ac_root: Path, omsi_root: Path, car_id: str, source_dir: str,
     source = omsi_root / source_dir
     spec = source_spec(source, bus_file)
     data = car / "data"
-    names = ("car.ini", "engine.ini", "drivetrain.ini", "suspensions.ini", "tyres.ini")
+    names = ("car.ini", "engine.ini", "drivetrain.ini", "suspensions.ini", "tyres.ini", "ai.ini")
     configs = {name: ini(data / name) for name in names}
     original = {name: sha256(data / name) for name in names}
 
@@ -79,6 +79,8 @@ def prepare_car(ac_root: Path, omsi_root: Path, car_id: str, source_dir: str,
     contact_loads = apply_source_suspension(configs["suspensions.ini"], configs["tyres.ini"], spec,
                                             family, source_mass, front_radius, rear_radius)
     powertrain = apply_source_powertrain(configs["engine.ini"], configs["drivetrain.ini"], spec, family)
+    ai_upshift = source_ai_upshift(spec)
+    set_values(configs["ai.ini"], "GEARS", {"UP": ai_upshift, "DOWN": 1000})
 
     destination = out_root / "content/cars" / car_id / "data"
     destination.mkdir(parents=True, exist_ok=True)
@@ -101,6 +103,7 @@ def prepare_car(ac_root: Path, omsi_root: Path, car_id: str, source_dir: str,
         "engine": powertrain, "steering": {"inverse_turn_radius": inverse_radius,
             "wheelbase_m": wheelbase, "roadwheel_angle_deg": round(roadwheel_degrees, 3),
             "steer_ratio": steering_ratio, "steer_lock": steer_lock},
+        "ai_shift": {"up_rpm": ai_upshift, "down_rpm": 1000},
         "suspension": {section: {key: configs["suspensions.ini"][section][key]
             for key in ("SPRING_RATE", "DAMP_BUMP", "DAMP_REBOUND", "ROD_LENGTH")}
             for section in ("FRONT", "REAR")},

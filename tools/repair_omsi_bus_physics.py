@@ -103,6 +103,13 @@ def source_limiter(spec):
     return min(float(hard_limit), float(curve[-1][0]))
 
 
+def source_ai_upshift(spec):
+    """Choose a conservative AC AI shift point from the OMSI torque curve."""
+    limiter = source_limiter(spec)
+    last_power_rpm = max(rpm for rpm, torque in spec["curve"] if torque > 0)
+    return min(limiter - 150, last_power_rpm - 100)
+
+
 def source_forward_ratios(spec, family, current_first=None):
     """Read source ratios; retain the Dragon's AC torque-converter approximation."""
     constants = spec["gear_constants"]
@@ -300,7 +307,7 @@ def repair(package, ac=AC, install=False):
     curve = spec["curve"]
     idle = spec["engine_constants"].get("engine_governed_idle_RPM", 650 if family == "atenu" else 700)
     limiter = source_limiter(spec)
-    up = min(limiter - 150, max(rpm for rpm, torque in curve if torque > 0) - 100)
+    up = source_ai_upshift(spec)
     set_values(engine, "ENGINE_DATA", {"INERTIA": spec["engine_constants"].get("engine_J", 2.5),
                                         "LIMITER": limiter, "MINIMUM": idle})
     save(engine, data / "engine.ini")

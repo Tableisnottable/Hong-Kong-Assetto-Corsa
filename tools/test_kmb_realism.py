@@ -3,7 +3,8 @@ import configparser
 import unittest
 
 from repair_omsi_bus_physics import (
-    apply_source_powertrain, apply_source_suspension, source_forward_ratios, source_limiter,
+    apply_source_powertrain, apply_source_suspension, source_ai_upshift,
+    source_forward_ratios, source_limiter,
 )
 
 
@@ -62,6 +63,17 @@ class KmbRealismConfigTests(unittest.TestCase):
         self.assertEqual(drive["GEARBOX"]["CHANGE_UP_TIME"], "500")
         self.assertEqual(drive["GEARBOX"]["CHANGE_DN_TIME"], "500")
         self.assertEqual(drive["AUTO_SHIFTER"]["GAS_CUTOFF_TIME"], "0.50")
+
+    def test_ai_shift_point_stays_below_source_limiter(self):
+        spec = source(curve=[(700, 400), (1800, 800), (2200, 0)],
+                      engine={"engine_J": 4.5, "rpmgov": 2150})
+        report = apply_source_powertrain(
+            cp("[ENGINE_DATA]\nINERTIA=1\nLIMITER=3000\nMINIMUM=500\n"),
+            cp("[GEARS]\nGEAR_1=2\nGEAR_2=1\nGEAR_3=.5\nFINAL=4\n"),
+            spec, "standard")
+        ai_upshift = source_ai_upshift(spec)
+        self.assertEqual(ai_upshift, 1700)
+        self.assertGreater(ai_upshift, 1000)
 
     def test_triaxle_rates_and_static_loads_map_to_ac_contact_groups(self):
         spec = source()

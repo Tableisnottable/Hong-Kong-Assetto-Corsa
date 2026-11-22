@@ -88,10 +88,10 @@ Stage the driving settings from the installed OMSI source buses with:
 python tools/stage_kmb_realism.py
 ```
 
-The staged run records the source hashes and writes only the five small
+The staged run records the source hashes and writes only the six small
 configuration files for each of the six buses under `outputs/KMB_REALISM/`.
 It maps the OMSI mass, torque curve, engine inertia, RPM limit, forward gear
-ratios, final drive, axle spring and damper rates, and source steering radius
+ratios, final drive, AI shift points, axle spring and damper rates, and source steering radius
 into the AC bus configuration. The torque curve is checked against the local
 AC `power.lut` before the stage passes. Tire reference loads and suspension
 ride height use an axle-load estimate proportional to the OMSI axle spring
