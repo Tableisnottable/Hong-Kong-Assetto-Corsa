@@ -1,0 +1,444 @@
+{
+  "status": "PASS",
+  "scope": "Geographic source and regional extraction integrity only",
+  "master_roads_sha256": "850b5df42b665cc39787911feefcbd6c83361ec9a63da99feac708f0313082f4",
+  "region_manifest_sha256": "e08049b22fd666af97fcfae5dc6f8e245c66f869664f59f5c59558b10cd5a95f",
+  "checked_regions": 61,
+  "checked_context_road_parts": 94162,
+  "checked_intact_context_building_records": 140482,
+  "unique_boundary_portals": 1663,
+  "regional_length_rounding_difference_m": 1.5974552687257528,
+  "per_region_file_sha256": {
+    "HK_E816_N834": {
+      "roads_grid.json": "571e4ee8e62b9082a8f63f2008315723244c9ce88dce91f751cd7d2d4c977845",
+      "building_footprints_grid.json": "50e8e541c0de033858d234e9cf899bb8a05b2ceb45e4cd65ed10856d013fceac",
+      "boundary_portals.json": "b5cd0d699fcb7643e6c4947152efa6b1e9fff0afb9ff0831e7626edd573acad7",
+      "terrain_5m.npz": "3014fee288d9b605451853cec9645d3fc60d22df3e00593492b4b041bb606863",
+      "road_review.csv": "a834eadf19218f95d83bd5754ecb24b51c5a7e361ba59cc940c485dc7d67ddd5"
+    },
+    "HK_E828_N810": {
+      "roads_grid.json": "8f060c308be9f87364e875133301e5e53bc972648fd508ef86f29b695142d1ac",
+      "building_footprints_grid.json": "5fa84e4d50b239da81d97504c560370af4dbcff586fbbaaab55cbf4bd202ad9c",
+      "boundary_portals.json": "8f92f511a1aff8cdff3ea6c28503c3bd540f49039f6738b30882db23ffdfa22d",
+      "terrain_5m.npz": "89a44b99bffc4d40570fe76d96e8d355175c5e25fbacf35fe90b1f6ff55ea4a8",
+      "road_review.csv": "e04672e81a252bda2444eb26d08393bf1d1ce7abe46b371b19844675f8d46d1f"
+    },
+    "HK_E828_N822": {
+      "roads_grid.json": "6b69b7ab6b02eb7e2e2cf3f152d6a8f61b9990e88ff8176ce4ac6d34bb75aa86",
+      "building_footprints_grid.json": "d825be3dc6a1bfcfc0c0d832db2b8b53cc923c6d9c530b5a23f2e90c57d0df4b",
+      "boundary_portals.json": "8cc440cf2fdf7301b3287b8f6f1a77bfba15269e4e62e5d5b99bacd79fa60d7f",
+      "terrain_5m.npz": "2c4b17a82caaf2e0ba2987cc364197dc846937052aa7228c77dca9ce341dffc5",
+      "road_review.csv": "2a7405b2b78a62a258413b667f16723731a6815910b7881059184281ba8e6eb4"
+    },
+    "HK_E834_N810": {
+      "roads_grid.json": "ee2aa412d156e3bc41d16040c573a56c6638c876135bb11e70554050ec949776",
+      "building_footprints_grid.json": "36874814969bf85f0d5227e9f0c5526c741e0f72faafcc3f795cb8f65e1072c8",
+      "boundary_portals.json": "1ecbfed88f8807ca9a122ca2c76388aeddb43ae48c790df8203d76f27af2713f",
+      "terrain_5m.npz": "ec448df0875859e36e7b27beee2c5f8dc0039801df6a8d675c553f56ea536859",
+      "road_review.csv": "acae6f6f23bfec1dcabc088ee7a90a33c770fe62e8645e8679e9cfdd846c1d62"
+    },
+    "HK_E834_N816": {
+      "roads_grid.json": "4da736bfd35501d4f6ed0ffdfd34680113d0f138ff63327dda6c98ea73e741c5",
+      "building_footprints_grid.json": "d55590d16bbb442d0301c3a6909dd28363ea7fe4f8c0804216188b92c04b1d89",
+      "boundary_portals.json": "98be70bf6562e07f2dcf65c516380ccf7643d73e85d7f9bf0f855e090c864e93",
+      "terrain_5m.npz": "4e82e19609e9e472e46b26888145bd48718675ba909d23c12a5dcace199c2928",
+      "road_review.csv": "a4d0b03bb23b73cfc24fe167040dd6be8be6d7a624ffbf5e5e261fd5c023c1c4"
+    },
+    "HK_E834_N822": {
+      "roads_grid.json": "b9ab43fca3f4479870e26527011a3b9ceae9b382c827cdbe07fd89df68a66e0c",
+      "building_footprints_grid.json": "0262ff076a8126966e38afa3a1a70bc7ec24c4db02efd9141517fc7345945eca",
+      "boundary_portals.json": "ced72a689e8fd1bc36a778b398d20ed3b171e47fa9eb37e7012816d303dea700",
+      "terrain_5m.npz": "db5e00eaa67772ddb036f043aeb0a6e16e2a5cebd4f5a4abe149b7bb13371e5e",
+      "road_review.csv": "ec64e27a908ee83fa6053c38083b8206c7233576a6df74faedce03c8659c304b"
+    },
+    "HK_E840_N810": {
+      "roads_grid.json": "a683693e92303d88b915b8542ff6ccd24e70405fb028111f1b251ba25b4b582e",
+      "building_footprints_grid.json": "4f23de58b51f6cc4904c40e42124c3879a632b7428f113f6f292f9c8cd983d13",
+      "boundary_portals.json": "e0ed3b6d0209e12af74baf6ae2885a0d7da2662bc1f8c252e1044aa360a01d1c",
+      "terrain_5m.npz": "0f760e0610e420492f1382ea19a07540d83468974712016043cbe1a6b4c1c457",
+      "road_review.csv": "bef2cb1b5bdba683dfba25a62782a107ac32c348ce921030aeca15326ff5791d"
+    },
+    "HK_E840_N816": {
+      "roads_grid.json": "5ee53964fb934b1bd24f529f5f1f1cfde2d0824b6a848296862004a90b0cd114",
+      "building_footprints_grid.json": "40b309d4956a40b81db218a57cc0082d745d102ac3e8b63dbfcb0e289d858902",
+      "boundary_portals.json": "9379e68f3ff138868edbf1ad2921526ad9f391b9c85a3a6a58b7ef7d389f7247",
+      "terrain_5m.npz": "6f80043e12e6f089b672f12d222151015456a7d5a23eeba40e08736edc4562ac",
+      "road_review.csv": "da5d8ab4ff751d048186c56696ac5175b716fee445c925bad128ce523896068c"
+    },
+    "HK_E798_N804": {
+      "roads_grid.json": "ff9ad737de8047d1437df1fa9c2474a94a48ac2404c3cd6f2b773ae51643a7d4",
+      "building_footprints_grid.json": "46be0b0c40af34fbe75a57f6e4c5b40f9bbb656a3e0d176887b1f2da353fe8a5",
+      "boundary_portals.json": "1d8848d02e515288bf3ade142e01ebf45f62a04663e76bf28d77a281f6992692",
+      "terrain_5m.npz": "ad3a622119d941635380e2844985607f17e6f74bbd02437a0c1ea7723080bc38",
+      "road_review.csv": "598d0baab92613d76afb2e69354163869121dd9df74448ad876e499796db5bcf"
+    },
+    "HK_E798_N810": {
+      "roads_grid.json": "1404a8df91eaa18f98c0d9e5c3e692e596b7818b7ed67a389f00549db108f26c",
+      "building_footprints_grid.json": "5cef278144c3fc52bb829a111dd74d0f6708358db9b8c33576c35eddc2914414",
+      "boundary_portals.json": "a9e510bdbe698f7c1dee5a30c9d8d08ed60454f3a35b722e1dbb4472a55d04bf",
+      "terrain_5m.npz": "0dae12ddb8d3cc18bbce320edd841436f7a52ab71aeef64d0915f3a67d5910e3",
+      "road_review.csv": "243812bb12ebfd1a08fa722fc437c7e42b56c7195b3a39b00d4954e1b087e69d"
+    },
+    "HK_E804_N798": {
+      "roads_grid.json": "1c2fdac40f2191dbad99a4af0b9b4ff5ba320c12f49f316150ca0a3963d429c0",
+      "building_footprints_grid.json": "0b1b9c0b95cf166842d08a966cbf31b8ece712aed4ad8e878f2d90d80e55b28d",
+      "boundary_portals.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "terrain_5m.npz": "c96f1e0db6d295d316f47da5ac00c938b3c9d564a9d1f374d1a24a193c5f1e30",
+      "road_review.csv": "d4df20c1b60d3459564907abfc13cf12172d9d6487aae6515d86996bad0f9e33"
+    },
+    "HK_E804_N804": {
+      "roads_grid.json": "a1cf7c9985d12074792909ab19742f32aa131cd87d84cee3e47ae7be802df61a",
+      "building_footprints_grid.json": "1c03338f9717525bff410b9b3e20fce32e80b2d5afd0d1baee9bd9f005939150",
+      "boundary_portals.json": "7f17f1f36837cbc929ffce7dba09f2959d8f784ddb4941f16eecd259053f372a",
+      "terrain_5m.npz": "879b65269506bdb70a538317030936e0d12eb21058d582349d226a09290ea955",
+      "road_review.csv": "9e631f4a1c1c8bf8f6c0d2cb3f7a8b880249dbdbbf066765967e116ca298b142"
+    },
+    "HK_E804_N810": {
+      "roads_grid.json": "735081a33d0dec8dc33948346c345bd713d545442bd5c43339f677755ac7b6d9",
+      "building_footprints_grid.json": "7320c76a33ca799ccfbbf901549728a8767da41f469c53f5ab7443ebbf3d3fc2",
+      "boundary_portals.json": "bc88cb453f9d3aa0ffee2142d1ebb0cb0744c83b4f174b41fb3d53809f71fff3",
+      "terrain_5m.npz": "2f2cd71f3400c26036aa6e3ff8bb6aa4afbc569ddfa6af94b3c01421680e8f70",
+      "road_review.csv": "b26963d9a119aa8953866e5b4c211956da5416246365b336a471a406ce2344ca"
+    },
+    "HK_E804_N816": {
+      "roads_grid.json": "4266b5e8d59d3ba27cb7845ad4b8640aa2b5ca9b9a739219caded1a98e06137a",
+      "building_footprints_grid.json": "5ae8b09e7ffee09c3a76848eb9235d43ca4d7a86dc8f56f02ede77fe6e168302",
+      "boundary_portals.json": "bc6658d1bd0c8ef4e4b1b029b4a50e964f907bfc969f2dec3b52574b8b70b704",
+      "terrain_5m.npz": "9ad35b525c8f786c39e95edf9759b5669b7bae47f10e53df81a89c6afb3de085",
+      "road_review.csv": "13c7775a143c9e103ef5753917f18deb7daffe980db0fe7534837821c6e91046"
+    },
+    "HK_E804_N822": {
+      "roads_grid.json": "451f09dcaf3d78006067bff49e9ed604b7978f9e2af3dd98016790a21d4326a7",
+      "building_footprints_grid.json": "21f0451a200f079e09f3cb49b7d148d1261f497ca4b43fcf0e22aa4f261bb578",
+      "boundary_portals.json": "7f2bcde7d0c5514b6f0425ecf1830d88dfd46e4a84c29b17da0edd80cbdea543",
+      "terrain_5m.npz": "f89f9798eea92b92dbdc83015f5bd2314d975af847c7a19b39b38c89328cf3f7",
+      "road_review.csv": "05d6ab4cbeaa64fbaf8dce743ba5eb8ceb15cfd1d06374069c09389674065809"
+    },
+    "HK_E804_N828": {
+      "roads_grid.json": "1da644c74526c7b4e04e0158e6e1c90ba9a8692839e72c6752d2f8fa4f2e4a8f",
+      "building_footprints_grid.json": "973d83f1627d9e677f59b42a453142b1ac109765aaeaa0712c260465cb9b5cdf",
+      "boundary_portals.json": "69be1c960ae55b435b20f10a0f14f72945dfc0449aa5fa8ea09fb30b31541f58",
+      "terrain_5m.npz": "801fee24980b3033935d077f3301793ecbacc7afaeb3d4683cb1025924a3d227",
+      "road_review.csv": "4a5fda21f14d9ca12c315fd8aa5d432b218890daa6b2c166b29f928d556f9937"
+    },
+    "HK_E810_N804": {
+      "roads_grid.json": "6a2b3dfed7ecefde5876777671acd9bdb46e9dd0468c6d9ce977c2e5e49e98bd",
+      "building_footprints_grid.json": "221e98ea60b0a8c3e028d368ae14fcebf994e3073fef3aebe4fca422635c6d97",
+      "boundary_portals.json": "6fadec7a051ba3d7c74a19bb528c23c789184a5c60a9237c1ccb7c2340cf1c0d",
+      "terrain_5m.npz": "d76abd0e37b0d97db530c31dafec28d2281e4bbbc17a0d422a1666f4581083d6",
+      "road_review.csv": "35712f792356cbab47e2ff4289e2cd47ac9bebd9f9b4b239ce04e073aec406ba"
+    },
+    "HK_E810_N810": {
+      "roads_grid.json": "dffc4622b2e3893bd865d219255437e1548cbce65ec04b5a00c2339a7c07bd31",
+      "building_footprints_grid.json": "b728b297db0f979ac74f1530db656b9383c57edf58ca4f698d8d4723b3cf51f1",
+      "boundary_portals.json": "c4586599b1385691790b8b4205e17b4a941fe3b530393ce54d793729fb8fa47e",
+      "terrain_5m.npz": "85afa047ad8e745af1bfa73734032be45dd5ae03a7a65d517801a3440203b6e9",
+      "road_review.csv": "9527ad73ce38250e1802b013db1b91e762fcbc9cfba9bd551e771f778567f2cc"
+    },
+    "HK_E810_N816": {
+      "roads_grid.json": "ceee353b8ee560f430660feb047bdd31b301801011e5fadd6b2c42ffd2602a5e",
+      "building_footprints_grid.json": "579af9b860003ae428ee08c83d1740ad8a22e38bdd8ff4bc1376e33f2a05e53d",
+      "boundary_portals.json": "7f388a58b36c4e10fb420fc1a8405e0daa502c11894cd086a4a302275c0a0fe5",
+      "terrain_5m.npz": "06c0f5542f3ec7b11e8ce47e07e2fb906be8f7b2756994253622fd2e032de3c3",
+      "road_review.csv": "cbda87ddc55f3d26427dbbf94f0800512859eb0b39c6790a716d6ddd1d7d19cc"
+    },
+    "HK_E810_N822": {
+      "roads_grid.json": "c53265b5925550cafd9ade46c0a9627c7b5ea889decf05cf7d8893e269f4010d",
+      "building_footprints_grid.json": "1d02441a4d0719cbfa337073ed257522f43509f93a6973621be1822663963657",
+      "boundary_portals.json": "3347e4ff16e9f5fbcea63241dbc0d9fb38da269faabaf64ec16bfe2f0a62567f",
+      "terrain_5m.npz": "092eefd188286f68bb9039f537e970d98da4c6c9e6dfd04247fa67647aa9ece4",
+      "road_review.csv": "5ce1e1ed17a7cfcb1a8dd8ae25c8ce3c1cd4877bdba87fa84f59039dd82f77dc"
+    },
+    "HK_E810_N828": {
+      "roads_grid.json": "59946b3e1d8ad319a0f2f6dbc271c0648081175fc72a8c773afb4eac85f0fd6d",
+      "building_footprints_grid.json": "ebd2bdb2c7ff8f9bc12e7db69c7daf361f519a583210053d26af6c17a328b79c",
+      "boundary_portals.json": "ec411bd194ede65ca29bf50803cdbea2477e59bae6637b21691da57e81c03d33",
+      "terrain_5m.npz": "ccda468b6db600c5b1ff6308c93fa0e9f78242561a1bf92e5216f787d6b73f38",
+      "road_review.csv": "7b67a7a313dae5934c888ae51b62de1bf1dccea7c8ae9923b57b94d245b61af2"
+    },
+    "HK_E810_N834": {
+      "roads_grid.json": "651d09d23b8f25d4c2847e7c076d41e99ec08125a009edff7fbde3f54b52f87b",
+      "building_footprints_grid.json": "f2e5fd5aa99b11473fb82159feafcfc21ec0de6606f583fbd45dd39c350470ba",
+      "boundary_portals.json": "0f6130163637945b451a92eb509e7399df6c2e41d2c93d84b42e66666071ee81",
+      "terrain_5m.npz": "d08da67cfdaca6a007effa3e92c2b46b2a2fcbbaaec4d6a1f638b6c9fa3083fb",
+      "road_review.csv": "d95592eabc3272f53fa0d688175566cafcd57d0697b1185ded5030ce16cac557"
+    },
+    "HK_E810_N840": {
+      "roads_grid.json": "acfd824aad73c21c5a20f938e09c1054ad8f6d396fa9298b91498cf9fe6c216d",
+      "building_footprints_grid.json": "625dac19d1dee9e39d6586dd83da0a7e053b7dc085f6f1ed86a3a650c2b3edb3",
+      "boundary_portals.json": "7387320f03db7c0cc06a7743eeb2a17e8dadebcd1770d39dfad3c36bb48999eb",
+      "terrain_5m.npz": "4de81cbca5f5f543302d2eb21a48e85a38d5df6c40a8b0abfc43677d08cf8e9c",
+      "road_review.csv": "25735d02f6b697b102ba72c76e010b65e83aa787b05b81555a9a59bae215da36"
+    },
+    "HK_E816_N804": {
+      "roads_grid.json": "05bc590f2a812e073b5c0011c407989fe3d0b187e1d425907776b08b85e3cd13",
+      "building_footprints_grid.json": "9ea71333cc1c344337c366e7047dfd1500832f5ebad42deea64684f5bb6820c9",
+      "boundary_portals.json": "07d9f66b053273cae2c7712cb563dc890ef94b3910d9700de3e06df5bfcad7fe",
+      "terrain_5m.npz": "13067e7a1cce5c1243355bfedb8342441d3f6d90a481d862e679e2e057d4de29",
+      "road_review.csv": "d5e511a4d259d717959c5750ac781cc0f658811add009589880f13f0783829f3"
+    },
+    "HK_E816_N810": {
+      "roads_grid.json": "b5e6ae3aeddcacc24155bbb0cec6cf17da88daea6fe997e947936d75d0baf33f",
+      "building_footprints_grid.json": "7fbdf602b059a36288d199c3aa72fb5e07f01dc1c89468de105f9318d29ea9e0",
+      "boundary_portals.json": "559339ed47205d49c5a500a48adbe29a02d4f653b238defdfc3cd38ddd22f85e",
+      "terrain_5m.npz": "6cc791a913da67936ba069c738d239f3330e9da7a57e7565a1c788a8e0563cc4",
+      "road_review.csv": "5114824dfdb3273b9207a7c89611bafc3ed1a3583d572b4b4c645e0e5702f35b"
+    },
+    "HK_E816_N816": {
+      "roads_grid.json": "391ed9084928dd72711db4f92a1d4305a9c926cf483ed95b1bd8bd6c59a97aa9",
+      "building_footprints_grid.json": "19aa04ac2b03dcd7c15fa0716dee4d0ff5bc613fd006041a6ab0a3781a75b12c",
+      "boundary_portals.json": "e9cfad880b6666abc1a73ef0f1ba27304d897d0612c0fd702fad3092bc4a758d",
+      "terrain_5m.npz": "f9ebe67d0724653b0cdd7ae3139a0cecc56bd6ad3c99ef6d0d0165f6552fc98e",
+      "road_review.csv": "f54b138ed4b47e4585b954af02712df69bda7ff557621f367f91863e81207cae"
+    },
+    "HK_E816_N822": {
+      "roads_grid.json": "f312fa7b091305555d1649dea4b44f7c4dc2baadb0b729efc228be1cd07ff21e",
+      "building_footprints_grid.json": "0448c446b766e3b33e0eda44f5ec885b04b88b58fa7507669a1bf11337e61352",
+      "boundary_portals.json": "62c71baccbc1cd7fcb6f6be1610c4b5eaff62b6d1cac4728fd7a8e41c45c1c28",
+      "terrain_5m.npz": "b8699237f5b56386a33c29aacd70dbfb53e1388434975bac2403b319e244aede",
+      "road_review.csv": "ca03821353c56a67ff07bc7b9c86700adfd04c27ef7ac0853ec2df74d94ddb92"
+    },
+    "HK_E816_N828": {
+      "roads_grid.json": "f77023ff1fe78a7d60f6fb40a05bc67fe58d2e771fa21936e7276b2e91179323",
+      "building_footprints_grid.json": "c09332f01b86013d8a37c7ee6656906df9721349300c71283781b6820f8050cc",
+      "boundary_portals.json": "085fb2ffb158ebadf89730fc7c62e0d9e314d35e60bc8ffacde37ca870fc1202",
+      "terrain_5m.npz": "cc7ebcf5ad533d1603640afcb3e83c5c36a0542b64f6fdfa498b4870066aaa9c",
+      "road_review.csv": "3cc2daaa30fa5833fc1d7752831ea4e9bf6ed2ddba06ea73451ad20abf74748c"
+    },
+    "HK_E816_N840": {
+      "roads_grid.json": "6e79da9c7ecfc7b1bbf0ab2eb1a22d4ff6787fef8ba25c4a4ff3a86a4f16b71e",
+      "building_footprints_grid.json": "cf67fe4dd20c42aae64277a427b1e0e01fa3a7dbdbf0d74c71a3eaa0bae6cbf0",
+      "boundary_portals.json": "5909869caf5090e4fe7f8d3bab41bb609e5f5e191441a723558de8863963b852",
+      "terrain_5m.npz": "40bf6a61049e2ef28cc2690117f7b241cd2653004985828d58f337aa73b99105",
+      "road_review.csv": "33a7dce304db0f62a9d90475c5ab75468d6d6229d46cda2315d924dc6bebda2e"
+    },
+    "HK_E822_N804": {
+      "roads_grid.json": "fdb9afc918197bbe4275c8f498ef8f10a3cd29eea5a79f3aed95ec4a5a40ec21",
+      "building_footprints_grid.json": "539b423b6e2fd4288a457edb7a8d48d3af2a195081d479e0de9dc7e82da8c717",
+      "boundary_portals.json": "07d9f66b053273cae2c7712cb563dc890ef94b3910d9700de3e06df5bfcad7fe",
+      "terrain_5m.npz": "87a8fc5f52fcfec0b3dbe0d2c966f58dfb108dff7bc1655fd80532c08b794669",
+      "road_review.csv": "e44c3f6cfd97757da5895cdc7fafbd180a646bdc2ba5384e5c7f366bc29ae196"
+    },
+    "HK_E822_N810": {
+      "roads_grid.json": "873f65cdd23fe4a1f4ef500a60c8e9336641bde9db3893d7b8b52a3ad7f51f05",
+      "building_footprints_grid.json": "a35d1bd48a5cf649f2f30cfd05d0640ec872c5bcb462fb0cf2d26a511269e947",
+      "boundary_portals.json": "900d48b1339be069f90b4e4e3b3b6a5abfc5864b7178b69b8e4c647f2972bdfe",
+      "terrain_5m.npz": "81816954265348aa9b126e4e3b7d512039cc2f327cfc7623ba3100e471fca98a",
+      "road_review.csv": "a72755260918c65d71b1949acd169c21d4174bdfc5fa49aa2db78b8f0353eb14"
+    },
+    "HK_E822_N816": {
+      "roads_grid.json": "47e073630a95b86571cfc9006c2b3cbeb33c3031a6556582e79c9a5a9e9181ae",
+      "building_footprints_grid.json": "c12d4637d0bd23f994e3749fa13eb09e0198d58b56a89f12424f5170e7066e78",
+      "boundary_portals.json": "ebda46a6170333a1e23c0716cbb7fc3f9f549199c69f7c61d6bd0ba5a9150bcb",
+      "terrain_5m.npz": "98dccfff71d5da6dd59e4d55b4b474acf3f7e7b61ce9093186a4c91172eaa0be",
+      "road_review.csv": "bce071aabc34313b1ea0275d18d9a507306f2ac014d337e971a6764c86cf55b0"
+    },
+    "HK_E822_N822": {
+      "roads_grid.json": "1dd9be3b447a24d9af7ced2032bb3596ed6bef80e9cdf993cf5a0f85dc3f1497",
+      "building_footprints_grid.json": "935e45abdd8384b910dd983fad050a75805ba1bf9440d71d7c246e71a9541839",
+      "boundary_portals.json": "4bffcd7b4d9cf9acdaf1b1023b47cb2cf890d59b335c290686f91541bd7d6c96",
+      "terrain_5m.npz": "4fa4b6fcff6c20b3517410da18a24843b9f096aa12fcee0d16c82b3205543ee3",
+      "road_review.csv": "1c15c09b9d5967ad4f5054eed655e29d0f637f67a37e4c80a5f1fe6e9d9c18db"
+    },
+    "HK_E822_N828": {
+      "roads_grid.json": "0cf5f1b81a587e56e9136e50aba534b066c26e205619199da4e6542c78ecdb52",
+      "building_footprints_grid.json": "fdb30a825bd7388497ec174a284a67ce1cec4da1c0db8c98e37cc37bb820be61",
+      "boundary_portals.json": "2224854ffbbd8289d726b4fa04681b00804d59b963258432b1fe270813400787",
+      "terrain_5m.npz": "652a9bb8fb32585e3e4796477f254f76cf33c99952be2213859c60826f3c4375",
+      "road_review.csv": "83e0158f857a331d2cc1633a97106acec607b14ca61be855c0d66297ce164ada"
+    },
+    "HK_E822_N834": {
+      "roads_grid.json": "205896929eb48fbe456cd515dc75b07728a24c4965117e46afb84f241630ff24",
+      "building_footprints_grid.json": "504831424ec7f635a264d30841c34d0a2bdf72ec7a0366b2479d1e974538f1bc",
+      "boundary_portals.json": "6c487767327551a4843783b7a84ec8dc589a6082800f31625bab2bd49aecdfd8",
+      "terrain_5m.npz": "87db0c12d095ca1f43339602a7f61557b5bfc949e32c7d63a43b421fa12f3eb2",
+      "road_review.csv": "bcf2c58b41667931978dde406f8950ac2ea65e423e2463c3a8e846580ee7bdf4"
+    },
+    "HK_E822_N840": {
+      "roads_grid.json": "3532b597cf2155258bfb41aa9d00cbfcec88394e73818d092b672c10203265c1",
+      "building_footprints_grid.json": "a10f4b3987c0c0a56aa4622f48024f06ad9fe7e497f6e3b117e4c5a913911d84",
+      "boundary_portals.json": "8942ce52ae13bf688442d20c543609a039ddda01944570ef4e53df6434e79992",
+      "terrain_5m.npz": "275e6e3ea85f1a49cc6d3d618ef74fdbf6d379675f6461500743dc7d3e460ac5",
+      "road_review.csv": "9b3d0bd21761df9153765eee388cda54379fb3ca227df0cca74e213c8cba8e5a"
+    },
+    "HK_E828_N804": {
+      "roads_grid.json": "1031540ec7912925c6dd1a00302b73c8cc2f8528b5e7f0cbefd0f1c7abe70cfe",
+      "building_footprints_grid.json": "e18023c7af83c99d85746fc4480f29c0d7806ce8d49a19b1eb0fbd17ce603a7b",
+      "boundary_portals.json": "b89e7542d1bf079a0b9d72cbe670b839e9edab7a9116fe08cf6300416b8be822",
+      "terrain_5m.npz": "2b36c984b6c2e74edca10bb6d1fa2f9f534f1b2f0dd7681ce74bde4e6f6a30be",
+      "road_review.csv": "6101157e7f94a82f46b48446533b5b7c1c922417575b7db58b6b8c7540168af0"
+    },
+    "HK_E828_N816": {
+      "roads_grid.json": "23e0490d5418b20679f0fede1b9ac292b8f080f74ee159b5df3ea04542c4d53e",
+      "building_footprints_grid.json": "3bb708fc473a34ad9ef811c3475f90cdeffed20408e647ddb86697efc4187e47",
+      "boundary_portals.json": "9d52ccb2ec3260e80fb3bff09aa68ecaad788ac0470889df8bad1ef0e2b20f49",
+      "terrain_5m.npz": "65c3e0c8332791368e8c6272971caf8b479865e6e0964c102f93b9c8c1269e4a",
+      "road_review.csv": "7a3ba2e431e4ba7aa5d6adf3fed65dcaef5c0a40464df690497411ad33a71063"
+    },
+    "HK_E828_N828": {
+      "roads_grid.json": "0883098eee685d29b05277728155db5a318b9039a43ae4c5b4ee2efae32354aa",
+      "building_footprints_grid.json": "f3f06f76ca54f71bd1daf98180adae57bac4005d0741ba8ca7e602d5f33b5f96",
+      "boundary_portals.json": "69c729be952e592ebeb7c47892121efecb858328b04d891b6abd0a3dfeb35770",
+      "terrain_5m.npz": "04322789ae07ee817fa33f5f79ef403d224e9f59be1f4e3d90a59a7c40296e4a",
+      "road_review.csv": "bb439017ed769a1d05a904468d502b200f1617af87b19e4919337dead792ebac"
+    },
+    "HK_E828_N834": {
+      "roads_grid.json": "d2a06585f831699a02e0776be5d3192e2ddd20e4f6efbb0262bc980b869b0fa6",
+      "building_footprints_grid.json": "cc71c4e534f924497120e64075cac00c6ba5177cd6123fd2f71175c04601ec55",
+      "boundary_portals.json": "b82773323cf325b5e51dcd26744f4eab71112e9693f6f3a951f4d99c3b83e303",
+      "terrain_5m.npz": "c275ac54e8759a8b41b92d5a34a9be9d0571331049ba043b3072313dd629241a",
+      "road_review.csv": "273b06b209af6124f88965577e7031d942f0be6c7612c44d00f7386679599730"
+    },
+    "HK_E828_N840": {
+      "roads_grid.json": "51c26a3b6c348e158a2139a9ebfb6c9700778fb9a4e0f58676d68325d11aae76",
+      "building_footprints_grid.json": "f0034c1e8b24b7cab6ff97cdb8bb814bb8ec5d18568e91ca016c65fcbe6ab18f",
+      "boundary_portals.json": "4e20cc767850e3ecf2f7319b8ba18d8a2508e3f9e6c9fcdab1a3fc089294a699",
+      "terrain_5m.npz": "b4b3071813c78bade827e64b14639a443f8b745e286c684fbf839204a3494b91",
+      "road_review.csv": "e5b885432a9ff3adc82a7c74ee9f88c67dd624e31b4aa6f27fd6134d55fd4b98"
+    },
+    "HK_E828_N846": {
+      "roads_grid.json": "ed20c62b8c18c58c1b1000067eb665f2f8004d90ddfbc48cef08f91fa4619b31",
+      "building_footprints_grid.json": "956480261f5dbc4ceca70ca62302a20f1d92e29c367b89eec60ebdd1e7be9d58",
+      "boundary_portals.json": "6ec588066ef13b88831baa50587b5ab020b75a9a9e313ba6152c07e69f1c9278",
+      "terrain_5m.npz": "e28656fbb381cbf88a0a64819597529ae1a89e6ee2bfd73c253c373c4e8cf642",
+      "road_review.csv": "0d265dd057c6b886b92e3450f4321836ae67306d670f2ce23bd5537a0ea3c0bb"
+    },
+    "HK_E834_N804": {
+      "roads_grid.json": "5974d27169d35fd3d191e05c99a9c6e8e2bf09892245886a18958d6421e2db7a",
+      "building_footprints_grid.json": "531dbd35b42fa2563f45c1ef262569c022ee3b32879448f21e6e03dd0960e772",
+      "boundary_portals.json": "b051dca5b5b3a97a8b07e8cda6d3bf2cb70d7912ac39a1ba6c80a31cb99464b4",
+      "terrain_5m.npz": "d0b8ebcb774adf6426cccb22c15584925610cf5c68e2cb5a280e05a4fa2e6435",
+      "road_review.csv": "c73da9e567f5cd7d07a0441e12900c95e3f86b6b7cc81b9d35cd5f0479f070a3"
+    },
+    "HK_E834_N828": {
+      "roads_grid.json": "8bcaf6dffe364cb0de4ddd4c74d39a494738b8afae5c9ee43b49fe702638a6c2",
+      "building_footprints_grid.json": "a0adeec9a0d2d6ddf2f40fcc447cd6a6ac7feb9c8a24106c4fb5ab79a8d9c73c",
+      "boundary_portals.json": "74d7e3e026e67eae75db4367b44fa12fd12184fbd834760f3af33a3016b25f20",
+      "terrain_5m.npz": "475ddd46d38968f1e1f74c0cfb61219a5a409019365112b01a94b46877a93ebc",
+      "road_review.csv": "151b91676aef3724b6248f09cb212b54c8eb9f6d10a95334ecdead0635268d3c"
+    },
+    "HK_E834_N834": {
+      "roads_grid.json": "9590cc1571718781a4e09620f6543a2706bfa8fd224c9ac1bab9661b24c049df",
+      "building_footprints_grid.json": "0471eed25745a7557ad85995776e446e419929812f232f723221cf38e1fe27f5",
+      "boundary_portals.json": "dda087230c768cfe8110c62fc39ada963cf3cdd49572070e06934fa0e9fd2ab5",
+      "terrain_5m.npz": "a71ad46ebeba355485560e8368109b3be519e78c3da604434cea2b0403e7a5d8",
+      "road_review.csv": "e619e442c4bbf5c8bc03317a8abd641f19ad1a95cb38fb20c2ecee7cd8352e2c"
+    },
+    "HK_E834_N840": {
+      "roads_grid.json": "eae58bd8b60f48993fac6d7db5a0a504355d9cedbc8438387c942ecadae4a512",
+      "building_footprints_grid.json": "9a2626a14225bee587c8592997cd967c3fe29c1e2e296064eae944d17f6aec37",
+      "boundary_portals.json": "6b53952b485208c1a39ff38bd89f9dc5b33f0b8e98417aabaf953f35eb7f41c2",
+      "terrain_5m.npz": "9eae2f5d45372e65a0e8eed0fb63523fdcca30cb0bbefdc592b224502bcc591d",
+      "road_review.csv": "57b731f0b60f0568949fa84af95ae1b366aae787ba1beb187106e2b90e2448bd"
+    },
+    "HK_E834_N846": {
+      "roads_grid.json": "b90e8e5337737ab8aeef002711edfbe2f451f6b3f5a9b0b6da586249f3300aea",
+      "building_footprints_grid.json": "19009f5dcb0f74531ec2969b5b05fd779f2c513e637d0f75371fdbc47d2d1ec9",
+      "boundary_portals.json": "8480e134c4d9676fe3355dd7ecb14346ba1d3b5233b7ebedf41601bf1640d9e2",
+      "terrain_5m.npz": "7062e9c4eaed69e2db8847fc793d5a34361306efa4c7be943f526c4eef30aa88",
+      "road_review.csv": "246c25934d5f99f6a3e1a8f96c3f3bcedea5ba2152ae4ffa62b01d8677432797"
+    },
+    "HK_E840_N804": {
+      "roads_grid.json": "73e0b65e8eee8081c32af9bbbb9e8520b81af01ee8953952d7c035240bd1d7ed",
+      "building_footprints_grid.json": "9e653e6b44759796d013b26a0eacb732147e52e4c639512356e29833e5d6b6cf",
+      "boundary_portals.json": "822295c426abb3ca207f0401a9369b23b780043db87009bb6a4f4599fb8a6a26",
+      "terrain_5m.npz": "7a73a802baef4dbc786f0b159d09ebe6241d9a0c7db5718f8d1b375f3615cac7",
+      "road_review.csv": "1b06105d241e7f8c23c1cf3f65a2ec32c139c2f159dee246e3ed89859831879e"
+    },
+    "HK_E840_N822": {
+      "roads_grid.json": "67145dcdc8054a02e1c5b9ffee0849efcb0e2cc0a35ff985f60013c04f23d7ff",
+      "building_footprints_grid.json": "7b6aa618842eb23d2d30196a854fdceb670410b08921d281cffaa16b5914d675",
+      "boundary_portals.json": "5153ab9568a65b7d039022d2c04d60a3854995cb8b5a9c9842b8ed9201ec21e0",
+      "terrain_5m.npz": "8a9c17ee10f81fbd92c9a540f4b16c67f246355c589766c0c996f2818e8785ed",
+      "road_review.csv": "58be9d1f366517dcb35c0d413ce7329697b0d715d9a27b3b06b3a1ffedc99115"
+    },
+    "HK_E840_N828": {
+      "roads_grid.json": "dcb2245b3cd08b43e867005801988cbd497ab78c271a3800645688ba95c66f2e",
+      "building_footprints_grid.json": "12fbb798f5628805eb3108e026e81f940f9fd3be8cef946af94e2445440b2298",
+      "boundary_portals.json": "824b51bf5f8897efc4b44bdb2c8b295fc0b267680a3b45f29efc54ea220ac3c0",
+      "terrain_5m.npz": "fd08dd9cc292c36beb169f3ca9879f618c80fd7df81067595144350b0f0d45d3",
+      "road_review.csv": "9b160a7fd7d3f3c2eb11a81cf37e39b0e9561511616c2799a3f7b8bb6d16ea76"
+    },
+    "HK_E840_N834": {
+      "roads_grid.json": "f2b1632f75d2a555ff0c7e604bb6ce23642fee123afb79fddddb8e0d8833fbc7",
+      "building_footprints_grid.json": "a3b07c83e2b4c341310c18bb935a934dc05a1864a16d09c41c4a47839152f89a",
+      "boundary_portals.json": "11b3a2ae3ff80e0c5bd1e0e1a2d8cdbba64174177603546ea6519765ae5be659",
+      "terrain_5m.npz": "401ac2ac9eb2f85467fa12f84cdada61db66c28d5860553deeb13346ce135b10",
+      "road_review.csv": "62cfa79531aa490ac651bf644249b31f0a5ef1d70754169d1ee08e11682a9d10"
+    },
+    "HK_E840_N840": {
+      "roads_grid.json": "003513cca01033934cb31f9adb49717c95fb3e71762b0818a81c427ec3c743c5",
+      "building_footprints_grid.json": "0f944e68db880c91b5cbbf44a63d972f56020547ed1f28c96455c5ae40c76243",
+      "boundary_portals.json": "8829f7afeafffda4ce93a8b69ed3490fe65f521ebf3a01bf5a224cd9c2500ce9",
+      "terrain_5m.npz": "93de60641adcddd36ab490880c82487eccda79ea45063603de3953673829dd06",
+      "road_review.csv": "8800c9c250237089c8a7828fcfc8a8c7d984842a2fc1577897a105aaf3165a41"
+    },
+    "HK_E840_N846": {
+      "roads_grid.json": "baf90f77c7b9fe085677805d2672c44546855abc1036667fc1c597c3cca04333",
+      "building_footprints_grid.json": "47e23e4d568858a763e28e9e1d261efc3d3fcf26c089dcf1f5f19b120cb49c03",
+      "boundary_portals.json": "b338220e0d52e956003579670cd5377089cab5a34d91b17b73a6c2153481720f",
+      "terrain_5m.npz": "08af60c089c785a630f213e8259b14706607dad77bed4f78e19f1297ad3a885d",
+      "road_review.csv": "9ac15f47c74ff9876cf413a72caf9aca71e9de520c01b5539e68b0afafac39eb"
+    },
+    "HK_E846_N810": {
+      "roads_grid.json": "95332a42b0a27ad2b8eb9624906f06a0d65a92442ddba02199437862d4cf3b32",
+      "building_footprints_grid.json": "41cbf278272cae19d58cd3f77f1a3c1dfe49a873f44aa4f4530a382f1c628870",
+      "boundary_portals.json": "1b2d792189dc67aed093e5acc9145da9a079f5ec22e6961e64b0717fb84f9853",
+      "terrain_5m.npz": "0448a0db6c58c15c00762d0f7c0b05d01f7924883e4b9b89a57614e8cec8a7e3",
+      "road_review.csv": "86326aa8a47eb0dc431b5eed7dff36aaa1c270f41994479266a01b49e9fdb103"
+    },
+    "HK_E846_N816": {
+      "roads_grid.json": "d99cef9598ea2453f88129c2eb0b020d1c5e2988ec892c9074b1381b8d36a248",
+      "building_footprints_grid.json": "5f44cf228a559bcac4862bcee95158434a3481e136a56adcdb9c5f1085d2ce2b",
+      "boundary_portals.json": "3d7b2929dce3f51cf048a2ed0f104e5caea822ce41dc71f5b9291b173b4f61f0",
+      "terrain_5m.npz": "3baf82d829821b78d0a41be1f41b93c0679ffa567e3dfce0e795d36d44b321d4",
+      "road_review.csv": "53159b778c74e6bd2162340cec9ab0d7a268d76976c2c6b19a528867c3b90afa"
+    },
+    "HK_E846_N822": {
+      "roads_grid.json": "71d9e48d9aecbe00a999ff82a1d6bf8878cee30cf0ccb692264070fb3ce116b9",
+      "building_footprints_grid.json": "d59ed2fffd25e3f16cd6b69c243f8574fd737c84f672e77c40e1376ba0f0593a",
+      "boundary_portals.json": "778ea5b08caabf16ed65e5683149edcfa5161db9ac69b1716741908a4c467668",
+      "terrain_5m.npz": "0d6aab2aab5a5ecf4d83d635669e5fe3026d5198a65108c8fbac39c9fd5c3cb4",
+      "road_review.csv": "5250a2d5081869afc392e019907a5dd320499ad1c0cdc6683f8436fbc41cdc29"
+    },
+    "HK_E846_N828": {
+      "roads_grid.json": "d1f5178996843e40b552a85baf8298b9760b07738d209c25005d7df872a5695e",
+      "building_footprints_grid.json": "ba17b27ea154309afa9e2c0077739c17e5780b2d448744f3b74e8ef9e5404166",
+      "boundary_portals.json": "746e856fc00bbec097fabae0d9acea18eb619ba4f0a658d4e4e5876d769d871b",
+      "terrain_5m.npz": "bb3bd6ec2573c1b7c29a683e2868f214cfd875730b44c070aa859466645945ca",
+      "road_review.csv": "4636facb3807c647674055d603213a29b74ee1a2cb3da50f5ae962be82a7ecca"
+    },
+    "HK_E846_N834": {
+      "roads_grid.json": "d2fd314aafed63d0c94e65683a5b56350a9249d8f879ea532692f0083f772580",
+      "building_footprints_grid.json": "c479378459b0ee7fe133be10c48e730d80588e3754b09dd5128655bf21c5bb8a",
+      "boundary_portals.json": "cceb1c1a82a56ae1c43249cc18bbaac406b564fb65fae5820b69542ceff92f6d",
+      "terrain_5m.npz": "1e692988742dec608a070803d8d1abfb9a607b36913c35d070087c16aeba35b9",
+      "road_review.csv": "d38a136e4401f1ab7304757b671b6a7ba75dfece4c87e3a10885fde172eb0e80"
+    },
+    "HK_E852_N822": {
+      "roads_grid.json": "2aa02e7d44cfb18fd73dd39bd1e0f22dd625fac74ddb0cc73fbdb376b87ca157",
+      "building_footprints_grid.json": "f9df90bbd2e3df03d1d27226c86dcfd19c557344cc42f7405c720b99e3e1fde7",
+      "boundary_portals.json": "552963664fb3259d8ea47b6e16e25106c830116a403c0ee33e40920e9b282211",
+      "terrain_5m.npz": "48d3d975f33d44a7b160cb867cd5d0f651a70ac8447999879b7a9c95e66f8179",
+      "road_review.csv": "01e30318905b912813bcc1666cc180c3b94f80fc439f434c292e6a3eb5658ac9"
+    },
+    "HK_E852_N828": {
+      "roads_grid.json": "688446cecf8b9f041b2ff284b03d80dff9d78b62e03732347550326ba8e3e3f9",
+      "building_footprints_grid.json": "cb8c0ea94a8fbbe90345630d2c42bccf17cf8b8cfa03f8d5b0667ed04b5da812",
+      "boundary_portals.json": "eb0c64e2928d238693b61189af523aa6306ddcbd322bb9370c8e237ead892ef7",
+      "terrain_5m.npz": "abba26ad664acc552cc534f81b3aaf29398fe11b312934a25aa972f04a4f1dd5",
+      "road_review.csv": "29e578d3a641526e0b93996bdfe2e671227d16f72bb6e25653895cce01baabae"
+    },
+    "HK_E852_N834": {
+      "roads_grid.json": "3ff9fb73b43365371c3882285b116e8bcfc10e08b5c12f5175cf4969c24552ac",
+      "building_footprints_grid.json": "ee118ca0e1eeaef9f843d2400fbefb41cdab75a5cd554e9182d9383c1f4f4997",
+      "boundary_portals.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "terrain_5m.npz": "ea75ccd099fcdc392ddfbb350c7775f6740d055f687e4dd29131fbaba947ce1c",
+      "road_review.csv": "63c4ac14000c035938e44705f3f9277250ebfb2ef54ad5a1a63268a73702935b"
+    }
+  },
+  "limits": [
+    "No new road mesh, collision, KN5, installation, engine appearance or driving was validated.",
+    "Source widths/heights/access, deferred building relations and incomplete exam itineraries still require review."
+  ]
+}

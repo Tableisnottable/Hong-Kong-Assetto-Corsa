@@ -1,0 +1,304 @@
+{
+  "master_road_parts": 78674,
+  "simple_building_areas": 118987,
+  "deferred_building_relations": 646,
+  "invalid_source_ways_skipped": 0,
+  "road_line_km_by_access": {
+    "public_candidate": 4948.292,
+    "review": 690.627,
+    "restricted_review": 1254.309
+  },
+  "grade_review_road_parts": 8098,
+  "estimated_width_road_parts": 78618,
+  "terrain": {
+    "file": "gis/hong_kong_master/hk_terrain_5m.npz",
+    "shape": [
+      9601,
+      12751
+    ],
+    "cell_m": 5.0,
+    "extent_edges_epsg2326": [
+      799997.5,
+      799997.5,
+      863752.5,
+      848002.5
+    ],
+    "nodata_pixels": 0,
+    "processing": "Full retained native grid; no resampling or elevation offset",
+    "limits": "Historical 5 m DTM with stated +/-5 m accuracy at 90% confidence; not road-deck survey data"
+  },
+  "official_source_indexes": {
+    "lidar_dtm_2020": {
+      "dataset_id": "cedd_rcd_1629267205233_87895",
+      "indexed_tiles": 3253,
+      "road_corridor_tiles": 2240,
+      "local_tiles_size_matched": 12,
+      "tiles_not_acquired": 2228
+    },
+    "ib1000": {
+      "dataset_id": "landsd_rcd_1637223748322_25497",
+      "indexed_tiles": 3333,
+      "road_corridor_tiles": 2276,
+      "local_tiles_size_matched": 12,
+      "tiles_not_acquired": 2264
+    },
+    "nontextured_models": {
+      "dataset_id": "landsd_rcd_1742809441342_98380",
+      "indexed_tiles": 3456,
+      "road_corridor_tiles": 2289,
+      "local_tiles_size_matched": 12,
+      "tiles_not_acquired": 2277
+    },
+    "tdop": {
+      "dataset_id": "landsd_rcd_1701762716904_4826",
+      "indexed_tiles": 192,
+      "road_corridor_tiles": 158,
+      "local_tiles_size_matched": 2,
+      "tiles_not_acquired": 156
+    },
+    "bit00": {
+      "dataset_id": "landsd_rcd_1637306559892_42396",
+      "indexed_tiles": 3295,
+      "road_corridor_tiles": 2261,
+      "local_tiles_size_matched": 12,
+      "tiles_not_acquired": 2249
+    },
+    "individualised_models": {
+      "dataset_id": "landsd_rcd_1671676915450_88604",
+      "indexed_tiles": 3456,
+      "road_corridor_tiles": 2289,
+      "local_tiles_size_matched": 12,
+      "tiles_not_acquired": 2277
+    }
+  },
+  "scope": "Whole-Hong-Kong retained motor-road inventory, regional production queue and README exam-route audit",
+  "prepared_hong_kong_date": "2026-11-23",
+  "horizontal_crs": "EPSG:2326",
+  "sources": [
+    {
+      "file": "source/hong-kong-latest.osm.pbf",
+      "bytes": 37890313,
+      "sha256": "cf9e5f3d29f97e897d5609d604eb23402bf56f632eb3e7aad884ec534a8319b3"
+    },
+    {
+      "file": "source/hong-kong-boundary-913110.osm",
+      "bytes": 441699,
+      "sha256": "ccbc4e67344ebfb68591dcf238073f375b6a6f6d093519a1c61658b948da9f65"
+    },
+    {
+      "file": "source/Whole_HK_DTM_5m.zip",
+      "bytes": 28706079,
+      "sha256": "785718f462ae6de3c9e1fed2bf9fe5affe1c1d739c0a969fd62cf3680b4b33ab"
+    }
+  ],
+  "regional_cores_with_roads": 61,
+  "exam_centres": 13,
+  "exam_route_records": 31,
+  "exam_centre_review": [
+    {
+      "id": "happy_valley",
+      "name": "跑馬地駕駛考試中心 (Happy Valley)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        837208.5483597554,
+        814463.0070427514
+      ],
+      "candidate_region": "HK_E834_N810",
+      "steps_with_name_candidates": 12,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "so_kun_po",
+      "name": "掃桿埔駕駛考試中心 (So Kon Po)",
+      "catalog_routes": 4,
+      "approximate_location_epsg2326": [
+        837826.9019414408,
+        814905.9929380075
+      ],
+      "candidate_region": "HK_E834_N810",
+      "steps_with_name_candidates": 13,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "sheung_on_street",
+      "name": "柴灣常安街駕駛考試中心 (Chai Wan Sheung On Street)",
+      "catalog_routes": 1,
+      "approximate_location_epsg2326": [
+        843083.5729699112,
+        813910.8009029415
+      ],
+      "candidate_region": "HK_E840_N810",
+      "steps_with_name_candidates": 13,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "tin_kwong_road",
+      "name": "天光道駕駛考試中心 (Tin Kwong Road)",
+      "catalog_routes": 3,
+      "approximate_location_epsg2326": [
+        837105.1644497608,
+        820331.9220369369
+      ],
+      "candidate_region": "HK_E834_N816",
+      "steps_with_name_candidates": 27,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "chung_ngai_street",
+      "name": "忠義街駕駛考試中心 (Chung Ngai Street)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        836023.36825868,
+        819833.5950093813
+      ],
+      "candidate_region": "HK_E834_N816",
+      "steps_with_name_candidates": 8,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "pui_ching_road",
+      "name": "培正道駕駛考試中心 (Pui Ching Road)",
+      "catalog_routes": 4,
+      "approximate_location_epsg2326": [
+        836313.3894290217,
+        819886.1036113522
+      ],
+      "candidate_region": "HK_E834_N816",
+      "steps_with_name_candidates": 22,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "wing_hau_street",
+      "name": "永孝街駕駛考試中心 (Wing Hau Street)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        837465.8162932751,
+        819612.1703722557
+      ],
+      "candidate_region": "HK_E834_N816",
+      "steps_with_name_candidates": 3,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route",
+        "LOCATION_CONFLICT: retained OSM Wing Hau Street / 永孝街 is in Kwai Chung, outside the legacy Kowloon centre window; resolve before modelling"
+      ]
+    },
+    {
+      "id": "yau_tong",
+      "name": "油塘駕駛考試中心 (Yau Tong)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        842257.6485480315,
+        817453.9557630193
+      ],
+      "candidate_region": "HK_E840_N816",
+      "steps_with_name_candidates": 0,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "shek_am",
+      "name": "石蔭駕駛考試中心 (Shek Yam)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        832264.2139876457,
+        825536.9618169527
+      ],
+      "candidate_region": "HK_E828_N822",
+      "steps_with_name_candidates": 1,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "texaco_road",
+      "name": "荃灣德士古道駕駛考試中心 (Tsuen Wan Texaco Road)",
+      "catalog_routes": 3,
+      "approximate_location_epsg2326": [
+        829895.1937704058,
+        825094.8123082132
+      ],
+      "candidate_region": "HK_E828_N822",
+      "steps_with_name_candidates": 12,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "ap_lei_chau",
+      "name": "鴨脷洲安全駕駛中心 (Ap Lei Chau)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        833963.999001621,
+        811244.7141191615
+      ],
+      "candidate_region": "HK_E828_N810",
+      "steps_with_name_candidates": 0,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "yuen_long",
+      "name": "元朗安全駕駛中心 (Yuen Long)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        821971.6057009482,
+        835885.48490494
+      ],
+      "candidate_region": "HK_E816_N834",
+      "steps_with_name_candidates": 0,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    },
+    {
+      "id": "sha_tin",
+      "name": "沙田安全駕駛中心 (Sha Tin)",
+      "catalog_routes": 2,
+      "approximate_location_epsg2326": [
+        838993.9540426634,
+        827723.7789388816
+      ],
+      "candidate_region": "HK_E834_N822",
+      "steps_with_name_candidates": 1,
+      "issues": [
+        "Approximate legacy centre coordinate; gate/start position requires verification",
+        "Text instructions are not a connected lane-level route"
+      ]
+    }
+  ],
+  "geographic_outputs": "gis/hong_kong_master/",
+  "source_tile_queue": "source/hong_kong_master/road_tile_acquisition_queue.json",
+  "limitations": [
+    "Source preparation only; no new installed track or collision mesh.",
+    "OSM coverage is not proof every real-world road is present; compare the retained TD network.",
+    "Line lengths count carriageways separately and include review roads; not official road mileage.",
+    "Building relations, bridge decks, tunnels, widths, facades and connected exam routes need production review.",
+    "Detailed tile downloads are queued, not all acquired. Local size matches are not a fresh hash/CRC verification."
+  ]
+}

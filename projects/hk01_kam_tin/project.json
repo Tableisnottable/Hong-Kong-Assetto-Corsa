@@ -1,6 +1,6 @@
 {
   "name": "Hong Kong 1:1 — Regional Assetto Corsa Project",
-  "stage": "Version 0.5 reference-informed comparison installed; required Route Twisk RWE/Repack quality not yet achieved",
+  "stage": "Whole-Hong-Kong geographic master and regional authoring inputs prepared; Route Twisk quality not yet achieved",
   "created_local_date": "2026-11-13",
   "horizontal_crs": "EPSG:2326",
   "vertical_reference": "Hong Kong Principal Datum (DTM); not surveyed road-deck heights",
@@ -44,11 +44,11 @@
   "driving_test": {
     "track_id": "hk01_kam_tin_test",
     "display_name": "Hong Kong — Kam Tin Driving Test",
-    "version": "0.5-reference-pass",
+    "version": "0.3-full-loop",
     "length_m": 3444.937762144697,
     "mode": "Solo Practice, one car, daytime",
-    "actual_game_driving_test": "v0.3 loaded/drove but appearance rejected; v0.5 comparison pending user",
-    "scope": "3.445 km provisional loop; photographic/cutout visual pass; accurate roadside/junction production unfinished",
+    "actual_game_driving_test": "v0.3 previously loaded/drove but appearance rejected; current installation needs fresh user verification",
+    "scope": "3.445 km provisional loop; current metadata reports 0.3-full-loop; accurate roadside/junction production unfinished",
     "real_scenery_sheets": [
       "6-NE-12D",
       "6-NE-12B",
@@ -60,8 +60,10 @@
       "6-NE-18C"
     ],
     "test_checkpoints": 8,
-    "installed_file_hashes_verified": true,
-    "authored_replacement_trees": 1153
+    "installed_file_hashes_verified": false,
+    "authored_replacement_trees": 1153,
+    "installed_metadata_observed_date": "2026-11-23",
+    "installed_metadata_note": "Read ui_track.json only; historical v0.5 installed-file verification does not describe current installation"
   },
   "sources": [
     {

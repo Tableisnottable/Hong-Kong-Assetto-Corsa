@@ -1,4 +1,4 @@
-"""Collect the README's bounded Kam Tin pilot sources without touching the game.
+"""Collect bounded Kam Tin pilot or complete test-loop sources without touching the game.
 
 Original downloads, provider URLs and machine-local paths stay in ignored source/.
 Only a sanitised acquisition summary is suitable for Git. Existing files are
@@ -46,6 +46,21 @@ TILE_FIELDS = {
 }
 
 
+def selection(scope):
+    """Bound downloads around the retained route; never select all Hong Kong."""
+    if scope == "pilot":
+        return BOUNDS, "map_build_20261115", "map_data_acquisition.json"
+    import math
+    route = json.loads((ROOT / "driving_test/source/test_loop_source.json").read_text(encoding="utf-8"))
+    xy = route["xy"]
+    if route.get("horizontal_crs") != "EPSG:2326" or not xy:
+        raise ValueError("Expected retained EPSG:2326 test-loop coordinates")
+    buffer = 160
+    bounds = [math.floor(min(p[0] for p in xy) - buffer), math.floor(min(p[1] for p in xy) - buffer),
+              math.ceil(max(p[0] for p in xy) + buffer), math.ceil(max(p[1] for p in xy) + buffer)]
+    return bounds, "map_build_full_loop", "full_loop_data_acquisition.json"
+
+
 def digest(path):
     with path.open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
@@ -76,12 +91,13 @@ def inspect_archive(path):
 
 
 class Collector:
-    def __init__(self, raw, total_mib, file_mib):
+    def __init__(self, raw, total_mib, file_mib, previous_records=()):
         self.raw = raw
         self.limit = total_mib * 1024**2
         self.file_limit = file_mib * 1024**2
         self.network_bytes = 0
         self.lock = threading.Lock()
+        self.previous = {record["name"]: record for record in previous_records}
 
     def fetch(self, task):
         name, kind, url, destination, candidates = task
@@ -91,8 +107,8 @@ class Collector:
             candidate = next((p for p in candidates if p and p.is_file()), None)
             if destination.is_file():
                 path, action = destination, "retained"
-                first_action = ("reused_in_place" if kind == "individualised_models" and candidate
-                                else "copied_existing_source" if candidate else "downloaded")
+                prior = self.previous.get(name, {})
+                first_action = prior.get("first_action", "copied_existing_source" if candidate else "downloaded")
             elif candidate and kind == "individualised_models":
                 # Multi-gigabyte scenery is already available locally. Reference
                 # its verified archive, rather than making another large copy.
@@ -148,32 +164,52 @@ class Collector:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--scope", choices=("pilot", "full-loop"), default="pilot")
     parser.add_argument("--reuse-project", type=Path, help="Existing HK_1to1_Project folder, read-only")
-    parser.add_argument("--source-dir", type=Path, default=ROOT / "source/map_build_20261115")
+    parser.add_argument("--source-dir", type=Path)
     parser.add_argument("--refresh-index", action="store_true")
     parser.add_argument("--total-mib", type=int, default=3072)
     parser.add_argument("--file-mib", type=int, default=1536)
     args = parser.parse_args()
     if args.total_mib <= 0 or args.file_mib <= 0:
         parser.error("Download budgets must be positive")
-    raw = args.source_dir.resolve()
+    bounds, folder_name, report_name = selection(args.scope)
+    raw = (args.source_dir or ROOT / "source" / folder_name).resolve()
     if not raw.is_relative_to((ROOT / "source").resolve()):
         parser.error("Keep acquired data inside this project's ignored source directory")
     raw.mkdir(parents=True, exist_ok=True)
+    previous_records = (json.loads((raw / "local_manifest.json").read_text(encoding="utf-8"))["files"]
+                        if (raw / "local_manifest.json").exists() else [])
     index = raw / "index"
+    selection_file = index / "selection.json"
+    selected = {"scope": args.scope, "bounds_epsg2326": bounds}
+    if selection_file.exists() and json.loads(selection_file.read_text(encoding="utf-8")) != selected:
+        parser.error("Source directory belongs to different bounds; choose a separate source directory")
+    if not selection_file.exists() and args.scope != "pilot" and list(index.glob("*_features.json")):
+        parser.error("Unlabelled source index; use a new source directory for full-loop acquisition")
+    save(selection_file, selected)
     datasets = dict(DATASETS, individualised_models="landsd_rcd_1671676915450_88604")
     summaries, features = {}, {}
     for name, dataset_id in datasets.items():
         cache = index / f"{name}_features.json"
         if args.refresh_index or not cache.is_file():
-            _, _, rows = inspect_dataset((name, dataset_id), BOUNDS, index)
+            _, _, rows = inspect_dataset((name, dataset_id), bounds, index)
         else:
             rows = json.loads(cache.read_text(encoding="utf-8"))["features"]
         features[name] = rows
-        summaries[name] = {"dataset_id": dataset_id, "records_intersecting_pilot": len(rows),
+        summaries[name] = {"dataset_id": dataset_id, "records_intersecting_envelope": len(rows),
                            "metadata_url": f"https://portal.csdi.gov.hk/geoportal/rest/metadata/item/{dataset_id}"}
+        if name in TILE_FIELDS and not 1 <= len(rows) <= 16:
+            raise ValueError("Expected 1-16 source tiles per dataset; review geographic bounds before downloading")
+        print(f"Indexed: {name} / {len(rows)} records", flush=True)
     tasks = []
     legacy = args.reuse_project.resolve() / "source" if args.reuse_project else None
+    # Retain previous verified sources in place, including large external models.
+    prior_paths = {}
+    for manifest_path in sorted((ROOT / "source").glob("map_build*/local_manifest.json")):
+        for record in json.loads(manifest_path.read_text(encoding="utf-8"))["files"]:
+            if record.get("status") == "PASS" and record.get("local_path"):
+                prior_paths.setdefault(record["name"], []).append(Path(record["local_path"]))
     for filename, url in FOUNDATION.items():
         tasks.append((filename, "hk_foundation", url, ROOT / "source" / filename,
                       [legacy / filename] if legacy else []))
@@ -183,14 +219,16 @@ def main():
             sheet = str(attrs[sheet_field])
             filename = f"{name}_{sheet}.zip"
             candidates = [ROOT / "source/quality_research" / filename]
+            candidates.extend(prior_paths.get(filename, []))
             candidates.extend(p for p in (ROOT / "source/quality_research").glob(name + "_*.zip")
                               if p.name.replace("-", "") == filename.replace("-", ""))
             if name == "individualised_models" and legacy:
                 candidates.append(legacy / "csdi_individualised" / f"{sheet}_GLTF.zip")
             tasks.append((filename, name, attrs[url_field], raw / "archives" / filename, candidates))
     for filename, url in EXTRAS.items():
-        tasks.append((filename, "dictionary_terms_or_network", url, raw / "references" / filename, []))
-    collector = Collector(raw, args.total_mib, args.file_mib)
+        tasks.append((filename, "dictionary_terms_or_network", url, raw / "references" / filename,
+                      prior_paths.get(filename, [])))
+    collector = Collector(raw, args.total_mib, args.file_mib, previous_records)
     # Submit the orthophoto first: its server can take longer to prepare a tile.
     tasks.sort(key=lambda item: item[1] != "tdop")
     with ThreadPoolExecutor(max_workers=4) as pool:
@@ -198,13 +236,15 @@ def main():
         from concurrent.futures import as_completed
         records = [future.result() for future in as_completed(futures)]
     records.sort(key=lambda r: (r["role"], r["name"]))
-    origin_actions = {name: sum(r["first_action"] == name for r in records)
+    origin_actions = {name: sum(r.get("first_action") == name for r in records)
                       for name in ("downloaded", "copied_existing_source", "reused_in_place")}
-    origin_bytes = sum(r["bytes"] for r in records if r["first_action"] == "downloaded")
+    origin_bytes = sum(r["bytes"] for r in records if r.get("first_action") == "downloaded")
     report = {
         "collected_hong_kong_date": str(datetime.now(timezone(timedelta(hours=8))).date()),
-        "scope": "README checkpoint 1-2 pilot data, plus retained Hong Kong-wide foundation and road network",
-        "bounds_epsg2326": BOUNDS, "origin_epsg2326": [826000, 833000],
+        "scope_id": args.scope,
+        "scope": ("README checkpoint 1-2 pilot data" if args.scope == "pilot" else
+                  "Complete Kam Tin driving-test loop envelope with 160 m context; not all regional roads"),
+        "bounds_epsg2326": bounds, "origin_epsg2326": [826000, 833000],
         "download_budget_mib": args.total_mib, "network_bytes_this_run": collector.network_bytes,
         "original_acquisition": {"file_actions": origin_actions,
                                   "downloaded_source_bytes": origin_bytes,
@@ -213,7 +253,7 @@ def main():
         "status": "PASS" if all(r["status"] == "PASS" for r in records) else "INCOMPLETE",
         "limits": [
             "Acquisition and archive integrity only; no map build or game installation.",
-            "Tile outlines intersect the pilot envelope, not all of the 6x6 km region or Hong Kong.",
+            "Tile outlines intersect the selected envelope, not all of the 6x6 km region or Hong Kong.",
             "Capture dates, coordinate datums and attribute code meanings require source-specific review.",
             "Road edges, deck levels, facades, collision and car-height review still need authoring.",
             "Retained foundation snapshots are reused unchanged, not presented as newly surveyed data.",
@@ -222,7 +262,7 @@ def main():
     save(raw / "local_manifest.json", report)
     for record in records:
         record.pop("local_path", None)
-    save(ROOT / "reports/map_data_acquisition.json", public(report))
+    save(ROOT / "reports" / report_name, public(report))
     print(json.dumps({"status": report["status"], "files": len(records),
                       "failed": [r["name"] for r in records if r["status"] != "PASS"],
                       "network_mib": round(collector.network_bytes / 1024**2, 2)}, indent=2))

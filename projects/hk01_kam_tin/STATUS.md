@@ -1,4 +1,14 @@
-# Build status — November 14, 2026
+# Build status — November 23, 2026
+
+The installed `ui/ui_track.json` currently reports **`0.3-full-loop`**, with a
+3,445 m loop. This is a metadata observation, not a fresh installed-file hash or
+driving verification. No new track was installed or launched during this pass.
+Whole-Hong-Kong source preparation and regional authoring inputs are documented
+in [FULL_HONG_KONG.md](FULL_HONG_KONG.md). The Route Twisk quality target remains
+unmet. The v0.5 notes below describe the historical comparison stage; their
+installation claims are superseded by this current observation.
+
+## Historical November 14 comparison stage
 
 **Version 0.5 is installed as a reference-informed comparison build. The user's required Route Twisk RWE / Repack Test quality has not been achieved or accepted.** See `REFERENCE_QUALITY.md` for the persistent target and missing production work. The installed reference maps are unchanged and their assets are not reused.
 

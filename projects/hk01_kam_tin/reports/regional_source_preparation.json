@@ -1,0 +1,931 @@
+{
+  "scope": "Regional road/context and terrain authoring inputs; no playable track export",
+  "source_sha256": "850b5df42b665cc39787911feefcbd6c83361ec9a63da99feac708f0313082f4",
+  "regions": [
+    {
+      "id": "HK_E816_N834",
+      "core_road_parts": 2964,
+      "context_building_footprints": 3870,
+      "context_road_parts": 3555,
+      "boundary_portals": 145,
+      "road_line_km": 263.571,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N810",
+      "core_road_parts": 1987,
+      "context_building_footprints": 4183,
+      "context_road_parts": 2639,
+      "boundary_portals": 89,
+      "road_line_km": 136.177,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N822",
+      "core_road_parts": 6693,
+      "context_building_footprints": 6924,
+      "context_road_parts": 7232,
+      "boundary_portals": 152,
+      "road_line_km": 448.14,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N810",
+      "core_road_parts": 5062,
+      "context_building_footprints": 6147,
+      "context_road_parts": 5737,
+      "boundary_portals": 142,
+      "road_line_km": 298.21,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N816",
+      "core_road_parts": 11941,
+      "context_building_footprints": 15508,
+      "context_road_parts": 13603,
+      "boundary_portals": 265,
+      "road_line_km": 671.567,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N822",
+      "core_road_parts": 5566,
+      "context_building_footprints": 6968,
+      "context_road_parts": 6359,
+      "boundary_portals": 145,
+      "road_line_km": 376.847,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N810",
+      "core_road_parts": 1534,
+      "context_building_footprints": 2048,
+      "context_road_parts": 1837,
+      "boundary_portals": 72,
+      "road_line_km": 139.619,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N816",
+      "core_road_parts": 6355,
+      "context_building_footprints": 7172,
+      "context_road_parts": 7188,
+      "boundary_portals": 187,
+      "road_line_km": 402.761,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E798_N804",
+      "core_road_parts": 12,
+      "context_building_footprints": 20,
+      "context_road_parts": 12,
+      "boundary_portals": 1,
+      "road_line_km": 1.647,
+      "terrain": {
+        "shape": [
+          1281,
+          841
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E798_N810",
+      "core_road_parts": 23,
+      "context_building_footprints": 400,
+      "context_road_parts": 27,
+      "boundary_portals": 6,
+      "road_line_km": 4.424,
+      "terrain": {
+        "shape": [
+          1281,
+          841
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N798",
+      "core_road_parts": 10,
+      "context_building_footprints": 11,
+      "context_road_parts": 10,
+      "boundary_portals": 0,
+      "road_line_km": 2.275,
+      "terrain": {
+        "shape": [
+          841,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N804",
+      "core_road_parts": 74,
+      "context_building_footprints": 73,
+      "context_road_parts": 76,
+      "boundary_portals": 6,
+      "road_line_km": 19.29,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N810",
+      "core_road_parts": 141,
+      "context_building_footprints": 543,
+      "context_road_parts": 171,
+      "boundary_portals": 9,
+      "road_line_km": 35.054,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N816",
+      "core_road_parts": 219,
+      "context_building_footprints": 209,
+      "context_road_parts": 271,
+      "boundary_portals": 23,
+      "road_line_km": 74.688,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N822",
+      "core_road_parts": 70,
+      "context_building_footprints": 58,
+      "context_road_parts": 109,
+      "boundary_portals": 24,
+      "road_line_km": 9.997,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E804_N828",
+      "core_road_parts": 149,
+      "context_building_footprints": 85,
+      "context_road_parts": 174,
+      "boundary_portals": 12,
+      "road_line_km": 24.613,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N804",
+      "core_road_parts": 33,
+      "context_building_footprints": 208,
+      "context_road_parts": 39,
+      "boundary_portals": 10,
+      "road_line_km": 3.354,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N810",
+      "core_road_parts": 425,
+      "context_building_footprints": 1286,
+      "context_road_parts": 489,
+      "boundary_portals": 21,
+      "road_line_km": 51.442,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N816",
+      "core_road_parts": 2488,
+      "context_building_footprints": 806,
+      "context_road_parts": 2601,
+      "boundary_portals": 44,
+      "road_line_km": 255.722,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N822",
+      "core_road_parts": 1569,
+      "context_building_footprints": 878,
+      "context_road_parts": 1799,
+      "boundary_portals": 67,
+      "road_line_km": 144.921,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N828",
+      "core_road_parts": 1731,
+      "context_building_footprints": 2532,
+      "context_road_parts": 2037,
+      "boundary_portals": 63,
+      "road_line_km": 146.152,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N834",
+      "core_road_parts": 169,
+      "context_building_footprints": 78,
+      "context_road_parts": 233,
+      "boundary_portals": 22,
+      "road_line_km": 31.868,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E810_N840",
+      "core_road_parts": 63,
+      "context_building_footprints": 12,
+      "context_road_parts": 63,
+      "boundary_portals": 4,
+      "road_line_km": 5.068,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N804",
+      "core_road_parts": 127,
+      "context_building_footprints": 783,
+      "context_road_parts": 127,
+      "boundary_portals": 1,
+      "road_line_km": 23.695,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N810",
+      "core_road_parts": 242,
+      "context_building_footprints": 802,
+      "context_road_parts": 258,
+      "boundary_portals": 10,
+      "road_line_km": 34.781,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N816",
+      "core_road_parts": 674,
+      "context_building_footprints": 1389,
+      "context_road_parts": 776,
+      "boundary_portals": 47,
+      "road_line_km": 98.641,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N822",
+      "core_road_parts": 1247,
+      "context_building_footprints": 1711,
+      "context_road_parts": 1438,
+      "boundary_portals": 40,
+      "road_line_km": 119.726,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N828",
+      "core_road_parts": 3660,
+      "context_building_footprints": 6155,
+      "context_road_parts": 4570,
+      "boundary_portals": 168,
+      "road_line_km": 326.094,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E816_N840",
+      "core_road_parts": 1,
+      "context_building_footprints": 2,
+      "context_road_parts": 7,
+      "boundary_portals": 2,
+      "road_line_km": 0.126,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N804",
+      "core_road_parts": 1,
+      "context_building_footprints": 24,
+      "context_road_parts": 5,
+      "boundary_portals": 1,
+      "road_line_km": 0.028,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N810",
+      "core_road_parts": 12,
+      "context_building_footprints": 400,
+      "context_road_parts": 19,
+      "boundary_portals": 6,
+      "road_line_km": 4.227,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N816",
+      "core_road_parts": 351,
+      "context_building_footprints": 1560,
+      "context_road_parts": 471,
+      "boundary_portals": 40,
+      "road_line_km": 50.114,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N822",
+      "core_road_parts": 1463,
+      "context_building_footprints": 1275,
+      "context_road_parts": 1593,
+      "boundary_portals": 51,
+      "road_line_km": 155.017,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N828",
+      "core_road_parts": 1958,
+      "context_building_footprints": 4275,
+      "context_road_parts": 2281,
+      "boundary_portals": 118,
+      "road_line_km": 237.936,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N834",
+      "core_road_parts": 1714,
+      "context_building_footprints": 9404,
+      "context_road_parts": 2177,
+      "boundary_portals": 146,
+      "road_line_km": 258.992,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E822_N840",
+      "core_road_parts": 620,
+      "context_building_footprints": 484,
+      "context_road_parts": 695,
+      "boundary_portals": 54,
+      "road_line_km": 100.898,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N804",
+      "core_road_parts": 64,
+      "context_building_footprints": 737,
+      "context_road_parts": 64,
+      "boundary_portals": 1,
+      "road_line_km": 15.914,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N816",
+      "core_road_parts": 2785,
+      "context_building_footprints": 4175,
+      "context_road_parts": 3772,
+      "boundary_portals": 177,
+      "road_line_km": 225.057,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N828",
+      "core_road_parts": 587,
+      "context_building_footprints": 1506,
+      "context_road_parts": 727,
+      "boundary_portals": 51,
+      "road_line_km": 83.286,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N834",
+      "core_road_parts": 2562,
+      "context_building_footprints": 8716,
+      "context_road_parts": 3074,
+      "boundary_portals": 153,
+      "road_line_km": 250.845,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N840",
+      "core_road_parts": 2244,
+      "context_building_footprints": 4288,
+      "context_road_parts": 2608,
+      "boundary_portals": 136,
+      "road_line_km": 262.355,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E828_N846",
+      "core_road_parts": 17,
+      "context_building_footprints": 20,
+      "context_road_parts": 91,
+      "boundary_portals": 15,
+      "road_line_km": 1.654,
+      "terrain": {
+        "shape": [
+          441,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N804",
+      "core_road_parts": 240,
+      "context_building_footprints": 961,
+      "context_road_parts": 322,
+      "boundary_portals": 33,
+      "road_line_km": 20.453,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N828",
+      "core_road_parts": 2680,
+      "context_building_footprints": 5003,
+      "context_road_parts": 3157,
+      "boundary_portals": 109,
+      "road_line_km": 214.472,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N834",
+      "core_road_parts": 2102,
+      "context_building_footprints": 7184,
+      "context_road_parts": 2450,
+      "boundary_portals": 74,
+      "road_line_km": 177.459,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N840",
+      "core_road_parts": 866,
+      "context_building_footprints": 1852,
+      "context_road_parts": 1101,
+      "boundary_portals": 57,
+      "road_line_km": 134.946,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E834_N846",
+      "core_road_parts": 53,
+      "context_building_footprints": 80,
+      "context_road_parts": 141,
+      "boundary_portals": 19,
+      "road_line_km": 16.29,
+      "terrain": {
+        "shape": [
+          441,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N804",
+      "core_road_parts": 262,
+      "context_building_footprints": 993,
+      "context_road_parts": 337,
+      "boundary_portals": 29,
+      "road_line_km": 31.355,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N822",
+      "core_road_parts": 954,
+      "context_building_footprints": 5683,
+      "context_road_parts": 1228,
+      "boundary_portals": 62,
+      "road_line_km": 111.559,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N828",
+      "core_road_parts": 1790,
+      "context_building_footprints": 3202,
+      "context_road_parts": 2012,
+      "boundary_portals": 53,
+      "road_line_km": 142.85,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N834",
+      "core_road_parts": 241,
+      "context_building_footprints": 799,
+      "context_road_parts": 259,
+      "boundary_portals": 7,
+      "road_line_km": 30.163,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N840",
+      "core_road_parts": 175,
+      "context_building_footprints": 918,
+      "context_road_parts": 184,
+      "boundary_portals": 9,
+      "road_line_km": 20.225,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E840_N846",
+      "core_road_parts": 3,
+      "context_building_footprints": 10,
+      "context_road_parts": 3,
+      "boundary_portals": 4,
+      "road_line_km": 0.128,
+      "terrain": {
+        "shape": [
+          441,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E846_N810",
+      "core_road_parts": 136,
+      "context_building_footprints": 160,
+      "context_road_parts": 191,
+      "boundary_portals": 31,
+      "road_line_km": 29.682,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E846_N816",
+      "core_road_parts": 649,
+      "context_building_footprints": 2543,
+      "context_road_parts": 848,
+      "boundary_portals": 50,
+      "road_line_km": 67.772,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E846_N822",
+      "core_road_parts": 263,
+      "context_building_footprints": 1563,
+      "context_road_parts": 388,
+      "boundary_portals": 23,
+      "road_line_km": 21.588,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E846_N828",
+      "core_road_parts": 361,
+      "context_building_footprints": 1366,
+      "context_road_parts": 434,
+      "boundary_portals": 26,
+      "road_line_km": 47.516,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E846_N834",
+      "core_road_parts": 7,
+      "context_building_footprints": 180,
+      "context_road_parts": 7,
+      "boundary_portals": 1,
+      "road_line_km": 2.358,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E852_N822",
+      "core_road_parts": 34,
+      "context_building_footprints": 57,
+      "context_road_parts": 38,
+      "boundary_portals": 1,
+      "road_line_km": 14.26,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E852_N828",
+      "core_road_parts": 33,
+      "context_building_footprints": 118,
+      "context_road_parts": 41,
+      "boundary_portals": 6,
+      "road_line_km": 9.605,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    },
+    {
+      "id": "HK_E852_N834",
+      "core_road_parts": 4,
+      "context_building_footprints": 85,
+      "context_road_parts": 7,
+      "boundary_portals": 0,
+      "road_line_km": 3.756,
+      "terrain": {
+        "shape": [
+          1281,
+          1281
+        ],
+        "nodata_pixels": 0
+      }
+    }
+  ],
+  "portal_region_count_histogram": {
+    "2": 1657,
+    "1": 6
+  },
+  "shared_portals": 1657,
+  "limits": [
+    "Boundary portals establish horizontal source identity only; deck heights and mesh seams remain unbuilt.",
+    "Terrain NoData remains unchanged; bridge/tunnel roads must not inherit ground heights.",
+    "Context overlaps intentionally; no streaming or seamless travel is implemented."
+  ]
+}

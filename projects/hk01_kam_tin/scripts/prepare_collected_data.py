@@ -19,7 +19,7 @@ from PIL import Image
 from shapely.geometry import box, LineString, MultiLineString, MultiPolygon, Point, Polygon, mapping
 from shapely.validation import make_valid
 
-from collect_build_data import ROOT, digest, inspect_archive
+from collect_build_data import ROOT, digest, inspect_archive, selection
 from research_quality_sources import save
 
 
@@ -96,7 +96,7 @@ def orthophoto_summary(raw, catalog, bounds):
             "georeferencing": "Companion TIFF world file; horizontal CRS from LandsD TDOP metadata"}
 
 
-def terrain_crop(folders, bounds, output):
+def terrain_crop(folders, bounds, output, prefix="pilot"):
     west, south, east, north = bounds
     cell = 0.5
     result = np.full((round((north - south) / cell), round((east - west) / cell)), np.nan, dtype=np.float32)
@@ -134,11 +134,12 @@ def terrain_crop(folders, bounds, output):
     if missing:
         raise ValueError(f"Pilot terrain has {missing} uncovered pixels")
     output.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(output / "pilot_dtm_05m.npz", z=result, cell_m=cell,
+    filename = f"{prefix}_dtm_05m.npz"
+    np.savez_compressed(output / filename, z=result, cell_m=cell,
                         west_edge=west, north_edge=north,
                         x_first_center=west + cell / 2, y_first_center=north - cell / 2,
                         horizontal_epsg=2326, origin_epsg2326=[826000, 833000])
-    return {"file": "gis/high_quality_pilot/pilot_dtm_05m.npz", "shape": list(result.shape),
+    return {"file": (output / filename).relative_to(ROOT).as_posix(), "shape": list(result.shape),
             "pixel_size_m": cell, "nodata_pixels": missing,
             "min_native_height_m": float(result.min()), "max_native_height_m": float(result.max()),
             "grids": grids, "processing": "Pixel-aligned crop and mosaic; no smoothing or vertical offset",
@@ -274,13 +275,16 @@ def axis_order_check(raw, folders, bounds):
             "check": "PASS: GML positions cross-checked against official EPSG:2326 tile extents"}
 
 
-def clip_ib1000(raw, folders, bounds, output):
+def clip_ib1000(raw, folders, bounds, output, prefix="pilot"):
     clip = box(bounds[0], bounds[1], bounds[2], bounds[3])
     layers = {
         "StreetCentreLines": {"LineString", "Curve"},
         "CartoTransLine": {"LineString", "Curve"},
         "SpotHeight": {"Point"},
     }
+    if prefix != "pilot":
+        layers.update(UtilityPoint={"Point"}, CartoPedLine={"LineString", "Curve"},
+                      UtilityLine={"LineString", "Curve"})
     summary = {}
     for layer, geometry_types in layers.items():
         rows, codes, no_display = [], {}, 0
@@ -304,7 +308,7 @@ def clip_ib1000(raw, folders, bounds, output):
                     seen.add(source_id)
                     sequences = geometry_sequences(geometry_node)
                     geom_kind = geometry_node.tag.split("}")[-1]
-                    if layer == "SpotHeight":
+                    if "Point" in geometry_types:
                         if not sequences or not sequences[0] or len(sequences[0][0]) < 2:
                             member.clear()
                             continue
@@ -332,19 +336,20 @@ def clip_ib1000(raw, folders, bounds, output):
                                      "properties": dict(props, SOURCE_SHEET=sheet),
                                      "geometry": mapping(clipped)})
                     member.clear()
-        name = f"iB1000_{layer}_pilot_grid.json"
+        name = f"iB1000_{layer}_{prefix}_grid.json"
         payload = {"type": "FeatureCollection", "coordinate_system": "EPSG:2326",
                    "coordinate_axis_order": "easting,northing", "source_axis_order": "northing,easting,height",
                    "height_note": "GML third ordinates in line/point geometry are not promoted to road/deck height; use coded attributes and survey review.",
                    "source_tiles": [p.name.removeprefix("ib1000_") for p in folders],
                    "features": rows}
         (output / name).write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-        summary[layer] = {"file": f"gis/high_quality_pilot/{name}", "pilot_features": len(rows),
+        summary[layer] = {"file": (output / name).relative_to(ROOT).as_posix(),
+                          "pilot_features" if prefix == "pilot" else "envelope_features": len(rows),
                           "clipped_counts_by_code": codes, "records_with_other_display_status": no_display}
     return summary
 
 
-def clip_buildings(raw, bounds, output):
+def clip_buildings(raw, bounds, output, prefix="pilot"):
     source = json.loads((raw / "index/buildings_features.json").read_text(encoding="utf-8"))["features"]
     clip = box(bounds[0], bounds[1], bounds[2], bounds[3])
     rows, unknown = [], 0
@@ -384,22 +389,27 @@ def clip_buildings(raw, bounds, output):
         props["HEIGHT_REVIEW_REQUIRED"] = not valid
         rows.append({"type": "Feature", "id": str(attrs.get("OBJECTID")),
                      "properties": props, "geometry": mapping(geom)})
-    name = "LandsD_building_footprints_pilot_grid.json"
+    name = f"LandsD_building_footprints_{prefix}_grid.json"
     payload = {"type": "FeatureCollection", "coordinate_system": "EPSG:2326",
                "coordinate_axis_order": "easting,northing", "features": rows}
     (output / name).write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    return {"file": f"gis/high_quality_pilot/{name}", "clipped_footprints": len(rows),
+    return {"file": (output / name).relative_to(ROOT).as_posix(), "clipped_footprints": len(rows),
             "known_base_top_heights": len(rows) - unknown, "height_review_required": unknown}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-dir", type=Path, default=ROOT / "source/map_build_20261115")
+    parser.add_argument("--scope", choices=("pilot", "full-loop"), default="pilot")
+    parser.add_argument("--source-dir", type=Path)
     args = parser.parse_args()
-    raw = args.source_dir.resolve()
+    bounds, folder_name, _ = selection(args.scope)
+    raw = (args.source_dir or ROOT / "source" / folder_name).resolve()
     if not raw.is_relative_to((ROOT / "source").resolve()):
         parser.error("Source directory must be inside the project's ignored source/")
     manifest = json.loads((raw / "local_manifest.json").read_text(encoding="utf-8"))
+    if manifest["status"] != "PASS" or manifest["bounds_epsg2326"] != bounds:
+        raise ValueError("Complete acquisition for the selected bounds is required before preparation")
+    prefix = "pilot" if args.scope == "pilot" else "full_loop"
     catalog, terrain = [], []
     for record in manifest["files"]:
         if record["status"] != "PASS":
@@ -415,13 +425,17 @@ def main():
             terrain.append(folder)
         catalog.append(item)
         print("Prepared:", path.name, flush=True)
-    output = ROOT / "gis/high_quality_pilot"
+    output = ROOT / "gis" / f"high_quality_{prefix}"
     output.mkdir(parents=True, exist_ok=True)
-    dtm = terrain_crop(terrain, manifest["bounds_epsg2326"], output)
+    dtm = terrain_crop(terrain, manifest["bounds_epsg2326"], output, prefix)
     ib1000_folders = sorted((raw / "extracted").glob("ib1000_6-NE-*"))
     axis_check = axis_order_check(raw, ib1000_folders, manifest["bounds_epsg2326"])
-    ib1000_layers = clip_ib1000(raw, ib1000_folders, manifest["bounds_epsg2326"], output)
-    orthophoto = crop_orthophoto(raw, catalog, manifest["bounds_epsg2326"], output)
+    ib1000_layers = clip_ib1000(raw, ib1000_folders, manifest["bounds_epsg2326"], output, prefix)
+    if args.scope == "pilot":
+        orthophoto = crop_orthophoto(raw, catalog, bounds, output)
+    else:
+        from prepare_full_loop_data import mosaic_orthophotos
+        orthophoto = mosaic_orthophotos(raw, catalog, bounds, output)
     buildings = json.loads((raw / "index/buildings_features.json").read_text(encoding="utf-8"))["features"]
     rows = []
     for feature in buildings:
@@ -435,13 +449,13 @@ def main():
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    orthophoto_summary_record = orthophoto_summary(raw, catalog, manifest["bounds_epsg2326"])
+    orthophoto_summary_record = orthophoto_summary(raw, catalog, bounds) if args.scope == "pilot" else {}
     orthophoto_summary_record.update(orthophoto)
     report = {"acquisition_status": manifest["status"], "prepared_archives": catalog, "terrain": dtm,
               "orthophoto": orthophoto_summary_record,
               "iB1000_axis_order_check": axis_check,
-              "iB1000_pilot_layers": ib1000_layers,
-              "building_footprints": clip_buildings(raw, manifest["bounds_epsg2326"], output),
+              "iB1000_pilot_layers" if args.scope == "pilot" else "iB1000_full_loop_layers": ib1000_layers,
+              "building_footprints": clip_buildings(raw, bounds, output, prefix),
               "buildings": {"records": len(rows), "valid_base_top_pairs": sum(not r["needs_height_review"] for r in rows),
                             "height_review_required": sum(r["needs_height_review"] for r in rows)},
               "ib1000_dictionary_interpretation": {
@@ -455,7 +469,13 @@ def main():
                                            "RMU": "Road margin below elevated structures"},
                   "use_note": "Use code and display-status fields. Cartographic transport lines are not road-centreline or drivable-surface geometry."},
               "scope": "Source readiness only. Classification, elevations, road and facade authoring remain to be reviewed."}
-    save(ROOT / "reports/map_source_readiness.json", report)
+    if args.scope == "full-loop":
+        from prepare_full_loop_data import review_route_sources
+        report["scope_id"] = args.scope
+        report["bounds_epsg2326"] = bounds
+        report["route_source_review"] = review_route_sources(output, bounds)
+    save(ROOT / "reports" / ("map_source_readiness.json" if args.scope == "pilot" else
+                              "full_loop_source_readiness.json"), report)
     print(json.dumps({"prepared_archives": len(catalog), "terrain": dtm["shape"], "buildings": report["buildings"]}, indent=2))
 
 

@@ -1,4 +1,10 @@
-KAM TIN — REFERENCE-INFORMED TEST 0.5
+KAM TIN — INSTALLED METADATA REPORTS 0.3-FULL-LOOP (NOVEMBER 23)
+
+The installation currently reports version 0.3-full-loop. No fresh installation
+or game test was performed for the whole-Hong-Kong source preparation.
+The v0.5 changes and checks below are historical comparison-stage notes and do
+not describe the current installed payload. Follow the solo-Practice route
+instructions to test the existing loop; source acquisition adds no new game map.
 
 QUALITY TARGET: ROUTE TWISK RWE / REPACK TEST
 This is the next comparison build. It has NOT reached or been accepted at that

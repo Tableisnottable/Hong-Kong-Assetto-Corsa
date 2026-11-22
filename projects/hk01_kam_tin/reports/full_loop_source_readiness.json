@@ -1,0 +1,1016 @@
+{
+  "acquisition_status": "PASS",
+  "prepared_archives": [
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-12A"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-12B"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-12C"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-12D"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-13A"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-13C"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-17A"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-17B"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-17C"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-17D"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-18A"
+    },
+    {
+      "role": "bit00",
+      "folder": "source/map_build_full_loop/extracted/bit00_6-NE-18C"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_full_loop/extracted/ib1000_GML_resources"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_full_loop/extracted/td_road_network_spec"
+    },
+    {
+      "role": "dictionary_terms_or_network",
+      "folder": "source/map_build_full_loop/extracted/td_road_network_v2.gdb"
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-12A",
+      "feature_counts": {
+        "BSPointAnno": 1,
+        "BSPolygonAnno": 21,
+        "Building": 966,
+        "BuildingAccessoryLine": 7,
+        "BuildingAnno": 286,
+        "BuildingAnnoHouseNo": 422,
+        "BuiltStructureLine": 1,
+        "BuiltStructurePoint": 15,
+        "BuiltStructurePolygon": 19,
+        "CartoBuildingLine": 3639,
+        "Site": 30,
+        "SiteAnno": 43,
+        "CartoHydroLine": 194,
+        "HydroLine": 75,
+        "HydroLineAnno": 36,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 61,
+        "HydroPolygonAnno": 39,
+        "CartoLandCoverLine": 33,
+        "LandCoverVector2": 25,
+        "PlaceNameAnno": 4,
+        "BMSslope": 55,
+        "BMSslopeSymbol": 1018,
+        "CartoReliefLine": 89,
+        "Contour": 53,
+        "ContourAnno": 5,
+        "SpotHeight": 278,
+        "VerticalCutPolygon": 21,
+        "CartoPedLine": 333,
+        "CartoTransLine": 255,
+        "PedestrianAnno": 29,
+        "RailwayAnno": 4,
+        "RailwayPolygon": 11,
+        "RoadAnno": 60,
+        "StreetCentreLines": 52,
+        "CartoUtilityLine": 1,
+        "UtilityLine": 1,
+        "UtilityPoint": 321,
+        "UtilityPointAnno": 318
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-12B",
+      "feature_counts": {
+        "BSLineAnno": 2,
+        "BSPointAnno": 1,
+        "BSPolygonAnno": 32,
+        "Building": 1507,
+        "BuildingAccessoryLine": 3,
+        "BuildingAnno": 348,
+        "BuildingAnnoHouseNo": 780,
+        "BuiltStructureLine": 3,
+        "BuiltStructurePoint": 1,
+        "BuiltStructurePolygon": 30,
+        "CartoBuildingLine": 4838,
+        "Site": 43,
+        "SiteAnno": 56,
+        "CartoHydroLine": 113,
+        "HydroLine": 35,
+        "HydroLineAnno": 24,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 47,
+        "HydroPolygonAnno": 20,
+        "CartoLandCoverLine": 71,
+        "LandCoverVector2": 38,
+        "PlaceNameAnno": 8,
+        "BMSslope": 22,
+        "BMSslopeSymbol": 511,
+        "CartoReliefLine": 46,
+        "SpotHeight": 192,
+        "VerticalCutPolygon": 27,
+        "CartoPedLine": 550,
+        "CartoTransLine": 209,
+        "PedestrianAnno": 23,
+        "RoadAnno": 55,
+        "StreetCentreLines": 58,
+        "TransportPolygon": 1,
+        "TransportPolygonAnno": 1,
+        "UtilityPoint": 521,
+        "UtilityPointAnno": 517
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-12C",
+      "feature_counts": {
+        "BSPolygonAnno": 36,
+        "Building": 199,
+        "BuildingAccessoryLine": 10,
+        "BuildingAnno": 168,
+        "BuildingAnnoHouseNo": 2,
+        "BuiltStructurePoint": 35,
+        "BuiltStructurePolygon": 21,
+        "CartoBuildingLine": 669,
+        "Site": 5,
+        "SiteAnno": 6,
+        "CartoHydroLine": 156,
+        "HydroLine": 60,
+        "HydroLineAnno": 14,
+        "HydroPoint": 1,
+        "HydroPointAnno": 1,
+        "HydroPolygon": 38,
+        "HydroPolygonAnno": 28,
+        "CartoLandCoverLine": 412,
+        "LandCoverVector2": 227,
+        "Berm": 2,
+        "BMSslope": 30,
+        "BMSslopeSymbol": 563,
+        "CartoReliefLine": 51,
+        "Contour": 138,
+        "ContourAnno": 17,
+        "SpotHeight": 210,
+        "VerticalCutPolygon": 14,
+        "CartoPedLine": 392,
+        "CartoTransLine": 163,
+        "PedestrianAnno": 69,
+        "RailwayAnno": 4,
+        "RailwayEntrance": 4,
+        "RailwayPolygon": 10,
+        "RoadAnno": 31,
+        "StreetCentreLines": 30,
+        "TransportLine": 2,
+        "CartoUtilityLine": 2,
+        "UtilityLine": 2,
+        "UtilityPoint": 159,
+        "UtilityPointAnno": 166
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-12D",
+      "feature_counts": {
+        "BSPolygonAnno": 17,
+        "Building": 558,
+        "BuildingAnno": 239,
+        "BuildingAnnoHouseNo": 58,
+        "BuiltStructurePoint": 1,
+        "BuiltStructurePolygon": 26,
+        "CartoBuildingLine": 2072,
+        "Site": 16,
+        "SiteAnno": 25,
+        "CartoHydroLine": 140,
+        "HydroLine": 54,
+        "HydroLineAnno": 25,
+        "HydroPoint": 3,
+        "HydroPointAnno": 3,
+        "HydroPolygon": 46,
+        "HydroPolygonAnno": 43,
+        "CartoLandCoverLine": 55,
+        "LandCoverVector2": 32,
+        "Berm": 1,
+        "BMSslope": 37,
+        "BMSslopeSymbol": 592,
+        "CartoReliefLine": 61,
+        "Contour": 9,
+        "SpotHeight": 163,
+        "VerticalCutPolygon": 24,
+        "CartoPedLine": 306,
+        "CartoTransLine": 219,
+        "PedestrianAnno": 30,
+        "RailwayPolygon": 12,
+        "RoadAnno": 39,
+        "StreetCentreLines": 68,
+        "CartoUtilityLine": 6,
+        "UtilityLine": 7,
+        "UtilityPoint": 252,
+        "UtilityPointAnno": 265
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-13A",
+      "feature_counts": {
+        "BSPointAnno": 1,
+        "BSPolygonAnno": 15,
+        "Building": 462,
+        "BuildingAccessoryLine": 25,
+        "BuildingAnno": 145,
+        "BuildingAnnoHouseNo": 142,
+        "BuiltStructurePoint": 4,
+        "BuiltStructurePolygon": 16,
+        "CartoBuildingLine": 1658,
+        "Site": 5,
+        "SiteAnno": 12,
+        "CartoHydroLine": 106,
+        "HydroLine": 13,
+        "HydroLineAnno": 2,
+        "HydroPoint": 2,
+        "HydroPointAnno": 2,
+        "HydroPolygon": 26,
+        "HydroPolygonAnno": 5,
+        "CartoLandCoverLine": 124,
+        "LandCoverVector2": 60,
+        "PlaceNameAnno": 13,
+        "BMSslope": 10,
+        "BMSslopeSymbol": 158,
+        "CartoReliefLine": 29,
+        "SpotHeight": 202,
+        "VerticalCutPolygon": 11,
+        "CartoPedLine": 609,
+        "CartoTransLine": 121,
+        "PedestrianAnno": 19,
+        "RoadAnno": 54,
+        "StreetCentreLines": 62,
+        "TransportPolygon": 5,
+        "TransportPolygonAnno": 5,
+        "CartoUtilityLine": 3,
+        "UtilityLine": 3,
+        "UtilityPoint": 201,
+        "UtilityPointAnno": 194,
+        "UtilityPolygon": 8,
+        "UtilityPolygonAnno": 10
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-13C",
+      "feature_counts": {
+        "BSPolygonAnno": 36,
+        "Building": 587,
+        "BuildingAccessoryLine": 195,
+        "BuildingAnno": 202,
+        "BuildingAnnoHouseNo": 132,
+        "BuiltStructurePoint": 35,
+        "BuiltStructurePolygon": 29,
+        "CartoBuildingLine": 1726,
+        "Site": 14,
+        "SiteAnno": 16,
+        "CartoHydroLine": 132,
+        "HydroLine": 53,
+        "HydroLineAnno": 4,
+        "HydroPoint": 4,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 18,
+        "HydroPolygonAnno": 15,
+        "CartoLandCoverLine": 183,
+        "LandCoverVector2": 109,
+        "BMSslope": 19,
+        "BMSslopeSymbol": 542,
+        "CartoReliefLine": 42,
+        "SpotHeight": 178,
+        "VerticalCutPolygon": 16,
+        "CartoPedLine": 194,
+        "CartoTransLine": 133,
+        "PedestrianAnno": 21,
+        "RoadAnno": 43,
+        "StreetCentreLines": 56,
+        "CartoUtilityLine": 10,
+        "UtilityLine": 10,
+        "UtilityPoint": 256,
+        "UtilityPointAnno": 254,
+        "UtilityPolygon": 1,
+        "UtilityPolygonAnno": 3
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-17A",
+      "feature_counts": {
+        "BSPolygonAnno": 20,
+        "Building": 21,
+        "BuildingAnno": 14,
+        "BuiltStructurePoint": 39,
+        "BuiltStructurePolygon": 13,
+        "CartoBuildingLine": 84,
+        "SiteAnno": 1,
+        "CartoHydroLine": 64,
+        "HydroLine": 50,
+        "HydroPolygon": 10,
+        "HydroPolygonAnno": 8,
+        "BoulderPolygon": 7,
+        "CartoLandCoverLine": 93,
+        "LandCoverAnno": 12,
+        "LandCoverVector2": 40,
+        "Berm": 27,
+        "BMSslope": 12,
+        "BMSslopeSymbol": 500,
+        "CartoReliefLine": 79,
+        "Contour": 570,
+        "ContourAnno": 30,
+        "SpotHeight": 102,
+        "VerticalCutPolygon": 1,
+        "CartoPedLine": 201,
+        "CartoTransLine": 9,
+        "PedestrianAnno": 14,
+        "RoadAnno": 4,
+        "StreetCentreLines": 1,
+        "UtilityPoint": 31,
+        "UtilityPointAnno": 31
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-17B",
+      "feature_counts": {
+        "BSPointAnno": 2,
+        "BSPolygonAnno": 87,
+        "Building": 635,
+        "BuildingAccessoryLine": 2,
+        "BuildingAnno": 146,
+        "BuildingAnnoHouseNo": 220,
+        "BuiltStructurePoint": 97,
+        "BuiltStructurePolygon": 56,
+        "CartoBuildingLine": 2488,
+        "Site": 20,
+        "SiteAnno": 35,
+        "CartoHydroLine": 136,
+        "HydroLine": 62,
+        "HydroLineAnno": 14,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 40,
+        "HydroPolygonAnno": 30,
+        "CartoLandCoverLine": 66,
+        "LandCoverVector2": 49,
+        "Tree": 1,
+        "PlaceNameAnno": 3,
+        "BMSslope": 39,
+        "BMSslopeSymbol": 599,
+        "CartoReliefLine": 56,
+        "Contour": 144,
+        "ContourAnno": 11,
+        "SpotHeight": 241,
+        "VerticalCutPolygon": 15,
+        "CartoPedLine": 221,
+        "CartoTransLine": 284,
+        "PedestrianAnno": 30,
+        "RailwayPolygon": 52,
+        "RoadAnno": 44,
+        "StreetCentreLines": 30,
+        "CartoUtilityLine": 4,
+        "UtilityLine": 4,
+        "UtilityPoint": 267,
+        "UtilityPointAnno": 262
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-17C",
+      "feature_counts": {
+        "BSPolygonAnno": 6,
+        "Building": 16,
+        "BuildingAnno": 3,
+        "BuildingAnnoHouseNo": 2,
+        "BuiltStructurePoint": 24,
+        "BuiltStructurePolygon": 5,
+        "CartoBuildingLine": 113,
+        "CartoHydroLine": 61,
+        "HydroLine": 43,
+        "HydroPolygon": 22,
+        "HydroPolygonAnno": 17,
+        "BoulderPolygon": 6,
+        "CartoLandCoverLine": 79,
+        "LandCoverVector2": 8,
+        "PlaceNameAnno": 2,
+        "Berm": 9,
+        "BMSslope": 18,
+        "BMSslopeSymbol": 428,
+        "CartoReliefLine": 46,
+        "Contour": 721,
+        "ContourAnno": 35,
+        "SpotHeight": 124,
+        "VerticalCutPolygon": 2,
+        "CartoPedLine": 141,
+        "CartoTransLine": 35,
+        "PedestrianAnno": 15,
+        "RoadAnno": 16,
+        "StreetCentreLines": 15,
+        "TransportPolygon": 1,
+        "TransportPolygonAnno": 2,
+        "UtilityPoint": 47,
+        "UtilityPointAnno": 46
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-17D",
+      "feature_counts": {
+        "BSLineAnno": 1,
+        "BSPolygonAnno": 32,
+        "Building": 473,
+        "BuildingAnno": 132,
+        "BuildingAnnoHouseNo": 183,
+        "BuiltStructureLine": 1,
+        "BuiltStructurePoint": 34,
+        "BuiltStructurePolygon": 16,
+        "CartoBuildingLine": 1820,
+        "Site": 17,
+        "SiteAnno": 17,
+        "CartoHydroLine": 127,
+        "HydroLine": 37,
+        "HydroPolygon": 50,
+        "HydroPolygonAnno": 51,
+        "CartoLandCoverLine": 222,
+        "LandCoverVector2": 139,
+        "PlaceNameAnno": 2,
+        "Berm": 4,
+        "BMSslope": 30,
+        "BMSslopeSymbol": 750,
+        "CartoReliefLine": 45,
+        "Contour": 110,
+        "ContourAnno": 16,
+        "SpotHeight": 181,
+        "VerticalCutPolygon": 12,
+        "CartoPedLine": 249,
+        "CartoTransLine": 399,
+        "PedestrianAnno": 34,
+        "RailwayAnno": 2,
+        "RailwayPolygon": 47,
+        "RoadAnno": 59,
+        "StreetCentreLines": 38,
+        "CartoUtilityLine": 5,
+        "UtilityLine": 5,
+        "UtilityPoint": 325,
+        "UtilityPointAnno": 311
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-18A",
+      "feature_counts": {
+        "BSPolygonAnno": 29,
+        "Building": 1175,
+        "BuildingAnno": 306,
+        "BuildingAnnoHouseNo": 421,
+        "BuiltStructurePoint": 1,
+        "BuiltStructurePolygon": 31,
+        "CartoBuildingLine": 4108,
+        "Site": 27,
+        "SiteAnno": 20,
+        "CartoHydroLine": 93,
+        "HydroLine": 40,
+        "HydroLineAnno": 10,
+        "HydroPoint": 5,
+        "HydroPointAnno": 5,
+        "HydroPolygon": 33,
+        "HydroPolygonAnno": 21,
+        "CartoLandCoverLine": 543,
+        "LandCoverVector2": 269,
+        "Tree": 1,
+        "PlaceNameAnno": 6,
+        "BMSslope": 18,
+        "BMSslopeSymbol": 288,
+        "CartoReliefLine": 12,
+        "SpotHeight": 190,
+        "VerticalCutPolygon": 6,
+        "CartoPedLine": 208,
+        "CartoTransLine": 123,
+        "PedestrianAnno": 28,
+        "RoadAnno": 34,
+        "StreetCentreLines": 35,
+        "CartoUtilityLine": 9,
+        "UtilityLine": 9,
+        "UtilityPoint": 328,
+        "UtilityPointAnno": 320
+      }
+    },
+    {
+      "role": "ib1000",
+      "folder": "source/map_build_full_loop/extracted/ib1000_6-NE-18C",
+      "feature_counts": {
+        "BSLineAnno": 1,
+        "BSPolygonAnno": 25,
+        "Building": 1339,
+        "BuildingAccessoryLine": 3,
+        "BuildingAnno": 474,
+        "BuildingAnnoHouseNo": 402,
+        "BuiltStructureLine": 1,
+        "BuiltStructurePolygon": 24,
+        "CartoBuildingLine": 4831,
+        "Site": 44,
+        "SiteAnno": 50,
+        "CartoHydroLine": 120,
+        "HydroLine": 23,
+        "HydroPoint": 3,
+        "HydroPointAnno": 3,
+        "HydroPolygon": 50,
+        "HydroPolygonAnno": 44,
+        "CartoLandCoverLine": 448,
+        "LandCoverVector2": 263,
+        "Tree": 7,
+        "PlaceNameAnno": 3,
+        "BMSslope": 7,
+        "BMSslopeSymbol": 81,
+        "CartoReliefLine": 14,
+        "SpotHeight": 180,
+        "VerticalCutPolygon": 6,
+        "CartoPedLine": 309,
+        "CartoTransLine": 164,
+        "PedestrianAnno": 49,
+        "RoadAnno": 49,
+        "StreetCentreLines": 33,
+        "TransportPolygonAnno": 1,
+        "CartoUtilityLine": 7,
+        "UtilityLine": 7,
+        "UtilityPoint": 357,
+        "UtilityPointAnno": 344
+      }
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE12A"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE12B"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE12C"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE12D"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE13A"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE13C"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE17A"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE17B"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE17C"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE17D"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE18A"
+    },
+    {
+      "role": "lidar_dtm_2020",
+      "folder": "source/map_build_full_loop/extracted/lidar_dtm_2020_6NE18C"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-12A"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-12B"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-12C"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-12D"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-13A"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-13C"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-17A"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-17B"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-17C"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-17D"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-18A"
+    },
+    {
+      "role": "nontextured_models",
+      "folder": "source/map_build_full_loop/extracted/nontextured_models_6-NE-18C"
+    },
+    {
+      "role": "tdop",
+      "folder": "source/map_build_full_loop/extracted/tdop_T6-NE-A"
+    },
+    {
+      "role": "tdop",
+      "folder": "source/map_build_full_loop/extracted/tdop_T6-NE-C"
+    }
+  ],
+  "terrain": {
+    "file": "gis/high_quality_full_loop/full_loop_dtm_05m.npz",
+    "shape": [
+      3566,
+      2010
+    ],
+    "pixel_size_m": 0.5,
+    "nodata_pixels": 0,
+    "min_native_height_m": 1.2222727537155151,
+    "max_native_height_m": 67.86595916748047,
+    "grids": [
+      {
+        "file": "6NE12A(e824n833,e824n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824000.0,
+          833600.0
+        ]
+      },
+      {
+        "file": "6NE12B(e824n833,e825n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          833600.0
+        ]
+      },
+      {
+        "file": "6NE12C(e824n832,e824n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824000.0,
+          833000.0
+        ]
+      },
+      {
+        "file": "6NE12D(e824n832,e825n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          833000.0
+        ]
+      },
+      {
+        "file": "6NE13A(e825n833,e826n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          833600.0
+        ]
+      },
+      {
+        "file": "6NE13C(e825n832,e826n833).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          833000.0
+        ]
+      },
+      {
+        "file": "6NE17A(e824n831,e824n832).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824000.0,
+          832400.0
+        ]
+      },
+      {
+        "file": "6NE17B(e824n831,e825n832).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          832400.0
+        ]
+      },
+      {
+        "file": "6NE17C(e824n831,e824n831).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824000.0,
+          831800.0
+        ]
+      },
+      {
+        "file": "6NE17D(e824n831,e825n831).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          824750.0,
+          831800.0
+        ]
+      },
+      {
+        "file": "6NE18A(e825n831,e826n832).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          832400.0
+        ]
+      },
+      {
+        "file": "6NE18C(e825n831,e826n831).tif",
+        "width": 1500,
+        "height": 1200,
+        "pixel_size_m": 0.5,
+        "upper_left_edge_epsg2326": [
+          825500.0,
+          831800.0
+        ]
+      }
+    ],
+    "processing": "Pixel-aligned crop and mosaic; no smoothing or vertical offset",
+    "vertical_reference": "Native LiDAR heights; confirm datum in source documentation before road profile authoring"
+  },
+  "orthophoto": {
+    "dataset_id": "landsd_rcd_1701762716904_4826",
+    "sources": [
+      {
+        "sheet": "T6-NE-A",
+        "photograph_date": "3 Jan 2025",
+        "source_image": "source/map_build_full_loop/extracted/tdop_T6-NE-A/TDOP_TIFF_6NEA/tdop6nea20250009.tif",
+        "copied_window_pixels": [
+          8912,
+          11188,
+          12932,
+          12000
+        ],
+        "source_extent_epsg2326": [
+          822500.0,
+          833000.0,
+          826250.0,
+          836000.0
+        ]
+      },
+      {
+        "sheet": "T6-NE-C",
+        "photograph_date": "3 Jan 2025",
+        "source_image": "source/map_build_full_loop/extracted/tdop_T6-NE-C/TDOP_TIFF_6NEC/tdop6nec20250009.tif",
+        "copied_window_pixels": [
+          8912,
+          0,
+          12932,
+          6320
+        ],
+        "source_extent_epsg2326": [
+          822500.0,
+          830000.0,
+          826250.0,
+          833000.0
+        ]
+      }
+    ],
+    "crop_file": "gis/high_quality_full_loop/full_loop_orthophoto.jpg",
+    "world_file": "gis/high_quality_full_loop/full_loop_orthophoto.jgw",
+    "crs_file": "gis/high_quality_full_loop/full_loop_orthophoto.crs.txt",
+    "dimensions_pixels": [
+      4020,
+      7132
+    ],
+    "bounds_epsg2326": [
+      824728,
+      831420,
+      825733,
+      833203
+    ],
+    "ground_sample_distance_m": 0.25,
+    "uncovered_pixels": 0,
+    "pixel_centres_epsg2326_first": [
+      824728.125,
+      833202.875
+    ],
+    "alignment": "PASS",
+    "processing": "Native pixel-window mosaic; no resampling; JPEG quality 95"
+  },
+  "iB1000_axis_order_check": {
+    "source_axis_order": "northing,easting,height",
+    "output_axis_order": "easting,northing",
+    "tile_boundary_samples": {
+      "northing_easting_matches": 478,
+      "easting_northing_matches": 0
+    },
+    "check": "PASS: GML positions cross-checked against official EPSG:2326 tile extents"
+  },
+  "iB1000_full_loop_layers": {
+    "StreetCentreLines": {
+      "file": "gis/high_quality_full_loop/iB1000_StreetCentreLines_full_loop_grid.json",
+      "envelope_features": 211,
+      "clipped_counts_by_code": {
+        "SER": 207,
+        "MAR": 4
+      },
+      "records_with_other_display_status": 0
+    },
+    "CartoTransLine": {
+      "file": "gis/high_quality_full_loop/iB1000_CartoTransLine_full_loop_grid.json",
+      "envelope_features": 931,
+      "clipped_counts_by_code": {
+        "RM": 542,
+        "NB": 29,
+        "RMU": 11,
+        "FY": 18,
+        "TC": 80,
+        "MTR": 250,
+        "TUR": 1
+      },
+      "records_with_other_display_status": 24
+    },
+    "SpotHeight": {
+      "file": "gis/high_quality_full_loop/iB1000_SpotHeight_full_loop_grid.json",
+      "envelope_features": 794,
+      "clipped_counts_by_code": {
+        "SHG": 789,
+        "SHE": 5
+      },
+      "records_with_other_display_status": 3
+    },
+    "UtilityPoint": {
+      "file": "gis/high_quality_full_loop/iB1000_UtilityPoint_full_loop_grid.json",
+      "envelope_features": 1226,
+      "clipped_counts_by_code": {
+        "UNKNOWN": 1226
+      },
+      "records_with_other_display_status": 0
+    },
+    "CartoPedLine": {
+      "file": "gis/high_quality_full_loop/iB1000_CartoPedLine_full_loop_grid.json",
+      "envelope_features": 1154,
+      "clipped_counts_by_code": {
+        "UNKNOWN": 1154
+      },
+      "records_with_other_display_status": 1
+    },
+    "UtilityLine": {
+      "file": "gis/high_quality_full_loop/iB1000_UtilityLine_full_loop_grid.json",
+      "envelope_features": 16,
+      "clipped_counts_by_code": {
+        "UNKNOWN": 16
+      },
+      "records_with_other_display_status": 0
+    }
+  },
+  "building_footprints": {
+    "file": "gis/high_quality_full_loop/LandsD_building_footprints_full_loop_grid.json",
+    "clipped_footprints": 2907,
+    "known_base_top_heights": 1518,
+    "height_review_required": 1389
+  },
+  "buildings": {
+    "records": 2907,
+    "valid_base_top_pairs": 1518,
+    "height_review_required": 1389
+  },
+  "ib1000_dictionary_interpretation": {
+    "street_types": {
+      "HIG": "Highway",
+      "MAR": "Main Road",
+      "RER": "Restricted Road",
+      "ROB": "Road Bridge",
+      "SER": "Secondary Road",
+      "SLR": "Slip Road",
+      "TRA": "Track",
+      "TUN": "Tunnel"
+    },
+    "spot_heights": {
+      "SHG": "Ground-level spot height",
+      "SHE": "Top level of elevated structure"
+    },
+    "transport_line_types": {
+      "FY": "Flyover/elevated road/bridge",
+      "FYU": "Flyover beneath another elevated structure",
+      "TUR": "Vehicle or railway tunnel",
+      "RM": "Road margin",
+      "RMU": "Road margin below elevated structures"
+    },
+    "use_note": "Use code and display-status fields. Cartographic transport lines are not road-centreline or drivable-surface geometry."
+  },
+  "scope": "Source readiness only. Classification, elevations, road and facade authoring remain to be reviewed.",
+  "scope_id": "full-loop",
+  "bounds_epsg2326": [
+    824728,
+    831420,
+    825733,
+    833203
+  ],
+  "route_source_review": {
+    "route_file": "driving_test/source/test_loop_source.json",
+    "route_basis": "Retained OSM source polyline; not the filleted 3.445 km installed collision mesh",
+    "source_length_m": 3467.6644196711563,
+    "samples": 1734,
+    "sample_spacing_m": 1.9998064703985907,
+    "terrain_supported_samples": 1734,
+    "terrain_sample_coverage_percent": 100.0,
+    "distance_to_ib1000_street_m": {
+      "min": 0.0022580341439072285,
+      "median": 0.6589546848925121,
+      "p95": 4.7643373631970665,
+      "max": 7.882534424337271
+    },
+    "samples_over_5m_from_official_street": 54,
+    "ground_spots_compared": 789,
+    "dtm_minus_ground_spot_m": {
+      "min": -6.254687118530274,
+      "median": 0.014646625518798473,
+      "p95": 0.5964560699462864,
+      "max": 9.669095993041992
+    },
+    "near_route_buildings_0_60m": 781,
+    "near_route_buildings_needing_height_review": 377,
+    "review_files": [
+      "gis/high_quality_full_loop/route_source_review.csv",
+      "gis/high_quality_full_loop/spot_height_comparison.csv",
+      "gis/high_quality_full_loop/building_authoring_queue.csv",
+      "gis/high_quality_full_loop/full_loop_source_overview.jpg"
+    ],
+    "limits": [
+      "Source alignment and terrain coverage only; no proof of road collision, public access or finished scenery.",
+      "Spot samples use the containing 0.5 m DTM pixel; dates and display status differ. No vertical correction applied.",
+      "Building priority uses footprint distance; it does not establish visibility or validate model geometry."
+    ]
+  }
+}

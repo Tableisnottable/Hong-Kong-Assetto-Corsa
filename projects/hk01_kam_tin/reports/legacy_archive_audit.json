@@ -1,0 +1,22 @@
+{
+  "scope": "Existing local map download integrity audit",
+  "archive_files": 1456,
+  "total_bytes": 32208545276,
+  "counts_by_status": {
+    "INVALID_ZIP": 1358,
+    "CRC_PASS": 72,
+    "ZIP_DIRECTORY_ONLY": 26
+  },
+  "crc_budget_mib": 3072,
+  "crc_checked_compressed_bytes": 3159930125,
+  "invalid_payload_types": {
+    "other_or_truncated": 64,
+    "html_response": 1294
+  },
+  "inventory": "source/hong_kong_master/legacy_archive_inventory.json",
+  "limits": [
+    "No file deleted, extracted, installed or copied into a build.",
+    "ZIP_DIRECTORY_ONLY is not integrity approval. CRC_PASS does not establish source provenance, geometric accuracy or licence.",
+    "Legacy filenames are sheet candidates; format and official dataset identity need independent matching."
+  ]
+}

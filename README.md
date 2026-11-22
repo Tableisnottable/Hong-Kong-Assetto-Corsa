@@ -2,15 +2,21 @@
 
 Hong Kong road-map authoring and regional track experiments.
 
-**Current status — November 15, 2026:** the installed map remains **Kam Tin v0.5**, a provisional 3.445 km comparison loop, and has not reached the required Route Twisk RWE / Repack Test quality. The first detailed pilot's source data are now collected and prepared; its authored road, junction and scenery build remains outstanding. A clone is a source checkout; it does not supply a complete Hong Kong track.
+**Scope confirmed November 23, 2026:** all Hong Kong, including the README's
+13 driving-test centres and 31 route records, delivered in separate 1:1 regions.
+The [whole-Hong-Kong source master](projects/hk01_kam_tin/FULL_HONG_KONG.md)
+documents the geographic inventory, detailed-source coverage queue and unresolved
+exam-route references. This source preparation is not a playable full-HK release.
+
+**Current status — November 23, 2026:** the whole-Hong-Kong geographic master and detailed full-loop Kam Tin inputs are prepared. Installed track metadata currently reports **Kam Tin `0.3-full-loop`**, a provisional 3.445 km loop. The retained v0.5 comparison work is historical; it is not the version currently reported by the installation. Accurate road, junction and scenery production remains outstanding, and the required Route Twisk quality has not been achieved. A clone is a source checkout; it does not supply a complete Hong Kong track.
 
 ## Start here / 從這裏開始
 
 | Workstream / 工作 | Current scope / 目前範圍 | Guide / 文件 |
 | --- | --- | --- |
-| Kam Tin / 錦田 | Regional foundation and v0.5 test loop; engine appearance, driving and FPS still need a fresh test | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
+| Kam Tin / 錦田 | Installed metadata reports 0.3-full-loop; retained v0.5 comparison stage; fresh driving/FPS test pending | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
 | Required map quality / 地圖品質目標 | Route Twisk reference standard and outstanding road, junction and scenery work | [Quality requirements](projects/hk01_kam_tin/REFERENCE_QUALITY.md) |
-| Map source data / 地圖來源資料 | Collected terrain, detailed maps, orthophoto, buildings and road-network inputs for the Kam Tin pilot | [Data locations and preparation](projects/hk01_kam_tin/MAP_DATA.md) |
+| Map source data / 地圖來源資料 | Whole-Hong-Kong master and regional inputs; detailed Kam Tin full-loop terrain, maps, imagery and buildings | [Full-HK master](projects/hk01_kam_tin/FULL_HONG_KONG.md) · [Data locations](projects/hk01_kam_tin/MAP_DATA.md) |
 | Earlier road-test tools / 早期考場工具 | Tin Kwong Road blockout and multi-centre experiments | Historical development notes below; [production plan](docs/map-production-plan.md) |
 
 ## Kam Tin regional map / 錦田區域地圖

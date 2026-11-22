@@ -1,5 +1,10 @@
 # Map build inputs — Kam Tin
 
+For the November 23 extension to the **whole-Hong-Kong source master**, all
+README exam centres/routes, and the full Kam Tin loop source set, see
+[FULL_HONG_KONG.md](FULL_HONG_KONG.md). The original checkpoint 1–2 pilot inputs
+and commands below remain separate from that wider acquisition.
+
 The acquisition follows the README and `HIGH_QUALITY_BUILD_PLAN.md`: first
 prepare the checkpoint 1–2 pilot, then extend the same method along the test
 loop. Its envelope is E825184–825535, N832215–832871 in Hong Kong 1980 Grid
