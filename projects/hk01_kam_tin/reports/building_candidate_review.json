@@ -1,0 +1,83 @@
+{
+  "scope": "Checkpoint 1-2 intact building geometry comparison; authoring reference only",
+  "origin_epsg2326": [
+    826000.0,
+    833000.0
+  ],
+  "pilot_route_epsg2326": [
+    [
+      825414.5345452479,
+      832334.7474068782
+    ],
+    [
+      825396.043,
+      832404.401
+    ],
+    [
+      825389.74,
+      832429.775
+    ],
+    [
+      825380.754,
+      832461.917
+    ],
+    [
+      825373.423,
+      832489.529
+    ],
+    [
+      825370.99,
+      832498.678
+    ],
+    [
+      825346.533,
+      832590.728
+    ],
+    [
+      825328.001,
+      832660.937
+    ],
+    [
+      825321.039,
+      832686.633
+    ],
+    [
+      825314.561,
+      832710.545
+    ],
+    [
+      825309.284,
+      832730.891
+    ],
+    [
+      825304.2680960427,
+      832750.2345686381
+    ]
+  ],
+  "limits": [
+    "No source building flattened, shifted vertically, corridor-cut or installed.",
+    "Convex-hull footprint overlap is a screening measure, not an exact silhouette match.",
+    "Native source geometry/colour/texture is retained for inspection; facades are not authored or approved."
+  ],
+  "nearby_footprints": 147,
+  "candidate_models": 74,
+  "variants": {
+    "clean": 37,
+    "textured_reference": 37
+  },
+  "flagged_models": 19,
+  "matched_footprint_ids": 37,
+  "source_archives_checked": [
+    {
+      "name": "individualised_models_6-NE-12D.zip",
+      "sha256": "c31199b9482748a4dda11698bd636bf201318e87e9c301abb4360911749d3c5b"
+    },
+    {
+      "name": "individualised_models_6-NE-17B.zip",
+      "sha256": "8b57b7d1d3764a372e7b48835a184c7bd6c4b1b45bf22bc0bb16234ae6ab1956"
+    }
+  ],
+  "prepared_manifest_sha256": "5e0a5886b571effa4559ccf5a3e3ca0ef28c6222ba4df725a443cb2349c16c8f",
+  "output_folder": "gis/building_review/",
+  "triangle_count": 4814
+}

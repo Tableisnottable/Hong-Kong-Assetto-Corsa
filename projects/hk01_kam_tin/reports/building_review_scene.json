@@ -1,0 +1,66 @@
+{
+  "scope": "Separate building authoring/reference scene; not installed or game-tested",
+  "scene": "blender/HK01_KamTin_BUILDING_REVIEW.blend",
+  "scene_sha256": "32b0136ebef9af1fc7a12fcc58977cefdba2e908c1cbfde6251b157ca2ff8a9c",
+  "prepared_manifest_sha256": "5e0a5886b571effa4559ccf5a3e3ca0ef28c6222ba4df725a443cb2349c16c8f",
+  "source_mesh_objects": 74,
+  "generic_reference_objects": 35,
+  "generic_manifest_sha256": "cc4b0007430427d66a7b154b5a85ee710dee11633d4c8a2473fa692f0132a121",
+  "default_view": "Clean building candidates and review outlines; raw photogrammetry hidden",
+  "renders": [
+    {
+      "file": "previews/building_review/01_clean_overview.png",
+      "sha256": "553614a7ae35eab620444598cb4f0073dba35096701de35fc72f3a7f0c12a073",
+      "variant": "clean",
+      "overlays": true,
+      "camera_local_xyz": [
+        -353.4670104980469,
+        -829.27197265625,
+        370.0
+      ]
+    },
+    {
+      "file": "previews/building_review/02_textured_overview.png",
+      "sha256": "4daf34d054d83bf89b90ddfe0ec2adb90e331274e28068925fd62e804b4717ec",
+      "variant": "textured_reference",
+      "overlays": true,
+      "camera_local_xyz": [
+        -353.4670104980469,
+        -829.27197265625,
+        370.0
+      ]
+    },
+    {
+      "file": "previews/building_review/03_driver_forward.png",
+      "sha256": "f6f9dbe54fc54ebd9d7d6e5d0537ef219563c8210426a78c564e965bf1eb7fd5",
+      "variant": "textured_reference",
+      "overlays": false,
+      "camera_local_xyz": [
+        -622.1784057617188,
+        -527.0382080078125,
+        11.436857223510742
+      ]
+    },
+    {
+      "file": "previews/building_review/04_driver_reverse.png",
+      "sha256": "fa0d45ea74f013008410e574a8a4b7ec3d2871eab6470e506e35aaa4bf1eca92",
+      "variant": "textured_reference",
+      "overlays": false,
+      "camera_local_xyz": [
+        -659.4773559570312,
+        -386.50152587890625,
+        11.415578842163086
+      ]
+    }
+  ],
+  "native_positions_preserved": true,
+  "source_buildings_corridor_cut": false,
+  "visual_review": "INSPECTED_INCOMPLETE_FOREGROUND_RECONSTRUCTION_REQUIRED",
+  "game_export": false,
+  "visual_findings": [
+    "Clean overview shows coherent matched volumes and explicit missing-structure outlines; foreground facades remain unauthored.",
+    "Native GENERIC overhead view restores small structures, but driver forward/reverse views show torn walls, spikes and jagged roadside/ground fragments.",
+    "Textured source facades are blurred/stretched, with a recorded missing-image fallback; raw imagery and terrain do not form a finished road.",
+    "Raw GENERIC is rejected for direct foreground production in its current state; retained as a hidden source reference. Route Twisk quality is not achieved."
+  ]
+}

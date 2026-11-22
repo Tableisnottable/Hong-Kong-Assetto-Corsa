@@ -5,6 +5,11 @@ and the driving-test centres/routes in the repository README. Kam Tin remains
 the detailed production sample. The source master covers the retained Hong Kong
 road inventory; it is not a finished playable whole-territory map.
 
+The next authoring increment is recorded in [BUILDING_REVIEW.md](BUILDING_REVIEW.md):
+a separate pilot scene compares intact clean building candidates with textured
+and native photogrammetry references. Its driver-height review rejects raw
+photo geometry for direct foreground use and keeps missing structures explicit.
+
 ## Local authoring inputs
 
 `gis/hong_kong_master/` contains the master in **EPSG:2326, metres**:

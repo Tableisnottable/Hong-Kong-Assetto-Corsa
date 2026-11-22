@@ -1,0 +1,31 @@
+{
+  "scope": "Native GENERIC source geometry retained for authoring review",
+  "source_archives_checked": [
+    {
+      "name": "individualised_models_6-NE-12D.zip",
+      "sha256": "c31199b9482748a4dda11698bd636bf201318e87e9c301abb4360911749d3c5b"
+    },
+    {
+      "name": "individualised_models_6-NE-13C.zip",
+      "sha256": "cd8ab9fe2695c2f75b2a79821db0a5278cba81ceb1b553baf779d667ca05131c"
+    },
+    {
+      "name": "individualised_models_6-NE-17B.zip",
+      "sha256": "8b57b7d1d3764a372e7b48835a184c7bd6c4b1b45bf22bc0bb16234ae6ab1956"
+    },
+    {
+      "name": "individualised_models_6-NE-18A.zip",
+      "sha256": "b8fd75d94eab0acbe54c59dd14c57df2002767d335e84f4a42275dffff4e8642"
+    }
+  ],
+  "mesh_parts": 35,
+  "triangles": 2288876,
+  "manifest_sha256": "cc4b0007430427d66a7b154b5a85ee710dee11633d4c8a2473fa692f0132a121",
+  "flattened_vertices": 0,
+  "road_corridor_cut": false,
+  "game_export": false,
+  "limits": [
+    "Source ground, vegetation, rough facades and boundary cuts remain; no production-quality claim.",
+    "2K texture caps are review previews; original source textures remain untouched."
+  ]
+}

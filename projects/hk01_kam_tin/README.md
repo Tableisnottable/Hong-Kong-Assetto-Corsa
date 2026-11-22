@@ -1,5 +1,11 @@
 # Hong Kong 1:1 — regional Assetto Corsa project
 
+The November 23 [building-shape review](BUILDING_REVIEW.md) adds a separate
+Blender authoring scene for checkpoint 1–2, clean/vertex-colour model support,
+matched textured references, and an unflattened `GENERIC` comparison layer.
+Driver-height renders expose raw photo-mesh defects; those meshes are not
+approved for direct foreground use. This does not install a new game track.
+
 The current scope includes **all Hong Kong and all 13 README driving-test centres
 (31 route records)**, as confirmed November 23, 2026. See
 [FULL_HONG_KONG.md](FULL_HONG_KONG.md) for the territory-wide geographic master,

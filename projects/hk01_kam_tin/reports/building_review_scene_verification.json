@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Saved authoring-scene source-position/topology verification only",
+  "scene_sha256": "32b0136ebef9af1fc7a12fcc58977cefdba2e908c1cbfde6251b157ca2ff8a9c",
+  "mesh_objects_checked": 109,
+  "vertices_checked": 6880560,
+  "triangles_checked": 2293690,
+  "renders_hash_verified": 4,
+  "native_positions_preserved": true,
+  "default_raw_photogrammetry_hidden": true,
+  "limits": "Not a road/collision/KN5 check, game test, or approval of source mesh appearance"
+}
