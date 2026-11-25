@@ -134,6 +134,35 @@ whole-territory bulk downloads through the pilot collector.
 
 ## Game production
 
+### Pick an area on the map
+
+The browser workflow follows [Earth2Cities](https://mods.paradoxplaza.com/mods/140919/Windows):
+choose an area first, then generate its source layers. The Hong Kong picker
+uses the existing 6 × 6 km cores so adjacent builds keep their shared boundaries.
+It starts at Kam Tin and shows catalogued driving-test centres in each area.
+The centre locations are approximate and their route descriptions need verification.
+
+With the source master built, run these commands from the repository root:
+
+```powershell
+python projects/hk01_kam_tin/scripts/build_region_picker.py
+Invoke-Item projects/hk01_kam_tin/gis/hong_kong_master/region_picker.html
+```
+
+Click a region and copy its PowerShell command. For example, Kam Tin uses:
+
+```powershell
+python projects/hk01_kam_tin/scripts/prepare_regional_sources.py --region HK_E822_N828
+```
+
+The command prepares the selected terrain crop, road geometry inputs and
+review table, building footprints, and boundary portal IDs under
+`gis/hong_kong_master/regions/<region_id>/`. Repeat `--region` to prepare
+several cores. The picker runs offline. Its output is for authoring, and
+game production still requires the mesh and collision steps below.
+
+### Build and export regional tracks
+
 Build separate selectable 1:1 regions from the shared source master. Six-kilometre
 cores are production units, not proof of game streaming, a seamless world or
 acceptable memory use. Shared roads at boundaries need coordinated endpoints,

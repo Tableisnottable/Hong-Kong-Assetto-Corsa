@@ -1,6 +1,7 @@
 """Derive regional authoring inputs with shared master coordinates and seam IDs."""
 from __future__ import annotations
 
+import argparse
 from collections import Counter
 import csv
 import hashlib
@@ -67,12 +68,23 @@ def crop_terrain(data, bounds, destination):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--region", action="append", metavar="ID",
+                        help="Prepare only this region. Repeat to select several regions.")
+    args = parser.parse_args()
     master = ROOT / "gis/hong_kong_master"
+    regions = json.loads((master / "regions.json").read_text(encoding="utf-8"))["regions"]
+    if args.region:
+        requested = set(args.region)
+        unknown = requested - {region["id"] for region in regions}
+        if unknown:
+            parser.error(f"Unknown region: {', '.join(sorted(unknown))}")
+        regions = [region for region in regions if region["id"] in requested]
+
     source = master / "hk_roads_grid.json"
     records = json.loads(source.read_text(encoding="utf-8"))["roads"]
     buildings = json.loads((master / "hk_buildings_grid.json").read_text(encoding="utf-8"))["buildings"]
     building_tree = STRtree([shape(b["geometry"]) for b in buildings])
-    regions = json.loads((master / "regions.json").read_text(encoding="utf-8"))["regions"]
     tree = STRtree([LineString(r["xy"]) for r in records])
     summaries, all_portals = [], {}
     with np.load(master / "hk_terrain_5m.npz") as terrain:
@@ -123,7 +135,11 @@ def main():
               "limits": ["Boundary portals establish horizontal source identity only; deck heights and mesh seams remain unbuilt.",
                          "Terrain NoData remains unchanged; bridge/tunnel roads must not inherit ground heights.",
                          "Context overlaps intentionally; no streaming or seamless travel is implemented."]}
-    save(ROOT / "reports/regional_source_preparation.json", report)
+    if args.region:
+        # Keep the verified territory-wide report and its seam totals intact.
+        save(master / "selected_region_preparation.json", report)
+    else:
+        save(ROOT / "reports/regional_source_preparation.json", report)
 
 
 if __name__ == "__main__":

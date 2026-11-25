@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hong Kong 1:1 · Region picker</title>
+<style>
+  :root {
+    color-scheme: dark;
+    font: 16px "Inter", "Segoe UI", sans-serif;
+    background: #101b20;
+    color: #eef4ef;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  main { max-width: 1520px; margin: auto; padding: clamp(16px, 4vw, 56px); }
+  h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.75rem); letter-spacing: -.045em; }
+  h2 { margin: 0 0 8px; font-size: 1.45rem; }
+  p { margin: 0 0 16px; color: #b9ccc7; line-height: 1.45; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 340px); gap: 22px; }
+  .map { position: relative; border: 1px solid #3e5758; border-radius: 10px; overflow: hidden; }
+  .map img { width: 100%; display: block; }
+  .region {
+    position: absolute;
+    background: #9cc5b409;
+    border: 1px solid #b5cec74d;
+    color: #eef4ef;
+    cursor: pointer;
+    padding: 0;
+  }
+  .region:hover { background: #b4e6cd35; border-color: #b4e6cd; z-index: 1; }
+  .region[aria-pressed="true"] { background: #d4f88029; border: 2px solid #d4f880; z-index: 2; }
+  .region:focus-visible { outline: 2px solid white; outline-offset: -4px; z-index: 3; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 10px 0; font-size: .8rem; }
+  .legend span::before {
+    content: "";
+    display: inline-block;
+    background: var(--swatch);
+    width: 12px;
+    height: 4px;
+    margin: 0 6px 3px 0;
+  }
+  aside { background: #192a30; border: 1px solid #344e50; border-radius: 10px; padding: 20px; align-self: start; }
+  label, h3 { display: block; font-size: .88rem; font-weight: 650; margin: 0 0 8px; }
+  select, textarea, #copy { font: inherit; border: 1px solid #69817d; border-radius: 6px; width: 100%; }
+  select, textarea { padding: 9px; background: #101b20; color: inherit; }
+  select { margin-bottom: 18px; }
+  ul { margin: 0 0 18px; padding-left: 20px; line-height: 1.45; font-size: .9rem; }
+  textarea { min-height: 84px; resize: vertical; font: .8rem/1.4 Consolas, monospace; }
+  #copy { margin: 8px 0; padding: 9px; background: #d4f880; color: #182515; font-weight: 700; cursor: pointer; }
+  #copy:hover { background: #e6ffa9; }
+  small, .hint { color: #b9ccc7; font-size: .8rem; }
+  #status { min-height: 1.25rem; margin-bottom: 0; }
+  @media (max-width: 780px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hong Kong 1:1</h1>
+  <p>Choose a 6 × 6 km region to prepare source files for Assetto Corsa.</p>
+  <div class="layout">
+    <section aria-label="Hong Kong region map">
+      <div class="map" id="map">
+        <img src="data:image/png;base64,MAP_PNG_BASE64" alt="Road network across Hong Kong, north up">
+      </div>
+      <div class="legend">
+        <span style="--swatch:#80b2a5">Public-road candidates</span>
+        <span style="--swatch:#926b54">Restricted or needs review</span>
+        <span style="--swatch:#ffc477">Approximate test centres</span>
+        <span style="--swatch:#d4f880">Kam Tin pilot loop</span>
+      </div>
+      <small>Road data © OpenStreetMap contributors</small>
+    </section>
+    <aside aria-label="Selected region">
+      <label for="region">Region</label>
+      <select id="region"></select>
+      <h2 id="title"></h2>
+      <p id="roads"></p>
+      <div id="tests" hidden>
+        <h3>Driving-test references</h3>
+        <ul id="centres"></ul>
+      </div>
+      <label for="command">Prepare terrain, roads and footprints</label>
+      <p class="hint">Run this command from the repository root. It creates authoring files for the selected region.</p>
+      <textarea id="command" rows="3" readonly spellcheck="false"></textarea>
+      <button type="button" id="copy">Copy PowerShell command</button>
+      <p class="hint" id="status" role="status"></p>
+    </aside>
+  </div>
+</main>
+<script type="application/json" id="data">REGION_DATA_JSON</script>
+<script>
+  const { regions, pilotRegion } = JSON.parse(document.getElementById("data").textContent);
+  const map = document.getElementById("map");
+  const list = document.getElementById("region");
+  const command = document.getElementById("command");
+  const status = document.getElementById("status");
+  const cells = new Map();
+  const regionById = new Map(regions.map(region => [region.id, region]));
+  const kilometres = new Intl.NumberFormat("en-HK", { maximumFractionDigits: 1 });
+
+  function selectRegion(id) {
+    const region = regionById.get(id);
+    for (const cell of cells.values()) cell.setAttribute("aria-pressed", String(cell.dataset.region === id));
+    list.value = id;
+    document.getElementById("title").textContent = id === pilotRegion ? "Kam Tin pilot" : id;
+    document.getElementById("roads").textContent =
+      `${kilometres.format(region.road_line_km)} km of mapped road lines · ${region.road_parts.toLocaleString("en-HK")} road parts`;
+    const centres = document.getElementById("centres");
+    centres.replaceChildren(...region.exam_centres.map(centre => {
+      const item = document.createElement("li");
+      item.textContent = `${centre.name} · ${centre.catalog_routes} route descriptions`;
+      return item;
+    }));
+    document.getElementById("tests").hidden = !region.exam_centres.length;
+    command.value = `python projects/hk01_kam_tin/scripts/prepare_regional_sources.py --region ${id}`;
+    status.textContent = "";
+  }
+
+  for (const region of regions) {
+    const label = region.id === pilotRegion ? `Kam Tin pilot · ${region.id}` : region.id;
+    const option = new Option(label, region.id);
+    list.add(option);
+    const cell = document.createElement("button");
+    const [left, top, width, height] = region.map_percent.map(value => `${value}%`);
+    Object.assign(cell.style, { left, top, width, height });
+    cell.className = "region";
+    cell.type = "button";
+    cell.tabIndex = -1; // The equivalent drop-down provides keyboard navigation.
+    cell.dataset.region = region.id;
+    cell.title = label;
+    cell.setAttribute("aria-label", label);
+    cell.addEventListener("click", () => selectRegion(region.id));
+    cells.set(region.id, cell);
+    map.append(cell);
+  }
+
+  list.addEventListener("change", () => selectRegion(list.value));
+  document.getElementById("copy").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(command.value);
+      status.textContent = "Copied.";
+    } catch {
+      command.focus();
+      command.select();
+      status.textContent = "Press Ctrl+C to copy the selected command.";
+    }
+  });
+  selectRegion(pilotRegion);
+</script>
+</body>
+</html>
