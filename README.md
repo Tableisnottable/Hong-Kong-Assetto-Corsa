@@ -21,6 +21,7 @@ Repack Test** is the visual benchmark. [Kam Tin building review](projects/hk01_k
 | Workstream / 工作 | Current scope / 目前範圍 | Guide / 文件 |
 | --- | --- | --- |
 | Region picker / 地圖選區 | Select a 6 × 6 km area and prepare its terrain, road lines and building footprints | [Open the region picker](#region-picker--地圖選區) |
+| KMB buses / 九巴 | Six converted buses with OMSI-derived physics, selectable route displays and CSP Traffic Planner models | [Bus guide](docs/kmb_bus_test.md) · [Route display instructions](projects/kmb_bus_tools/README.md#set-a-route-display) |
 | Kam Tin / 錦田 | Provisional 3.445 km loop available on the development PC. Checkpoint 1–2 quality pass in development. | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
 | Required map quality / 地圖品質目標 | Route Twisk reference standard and outstanding road, junction and scenery work | [Quality requirements](projects/hk01_kam_tin/REFERENCE_QUALITY.md) |
 | Map source data / 地圖來源資料 | Whole-Hong-Kong master and regional inputs; detailed Kam Tin full-loop terrain, maps, imagery and buildings | [Full-HK master](projects/hk01_kam_tin/FULL_HONG_KONG.md) · [Data locations](projects/hk01_kam_tin/MAP_DATA.md) |
@@ -49,6 +50,43 @@ footprints and shared road boundary points for that area. These files are
 inputs for Blender and track authoring. The generated picker, geographic
 data and game assets stay local.
 [Regional authoring guide](projects/hk01_kam_tin/FULL_HONG_KONG.md#pick-an-area-on-the-map)
+
+## KMB buses / 九巴
+
+The local Assetto Corsa conversion includes six KMB bus variants. Their
+mass, engine curves, gear ratios, steering and suspension settings use data
+from the matching OMSI 2 vehicles. The buses are E200, E6M, E500MMC ATENU,
+Enviro500 ATEE, Scania K230UB and Dennis Dragon 9.9M. They are available as
+drivable cars and as separate CSP Traffic Planner vehicles. The three-axle
+models use a visual animation for the extra axle because AC bus physics has
+four tire contact points.
+
+The OMSI `KMB_AllRoutes_Full.hof` file provides **1,674 route and destination
+entries**. List the destinations, then apply an indexed entry to all six bus
+skins:
+
+```powershell
+python tools/set_kmb_bus_display.py all --list
+python tools/set_kmb_bus_display.py all --entry 123
+```
+
+Replace `123` with the entry number. You can also search by route or
+destination with `python tools/set_kmb_bus_display.py all --query "Tai Mo Shan"`.
+In Content Manager, refresh the skins and select the generated `KMB CUSTOM`
+skin before driving. This chooses the display before the session. To show the
+same destination on Traffic Planner buses, rebuild and install their embedded
+display models after setting the route:
+
+```powershell
+python tools/build_kmb_planner_traffic.py --skin kmb_custom_route --output outputs/KMB_AI --reuse-lods --install
+python tools/validate_kmb_planner_traffic.py --output outputs/KMB_AI
+```
+
+Close Assetto Corsa before installing or rebuilding its traffic models. Large
+bus models, generated sign textures, sound banks and backups stay local under
+`outputs/` or the AC installation. The OMSI route keypad and passenger systems
+are not included. See the [bus testing guide](docs/kmb_bus_test.md) and [local
+bus tools](projects/kmb_bus_tools/README.md) for details.
 
 ## Kam Tin regional map / 錦田區域地圖
 
