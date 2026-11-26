@@ -2,29 +2,60 @@
 
 Hong Kong road-map authoring and regional track experiments.
 
-**Scope confirmed November 23, 2026:** all Hong Kong, including the README's
-13 driving-test centres and 31 route records, delivered in separate 1:1 regions.
-The [whole-Hong-Kong source master](projects/hk01_kam_tin/FULL_HONG_KONG.md)
-documents the geographic inventory, detailed-source coverage queue and unresolved
-exam-route references. This source preparation is not a playable full-HK release.
+The goal is to recreate all of Hong Kong at **1:1 scale** in Assetto Corsa,
+released as separate regional tracks. The scope includes the catalogue's
+**13 driving-test centres and 31 route records**. Several of those records
+still need route and location verification.
 
-**Current status — November 23, 2026:** the whole-Hong-Kong geographic master and detailed full-loop Kam Tin inputs are prepared. Installed track metadata currently reports **Kam Tin `0.3-full-loop`**, a provisional 3.445 km loop. The retained v0.5 comparison work is historical; it is not the version currently reported by the installation. Accurate road, junction and scenery production remains outstanding, and the required Route Twisk quality has not been achieved. A clone is a source checkout; it does not supply a complete Hong Kong track.
+**Current status · November 26, 2026.** The territory-wide source master and
+detailed Kam Tin inputs are prepared, and the browser picker covers **61
+regions**. The last local installation check found **Kam Tin
+`0.3-full-loop`**, a provisional 3.445 km driving loop. The full Hong Kong
+release is still in development. The next playable milestone is the **431 m
+section between Kam Tin checkpoints 1 and 2**, with accurate road edges,
+continuous collision and improved roadside buildings. **Route Twisk RWE /
+Repack Test** is the visual benchmark. [Kam Tin building review](projects/hk01_kam_tin/BUILDING_REVIEW.md)
 
 ## Start here / 從這裏開始
 
 | Workstream / 工作 | Current scope / 目前範圍 | Guide / 文件 |
 | --- | --- | --- |
-| Kam Tin / 錦田 | Installed metadata reports 0.3-full-loop; retained v0.5 comparison stage; fresh driving/FPS test pending | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
+| Region picker / 地圖選區 | Select a 6 × 6 km area and prepare its terrain, road lines and building footprints | [Open the region picker](#region-picker--地圖選區) |
+| Kam Tin / 錦田 | Provisional 3.445 km loop available on the development PC. Checkpoint 1–2 quality pass in development. | [Project README](projects/hk01_kam_tin/README.md) · [Status](projects/hk01_kam_tin/STATUS.md) · [Testing](projects/hk01_kam_tin/TESTING.md) |
 | Required map quality / 地圖品質目標 | Route Twisk reference standard and outstanding road, junction and scenery work | [Quality requirements](projects/hk01_kam_tin/REFERENCE_QUALITY.md) |
 | Map source data / 地圖來源資料 | Whole-Hong-Kong master and regional inputs; detailed Kam Tin full-loop terrain, maps, imagery and buildings | [Full-HK master](projects/hk01_kam_tin/FULL_HONG_KONG.md) · [Data locations](projects/hk01_kam_tin/MAP_DATA.md) |
 | Earlier road-test tools / 早期考場工具 | Tin Kwong Road blockout and multi-centre experiments | Historical development notes below; [production plan](docs/map-production-plan.md) |
+
+## Region picker / 地圖選區
+
+The picker follows the Earth2Cities workflow. Choose a real-world area in the
+browser, then prepare its source layers. It opens on Kam Tin and displays the
+mapped road network and approximate driving-test centre locations.
+[Earth2Cities on Paradox Mods](https://mods.paradoxplaza.com/mods/140919/Windows)
+
+With the local source master prepared, run these commands in PowerShell from
+the repository root. On a fresh checkout, install the Python dependencies,
+run `python projects/hk01_kam_tin/scripts/fetch_sources.py --foundation`,
+then follow the [source master setup](projects/hk01_kam_tin/FULL_HONG_KONG.md#rebuild-the-master).
+
+```powershell
+python projects/hk01_kam_tin/scripts/build_region_picker.py
+Invoke-Item projects/hk01_kam_tin/gis/hong_kong_master/region_picker.html
+```
+
+Click a region, then copy and run the PowerShell command shown beside the
+map. It prepares a terrain crop, road lines and review data, building
+footprints and shared road boundary points for that area. These files are
+inputs for Blender and track authoring. The generated picker, geographic
+data and game assets stay local.
+[Regional authoring guide](projects/hk01_kam_tin/FULL_HONG_KONG.md#pick-an-area-on-the-map)
 
 ## Kam Tin regional map / 錦田區域地圖
 
 The long-term goal is real-scale Hong Kong driving, delivered as separate regional tracks using shared geographic data. Whole-territory road references are not a finished, seamless game world.
 
 - Regional authoring uses Hong Kong 1980 Grid coordinates (EPSG:2326), with one Blender unit per metre.
-- The v0.5 local test build adds photographed asphalt/ground, worn paint, cutout foliage and authored visual safety rails while retaining the baseline collision and spawns.
+- The historical v0.5 comparison build added photographed asphalt and ground, worn paint, cutout foliage and visual safety rails while retaining the baseline collision and spawns.
 - Road profiles, junctions, kerbs, drainage, accurate roadside placement, local vegetation and building/ground seams remain unfinished. Coarse collision remains behind the visual rails.
 - File, geometry, texture and installed-hash checks are recorded in the project reports. They do not establish live handling, engine lighting or FPS. AI traffic, night/rain tuning and multiplayer remain unverified for this loop.
 
